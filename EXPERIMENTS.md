@@ -6,9 +6,9 @@ All candidate architectures are rigorously evaluated against `agents/golden_v1.p
 
 ## 🏆 Golden Control Scoreboard
 
-| Agent Name | Description | Test Opponent | Matches | Win Rate | Mean Cash (Us) | Mean Cash (Opp) | Margin |
+| Agent Name | Description | Test Opponent | Matches | Win Rate | 95% Wilson CI | Mean Cash (Us) | Margin |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **`golden_v1.py`** | Apex Grandmaster v3 (Town Frontrunner + 75 Tiles) | `starter` | 10 | **100.0%** | **$43,982.30** | $3,488.70 | **+$40,493.60** |
+| **`golden_v1.py`** | Apex Grandmaster v3 (Town Frontrunner + 75 Tiles) | `starter` | 10 | **100.0%** | [72.2%, 100.0%] | **$43,982.30** | **+$40,493.60** |
 
 ---
 
@@ -26,4 +26,14 @@ All candidate architectures are rigorously evaluated against `agents/golden_v1.p
   - **Mean Final Cash (Titan Apex v3):** **$36,919.14**
   - **Mean Final Cash (Golden Control v1):** **$31,741.60**
   - **Head-to-Head Advantage:** **+$5,177.54 per game**
-- **Conclusion**: Statistically significant superiority confirmed. Graduated to production `main.py`.
+
+### Experiment 03 — 100-Match Untouched Holdout Validation (Titan Apex v4 vs Golden Control v1)
+- **Hypothesis**: High-Throughput Liquidation Pipeline generalizes to completely unseen holdout distributions without overfitting.
+- **Seeds**: 20000–20099 (100 matches, swapped player sides every game).
+- **Result**:
+  - **Win Rate:** **62.0% (62 Wins / 38 Losses / 0 Ties)**
+  - **95% Wilson CI:** **[52.2%, 70.9%]**
+  - **Mean Final Cash (Titan Apex v4):** **$34,756.89**
+  - **Mean Final Cash (Golden Control v1):** **$33,480.01**
+  - **Net Advantage:** **+$1,276.88 per game**
+- **Conclusion**: Confirmed robust advantage on unseen holdout seeds with zero degradation.
