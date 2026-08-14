@@ -1,9 +1,9 @@
 """
 =============================================================================
-ENGINE: MACRO PORTFOLIO PLANNER & ARBITRAGE EXECUTOR (TITAN APEX V3)
+ENGINE: MACRO PORTFOLIO PLANNER & ARBITRAGE EXECUTOR (TITAN APEX V4)
 =============================================================================
-Combines Day-0 50-Tile Compounding, Shop Demand Elasticity Solver,
-Marginal Slippage-Optimized Selling, and Pre-Emptive Opponent Frontrunning.
+High-Throughput Harvest Liquidation Pipeline & Dynamic Arbitrage Engine.
+Eliminates inventory logjams and maximizes realized harvest cash flow.
 =============================================================================
 """
 
@@ -29,7 +29,7 @@ class MacroPlanner:
         step = world_state.step
         money = world_state.money
 
-        # 1. Opponent Radar & Imminent Supply Forecast
+        # 1. Opponent Radar & Supply Monitoring
         opp_analysis = self.opponent_model.analyze_opponent_farm(world_state.opp_tiles, day)
         opp_imminent = opp_analysis["imminent_harvests"]
         opp_crops = opp_analysis["crop_counts"]
@@ -108,7 +108,7 @@ class MacroPlanner:
                     orders.append(["HIRE"])
                     money -= cost
 
-        # B. DAY-0 50-TILE EXPANSION & SCALING
+        # B. DAY-0 50-TILE EXPANSION & SW SCALING
         n_unlocked = len(world_state.unlocked_quadrants) - 1
         if n_unlocked < 2:
             cost = LAND_PRICES[n_unlocked]
@@ -126,21 +126,19 @@ class MacroPlanner:
         RESERVE_CASH = 30.0
         spendable = max(0.0, money - RESERVE_CASH)
 
-        # C. ADAPTIVE SHOP-AWARE SEED PORTFOLIO EVALUATOR
+        # C. ADAPTIVE CROP PORTFOLIO EVALUATOR
         needed_seeds = max(0, len(empty_tiles) - total_seeds_held)
 
         if needed_seeds > 0 and day <= 26 and len(orders) < 10 and spendable > 0:
             remaining_days = 29 - day
-            opp_melon_flood = opp_crops.get("MELON", 0) >= 12
-            shop_weights = self.town_model.get_shop_demand_weights(world_state.unlocked_shops)
+            opp_melon_flood = opp_crops.get("MELON", 0) >= 16
 
             portfolio = {}
             if day <= 12 and remaining_days >= 12:
-                # Early Season: High-ROI compounding
+                # Early Season: High-yield Melon Compounding (Proven 65% Melon baseline)
                 if opp_melon_flood:
-                    # Opponent is flooding melons -> pivot into Strawberries + Carrots + Melons
-                    melon_c = int(needed_seeds * 0.35)
-                    straw_c = int(needed_seeds * 0.35)
+                    melon_c = int(needed_seeds * 0.45)
+                    straw_c = int(needed_seeds * 0.25)
                     carrot_c = int(needed_seeds * 0.20)
                     wheat_c = needed_seeds - melon_c - straw_c - carrot_c
                     if melon_c > 0: portfolio["MELON"] = melon_c
@@ -149,11 +147,9 @@ class MacroPlanner:
                     if wheat_c > 0: portfolio["WHEAT"] = wheat_c
                 else:
                     melon_c = int(needed_seeds * 0.65)
-                    straw_c = int(needed_seeds * 0.15) if shop_weights.get("STRAWBERRY", 0) > 0 else 0
-                    carrot_c = int(needed_seeds * 0.20)
-                    wheat_c = needed_seeds - melon_c - straw_c - carrot_c
+                    carrot_c = int(needed_seeds * 0.25)
+                    wheat_c = needed_seeds - melon_c - carrot_c
                     if melon_c > 0: portfolio["MELON"] = melon_c
-                    if straw_c > 0: portfolio["STRAWBERRY"] = straw_c
                     if carrot_c > 0: portfolio["CARROT"] = carrot_c
                     if wheat_c > 0: portfolio["WHEAT"] = wheat_c
 
@@ -183,7 +179,7 @@ class MacroPlanner:
                     spendable -= affordable * seed_price
                     money -= affordable * seed_price
 
-        # D. SLIPPAGE-OPTIMIZED TOWN SCARCITY SELLING & OPPONENT FRONTRUNNING
+        # D. HIGH-THROUGHPUT HARVEST LIQUIDATION PIPELINE (Zero Inventory Choke)
         is_scarcity_window = self.town_model.is_post_consumption_window(step)
 
         sell_priority = ["MELON", "WOOL", "MILK", "STRAWBERRY", "FERTILIZER", "TOMATO", "EGG", "CARROT", "WHEAT"]
@@ -196,7 +192,7 @@ class MacroPlanner:
                 opp_frontrun = self.opponent_model.should_frontrun_opponent(prod, opp_imminent.get(prod, 0))
 
                 should_sell = False
-                if day >= 27 or sum(world_state.shed.values()) >= 30:
+                if day >= 26 or sum(world_state.shed.values()) >= 25:
                     should_sell = True
                 elif opp_frontrun:
                     should_sell = True
@@ -206,11 +202,9 @@ class MacroPlanner:
                     should_sell = True
 
                 if should_sell:
-                    # Dynamically calculate optimal sell batch to avoid price slippage
-                    m_inv = world_state.market_inv.get(prod, 10000)
-                    optimal_chunk = self.market_model.get_optimal_sell_batch(prod, m_inv, qty, max_allowed_slippage=0.25)
-                    sell_amount = optimal_chunk if day < 27 else qty
-                    orders.append(["SELL", prod, max(1, sell_amount)])
+                    # High-throughput liquidation batch: 12-16 units per turn
+                    sell_amount = min(qty, 14) if day < 26 else qty
+                    orders.append(["SELL", prod, sell_amount])
 
         # 5. Assign Worker Actions
         worker_actions = self.labor_scheduler.assign_worker_actions(world_state, chores)
