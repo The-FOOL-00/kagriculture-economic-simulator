@@ -1,0 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large simulation replay artifacts
+*.json
+replays/
+.tempmediaStorage/
+
+# Submission archives
+submission.tar.gz
