@@ -1,8 +1,8 @@
 """
 =============================================================================
-KAGGLE COMPETITIONS SUBMISSION RUNNER
+KAGGLE COMPETITIONS SUBMISSION RUNNER (SLOTS 3 & 4)
 =============================================================================
-Submits selected candidate slots to Kaggle and logs submission IDs.
+Submits Slot 3 and Slot 4 to Kaggle using refreshed OAuth credentials.
 =============================================================================
 """
 
@@ -13,11 +13,7 @@ import time
 
 
 def submit_candidate(file_path, message):
-    cred_path = os.path.expanduser("~/.kaggle/credentials.json")
-    with open(cred_path, "r") as f:
-        creds = json.load(f)
-
-    tok = creds.get("access_token")
+    tok = subprocess.check_output(["kaggle", "auth", "print-access-token"], text=True).strip()
     env = os.environ.copy()
     env["KAGGLE_API_TOKEN"] = tok
 
@@ -41,31 +37,28 @@ def submit_candidate(file_path, message):
 
 
 if __name__ == "__main__":
-    # Submit Slot 1
     print("=" * 75)
-    print("SUBMITTING SLOT 1 & SLOT 2 ONLY")
+    print("SUBMITTING SLOT 3 & SLOT 4")
     print("=" * 75)
     
-    ok1 = submit_candidate(
-        "candidates/slot1_titan_control.py",
-        "Slot 1: Titan Control Baseline (Live Reference)"
+    ok3 = submit_candidate(
+        "candidates/slot3_opponent_adaptive.py",
+        "Slot 3: Opponent-Adaptive Challenger (Anti-Glut Radar)"
     )
     
     time.sleep(3)
     
-    ok2 = submit_candidate(
-        "candidates/slot2_loss_fix_challenger.py",
-        "Slot 2: High-Throughput Liquidation Challenger (12-14 Batch Sell)"
+    ok4 = submit_candidate(
+        "candidates/slot4_market_planner.py",
+        "Slot 4: Market Planner Challenger (Scarcity Arbitrage Engine)"
     )
     
     time.sleep(3)
     
     # Query current submissions list
-    cred_path = os.path.expanduser("~/.kaggle/credentials.json")
-    with open(cred_path, "r") as f:
-        creds = json.load(f)
+    tok = subprocess.check_output(["kaggle", "auth", "print-access-token"], text=True).strip()
     env = os.environ.copy()
-    env["KAGGLE_API_TOKEN"] = creds.get("access_token")
+    env["KAGGLE_API_TOKEN"] = tok
     
     print("\n" + "=" * 75)
     print("RECENT KAGGLE SUBMISSIONS LIST:")

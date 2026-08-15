@@ -16,24 +16,26 @@
 ### Step 1: Slot 1 — Control Baseline
 - **File:** `candidates/slot1_titan_control.py`
 - **Command:** `kaggle competitions submit -c kaggriculture -f candidates/slot1_titan_control.py -m "Slot 1: Titan Control Baseline (Live Reference)"`
-- [x] **SUBMITTED** | **Submission ID:** `55519962` (Status: `PENDING`).
+- [x] **SUBMITTED** | **Submission ID:** `55519962` (Status: `COMPLETE`, Elo: 513.5).
 
 ### Step 2: Slot 2 — High-Throughput Liquidation Challenger
 - **File:** `candidates/slot2_loss_fix_challenger.py`
 - **Command:** `kaggle competitions submit -c kaggriculture -f candidates/slot2_loss_fix_challenger.py -m "Slot 2: High-Throughput Liquidation Challenger (12-14 Batch Sell)"`
-- [x] **SUBMITTED** | **Submission ID:** `55519966` (Status: `PENDING`).
+- [x] **SUBMITTED** | **Submission ID:** `55519966` (Status: `COMPLETE`, Elo: 481.4).
 
 ### Step 3: Slot 3 — Opponent-Adaptive Challenger
 - **File:** `candidates/slot3_opponent_adaptive.py`
-- [ ] *(Held per user directive: slots 1 and 2 only)*
+- **Command:** `kaggle competitions submit -c kaggriculture -f candidates/slot3_opponent_adaptive.py -m "Slot 3: Opponent-Adaptive Challenger (Anti-Glut Radar)"`
+- [x] **SUBMITTED** | **Submission ID:** `55525631` (Status: `PENDING`).
 
 ### Step 4: Slot 4 — Market Planner Challenger
 - **File:** `candidates/slot4_market_planner.py`
-- [ ] *(Held per user directive: slots 1 and 2 only)*
+- **Command:** `kaggle competitions submit -c kaggriculture -f candidates/slot4_market_planner.py -m "Slot 4: Market Planner Challenger (Scarcity Arbitrage Engine)"`
+- [x] **SUBMITTED** | **Submission ID:** `55525634` (Status: `PENDING`).
 
 ### Step 5: Slot 5 — Local Champion (Titan Apex v4)
 - **File:** `main.py` / `candidates/slot5_local_champion.py`
-- [ ] *(Held per user directive: slots 1 and 2 only)*
+- [ ] *(Held per user directive: slot 5 remaining)*
 
 ---
 
