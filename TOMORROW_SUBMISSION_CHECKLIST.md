@@ -1,6 +1,4 @@
-# 📋 Tomorrow's Kaggle Submission Checklist
-
-Use this checklist when tomorrow's Kaggle submission window opens.
+# 📋 Kaggle Submission Checklist & Execution Status
 
 ---
 
@@ -13,32 +11,29 @@ Use this checklist when tomorrow's Kaggle submission window opens.
 
 ---
 
-## 🚀 Execution Steps (Run ONLY when submission window opens)
+## 🚀 Execution Steps (Live Submissions)
 
 ### Step 1: Slot 1 — Control Baseline
 - **File:** `candidates/slot1_titan_control.py`
 - **Command:** `kaggle competitions submit -c kaggriculture -f candidates/slot1_titan_control.py -m "Slot 1: Titan Control Baseline (Live Reference)"`
-- [ ] Submission ID recorded in `LIVE_SUBMISSION_LOG.md`.
+- [x] **SUBMITTED** | **Submission ID:** `55519962` (Status: `PENDING`).
 
 ### Step 2: Slot 2 — High-Throughput Liquidation Challenger
 - **File:** `candidates/slot2_loss_fix_challenger.py`
 - **Command:** `kaggle competitions submit -c kaggriculture -f candidates/slot2_loss_fix_challenger.py -m "Slot 2: High-Throughput Liquidation Challenger (12-14 Batch Sell)"`
-- [ ] Submission ID recorded in `LIVE_SUBMISSION_LOG.md`.
+- [x] **SUBMITTED** | **Submission ID:** `55519966` (Status: `PENDING`).
 
 ### Step 3: Slot 3 — Opponent-Adaptive Challenger
 - **File:** `candidates/slot3_opponent_adaptive.py`
-- **Command:** `kaggle competitions submit -c kaggriculture -f candidates/slot3_opponent_adaptive.py -m "Slot 3: Opponent-Adaptive Challenger (Anti-Glut Radar)"`
-- [ ] Submission ID recorded in `LIVE_SUBMISSION_LOG.md`.
+- [ ] *(Held per user directive: slots 1 and 2 only)*
 
 ### Step 4: Slot 4 — Market Planner Challenger
 - **File:** `candidates/slot4_market_planner.py`
-- **Command:** `kaggle competitions submit -c kaggriculture -f candidates/slot4_market_planner.py -m "Slot 4: Market Planner Challenger (Scarcity Arbitrage Engine)"`
-- [ ] Submission ID recorded in `LIVE_SUBMISSION_LOG.md`.
+- [ ] *(Held per user directive: slots 1 and 2 only)*
 
 ### Step 5: Slot 5 — Local Champion (Titan Apex v4)
 - **File:** `main.py` / `candidates/slot5_local_champion.py`
-- **Command:** `kaggle competitions submit -c kaggriculture -f main.py -m "Slot 5: Titan Apex v4 Production Champion"`
-- [ ] Submission ID recorded in `LIVE_SUBMISSION_LOG.md`.
+- [ ] *(Held per user directive: slots 1 and 2 only)*
 
 ---
 
