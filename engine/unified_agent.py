@@ -17,11 +17,10 @@ def get_planner():
     return _PLANNER
 
 
-def agent(obs):
+def agent(obs, configuration=None):
     try:
         world_state = WorldState(obs)
         planner = get_planner()
         return planner.plan_turn(world_state)
     except Exception as e:
-        print(f"Error in unified agent: {e}")
         return {"farmer": ["PASS"], "hands": [], "market": []}
