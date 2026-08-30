@@ -1,6 +1,6 @@
 """
 =============================================================================
-SYNTHETIC OPPONENT SUITE
+SYNTHETIC OPPONENT SUITE (CORRECTED & ROBUST)
 =============================================================================
 Provides standalone bot archetypes discovered from actual Kaggle match replays
 for comprehensive multi-archetype robustness benchmarking.
@@ -8,8 +8,53 @@ for comprehensive multi-archetype robustness benchmarking.
 """
 
 import math
-from config import CROPS, ANIMALS, PRODUCTS, LAND_PRICES, fib_hire_cost
-from pathfinding import manhattan, get_next_step, get_unlocked_shed_tiles
+
+CROPS = {
+    "WHEAT":      {"seed": 10, "first_yield_day": 2, "max_yield_day": 4, "interval": 0, "max_yield": 6, "ongoing": False, "base_yield": 4},
+    "CARROT":     {"seed": 20, "first_yield_day": 2, "max_yield_day": 3, "interval": 0, "max_yield": 4, "ongoing": False, "base_yield": 3},
+    "TOMATO":     {"seed": 50, "first_yield_day": 8, "max_yield_day": 8, "interval": 1, "max_yield": 4, "ongoing": True,  "base_yield": 4},
+    "STRAWBERRY": {"seed": 100, "first_yield_day": 10, "max_yield_day": 10, "interval": 2, "max_yield": 4, "ongoing": True,  "base_yield": 4},
+    "MELON":      {"seed": 80, "first_yield_day": 10, "max_yield_day": 12, "interval": 0, "max_yield": 6, "ongoing": False, "base_yield": 6},
+}
+
+LAND_PRICES = [1000, 2000, 4000]
+PRODUCTS = ["WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON", "EGG", "MILK", "WOOL", "FERTILIZER"]
+
+
+def fib_hire_cost(n):
+    a, b = 1, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+
+def manhattan(p1, p2):
+    return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
+
+
+def get_unlocked_shed_tiles(tiles):
+    half = len(tiles) // 2
+    candidates = [(half - 1, half - 1), (half, half - 1), (half - 1, half), (half, half)]
+    return [pos for pos in candidates if tiles[pos[1]][pos[0]] != "LOCKED"]
+
+
+def get_next_step(start, target, tiles):
+    if start == target:
+        return "PASS"
+    sx, sy = start
+    tx, ty = target
+    moves = []
+    if tx > sx and tiles[sy][sx + 1] != "LOCKED": moves.append("EAST")
+    if tx < sx and tiles[sy][sx - 1] != "LOCKED": moves.append("WEST")
+    if ty > sy and tiles[sy + 1][sx] != "LOCKED": moves.append("SOUTH")
+    if ty < sy and tiles[sy - 1][sx] != "LOCKED": moves.append("NORTH")
+    
+    if not moves:
+        for m, (dx, dy) in [("EAST", (1,0)), ("WEST", (-1,0)), ("SOUTH", (0,1)), ("NORTH", (0,-1))]:
+            nx, ny = sx + dx, sy + dy
+            if 0 <= nx < len(tiles[0]) and 0 <= ny < len(tiles) and tiles[ny][nx] != "LOCKED":
+                moves.append(m)
+    return moves[0] if moves else "PASS"
 
 
 class SyntheticArchetypeAgent:
@@ -35,7 +80,6 @@ class SyntheticArchetypeAgent:
             private = obs.get("private", {}) or {}
             shed = dict(private.get("shed", {}))
             seeds = dict(private.get("seeds", {}))
-            inventories = [dict(inv) for inv in private.get("inventories", [{}])]
             
             market = obs.get("market", {}) or {}
             market_prices = dict(market.get("prices", {}))
@@ -69,28 +113,48 @@ class SyntheticArchetypeAgent:
                     orders.append(["BUY_LAND"])
                     money -= cost
 
-            # 3. SEED PURCHASES BY ARCHETYPE
+            # 3. SCAN TILES FOR CHORES & MATURITY
             empty_tiles = []
             chores = []
             for y in range(len(tiles)):
                 for x in range(len(tiles[0])):
                     t = tiles[y][x]
+                    pos = (x, y)
                     if t is None:
-                        empty_tiles.append((x, y))
+                        empty_tiles.append(pos)
                     elif isinstance(t, dict):
                         kind = t.get("kind")
                         if kind == "WEED":
-                            chores.append({"type": "DIG", "pos": (x, y), "weight": 90})
+                            chores.append({"type": "DIG", "pos": pos, "weight": 90})
                         elif kind == "PLANT":
+                            crop = t.get("crop")
+                            age = day - t.get("planted_day", 0)
+                            cd = CROPS.get(crop, {})
                             if not t.get("watered_today", False):
-                                chores.append({"type": "WATER", "pos": (x, y), "weight": 80})
-                            if t.get("yield_units", 0) > 0:
-                                chores.append({"type": "HARVEST", "pos": (x, y), "weight": 100})
+                                chores.append({"type": "WATER", "pos": pos, "weight": 80})
 
+                            is_mature = False
+                            if cd.get("ongoing", False):
+                                if age >= cd["first_yield_day"] and t.get("yield_units", 0) > 0:
+                                    is_mature = True
+                            else:
+                                if crop == "MELON" and (age >= 10 or t.get("yield_units", 0) >= 6 or (day >= 28 and t.get("yield_units", 0) >= 1)):
+                                    is_mature = True
+                                elif crop == "CARROT" and (age >= 3 or t.get("yield_units", 0) >= 3 or (day >= 28 and t.get("yield_units", 0) >= 1)):
+                                    is_mature = True
+                                elif crop == "WHEAT" and (age >= 4 or t.get("yield_units", 0) >= 4 or (day >= 28 and t.get("yield_units", 0) >= 1)):
+                                    is_mature = True
+                                elif age >= cd.get("max_yield_day", 4) and t.get("yield_units", 0) > 0:
+                                    is_mature = True
+
+                            if is_mature:
+                                chores.append({"type": "HARVEST", "pos": pos, "weight": 100})
+
+            # 4. SEED PURCHASES BY ARCHETYPE
             needed_seeds = max(0, len(empty_tiles) - sum(seeds.values()))
             spendable = max(0.0, money - 30.0)
 
-            if needed_seeds > 0 and day <= 26 and spendable > 0:
+            if needed_seeds > 0 and day <= 26 and spendable > 0 and len(orders) < 10:
                 if self.archetype == "MELON_BURST":
                     p_crop = "MELON" if day <= 18 else "CARROT"
                     price = CROPS[p_crop]["seed"]
@@ -109,27 +173,26 @@ class SyntheticArchetypeAgent:
                     buy_cnt = min(needed_seeds, int(spendable // price))
                     if buy_cnt > 0:
                         orders.append(["BUY_SEED", p_crop, buy_cnt])
-                else: # BALANCED
-                    melon_cnt = min(needed_seeds, int(spendable // 80)) // 2
+                else:  # BALANCED
+                    melon_cnt = min(needed_seeds, int(spendable // 80)) // 2 if day <= 12 else 0
                     carrot_cnt = min(needed_seeds - melon_cnt, int((spendable - melon_cnt * 80) // 20))
                     if melon_cnt > 0: orders.append(["BUY_SEED", "MELON", melon_cnt])
                     if carrot_cnt > 0: orders.append(["BUY_SEED", "CARROT", carrot_cnt])
 
-            # 4. SELLING
+            # 5. SELLING
             for prod in PRODUCTS:
+                if len(orders) >= 10:
+                    break
                 qty = shed.get(prod, 0)
-                if qty > 0 and (day >= 26 or step % 4 == 0):
-                    orders.append(["SELL", prod, min(qty, 12)])
+                if qty > 0 and (day >= 26 or sum(shed.values()) >= 20 or step % 4 == 0):
+                    orders.append(["SELL", prod, min(qty, 14) if day < 26 else qty])
 
             # --- WORKER CHORES ---
             num_workers = 1 + len(hands)
             worker_pos = [farmer_pos] + list(hands)
             actions = [["PASS"] for _ in range(num_workers)]
             unassigned = list(range(num_workers))
-
-            if sum(seeds.values()) > 0 and day <= 26:
-                for pos in empty_tiles:
-                    chores.append({"type": "PLANT", "pos": pos, "weight": 70})
+            assigned_pos = set()
 
             # Stand on chore
             avail_seeds = dict(seeds)
@@ -141,31 +204,40 @@ class SyntheticArchetypeAgent:
                     if t.get("kind") == "WEED":
                         actions[w] = ["DIG"]
                         unassigned.remove(w)
+                        assigned_pos.add(pos)
                     elif t.get("kind") == "PLANT":
-                        if t.get("yield_units", 0) > 0:
+                        is_h = any(c["pos"] == pos and c["type"] == "HARVEST" for c in chores)
+                        if is_h:
                             actions[w] = ["HARVEST"]
                             unassigned.remove(w)
+                            assigned_pos.add(pos)
                         elif not t.get("watered_today", False):
                             actions[w] = ["WATER"]
                             unassigned.remove(w)
+                            assigned_pos.add(pos)
                 elif t is None and day <= 26:
-                    for sc in ["MELON", "STRAWBERRY", "CARROT", "WHEAT"]:
+                    for sc in ["MELON", "STRAWBERRY", "CARROT", "WHEAT", "TOMATO"]:
                         if avail_seeds.get(sc, 0) > 0:
                             actions[w] = ["PLANT", sc]
                             avail_seeds[sc] -= 1
                             unassigned.remove(w)
+                            assigned_pos.add(pos)
                             break
 
-            # Route remaining
+            # Route remaining workers to chores
             unlocked_sheds = get_unlocked_shed_tiles(tiles)
+            rem_chores = [c for c in chores if c["pos"] not in assigned_pos]
+
             for w in unassigned:
                 w_p = worker_pos[w]
-                if chores:
-                    best_c = min(chores, key=lambda c: manhattan(w_p, c["pos"]))
+                if rem_chores:
+                    best_c = min(rem_chores, key=lambda c: manhattan(w_p, c["pos"]))
                     move = get_next_step(w_p, best_c["pos"], tiles)
                     actions[w] = [move]
+                    assigned_pos.add(best_c["pos"])
+                    rem_chores.remove(best_c)
                 else:
-                    if w_p not in unlocked_sheds:
+                    if w_p not in unlocked_sheds and unlocked_sheds:
                         actions[w] = [get_next_step(w_p, unlocked_sheds[0], tiles)]
                     else:
                         actions[w] = ["PASS"]
@@ -179,7 +251,6 @@ class SyntheticArchetypeAgent:
             return {"farmer": ["PASS"], "hands": [], "market": []}
 
 
-# Factory functions for each archetype
 def melon_burst_agent(obs):
     return SyntheticArchetypeAgent("MELON_BURST")(obs)
 
