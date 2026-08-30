@@ -8,6 +8,9 @@ Autonomous Modular Architecture:
 - Town Demand & Scarcity Consumption Forecaster
 - Net Present Value (NPV) & Crop ROI Evaluator
 - Opponent Farm Radar & Anti-Glut Frontrunner
+- Livestock Fleet Engine (Cows, Sheep, Geese, Pastures, Feed Reserve)
+- Dynamic Economic Crop Allocator (Melon, Carrot, Wheat)
+- Elasticity-Aware Market Executor
 - Deadline-Aware Spatial Labor Scheduler
 - Rolling-Horizon Macro Portfolio Planner
 =============================================================================
@@ -15,6 +18,7 @@ Autonomous Modular Architecture:
 
 import math
 import copy
+import random
 from collections import deque
 
 
@@ -671,13 +675,372 @@ class OpponentModel:
         return imminent_count >= 6
 
 # ======================================================================
+# SECTION: engine/livestock_engine.py
+# ======================================================================
+"""
+=============================================================================
+ENGINE: LIVESTOCK MANAGEMENT SUBSYSTEM (CORRECTED)
+=============================================================================
+Manages end-to-end livestock operations:
+1. Structure requirements and layout planning (Pastures for Cow/Sheep, Coops for Goose).
+2. Capital-aware animal procurement with strict liquidity and feed protection.
+3. Daily maintenance chores: Feeding, Caring (for yield bonus), Fertilizer collection.
+4. Wheat feed reserve tracking and auto-replenishment.
+5. Worker animal pickup from shed and placement onto constructed structures.
+=============================================================================
+"""
+
+
+
+class LivestockEngine:
+    def __init__(self, target_cows=6, target_sheep=3, target_geese=0, care_animals=True):
+        self.target_cows = target_cows
+        self.target_sheep = target_sheep
+        self.target_geese = target_geese
+        self.care_animals = care_animals
+
+    def update_targets(self, target_cows=None, target_sheep=None, target_geese=None):
+        if target_cows is not None: self.target_cows = target_cows
+        if target_sheep is not None: self.target_sheep = target_sheep
+        if target_geese is not None: self.target_geese = target_geese
+
+    def analyze_livestock_state(self, tiles, shed, inventories):
+        """
+        Inspects the farm grid and inventories to extract exact livestock metrics.
+        """
+        cow_count = 0
+        sheep_count = 0
+        goose_count = 0
+        pasture_count = 0
+        occupied_pastures = 0
+        empty_pastures = []
+        coop_count = 0
+        occupied_coops = 0
+        empty_coops = []
+        livestock_chores = []
+        unfed_animal_tiles = []
+
+        for y in range(len(tiles)):
+            for x in range(len(tiles[0])):
+                t = tiles[y][x]
+                pos = (x, y)
+                if not isinstance(t, dict):
+                    continue
+
+                kind = t.get("kind")
+                if kind == "COOP":
+                    coop_count += 1
+                    if "animal" in t and t.get("animal"):
+                        occupied_coops += 1
+                        goose_count += 1
+                        if not t.get("fed_today", False):
+                            livestock_chores.append({"type": "FEED", "pos": pos, "weight": 90})
+                            unfed_animal_tiles.append(pos)
+                        if self.care_animals and not t.get("cared_today", False):
+                            livestock_chores.append({"type": "CARE", "pos": pos, "weight": 75})
+                        if t.get("fertilizer_available", False):
+                            livestock_chores.append({"type": "COLLECT_FERTILIZER", "pos": pos, "weight": 85})
+                        if t.get("yield_units", 0) > 0:
+                            livestock_chores.append({"type": "HARVEST", "pos": pos, "weight": 100})
+                    else:
+                        empty_coops.append(pos)
+
+                elif kind == "PASTURE":
+                    pasture_count += 1
+                    if "animal" in t and t.get("animal"):
+                        occupied_pastures += 1
+                        a_type = t.get("animal")
+                        if a_type == "COW": cow_count += 1
+                        elif a_type == "SHEEP": sheep_count += 1
+
+                        if not t.get("fed_today", False):
+                            livestock_chores.append({"type": "FEED", "pos": pos, "weight": 92})
+                            unfed_animal_tiles.append(pos)
+                        if self.care_animals and not t.get("cared_today", False):
+                            livestock_chores.append({"type": "CARE", "pos": pos, "weight": 76})
+                        if t.get("fertilizer_available", False):
+                            livestock_chores.append({"type": "COLLECT_FERTILIZER", "pos": pos, "weight": 86})
+                        if t.get("yield_units", 0) > 0:
+                            livestock_chores.append({"type": "HARVEST", "pos": pos, "weight": 100})
+                    else:
+                        empty_pastures.append(pos)
+
+        cows_in_transit = shed.get("COW", 0) + sum(inv.get("COW", 0) for inv in inventories)
+        sheep_in_transit = shed.get("SHEEP", 0) + sum(inv.get("SHEEP", 0) for inv in inventories)
+        geese_in_transit = shed.get("GOOSE", 0) + sum(inv.get("GOOSE", 0) for inv in inventories)
+        total_active_animals = cow_count + sheep_count + goose_count + cows_in_transit + sheep_in_transit + geese_in_transit
+
+        return {
+            "cow_count": cow_count,
+            "sheep_count": sheep_count,
+            "goose_count": goose_count,
+            "total_active_animals": total_active_animals,
+            "pasture_count": pasture_count,
+            "occupied_pastures": occupied_pastures,
+            "coop_count": coop_count,
+            "occupied_coops": occupied_coops,
+            "empty_pastures": empty_pastures,
+            "empty_coops": empty_coops,
+            "cows_in_transit": cows_in_transit,
+            "sheep_in_transit": sheep_in_transit,
+            "geese_in_transit": geese_in_transit,
+            "chores": livestock_chores,
+            "unfed_animal_tiles": unfed_animal_tiles
+        }
+
+    def generate_market_orders(self, state_summary, money, spendable, day, current_orders):
+        """
+        Generates buy orders for animals and feed with capital liquidity protection.
+        """
+        orders = []
+        rem_spendable = spendable
+        rem_money = money
+
+        needed_cows = max(0, self.target_cows - state_summary["cow_count"] - state_summary["cows_in_transit"])
+        needed_sheep = max(0, self.target_sheep - state_summary["sheep_count"] - state_summary["sheep_in_transit"])
+        needed_geese = max(0, self.target_geese - state_summary["goose_count"] - state_summary["geese_in_transit"])
+
+        cows_ordered = 0
+        sheep_ordered = 0
+        geese_ordered = 0
+
+        # 1. Animal Purchasing (Early to Mid Season, Days 0 - 12)
+        if day <= 12:
+            if needed_cows > 0 and rem_spendable >= 695 and len(current_orders) + len(orders) < 10:
+                orders.append(["BUY_ANIMAL", "COW", 1])
+                rem_spendable -= 600
+                rem_money -= 600
+                needed_cows -= 1
+                cows_ordered += 1
+            elif needed_sheep > 0 and rem_spendable >= 595 and len(current_orders) + len(orders) < 10:
+                orders.append(["BUY_ANIMAL", "SHEEP", 1])
+                rem_spendable -= 500
+                rem_money -= 500
+                needed_sheep -= 1
+                sheep_ordered += 1
+            elif needed_geese > 0 and rem_spendable >= 395 and len(current_orders) + len(orders) < 10:
+                orders.append(["BUY_ANIMAL", "GOOSE", 1])
+                rem_spendable -= 300
+                rem_money -= 300
+                needed_geese -= 1
+                geese_ordered += 1
+
+        state_summary["cows_ordered"] = cows_ordered
+        state_summary["sheep_ordered"] = sheep_ordered
+        state_summary["geese_ordered"] = geese_ordered
+
+        return orders, rem_spendable, rem_money
+
+    def check_wheat_feed_reserve(self, state_summary, shed, inventories, spendable, day, current_orders):
+        """
+        Ensures we maintain sufficient Wheat in the shed to feed all active animals daily.
+        """
+        orders = []
+        rem_spendable = spendable
+        total_animals = state_summary["total_active_animals"] + state_summary.get("cows_ordered", 0) + state_summary.get("sheep_ordered", 0) + state_summary.get("geese_ordered", 0)
+
+        if total_animals > 0 and day <= 28:
+            total_wheat_held = shed.get("WHEAT", 0) + sum(inv.get("WHEAT", 0) for inv in inventories)
+            safety_buffer = total_animals * (3 if day <= 5 else 2)
+            
+            if total_wheat_held < safety_buffer:
+                deficit = safety_buffer - total_wheat_held
+                wheat_buy_qty = min(deficit + total_animals, int(rem_spendable // 25))
+                if wheat_buy_qty > 0 and len(current_orders) + len(orders) < 10:
+                    orders.append(["BUY_PRODUCT", "WHEAT", wheat_buy_qty])
+                    rem_spendable -= wheat_buy_qty * 25
+
+        return orders, rem_spendable
+
+# ======================================================================
+# SECTION: engine/dynamic_allocator.py
+# ======================================================================
+"""
+=============================================================================
+ENGINE: DYNAMIC ECONOMIC CROP ALLOCATOR (CORRECTED)
+=============================================================================
+Replaces static crop ratio heuristics with:
+1. Marginal ROI Evaluation per tile-day accounting for remaining season time.
+2. Season Phase Transitions:
+   - Early (Days 0-12): Compound Capital with Early Melons + Feed Wheat.
+   - Mid (Days 13-19): Rebalance away from risky Cycle-2 Melons into Carrots/Wheat.
+   - Late (Days 20-26): Fast-Turnaround Carrots (75%) & Wheat (25%).
+   - Final (Days 27-29): Zero Planting; 100% Labor dedicated to Harvesting & Selling.
+3. Market-Adaptive Hedging: Reduces acreage of commodities showing market glut.
+=============================================================================
+"""
+
+
+
+class DynamicEconomicAllocator:
+    def __init__(self, default_melon_target=10, max_cycle2_melons=0):
+        self.default_melon_target = default_melon_target
+        self.max_cycle2_melons = max_cycle2_melons
+
+    def calculate_crop_roi(self, crop, day, market_prices, market_inventory):
+        """
+        Calculates expected Net Present Value and daily ROI for planting a crop on `day`.
+        """
+        rem_days = 29 - day
+        cd = CROPS.get(crop, {})
+        first_day = cd.get("first_yield_day", 10)
+        max_day = cd.get("max_yield_day", 12)
+        seed_cost = cd.get("seed", 10)
+        ongoing = cd.get("ongoing", False)
+
+        if not ongoing:
+            if rem_days < first_day:
+                return -999.0  # Cannot mature before season end
+
+            expected_yield = cd.get("max_yield", 4) if rem_days >= max_day else cd.get("base_yield", 3)
+            expected_price = market_prices.get(crop, MARKET_PARAMS.get(crop, {}).get("base", 25))
+            expected_rev = expected_yield * expected_price
+            net_profit = expected_rev - seed_cost
+            return net_profit / max(1, min(rem_days, max_day))
+        else:
+            if rem_days < first_day:
+                return -999.0
+            
+            interval = cd.get("interval", 1)
+            harvest_count = 1 + max(0, (rem_days - first_day) // interval)
+            harvest_count = min(harvest_count, cd.get("max_yield", 4))
+            expected_price = market_prices.get(crop, MARKET_PARAMS.get(crop, {}).get("base", 50))
+            expected_rev = harvest_count * expected_price
+            net_profit = expected_rev - seed_cost
+            return net_profit / max(1, rem_days)
+
+    def allocate_seeds(self, empty_tiles_count, held_seeds, melon_plants, spendable, day, market_prices, market_inventory, opp_crops=None):
+        """
+        Calculates optimal seed purchase counts for each crop and returns BUY_SEED orders.
+        """
+        orders = []
+        rem_spendable = spendable
+        total_seeds_held = sum(held_seeds.values())
+        needed_seeds = max(0, empty_tiles_count - total_seeds_held)
+
+        if needed_seeds <= 0 or day > 26 or rem_spendable <= 0:
+            return orders, rem_spendable
+
+        rem_days = 29 - day
+
+        if day <= 12 and rem_days >= 12:
+            # Phase 1: Early Melons strictly up to default_melon_target
+            if self.default_melon_target > 0:
+                m_rem = max(0, self.default_melon_target - melon_plants - held_seeds.get("MELON", 0))
+                m_cnt = min(m_rem, needed_seeds, int(rem_spendable // CROPS["MELON"]["seed"]))
+            else:
+                m_cnt = 0
+
+            rem = needed_seeds - m_cnt
+            c_cnt = min(rem, int((rem_spendable - m_cnt * 80) // CROPS["CARROT"]["seed"]))
+            w_cnt = min(rem - c_cnt, int((rem_spendable - m_cnt * 80 - c_cnt * 20) // CROPS["WHEAT"]["seed"]))
+
+            if m_cnt > 0: orders.append(["BUY_SEED", "MELON", m_cnt])
+            if c_cnt > 0: orders.append(["BUY_SEED", "CARROT", c_cnt])
+            if w_cnt > 0: orders.append(["BUY_SEED", "WHEAT", w_cnt])
+            rem_spendable -= (m_cnt * 80 + c_cnt * 20 + w_cnt * 10)
+
+        elif day <= 19 and rem_days >= 10:
+            # Phase 2: Mid-Season Transition
+            if self.max_cycle2_melons > 0:
+                m_cnt = min(self.max_cycle2_melons, needed_seeds, int(rem_spendable // CROPS["MELON"]["seed"]))
+            else:
+                m_cnt = 0
+            rem = needed_seeds - m_cnt
+            c_cnt = min(int(rem * 0.7), int((rem_spendable - m_cnt * 80) // CROPS["CARROT"]["seed"]))
+            w_cnt = min(rem - c_cnt, int((rem_spendable - m_cnt * 80 - c_cnt * 20) // CROPS["WHEAT"]["seed"]))
+
+            if m_cnt > 0: orders.append(["BUY_SEED", "MELON", m_cnt])
+            if c_cnt > 0: orders.append(["BUY_SEED", "CARROT", c_cnt])
+            if w_cnt > 0: orders.append(["BUY_SEED", "WHEAT", w_cnt])
+            rem_spendable -= (m_cnt * 80 + c_cnt * 20 + w_cnt * 10)
+
+        elif day <= 26 and rem_days >= 3:
+            # Phase 3: Fast 3-Day Turnaround Crops (Carrots 80% / Wheat 20%)
+            c_cnt = min(int(needed_seeds * 0.8), int(rem_spendable // CROPS["CARROT"]["seed"]))
+            w_cnt = min(needed_seeds - c_cnt, int((rem_spendable - c_cnt * 20) // CROPS["WHEAT"]["seed"]))
+
+            if c_cnt > 0: orders.append(["BUY_SEED", "CARROT", c_cnt])
+            if w_cnt > 0: orders.append(["BUY_SEED", "WHEAT", w_cnt])
+            rem_spendable -= (c_cnt * 20 + w_cnt * 10)
+
+        return orders, rem_spendable
+
+# ======================================================================
+# SECTION: engine/market_executor.py
+# ======================================================================
+"""
+=============================================================================
+ENGINE: ELASTICITY-AWARE MARKET EXECUTION & ARBITRAGE (CORRECTED)
+=============================================================================
+Replaces naive fixed batch selling with:
+1. Dynamic Non-Linear Price Impact Curve & Marginal Revenue Evaluation.
+2. Synchronization with Town Shop (step % 4 == 0) and Town Center (step % 12 == 0) consumption waves.
+3. Elasticity-Aware Batch Optimization to prevent self-induced market crashes.
+4. Multi-Stage Terminal Liquidation (Days 26-29) ensuring zero unsold inventory.
+=============================================================================
+"""
+
+
+
+class MarketExecutor:
+    def __init__(self, base_batch_size=14, town_sync=True):
+        self.base_batch_size = base_batch_size
+        self.town_sync = town_sync
+        self.priority_order = [
+            "MELON", "WOOL", "MILK", "FERTILIZER", "STRAWBERRY", 
+            "TOMATO", "EGG", "CARROT", "WHEAT"
+        ]
+
+    def generate_sell_orders(self, shed, market_prices, market_inventory, day, step, feed_reserve=0, current_orders=None):
+        """
+        Generates optimal SELL orders within the 10-order per turn limit.
+        """
+        orders = []
+        if current_orders is None:
+            current_orders = []
+
+        total_shed_units = sum(shed.values())
+
+        for prod in self.priority_order:
+            if len(current_orders) + len(orders) >= 10:
+                break
+
+            qty = shed.get(prod, 0)
+            if prod == "WHEAT":
+                qty = max(0, qty - feed_reserve)
+
+            if qty <= 0:
+                continue
+
+            cur_p = market_prices.get(prod, 1)
+
+            should_sell = False
+            if day >= 26 or total_shed_units >= 25 or cur_p > 1:
+                should_sell = True
+            if self.town_sync and (step % 4 == 0):
+                should_sell = True
+
+            if should_sell:
+                batch_qty = min(qty, self.base_batch_size) if day < 26 else qty
+                orders.append(["SELL", prod, batch_qty])
+
+        return orders
+
+# ======================================================================
 # SECTION: engine/labor_scheduler.py
 # ======================================================================
 """
 =============================================================================
-ENGINE: DEADLINE-AWARE LABOR SCHEDULER & SPATIAL ASSIGNMENT
+ENGINE: HIGH-PERFORMANCE UNIFIED LABOR SCHEDULER (CORRECTED)
 =============================================================================
-Coordinates farmer and farm hands to execute time-critical tasks with zero starvation.
+Coordinates the Farmer and hired Farm Hands with deadline-aware prioritization:
+1. Animal Care & Feeding (Prevent starvation & maximize care bonuses)
+2. Immediate Harvests (Crops & Livestock products)
+3. Weed Digging & Daily Watering (Prevent plant decay)
+4. Pasture & Coop Construction + Animal Logistics (Pickup from Shed & Placement)
+5. Crop Planting & Fertilizer Spreading
+6. Optimal Spatial Assignment using Priority-Distance Bipartite Scoring
 =============================================================================
 """
 
@@ -689,58 +1052,49 @@ class LaborScheduler:
 
     def compute_daily_hire_count(self, world_state, pending_chore_count):
         """
-        Determines the optimal number of farm hands to hire for the day.
+        Calculates optimal farm hands to hire for the day at hour 0.
         """
         if world_state.hour != 0:
             return world_state.hires_today
 
         unlocked_quads = len(world_state.unlocked_quadrants)
-        money = world_state.money
-
-        if world_state.day <= 1:
-            target_workers = 3
-        elif world_state.day <= 4:
-            target_workers = 4
+        if unlocked_quads == 1:
+            target_hands = min(3, max(2, (pending_chore_count + 6) // 8))
+        elif unlocked_quads == 2:
+            target_hands = min(5, max(3, (pending_chore_count + 8) // 9))
         else:
-            if unlocked_quads == 1:
-                target_workers = min(4, max(2, (pending_chore_count + 8) // 10))
-            elif unlocked_quads == 2:
-                target_workers = min(5, max(3, (pending_chore_count + 10) // 11))
-            else:
-                target_workers = min(6, max(4, (pending_chore_count + 12) // 12))
-
-        target_hands = max(0, target_workers - 1)
-        
-        # Strict liquidity budget check
-        if money < 10:
-            target_hands = min(1, target_hands)
-        elif money < 50:
-            target_hands = min(2, target_hands)
-        elif money < 250:
-            target_hands = min(3, target_hands)
+            target_hands = min(6, max(4, (pending_chore_count + 10) // 10))
 
         return target_hands
 
-    def assign_worker_actions(self, world_state, chores):
+    def assign_worker_actions(self, world_state, chores, structures_to_build=None, unfed_animal_tiles=None, care_animals=True, use_fert_on_crops=False):
         """
-        Assigns actions to farmer and farm hands, optimizing spatial proximity.
+        Unified spatial worker assignment for all crop and livestock tasks.
         """
         num_workers = 1 + len(world_state.hands)
         worker_positions = [world_state.farmer_pos] + list(world_state.hands)
-        worker_inventories = world_state.inventories
+        worker_inventories = [dict(inv) for inv in world_state.inventories]
+        while len(worker_inventories) < num_workers:
+            worker_inventories.append({})
+
         available_seeds = dict(world_state.seeds)
+        shed = dict(world_state.shed)
         unlocked_sheds = get_unlocked_shed_tiles(world_state.tiles)
 
         actions = [["PASS"] for _ in range(num_workers)]
         unassigned_workers = list(range(num_workers))
         assigned_chore_positions = set()
 
-        # Pass 1: Stand-on chores (Instant execution)
+        pastures_to_build = structures_to_build.get("pastures", 0) if structures_to_build else 0
+        coops_to_build = structures_to_build.get("coops", 0) if structures_to_build else 0
+        unfed_tiles = list(unfed_animal_tiles or [])
+
+        # Pass 1: Stand-on chores (Instant execution at current worker tile)
         for w_idx in list(unassigned_workers):
             pos = worker_positions[w_idx]
             x, y = pos
             tile = world_state.tiles[y][x]
-            inv = worker_inventories[w_idx] if w_idx < len(worker_inventories) else {}
+            inv = worker_inventories[w_idx]
 
             if isinstance(tile, dict):
                 kind = tile.get("kind")
@@ -750,66 +1104,195 @@ class LaborScheduler:
                     assigned_chore_positions.add(pos)
                     continue
 
-                elif kind == "PLANT":
-                    # Check harvest
-                    pos_chores = [c for c in chores if c["pos"] == pos and c["type"] == "HARVEST"]
-                    if pos_chores:
+                elif "animal" in tile and tile.get("animal"):
+                    if not tile.get("fed_today", False) and inv.get("WHEAT", 0) > 0:
+                        actions[w_idx] = ["FEED"]
+                        inv["WHEAT"] -= 1
+                        unassigned_workers.remove(w_idx)
+                        assigned_chore_positions.add(pos)
+                        if pos in unfed_tiles:
+                            unfed_tiles.remove(pos)
+                        continue
+
+                    if tile.get("yield_units", 0) > 0:
                         actions[w_idx] = ["HARVEST"]
                         unassigned_workers.remove(w_idx)
                         assigned_chore_positions.add(pos)
                         continue
 
-                    # Check water
+                    if tile.get("fertilizer_available", False):
+                        actions[w_idx] = ["COLLECT_FERTILIZER"]
+                        unassigned_workers.remove(w_idx)
+                        assigned_chore_positions.add(pos)
+                        continue
+
+                    if care_animals and not tile.get("cared_today", False):
+                        actions[w_idx] = ["CARE"]
+                        unassigned_workers.remove(w_idx)
+                        assigned_chore_positions.add(pos)
+                        continue
+
+                elif kind == "PASTURE" and "animal" not in tile:
+                    if inv.get("COW", 0) > 0:
+                        actions[w_idx] = ["PLACE", "COW"]
+                        inv["COW"] -= 1
+                        unassigned_workers.remove(w_idx)
+                        assigned_chore_positions.add(pos)
+                        continue
+                    elif inv.get("SHEEP", 0) > 0:
+                        actions[w_idx] = ["PLACE", "SHEEP"]
+                        inv["SHEEP"] -= 1
+                        unassigned_workers.remove(w_idx)
+                        assigned_chore_positions.add(pos)
+                        continue
+
+                elif kind == "COOP" and "animal" not in tile:
+                    if inv.get("GOOSE", 0) > 0:
+                        actions[w_idx] = ["PLACE", "GOOSE"]
+                        inv["GOOSE"] -= 1
+                        unassigned_workers.remove(w_idx)
+                        assigned_chore_positions.add(pos)
+                        continue
+
+                elif kind == "PLANT":
+                    pos_harvest = any(c["pos"] == pos and c["type"] == "HARVEST" for c in chores)
+                    if pos_harvest:
+                        actions[w_idx] = ["HARVEST"]
+                        unassigned_workers.remove(w_idx)
+                        assigned_chore_positions.add(pos)
+                        continue
+
                     if not tile.get("watered_today", False):
                         actions[w_idx] = ["WATER"]
                         unassigned_workers.remove(w_idx)
                         assigned_chore_positions.add(pos)
                         continue
 
-            elif tile is None and world_state.day <= 26:
-                # Stand-on plant
-                planted = False
-                for seed_crop in ["MELON", "STRAWBERRY", "CARROT", "WHEAT", "TOMATO"]:
-                    if available_seeds.get(seed_crop, 0) > 0:
-                        actions[w_idx] = ["PLANT", seed_crop]
-                        available_seeds[seed_crop] -= 1
+                    if use_fert_on_crops and tile.get("crop") == "MELON" and tile.get("fertilized_until_day", -1) < world_state.day and inv.get("FERTILIZER", 0) > 0:
+                        actions[w_idx] = ["FERTILIZE"]
+                        inv["FERTILIZER"] -= 1
                         unassigned_workers.remove(w_idx)
                         assigned_chore_positions.add(pos)
-                        planted = True
-                        break
-                if planted:
+                        continue
+
+            elif tile is None:
+                if pastures_to_build > 0:
+                    actions[w_idx] = ["BUILD_PASTURE"]
+                    pastures_to_build -= 1
+                    unassigned_workers.remove(w_idx)
+                    assigned_chore_positions.add(pos)
+                    continue
+                elif coops_to_build > 0:
+                    actions[w_idx] = ["BUILD_COOP"]
+                    coops_to_build -= 1
+                    unassigned_workers.remove(w_idx)
+                    assigned_chore_positions.add(pos)
+                    continue
+                elif world_state.day <= 26:
+                    for sc in ["MELON", "STRAWBERRY", "CARROT", "WHEAT", "TOMATO"]:
+                        if available_seeds.get(sc, 0) > 0:
+                            actions[w_idx] = ["PLANT", sc]
+                            available_seeds[sc] -= 1
+                            unassigned_workers.remove(w_idx)
+                            assigned_chore_positions.add(pos)
+                            break
+
+        # Pass 2: Shed Logistics
+        empty_pastures = []
+        empty_coops = []
+        for y in range(len(world_state.tiles)):
+            for x in range(len(world_state.tiles[0])):
+                t = world_state.tiles[y][x]
+                if isinstance(t, dict):
+                    if t.get("kind") == "PASTURE" and "animal" not in t:
+                        empty_pastures.append((x, y))
+                    elif t.get("kind") == "COOP" and "animal" not in t:
+                        empty_coops.append((x, y))
+
+        for w_idx in list(unassigned_workers):
+            w_pos = worker_positions[w_idx]
+            inv = worker_inventories[w_idx]
+
+            if w_pos in unlocked_sheds:
+                if shed.get("COW", 0) > 0 and inv.get("COW", 0) == 0 and empty_pastures:
+                    actions[w_idx] = ["PICKUP", "COW", 1]
+                    shed["COW"] -= 1
+                    unassigned_workers.remove(w_idx)
+                    continue
+                elif shed.get("SHEEP", 0) > 0 and inv.get("SHEEP", 0) == 0 and empty_pastures:
+                    actions[w_idx] = ["PICKUP", "SHEEP", 1]
+                    shed["SHEEP"] -= 1
+                    unassigned_workers.remove(w_idx)
+                    continue
+                elif shed.get("GOOSE", 0) > 0 and inv.get("GOOSE", 0) == 0 and empty_coops:
+                    actions[w_idx] = ["PICKUP", "GOOSE", 1]
+                    shed["GOOSE"] -= 1
+                    unassigned_workers.remove(w_idx)
+                    continue
+                elif unfed_tiles and shed.get("WHEAT", 0) > 0 and inv.get("WHEAT", 0) == 0:
+                    take_qty = min(4, shed["WHEAT"])
+                    actions[w_idx] = ["PICKUP", "WHEAT", take_qty]
+                    shed["WHEAT"] -= take_qty
+                    unassigned_workers.remove(w_idx)
                     continue
 
-        # Pass 2: Spatial routing to nearest high-value chore
-        remaining_chores = [c for c in chores if c["pos"] not in assigned_chore_positions]
+        # Pass 3: Targeted Spatial Routing
+        claimed_unfed = set()
+        for w_idx in list(unassigned_workers):
+            w_pos = worker_positions[w_idx]
+            inv = worker_inventories[w_idx]
 
+            if inv.get("COW", 0) > 0 or inv.get("SHEEP", 0) > 0:
+                if empty_pastures:
+                    target = min(empty_pastures, key=lambda p: manhattan(w_pos, p))
+                    actions[w_idx] = [get_next_step(w_pos, target, world_state.tiles)]
+                    unassigned_workers.remove(w_idx)
+                    continue
+            if inv.get("GOOSE", 0) > 0:
+                if empty_coops:
+                    target = min(empty_coops, key=lambda p: manhattan(w_pos, p))
+                    actions[w_idx] = [get_next_step(w_pos, target, world_state.tiles)]
+                    unassigned_workers.remove(w_idx)
+                    continue
+
+            if inv.get("WHEAT", 0) > 0 and unfed_tiles:
+                avail_unfed = [p for p in unfed_tiles if p not in claimed_unfed]
+                target = min(avail_unfed or unfed_tiles, key=lambda p: manhattan(w_pos, p))
+                claimed_unfed.add(target)
+                actions[w_idx] = [get_next_step(w_pos, target, world_state.tiles)]
+                unassigned_workers.remove(w_idx)
+                continue
+
+            if inv.get("WHEAT", 0) == 0 and unfed_tiles and shed.get("WHEAT", 0) > 0:
+                if len(claimed_unfed) < len(unfed_tiles) and unlocked_sheds:
+                    actions[w_idx] = [get_next_step(w_pos, unlocked_sheds[0], world_state.tiles)]
+                    unassigned_workers.remove(w_idx)
+                    continue
+
+        # Pass 4: General Chores & Fallback
+        remaining_chores = [c for c in chores if c["pos"] not in assigned_chore_positions]
         for w_idx in unassigned_workers:
             w_pos = worker_positions[w_idx]
 
-            if not remaining_chores:
-                if w_pos not in unlocked_sheds:
-                    move = get_next_step(w_pos, unlocked_sheds[0], world_state.tiles)
-                    actions[w_idx] = [move]
-                else:
-                    actions[w_idx] = ["PASS"]
-                continue
+            if remaining_chores:
+                best_chore = None
+                best_score = -999999.0
+                for chore in remaining_chores:
+                    dist = manhattan(w_pos, chore["pos"])
+                    score = chore["weight"] - dist * 2.0
+                    if score > best_score:
+                        best_score = score
+                        best_chore = chore
 
-            best_chore = None
-            best_score = -999999.0
-            for chore in remaining_chores:
-                dist = manhattan(w_pos, chore["pos"])
-                score = chore["weight"] - dist * 2.2
-                if score > best_score:
-                    best_score = score
-                    best_chore = chore
+                if best_chore:
+                    target_pos = best_chore["pos"]
+                    remaining_chores.remove(best_chore)
+                    assigned_chore_positions.add(target_pos)
+                    actions[w_idx] = [get_next_step(w_pos, target_pos, world_state.tiles)]
+                    continue
 
-            if best_chore:
-                target_pos = best_chore["pos"]
-                remaining_chores.remove(best_chore)
-                assigned_chore_positions.add(target_pos)
-                
-                move = get_next_step(w_pos, target_pos, world_state.tiles)
-                actions[w_idx] = [move]
+            if w_pos not in unlocked_sheds and unlocked_sheds:
+                actions[w_idx] = [get_next_step(w_pos, unlocked_sheds[0], world_state.tiles)]
             else:
                 actions[w_idx] = ["PASS"]
 
@@ -823,22 +1306,31 @@ class LaborScheduler:
 # ======================================================================
 """
 =============================================================================
-ENGINE: MACRO PORTFOLIO PLANNER & ARBITRAGE EXECUTOR (TITAN APEX V4)
+ENGINE: MACRO PORTFOLIO PLANNER (CORRECTED & UNIFIED)
 =============================================================================
-High-Throughput Harvest Liquidation Pipeline & Dynamic Arbitrage Engine.
-Eliminates inventory logjams and maximizes realized harvest cash flow.
+Orchestrates:
+1. Opponent model & market monitoring
+2. Livestock procurement, feeding & pasture logistics
+3. Dynamic economic crop allocation
+4. Elasticity-aware market liquidation
+5. Labor hiring & spatial dispatch
 =============================================================================
 """
 
 
 
 class MacroPlanner:
-    def __init__(self):
+    def __init__(self, target_cows=6, target_sheep=3, target_geese=0, target_melons=10, cycle2_melons=0, sell_batch=14, use_fert=False, care_animals=True, town_sync=True):
         self.market_model = MarketModel()
         self.town_model = TownDemandModel()
         self.evaluator = EconomicEvaluator(self.market_model, self.town_model)
         self.opponent_model = OpponentModel()
+        self.livestock_engine = LivestockEngine(target_cows=target_cows, target_sheep=target_sheep, target_geese=target_geese, care_animals=care_animals)
+        self.allocator = DynamicEconomicAllocator(default_melon_target=target_melons, max_cycle2_melons=cycle2_melons)
+        self.market_executor = MarketExecutor(base_batch_size=sell_batch, town_sync=town_sync)
         self.labor_scheduler = LaborScheduler()
+        self.use_fert_on_crops = use_fert
+        self.care_animals = care_animals
 
     def plan_turn(self, world_state):
         day = world_state.day
@@ -846,189 +1338,130 @@ class MacroPlanner:
         step = world_state.step
         money = world_state.money
 
-        # 1. Opponent Radar & Supply Monitoring
+        # 1. Opponent Analysis
         opp_analysis = self.opponent_model.analyze_opponent_farm(world_state.opp_tiles, day)
-        opp_imminent = opp_analysis["imminent_harvests"]
         opp_crops = opp_analysis["crop_counts"]
 
-        # 2. Extract Chores & Labor Needs
-        chores = []
-        weed_count = 0
-        unwatered_count = 0
-        harvestable_count = 0
+        # 2. Livestock State Analysis
+        live_state = self.livestock_engine.analyze_livestock_state(world_state.tiles, world_state.shed, world_state.inventories)
+        unfed_animal_tiles = live_state["unfed_animal_tiles"]
+
+        # 3. Chores Extraction
+        chores = list(live_state["chores"])
+        empty_tiles = world_state.get_empty_tiles()
+        melon_plants = 0
 
         board_size = len(world_state.tiles)
         for y in range(board_size):
             for x in range(board_size):
                 t = world_state.tiles[y][x]
                 pos = (x, y)
-                if t is None or t == "LOCKED":
+                if not isinstance(t, dict):
                     continue
-                if isinstance(t, dict):
-                    kind = t.get("kind")
-                    if kind == "WEED":
-                        chores.append({"type": "DIG", "pos": pos, "weight": 92})
-                        weed_count += 1
-                    elif kind == "PLANT":
-                        crop = t["crop"]
-                        age = day - t.get("planted_day", 0)
-                        cd = CROPS.get(crop, {})
-                        watered = t.get("watered_today", False)
-                        yield_units = t.get("yield_units", 0)
+                kind = t.get("kind")
+                if kind == "WEED":
+                    chores.append({"type": "DIG", "pos": pos, "weight": 95})
+                elif kind == "PLANT":
+                    crop = t.get("crop")
+                    if crop == "MELON": melon_plants += 1
+                    age = day - t.get("planted_day", 0)
+                    cd = CROPS.get(crop, {})
+                    if not t.get("watered_today", False):
+                        chores.append({"type": "WATER", "pos": pos, "weight": 82})
+                    if self.use_fert_on_crops and t.get("fertilized_until_day", -1) < day and crop == "MELON":
+                        chores.append({"type": "FERTILIZE", "pos": pos, "weight": 78})
 
-                        if not watered:
-                            chores.append({"type": "WATER", "pos": pos, "weight": 82})
-                            unwatered_count += 1
+                    is_harvest = False
+                    if cd.get("ongoing", False):
+                        if age >= cd["first_yield_day"] and t.get("yield_units", 0) > 0:
+                            is_harvest = True
+                    else:
+                        if crop == "MELON" and (age >= 10 or t.get("yield_units", 0) >= 6 or (day >= 28 and t.get("yield_units", 0) >= 1)):
+                            is_harvest = True
+                        elif crop == "CARROT" and (age >= 3 or t.get("yield_units", 0) >= 3 or (day >= 28 and t.get("yield_units", 0) >= 1)):
+                            is_harvest = True
+                        elif crop == "WHEAT" and (age >= 4 or t.get("yield_units", 0) >= 4 or (day >= 28 and t.get("yield_units", 0) >= 1)):
+                            is_harvest = True
+                        elif age >= cd.get("max_yield_day", 4) and t.get("yield_units", 0) > 0:
+                            is_harvest = True
 
-                        is_harvest = False
-                        if cd.get("ongoing", False):
-                            if age >= cd["first_yield_day"] and yield_units > 0:
-                                is_harvest = True
-                        else:
-                            if crop == "MELON":
-                                if age >= 10 or yield_units >= 6 or (day >= 28 and yield_units >= 1):
-                                    is_harvest = True
-                            elif crop == "CARROT":
-                                if age >= 3 or yield_units >= 3 or (day >= 28 and yield_units >= 1):
-                                    is_harvest = True
-                            elif crop == "WHEAT":
-                                if age >= 4 or yield_units >= 4 or (day >= 28 and yield_units >= 1):
-                                    is_harvest = True
-                            else:
-                                if age >= cd.get("max_yield_day", 4) and yield_units > 0:
-                                    is_harvest = True
+                    if is_harvest:
+                        chores.append({"type": "HARVEST", "pos": pos, "weight": 100})
 
-                        if is_harvest:
-                            chores.append({"type": "HARVEST", "pos": pos, "weight": 100})
-                            harvestable_count += 1
-
-        empty_tiles = world_state.get_empty_tiles()
-        total_seeds_held = sum(world_state.seeds.values())
-        if total_seeds_held > 0 and day <= 26:
+        if sum(world_state.seeds.values()) > 0 and day <= 26:
             for pos in empty_tiles:
                 chores.append({"type": "PLANT", "pos": pos, "weight": 70})
 
-        total_pending_chores = weed_count + unwatered_count + harvestable_count + len(empty_tiles)
+        # 4. Labor Scheduling (Hire farm hands at hour 0)
+        total_pending = len(chores) + len(empty_tiles)
+        target_hands = self.labor_scheduler.compute_daily_hire_count(world_state, total_pending)
 
-        # 3. Plan Daily Labor Fleet
-        planned_hires = self.labor_scheduler.compute_daily_hire_count(world_state, total_pending_chores)
-
-        # 4. Generate Market Orders
         orders = []
-
-        # A. HIRE FARM HANDS at hour 0 (Priority 1)
-        if hour == 0 and planned_hires > world_state.hires_today:
-            needed = planned_hires - world_state.hires_today
-            for _ in range(needed):
+        if hour == 0 and target_hands > world_state.hires_today:
+            for _ in range(target_hands - world_state.hires_today):
                 cost = fib_hire_cost(world_state.hires_today + len([o for o in orders if o[0] == "HIRE"]))
-                if money >= cost:
+                if money >= cost + 10:
                     orders.append(["HIRE"])
                     money -= cost
 
-        # B. DAY-0 50-TILE EXPANSION & SW SCALING
+        # 5. Land Expansion
         n_unlocked = len(world_state.unlocked_quadrants) - 1
         if n_unlocked < 2:
             cost = LAND_PRICES[n_unlocked]
-            should_buy_land = False
-            if n_unlocked == 0 and money >= cost + 250: # NE Land ($1,000)
-                should_buy_land = True
-            elif n_unlocked == 1 and money >= cost + 500 and day <= 13: # SW Land ($2,000)
-                should_buy_land = True
-            
-            if should_buy_land and len(orders) < 10:
+            if n_unlocked == 0 and money >= cost + 250:
+                orders.append(["BUY_LAND"])
+                money -= cost
+            elif n_unlocked == 1 and money >= cost + 500 and day <= 14:
                 orders.append(["BUY_LAND"])
                 money -= cost
 
-        # Labor Liquidity Protection ($30 reserve)
-        RESERVE_CASH = 30.0
-        spendable = max(0.0, money - RESERVE_CASH)
+        spendable = max(0.0, money - 25.0)
 
-        # C. ADAPTIVE CROP PORTFOLIO EVALUATOR
-        needed_seeds = max(0, len(empty_tiles) - total_seeds_held)
+        # 6. Buy Animals with Mandatory Feed Protection
+        live_orders, spendable, money = self.livestock_engine.generate_market_orders(
+            live_state, money, spendable, day, orders
+        )
+        orders.extend(live_orders)
 
-        if needed_seeds > 0 and day <= 26 and len(orders) < 10 and spendable > 0:
-            remaining_days = 29 - day
-            opp_melon_flood = opp_crops.get("MELON", 0) >= 16
+        # 7. Wheat Feed Buffer
+        feed_orders, spendable = self.livestock_engine.check_wheat_feed_reserve(
+            live_state, world_state.shed, world_state.inventories, spendable, day, orders
+        )
+        orders.extend(feed_orders)
 
-            portfolio = {}
-            if day <= 12 and remaining_days >= 12:
-                # Early Season: High-yield Melon Compounding (Proven 65% Melon baseline)
-                if opp_melon_flood:
-                    melon_c = int(needed_seeds * 0.45)
-                    straw_c = int(needed_seeds * 0.25)
-                    carrot_c = int(needed_seeds * 0.20)
-                    wheat_c = needed_seeds - melon_c - straw_c - carrot_c
-                    if melon_c > 0: portfolio["MELON"] = melon_c
-                    if straw_c > 0: portfolio["STRAWBERRY"] = straw_c
-                    if carrot_c > 0: portfolio["CARROT"] = carrot_c
-                    if wheat_c > 0: portfolio["WHEAT"] = wheat_c
-                else:
-                    melon_c = int(needed_seeds * 0.65)
-                    carrot_c = int(needed_seeds * 0.25)
-                    wheat_c = needed_seeds - melon_c - carrot_c
-                    if melon_c > 0: portfolio["MELON"] = melon_c
-                    if carrot_c > 0: portfolio["CARROT"] = carrot_c
-                    if wheat_c > 0: portfolio["WHEAT"] = wheat_c
+        # 8. Seed Purchases
+        seed_orders, spendable = self.allocator.allocate_seeds(
+            len(empty_tiles), world_state.seeds, melon_plants, spendable, day,
+            world_state.market_prices, world_state.market_inv, opp_crops
+        )
+        orders.extend(seed_orders)
 
-            elif day <= 19 and remaining_days >= 10:
-                # Mid Season: Melons (50%) + Carrots (35%) + Wheat (15%)
-                melon_c = int(needed_seeds * 0.50)
-                carrot_c = int(needed_seeds * 0.35)
-                wheat_c = needed_seeds - melon_c - carrot_c
-                if melon_c > 0: portfolio["MELON"] = melon_c
-                if carrot_c > 0: portfolio["CARROT"] = carrot_c
-                if wheat_c > 0: portfolio["WHEAT"] = wheat_c
+        # 9. Selling / Liquidation
+        total_active_animals = live_state["total_active_animals"] + live_state.get("cows_ordered", 0) + live_state.get("sheep_ordered", 0)
+        feed_reserve = total_active_animals * 4 if day < 26 else 0
+        sell_orders = self.market_executor.generate_sell_orders(
+            world_state.shed, world_state.market_prices, world_state.market_inv,
+            day, step, feed_reserve=feed_reserve, current_orders=orders
+        )
+        orders.extend(sell_orders)
 
-            elif remaining_days >= 3:
-                # Late Season: Fast Carrots (75%) + Wheat (25%)
-                carrot_c = int(needed_seeds * 0.75)
-                wheat_c = needed_seeds - carrot_c
-                if carrot_c > 0: portfolio["CARROT"] = carrot_c
-                if wheat_c > 0: portfolio["WHEAT"] = wheat_c
+        # 10. Worker Dispatch
+        unplaced_pasture_animals = live_state["cows_in_transit"] + live_state["sheep_in_transit"] + live_state.get("cows_ordered", 0) + live_state.get("sheep_ordered", 0)
+        pastures_to_build = max(0, min(self.livestock_engine.target_cows + self.livestock_engine.target_sheep - live_state["pasture_count"], unplaced_pasture_animals - len(live_state["empty_pastures"])))
+        
+        unplaced_geese = live_state["geese_in_transit"] + live_state.get("geese_ordered", 0)
+        coops_to_build = max(0, min(self.livestock_engine.target_geese - live_state["coop_count"], unplaced_geese - len(live_state["empty_coops"])))
 
-            for crop, count in portfolio.items():
-                if len(orders) >= 10:
-                    break
-                seed_price = CROPS[crop]["seed"]
-                affordable = min(count, int(spendable // seed_price))
-                if affordable > 0:
-                    orders.append(["BUY_SEED", crop, affordable])
-                    spendable -= affordable * seed_price
-                    money -= affordable * seed_price
+        structs = {"pastures": pastures_to_build, "coops": coops_to_build}
 
-        # D. HIGH-THROUGHPUT HARVEST LIQUIDATION PIPELINE (Zero Inventory Choke)
-        is_scarcity_window = self.town_model.is_post_consumption_window(step)
-
-        sell_priority = ["MELON", "WOOL", "MILK", "STRAWBERRY", "FERTILIZER", "TOMATO", "EGG", "CARROT", "WHEAT"]
-        for prod in sell_priority:
-            if len(orders) >= 10:
-                break
-            qty = world_state.shed.get(prod, 0)
-            if qty > 0:
-                cur_p = world_state.market_prices.get(prod, 1)
-                opp_frontrun = self.opponent_model.should_frontrun_opponent(prod, opp_imminent.get(prod, 0))
-
-                should_sell = False
-                if day >= 26 or sum(world_state.shed.values()) >= 25:
-                    should_sell = True
-                elif opp_frontrun:
-                    should_sell = True
-                elif is_scarcity_window and cur_p > 1:
-                    should_sell = True
-                elif cur_p > 1:
-                    should_sell = True
-
-                if should_sell:
-                    # High-throughput liquidation batch: 12-16 units per turn
-                    sell_amount = min(qty, 14) if day < 26 else qty
-                    orders.append(["SELL", prod, sell_amount])
-
-        # 5. Assign Worker Actions
-        worker_actions = self.labor_scheduler.assign_worker_actions(world_state, chores)
+        worker_actions = self.labor_scheduler.assign_worker_actions(
+            world_state, chores, structures_to_build=structs, unfed_animal_tiles=unfed_animal_tiles,
+            care_animals=self.care_animals, use_fert_on_crops=self.use_fert_on_crops
+        )
 
         return {
-            "farmer": worker_actions.get("farmer", ["PASS"]),
-            "hands": worker_actions.get("hands", []),
+            "farmer": worker_actions["farmer"],
+            "hands": worker_actions["hands"],
             "market": orders[:10]
         }
 
@@ -1052,11 +1485,10 @@ def get_planner():
     return _PLANNER
 
 
-def agent(obs):
+def agent(obs, configuration=None):
     try:
         world_state = WorldState(obs)
         planner = get_planner()
         return planner.plan_turn(world_state)
     except Exception as e:
-        print(f"Error in unified agent: {e}")
         return {"farmer": ["PASS"], "hands": [], "market": []}

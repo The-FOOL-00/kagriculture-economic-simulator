@@ -1,18 +1,30 @@
 """
 =============================================================================
-KAGGLE COMPETITIONS SUBMISSION RUNNER (SLOTS 3 & 4)
+KAGGLE COMPETITIONS SUBMISSION RUNNER (CORRECTED & VALIDATED)
 =============================================================================
-Submits Slot 3 and Slot 4 to Kaggle using refreshed OAuth credentials.
+Submits verified candidates to Kaggle slots using authenticated credentials.
+Guarantees candidate file existence and logs submission responses.
 =============================================================================
 """
 
-import json
 import os
+import sys
 import subprocess
 import time
 
+CANDIDATES_MAP = {
+    "slot1": ("candidates/slot1_titan_control.py", "Slot 1: Titan Pure Crop Control Baseline"),
+    "slot2": ("candidates/slot2_hybrid_6c3s_10m.py", "Slot 2: Hybrid 6C/3S/10M Production Champion"),
+    "slot3": ("candidates/slot3_hybrid_dynamic.py", "Slot 3: Hybrid Dynamic Economic Allocator"),
+    "slot4": ("candidates/slot4_hybrid_lookahead.py", "Slot 4: Hybrid Lookahead Capital Planner"),
+    "slot5": ("candidates/slot5_hybrid_8c4s.py", "Slot 5: Hybrid 8C/4S High-Capacity Scaler"),
+}
+
 
 def submit_candidate(file_path, message):
+    if not os.path.exists(file_path):
+        raise FileNotFoundError(f"Cannot submit non-existent candidate: {file_path}")
+
     tok = subprocess.check_output(["kaggle", "auth", "print-access-token"], text=True).strip()
     env = os.environ.copy()
     env["KAGGLE_API_TOKEN"] = tok
@@ -38,30 +50,12 @@ def submit_candidate(file_path, message):
 
 if __name__ == "__main__":
     print("=" * 75)
-    print("SUBMITTING SLOT 3 & SLOT 4")
+    print("KAGGLE SUBMISSION RUNNER - VERIFIED CANDIDATE TARGETS")
     print("=" * 75)
     
-    ok3 = submit_candidate(
-        "candidates/slot3_opponent_adaptive.py",
-        "Slot 3: Opponent-Adaptive Challenger (Anti-Glut Radar)"
-    )
-    
-    time.sleep(3)
-    
-    ok4 = submit_candidate(
-        "candidates/slot4_market_planner.py",
-        "Slot 4: Market Planner Challenger (Scarcity Arbitrage Engine)"
-    )
-    
-    time.sleep(3)
-    
-    # Query current submissions list
-    tok = subprocess.check_output(["kaggle", "auth", "print-access-token"], text=True).strip()
-    env = os.environ.copy()
-    env["KAGGLE_API_TOKEN"] = tok
-    
-    print("\n" + "=" * 75)
-    print("RECENT KAGGLE SUBMISSIONS LIST:")
-    print("=" * 75)
-    res = subprocess.run(["kaggle", "competitions", "submissions", "-c", "kaggriculture"], env=env, capture_output=True, text=True)
-    print(res.stdout)
+    # Verify all targets exist before submitting
+    for slot, (path, msg) in CANDIDATES_MAP.items():
+        assert os.path.exists(path), f"Candidate {path} missing!"
+        print(f"  * {slot}: {path} [FOUND]")
+
+    print("\nTo submit specific slots, call submit_candidate(path, message).")
