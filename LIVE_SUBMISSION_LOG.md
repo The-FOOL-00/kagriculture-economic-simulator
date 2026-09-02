@@ -4,12 +4,21 @@ Tracking leaderboard progress, episode outcomes, and rating trajectories for all
 
 ---
 
-## 🎯 Active Submission Matrix
+## 🎯 Active Portfolio Submissions
 
-| Slot | Candidate Name | Staged File | Git Commit | Submission ID | Submission Time (UTC) | Initial Elo | Peak Elo | Current Elo | Status | Record (W-L-T) | Notes / Hypotheses |
-| :---: | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **1** | Titan Control Baseline | `candidates/slot1_titan_control.py` | `d877985` | **`55519962`** | 2026-08-15 04:25:03 | 600.0 | 600.0 | 513.5 | `COMPLETE` | Active | Live reference baseline |
-| **2** | Liquidation Challenger | `candidates/slot2_loss_fix_challenger.py` | `d877985` | **`55519966`** | 2026-08-15 04:25:12 | 600.0 | 600.0 | 481.4 | `COMPLETE` | Active | Tests 12-14 batch melon liquidation |
-| **3** | Opponent-Adaptive | `candidates/slot3_opponent_adaptive.py` | `d877985` | **`55525631`** | 2026-08-15 10:36:28 | -- | -- | -- | `PENDING` | 0-0-0 | Tests opponent farm radar counter-hedging |
-| **4** | Market Planner | `candidates/slot4_market_planner.py` | `d877985` | **`55525634`** | 2026-08-15 10:36:37 | -- | -- | -- | `PENDING` | 0-0-0 | Tests town scarcity window arbitrage |
-| **5** | **Titan Apex v4 Champion** | `main.py` | `d877985` | *(Held)* | -- | -- | -- | -- | `STAGED` | 0-0-0 | Full integrated production champion |
+| Slot | Candidate Name | Packaged File | SHA-256 Checksum | Submission ID | Submission Time (UTC) | Status | Live Elo | Role / Notes |
+| :---: | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| **1** | **Aethel-Prime V1** | `main.py` | `8addafc2de...` | **`55944418`** | 2026-09-01 16:53:46 | `COMPLETE` | **922.8** | **Protected Anchor Champion** (Preserved in Slot 1) |
+| **2** | **Aethel-Refined V2** | `submission_slot2_aethel_refined_v2.tar.gz` | `ac16af822e...` | **`55958978`** | 2026-09-02 09:41:40 | `PROCESSING` | *Evaluating* | **Active Challenger** (Replaced underperforming Apex V4) |
+
+---
+
+## 📜 Historical / Replaced Submissions
+
+| Submission ID | Candidate Name | Date (UTC) | Final Elo | Status | Notes |
+| :---: | :--- | :---: | :---: | :---: | :--- |
+| **`55893176`** | Titan Apex Grandmaster V4 | 2026-08-30 14:35:42 | 577.3 | `REPLACED` | Replaced by Aethel-Refined V2 in Slot 2 |
+| **`55525634`** | Slot 4 Market Planner | 2026-08-15 10:36:37 | 443.7 | `RETIRED` | Legacy research ablation |
+| **`55525631`** | Slot 3 Opponent-Adaptive | 2026-08-15 10:36:28 | 429.3 | `RETIRED` | Legacy research ablation |
+| **`55519966`** | Slot 2 Loss Fix Challenger | 2026-08-15 04:25:12 | 481.4 | `RETIRED` | Legacy research ablation |
+| **`55519962`** | Slot 1 Titan Control | 2026-08-15 04:25:03 | 513.5 | `RETIRED` | Legacy reference baseline |
