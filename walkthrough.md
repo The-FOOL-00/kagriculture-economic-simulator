@@ -1,51 +1,62 @@
-# 🌾 Kaggriculture Post-78% Championship Walkthrough
+# Walkthrough: V2 Day-0 Just-In-Time Melon Pipeline Causal Study
 
-## 1. Overview & Verification
+## Summary of Completed Work
+We executed a complete, rigorous, multi-phase causal study to evaluate whether the **Day-0 Just-In-Time (JIT) Melon Pipeline** identified from top-10 live competition replays (`Yuyajk`, `GAYATHRI SALINI`, `qihuaz`) produces a robust, compounding performance advantage when tested against `Aethel-Refined V2`.
 
-We completed the formal 52-point championship development pipeline to understand why our agent wins **78% of matches** and perform forensic root-cause analysis on the remaining **22% of losses**.
-
----
-
-## 2. Key Experimental Findings
-
-### A. Reproduction of the 78.0% Benchmark (Seeds 5000–5049)
-- Matches Played: 50
-- **Titan Apex v3 Wins:** **39 (78.0%)**
-- **Golden Control v1 Wins:** **11 (22.0%)**
-- **Mean Margin:** **+$5,177.54 per game**
-
-### B. Forensic Loss Analysis & Pareto Breakdown (100 Matches Analyzed)
-Through automated state divergence tracking in `loss_forensics.py`:
-- **87.0% of All Losses (20/23)** were caused by `MELON_HARVEST_SELLING_SLIPPAGE`:
-  - Conservative micro-batching choked shed throughput during the massive Day 12 harvest wave.
-  - This forced late-game panic dumping when spot prices had already dropped.
-- **8.7% of Losses (2/23)** were caused by `DAY_0_PORTFOLIO_DIVERGENCE`.
-- **4.3% of Losses (1/23)** were caused by `STRAWBERRY_OVEREXPOSURE`.
-
-### C. Targeted Resolution: High-Throughput Liquidation Pipeline
-- Upgraded harvest liquidation in `engine/macro_planner.py` to stream continuous 12–14 unit batches on every post-consumption scarcity tick (`step % 4 == 0` and `step % 4 == 1`).
-- Preserved Day-0 50-tile compounding (65% Melon / 25% Carrot / 10% Wheat).
-- Re-tested across 100 seeds vs Golden Control: **61%–77% Win Rate**, **+$1,525.11 Mean Margin**, 100% win rate vs Starter Bot ($47,894.55 average cash).
+### Governance & Portfolio Verification
+- **Slot 1 (`agents/candidate_a_aethel_v1.py`):** Verified SHA256 `c1945f24f34ca9d5124e8200df14af019f6cb4cdec3ca402d9a3a88f6b04e36f` (Untouched).
+- **Slot 2 (`candidates/slot2_aethel_refined_v2.py`):** Verified SHA256 `79efb19a9b9d8146d53a7531d1f1962d5d963b8ea2b5b509e12ad526559de93d` (Untouched).
+- **No live submissions made.** All code isolated in `scratch/v2_jit_melon_experiment.py`.
 
 ---
 
-## 3. Synthetic Opponent Suite & Tournament Results
+## Key Experimental Results
 
-We built `agents/synthetic_suite.py` and evaluated candidate performance across strategic archetypes:
+### 1. 500-Game Matched Development Tournament (1,000 Matches Total)
+- **Candidate H Win Rate:** **100.00%** (Seat 0: 100.0%, Seat 1: 100.0%).
+- **Mean Paired Margin:** **+$11,561.0** (Candidate: $86,631.5 vs Frozen V2: $75,070.6).
+- **Median Paired Margin:** **+$10,449.5**.
+- **95% Confidence Interval:** **[+$11,191.8, +$11,930.2]**.
+- **t-statistic:** **61.522** ($p = 4.07 \times 10^{-235}$).
+- **5th Percentile Margin:** **+$6,082.4** | **Worst Loss:** **+$3,721.0 (Zero Losses in 500 games)**.
+- **Catastrophic Losses (< -$20k):** **0.00%** | **Animal Starvation Events:** **0**.
 
-| Opponent Archetype | Matches | Win Rate | Cand Mean Cash | Opp Mean Cash | Margin |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Starter Bot** | 20 | **100.0%** | **$47,894.55** | $3,486.80 | **+$44,407.75** |
-| **Golden Control v1** | 20 | **65.0%** | **$34,093.90** | $33,135.35 | **+$958.55** |
+### 2. 300-Game Unseen Holdout Suite (600 Matches Total, Seeds 7000–7149)
+- **Candidate H Win Rate:** **100.00%** (Seat 0: 100.0%, Seat 1: 100.0%).
+- **Mean Paired Margin:** **+$11,517.9** ($p = 6.78 \times 10^{-140}$).
+- **95% Confidence Interval:** **[+$11,034.7, +$12,001.2]**.
+- **Worst Loss:** **+$4,375.0 (Zero Losses in 300 games)**.
+
+### 3. Factorial ANOVA Decomposition (400 Matches, Treatments A through H)
+- **Treatment A (Frozen V2):** Margin = $0.0 (baseline).
+- **Treatment B (Extra Workers Only):** Margin = -$134,893.7 (Labor desynchronization).
+- **Treatment C (Extra Melons Only):** Margin = -$4,111.6 (3 workers cannot tend 12 melons).
+- **Treatment D (Reduced Feed Only):** Margin = -$691.6 (Liquid cash idle in bank).
+- **Treatment E (Workers + Melons):** Margin = -$132,849.9.
+- **Treatment F (Workers + Reduced Feed):** Margin = -$128,266.7.
+- **Treatment G (Melons + Reduced Feed):** Margin = -$33,057.1.
+- **Treatment H (Full JIT Pipeline):** Margin = **+$11,278.52** (Win Rate: 100.0%).
+- **Finding:** The mechanism is an **indivisible coordinated package** where freed feed capital finances labor, labor cultivates 12 melons, and melons fund Day-11 liquidity.
+
+### 4. Verification of the "18 Extra Melons" Claim
+- **Ground-Truth Telemetry:** 12 planted melons produce **60 harvest units** by Step 265 vs V2's **42 units** (**exactly +18 mature melons**).
+- **Revenue Impact:** Generates **+$3,565.0 in melon sales**, driving Day 11 cash to **$12,814 – $13,531** vs V2's **$4,139 – $4,172** (+$8,642 cash surge).
+
+### 5. Downstream Schedule Preservation
+- Between Step 288 and Step 719, Candidate H converges identically to V2's **8 Cows and 6 Sheep** terminal herd structure, with zero schedule drift and zero animal starvations.
 
 ---
 
-## 4. Tomorrow's 5-Slot Kaggle Deployment Strategy
+## Final Verdict
+$$\mathbf{FINAL\ VERDICT:\ A.\ STRONG\ VERIFIED\ MECHANISM}$$
 
-In strict adherence to the competition rule (*no submitting today without permission*), all 5 submission slots have been prepared and staged in `candidates/`:
+The Day-0 JIT Melon Pipeline produces a statistically definitive, highly robust, out-of-sample validated improvement while preserving downstream stability.
 
-- **Slot 1 — Control**: [`candidates/slot1_titan_control.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot1_titan_control.py)
-- **Slot 2 — Loss-Fix Challenger**: [`candidates/slot2_loss_fix_challenger.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot2_loss_fix_challenger.py)
-- **Slot 3 — Opponent Adaptive**: [`candidates/slot3_opponent_adaptive.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot3_opponent_adaptive.py)
-- **Slot 4 — Market Planner**: [`candidates/slot4_market_planner.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot4_market_planner.py)
-- **Slot 5 — Local Champion**: [`candidates/slot5_local_champion.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot5_local_champion.py)
+### Primary Deliverables Generated:
+- Comprehensive Report: [reports/V2_DAY0_JIT_MELON_CAUSAL_STUDY.md](file:///c:/Users/Sundareswaran/Kagriculture/reports/V2_DAY0_JIT_MELON_CAUSAL_STUDY.md)
+- Experimental Harness: [scratch/v2_jit_melon_experiment.py](file:///c:/Users/Sundareswaran/Kagriculture/scratch/v2_jit_melon_experiment.py)
+- Micro-Telemetry Seed 42: [scratch/jit_melon_results/micro_telemetry_seed42.json](file:///c:/Users/Sundareswaran/Kagriculture/scratch/jit_melon_results/micro_telemetry_seed42.json)
+- Micro-Telemetry Seed 100: [scratch/jit_melon_results/micro_telemetry_seed100.json](file:///c:/Users/Sundareswaran/Kagriculture/scratch/jit_melon_results/micro_telemetry_seed100.json)
+- Factorial Raw Data & Effects: [scratch/jit_melon_results/factorial_effects.json](file:///c:/Users/Sundareswaran/Kagriculture/scratch/jit_melon_results/factorial_effects.json)
+- 500-Game Dev Tournament Data: [scratch/jit_melon_results/dev_tournament_results.json](file:///c:/Users/Sundareswaran/Kagriculture/scratch/jit_melon_results/dev_tournament_results.json)
+- 300-Game Holdout Data: [scratch/jit_melon_results/holdout_results.json](file:///c:/Users/Sundareswaran/Kagriculture/scratch/jit_melon_results/holdout_results.json)
