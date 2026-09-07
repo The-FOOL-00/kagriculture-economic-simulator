@@ -1,11 +1,21 @@
-import sys
-import os
-sys.path.insert(0, os.path.abspath("."))
-import candidates.slot2_aethel_refined_v2 as v2
+import sys, os
+sys.path.insert(0, os.path.abspath('.'))
+import kaggle_environments
+from candidates.slot2_aethel_refined_v2 import agent as v2_agent
 
-print("Inspecting all BUILD_PASTURE actions in V2's plan:")
-for s, act in enumerate(v2._TRACE):
-    farmer = act.get("farmer", [])
-    hands = act.get("hands", [])
-    if "BUILD_PASTURE" in farmer or any("BUILD_PASTURE" in h for h in hands):
-        print(f"Step {s:3d} (Day {s//24:2d}, Hr {s%24:2d}): Farmer: {farmer} | Hands: {hands}")
+env = kaggle_environments.make("kaggriculture", configuration={"episodeSteps": 720, "seed": 42})
+env.run([v2_agent, lambda obs, cfg: {}])
+
+# Find all pasture tiles at the end of the game
+farm = env.steps[719][0]['observation']['farms'][0]
+pastures = []
+for y, row in enumerate(farm['tiles']):
+    for x, t in enumerate(row):
+        if isinstance(t, dict) and t.get('kind') == 'PASTURE':
+            anim = t.get('animal')
+            pastures.append(((x, y), anim))
+
+print(f"Total pastures built by V2: {len(pastures)}")
+print("V2 Pasture coordinates and animals:")
+for pos, anim in sorted(pastures):
+    print(f"  {pos}: {anim}")
