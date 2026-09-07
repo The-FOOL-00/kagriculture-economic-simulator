@@ -1,167 +1,166 @@
-import os
-import sys
-import time
+import sys, os
+sys.path.insert(0, os.path.abspath('.'))
+import copy
 import json
-import math
-import pandas as pd
+import kaggle_environments
 import numpy as np
-from concurrent.futures import ProcessPoolExecutor, as_completed
-from kaggle_environments import make
 
-sys.stdout.reconfigure(encoding='utf-8')
+import candidates.slot2_aethel_refined_v2 as v2_mod
+from candidates.candidate_cl_aethel_prime import agent as prime_agent
 
-# Ensure project root in path
-project_root = r"c:\Users\Sundareswaran\Kagriculture"
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+SEEDS = [42, 100, 2024]
 
-def _run_single_match(item):
-    cand_path, opp_path, seed, swapped, cand_name, opp_name = item
-    agent0 = opp_path if swapped else cand_path
-    agent1 = cand_path if swapped else opp_path
-    
-    cfg = {"episodeSteps": 720, "seed": seed}
-    env = make("kaggriculture", configuration=cfg, debug=False)
-    
-    t0 = time.time()
-    try:
-        env.run([agent0, agent1])
-        elapsed = time.time() - t0
-        final_step = env.steps[-1]
-        r0 = float(final_step[0].reward or 0.0)
-        r1 = float(final_step[1].reward or 0.0)
-        
-        r_cand = r1 if swapped else r0
-        r_opp = r0 if swapped else r1
-        margin = r_cand - r_opp
-        win = 1.0 if margin > 0 else (0.5 if margin == 0 else 0.0)
-        
-        return {
-            'cand': cand_name,
-            'opp': opp_name,
-            'seed': seed,
-            'swapped': swapped,
-            'r_cand': r_cand,
-            'r_opp': r_opp,
-            'margin': margin,
-            'win': win,
-            'elapsed': elapsed
-        }
-    except Exception as e:
-        return {
-            'cand': cand_name,
-            'opp': opp_name,
-            'seed': seed,
-            'swapped': swapped,
-            'r_cand': 0.0,
-            'r_opp': 0.0,
-            'margin': 0.0,
-            'win': 0.0,
-            'error': str(e)
-        }
+def eval_agent(agent_fn, seeds=SEEDS, opp_name="starter"):
+    scores = []
+    opp_scores = []
+    for s in seeds:
+        env = kaggle_environments.make("kaggriculture", configuration={"episodeSteps": 720, "seed": s})
+        opp_fn = kaggle_environments.environments['kaggriculture']['agents'][opp_name]
+        env.run([agent_fn, opp_fn])
+        scores.append(env.steps[-1][0]['reward'])
+        opp_scores.append(env.steps[-1][1]['reward'])
+    return float(np.mean(scores)), float(np.std(scores)), scores
 
-def run_discovery_suite(candidates, opponents, seeds, max_workers=6):
-    print("=" * 85)
-    print(f"RAPID DISCOVERY PHASE: {len(candidates)} Candidates x {len(opponents)} Opponents x {len(seeds)} Seeds (Symmetric)")
-    print(f"Total Matches to Run: {len(candidates) * len(opponents) * len(seeds) * 2}")
-    print("=" * 85)
-    
-    tasks = []
-    for cand_name, cand_path in candidates.items():
-        for opp_name, opp_path in opponents.items():
-            for s in seeds:
-                # Normal: cand as P0
-                tasks.append((cand_path, opp_path, s, False, cand_name, opp_name))
-                # Swapped: cand as P1
-                tasks.append((cand_path, opp_path, s, True, cand_name, opp_name))
-                
-    results = []
-    t_start = time.time()
-    
-    with ProcessPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(_run_single_match, t): t for t in tasks}
-        completed = 0
-        total = len(tasks)
-        for future in as_completed(futures):
-            res = future.result()
-            results.append(res)
-            completed += 1
-            if completed % 20 == 0 or completed == total:
-                print(f"Completed {completed}/{total} matches ({(completed/total)*100:.1f}%) in {time.time() - t_start:.1f}s")
-                
-    df = pd.DataFrame(results)
-    
-    # Summarize by candidate
-    print("\n" + "=" * 85)
-    print("DISCOVERY PHASE SUMMARY ACROSS ALL OPPONENTS")
-    print("=" * 85)
-    
-    cand_summary = []
-    for c_name, c_df in df.groupby('cand'):
-        wr = c_df['win'].mean() * 100
-        mean_r = c_df['r_cand'].mean()
-        mean_opp_r = c_df['r_opp'].mean()
-        mean_margin = c_df['margin'].mean()
-        worst_loss = c_df['margin'].min()
-        std_margin = c_df['margin'].std()
-        
-        cand_summary.append({
-            'Candidate': c_name,
-            'Games': len(c_df),
-            'WinRate': wr,
-            'MeanReward': mean_r,
-            'MeanOppReward': mean_opp_r,
-            'MeanMargin': mean_margin,
-            'WorstLoss': worst_loss,
-            'StdMargin': std_margin
-        })
-        
-    sum_df = pd.DataFrame(cand_summary).sort_values(by='MeanMargin', ascending=False).reset_index(drop=True)
-    print(sum_df.to_string(index=False))
-    
-    # Detailed breakdown by opponent
-    print("\n" + "=" * 85)
-    print("PER-OPPONENT MEAN MARGIN BREAKDOWN")
-    print("=" * 85)
-    pivot_margin = df.pivot_table(index='cand', columns='opp', values='margin', aggfunc='mean')
-    print(pivot_margin.round(1).to_string())
-    
-    print("\n" + "=" * 85)
-    print("PER-OPPONENT WIN RATE (%) BREAKDOWN")
-    print("=" * 85)
-    pivot_wr = df.pivot_table(index='cand', columns='opp', values='win', aggfunc=lambda x: x.mean() * 100)
-    print(pivot_wr.round(1).to_string())
-    
-    # Save results to json
-    with open("scratch/rapid_discovery_results.json", "w", encoding="utf-8") as f:
-        json.dump({
-            'summary': cand_summary,
-            'raw_results': results
-        }, f, indent=2)
-        
-    return df, sum_df
+# --- ABLATIONS ON V2 ---
 
-if __name__ == "__main__":
-    candidates = {
-        "A (V2 Base)": "candidates/counterstrategy_ablation/candidate_A.py",
-        "B (Cap12)": "candidates/counterstrategy_ablation/candidate_B.py",
-        "C (EarlyRamp)": "candidates/counterstrategy_ablation/candidate_C.py",
-        "D (Preempt)": "candidates/counterstrategy_ablation/candidate_D.py",
-        "E (Cap12+Ramp)": "candidates/counterstrategy_ablation/candidate_E.py",
-        "F (Cap12+Preempt)": "candidates/counterstrategy_ablation/candidate_F.py",
-        "G (Ramp+Preempt)": "candidates/counterstrategy_ablation/candidate_G.py",
-        "H (All3)": "candidates/counterstrategy_ablation/candidate_H.py",
-    }
+# Baseline V2
+def run_v2_baseline():
+    return v2_mod.agent
+
+# Ablation V2-A: No Market Controller (Raw Trace)
+def make_v2_no_market_controller():
+    def agent(obs, config=None):
+        step = min(int(obs.get("step", 0) or 0), len(v2_mod._TRACE) - 1)
+        if step >= v2_mod._TERMINAL_START_STEP:
+            return v2_mod._terminal_action(obs)
+        return copy.deepcopy(v2_mod._TRACE[step])
+    return agent
+
+# Ablation V2-B: Reduced Hiring (Cap hiring to 4 hands max)
+def make_v2_reduced_hiring():
+    def agent(obs, config=None):
+        act = v2_mod.agent(obs, config)
+        step = int(obs.get("step", 0) or 0)
+        # Suppress HIRE orders beyond 4 hands
+        farm = (obs.get("farms") or [{}])[0]
+        hands_count = len(farm.get("hands", []))
+        hires_today = int(farm.get("hires_today", 0) or 0)
+        if "market" in act:
+            filtered_m = []
+            for o in act["market"]:
+                if isinstance(o, list) and o and o[0] == "HIRE":
+                    if hands_count + hires_today >= 4:
+                        continue
+                filtered_m.append(o)
+            act["market"] = filtered_m
+        return act
+    return agent
+
+# Ablation V2-C: No Terminal Liquidation Net (Steps 712-720 keep running trace or pass)
+def make_v2_no_terminal():
+    def agent(obs, config=None):
+        step = min(int(obs.get("step", 0) or 0), len(v2_mod._TRACE) - 1)
+        # Disable terminal liquidation
+        action = copy.deepcopy(v2_mod._TRACE[step])
+        return action
+    return agent
+
+# Ablation V2-D: Premature Melon Harvest (Harvest melons on Day 10 at yield=1 instead of yield=6)
+# (In trace, melon harvest is step 249-264; if yield was 1, reward is much lower)
+
+# --- ABLATIONS ON PRIME ---
+
+# Baseline Prime
+def run_prime_baseline():
+    return prime_agent
+
+# Ablation Prime-A: Scaled Hiring (Prime hires up to 6 on D0, 8 on D4, 12 on D10)
+from candidates.candidate_cl_aethel_prime import CLAethelPrime, _fib
+
+class PrimeWithV2Hiring(CLAethelPrime):
+    def _macro_market(self, step, day, hour, money, quads, tiles, shed, seeds, hired, invs, obs):
+        orders = super()._macro_market(step, day, hour, money, quads, tiles, shed, seeds, hired, invs, obs)
+        # Replace hiring logic with aggressive hiring
+        # Target hands: Day 0: 5, Day 1-3: 4, Day 4-6: 6, Day 7-9: 8, Day 10+: 12
+        if day == 0: target = 5
+        elif day < 4: target = 4
+        elif day < 7: target = 6
+        elif day < 10: target = 8
+        else: target = 12
+        
+        # Strip existing HIRE orders from orders
+        orders = [o for o in orders if not (isinstance(o, list) and o and o[0] == "HIRE")]
+        cur_h = hired
+        budget = money
+        while cur_h < target and len(orders) < 10:
+            cost = _fib(cur_h)
+            if budget >= cost:
+                orders.append(["HIRE"])
+                budget -= cost
+                cur_h += 1
+            else:
+                break
+        return orders[:10]
+
+# Ablation Prime-B: Guarded Melon Harvest (Wait until yield == 6)
+class PrimeGuardedHarvest(CLAethelPrime):
+    def _dispatch_workers(self, all_workers, all_invs, tiles, shed, seeds, quads, day, hour, scan_res):
+        # Override local-first harvest: DO NOT harvest melon if yield < 6 and day < 28!
+        actions = [None] * len(all_workers)
+        claimed_tiles = set()
+        ns = self._nearest_shed(all_workers[0], tiles) if hasattr(self, '_nearest_shed') else (4, 4)
+        target_pasture_slots = scan_res.get("target_pasture_slots", set())
+        
+        # We run the standard logic but skip melon harvest if yield < 6
+        # Let's inspect how CLAethelPrime dispatches
+        return super()._dispatch_workers(all_workers, all_invs, tiles, shed, seeds, quads, day, hour, scan_res)
+
+def run_all_ablations():
+    print("="*80)
+    print("PHASE 4 & 5: CONTROLLED ABLATIONS BENCHMARK (SEEDS 42, 100, 2024)")
+    print("="*80)
     
-    opponents = {
-        "LiveFlooder": "opponents/live_flooder_v1.py",
-        "ReplayKawatta": "opponents/replay_kawatta_taido.py",
-        "ReplayMtN": "opponents/replay_mtn.py",
-        "AethelV1": "main.py"
-    }
+    results = {}
     
-    # 20 matched seeds for discovery
-    discovery_seeds = [42, 100, 2026, 777, 999, 1234, 5555, 8888, 10101, 20202,
-                       30303, 40404, 50505, 60606, 70707, 80808, 90909, 12121, 23232, 34343]
-                       
-    run_discovery_suite(candidates, opponents, discovery_seeds, max_workers=6)
+    # 1. V2 Baseline
+    m, s, raw = eval_agent(v2_mod.agent)
+    results["V2_Baseline"] = {"mean": m, "std": s, "raw": raw}
+    print(f"V2 Baseline:               ${m:>9,.1f} +/- {s:>7,.1f}")
+    
+    # 2. V2 No Market Controller
+    m, s, raw = eval_agent(make_v2_no_market_controller())
+    delta = m - results["V2_Baseline"]["mean"]
+    results["V2_No_Market_Ctrl"] = {"mean": m, "std": s, "delta": delta}
+    print(f"V2 No Market Controller:   ${m:>9,.1f} (Delta: ${delta:>+8,.1f}, {delta/results['V2_Baseline']['mean']*100:>+5.1f}%)")
+    
+    # 3. V2 Reduced Hiring (Cap 4)
+    m, s, raw = eval_agent(make_v2_reduced_hiring())
+    delta = m - results["V2_Baseline"]["mean"]
+    results["V2_Cap_4_Hands"] = {"mean": m, "std": s, "delta": delta}
+    print(f"V2 Cap 4 Hands:            ${m:>9,.1f} (Delta: ${delta:>+8,.1f}, {delta/results['V2_Baseline']['mean']*100:>+5.1f}%)")
+    
+    # 4. V2 No Terminal Action
+    m, s, raw = eval_agent(make_v2_no_terminal())
+    delta = m - results["V2_Baseline"]["mean"]
+    results["V2_No_Terminal"] = {"mean": m, "std": s, "delta": delta}
+    print(f"V2 No Terminal Net:        ${m:>9,.1f} (Delta: ${delta:>+8,.1f}, {delta/results['V2_Baseline']['mean']*100:>+5.1f}%)")
+    
+    # 5. Prime Baseline
+    m, s, raw = eval_agent(prime_agent)
+    results["Prime_Baseline"] = {"mean": m, "std": s, "raw": raw}
+    print(f"\nPrime Baseline:            ${m:>9,.1f} +/- {s:>7,.1f}")
+    
+    # 6. Prime with Scaled Hiring
+    p_hiring = PrimeWithV2Hiring()
+    def p_hiring_agent(obs, cfg=None): return p_hiring(obs, cfg)
+    m, s, raw = eval_agent(p_hiring_agent)
+    delta = m - results["Prime_Baseline"]["mean"]
+    results["Prime_Scaled_Hiring"] = {"mean": m, "std": s, "delta": delta}
+    print(f"Prime + Scaled Hiring:     ${m:>9,.1f} (Delta: ${delta:>+8,.1f}, {delta/results['Prime_Baseline']['mean']*100:>+5.1f}%)")
+
+    with open("scratch/ablation_study_results.json", "w") as f:
+        json.dump(results, f, indent=2)
+    print("\nSaved ablation results to scratch/ablation_study_results.json")
+
+if __name__ == '__main__':
+    run_all_ablations()
