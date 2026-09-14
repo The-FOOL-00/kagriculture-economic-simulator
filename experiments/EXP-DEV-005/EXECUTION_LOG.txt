@@ -1,0 +1,88 @@
+[2026-09-14 15:35:28 UTC] ================================================================================
+[2026-09-14 15:35:28 UTC] PREFLIGHT INVARIANT VERIFICATION FOR EXP-DEV-005 DISCOVERY RUN
+[2026-09-14 15:35:28 UTC] ================================================================================
+[2026-09-14 15:35:28 UTC]   [1/6] Protocol V1.4 SHA-256 Verified: ac69fc602083f232792ad5bdabd699e4b9f96e73462f9edc740ccd63c727e9f6
+[2026-09-14 15:35:28 UTC]   [2/6] Baseline SHA-256 Verified: 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-14 15:35:28 UTC]   [3/6] Treatment dev_005 SHA-256 Verified: f52b168619e47bea6a052faff890fc84804cb39b47392d247139967f910e2a78
+[2026-09-14 15:35:28 UTC]   [4/6] Candidate dev_005 AST Zero-Leakage Verified Clean (0 violations).
+[2026-09-14 15:35:28 UTC]   [5/6] Simulator Engine kagsim 1.32.7 Verified.
+[2026-09-14 15:35:28 UTC]   [6/6] Precheck report verified on disk: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-005\PRECHECK.md
+[2026-09-14 15:35:28 UTC] All Preflight Invariants Passed.
+
+[2026-09-14 15:35:28 UTC] BEGINNING EXP-DEV-005 SIMULATION: 50 SEEDS (247000 to 247049)
+[2026-09-14 15:35:28 UTC] Candidate: Dev005ConfirmedShopScheduler
+[2026-09-14 15:35:28 UTC] Baseline: compiled_v54_plus_residual (Sub 56146971)
+[2026-09-14 15:35:31 UTC] [01/50] Seed 247000 | Delta:   +5426.0 | Outcome: WIN  | Act: True  | Missed: 0 | Conf: 2 | Time: 1.10s
+[2026-09-14 15:35:35 UTC] [02/50] Seed 247001 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 1 | Conf: 0 | Time: 1.09s
+[2026-09-14 15:35:38 UTC] [03/50] Seed 247002 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 4 | Time: 1.15s
+[2026-09-14 15:35:43 UTC] [04/50] Seed 247003 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.11s
+[2026-09-14 15:35:47 UTC] [05/50] Seed 247004 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.01s
+[2026-09-14 15:35:50 UTC] [06/50] Seed 247005 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 4 | Time: 1.04s
+[2026-09-14 15:35:54 UTC] [07/50] Seed 247006 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 1 | Conf: 3 | Time: 1.02s
+[2026-09-14 15:35:58 UTC] [08/50] Seed 247007 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 4 | Conf: 0 | Time: 1.01s
+[2026-09-14 15:36:03 UTC] [09/50] Seed 247008 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.05s
+[2026-09-14 15:36:07 UTC] [10/50] Seed 247009 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 4 | Time: 1.03s
+[2026-09-14 15:36:10 UTC] [11/50] Seed 247010 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 4 | Time: 1.06s
+[2026-09-14 15:36:14 UTC] [12/50] Seed 247011 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 2 | Conf: 0 | Time: 1.04s
+[2026-09-14 15:36:18 UTC] [13/50] Seed 247012 | Delta:  +12235.0 | Outcome: WIN  | Act: True  | Missed: 2 | Conf: 2 | Time: 1.11s
+[2026-09-14 15:36:22 UTC] [14/50] Seed 247013 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 4 | Conf: 0 | Time: 1.02s
+[2026-09-14 15:36:27 UTC] [15/50] Seed 247014 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.05s
+[2026-09-14 15:36:31 UTC] [16/50] Seed 247015 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 3 | Time: 1.08s
+[2026-09-14 15:36:35 UTC] [17/50] Seed 247016 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 4 | Time: 1.05s
+[2026-09-14 15:36:39 UTC] [18/50] Seed 247017 | Delta:  +13064.0 | Outcome: WIN  | Act: True  | Missed: 0 | Conf: 2 | Time: 1.07s
+[2026-09-14 15:36:44 UTC] [19/50] Seed 247018 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.05s
+[2026-09-14 15:36:48 UTC] [20/50] Seed 247019 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 4 | Conf: 0 | Time: 1.04s
+[2026-09-14 15:36:52 UTC] [21/50] Seed 247020 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 1 | Conf: 0 | Time: 1.05s
+[2026-09-14 15:36:57 UTC] [22/50] Seed 247021 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 1 | Conf: 3 | Time: 1.23s
+[2026-09-14 15:37:01 UTC] [23/50] Seed 247022 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.04s
+[2026-09-14 15:37:04 UTC] [24/50] Seed 247023 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 1 | Conf: 0 | Time: 1.04s
+[2026-09-14 15:37:08 UTC] [25/50] Seed 247024 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 4 | Time: 1.08s
+[2026-09-14 15:37:13 UTC] [26/50] Seed 247025 | Delta:   -1844.0 | Outcome: LOSS | Act: True  | Missed: 3 | Conf: 1 | Time: 1.06s
+[2026-09-14 15:37:17 UTC] [27/50] Seed 247026 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 3 | Time: 1.08s
+[2026-09-14 15:37:21 UTC] [28/50] Seed 247027 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.09s
+[2026-09-14 15:37:26 UTC] [29/50] Seed 247028 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 3 | Time: 1.13s
+[2026-09-14 15:37:30 UTC] [30/50] Seed 247029 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 4 | Time: 1.16s
+[2026-09-14 15:37:34 UTC] [31/50] Seed 247030 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 1 | Conf: 0 | Time: 1.08s
+[2026-09-14 15:37:38 UTC] [32/50] Seed 247031 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.09s
+[2026-09-14 15:37:43 UTC] [33/50] Seed 247032 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 1 | Conf: 0 | Time: 1.19s
+[2026-09-14 15:37:47 UTC] [34/50] Seed 247033 | Delta:   +6139.0 | Outcome: WIN  | Act: True  | Missed: 0 | Conf: 2 | Time: 1.09s
+[2026-09-14 15:37:51 UTC] [35/50] Seed 247034 | Delta:   -5393.0 | Outcome: LOSS | Act: True  | Missed: 0 | Conf: 1 | Time: 1.07s
+[2026-09-14 15:37:55 UTC] [36/50] Seed 247035 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 2 | Conf: 0 | Time: 1.15s
+[2026-09-14 15:38:00 UTC] [37/50] Seed 247036 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 3 | Conf: 0 | Time: 1.20s
+[2026-09-14 15:38:04 UTC] [38/50] Seed 247037 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 2 | Conf: 0 | Time: 1.14s
+[2026-09-14 15:38:08 UTC] [39/50] Seed 247038 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.05s
+[2026-09-14 15:38:13 UTC] [40/50] Seed 247039 | Delta:  +10261.0 | Outcome: WIN  | Act: True  | Missed: 2 | Conf: 2 | Time: 1.05s
+[2026-09-14 15:38:17 UTC] [41/50] Seed 247040 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 1 | Conf: 3 | Time: 1.07s
+[2026-09-14 15:38:21 UTC] [42/50] Seed 247041 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.06s
+[2026-09-14 15:38:25 UTC] [43/50] Seed 247042 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 1 | Conf: 3 | Time: 1.14s
+[2026-09-14 15:38:30 UTC] [44/50] Seed 247043 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.07s
+[2026-09-14 15:38:35 UTC] [45/50] Seed 247044 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 0 | Conf: 0 | Time: 1.14s
+[2026-09-14 15:38:39 UTC] [46/50] Seed 247045 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 4 | Conf: 0 | Time: 1.10s
+[2026-09-14 15:38:43 UTC] [47/50] Seed 247046 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 4 | Conf: 0 | Time: 1.18s
+[2026-09-14 15:38:48 UTC] [48/50] Seed 247047 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 1 | Conf: 0 | Time: 1.11s
+[2026-09-14 15:38:52 UTC] [49/50] Seed 247048 | Delta:      +0.0 | Outcome: TIE  | Act: True  | Missed: 0 | Conf: 4 | Time: 1.18s
+[2026-09-14 15:38:57 UTC] [50/50] Seed 247049 | Delta:      +0.0 | Outcome: TIE  | Act: False | Missed: 3 | Conf: 0 | Time: 1.25s
+[2026-09-14 15:38:57 UTC] 
+Simulation Complete in 209.00s. Computing primary statistics...
+[2026-09-14 15:38:57 UTC]   Saved C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-005\PAIRED_DELTAS.csv
+[2026-09-14 15:38:57 UTC]   Saved C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-005\DECISION_EVENTS.csv
+[2026-09-14 15:38:57 UTC]   Saved C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-005\SPECIALIZATION_EVENTS.csv
+[2026-09-14 15:38:57 UTC]   Saved C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-005\RAW_RESULTS.json
+[2026-09-14 15:39:03 UTC]   Saved C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-005\STATISTICS_RECOMPUTED.json
+[2026-09-14 15:39:03 UTC] ================================================================================
+[2026-09-14 15:39:03 UTC] EXP-DEV-005 DISCOVERY SUMMARY REPORT
+[2026-09-14 15:39:03 UTC] ================================================================================
+[2026-09-14 15:39:03 UTC]   Seeds: 50 | Matches: 100
+[2026-09-14 15:39:03 UTC]   Paired Mean Delta:  +797.76
+[2026-09-14 15:39:03 UTC]   10% Trimmed Mean:   +0.00
+[2026-09-14 15:39:03 UTC]   Median Delta:       +0.00
+[2026-09-14 15:39:03 UTC]   Standard Error:     $448.78
+[2026-09-14 15:39:03 UTC]   Student-t:          1.78 (p = 0.0817)
+[2026-09-14 15:39:03 UTC]   95% CI:             [$-103.84, $1,699.36]
+[2026-09-14 15:39:03 UTC]   Record:             5W / 2L / 43T (10.0% / 4.0% / 86.0%)
+[2026-09-14 15:39:03 UTC]   Activation Rate:    44.0% (22 seeds)
+[2026-09-14 15:39:03 UTC]   Excluding Best:     +547.43
+[2026-09-14 15:39:03 UTC]   Excluding Top-2:    +303.94
+[2026-09-14 15:39:03 UTC]   Confirmed Decs:     130
+[2026-09-14 15:39:03 UTC]   Rejected Opps:      98
+[2026-09-14 15:39:03 UTC] ================================================================================
