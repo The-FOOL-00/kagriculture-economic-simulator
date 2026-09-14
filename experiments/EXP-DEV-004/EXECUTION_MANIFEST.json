@@ -1,0 +1,42 @@
+{
+  "experiment_id": "EXP-DEV-004",
+  "title": "Joint Macro Production Scheduler over V54++ Residual Preemption",
+  "timestamp_utc": "2026-09-14T14:02:00Z",
+  "governing_protocol": "DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_3.md",
+  "protocol_sha256": "436fb79fb94ad2a05e0d01d3f16f487e51970478830d609a76f91b802e109751",
+  "baseline_file": "candidates/compiled_v54_plus_residual.py",
+  "baseline_sha256": "18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb",
+  "baseline_submission_id": "56146971",
+  "candidate_file": "candidates/closed_loop_architecture/dev_004_joint_macro_scheduler.py",
+  "candidate_sha256": "321fc4bd3aa3c8629a125f04edbbe0422fb0a01f8c29a530dc3c19f8f1207e25",
+  "candidate_class": "Dev004JointMacroScheduler",
+  "discovery_partition": {
+    "start_seed": 246000,
+    "end_seed": 246049,
+    "n_seeds": 50,
+    "pairing": "CRN_seat_swapped",
+    "total_matches": 100
+  },
+  "parameters": {
+    "tau": 1500.0,
+    "l_min": 100.0,
+    "switching_friction": 200.0,
+    "w_sat": 1.0,
+    "w_life": 2.0,
+    "w_dead": 0.5,
+    "preempt_money_deficit": 2000.0,
+    "preempt_minimum_delta": 4.0,
+    "preempt_maximum_batch": 12
+  },
+  "quarantined_partitions": {
+    "qualification": "50050-50099",
+    "final_holdout": "214200-214249",
+    "historical_contaminated": "50000-50499",
+    "dev_003_consumed": "245000-245049"
+  },
+  "simulator": {
+    "name": "kaggriculture-cppsim",
+    "version": "1.32.7",
+    "engine": "kagsim.Game"
+  }
+}
