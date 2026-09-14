@@ -1,0 +1,4 @@
+e52a0570a8bc9cfeafe1165f49f4c9d77ef9a3b7aa030783f8aef7e9ee7b04e8  DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_5.md
+
+Protocol freeze: commit hash and timestamp recorded in EXECUTION_MANIFEST.json after Git commit.
+Freeze must predate first Discovery seed execution.
