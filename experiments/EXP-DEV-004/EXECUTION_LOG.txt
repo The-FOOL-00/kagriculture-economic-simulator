@@ -1,0 +1,107 @@
+[2026-09-14 14:02:53 UTC] ================================================================================
+[2026-09-14 14:02:53 UTC] PREFLIGHT INVARIANT VERIFICATION FOR EXP-DEV-004 DISCOVERY RUN
+[2026-09-14 14:02:53 UTC] ================================================================================
+[2026-09-14 14:02:53 UTC]   [1/6] Protocol V1.3 SHA-256 Verified: 436fb79fb94ad2a05e0d01d3f16f487e51970478830d609a76f91b802e109751
+[2026-09-14 14:02:53 UTC]   [2/6] Baseline SHA-256 Verified: 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-14 14:02:53 UTC]   [3/6] Treatment dev_004 SHA-256 Verified: 321fc4bd3aa3c8629a125f04edbbe0422fb0a01f8c29a530dc3c19f8f1207e25
+[2026-09-14 14:02:53 UTC]   [4/6] Candidate dev_004 AST Zero-Leakage Verified Clean (0 violations).
+[2026-09-14 14:02:53 UTC]   [5/6] Simulator Engine kagsim 1.32.7 Verified.
+[2026-09-14 14:02:53 UTC]   [6/6] Precheck report verified on disk: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-004\PRECHECK.md
+[2026-09-14 14:02:53 UTC] All Preflight Invariants Passed.
+
+[2026-09-14 14:02:59 UTC] FATAL: CRITICAL PROTOCOL VIOLATION: Virgin Holdout seed 214220 requested!
+[2026-09-14 14:02:59 UTC] FATAL: CRITICAL PROTOCOL VIOLATION: Qualification seed 50075 requested during Discovery!
+[2026-09-14 14:02:59 UTC] FATAL: CRITICAL PROTOCOL VIOLATION: Contaminated seed 50120 requested!
+[2026-09-14 14:02:59 UTC] FATAL: CRITICAL PROTOCOL VIOLATION: DEV-003 consumed seed 245010 requested!
+[2026-09-14 14:03:14 UTC] ================================================================================
+[2026-09-14 14:03:14 UTC] STARTING EXP-DEV-004 DISCOVERY SIMULATION RUN (Seeds 246000-246049)
+[2026-09-14 14:03:14 UTC] ================================================================================
+[2026-09-14 14:03:14 UTC] ================================================================================
+[2026-09-14 14:03:14 UTC] PREFLIGHT INVARIANT VERIFICATION FOR EXP-DEV-004 DISCOVERY RUN
+[2026-09-14 14:03:14 UTC] ================================================================================
+[2026-09-14 14:03:14 UTC]   [1/6] Protocol V1.3 SHA-256 Verified: 436fb79fb94ad2a05e0d01d3f16f487e51970478830d609a76f91b802e109751
+[2026-09-14 14:03:14 UTC]   [2/6] Baseline SHA-256 Verified: 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-14 14:03:14 UTC]   [3/6] Treatment dev_004 SHA-256 Verified: 321fc4bd3aa3c8629a125f04edbbe0422fb0a01f8c29a530dc3c19f8f1207e25
+[2026-09-14 14:03:14 UTC]   [4/6] Candidate dev_004 AST Zero-Leakage Verified Clean (0 violations).
+[2026-09-14 14:03:14 UTC]   [5/6] Simulator Engine kagsim 1.32.7 Verified.
+[2026-09-14 14:03:14 UTC]   [6/6] Precheck report verified on disk: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-004\PRECHECK.md
+[2026-09-14 14:03:14 UTC] All Preflight Invariants Passed.
+
+[2026-09-14 14:03:19 UTC] [01/50] Seed 246000 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 4.74s
+[2026-09-14 14:03:32 UTC] [02/50] Seed 246001 | Paired Delta:  +3871.00 | M0 (Cand P0):  +3871.00 (YARN_SPECIALIZED) | M1 (Cand P1):  +3871.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 13.33s
+[2026-09-14 14:03:45 UTC] [03/50] Seed 246002 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 13.37s
+[2026-09-14 14:04:02 UTC] [04/50] Seed 246003 | Paired Delta:   -904.00 | M0 (Cand P0):   -904.00 (BASELINE_BACKBONE) | M1 (Cand P1):   -904.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 16.19s
+[2026-09-14 14:04:16 UTC] [05/50] Seed 246004 | Paired Delta:  +8525.00 | M0 (Cand P0):  +8525.00 (YARN_SPECIALIZED) | M1 (Cand P1):  +8525.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 14.36s
+[2026-09-14 14:04:29 UTC] [06/50] Seed 246005 | Paired Delta:  -2493.00 | M0 (Cand P0):  -2493.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -2493.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 13.27s
+[2026-09-14 14:04:43 UTC] [07/50] Seed 246006 | Paired Delta: +29494.00 | M0 (Cand P0): +29603.00 (YARN_SPECIALIZED) | M1 (Cand P1): +29385.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 13.40s
+[2026-09-14 14:04:56 UTC] [08/50] Seed 246007 | Paired Delta:  -3885.00 | M0 (Cand P0):  -3885.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -3885.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 13.24s
+[2026-09-14 14:05:13 UTC] [09/50] Seed 246008 | Paired Delta:  -2308.00 | M0 (Cand P0):  -2308.00 (YARN_SPECIALIZED) | M1 (Cand P1):  -2308.00 (YARN_SPECIALIZED) | Outcome: LOSS | Time: 16.76s
+[2026-09-14 14:05:31 UTC] [10/50] Seed 246009 | Paired Delta:  +9714.00 | M0 (Cand P0):  +9714.00 (YARN_SPECIALIZED) | M1 (Cand P1):  +9714.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 18.70s
+[2026-09-14 14:05:46 UTC] [11/50] Seed 246010 | Paired Delta:  -1376.00 | M0 (Cand P0):  -1376.00 (YARN_SPECIALIZED) | M1 (Cand P1):  -1376.00 (YARN_SPECIALIZED) | Outcome: LOSS | Time: 15.02s
+[2026-09-14 14:06:03 UTC] [12/50] Seed 246011 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 16.73s
+[2026-09-14 14:06:14 UTC] [13/50] Seed 246012 | Paired Delta:  +8330.00 | M0 (Cand P0):  +8330.00 (YARN_SPECIALIZED) | M1 (Cand P1):  +8330.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 10.98s
+[2026-09-14 14:06:28 UTC] [14/50] Seed 246013 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 14.17s
+[2026-09-14 14:06:46 UTC] [15/50] Seed 246014 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 17.70s
+[2026-09-14 14:07:03 UTC] [16/50] Seed 246015 | Paired Delta:  +3659.00 | M0 (Cand P0):  +3659.00 (YARN_SPECIALIZED) | M1 (Cand P1):  +3659.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 17.57s
+[2026-09-14 14:07:14 UTC] [17/50] Seed 246016 | Paired Delta:   -159.00 | M0 (Cand P0):   -159.00 (YARN_SPECIALIZED) | M1 (Cand P1):   -159.00 (YARN_SPECIALIZED) | Outcome: LOSS | Time: 10.61s
+[2026-09-14 14:07:20 UTC] [18/50] Seed 246017 | Paired Delta:  +1464.00 | M0 (Cand P0):  +1464.00 (YARN_SPECIALIZED) | M1 (Cand P1):  +1464.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 5.54s
+[2026-09-14 14:07:26 UTC] [19/50] Seed 246018 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 6.25s
+[2026-09-14 14:07:31 UTC] [20/50] Seed 246019 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 5.08s
+[2026-09-14 14:07:36 UTC] [21/50] Seed 246020 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 5.06s
+[2026-09-14 14:07:41 UTC] [22/50] Seed 246021 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 5.20s
+[2026-09-14 14:07:46 UTC] [23/50] Seed 246022 | Paired Delta:  -3794.50 | M0 (Cand P0):  -3750.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -3839.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 5.23s
+[2026-09-14 14:07:51 UTC] [24/50] Seed 246023 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 4.21s
+[2026-09-14 14:07:58 UTC] [25/50] Seed 246024 | Paired Delta: -10369.00 | M0 (Cand P0): -10369.00 (YARN_SPECIALIZED) | M1 (Cand P1): -10369.00 (YARN_SPECIALIZED) | Outcome: LOSS | Time: 6.93s
+[2026-09-14 14:08:03 UTC] [26/50] Seed 246025 | Paired Delta: +11515.00 | M0 (Cand P0): +11515.00 (YARN_SPECIALIZED) | M1 (Cand P1): +11515.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 5.82s
+[2026-09-14 14:08:07 UTC] [27/50] Seed 246026 | Paired Delta:  +8816.00 | M0 (Cand P0):  +8816.00 (BASELINE_BACKBONE) | M1 (Cand P1):  +8816.00 (BASELINE_BACKBONE) | Outcome: WIN  | Time: 3.90s
+[2026-09-14 14:08:20 UTC] [28/50] Seed 246027 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 12.30s
+[2026-09-14 14:08:25 UTC] [29/50] Seed 246028 | Paired Delta:  -2113.00 | M0 (Cand P0):  -2113.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -2113.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 4.97s
+[2026-09-14 14:08:30 UTC] [30/50] Seed 246029 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 5.54s
+[2026-09-14 14:08:36 UTC] [31/50] Seed 246030 | Paired Delta:  -2567.00 | M0 (Cand P0):  -2567.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -2567.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 5.47s
+[2026-09-14 14:08:41 UTC] [32/50] Seed 246031 | Paired Delta: +10390.00 | M0 (Cand P0): +10390.00 (YARN_SPECIALIZED) | M1 (Cand P1): +10390.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 5.89s
+[2026-09-14 14:08:47 UTC] [33/50] Seed 246032 | Paired Delta:  -3548.00 | M0 (Cand P0):  -3548.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -3548.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 5.85s
+[2026-09-14 14:08:53 UTC] [34/50] Seed 246033 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 5.45s
+[2026-09-14 14:08:58 UTC] [35/50] Seed 246034 | Paired Delta:  +5453.00 | M0 (Cand P0):  +5453.00 (BASELINE_BACKBONE) | M1 (Cand P1):  +5453.00 (BASELINE_BACKBONE) | Outcome: WIN  | Time: 5.59s
+[2026-09-14 14:09:04 UTC] [36/50] Seed 246035 | Paired Delta:  -1680.00 | M0 (Cand P0):  -1680.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -1680.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 5.46s
+[2026-09-14 14:09:10 UTC] [37/50] Seed 246036 | Paired Delta:  -2837.00 | M0 (Cand P0):  -2837.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -2837.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 5.98s
+[2026-09-14 14:09:14 UTC] [38/50] Seed 246037 | Paired Delta: +10880.00 | M0 (Cand P0): +10880.00 (YARN_SPECIALIZED) | M1 (Cand P1): +10880.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 4.45s
+[2026-09-14 14:09:20 UTC] [39/50] Seed 246038 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 5.48s
+[2026-09-14 14:09:26 UTC] [40/50] Seed 246039 | Paired Delta:  -3473.00 | M0 (Cand P0):  -3473.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -3473.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 6.56s
+[2026-09-14 14:09:33 UTC] [41/50] Seed 246040 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 6.79s
+[2026-09-14 14:09:39 UTC] [42/50] Seed 246041 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 5.78s
+[2026-09-14 14:09:44 UTC] [43/50] Seed 246042 | Paired Delta:  -2334.00 | M0 (Cand P0):  -2334.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -2334.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 5.48s
+[2026-09-14 14:09:51 UTC] [44/50] Seed 246043 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (BASELINE_BACKBONE) | M1 (Cand P1):     +0.00 (BASELINE_BACKBONE) | Outcome: TIE  | Time: 6.30s
+[2026-09-14 14:09:58 UTC] [45/50] Seed 246044 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 7.14s
+[2026-09-14 14:10:04 UTC] [46/50] Seed 246045 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 6.42s
+[2026-09-14 14:10:09 UTC] [47/50] Seed 246046 | Paired Delta:     +0.00 | M0 (Cand P0):     +0.00 (YARN_SPECIALIZED) | M1 (Cand P1):     +0.00 (YARN_SPECIALIZED) | Outcome: TIE  | Time: 5.26s
+[2026-09-14 14:10:16 UTC] [48/50] Seed 246047 | Paired Delta:  +3387.00 | M0 (Cand P0):  +3387.00 (YARN_SPECIALIZED) | M1 (Cand P1):  +3387.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 6.28s
+[2026-09-14 14:10:22 UTC] [49/50] Seed 246048 | Paired Delta: +14143.00 | M0 (Cand P0): +14143.00 (YARN_SPECIALIZED) | M1 (Cand P1): +14143.00 (YARN_SPECIALIZED) | Outcome: WIN  | Time: 5.79s
+[2026-09-14 14:10:28 UTC] [50/50] Seed 246049 | Paired Delta:  -3201.00 | M0 (Cand P0):  -3201.00 (BASELINE_BACKBONE) | M1 (Cand P1):  -3201.00 (BASELINE_BACKBONE) | Outcome: LOSS | Time: 6.30s
+[2026-09-14 14:10:28 UTC] 
+Execution Complete across 50 seeds in 433.92s.
+
+[2026-09-14 14:10:28 UTC] Writing raw results to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-004\RAW_RESULTS.json...
+[2026-09-14 14:10:28 UTC] Writing paired deltas to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-004\PAIRED_DELTAS.csv...
+[2026-09-14 14:10:28 UTC] Writing plan events to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-004\PLAN_EVENTS.csv...
+[2026-09-14 14:10:28 UTC] Writing worker telemetry to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-004\WORKER_TELEMETRY.csv...
+[2026-09-14 14:10:30 UTC] Writing recomputed statistics to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-004\STATISTICS_RECOMPUTED.json...
+[2026-09-14 14:10:30 UTC] ================================================================================
+[2026-09-14 14:10:30 UTC] EXP-DEV-004 DISCOVERY SUMMARY STATISTICS
+[2026-09-14 14:10:30 UTC] ================================================================================
+[2026-09-14 14:10:30 UTC]   Paired Mean Delta:      +1651.99
+[2026-09-14 14:10:30 UTC]   Median Delta:              +0.00
+[2026-09-14 14:10:30 UTC]   Standard Deviation:      6213.57
+[2026-09-14 14:10:30 UTC]   Standard Error:           878.73
+[2026-09-14 14:10:30 UTC]   Student-t Stat:             1.88
+[2026-09-14 14:10:30 UTC]   Two-sided p-value:      0.066064
+[2026-09-14 14:10:30 UTC]   95% Conf. Interval:     [ -113.91, +3417.89]
+[2026-09-14 14:10:30 UTC]   10% Trimmed Mean:        +781.17
+[2026-09-14 14:10:30 UTC]   Min Delta (Worst Loss): -10369.00
+[2026-09-14 14:10:30 UTC]   Max Delta (Best Win):   +29494.00
+[2026-09-14 14:10:30 UTC]   Record (W / L / T):     14 Wins / 16 Losses / 20 Ties
+[2026-09-14 14:10:30 UTC]   Win Rate:               28.0%
+[2026-09-14 14:10:30 UTC]   Activation Rate:        52.0% (26/50 seeds)
+[2026-09-14 14:10:30 UTC]   Mean (excl. Best):      +1083.79
+[2026-09-14 14:10:30 UTC]   Mean (excl. Worst):     +1897.32
+[2026-09-14 14:10:30 UTC]   Mean (excl. Top-2):      +811.72
+[2026-09-14 14:10:30 UTC] ================================================================================

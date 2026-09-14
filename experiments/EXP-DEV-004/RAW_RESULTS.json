@@ -1,0 +1,1302 @@
+[
+  {
+    "seed": 246000,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 68789.0,
+      "base_reward": 68789.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.605,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 68789.0,
+      "cand_reward": 68789.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.739,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246001,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 34153.0,
+      "base_reward": 30282.0,
+      "delta": 3871.0,
+      "steps": 719,
+      "runtime_sec": 2.09,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 30282.0,
+      "cand_reward": 34153.0,
+      "delta": 3871.0,
+      "steps": 719,
+      "runtime_sec": 1.876,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 3871.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246002,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 96784.0,
+      "base_reward": 96784.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.962,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 96784.0,
+      "cand_reward": 96784.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.951,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246003,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 43433.0,
+      "base_reward": 44337.0,
+      "delta": -904.0,
+      "steps": 719,
+      "runtime_sec": 1.826,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 44337.0,
+      "cand_reward": 43433.0,
+      "delta": -904.0,
+      "steps": 719,
+      "runtime_sec": 2.13,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -904.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246004,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 125588.0,
+      "base_reward": 117063.0,
+      "delta": 8525.0,
+      "steps": 719,
+      "runtime_sec": 1.772,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 117063.0,
+      "cand_reward": 125588.0,
+      "delta": 8525.0,
+      "steps": 719,
+      "runtime_sec": 2.141,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 8525.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246005,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 74016.0,
+      "base_reward": 76509.0,
+      "delta": -2493.0,
+      "steps": 719,
+      "runtime_sec": 1.756,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 76509.0,
+      "cand_reward": 74016.0,
+      "delta": -2493.0,
+      "steps": 719,
+      "runtime_sec": 1.876,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -2493.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246006,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 89327.0,
+      "base_reward": 59724.0,
+      "delta": 29603.0,
+      "steps": 719,
+      "runtime_sec": 1.863,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 59998.0,
+      "cand_reward": 89383.0,
+      "delta": 29385.0,
+      "steps": 719,
+      "runtime_sec": 1.606,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 29494.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246007,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 74228.0,
+      "base_reward": 78113.0,
+      "delta": -3885.0,
+      "steps": 719,
+      "runtime_sec": 1.556,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 78113.0,
+      "cand_reward": 74228.0,
+      "delta": -3885.0,
+      "steps": 719,
+      "runtime_sec": 2.211,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -3885.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246008,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 79436.0,
+      "base_reward": 81744.0,
+      "delta": -2308.0,
+      "steps": 719,
+      "runtime_sec": 1.932,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 81744.0,
+      "cand_reward": 79436.0,
+      "delta": -2308.0,
+      "steps": 719,
+      "runtime_sec": 2.318,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": -2308.0,
+    "outcome": "LOSS",
+    "activated": true
+  },
+  {
+    "seed": 246009,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 84700.0,
+      "base_reward": 74986.0,
+      "delta": 9714.0,
+      "steps": 719,
+      "runtime_sec": 2.784,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 74986.0,
+      "cand_reward": 84700.0,
+      "delta": 9714.0,
+      "steps": 719,
+      "runtime_sec": 2.156,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 9714.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246010,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 81251.0,
+      "base_reward": 82627.0,
+      "delta": -1376.0,
+      "steps": 719,
+      "runtime_sec": 1.699,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 82627.0,
+      "cand_reward": 81251.0,
+      "delta": -1376.0,
+      "steps": 719,
+      "runtime_sec": 4.169,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": -1376.0,
+    "outcome": "LOSS",
+    "activated": true
+  },
+  {
+    "seed": 246011,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 101168.0,
+      "base_reward": 101168.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.574,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 101168.0,
+      "cand_reward": 101168.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.517,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246012,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 80080.0,
+      "base_reward": 71750.0,
+      "delta": 8330.0,
+      "steps": 719,
+      "runtime_sec": 1.468,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 71750.0,
+      "cand_reward": 80080.0,
+      "delta": 8330.0,
+      "steps": 719,
+      "runtime_sec": 1.784,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 8330.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246013,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 121467.0,
+      "base_reward": 121467.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.768,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 121467.0,
+      "cand_reward": 121467.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.747,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246014,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 108826.0,
+      "base_reward": 108826.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 2.056,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 108826.0,
+      "cand_reward": 108826.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.729,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246015,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 40409.0,
+      "base_reward": 36750.0,
+      "delta": 3659.0,
+      "steps": 719,
+      "runtime_sec": 1.739,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 36750.0,
+      "cand_reward": 40409.0,
+      "delta": 3659.0,
+      "steps": 719,
+      "runtime_sec": 1.847,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 3659.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246016,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 54701.0,
+      "base_reward": 54860.0,
+      "delta": -159.0,
+      "steps": 719,
+      "runtime_sec": 1.661,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 54860.0,
+      "cand_reward": 54701.0,
+      "delta": -159.0,
+      "steps": 719,
+      "runtime_sec": 0.596,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": -159.0,
+    "outcome": "LOSS",
+    "activated": true
+  },
+  {
+    "seed": 246017,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 87410.0,
+      "base_reward": 85946.0,
+      "delta": 1464.0,
+      "steps": 719,
+      "runtime_sec": 0.563,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 85946.0,
+      "cand_reward": 87410.0,
+      "delta": 1464.0,
+      "steps": 719,
+      "runtime_sec": 0.768,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 1464.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246018,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 62330.0,
+      "base_reward": 62330.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.695,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 62330.0,
+      "cand_reward": 62330.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.57,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246019,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 113834.0,
+      "base_reward": 113834.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.597,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 113834.0,
+      "cand_reward": 113834.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.712,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246020,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 113105.0,
+      "base_reward": 113105.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.621,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 113105.0,
+      "cand_reward": 113105.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.59,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246021,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 104329.0,
+      "base_reward": 104329.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.621,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 104329.0,
+      "cand_reward": 104329.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.72,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246022,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 102242.0,
+      "base_reward": 105992.0,
+      "delta": -3750.0,
+      "steps": 719,
+      "runtime_sec": 0.591,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 106007.0,
+      "cand_reward": 102168.0,
+      "delta": -3839.0,
+      "steps": 719,
+      "runtime_sec": 0.593,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -3794.5,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246023,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 90557.0,
+      "base_reward": 90557.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.781,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 90557.0,
+      "cand_reward": 90557.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.94,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246024,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 74961.0,
+      "base_reward": 85330.0,
+      "delta": -10369.0,
+      "steps": 719,
+      "runtime_sec": 0.719,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 85330.0,
+      "cand_reward": 74961.0,
+      "delta": -10369.0,
+      "steps": 719,
+      "runtime_sec": 0.574,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": -10369.0,
+    "outcome": "LOSS",
+    "activated": true
+  },
+  {
+    "seed": 246025,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 122213.0,
+      "base_reward": 110698.0,
+      "delta": 11515.0,
+      "steps": 719,
+      "runtime_sec": 0.596,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 110698.0,
+      "cand_reward": 122213.0,
+      "delta": 11515.0,
+      "steps": 719,
+      "runtime_sec": 0.591,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 11515.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246026,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 56812.0,
+      "base_reward": 47996.0,
+      "delta": 8816.0,
+      "steps": 719,
+      "runtime_sec": 0.626,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 47996.0,
+      "cand_reward": 56812.0,
+      "delta": 8816.0,
+      "steps": 719,
+      "runtime_sec": 0.6,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 8816.0,
+    "outcome": "WIN",
+    "activated": false
+  },
+  {
+    "seed": 246027,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 146118.0,
+      "base_reward": 146118.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.878,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 146118.0,
+      "cand_reward": 146118.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.569,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246028,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 53637.0,
+      "base_reward": 55750.0,
+      "delta": -2113.0,
+      "steps": 719,
+      "runtime_sec": 0.583,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 55750.0,
+      "cand_reward": 53637.0,
+      "delta": -2113.0,
+      "steps": 719,
+      "runtime_sec": 0.642,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -2113.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246029,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 102861.0,
+      "base_reward": 102861.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.707,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 102861.0,
+      "cand_reward": 102861.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.681,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246030,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 60466.0,
+      "base_reward": 63033.0,
+      "delta": -2567.0,
+      "steps": 719,
+      "runtime_sec": 0.745,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 63033.0,
+      "cand_reward": 60466.0,
+      "delta": -2567.0,
+      "steps": 719,
+      "runtime_sec": 0.648,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -2567.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246031,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 79938.0,
+      "base_reward": 69548.0,
+      "delta": 10390.0,
+      "steps": 719,
+      "runtime_sec": 0.688,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 69548.0,
+      "cand_reward": 79938.0,
+      "delta": 10390.0,
+      "steps": 719,
+      "runtime_sec": 0.744,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 10390.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246032,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 91949.0,
+      "base_reward": 95497.0,
+      "delta": -3548.0,
+      "steps": 719,
+      "runtime_sec": 0.713,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 95497.0,
+      "cand_reward": 91949.0,
+      "delta": -3548.0,
+      "steps": 719,
+      "runtime_sec": 0.68,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -3548.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246033,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 116396.0,
+      "base_reward": 116396.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.82,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 116396.0,
+      "cand_reward": 116396.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.683,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246034,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 69248.0,
+      "base_reward": 63795.0,
+      "delta": 5453.0,
+      "steps": 719,
+      "runtime_sec": 0.645,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 63795.0,
+      "cand_reward": 69248.0,
+      "delta": 5453.0,
+      "steps": 719,
+      "runtime_sec": 0.681,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 5453.0,
+    "outcome": "WIN",
+    "activated": false
+  },
+  {
+    "seed": 246035,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 53717.0,
+      "base_reward": 55397.0,
+      "delta": -1680.0,
+      "steps": 719,
+      "runtime_sec": 0.711,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 55397.0,
+      "cand_reward": 53717.0,
+      "delta": -1680.0,
+      "steps": 719,
+      "runtime_sec": 0.674,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -1680.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246036,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 71595.0,
+      "base_reward": 74432.0,
+      "delta": -2837.0,
+      "steps": 719,
+      "runtime_sec": 0.649,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 74432.0,
+      "cand_reward": 71595.0,
+      "delta": -2837.0,
+      "steps": 719,
+      "runtime_sec": 0.654,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -2837.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246037,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 103665.0,
+      "base_reward": 92785.0,
+      "delta": 10880.0,
+      "steps": 719,
+      "runtime_sec": 0.712,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 92785.0,
+      "cand_reward": 103665.0,
+      "delta": 10880.0,
+      "steps": 719,
+      "runtime_sec": 0.666,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 10880.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246038,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 127304.0,
+      "base_reward": 127304.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.677,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 127304.0,
+      "cand_reward": 127304.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.788,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246039,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 72531.0,
+      "base_reward": 76004.0,
+      "delta": -3473.0,
+      "steps": 719,
+      "runtime_sec": 0.71,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 76004.0,
+      "cand_reward": 72531.0,
+      "delta": -3473.0,
+      "steps": 719,
+      "runtime_sec": 0.652,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -3473.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246040,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 100156.0,
+      "base_reward": 100156.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.821,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 100156.0,
+      "cand_reward": 100156.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.791,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246041,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 76220.0,
+      "base_reward": 76220.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.736,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 76220.0,
+      "cand_reward": 76220.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.783,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246042,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 62365.0,
+      "base_reward": 64699.0,
+      "delta": -2334.0,
+      "steps": 719,
+      "runtime_sec": 0.723,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 64699.0,
+      "cand_reward": 62365.0,
+      "delta": -2334.0,
+      "steps": 719,
+      "runtime_sec": 0.829,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -2334.0,
+    "outcome": "LOSS",
+    "activated": false
+  },
+  {
+    "seed": 246043,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 105837.0,
+      "base_reward": 105837.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.791,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 105837.0,
+      "cand_reward": 105837.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.737,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 246044,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 127273.0,
+      "base_reward": 127273.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.871,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 127273.0,
+      "cand_reward": 127273.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 1.037,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246045,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 140655.0,
+      "base_reward": 140655.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.889,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 140655.0,
+      "cand_reward": 140655.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.818,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246046,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 94530.0,
+      "base_reward": 94530.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.713,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 94530.0,
+      "cand_reward": 94530.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.746,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 246047,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 49418.0,
+      "base_reward": 46031.0,
+      "delta": 3387.0,
+      "steps": 719,
+      "runtime_sec": 0.664,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 46031.0,
+      "cand_reward": 49418.0,
+      "delta": 3387.0,
+      "steps": 719,
+      "runtime_sec": 0.87,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 3387.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246048,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 77457.0,
+      "base_reward": 63314.0,
+      "delta": 14143.0,
+      "steps": 719,
+      "runtime_sec": 0.925,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 63314.0,
+      "cand_reward": 77457.0,
+      "delta": 14143.0,
+      "steps": 719,
+      "runtime_sec": 0.773,
+      "cand_plan": "YARN_SPECIALIZED"
+    },
+    "paired_mean_delta": 14143.0,
+    "outcome": "WIN",
+    "activated": true
+  },
+  {
+    "seed": 246049,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 64639.0,
+      "base_reward": 67840.0,
+      "delta": -3201.0,
+      "steps": 719,
+      "runtime_sec": 0.733,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 67840.0,
+      "cand_reward": 64639.0,
+      "delta": -3201.0,
+      "steps": 719,
+      "runtime_sec": 0.898,
+      "cand_plan": "BASELINE_BACKBONE"
+    },
+    "paired_mean_delta": -3201.0,
+    "outcome": "LOSS",
+    "activated": false
+  }
+]
