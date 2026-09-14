@@ -1,0 +1,43 @@
+{
+  "experiment_id": "EXP-DEV-005",
+  "title": "Confirmed-Shop Gated Whole-Route Scheduler over V54++ Residual Preemption",
+  "timestamp_utc": "2026-09-14T15:35:00Z",
+  "governing_protocol": "DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_4.md",
+  "protocol_sha256": "ac69fc602083f232792ad5bdabd699e4b9f96e73462f9edc740ccd63c727e9f6",
+  "baseline_file": "candidates/compiled_v54_plus_residual.py",
+  "baseline_sha256": "18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb",
+  "baseline_submission_id": "56146971",
+  "candidate_file": "candidates/closed_loop_architecture/dev_005_confirmed_shop_scheduler.py",
+  "candidate_sha256": "f52b168619e47bea6a052faff890fc84804cb39b47392d247139967f910e2a78",
+  "candidate_class": "Dev005ConfirmedShopScheduler",
+  "discovery_partition": {
+    "start_seed": 247000,
+    "end_seed": 247049,
+    "n_seeds": 50,
+    "pairing": "CRN_seat_swapped",
+    "total_matches": 100
+  },
+  "parameters": {
+    "tau": 1500.0,
+    "l_min": 100.0,
+    "switching_friction": 200.0,
+    "w_sat": 1.0,
+    "w_life": 2.0,
+    "w_dead": 0.5,
+    "preempt_money_deficit": 2000.0,
+    "preempt_minimum_delta": 4.0,
+    "preempt_maximum_batch": 12
+  },
+  "quarantined_partitions": {
+    "qualification": "50050-50099",
+    "final_holdout": "214200-214249",
+    "historical_contaminated": "50000-50499",
+    "dev_003_consumed": "245000-245049",
+    "dev_004_consumed": "246000-246049"
+  },
+  "simulator": {
+    "name": "kaggriculture-cppsim",
+    "version": "1.32.7",
+    "engine": "kagsim.Game"
+  }
+}
