@@ -1,0 +1,4 @@
+1484e0059f6196f82fe3db27fc07cf33b50cd99fadef298f156e642bb4466dc4  QUALIFICATION_PROTOCOL.md
+
+Qualification freeze: commit hash and timestamp recorded in QUALIFICATION_EXECUTION_MANIFEST.json after Git commit.
+Freeze must predate first Qualification seed execution.
