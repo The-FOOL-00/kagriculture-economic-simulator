@@ -1,0 +1,59 @@
+{
+  "experiment_id": "EXP-DEV-001",
+  "research_question": "Does conditioning crop planting on revealed town shops at Day 3 (Step 72) and Day 6 (Step 144) outperform the static 19S/0T Strawberry Bedrock without increasing downside tail variance?",
+  "candidate": {
+    "identifier": "dev_001_dynamic_portfolio",
+    "module": "candidates.closed_loop_architecture.dev_001_dynamic_portfolio",
+    "class": "Dev001DynamicPortfolioAgent",
+    "description": "Information-aware dynamic crop selection conditioned on revealed town shops at Day 3 (Step 72) and Day 6 (Step 144)"
+  },
+  "controls": {
+    "control_a": {
+      "identifier": "ClosedLoopAgentV2",
+      "module": "candidates.closed_loop_architecture.closed_loop_v2",
+      "class": "ClosedLoopAgentV2",
+      "description": "Static 19S / 0T Strawberry Bedrock with JIT shed headroom 96 and dawn hiring priority"
+    },
+    "control_b": {
+      "identifier": "Static 19S / 0T",
+      "module": "scratch.crop_portfolio_sweep",
+      "class": "HybridCropPortfolioAgent(19, 0)",
+      "description": "Static 19 Strawberry / 0 Tomato grid"
+    },
+    "reference": {
+      "identifier": "Dmitrii-LB2800",
+      "entry_point": "extracted_agents/dmitrii_lb2800/main.py",
+      "description": "Public LB 2800 reference benchmark"
+    }
+  },
+  "protocol": {
+    "document": "DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md",
+    "hash": "671e915eadd72adb710421b45e6a33ad533abd9d68ff67770b8dd412ff7381b3",
+    "commit": "a1ba5acb0d04689874ce1333892825f014eea924"
+  },
+  "simulator": {
+    "engine": "kagsim",
+    "engine_version": "1.32.7",
+    "binary_path": "external_repos/kaggriculture-cppsim/kagsim.cp314-win_amd64.pyd",
+    "source_path": "external_repos/kaggriculture-cppsim/sim/sim.hpp",
+    "episode_steps": 720,
+    "max_orders": 10
+  },
+  "partitions": {
+    "discovery": "Seeds 50000-50049 (N=50 seeds, 100 matches per pair)",
+    "qualification": "Seeds 50050-50099 (N=50 seeds, 100 matches per pair)",
+    "holdout_covenant": "Seeds 214200-214249 strictly prohibited"
+  },
+  "decision_rules": {
+    "discovery_pass_margin": 50.0,
+    "discovery_pass_p05": -200.0,
+    "discovery_fail_margin": 0.0,
+    "discovery_fail_worst_loss": -800.0,
+    "qualification_alpha": 0.05,
+    "qualification_t_threshold": 1.96
+  },
+  "containment": {
+    "sandbox": "ActiveContainmentSandbox",
+    "adversarial_suite": "14-Vector Suite Certified"
+  }
+}

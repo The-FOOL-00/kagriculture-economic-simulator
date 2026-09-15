@@ -1,0 +1,8 @@
+{
+  "experiment_id": "EXP-DEV-001",
+  "sandbox": "ActiveContainmentSandbox",
+  "total_matches_evaluated": 200,
+  "leakage_violations_intercepted": 0,
+  "holdout_violations": 0,
+  "status": "PASS_ZERO_LEAKAGE"
+}

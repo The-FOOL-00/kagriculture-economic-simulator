@@ -1,0 +1,56 @@
+[2026-09-11 13:49:37 UTC] ================================================================================
+[2026-09-11 13:49:37 UTC] EXP-DEV-002: HEDGED ADAPTIVE CROP PORTFOLIO EVALUATION
+[2026-09-11 13:49:37 UTC] ================================================================================
+[2026-09-11 13:49:37 UTC] Verifying Preflight Invariants...
+[2026-09-11 13:49:37 UTC]   Protocol V1.1 SHA-256 Verified: 735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446
+[2026-09-11 13:49:37 UTC]   Frozen Live Submission Checksums Verified bit-exact.
+[2026-09-11 13:49:37 UTC]   Candidate dev_002 AST Zero-Leakage Verified Clean.
+[2026-09-11 13:49:38 UTC] 
+--- STAGE 2: SMOKE TEST (Seeds 49998, 49999) ---
+[2026-09-11 13:49:38 UTC]   Smoke Seed 49998: Paired Margin vs V2 = $+0 (Cand Mean Cash: $78,240, Mode: STRAWBERRY)
+[2026-09-11 13:49:39 UTC]   Smoke Seed 49999: Paired Margin vs V2 = $+0 (Cand Mean Cash: $88,301, Mode: STRAWBERRY)
+[2026-09-11 13:49:39 UTC]   Smoke Test: PASS (0 exceptions, sandbox active).
+[2026-09-11 13:49:39 UTC] 
+--- STAGE 3: DISCOVERY PARTITION EXECUTION (Seeds 50000..50049, N=50 seeds) ---
+[2026-09-11 13:49:49 UTC]   Progress: 10/50 seeds (20 matches) | Current Mean Margin vs V2: $+851.00 | WR: 30.0%
+[2026-09-11 13:49:59 UTC]   Progress: 20/50 seeds (40 matches) | Current Mean Margin vs V2: $+615.95 | WR: 20.0%
+[2026-09-11 13:50:09 UTC]   Progress: 30/50 seeds (60 matches) | Current Mean Margin vs V2: $+416.03 | WR: 20.0%
+[2026-09-11 13:50:20 UTC]   Progress: 40/50 seeds (80 matches) | Current Mean Margin vs V2: $+312.57 | WR: 17.5%
+[2026-09-11 13:50:31 UTC]   Progress: 50/50 seeds (100 matches) | Current Mean Margin vs V2: $+250.06 | WR: 14.0%
+[2026-09-11 13:50:31 UTC] Discovery Execution completed in 52.2s.
+[2026-09-11 13:50:31 UTC] 
+================================================================================
+[2026-09-11 13:50:31 UTC] EXP-DEV-002 DISCOVERY RESULTS (N=50 Seeds, 100 Matches)
+[2026-09-11 13:50:31 UTC] ================================================================================
+[2026-09-11 13:50:31 UTC] Primary Metric (Paired Margin vs ClosedLoopAgentV2):
+[2026-09-11 13:50:31 UTC]   Mean Margin (Delta mu): $+250.06 coins
+[2026-09-11 13:50:31 UTC]   10% Trimmed Mean:       $+0.85 coins
+[2026-09-11 13:50:31 UTC]   Median Margin:          $+0.00 coins
+[2026-09-11 13:50:31 UTC]   Standard Dev (SD):       $1,281.07 coins
+[2026-09-11 13:50:31 UTC]   Standard Error (SE):     $181.17 coins
+[2026-09-11 13:50:31 UTC]   Student's t-statistic:   1.3803
+[2026-09-11 13:50:31 UTC]   Two-Sided p-value:       0.167509
+[2026-09-11 13:50:31 UTC]   95% Confidence Interval: [$-114.01, $+614.13]
+[2026-09-11 13:50:31 UTC]   Paired Win Rate:         14.0% (7W - 1L - 42T)
+[2026-09-11 13:50:31 UTC]   5th Percentile (p05):   $+0.00 coins
+[2026-09-11 13:50:31 UTC]   Worst Paired Loss:      $-11.00 coins
+[2026-09-11 13:50:31 UTC]   Best Paired Win:        $+8,300.00 coins
+[2026-09-11 13:50:31 UTC]   Downside Frequency:      2.0% (1/50 seeds)
+[2026-09-11 13:50:31 UTC]   Large Losses (<-$200):   0
+[2026-09-11 13:50:31 UTC]   Large Losses (<-$500):   0
+[2026-09-11 13:50:31 UTC]   Large Losses (<-$800):   0
+[2026-09-11 13:50:31 UTC] --------------------------------------------------------------------------------
+[2026-09-11 13:50:31 UTC] Mode Distribution: {'YARN': 9, 'CARROT': 5, 'STRAWBERRY': 33, 'TOMATO': 2, 'WHEAT': 1}
+[2026-09-11 13:50:31 UTC] --------------------------------------------------------------------------------
+[2026-09-11 13:50:31 UTC] Reference Comparison vs Dmitrii-LB2800:
+[2026-09-11 13:50:31 UTC]   Mean Margin vs Dmi:     $+287.90 coins
+[2026-09-11 13:50:31 UTC]   Win Rate vs Dmi:         68.0% (34W - 16L - 0T)
+[2026-09-11 13:50:31 UTC] ================================================================================
+[2026-09-11 13:50:31 UTC] 
+Stage 3 Protocol Decision Check:
+[2026-09-11 13:50:31 UTC]   Discovery Verdict: QUALIFIED_FOR_STAGE_4
+[2026-09-11 13:50:31 UTC]   Decision Detail: Gating criteria satisfied: Delta mu > +$50, p05 >= -$200, worst loss >= -$800
+[2026-09-11 13:50:31 UTC] Saved raw results to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-002\EXP-DEV-002_RAW_RESULTS.json
+[2026-09-11 13:50:31 UTC] Saved paired deltas CSV to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-002\EXP-DEV-002_PAIRED_DELTAS.csv
+[2026-09-11 13:50:31 UTC] 
+EXP-DEV-002 Discovery Execution Complete.

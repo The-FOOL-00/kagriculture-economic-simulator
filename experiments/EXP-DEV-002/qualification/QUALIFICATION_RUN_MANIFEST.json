@@ -1,0 +1,58 @@
+{
+  "manifest_version": "1.0",
+  "experiment_id": "EXP-DEV-002",
+  "phase": "Qualification",
+  "timestamp_utc": "2026-09-11 14:50:13",
+  "treatment_identity": {
+    "identifier": "dev_002_hedged_portfolio",
+    "path": "candidates/closed_loop_architecture/dev_002_hedged_portfolio.py",
+    "sha256": "cdd19cc8d2b6a718ce6252223b9016ce76e5b08b88de10689ea5fce4ddb8f907",
+    "class": "Dev002HedgedPortfolioAgent",
+    "parameters": {
+      "bedrock_strawberry_floor": 13,
+      "tomato_substitution_cap": 6,
+      "commitment_deadline_step": 144,
+      "base_liquidity_reserve": 500.0,
+      "market_timing": true,
+      "tomato_sale_batch": 6
+    }
+  },
+  "protocol_identity": {
+    "title": "DEVELOPMENT EXPERIMENT PROTOCOL V1.1",
+    "path": "DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md",
+    "sha256": "735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446",
+    "git_commit": "b2a4f4585342875602af6f54324fe5a8bcfbd9d1"
+  },
+  "live_submissions_frozen": {
+    "submission_56146971_residual": {
+      "path": "candidates/compiled_v54_plus_residual.py",
+      "sha256": "18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb"
+    },
+    "submission_56146947_shop": {
+      "path": "candidates/compiled_v54_plus_shop.py",
+      "sha256": "f651ccd220e701968bc33579812d8917da63f5b0582f2fd0d363fa6a16ffd8b8"
+    }
+  },
+  "simulator_environment": {
+    "engine": "kagsim",
+    "version": "1.32.7",
+    "binary_path": "external_repos/kaggriculture-cppsim/kagsim.cp314-win_amd64.pyd",
+    "max_steps": 720
+  },
+  "partition_provenance": {
+    "qualification_range": [
+      50050,
+      50099
+    ],
+    "total_seeds": 50,
+    "total_matches_evaluated": 100,
+    "virgin_holdout_status": "Untouched (Seeds 214200-214249)"
+  },
+  "qualification_verdict": "QUALIFICATION PASS WITH LIMITATIONS",
+  "files_emitted": [
+    "experiments/EXP-DEV-002/qualification/QUALIFICATION_RAW_RESULTS.json",
+    "experiments/EXP-DEV-002/qualification/QUALIFICATION_PAIRED_DELTAS.csv",
+    "experiments/EXP-DEV-002/qualification/QUALIFICATION_RUN_MANIFEST.json",
+    "experiments/EXP-DEV-002/qualification/QUALIFICATION_EXECUTION_LOG.txt"
+  ]
+}

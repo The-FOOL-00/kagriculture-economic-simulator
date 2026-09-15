@@ -1,0 +1,2416 @@
+{
+  "experiment_id": "EXP-DEV-001",
+  "protocol_hash": "671e915eadd72adb710421b45e6a33ad533abd9d68ff67770b8dd412ff7381b3",
+  "stage": "Discovery",
+  "discovery_seeds": [
+    50000,
+    50001,
+    50002,
+    50003,
+    50004,
+    50005,
+    50006,
+    50007,
+    50008,
+    50009,
+    50010,
+    50011,
+    50012,
+    50013,
+    50014,
+    50015,
+    50016,
+    50017,
+    50018,
+    50019,
+    50020,
+    50021,
+    50022,
+    50023,
+    50024,
+    50025,
+    50026,
+    50027,
+    50028,
+    50029,
+    50030,
+    50031,
+    50032,
+    50033,
+    50034,
+    50035,
+    50036,
+    50037,
+    50038,
+    50039,
+    50040,
+    50041,
+    50042,
+    50043,
+    50044,
+    50045,
+    50046,
+    50047,
+    50048,
+    50049
+  ],
+  "discovery_vs_v2": [
+    {
+      "seed": 50000,
+      "match0": {
+        "cand_score": 92913.0,
+        "opp_score": 92913.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92913.0,
+        "cand_score": 92913.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 185826.0,
+      "opp_total": 185826.0,
+      "cand_mean_cash": 92913.0,
+      "opp_mean_cash": 92913.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50001,
+      "match0": {
+        "cand_score": 97003.0,
+        "opp_score": 96907.0,
+        "margin": 96.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 96907.0,
+        "cand_score": 97003.0,
+        "margin": 96.0,
+        "steps": 719
+      },
+      "paired_margin": 192.0,
+      "cand_total": 194006.0,
+      "opp_total": 193814.0,
+      "cand_mean_cash": 97003.0,
+      "opp_mean_cash": 96907.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50002,
+      "match0": {
+        "cand_score": 77823.0,
+        "opp_score": 77823.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 77823.0,
+        "cand_score": 77823.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 155646.0,
+      "opp_total": 155646.0,
+      "cand_mean_cash": 77823.0,
+      "opp_mean_cash": 77823.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50003,
+      "match0": {
+        "cand_score": 92118.0,
+        "opp_score": 92118.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92118.0,
+        "cand_score": 92118.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 184236.0,
+      "opp_total": 184236.0,
+      "cand_mean_cash": 92118.0,
+      "opp_mean_cash": 92118.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50004,
+      "match0": {
+        "cand_score": 100541.0,
+        "opp_score": 92909.0,
+        "margin": 7632.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92909.0,
+        "cand_score": 100541.0,
+        "margin": 7632.0,
+        "steps": 719
+      },
+      "paired_margin": 15264.0,
+      "cand_total": 201082.0,
+      "opp_total": 185818.0,
+      "cand_mean_cash": 100541.0,
+      "opp_mean_cash": 92909.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50005,
+      "match0": {
+        "cand_score": 131955.0,
+        "opp_score": 131955.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 131955.0,
+        "cand_score": 131955.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 263910.0,
+      "opp_total": 263910.0,
+      "cand_mean_cash": 131955.0,
+      "opp_mean_cash": 131955.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50006,
+      "match0": {
+        "cand_score": 130364.0,
+        "opp_score": 130188.0,
+        "margin": 176.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 130364.0,
+        "cand_score": 130188.0,
+        "margin": -176.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 260552.0,
+      "opp_total": 260552.0,
+      "cand_mean_cash": 130276.0,
+      "opp_mean_cash": 130276.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50007,
+      "match0": {
+        "cand_score": 74759.0,
+        "opp_score": 74759.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 74759.0,
+        "cand_score": 74759.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 149518.0,
+      "opp_total": 149518.0,
+      "cand_mean_cash": 74759.0,
+      "opp_mean_cash": 74759.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50008,
+      "match0": {
+        "cand_score": 66880.0,
+        "opp_score": 66871.0,
+        "margin": 9.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 66871.0,
+        "cand_score": 66880.0,
+        "margin": 9.0,
+        "steps": 719
+      },
+      "paired_margin": 18.0,
+      "cand_total": 133760.0,
+      "opp_total": 133742.0,
+      "cand_mean_cash": 66880.0,
+      "opp_mean_cash": 66871.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50009,
+      "match0": {
+        "cand_score": 108020.0,
+        "opp_score": 108020.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 108020.0,
+        "cand_score": 108020.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 216040.0,
+      "opp_total": 216040.0,
+      "cand_mean_cash": 108020.0,
+      "opp_mean_cash": 108020.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50010,
+      "match0": {
+        "cand_score": 77736.0,
+        "opp_score": 77736.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 77736.0,
+        "cand_score": 77736.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 155472.0,
+      "opp_total": 155472.0,
+      "cand_mean_cash": 77736.0,
+      "opp_mean_cash": 77736.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50011,
+      "match0": {
+        "cand_score": 87485.0,
+        "opp_score": 87485.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 87485.0,
+        "cand_score": 87485.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 174970.0,
+      "opp_total": 174970.0,
+      "cand_mean_cash": 87485.0,
+      "opp_mean_cash": 87485.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50012,
+      "match0": {
+        "cand_score": 87164.0,
+        "opp_score": 87008.0,
+        "margin": 156.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 87164.0,
+        "cand_score": 87008.0,
+        "margin": -156.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 174172.0,
+      "opp_total": 174172.0,
+      "cand_mean_cash": 87086.0,
+      "opp_mean_cash": 87086.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50013,
+      "match0": {
+        "cand_score": 141770.0,
+        "opp_score": 141770.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 141770.0,
+        "cand_score": 141770.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 283540.0,
+      "opp_total": 283540.0,
+      "cand_mean_cash": 141770.0,
+      "opp_mean_cash": 141770.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50014,
+      "match0": {
+        "cand_score": 87860.0,
+        "opp_score": 87860.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 87860.0,
+        "cand_score": 87860.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 175720.0,
+      "opp_total": 175720.0,
+      "cand_mean_cash": 87860.0,
+      "opp_mean_cash": 87860.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50015,
+      "match0": {
+        "cand_score": 76760.0,
+        "opp_score": 76760.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 76760.0,
+        "cand_score": 76760.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 153520.0,
+      "opp_total": 153520.0,
+      "cand_mean_cash": 76760.0,
+      "opp_mean_cash": 76760.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50016,
+      "match0": {
+        "cand_score": 103317.0,
+        "opp_score": 103317.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 103317.0,
+        "cand_score": 103317.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 206634.0,
+      "opp_total": 206634.0,
+      "cand_mean_cash": 103317.0,
+      "opp_mean_cash": 103317.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50017,
+      "match0": {
+        "cand_score": 49545.0,
+        "opp_score": 49723.0,
+        "margin": -178.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 49540.0,
+        "cand_score": 49707.0,
+        "margin": 167.0,
+        "steps": 719
+      },
+      "paired_margin": -11.0,
+      "cand_total": 99252.0,
+      "opp_total": 99263.0,
+      "cand_mean_cash": 49626.0,
+      "opp_mean_cash": 49631.5,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50018,
+      "match0": {
+        "cand_score": 105953.0,
+        "opp_score": 107147.0,
+        "margin": -1194.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 107147.0,
+        "cand_score": 105953.0,
+        "margin": -1194.0,
+        "steps": 719
+      },
+      "paired_margin": -2388.0,
+      "cand_total": 211906.0,
+      "opp_total": 214294.0,
+      "cand_mean_cash": 105953.0,
+      "opp_mean_cash": 107147.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50019,
+      "match0": {
+        "cand_score": 110806.0,
+        "opp_score": 110806.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 110806.0,
+        "cand_score": 110806.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 221612.0,
+      "opp_total": 221612.0,
+      "cand_mean_cash": 110806.0,
+      "opp_mean_cash": 110806.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50020,
+      "match0": {
+        "cand_score": 80069.0,
+        "opp_score": 80245.0,
+        "margin": -176.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 80069.0,
+        "cand_score": 80245.0,
+        "margin": 176.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 160314.0,
+      "opp_total": 160314.0,
+      "cand_mean_cash": 80157.0,
+      "opp_mean_cash": 80157.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50021,
+      "match0": {
+        "cand_score": 112634.0,
+        "opp_score": 112634.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 112634.0,
+        "cand_score": 112634.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 225268.0,
+      "opp_total": 225268.0,
+      "cand_mean_cash": 112634.0,
+      "opp_mean_cash": 112634.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50022,
+      "match0": {
+        "cand_score": 90541.0,
+        "opp_score": 90541.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 90541.0,
+        "cand_score": 90541.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 181082.0,
+      "opp_total": 181082.0,
+      "cand_mean_cash": 90541.0,
+      "opp_mean_cash": 90541.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50023,
+      "match0": {
+        "cand_score": 74050.0,
+        "opp_score": 73977.0,
+        "margin": 73.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 73977.0,
+        "cand_score": 74050.0,
+        "margin": 73.0,
+        "steps": 719
+      },
+      "paired_margin": 146.0,
+      "cand_total": 148100.0,
+      "opp_total": 147954.0,
+      "cand_mean_cash": 74050.0,
+      "opp_mean_cash": 73977.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50024,
+      "match0": {
+        "cand_score": 87332.0,
+        "opp_score": 87332.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 87332.0,
+        "cand_score": 87332.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 174664.0,
+      "opp_total": 174664.0,
+      "cand_mean_cash": 87332.0,
+      "opp_mean_cash": 87332.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50025,
+      "match0": {
+        "cand_score": 127175.0,
+        "opp_score": 127175.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 127175.0,
+        "cand_score": 127175.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 254350.0,
+      "opp_total": 254350.0,
+      "cand_mean_cash": 127175.0,
+      "opp_mean_cash": 127175.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50026,
+      "match0": {
+        "cand_score": 79063.0,
+        "opp_score": 79055.0,
+        "margin": 8.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 79055.0,
+        "cand_score": 79063.0,
+        "margin": 8.0,
+        "steps": 719
+      },
+      "paired_margin": 16.0,
+      "cand_total": 158126.0,
+      "opp_total": 158110.0,
+      "cand_mean_cash": 79063.0,
+      "opp_mean_cash": 79055.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50027,
+      "match0": {
+        "cand_score": 99281.0,
+        "opp_score": 99281.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99281.0,
+        "cand_score": 99281.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 198562.0,
+      "opp_total": 198562.0,
+      "cand_mean_cash": 99281.0,
+      "opp_mean_cash": 99281.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50028,
+      "match0": {
+        "cand_score": 84994.0,
+        "opp_score": 84994.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 84994.0,
+        "cand_score": 84994.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 169988.0,
+      "opp_total": 169988.0,
+      "cand_mean_cash": 84994.0,
+      "opp_mean_cash": 84994.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50029,
+      "match0": {
+        "cand_score": 98449.0,
+        "opp_score": 98449.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 98449.0,
+        "cand_score": 98449.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 196898.0,
+      "opp_total": 196898.0,
+      "cand_mean_cash": 98449.0,
+      "opp_mean_cash": 98449.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50030,
+      "match0": {
+        "cand_score": 112514.0,
+        "opp_score": 112514.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 112514.0,
+        "cand_score": 112514.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 225028.0,
+      "opp_total": 225028.0,
+      "cand_mean_cash": 112514.0,
+      "opp_mean_cash": 112514.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50031,
+      "match0": {
+        "cand_score": 102259.0,
+        "opp_score": 102259.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 102259.0,
+        "cand_score": 102259.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 204518.0,
+      "opp_total": 204518.0,
+      "cand_mean_cash": 102259.0,
+      "opp_mean_cash": 102259.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50032,
+      "match0": {
+        "cand_score": 137439.0,
+        "opp_score": 137439.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 137439.0,
+        "cand_score": 137439.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 274878.0,
+      "opp_total": 274878.0,
+      "cand_mean_cash": 137439.0,
+      "opp_mean_cash": 137439.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50033,
+      "match0": {
+        "cand_score": 96014.0,
+        "opp_score": 96014.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 96014.0,
+        "cand_score": 96014.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 192028.0,
+      "opp_total": 192028.0,
+      "cand_mean_cash": 96014.0,
+      "opp_mean_cash": 96014.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50034,
+      "match0": {
+        "cand_score": 62873.0,
+        "opp_score": 62873.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 62873.0,
+        "cand_score": 62873.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 125746.0,
+      "opp_total": 125746.0,
+      "cand_mean_cash": 62873.0,
+      "opp_mean_cash": 62873.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50035,
+      "match0": {
+        "cand_score": 116640.0,
+        "opp_score": 116640.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 116640.0,
+        "cand_score": 116640.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 233280.0,
+      "opp_total": 233280.0,
+      "cand_mean_cash": 116640.0,
+      "opp_mean_cash": 116640.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50036,
+      "match0": {
+        "cand_score": 97662.0,
+        "opp_score": 97662.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 97662.0,
+        "cand_score": 97662.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 195324.0,
+      "opp_total": 195324.0,
+      "cand_mean_cash": 97662.0,
+      "opp_mean_cash": 97662.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50037,
+      "match0": {
+        "cand_score": 88350.0,
+        "opp_score": 88339.0,
+        "margin": 11.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 88339.0,
+        "cand_score": 88350.0,
+        "margin": 11.0,
+        "steps": 719
+      },
+      "paired_margin": 22.0,
+      "cand_total": 176700.0,
+      "opp_total": 176678.0,
+      "cand_mean_cash": 88350.0,
+      "opp_mean_cash": 88339.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50038,
+      "match0": {
+        "cand_score": 113307.0,
+        "opp_score": 113307.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 113307.0,
+        "cand_score": 113307.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 226614.0,
+      "opp_total": 226614.0,
+      "cand_mean_cash": 113307.0,
+      "opp_mean_cash": 113307.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50039,
+      "match0": {
+        "cand_score": 139606.0,
+        "opp_score": 139606.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 139606.0,
+        "cand_score": 139606.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 279212.0,
+      "opp_total": 279212.0,
+      "cand_mean_cash": 139606.0,
+      "opp_mean_cash": 139606.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50040,
+      "match0": {
+        "cand_score": 80476.0,
+        "opp_score": 80476.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 80476.0,
+        "cand_score": 80476.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 160952.0,
+      "opp_total": 160952.0,
+      "cand_mean_cash": 80476.0,
+      "opp_mean_cash": 80476.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50041,
+      "match0": {
+        "cand_score": 101540.0,
+        "opp_score": 101540.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 101540.0,
+        "cand_score": 101540.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 203080.0,
+      "opp_total": 203080.0,
+      "cand_mean_cash": 101540.0,
+      "opp_mean_cash": 101540.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50042,
+      "match0": {
+        "cand_score": 107014.0,
+        "opp_score": 106791.0,
+        "margin": 223.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 107014.0,
+        "cand_score": 106791.0,
+        "margin": -223.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 213805.0,
+      "opp_total": 213805.0,
+      "cand_mean_cash": 106902.5,
+      "opp_mean_cash": 106902.5,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50043,
+      "match0": {
+        "cand_score": 93617.0,
+        "opp_score": 93617.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 93617.0,
+        "cand_score": 93617.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 187234.0,
+      "opp_total": 187234.0,
+      "cand_mean_cash": 93617.0,
+      "opp_mean_cash": 93617.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50044,
+      "match0": {
+        "cand_score": 79700.0,
+        "opp_score": 79700.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 79700.0,
+        "cand_score": 79700.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 159400.0,
+      "opp_total": 159400.0,
+      "cand_mean_cash": 79700.0,
+      "opp_mean_cash": 79700.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50045,
+      "match0": {
+        "cand_score": 105930.0,
+        "opp_score": 105930.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 105930.0,
+        "cand_score": 105930.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 211860.0,
+      "opp_total": 211860.0,
+      "cand_mean_cash": 105930.0,
+      "opp_mean_cash": 105930.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50046,
+      "match0": {
+        "cand_score": 90830.0,
+        "opp_score": 90830.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 90830.0,
+        "cand_score": 90830.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 181660.0,
+      "opp_total": 181660.0,
+      "cand_mean_cash": 90830.0,
+      "opp_mean_cash": 90830.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50047,
+      "match0": {
+        "cand_score": 59669.0,
+        "opp_score": 59669.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 59669.0,
+        "cand_score": 59669.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 119338.0,
+      "opp_total": 119338.0,
+      "cand_mean_cash": 59669.0,
+      "opp_mean_cash": 59669.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50048,
+      "match0": {
+        "cand_score": 110687.0,
+        "opp_score": 110687.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 110687.0,
+        "cand_score": 110687.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 221374.0,
+      "opp_total": 221374.0,
+      "cand_mean_cash": 110687.0,
+      "opp_mean_cash": 110687.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50049,
+      "match0": {
+        "cand_score": 128124.0,
+        "opp_score": 128124.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 128124.0,
+        "cand_score": 128124.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 256248.0,
+      "opp_total": 256248.0,
+      "cand_mean_cash": 128124.0,
+      "opp_mean_cash": 128124.0,
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    }
+  ],
+  "discovery_vs_dmi": [
+    {
+      "seed": 50000,
+      "match0": {
+        "cand_score": 93010.0,
+        "opp_score": 92988.0,
+        "margin": 22.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92988.0,
+        "cand_score": 93010.0,
+        "margin": 22.0,
+        "steps": 719
+      },
+      "paired_margin": 44.0,
+      "cand_total": 186020.0,
+      "opp_total": 185976.0,
+      "cand_mean_cash": 93010.0,
+      "opp_mean_cash": 92988.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50001,
+      "match0": {
+        "cand_score": 96997.0,
+        "opp_score": 96907.0,
+        "margin": 90.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 96907.0,
+        "cand_score": 96997.0,
+        "margin": 90.0,
+        "steps": 719
+      },
+      "paired_margin": 180.0,
+      "cand_total": 193994.0,
+      "opp_total": 193814.0,
+      "cand_mean_cash": 96997.0,
+      "opp_mean_cash": 96907.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50002,
+      "match0": {
+        "cand_score": 77921.0,
+        "opp_score": 77794.0,
+        "margin": 127.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 77794.0,
+        "cand_score": 77921.0,
+        "margin": 127.0,
+        "steps": 719
+      },
+      "paired_margin": 254.0,
+      "cand_total": 155842.0,
+      "opp_total": 155588.0,
+      "cand_mean_cash": 77921.0,
+      "opp_mean_cash": 77794.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50003,
+      "match0": {
+        "cand_score": 92232.0,
+        "opp_score": 92197.0,
+        "margin": 35.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92197.0,
+        "cand_score": 92232.0,
+        "margin": 35.0,
+        "steps": 719
+      },
+      "paired_margin": 70.0,
+      "cand_total": 184464.0,
+      "opp_total": 184394.0,
+      "cand_mean_cash": 92232.0,
+      "opp_mean_cash": 92197.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50004,
+      "match0": {
+        "cand_score": 100530.0,
+        "opp_score": 92970.0,
+        "margin": 7560.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92970.0,
+        "cand_score": 100530.0,
+        "margin": 7560.0,
+        "steps": 719
+      },
+      "paired_margin": 15120.0,
+      "cand_total": 201060.0,
+      "opp_total": 185940.0,
+      "cand_mean_cash": 100530.0,
+      "opp_mean_cash": 92970.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50005,
+      "match0": {
+        "cand_score": 132062.0,
+        "opp_score": 132112.0,
+        "margin": -50.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 132112.0,
+        "cand_score": 132062.0,
+        "margin": -50.0,
+        "steps": 719
+      },
+      "paired_margin": -100.0,
+      "cand_total": 264124.0,
+      "opp_total": 264224.0,
+      "cand_mean_cash": 132062.0,
+      "opp_mean_cash": 132112.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50006,
+      "match0": {
+        "cand_score": 130457.0,
+        "opp_score": 130191.0,
+        "margin": 266.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 130367.0,
+        "cand_score": 130281.0,
+        "margin": -86.0,
+        "steps": 719
+      },
+      "paired_margin": 180.0,
+      "cand_total": 260738.0,
+      "opp_total": 260558.0,
+      "cand_mean_cash": 130369.0,
+      "opp_mean_cash": 130279.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50007,
+      "match0": {
+        "cand_score": 74854.0,
+        "opp_score": 74739.0,
+        "margin": 115.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 74739.0,
+        "cand_score": 74854.0,
+        "margin": 115.0,
+        "steps": 719
+      },
+      "paired_margin": 230.0,
+      "cand_total": 149708.0,
+      "opp_total": 149478.0,
+      "cand_mean_cash": 74854.0,
+      "opp_mean_cash": 74739.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50008,
+      "match0": {
+        "cand_score": 66956.0,
+        "opp_score": 66874.0,
+        "margin": 82.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 66874.0,
+        "cand_score": 66956.0,
+        "margin": 82.0,
+        "steps": 719
+      },
+      "paired_margin": 164.0,
+      "cand_total": 133912.0,
+      "opp_total": 133748.0,
+      "cand_mean_cash": 66956.0,
+      "opp_mean_cash": 66874.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50009,
+      "match0": {
+        "cand_score": 108318.0,
+        "opp_score": 108235.0,
+        "margin": 83.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 108235.0,
+        "cand_score": 108318.0,
+        "margin": 83.0,
+        "steps": 719
+      },
+      "paired_margin": 166.0,
+      "cand_total": 216636.0,
+      "opp_total": 216470.0,
+      "cand_mean_cash": 108318.0,
+      "opp_mean_cash": 108235.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50010,
+      "match0": {
+        "cand_score": 77818.0,
+        "opp_score": 77744.0,
+        "margin": 74.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 77744.0,
+        "cand_score": 77818.0,
+        "margin": 74.0,
+        "steps": 719
+      },
+      "paired_margin": 148.0,
+      "cand_total": 155636.0,
+      "opp_total": 155488.0,
+      "cand_mean_cash": 77818.0,
+      "opp_mean_cash": 77744.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50011,
+      "match0": {
+        "cand_score": 87541.0,
+        "opp_score": 87494.0,
+        "margin": 47.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 87494.0,
+        "cand_score": 87541.0,
+        "margin": 47.0,
+        "steps": 719
+      },
+      "paired_margin": 94.0,
+      "cand_total": 175082.0,
+      "opp_total": 174988.0,
+      "cand_mean_cash": 87541.0,
+      "opp_mean_cash": 87494.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50012,
+      "match0": {
+        "cand_score": 87248.0,
+        "opp_score": 87016.0,
+        "margin": 232.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 87172.0,
+        "cand_score": 87092.0,
+        "margin": -80.0,
+        "steps": 719
+      },
+      "paired_margin": 152.0,
+      "cand_total": 174340.0,
+      "opp_total": 174188.0,
+      "cand_mean_cash": 87170.0,
+      "opp_mean_cash": 87094.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50013,
+      "match0": {
+        "cand_score": 141810.0,
+        "opp_score": 141868.0,
+        "margin": -58.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 141868.0,
+        "cand_score": 141810.0,
+        "margin": -58.0,
+        "steps": 719
+      },
+      "paired_margin": -116.0,
+      "cand_total": 283620.0,
+      "opp_total": 283736.0,
+      "cand_mean_cash": 141810.0,
+      "opp_mean_cash": 141868.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50014,
+      "match0": {
+        "cand_score": 87942.0,
+        "opp_score": 88116.0,
+        "margin": -174.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 88116.0,
+        "cand_score": 87942.0,
+        "margin": -174.0,
+        "steps": 719
+      },
+      "paired_margin": -348.0,
+      "cand_total": 175884.0,
+      "opp_total": 176232.0,
+      "cand_mean_cash": 87942.0,
+      "opp_mean_cash": 88116.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50015,
+      "match0": {
+        "cand_score": 76849.0,
+        "opp_score": 76769.0,
+        "margin": 80.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 76769.0,
+        "cand_score": 76849.0,
+        "margin": 80.0,
+        "steps": 719
+      },
+      "paired_margin": 160.0,
+      "cand_total": 153698.0,
+      "opp_total": 153538.0,
+      "cand_mean_cash": 76849.0,
+      "opp_mean_cash": 76769.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50016,
+      "match0": {
+        "cand_score": 103372.0,
+        "opp_score": 103393.0,
+        "margin": -21.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 103393.0,
+        "cand_score": 103372.0,
+        "margin": -21.0,
+        "steps": 719
+      },
+      "paired_margin": -42.0,
+      "cand_total": 206744.0,
+      "opp_total": 206786.0,
+      "cand_mean_cash": 103372.0,
+      "opp_mean_cash": 103393.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50017,
+      "match0": {
+        "cand_score": 49610.0,
+        "opp_score": 49699.0,
+        "margin": -89.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 49516.0,
+        "cand_score": 49772.0,
+        "margin": 256.0,
+        "steps": 719
+      },
+      "paired_margin": 167.0,
+      "cand_total": 99382.0,
+      "opp_total": 99215.0,
+      "cand_mean_cash": 49691.0,
+      "opp_mean_cash": 49607.5,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50018,
+      "match0": {
+        "cand_score": 105941.0,
+        "opp_score": 107653.0,
+        "margin": -1712.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 107653.0,
+        "cand_score": 105941.0,
+        "margin": -1712.0,
+        "steps": 719
+      },
+      "paired_margin": -3424.0,
+      "cand_total": 211882.0,
+      "opp_total": 215306.0,
+      "cand_mean_cash": 105941.0,
+      "opp_mean_cash": 107653.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50019,
+      "match0": {
+        "cand_score": 110832.0,
+        "opp_score": 110883.0,
+        "margin": -51.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 110883.0,
+        "cand_score": 110832.0,
+        "margin": -51.0,
+        "steps": 719
+      },
+      "paired_margin": -102.0,
+      "cand_total": 221664.0,
+      "opp_total": 221766.0,
+      "cand_mean_cash": 110832.0,
+      "opp_mean_cash": 110883.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50020,
+      "match0": {
+        "cand_score": 80335.0,
+        "opp_score": 80343.0,
+        "margin": -8.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 80167.0,
+        "cand_score": 80511.0,
+        "margin": 344.0,
+        "steps": 719
+      },
+      "paired_margin": 336.0,
+      "cand_total": 160846.0,
+      "opp_total": 160510.0,
+      "cand_mean_cash": 80423.0,
+      "opp_mean_cash": 80255.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50021,
+      "match0": {
+        "cand_score": 112854.0,
+        "opp_score": 112768.0,
+        "margin": 86.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 112768.0,
+        "cand_score": 112854.0,
+        "margin": 86.0,
+        "steps": 719
+      },
+      "paired_margin": 172.0,
+      "cand_total": 225708.0,
+      "opp_total": 225536.0,
+      "cand_mean_cash": 112854.0,
+      "opp_mean_cash": 112768.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50022,
+      "match0": {
+        "cand_score": 90546.0,
+        "opp_score": 90739.0,
+        "margin": -193.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 90739.0,
+        "cand_score": 90546.0,
+        "margin": -193.0,
+        "steps": 719
+      },
+      "paired_margin": -386.0,
+      "cand_total": 181092.0,
+      "opp_total": 181478.0,
+      "cand_mean_cash": 90546.0,
+      "opp_mean_cash": 90739.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50023,
+      "match0": {
+        "cand_score": 74133.0,
+        "opp_score": 73994.0,
+        "margin": 139.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 73994.0,
+        "cand_score": 74133.0,
+        "margin": 139.0,
+        "steps": 719
+      },
+      "paired_margin": 278.0,
+      "cand_total": 148266.0,
+      "opp_total": 147988.0,
+      "cand_mean_cash": 74133.0,
+      "opp_mean_cash": 73994.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50024,
+      "match0": {
+        "cand_score": 87398.0,
+        "opp_score": 87419.0,
+        "margin": -21.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 87419.0,
+        "cand_score": 87398.0,
+        "margin": -21.0,
+        "steps": 719
+      },
+      "paired_margin": -42.0,
+      "cand_total": 174796.0,
+      "opp_total": 174838.0,
+      "cand_mean_cash": 87398.0,
+      "opp_mean_cash": 87419.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50025,
+      "match0": {
+        "cand_score": 127261.0,
+        "opp_score": 127225.0,
+        "margin": 36.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 127225.0,
+        "cand_score": 127261.0,
+        "margin": 36.0,
+        "steps": 719
+      },
+      "paired_margin": 72.0,
+      "cand_total": 254522.0,
+      "opp_total": 254450.0,
+      "cand_mean_cash": 127261.0,
+      "opp_mean_cash": 127225.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50026,
+      "match0": {
+        "cand_score": 79125.0,
+        "opp_score": 79039.0,
+        "margin": 86.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 79039.0,
+        "cand_score": 79125.0,
+        "margin": 86.0,
+        "steps": 719
+      },
+      "paired_margin": 172.0,
+      "cand_total": 158250.0,
+      "opp_total": 158078.0,
+      "cand_mean_cash": 79125.0,
+      "opp_mean_cash": 79039.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50027,
+      "match0": {
+        "cand_score": 99328.0,
+        "opp_score": 99345.0,
+        "margin": -17.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99345.0,
+        "cand_score": 99328.0,
+        "margin": -17.0,
+        "steps": 719
+      },
+      "paired_margin": -34.0,
+      "cand_total": 198656.0,
+      "opp_total": 198690.0,
+      "cand_mean_cash": 99328.0,
+      "opp_mean_cash": 99345.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50028,
+      "match0": {
+        "cand_score": 85102.0,
+        "opp_score": 85158.0,
+        "margin": -56.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 85158.0,
+        "cand_score": 85102.0,
+        "margin": -56.0,
+        "steps": 719
+      },
+      "paired_margin": -112.0,
+      "cand_total": 170204.0,
+      "opp_total": 170316.0,
+      "cand_mean_cash": 85102.0,
+      "opp_mean_cash": 85158.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50029,
+      "match0": {
+        "cand_score": 98478.0,
+        "opp_score": 98492.0,
+        "margin": -14.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 98492.0,
+        "cand_score": 98478.0,
+        "margin": -14.0,
+        "steps": 719
+      },
+      "paired_margin": -28.0,
+      "cand_total": 196956.0,
+      "opp_total": 196984.0,
+      "cand_mean_cash": 98478.0,
+      "opp_mean_cash": 98492.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50030,
+      "match0": {
+        "cand_score": 112747.0,
+        "opp_score": 112632.0,
+        "margin": 115.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 112632.0,
+        "cand_score": 112747.0,
+        "margin": 115.0,
+        "steps": 719
+      },
+      "paired_margin": 230.0,
+      "cand_total": 225494.0,
+      "opp_total": 225264.0,
+      "cand_mean_cash": 112747.0,
+      "opp_mean_cash": 112632.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50031,
+      "match0": {
+        "cand_score": 102345.0,
+        "opp_score": 102277.0,
+        "margin": 68.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 102277.0,
+        "cand_score": 102345.0,
+        "margin": 68.0,
+        "steps": 719
+      },
+      "paired_margin": 136.0,
+      "cand_total": 204690.0,
+      "opp_total": 204554.0,
+      "cand_mean_cash": 102345.0,
+      "opp_mean_cash": 102277.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50032,
+      "match0": {
+        "cand_score": 137740.0,
+        "opp_score": 137655.0,
+        "margin": 85.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 137655.0,
+        "cand_score": 137740.0,
+        "margin": 85.0,
+        "steps": 719
+      },
+      "paired_margin": 170.0,
+      "cand_total": 275480.0,
+      "opp_total": 275310.0,
+      "cand_mean_cash": 137740.0,
+      "opp_mean_cash": 137655.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50033,
+      "match0": {
+        "cand_score": 96315.0,
+        "opp_score": 96230.0,
+        "margin": 85.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 96230.0,
+        "cand_score": 96315.0,
+        "margin": 85.0,
+        "steps": 719
+      },
+      "paired_margin": 170.0,
+      "cand_total": 192630.0,
+      "opp_total": 192460.0,
+      "cand_mean_cash": 96315.0,
+      "opp_mean_cash": 96230.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50034,
+      "match0": {
+        "cand_score": 62937.0,
+        "opp_score": 62860.0,
+        "margin": 77.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 62860.0,
+        "cand_score": 62937.0,
+        "margin": 77.0,
+        "steps": 719
+      },
+      "paired_margin": 154.0,
+      "cand_total": 125874.0,
+      "opp_total": 125720.0,
+      "cand_mean_cash": 62937.0,
+      "opp_mean_cash": 62860.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50035,
+      "match0": {
+        "cand_score": 116721.0,
+        "opp_score": 116689.0,
+        "margin": 32.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 116689.0,
+        "cand_score": 116721.0,
+        "margin": 32.0,
+        "steps": 719
+      },
+      "paired_margin": 64.0,
+      "cand_total": 233442.0,
+      "opp_total": 233378.0,
+      "cand_mean_cash": 116721.0,
+      "opp_mean_cash": 116689.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50036,
+      "match0": {
+        "cand_score": 97666.0,
+        "opp_score": 97765.0,
+        "margin": -99.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 97765.0,
+        "cand_score": 97666.0,
+        "margin": -99.0,
+        "steps": 719
+      },
+      "paired_margin": -198.0,
+      "cand_total": 195332.0,
+      "opp_total": 195530.0,
+      "cand_mean_cash": 97666.0,
+      "opp_mean_cash": 97765.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50037,
+      "match0": {
+        "cand_score": 88409.0,
+        "opp_score": 88354.0,
+        "margin": 55.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 88354.0,
+        "cand_score": 88409.0,
+        "margin": 55.0,
+        "steps": 719
+      },
+      "paired_margin": 110.0,
+      "cand_total": 176818.0,
+      "opp_total": 176708.0,
+      "cand_mean_cash": 88409.0,
+      "opp_mean_cash": 88354.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50038,
+      "match0": {
+        "cand_score": 113384.0,
+        "opp_score": 113300.0,
+        "margin": 84.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 113300.0,
+        "cand_score": 113384.0,
+        "margin": 84.0,
+        "steps": 719
+      },
+      "paired_margin": 168.0,
+      "cand_total": 226768.0,
+      "opp_total": 226600.0,
+      "cand_mean_cash": 113384.0,
+      "opp_mean_cash": 113300.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50039,
+      "match0": {
+        "cand_score": 139680.0,
+        "opp_score": 139698.0,
+        "margin": -18.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 139698.0,
+        "cand_score": 139680.0,
+        "margin": -18.0,
+        "steps": 719
+      },
+      "paired_margin": -36.0,
+      "cand_total": 279360.0,
+      "opp_total": 279396.0,
+      "cand_mean_cash": 139680.0,
+      "opp_mean_cash": 139698.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50040,
+      "match0": {
+        "cand_score": 80563.0,
+        "opp_score": 80730.0,
+        "margin": -167.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 80730.0,
+        "cand_score": 80563.0,
+        "margin": -167.0,
+        "steps": 719
+      },
+      "paired_margin": -334.0,
+      "cand_total": 161126.0,
+      "opp_total": 161460.0,
+      "cand_mean_cash": 80563.0,
+      "opp_mean_cash": 80730.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50041,
+      "match0": {
+        "cand_score": 101632.0,
+        "opp_score": 101548.0,
+        "margin": 84.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 101548.0,
+        "cand_score": 101632.0,
+        "margin": 84.0,
+        "steps": 719
+      },
+      "paired_margin": 168.0,
+      "cand_total": 203264.0,
+      "opp_total": 203096.0,
+      "cand_mean_cash": 101632.0,
+      "opp_mean_cash": 101548.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50042,
+      "match0": {
+        "cand_score": 107019.0,
+        "opp_score": 106795.0,
+        "margin": 224.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 107018.0,
+        "cand_score": 106796.0,
+        "margin": -222.0,
+        "steps": 719
+      },
+      "paired_margin": 2.0,
+      "cand_total": 213815.0,
+      "opp_total": 213813.0,
+      "cand_mean_cash": 106907.5,
+      "opp_mean_cash": 106906.5,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50043,
+      "match0": {
+        "cand_score": 93663.0,
+        "opp_score": 93716.0,
+        "margin": -53.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 93716.0,
+        "cand_score": 93663.0,
+        "margin": -53.0,
+        "steps": 719
+      },
+      "paired_margin": -106.0,
+      "cand_total": 187326.0,
+      "opp_total": 187432.0,
+      "cand_mean_cash": 93663.0,
+      "opp_mean_cash": 93716.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50044,
+      "match0": {
+        "cand_score": 79792.0,
+        "opp_score": 79685.0,
+        "margin": 107.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 79685.0,
+        "cand_score": 79792.0,
+        "margin": 107.0,
+        "steps": 719
+      },
+      "paired_margin": 214.0,
+      "cand_total": 159584.0,
+      "opp_total": 159370.0,
+      "cand_mean_cash": 79792.0,
+      "opp_mean_cash": 79685.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50045,
+      "match0": {
+        "cand_score": 106028.0,
+        "opp_score": 106003.0,
+        "margin": 25.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 106003.0,
+        "cand_score": 106028.0,
+        "margin": 25.0,
+        "steps": 719
+      },
+      "paired_margin": 50.0,
+      "cand_total": 212056.0,
+      "opp_total": 212006.0,
+      "cand_mean_cash": 106028.0,
+      "opp_mean_cash": 106003.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50046,
+      "match0": {
+        "cand_score": 90922.0,
+        "opp_score": 90830.0,
+        "margin": 92.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 90830.0,
+        "cand_score": 90922.0,
+        "margin": 92.0,
+        "steps": 719
+      },
+      "paired_margin": 184.0,
+      "cand_total": 181844.0,
+      "opp_total": 181660.0,
+      "cand_mean_cash": 90922.0,
+      "opp_mean_cash": 90830.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50047,
+      "match0": {
+        "cand_score": 59725.0,
+        "opp_score": 59659.0,
+        "margin": 66.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 59659.0,
+        "cand_score": 59725.0,
+        "margin": 66.0,
+        "steps": 719
+      },
+      "paired_margin": 132.0,
+      "cand_total": 119450.0,
+      "opp_total": 119318.0,
+      "cand_mean_cash": 59725.0,
+      "opp_mean_cash": 59659.0,
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50048,
+      "match0": {
+        "cand_score": 110720.0,
+        "opp_score": 110742.0,
+        "margin": -22.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 110742.0,
+        "cand_score": 110720.0,
+        "margin": -22.0,
+        "steps": 719
+      },
+      "paired_margin": -44.0,
+      "cand_total": 221440.0,
+      "opp_total": 221484.0,
+      "cand_mean_cash": 110720.0,
+      "opp_mean_cash": 110742.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50049,
+      "match0": {
+        "cand_score": 128231.0,
+        "opp_score": 128283.0,
+        "margin": -52.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 128283.0,
+        "cand_score": 128231.0,
+        "margin": -52.0,
+        "steps": 719
+      },
+      "paired_margin": -104.0,
+      "cand_total": 256462.0,
+      "opp_total": 256566.0,
+      "cand_mean_cash": 128231.0,
+      "opp_mean_cash": 128283.0,
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    }
+  ],
+  "summary_statistics": {
+    "vs_closed_loop_v2": {
+      "n": 50,
+      "mean": 265.18,
+      "median": 0.0,
+      "sd": 2191.055953513869,
+      "se": 309.8621045377627,
+      "t_stat": 0.855800035294999,
+      "ci_95": [
+        -357.5111387264745,
+        887.8711387264746
+      ],
+      "p01": -1223.2700000000002,
+      "p05": 0.0,
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "p90": 16.200000000000003,
+      "p95": 90.19999999999965,
+      "p99": 7878.71999999997,
+      "worst_loss": -2388.0,
+      "best_win": 15264.0
+    },
+    "vs_dmitrii": {
+      "n": 50,
+      "mean": 291.1,
+      "median": 121.0,
+      "sd": 2201.7142509547284,
+      "se": 311.3694154170297,
+      "t_stat": 0.93490235580819,
+      "ci_95": [
+        -334.62019298667735,
+        916.8201929866774
+      ],
+      "p01": -1935.38,
+      "p05": -341.70000000000005,
+      "p10": -124.19999999999996,
+      "p25": -42.0,
+      "p50": 121.0,
+      "p75": 170.0,
+      "p90": 230.0,
+      "p95": 267.19999999999993,
+      "p99": 7875.83999999997,
+      "worst_loss": -3424.0,
+      "best_win": 15120.0
+    },
+    "win_rate_vs_v2": 12.0,
+    "win_rate_vs_dmi": 66.0,
+    "wins_v2": 6,
+    "losses_v2": 2,
+    "ties_v2": 42
+  },
+  "discovery_verdict": "FAILED",
+  "stop_reason": "Worst single-seed loss $-2,388.00 < -$800.00 (Unacceptable tail risk)"
+}

@@ -1,0 +1,60 @@
+=== EXP-DEV-002 QUALIFICATION EXECUTION LOG ===
+Started at: 2026-09-11 14:49:13 UTC
+
+[2026-09-11 14:49:13 UTC] ================================================================================
+[2026-09-11 14:49:13 UTC] PREFLIGHT INVARIANT VERIFICATION FOR QUALIFICATION RUN
+[2026-09-11 14:49:13 UTC] ================================================================================
+[2026-09-11 14:49:13 UTC]   [1/5] Protocol V1.1 SHA-256 Verified: 735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446
+[2026-09-11 14:49:13 UTC]   [2/5] Treatment dev_002 SHA-256 Verified: cdd19cc8d2b6a718ce6252223b9016ce76e5b08b88de10689ea5fce4ddb8f907
+[2026-09-11 14:49:13 UTC]   [3/5] Frozen Live Submissions 56146947 and 56146971 Verified bit-exact.
+[2026-09-11 14:49:13 UTC]   [4/5] Candidate dev_002 AST Zero-Leakage Verified Clean (0 violations).
+[2026-09-11 14:49:13 UTC]   [5/5] Pre-Qualification Audit Report verified on disk: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-002\QUALIFICATION_PRECHECK.md
+[2026-09-11 14:49:13 UTC] All Preflight Invariants Passed.
+
+[2026-09-11 14:49:13 UTC] ================================================================================
+[2026-09-11 14:49:13 UTC] EXECUTING QUALIFICATION COHORT (Seeds 50050..50099, N=50 seeds)
+[2026-09-11 14:49:13 UTC] Active Containment Sandbox: ACTIVE
+[2026-09-11 14:49:13 UTC] ================================================================================
+[2026-09-11 14:49:25 UTC]   Seed 10/50 (Seed 50059): Margin vs V2 = $+0 (Mode: STRAWBERRY) | Cumulative Mean: $+3.80 | WR: 20.0%
+[2026-09-11 14:49:37 UTC]   Seed 20/50 (Seed 50069): Margin vs V2 = $+0 (Mode: STRAWBERRY) | Cumulative Mean: $+1.90 | WR: 10.0%
+[2026-09-11 14:49:49 UTC]   Seed 30/50 (Seed 50079): Margin vs V2 = $+0 (Mode: STRAWBERRY) | Cumulative Mean: $+1.27 | WR: 6.7%
+[2026-09-11 14:50:01 UTC]   Seed 40/50 (Seed 50089): Margin vs V2 = $+0 (Mode: STRAWBERRY) | Cumulative Mean: $+0.55 | WR: 7.5%
+[2026-09-11 14:50:13 UTC]   Seed 50/50 (Seed 50099): Margin vs V2 = $+0 (Mode: STRAWBERRY) | Cumulative Mean: $+2.00 | WR: 10.0%
+[2026-09-11 14:50:13 UTC] 
+Execution of all 50 Qualification seeds completed in 60.4s.
+[2026-09-11 14:50:13 UTC] 
+================================================================================
+[2026-09-11 14:50:13 UTC] EXP-DEV-002 QUALIFICATION RESULTS (N=50 Seeds, 100 Matches)
+[2026-09-11 14:50:13 UTC] ================================================================================
+[2026-09-11 14:50:13 UTC] Primary Metric (Paired Margin vs ClosedLoopAgentV2):
+[2026-09-11 14:50:13 UTC]   Mean Margin (Delta mu): $+2.00 coins
+[2026-09-11 14:50:13 UTC]   10% Trimmed Mean:       $+0.00 coins
+[2026-09-11 14:50:13 UTC]   Median Margin:          $+0.00 coins
+[2026-09-11 14:50:13 UTC]   Standard Dev (SD):       $12.01 coins
+[2026-09-11 14:50:13 UTC]   Standard Error (SE):     $1.70 coins
+[2026-09-11 14:50:13 UTC]   Student's t-statistic:   1.1772
+[2026-09-11 14:50:13 UTC]   Two-Sided p-value:       0.239125
+[2026-09-11 14:50:13 UTC]   95% Confidence Interval: [$-1.41, $+5.41]
+[2026-09-11 14:50:13 UTC]   Paired Win Record:       5W - 2L - 43T (Win Rate: 10.0%)
+[2026-09-11 14:50:13 UTC]   5th Percentile (p05):   $+0.00 coins
+[2026-09-11 14:50:13 UTC]   Worst Paired Loss:      $-26.00 coins
+[2026-09-11 14:50:13 UTC]   Best Paired Win:        $+74.00 coins
+[2026-09-11 14:50:13 UTC]   Downside Frequency:      4.0% (2/50 seeds)
+[2026-09-11 14:50:13 UTC]   Tail Breaches (<-$800):  0
+[2026-09-11 14:50:13 UTC] --------------------------------------------------------------------------------
+[2026-09-11 14:50:13 UTC] Mode Distribution: {'CARROT': 4, 'STRAWBERRY': 29, 'YARN': 14, 'WHEAT': 3}
+[2026-09-11 14:50:13 UTC] --------------------------------------------------------------------------------
+[2026-09-11 14:50:13 UTC] Reference Comparison vs Dmitrii-LB2800:
+[2026-09-11 14:50:13 UTC]   Mean Margin vs Dmi:     $+24.88 coins
+[2026-09-11 14:50:13 UTC]   Win Record vs Dmi:       25W - 25L - 0T (50.0%)
+[2026-09-11 14:50:13 UTC] ================================================================================
+[2026-09-11 14:50:13 UTC] 
+Stage 2 Qualification Decision:
+[2026-09-11 14:50:13 UTC]   Verdict: QUALIFICATION PASS WITH LIMITATIONS
+[2026-09-11 14:50:13 UTC]   Criteria Check: t > 1.96: False (t=1.1772)
+[2026-09-11 14:50:13 UTC]   Criteria Check: Worst Loss >= -$800: True (min=-26.00)
+[2026-09-11 14:50:13 UTC] Saved raw results to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-002\qualification\QUALIFICATION_RAW_RESULTS.json
+[2026-09-11 14:50:13 UTC] Saved paired deltas CSV to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-002\qualification\QUALIFICATION_PAIRED_DELTAS.csv
+[2026-09-11 14:50:13 UTC] Saved run manifest to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-002\qualification\QUALIFICATION_RUN_MANIFEST.json
+[2026-09-11 14:50:13 UTC] 
+EXP-DEV-002 Qualification Run Fully Completed.

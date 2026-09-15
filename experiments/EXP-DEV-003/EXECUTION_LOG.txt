@@ -1,0 +1,95 @@
+[2026-09-14 13:00:51 UTC] ================================================================================
+[2026-09-14 13:00:51 UTC] PREFLIGHT INVARIANT VERIFICATION FOR EXP-DEV-003 DISCOVERY RUN
+[2026-09-14 13:00:51 UTC] ================================================================================
+[2026-09-14 13:00:51 UTC]   [1/6] Protocol V1.2 SHA-256 Verified: f94f9b71a13842915bb20820c610e86cd597d535cb7a80b5a69a5d64dc2d6007
+[2026-09-14 13:00:51 UTC]   [2/6] Baseline SHA-256 Verified: 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-14 13:00:51 UTC]   [3/6] Treatment dev_003 SHA-256 Verified: 0b152cfa544244fe813ac10c4eec66056c47c5a652f14fe7fbf0a3f7a764c5cb
+[2026-09-14 13:00:51 UTC]   [4/6] Candidate dev_003 AST Zero-Leakage Verified Clean (0 violations).
+[2026-09-14 13:00:51 UTC]   [5/6] Simulator Engine kagsim 1.32.7 Verified.
+[2026-09-14 13:00:51 UTC]   [6/6] Precheck report verified on disk: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-003\PRECHECK.md
+[2026-09-14 13:00:51 UTC] All Preflight Invariants Passed.
+
+[2026-09-14 13:00:55 UTC] ================================================================================
+[2026-09-14 13:00:55 UTC] PREFLIGHT INVARIANT VERIFICATION FOR EXP-DEV-003 DISCOVERY RUN
+[2026-09-14 13:00:55 UTC] ================================================================================
+[2026-09-14 13:00:55 UTC]   [1/6] Protocol V1.2 SHA-256 Verified: f94f9b71a13842915bb20820c610e86cd597d535cb7a80b5a69a5d64dc2d6007
+[2026-09-14 13:00:55 UTC]   [2/6] Baseline SHA-256 Verified: 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-14 13:00:55 UTC]   [3/6] Treatment dev_003 SHA-256 Verified: 0b152cfa544244fe813ac10c4eec66056c47c5a652f14fe7fbf0a3f7a764c5cb
+[2026-09-14 13:00:55 UTC]   [4/6] Candidate dev_003 AST Zero-Leakage Verified Clean (0 violations).
+[2026-09-14 13:00:55 UTC]   [5/6] Simulator Engine kagsim 1.32.7 Verified.
+[2026-09-14 13:00:55 UTC]   [6/6] Precheck report verified on disk: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-003\PRECHECK.md
+[2026-09-14 13:00:55 UTC] All Preflight Invariants Passed.
+
+[2026-09-14 13:00:55 UTC] Starting EXP-DEV-003 Discovery Run across 50 seeds (245000 to 245049)...
+[2026-09-14 13:00:59 UTC] [01/50] Seed 245000 | M0 Delta:  -3653.0 | M1 Delta:  -3653.0 | Paired Mean:  -3653.0 | Outcome: LOSS | Mode: SPECIALIZE
+[2026-09-14 13:01:04 UTC] [02/50] Seed 245001 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:08 UTC] [03/50] Seed 245002 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:12 UTC] [04/50] Seed 245003 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:16 UTC] [05/50] Seed 245004 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:22 UTC] [06/50] Seed 245005 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:26 UTC] [07/50] Seed 245006 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:31 UTC] [08/50] Seed 245007 | M0 Delta: -11786.0 | M1 Delta: -11786.0 | Paired Mean: -11786.0 | Outcome: LOSS | Mode: SPECIALIZE
+[2026-09-14 13:01:36 UTC] [09/50] Seed 245008 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:41 UTC] [10/50] Seed 245009 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:46 UTC] [11/50] Seed 245010 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:51 UTC] [12/50] Seed 245011 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:01:56 UTC] [13/50] Seed 245012 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:00 UTC] [14/50] Seed 245013 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:05 UTC] [15/50] Seed 245014 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:10 UTC] [16/50] Seed 245015 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:15 UTC] [17/50] Seed 245016 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:20 UTC] [18/50] Seed 245017 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:25 UTC] [19/50] Seed 245018 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:30 UTC] [20/50] Seed 245019 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:35 UTC] [21/50] Seed 245020 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:40 UTC] [22/50] Seed 245021 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:45 UTC] [23/50] Seed 245022 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:50 UTC] [24/50] Seed 245023 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:02:55 UTC] [25/50] Seed 245024 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:00 UTC] [26/50] Seed 245025 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: SPECIALIZE
+[2026-09-14 13:03:04 UTC] [27/50] Seed 245026 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:10 UTC] [28/50] Seed 245027 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:14 UTC] [29/50] Seed 245028 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:20 UTC] [30/50] Seed 245029 | M0 Delta:  -2219.0 | M1 Delta:  +2219.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:25 UTC] [31/50] Seed 245030 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:30 UTC] [32/50] Seed 245031 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:35 UTC] [33/50] Seed 245032 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:40 UTC] [34/50] Seed 245033 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:45 UTC] [35/50] Seed 245034 | M0 Delta:    -77.0 | M1 Delta:    +77.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:50 UTC] [36/50] Seed 245035 | M0 Delta:    +82.0 | M1 Delta:    -82.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:03:55 UTC] [37/50] Seed 245036 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:00 UTC] [38/50] Seed 245037 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:05 UTC] [39/50] Seed 245038 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:10 UTC] [40/50] Seed 245039 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:16 UTC] [41/50] Seed 245040 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:21 UTC] [42/50] Seed 245041 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:26 UTC] [43/50] Seed 245042 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:31 UTC] [44/50] Seed 245043 | M0 Delta: -11631.0 | M1 Delta: -11631.0 | Paired Mean: -11631.0 | Outcome: LOSS | Mode: SPECIALIZE
+[2026-09-14 13:04:36 UTC] [45/50] Seed 245044 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:41 UTC] [46/50] Seed 245045 | M0 Delta: -14696.0 | M1 Delta: -14696.0 | Paired Mean: -14696.0 | Outcome: LOSS | Mode: SPECIALIZE
+[2026-09-14 13:04:46 UTC] [47/50] Seed 245046 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:50 UTC] [48/50] Seed 245047 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:54 UTC] [49/50] Seed 245048 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:59 UTC] [50/50] Seed 245049 | M0 Delta:     +0.0 | M1 Delta:     +0.0 | Paired Mean:     +0.0 | Outcome: TIE  | Mode: BASELINE
+[2026-09-14 13:04:59 UTC] Execution complete in 243.6s (4.87s/seed).
+[2026-09-14 13:04:59 UTC] Saved RAW_RESULTS.json (50 records).
+[2026-09-14 13:04:59 UTC] Saved PAIRED_DELTAS.csv (50 rows).
+[2026-09-14 13:04:59 UTC] Saved DECISION_EVENTS.csv (400 events).
+[2026-09-14 13:05:04 UTC] Saved STATISTICS_RECOMPUTED.json.
+[2026-09-14 13:05:04 UTC] ================================================================================
+[2026-09-14 13:05:04 UTC] EXP-DEV-003 EXECUTIVE SUMMARY
+[2026-09-14 13:05:04 UTC] ================================================================================
+[2026-09-14 13:05:04 UTC]   Mean Paired Delta : $-835.32
+[2026-09-14 13:05:04 UTC]   Median Delta      : $+0.00
+[2026-09-14 13:05:04 UTC]   Win / Loss / Tie  : 0 / 4 / 46
+[2026-09-14 13:05:04 UTC]   Win Rate          : 0.0%
+[2026-09-14 13:05:04 UTC]   Downside Frequency: 8.0%
+[2026-09-14 13:05:04 UTC]   Min / Max Delta   : $-14696.00 / $+0.00
+[2026-09-14 13:05:04 UTC]   Active Seeds      : 5 / 50 (10.0%)
+[2026-09-14 13:05:04 UTC]   Gate A (Mean >= +30) : FAIL
+[2026-09-14 13:05:04 UTC]   Gate B (Win >= 50%)  : FAIL
+[2026-09-14 13:05:04 UTC]   Gate C (Loss >= -350): FAIL
+[2026-09-14 13:05:04 UTC]   Gate D (No Outlier)  : FAIL
+[2026-09-14 13:05:04 UTC]   Gate E (5-35 Active) : PASS
+[2026-09-14 13:05:04 UTC]   Verdict Classification: FAILURE
+[2026-09-14 13:05:04 UTC] ================================================================================

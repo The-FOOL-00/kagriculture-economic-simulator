@@ -1,0 +1,70 @@
+{
+  "n_seeds": 50,
+  "mean_paired_delta": -835.32,
+  "median": 0.0,
+  "sd": 3092.52,
+  "se": 437.35,
+  "t_statistic": -1.91,
+  "p_value": 0.062,
+  "ci_95_lower": -1714.21,
+  "ci_95_upper": 43.57,
+  "trimmed_mean_10": 0.0,
+  "percentiles": {
+    "p01": -13270.1,
+    "p05": -8040.9,
+    "p10": 0.0,
+    "p25": 0.0,
+    "p50": 0.0,
+    "p75": 0.0,
+    "p90": 0.0,
+    "p95": 0.0,
+    "p99": 0.0
+  },
+  "min": -14696.0,
+  "max": 0.0,
+  "win_count": 0,
+  "loss_count": 4,
+  "tie_count": 46,
+  "win_rate": 0.0,
+  "loss_rate": 0.08,
+  "tie_rate": 0.92,
+  "downside_frequency": 0.08,
+  "total_surplus": -41766.0,
+  "top1_contribution_pct": 0.0,
+  "top2_contribution_pct": 0.0,
+  "mean_excl_best": -852.37,
+  "mean_excl_worst": -552.45,
+  "mean_excl_best2": -870.12,
+  "active_seeds_count": 5,
+  "active_seeds_fraction": 0.1,
+  "gates": {
+    "Gate_A_positive_mean_ge_30": {
+      "passed": false,
+      "threshold": 30.0,
+      "observed": -835.32
+    },
+    "Gate_B_win_rate_ge_50": {
+      "passed": false,
+      "threshold": 0.5,
+      "observed": 0.0
+    },
+    "Gate_C_worst_loss_ge_minus_350": {
+      "passed": false,
+      "threshold": -350.0,
+      "observed": -14696.0
+    },
+    "Gate_D_outlier_non_dominance": {
+      "passed": false,
+      "threshold": 0.0,
+      "observed": -852.37
+    },
+    "Gate_E_selective_activation": {
+      "passed": true,
+      "min": 5,
+      "max": 35,
+      "observed": 5
+    }
+  },
+  "all_gates_passed": false,
+  "epistemic_classification": "FAILURE"
+}

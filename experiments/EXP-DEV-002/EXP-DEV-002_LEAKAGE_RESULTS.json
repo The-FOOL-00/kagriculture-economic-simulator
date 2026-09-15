@@ -1,0 +1,14 @@
+{
+  "experiment_id": "EXP-DEV-002",
+  "sandbox": "ActiveContainmentSandbox",
+  "adversarial_suite_vectors_tested": 14,
+  "adversarial_suite_vectors_blocked": 14,
+  "adversarial_block_rate": "100.0%",
+  "production_compatibility": {
+    "ClosedLoopAgentV2": "VERIFIED_100%_PARITY",
+    "Frozen_Compiled_Shop_Sub_56146947": "VERIFIED_100%_PARITY",
+    "Frozen_Compiled_Residual_Sub_56146971": "VERIFIED_100%_PARITY"
+  },
+  "holdout_violations": 0,
+  "preflight_leakage_status": "PASS_ZERO_LEAKAGE"
+}

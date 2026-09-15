@@ -1,0 +1,1402 @@
+[
+  {
+    "seed": 245000,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 58545.0,
+      "base_reward": 62198.0,
+      "delta": -3653.0,
+      "steps": 719,
+      "runtime_sec": 0.677,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 62198.0,
+      "cand_reward": 58545.0,
+      "delta": -3653.0,
+      "steps": 719,
+      "runtime_sec": 0.7,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "paired_mean_delta": -3653.0,
+    "outcome": "LOSS",
+    "activated": true
+  },
+  {
+    "seed": 245001,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 59462.0,
+      "base_reward": 59462.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.686,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 59462.0,
+      "cand_reward": 59462.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.701,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245002,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 33783.0,
+      "base_reward": 33783.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.673,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 33783.0,
+      "cand_reward": 33783.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.761,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245003,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 142120.0,
+      "base_reward": 142120.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.666,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 142120.0,
+      "cand_reward": 142120.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.69,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245004,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 90030.0,
+      "base_reward": 90030.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.671,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 90030.0,
+      "cand_reward": 90030.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.686,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245005,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 89577.0,
+      "base_reward": 89577.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.756,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 89577.0,
+      "cand_reward": 89577.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.7,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245006,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 58384.0,
+      "base_reward": 58384.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.854,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 58384.0,
+      "cand_reward": 58384.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.726,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245007,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 71206.0,
+      "base_reward": 82992.0,
+      "delta": -11786.0,
+      "steps": 719,
+      "runtime_sec": 0.745,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 82992.0,
+      "cand_reward": 71206.0,
+      "delta": -11786.0,
+      "steps": 719,
+      "runtime_sec": 0.715,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "paired_mean_delta": -11786.0,
+    "outcome": "LOSS",
+    "activated": true
+  },
+  {
+    "seed": 245008,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 122129.0,
+      "base_reward": 122129.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.672,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 122129.0,
+      "cand_reward": 122129.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.732,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245009,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 80317.0,
+      "base_reward": 80317.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.732,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 80317.0,
+      "cand_reward": 80317.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.655,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245010,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 53293.0,
+      "base_reward": 53293.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.725,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 53293.0,
+      "cand_reward": 53293.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.681,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245011,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 104765.0,
+      "base_reward": 104765.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.692,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 104765.0,
+      "cand_reward": 104765.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.74,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245012,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 119812.0,
+      "base_reward": 119812.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.726,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 119812.0,
+      "cand_reward": 119812.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.699,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245013,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 120463.0,
+      "base_reward": 120463.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.705,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 120463.0,
+      "cand_reward": 120463.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.727,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245014,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 108874.0,
+      "base_reward": 108874.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.698,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 108874.0,
+      "cand_reward": 108874.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.793,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245015,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 142457.0,
+      "base_reward": 142457.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.69,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 142457.0,
+      "cand_reward": 142457.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.739,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245016,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 85011.0,
+      "base_reward": 85011.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.711,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 85011.0,
+      "cand_reward": 85011.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.743,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245017,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 60367.0,
+      "base_reward": 60367.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.685,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 60367.0,
+      "cand_reward": 60367.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.731,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245018,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 89587.0,
+      "base_reward": 89587.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.728,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 89587.0,
+      "cand_reward": 89587.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.796,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245019,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 100393.0,
+      "base_reward": 100393.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.686,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 100393.0,
+      "cand_reward": 100393.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.694,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245020,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 97322.0,
+      "base_reward": 97322.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.821,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 97322.0,
+      "cand_reward": 97322.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.713,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245021,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 68104.0,
+      "base_reward": 68104.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.642,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 68104.0,
+      "cand_reward": 68104.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.69,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245022,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 90250.0,
+      "base_reward": 90250.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.671,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 90250.0,
+      "cand_reward": 90250.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.701,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245023,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 113632.0,
+      "base_reward": 113632.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.678,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 113632.0,
+      "cand_reward": 113632.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.707,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245024,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 48219.0,
+      "base_reward": 48219.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.701,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 48219.0,
+      "cand_reward": 48219.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.684,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245025,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 101960.0,
+      "base_reward": 101960.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.707,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 101960.0,
+      "cand_reward": 101960.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.698,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": true
+  },
+  {
+    "seed": 245026,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 85715.0,
+      "base_reward": 85715.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.69,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 85715.0,
+      "cand_reward": 85715.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.693,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245027,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 123986.0,
+      "base_reward": 123986.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.753,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 123986.0,
+      "cand_reward": 123986.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.779,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245028,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 57479.0,
+      "base_reward": 57479.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.784,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 57479.0,
+      "cand_reward": 57479.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.702,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245029,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 74291.0,
+      "base_reward": 76510.0,
+      "delta": -2219.0,
+      "steps": 719,
+      "runtime_sec": 0.699,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 74291.0,
+      "cand_reward": 76510.0,
+      "delta": 2219.0,
+      "steps": 719,
+      "runtime_sec": 0.699,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245030,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 142564.0,
+      "base_reward": 142564.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.725,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 142564.0,
+      "cand_reward": 142564.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.77,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245031,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 36395.0,
+      "base_reward": 36395.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.831,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 36395.0,
+      "cand_reward": 36395.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.751,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245032,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 113914.0,
+      "base_reward": 113914.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.745,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 113914.0,
+      "cand_reward": 113914.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.735,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245033,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 109670.0,
+      "base_reward": 109670.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.743,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 109670.0,
+      "cand_reward": 109670.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.693,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245034,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 138707.0,
+      "base_reward": 138784.0,
+      "delta": -77.0,
+      "steps": 719,
+      "runtime_sec": 0.677,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 138707.0,
+      "cand_reward": 138784.0,
+      "delta": 77.0,
+      "steps": 719,
+      "runtime_sec": 0.702,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245035,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 85238.0,
+      "base_reward": 85156.0,
+      "delta": 82.0,
+      "steps": 719,
+      "runtime_sec": 0.694,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 85238.0,
+      "cand_reward": 85156.0,
+      "delta": -82.0,
+      "steps": 719,
+      "runtime_sec": 0.698,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245036,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 38358.0,
+      "base_reward": 38358.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.694,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 38358.0,
+      "cand_reward": 38358.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.722,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245037,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 124769.0,
+      "base_reward": 124769.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.732,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 124769.0,
+      "cand_reward": 124769.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.717,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245038,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 93850.0,
+      "base_reward": 93850.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.694,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 93850.0,
+      "cand_reward": 93850.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.708,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245039,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 56750.0,
+      "base_reward": 56750.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.731,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 56750.0,
+      "cand_reward": 56750.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.72,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245040,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 114293.0,
+      "base_reward": 114293.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.71,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 114293.0,
+      "cand_reward": 114293.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.716,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245041,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 140466.0,
+      "base_reward": 140466.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.726,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 140466.0,
+      "cand_reward": 140466.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.712,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245042,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 122311.0,
+      "base_reward": 122311.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.733,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 122311.0,
+      "cand_reward": 122311.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.715,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245043,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 95242.0,
+      "base_reward": 106873.0,
+      "delta": -11631.0,
+      "steps": 719,
+      "runtime_sec": 0.724,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 106873.0,
+      "cand_reward": 95242.0,
+      "delta": -11631.0,
+      "steps": 719,
+      "runtime_sec": 0.75,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "paired_mean_delta": -11631.0,
+    "outcome": "LOSS",
+    "activated": true
+  },
+  {
+    "seed": 245044,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 106826.0,
+      "base_reward": 106826.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.686,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 106826.0,
+      "cand_reward": 106826.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.708,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245045,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 120306.0,
+      "base_reward": 135002.0,
+      "delta": -14696.0,
+      "steps": 719,
+      "runtime_sec": 0.698,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 135002.0,
+      "cand_reward": 120306.0,
+      "delta": -14696.0,
+      "steps": 719,
+      "runtime_sec": 0.705,
+      "cand_mode": "SPECIALIZE",
+      "specialized_crop": "TOMATO"
+    },
+    "paired_mean_delta": -14696.0,
+    "outcome": "LOSS",
+    "activated": true
+  },
+  {
+    "seed": 245046,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 92967.0,
+      "base_reward": 92967.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.692,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 92967.0,
+      "cand_reward": 92967.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.688,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245047,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 132997.0,
+      "base_reward": 132997.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.543,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 132997.0,
+      "cand_reward": 132997.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.536,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245048,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 93417.0,
+      "base_reward": 93417.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.534,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 93417.0,
+      "cand_reward": 93417.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.544,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  },
+  {
+    "seed": 245049,
+    "match0": {
+      "cand_seat": 0,
+      "base_seat": 1,
+      "cand_reward": 88657.0,
+      "base_reward": 88657.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.545,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "match1": {
+      "base_seat": 0,
+      "cand_seat": 1,
+      "base_reward": 88657.0,
+      "cand_reward": 88657.0,
+      "delta": 0.0,
+      "steps": 719,
+      "runtime_sec": 0.621,
+      "cand_mode": "BASELINE",
+      "specialized_crop": null
+    },
+    "paired_mean_delta": 0.0,
+    "outcome": "TIE",
+    "activated": false
+  }
+]

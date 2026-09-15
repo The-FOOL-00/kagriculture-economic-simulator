@@ -1,0 +1,68 @@
+{
+  "experiment": "EXP-DEV-003",
+  "title": "Conditional Opportunity-Value Specialization over V54++ Residual Preemption",
+  "protocol_version": "V1.2",
+  "protocol_hash": "f94f9b71a13842915bb20820c610e86cd597d535cb7a80b5a69a5d64dc2d6007",
+  "timestamp": "2026-09-14T18:30:00Z",
+  "status": "PREFLIGHT_PASSED_READY_FOR_EXECUTION",
+  "baseline": {
+    "name": "compiled_v54_plus_residual",
+    "path": "candidates/compiled_v54_plus_residual.py",
+    "sha256": "18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb",
+    "kaggle_submission_id": "56146971"
+  },
+  "candidate": {
+    "name": "dev_003_conditional_specialization",
+    "path": "candidates/closed_loop_architecture/dev_003_conditional_specialization.py",
+    "sha256": "0b152cfa544244fe813ac10c4eec66056c47c5a652f14fe7fbf0a3f7a764c5cb"
+  },
+  "simulator": {
+    "engine": "kagsim",
+    "version": "1.32.7",
+    "binary_path": "external_repos/kaggriculture-cppsim/kagsim.cp314-win_amd64.pyd",
+    "binary_sha256": "7cf5f62b1f47283606ff0d053a5df0045b041b3e117bb4f4c88daca9c5c1d1cc",
+    "header_sha256": "59ef158f7950155d5efa0468c911257e6f5a402bb8d55922f03f5e0f469c7440"
+  },
+  "partitions": {
+    "discovery": {
+      "start_seed": 245000,
+      "end_seed": 245049,
+      "n_seeds": 50,
+      "matches_per_seed": 2,
+      "total_matches": 100,
+      "mode": "Paired Common Random Numbers (CRN)"
+    },
+    "quarantines": [
+      {
+        "range": "50050-50099",
+        "cohort": "EXP-DEV-002 Qualification",
+        "status": "STRICTLY_QUARANTINED"
+      },
+      {
+        "range": "50100-50149",
+        "cohort": "Contaminated Historical Benchmark",
+        "status": "PERMANENTLY_DECOMMISSIONED"
+      },
+      {
+        "range": "214200-214249",
+        "cohort": "HOLDOUT-COHORT-V1",
+        "status": "ABSOLUTELY_QUARANTINED"
+      }
+    ]
+  },
+  "parameters": {
+    "tau_opportunity_value_threshold": 1500.0,
+    "lambda_risk_multiplier": 0.25,
+    "minimum_liquidity_floor_L_min": 100.0,
+    "specialization_tiles_k_spec": 4,
+    "switching_friction": 200.0
+  },
+  "preregistered_gates": {
+    "Gate_A_mean_paired_delta": 30.0,
+    "Gate_B_win_rate": 0.50,
+    "Gate_C_worst_loss": -350.0,
+    "Gate_D_outlier_non_dominance": 0.0,
+    "Gate_E_active_seeds_min": 5,
+    "Gate_E_active_seeds_max": 35
+  }
+}

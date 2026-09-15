@@ -1,0 +1,49 @@
+[2026-09-11 12:37:23 UTC] ================================================================================
+[2026-09-11 12:37:23 UTC] EXP-DEV-001: EVIDENCE-LOCKED DYNAMIC PORTFOLIO ADAPTATION
+[2026-09-11 12:37:23 UTC] ================================================================================
+[2026-09-11 12:37:23 UTC] Verifying Preflight Invariants...
+[2026-09-11 12:37:23 UTC]   Protocol SHA-256 Verified: 671e915eadd72adb710421b45e6a33ad533abd9d68ff67770b8dd412ff7381b3
+[2026-09-11 12:37:23 UTC]   Frozen Live Submission Checksums Verified bit-exact.
+[2026-09-11 12:37:23 UTC] 
+--- STAGE 2: SMOKE TEST (Seeds 49998, 49999) ---
+[2026-09-11 12:37:24 UTC]   Smoke Seed 49998: Paired Margin vs V2 = $+0 (Cand Total: $156,480)
+[2026-09-11 12:37:24 UTC]   Smoke Seed 49999: Paired Margin vs V2 = $+0 (Cand Total: $176,602)
+[2026-09-11 12:37:24 UTC]   Smoke Test: PASS (0 exceptions, sandbox active).
+[2026-09-11 12:37:24 UTC] 
+--- STAGE 3: DISCOVERY PARTITION EXECUTION (Seeds 50000..50049, N=50 seeds) ---
+[2026-09-11 12:37:32 UTC]   Progress: 10/50 seeds (20 matches) | Current Mean Margin vs V2: $+1,547.40 | WR: 30.0%
+[2026-09-11 12:37:40 UTC]   Progress: 20/50 seeds (40 matches) | Current Mean Margin vs V2: $+653.75 | WR: 15.0%
+[2026-09-11 12:37:48 UTC]   Progress: 30/50 seeds (60 matches) | Current Mean Margin vs V2: $+441.23 | WR: 16.7%
+[2026-09-11 12:37:56 UTC]   Progress: 40/50 seeds (80 matches) | Current Mean Margin vs V2: $+331.48 | WR: 15.0%
+[2026-09-11 12:38:04 UTC]   Progress: 50/50 seeds (100 matches) | Current Mean Margin vs V2: $+265.18 | WR: 12.0%
+[2026-09-11 12:38:04 UTC] Discovery Execution completed in 39.6s.
+[2026-09-11 12:38:04 UTC] 
+================================================================================
+[2026-09-11 12:38:04 UTC] EXP-DEV-001 DISCOVERY RESULTS (N=50 Seeds, 100 Matches)
+[2026-09-11 12:38:04 UTC] ================================================================================
+[2026-09-11 12:38:04 UTC] Primary Metric (Margin vs ClosedLoopAgentV2):
+[2026-09-11 12:38:04 UTC]   Mean Margin:         $+265.18 coins
+[2026-09-11 12:38:04 UTC]   Median Margin:       $+0.00 coins
+[2026-09-11 12:38:04 UTC]   Standard Dev (SD):    2,191.06 coins
+[2026-09-11 12:38:04 UTC]   Standard Error (SE):  309.86 coins
+[2026-09-11 12:38:04 UTC]   Student's t-stat:     0.8558
+[2026-09-11 12:38:04 UTC]   95% Confidence Int:  [$-357.51, $+887.87]
+[2026-09-11 12:38:04 UTC]   Paired Win Rate:      12.0% (6W - 2L - 42T)
+[2026-09-11 12:38:04 UTC]   Worst Paired Loss:   $-2,388.00 coins
+[2026-09-11 12:38:04 UTC]   Best Paired Win:     $+15,264.00 coins
+[2026-09-11 12:38:04 UTC]   5th Percentile p05:  $+0.00 coins
+[2026-09-11 12:38:04 UTC] --------------------------------------------------------------------------------
+[2026-09-11 12:38:04 UTC] Reference Comparison vs Dmitrii-LB2800:
+[2026-09-11 12:38:04 UTC]   Mean Margin vs Dmi:  $+291.10 coins
+[2026-09-11 12:38:04 UTC]   Win Rate vs Dmi:      66.0% (33W - 17L - 0T)
+[2026-09-11 12:38:04 UTC] ================================================================================
+[2026-09-11 12:38:04 UTC] 
+Stage 3 Protocol Decision Check:
+[2026-09-11 12:38:04 UTC]   Discovery Verdict: FAILED
+[2026-09-11 12:38:04 UTC]   Stop Rule Enforced: Worst single-seed loss $-2,388.00 < -$800.00 (Unacceptable tail risk)
+[2026-09-11 12:38:04 UTC]   STAGE 4 (QUALIFICATION) NOT AUTHORIZED UNDER PROTOCOL GATING RULES.
+[2026-09-11 12:38:04 UTC] Saved raw results to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-001\EXP-DEV-001_RAW_RESULTS.json
+[2026-09-11 12:38:04 UTC] Saved paired deltas CSV to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-001\EXP-DEV-001_PAIRED_DELTAS.csv
+[2026-09-11 12:38:04 UTC] Saved leakage report to C:\Users\Sundareswaran\Kagriculture\experiments\EXP-DEV-001\EXP-DEV-001_LEAKAGE_RESULTS.json
+[2026-09-11 12:38:04 UTC] Post-run Frozen Submission Checksums bit-exact (100% verified).
+[2026-09-11 12:38:04 UTC] EXP-DEV-001 EXECUTION FINISHED.

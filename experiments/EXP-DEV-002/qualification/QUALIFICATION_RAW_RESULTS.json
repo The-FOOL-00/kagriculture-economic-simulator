@@ -1,0 +1,6816 @@
+{
+  "experiment_id": "EXP-DEV-002",
+  "phase": "Qualification",
+  "protocol_version": "DEVELOPMENT-PROTOCOL-V1.1",
+  "protocol_hash": "735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446",
+  "git_commit": "b2a4f4585342875602af6f54324fe5a8bcfbd9d1",
+  "treatment": {
+    "identifier": "dev_002_hedged_portfolio",
+    "file": "candidates/closed_loop_architecture/dev_002_hedged_portfolio.py",
+    "sha256": "cdd19cc8d2b6a718ce6252223b9016ce76e5b08b88de10689ea5fce4ddb8f907",
+    "class": "Dev002HedgedPortfolioAgent",
+    "bedrock_strawberry_floor": 13,
+    "tomato_substitution_cap": 6,
+    "commitment_step": 144,
+    "liquidity_buffer": 500.0,
+    "market_timing": true,
+    "tomato_sale_batch": 6
+  },
+  "simulator": {
+    "engine": "kagsim",
+    "version": "1.32.7",
+    "binary_path": "external_repos/kaggriculture-cppsim/kagsim.cp314-win_amd64.pyd"
+  },
+  "partition": {
+    "name": "Qualification",
+    "start_seed": 50050,
+    "end_seed": 50099,
+    "seed_count": 50
+  },
+  "qualification_seeds": [
+    50050,
+    50051,
+    50052,
+    50053,
+    50054,
+    50055,
+    50056,
+    50057,
+    50058,
+    50059,
+    50060,
+    50061,
+    50062,
+    50063,
+    50064,
+    50065,
+    50066,
+    50067,
+    50068,
+    50069,
+    50070,
+    50071,
+    50072,
+    50073,
+    50074,
+    50075,
+    50076,
+    50077,
+    50078,
+    50079,
+    50080,
+    50081,
+    50082,
+    50083,
+    50084,
+    50085,
+    50086,
+    50087,
+    50088,
+    50089,
+    50090,
+    50091,
+    50092,
+    50093,
+    50094,
+    50095,
+    50096,
+    50097,
+    50098,
+    50099
+  ],
+  "results_vs_v2": [
+    {
+      "seed": 50050,
+      "match0": {
+        "cand_score": 55210.0,
+        "opp_score": 55201.0,
+        "margin": 9.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 55201.0,
+        "cand_score": 55210.0,
+        "margin": 9.0,
+        "steps": 719
+      },
+      "paired_margin": 18.0,
+      "cand_total": 110420.0,
+      "opp_total": 110402.0,
+      "cand_mean_cash": 55210.0,
+      "opp_mean_cash": 55201.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "BAKERY",
+        "YARN_STORE",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50051,
+      "match0": {
+        "cand_score": 66190.0,
+        "opp_score": 66190.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 66190.0,
+        "cand_score": 66190.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 132380.0,
+      "opp_total": 132380.0,
+      "cand_mean_cash": 66190.0,
+      "opp_mean_cash": 66190.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50052,
+      "match0": {
+        "cand_score": 78300.0,
+        "opp_score": 78300.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 78300.0,
+        "cand_score": 78300.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 156600.0,
+      "opp_total": 156600.0,
+      "cand_mean_cash": 78300.0,
+      "opp_mean_cash": 78300.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50053,
+      "match0": {
+        "cand_score": 122789.0,
+        "opp_score": 122789.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 122789.0,
+        "cand_score": 122789.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 245578.0,
+      "opp_total": 245578.0,
+      "cand_mean_cash": 122789.0,
+      "opp_mean_cash": 122789.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PET_CAFE",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50054,
+      "match0": {
+        "cand_score": 70618.0,
+        "opp_score": 70618.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 70618.0,
+        "cand_score": 70618.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 141236.0,
+      "opp_total": 141236.0,
+      "cand_mean_cash": 70618.0,
+      "opp_mean_cash": 70618.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50055,
+      "match0": {
+        "cand_score": 117358.0,
+        "opp_score": 117358.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 117358.0,
+        "cand_score": 117358.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 234716.0,
+      "opp_total": 234716.0,
+      "cand_mean_cash": 117358.0,
+      "opp_mean_cash": 117358.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50056,
+      "match0": {
+        "cand_score": 56659.0,
+        "opp_score": 56649.0,
+        "margin": 10.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 56649.0,
+        "cand_score": 56659.0,
+        "margin": 10.0,
+        "steps": 719
+      },
+      "paired_margin": 20.0,
+      "cand_total": 113318.0,
+      "opp_total": 113298.0,
+      "cand_mean_cash": 56659.0,
+      "opp_mean_cash": 56649.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "BAKERY",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50057,
+      "match0": {
+        "cand_score": 82945.0,
+        "opp_score": 82945.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 82945.0,
+        "cand_score": 82945.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 165890.0,
+      "opp_total": 165890.0,
+      "cand_mean_cash": 82945.0,
+      "opp_mean_cash": 82945.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50058,
+      "match0": {
+        "cand_score": 147209.0,
+        "opp_score": 147209.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 147209.0,
+        "cand_score": 147209.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 294418.0,
+      "opp_total": 294418.0,
+      "cand_mean_cash": 147209.0,
+      "opp_mean_cash": 147209.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50059,
+      "match0": {
+        "cand_score": 89635.0,
+        "opp_score": 89635.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 89635.0,
+        "cand_score": 89635.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 179270.0,
+      "opp_total": 179270.0,
+      "cand_mean_cash": 89635.0,
+      "opp_mean_cash": 89635.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "YARN_STORE",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50060,
+      "match0": {
+        "cand_score": 60892.0,
+        "opp_score": 60892.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 60892.0,
+        "cand_score": 60892.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 121784.0,
+      "opp_total": 121784.0,
+      "cand_mean_cash": 60892.0,
+      "opp_mean_cash": 60892.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50061,
+      "match0": {
+        "cand_score": 80198.0,
+        "opp_score": 80198.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 80198.0,
+        "cand_score": 80198.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 160396.0,
+      "opp_total": 160396.0,
+      "cand_mean_cash": 80198.0,
+      "opp_mean_cash": 80198.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50062,
+      "match0": {
+        "cand_score": 120759.0,
+        "opp_score": 120939.0,
+        "margin": -180.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 120759.0,
+        "cand_score": 120939.0,
+        "margin": 180.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 241698.0,
+      "opp_total": 241698.0,
+      "cand_mean_cash": 120849.0,
+      "opp_mean_cash": 120849.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50063,
+      "match0": {
+        "cand_score": 106361.0,
+        "opp_score": 106361.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 106361.0,
+        "cand_score": 106361.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 212722.0,
+      "opp_total": 212722.0,
+      "cand_mean_cash": 106361.0,
+      "opp_mean_cash": 106361.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "YARN_STORE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50064,
+      "match0": {
+        "cand_score": 140074.0,
+        "opp_score": 140074.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 140074.0,
+        "cand_score": 140074.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 280148.0,
+      "opp_total": 280148.0,
+      "cand_mean_cash": 140074.0,
+      "opp_mean_cash": 140074.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50065,
+      "match0": {
+        "cand_score": 103427.0,
+        "opp_score": 103427.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 103427.0,
+        "cand_score": 103427.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 206854.0,
+      "opp_total": 206854.0,
+      "cand_mean_cash": 103427.0,
+      "opp_mean_cash": 103427.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50066,
+      "match0": {
+        "cand_score": 99754.0,
+        "opp_score": 99754.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99754.0,
+        "cand_score": 99754.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 199508.0,
+      "opp_total": 199508.0,
+      "cand_mean_cash": 99754.0,
+      "opp_mean_cash": 99754.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50067,
+      "match0": {
+        "cand_score": 83771.0,
+        "opp_score": 83771.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 83771.0,
+        "cand_score": 83771.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 167542.0,
+      "opp_total": 167542.0,
+      "cand_mean_cash": 83771.0,
+      "opp_mean_cash": 83771.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50068,
+      "match0": {
+        "cand_score": 146066.0,
+        "opp_score": 146066.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 146066.0,
+        "cand_score": 146066.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 292132.0,
+      "opp_total": 292132.0,
+      "cand_mean_cash": 146066.0,
+      "opp_mean_cash": 146066.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50069,
+      "match0": {
+        "cand_score": 90557.0,
+        "opp_score": 90557.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 90557.0,
+        "cand_score": 90557.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 181114.0,
+      "opp_total": 181114.0,
+      "cand_mean_cash": 90557.0,
+      "opp_mean_cash": 90557.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "YARN_STORE",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50070,
+      "match0": {
+        "cand_score": 113922.0,
+        "opp_score": 113922.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 113922.0,
+        "cand_score": 113922.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 227844.0,
+      "opp_total": 227844.0,
+      "cand_mean_cash": 113922.0,
+      "opp_mean_cash": 113922.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "YARN_STORE",
+        "PET_CAFE",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50071,
+      "match0": {
+        "cand_score": 94303.0,
+        "opp_score": 94303.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 94303.0,
+        "cand_score": 94303.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 188606.0,
+      "opp_total": 188606.0,
+      "cand_mean_cash": 94303.0,
+      "opp_mean_cash": 94303.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50072,
+      "match0": {
+        "cand_score": 125429.0,
+        "opp_score": 125429.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 125429.0,
+        "cand_score": 125429.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 250858.0,
+      "opp_total": 250858.0,
+      "cand_mean_cash": 125429.0,
+      "opp_mean_cash": 125429.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50073,
+      "match0": {
+        "cand_score": 146598.0,
+        "opp_score": 144975.0,
+        "margin": 1623.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 146598.0,
+        "cand_score": 144975.0,
+        "margin": -1623.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 291573.0,
+      "opp_total": 291573.0,
+      "cand_mean_cash": 145786.5,
+      "opp_mean_cash": 145786.5,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50074,
+      "match0": {
+        "cand_score": 81817.0,
+        "opp_score": 81817.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 81817.0,
+        "cand_score": 81817.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 163634.0,
+      "opp_total": 163634.0,
+      "cand_mean_cash": 81817.0,
+      "opp_mean_cash": 81817.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50075,
+      "match0": {
+        "cand_score": 98798.0,
+        "opp_score": 98798.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 98798.0,
+        "cand_score": 98798.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 197596.0,
+      "opp_total": 197596.0,
+      "cand_mean_cash": 98798.0,
+      "opp_mean_cash": 98798.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50076,
+      "match0": {
+        "cand_score": 92137.0,
+        "opp_score": 98543.0,
+        "margin": -6406.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92137.0,
+        "cand_score": 98543.0,
+        "margin": 6406.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 190680.0,
+      "opp_total": 190680.0,
+      "cand_mean_cash": 95340.0,
+      "opp_mean_cash": 95340.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50077,
+      "match0": {
+        "cand_score": 52736.0,
+        "opp_score": 52736.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 52736.0,
+        "cand_score": 52736.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 105472.0,
+      "opp_total": 105472.0,
+      "cand_mean_cash": 52736.0,
+      "opp_mean_cash": 52736.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50078,
+      "match0": {
+        "cand_score": 101096.0,
+        "opp_score": 101096.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 101096.0,
+        "cand_score": 101096.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 202192.0,
+      "opp_total": 202192.0,
+      "cand_mean_cash": 101096.0,
+      "opp_mean_cash": 101096.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "PET_CAFE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50079,
+      "match0": {
+        "cand_score": 101590.0,
+        "opp_score": 101590.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 101590.0,
+        "cand_score": 101590.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 203180.0,
+      "opp_total": 203180.0,
+      "cand_mean_cash": 101590.0,
+      "opp_mean_cash": 101590.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50080,
+      "match0": {
+        "cand_score": 84906.0,
+        "opp_score": 84906.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 84906.0,
+        "cand_score": 84906.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 169812.0,
+      "opp_total": 169812.0,
+      "cand_mean_cash": 84906.0,
+      "opp_mean_cash": 84906.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50081,
+      "match0": {
+        "cand_score": 99825.0,
+        "opp_score": 99825.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99825.0,
+        "cand_score": 99825.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 199650.0,
+      "opp_total": 199650.0,
+      "cand_mean_cash": 99825.0,
+      "opp_mean_cash": 99825.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50082,
+      "match0": {
+        "cand_score": 91201.0,
+        "opp_score": 91201.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91201.0,
+        "cand_score": 91201.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 182402.0,
+      "opp_total": 182402.0,
+      "cand_mean_cash": 91201.0,
+      "opp_mean_cash": 91201.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50083,
+      "match0": {
+        "cand_score": 54129.0,
+        "opp_score": 54142.0,
+        "margin": -13.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 54142.0,
+        "cand_score": 54129.0,
+        "margin": -13.0,
+        "steps": 719
+      },
+      "paired_margin": -26.0,
+      "cand_total": 108258.0,
+      "opp_total": 108284.0,
+      "cand_mean_cash": 54129.0,
+      "opp_mean_cash": 54142.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50084,
+      "match0": {
+        "cand_score": 152497.0,
+        "opp_score": 152497.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 152497.0,
+        "cand_score": 152497.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 304994.0,
+      "opp_total": 304994.0,
+      "cand_mean_cash": 152497.0,
+      "opp_mean_cash": 152497.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50085,
+      "match0": {
+        "cand_score": 82727.0,
+        "opp_score": 82722.0,
+        "margin": 5.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 82722.0,
+        "cand_score": 82727.0,
+        "margin": 5.0,
+        "steps": 719
+      },
+      "paired_margin": 10.0,
+      "cand_total": 165454.0,
+      "opp_total": 165444.0,
+      "cand_mean_cash": 82727.0,
+      "opp_mean_cash": 82722.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50086,
+      "match0": {
+        "cand_score": 88804.0,
+        "opp_score": 88804.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 88804.0,
+        "cand_score": 88804.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 177608.0,
+      "opp_total": 177608.0,
+      "cand_mean_cash": 88804.0,
+      "opp_mean_cash": 88804.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50087,
+      "match0": {
+        "cand_score": 112757.0,
+        "opp_score": 112757.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 112757.0,
+        "cand_score": 112757.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 225514.0,
+      "opp_total": 225514.0,
+      "cand_mean_cash": 112757.0,
+      "opp_mean_cash": 112757.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50088,
+      "match0": {
+        "cand_score": 66190.0,
+        "opp_score": 66190.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 66190.0,
+        "cand_score": 66190.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 132380.0,
+      "opp_total": 132380.0,
+      "cand_mean_cash": 66190.0,
+      "opp_mean_cash": 66190.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50089,
+      "match0": {
+        "cand_score": 95507.0,
+        "opp_score": 95507.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 95507.0,
+        "cand_score": 95507.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 191014.0,
+      "opp_total": 191014.0,
+      "cand_mean_cash": 95507.0,
+      "opp_mean_cash": 95507.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50090,
+      "match0": {
+        "cand_score": 70477.0,
+        "opp_score": 70482.0,
+        "margin": -5.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 70482.0,
+        "cand_score": 70477.0,
+        "margin": -5.0,
+        "steps": 719
+      },
+      "paired_margin": -10.0,
+      "cand_total": 140954.0,
+      "opp_total": 140964.0,
+      "cand_mean_cash": 70477.0,
+      "opp_mean_cash": 70482.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50091,
+      "match0": {
+        "cand_score": 94012.0,
+        "opp_score": 94012.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 94012.0,
+        "cand_score": 94012.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 188024.0,
+      "opp_total": 188024.0,
+      "cand_mean_cash": 94012.0,
+      "opp_mean_cash": 94012.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50092,
+      "match0": {
+        "cand_score": 103459.0,
+        "opp_score": 103619.0,
+        "margin": -160.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 103459.0,
+        "cand_score": 103619.0,
+        "margin": 160.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 207078.0,
+      "opp_total": 207078.0,
+      "cand_mean_cash": 103539.0,
+      "opp_mean_cash": 103539.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50093,
+      "match0": {
+        "cand_score": 139558.0,
+        "opp_score": 139558.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 139558.0,
+        "cand_score": 139558.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 279116.0,
+      "opp_total": 279116.0,
+      "cand_mean_cash": 139558.0,
+      "opp_mean_cash": 139558.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50094,
+      "match0": {
+        "cand_score": 118016.0,
+        "opp_score": 118016.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 118016.0,
+        "cand_score": 118016.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 236032.0,
+      "opp_total": 236032.0,
+      "cand_mean_cash": 118016.0,
+      "opp_mean_cash": 118016.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50095,
+      "match0": {
+        "cand_score": 99240.0,
+        "opp_score": 99240.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99240.0,
+        "cand_score": 99240.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 198480.0,
+      "opp_total": 198480.0,
+      "cand_mean_cash": 99240.0,
+      "opp_mean_cash": 99240.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50096,
+      "match0": {
+        "cand_score": 91850.0,
+        "opp_score": 91850.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91850.0,
+        "cand_score": 91850.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 183700.0,
+      "opp_total": 183700.0,
+      "cand_mean_cash": 91850.0,
+      "opp_mean_cash": 91850.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "PET_CAFE",
+        "YARN_STORE",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50097,
+      "match0": {
+        "cand_score": 82784.0,
+        "opp_score": 82747.0,
+        "margin": 37.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 82747.0,
+        "cand_score": 82784.0,
+        "margin": 37.0,
+        "steps": 719
+      },
+      "paired_margin": 74.0,
+      "cand_total": 165568.0,
+      "opp_total": 165494.0,
+      "cand_mean_cash": 82784.0,
+      "opp_mean_cash": 82747.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "YARN_STORE"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50098,
+      "match0": {
+        "cand_score": 56182.0,
+        "opp_score": 56175.0,
+        "margin": 7.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 56175.0,
+        "cand_score": 56182.0,
+        "margin": 7.0,
+        "steps": 719
+      },
+      "paired_margin": 14.0,
+      "cand_total": 112364.0,
+      "opp_total": 112350.0,
+      "cand_mean_cash": 56182.0,
+      "opp_mean_cash": 56175.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50099,
+      "match0": {
+        "cand_score": 91571.0,
+        "opp_score": 91571.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91571.0,
+        "cand_score": 91571.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 183142.0,
+      "opp_total": 183142.0,
+      "cand_mean_cash": 91571.0,
+      "opp_mean_cash": 91571.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    }
+  ],
+  "results_vs_dmi": [
+    {
+      "seed": 50050,
+      "match0": {
+        "cand_score": 55295.0,
+        "opp_score": 55188.0,
+        "margin": 107.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 55188.0,
+        "cand_score": 55295.0,
+        "margin": 107.0,
+        "steps": 719
+      },
+      "paired_margin": 214.0,
+      "cand_total": 110590.0,
+      "opp_total": 110376.0,
+      "cand_mean_cash": 55295.0,
+      "opp_mean_cash": 55188.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "BAKERY",
+        "YARN_STORE",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50051,
+      "match0": {
+        "cand_score": 66274.0,
+        "opp_score": 66173.0,
+        "margin": 101.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 66173.0,
+        "cand_score": 66274.0,
+        "margin": 101.0,
+        "steps": 719
+      },
+      "paired_margin": 202.0,
+      "cand_total": 132548.0,
+      "opp_total": 132346.0,
+      "cand_mean_cash": 66274.0,
+      "opp_mean_cash": 66173.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50052,
+      "match0": {
+        "cand_score": 78388.0,
+        "opp_score": 78314.0,
+        "margin": 74.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 78314.0,
+        "cand_score": 78388.0,
+        "margin": 74.0,
+        "steps": 719
+      },
+      "paired_margin": 148.0,
+      "cand_total": 156776.0,
+      "opp_total": 156628.0,
+      "cand_mean_cash": 78388.0,
+      "opp_mean_cash": 78314.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50053,
+      "match0": {
+        "cand_score": 123081.0,
+        "opp_score": 123009.0,
+        "margin": 72.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 123009.0,
+        "cand_score": 123081.0,
+        "margin": 72.0,
+        "steps": 719
+      },
+      "paired_margin": 144.0,
+      "cand_total": 246162.0,
+      "opp_total": 246018.0,
+      "cand_mean_cash": 123081.0,
+      "opp_mean_cash": 123009.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PET_CAFE",
+        "BRUNCH_SPOT"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50054,
+      "match0": {
+        "cand_score": 70659.0,
+        "opp_score": 70646.0,
+        "margin": 13.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 70646.0,
+        "cand_score": 70659.0,
+        "margin": 13.0,
+        "steps": 719
+      },
+      "paired_margin": 26.0,
+      "cand_total": 141318.0,
+      "opp_total": 141292.0,
+      "cand_mean_cash": 70659.0,
+      "opp_mean_cash": 70646.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50055,
+      "match0": {
+        "cand_score": 117410.0,
+        "opp_score": 117429.0,
+        "margin": -19.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 117429.0,
+        "cand_score": 117410.0,
+        "margin": -19.0,
+        "steps": 719
+      },
+      "paired_margin": -38.0,
+      "cand_total": 234820.0,
+      "opp_total": 234858.0,
+      "cand_mean_cash": 117410.0,
+      "opp_mean_cash": 117429.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50056,
+      "match0": {
+        "cand_score": 56748.0,
+        "opp_score": 56657.0,
+        "margin": 91.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 56657.0,
+        "cand_score": 56748.0,
+        "margin": 91.0,
+        "steps": 719
+      },
+      "paired_margin": 182.0,
+      "cand_total": 113496.0,
+      "opp_total": 113314.0,
+      "cand_mean_cash": 56748.0,
+      "opp_mean_cash": 56657.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "BAKERY",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50057,
+      "match0": {
+        "cand_score": 82985.0,
+        "opp_score": 83007.0,
+        "margin": -22.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 83007.0,
+        "cand_score": 82985.0,
+        "margin": -22.0,
+        "steps": 719
+      },
+      "paired_margin": -44.0,
+      "cand_total": 165970.0,
+      "opp_total": 166014.0,
+      "cand_mean_cash": 82985.0,
+      "opp_mean_cash": 83007.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50058,
+      "match0": {
+        "cand_score": 147225.0,
+        "opp_score": 147303.0,
+        "margin": -78.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 147303.0,
+        "cand_score": 147225.0,
+        "margin": -78.0,
+        "steps": 719
+      },
+      "paired_margin": -156.0,
+      "cand_total": 294450.0,
+      "opp_total": 294606.0,
+      "cand_mean_cash": 147225.0,
+      "opp_mean_cash": 147303.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50059,
+      "match0": {
+        "cand_score": 89650.0,
+        "opp_score": 89703.0,
+        "margin": -53.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 89703.0,
+        "cand_score": 89650.0,
+        "margin": -53.0,
+        "steps": 719
+      },
+      "paired_margin": -106.0,
+      "cand_total": 179300.0,
+      "opp_total": 179406.0,
+      "cand_mean_cash": 89650.0,
+      "opp_mean_cash": 89703.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "YARN_STORE",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50060,
+      "match0": {
+        "cand_score": 60987.0,
+        "opp_score": 60899.0,
+        "margin": 88.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 60899.0,
+        "cand_score": 60987.0,
+        "margin": 88.0,
+        "steps": 719
+      },
+      "paired_margin": 176.0,
+      "cand_total": 121974.0,
+      "opp_total": 121798.0,
+      "cand_mean_cash": 60987.0,
+      "opp_mean_cash": 60899.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50061,
+      "match0": {
+        "cand_score": 80507.0,
+        "opp_score": 80538.0,
+        "margin": -31.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 80538.0,
+        "cand_score": 80507.0,
+        "margin": -31.0,
+        "steps": 719
+      },
+      "paired_margin": -62.0,
+      "cand_total": 161014.0,
+      "opp_total": 161076.0,
+      "cand_mean_cash": 80507.0,
+      "opp_mean_cash": 80538.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50062,
+      "match0": {
+        "cand_score": 120806.0,
+        "opp_score": 121000.0,
+        "margin": -194.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 120820.0,
+        "cand_score": 120986.0,
+        "margin": 166.0,
+        "steps": 719
+      },
+      "paired_margin": -28.0,
+      "cand_total": 241792.0,
+      "opp_total": 241820.0,
+      "cand_mean_cash": 120896.0,
+      "opp_mean_cash": 120910.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50063,
+      "match0": {
+        "cand_score": 106441.0,
+        "opp_score": 106377.0,
+        "margin": 64.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 106377.0,
+        "cand_score": 106441.0,
+        "margin": 64.0,
+        "steps": 719
+      },
+      "paired_margin": 128.0,
+      "cand_total": 212882.0,
+      "opp_total": 212754.0,
+      "cand_mean_cash": 106441.0,
+      "opp_mean_cash": 106377.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "YARN_STORE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50064,
+      "match0": {
+        "cand_score": 140100.0,
+        "opp_score": 140157.0,
+        "margin": -57.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 140157.0,
+        "cand_score": 140100.0,
+        "margin": -57.0,
+        "steps": 719
+      },
+      "paired_margin": -114.0,
+      "cand_total": 280200.0,
+      "opp_total": 280314.0,
+      "cand_mean_cash": 140100.0,
+      "opp_mean_cash": 140157.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50065,
+      "match0": {
+        "cand_score": 103472.0,
+        "opp_score": 103495.0,
+        "margin": -23.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 103495.0,
+        "cand_score": 103472.0,
+        "margin": -23.0,
+        "steps": 719
+      },
+      "paired_margin": -46.0,
+      "cand_total": 206944.0,
+      "opp_total": 206990.0,
+      "cand_mean_cash": 103472.0,
+      "opp_mean_cash": 103495.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50066,
+      "match0": {
+        "cand_score": 99850.0,
+        "opp_score": 99729.0,
+        "margin": 121.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99729.0,
+        "cand_score": 99850.0,
+        "margin": 121.0,
+        "steps": 719
+      },
+      "paired_margin": 242.0,
+      "cand_total": 199700.0,
+      "opp_total": 199458.0,
+      "cand_mean_cash": 99850.0,
+      "opp_mean_cash": 99729.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50067,
+      "match0": {
+        "cand_score": 83885.0,
+        "opp_score": 83933.0,
+        "margin": -48.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 83933.0,
+        "cand_score": 83885.0,
+        "margin": -48.0,
+        "steps": 719
+      },
+      "paired_margin": -96.0,
+      "cand_total": 167770.0,
+      "opp_total": 167866.0,
+      "cand_mean_cash": 83885.0,
+      "opp_mean_cash": 83933.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50068,
+      "match0": {
+        "cand_score": 146095.0,
+        "opp_score": 146144.0,
+        "margin": -49.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 146144.0,
+        "cand_score": 146095.0,
+        "margin": -49.0,
+        "steps": 719
+      },
+      "paired_margin": -98.0,
+      "cand_total": 292190.0,
+      "opp_total": 292288.0,
+      "cand_mean_cash": 146095.0,
+      "opp_mean_cash": 146144.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50069,
+      "match0": {
+        "cand_score": 90657.0,
+        "opp_score": 90565.0,
+        "margin": 92.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 90565.0,
+        "cand_score": 90657.0,
+        "margin": 92.0,
+        "steps": 719
+      },
+      "paired_margin": 184.0,
+      "cand_total": 181314.0,
+      "opp_total": 181130.0,
+      "cand_mean_cash": 90657.0,
+      "opp_mean_cash": 90565.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "YARN_STORE",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50070,
+      "match0": {
+        "cand_score": 114008.0,
+        "opp_score": 113918.0,
+        "margin": 90.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 113918.0,
+        "cand_score": 114008.0,
+        "margin": 90.0,
+        "steps": 719
+      },
+      "paired_margin": 180.0,
+      "cand_total": 228016.0,
+      "opp_total": 227836.0,
+      "cand_mean_cash": 114008.0,
+      "opp_mean_cash": 113918.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "YARN_STORE",
+        "PET_CAFE",
+        "BAKERY"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50071,
+      "match0": {
+        "cand_score": 94372.0,
+        "opp_score": 94409.0,
+        "margin": -37.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 94409.0,
+        "cand_score": 94372.0,
+        "margin": -37.0,
+        "steps": 719
+      },
+      "paired_margin": -74.0,
+      "cand_total": 188744.0,
+      "opp_total": 188818.0,
+      "cand_mean_cash": 94372.0,
+      "opp_mean_cash": 94409.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50072,
+      "match0": {
+        "cand_score": 125463.0,
+        "opp_score": 125511.0,
+        "margin": -48.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 125511.0,
+        "cand_score": 125463.0,
+        "margin": -48.0,
+        "steps": 719
+      },
+      "paired_margin": -96.0,
+      "cand_total": 250926.0,
+      "opp_total": 251022.0,
+      "cand_mean_cash": 125463.0,
+      "opp_mean_cash": 125511.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50073,
+      "match0": {
+        "cand_score": 146598.0,
+        "opp_score": 144999.0,
+        "margin": 1599.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 146622.0,
+        "cand_score": 144975.0,
+        "margin": -1647.0,
+        "steps": 719
+      },
+      "paired_margin": -48.0,
+      "cand_total": 291573.0,
+      "opp_total": 291621.0,
+      "cand_mean_cash": 145786.5,
+      "opp_mean_cash": 145810.5,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50074,
+      "match0": {
+        "cand_score": 81835.0,
+        "opp_score": 81866.0,
+        "margin": -31.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 81866.0,
+        "cand_score": 81835.0,
+        "margin": -31.0,
+        "steps": 719
+      },
+      "paired_margin": -62.0,
+      "cand_total": 163670.0,
+      "opp_total": 163732.0,
+      "cand_mean_cash": 81835.0,
+      "opp_mean_cash": 81866.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50075,
+      "match0": {
+        "cand_score": 98795.0,
+        "opp_score": 98817.0,
+        "margin": -22.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 98817.0,
+        "cand_score": 98795.0,
+        "margin": -22.0,
+        "steps": 719
+      },
+      "paired_margin": -44.0,
+      "cand_total": 197590.0,
+      "opp_total": 197634.0,
+      "cand_mean_cash": 98795.0,
+      "opp_mean_cash": 98817.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50076,
+      "match0": {
+        "cand_score": 92225.0,
+        "opp_score": 98592.0,
+        "margin": -6367.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92181.0,
+        "cand_score": 98638.0,
+        "margin": 6457.0,
+        "steps": 719
+      },
+      "paired_margin": 90.0,
+      "cand_total": 190863.0,
+      "opp_total": 190773.0,
+      "cand_mean_cash": 95431.5,
+      "opp_mean_cash": 95386.5,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50077,
+      "match0": {
+        "cand_score": 52799.0,
+        "opp_score": 52717.0,
+        "margin": 82.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 52717.0,
+        "cand_score": 52799.0,
+        "margin": 82.0,
+        "steps": 719
+      },
+      "paired_margin": 164.0,
+      "cand_total": 105598.0,
+      "opp_total": 105434.0,
+      "cand_mean_cash": 52799.0,
+      "opp_mean_cash": 52717.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50078,
+      "match0": {
+        "cand_score": 100807.0,
+        "opp_score": 101106.0,
+        "margin": -299.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 101106.0,
+        "cand_score": 100807.0,
+        "margin": -299.0,
+        "steps": 719
+      },
+      "paired_margin": -598.0,
+      "cand_total": 201614.0,
+      "opp_total": 202212.0,
+      "cand_mean_cash": 100807.0,
+      "opp_mean_cash": 101106.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "PET_CAFE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50079,
+      "match0": {
+        "cand_score": 101881.0,
+        "opp_score": 101940.0,
+        "margin": -59.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 101940.0,
+        "cand_score": 101881.0,
+        "margin": -59.0,
+        "steps": 719
+      },
+      "paired_margin": -118.0,
+      "cand_total": 203762.0,
+      "opp_total": 203880.0,
+      "cand_mean_cash": 101881.0,
+      "opp_mean_cash": 101940.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50080,
+      "match0": {
+        "cand_score": 85210.0,
+        "opp_score": 85118.0,
+        "margin": 92.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 85118.0,
+        "cand_score": 85210.0,
+        "margin": 92.0,
+        "steps": 719
+      },
+      "paired_margin": 184.0,
+      "cand_total": 170420.0,
+      "opp_total": 170236.0,
+      "cand_mean_cash": 85210.0,
+      "opp_mean_cash": 85118.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50081,
+      "match0": {
+        "cand_score": 99498.0,
+        "opp_score": 99856.0,
+        "margin": -358.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99856.0,
+        "cand_score": 99498.0,
+        "margin": -358.0,
+        "steps": 719
+      },
+      "paired_margin": -716.0,
+      "cand_total": 198996.0,
+      "opp_total": 199712.0,
+      "cand_mean_cash": 99498.0,
+      "opp_mean_cash": 99856.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50082,
+      "match0": {
+        "cand_score": 91273.0,
+        "opp_score": 91310.0,
+        "margin": -37.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91310.0,
+        "cand_score": 91273.0,
+        "margin": -37.0,
+        "steps": 719
+      },
+      "paired_margin": -74.0,
+      "cand_total": 182546.0,
+      "opp_total": 182620.0,
+      "cand_mean_cash": 91273.0,
+      "opp_mean_cash": 91310.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50083,
+      "match0": {
+        "cand_score": 54233.0,
+        "opp_score": 54119.0,
+        "margin": 114.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 54119.0,
+        "cand_score": 54233.0,
+        "margin": 114.0,
+        "steps": 719
+      },
+      "paired_margin": 228.0,
+      "cand_total": 108466.0,
+      "opp_total": 108238.0,
+      "cand_mean_cash": 54233.0,
+      "opp_mean_cash": 54119.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50084,
+      "match0": {
+        "cand_score": 152512.0,
+        "opp_score": 152517.0,
+        "margin": -5.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 152517.0,
+        "cand_score": 152512.0,
+        "margin": -5.0,
+        "steps": 719
+      },
+      "paired_margin": -10.0,
+      "cand_total": 305024.0,
+      "opp_total": 305034.0,
+      "cand_mean_cash": 152512.0,
+      "opp_mean_cash": 152517.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50085,
+      "match0": {
+        "cand_score": 82816.0,
+        "opp_score": 82714.0,
+        "margin": 102.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 82714.0,
+        "cand_score": 82816.0,
+        "margin": 102.0,
+        "steps": 719
+      },
+      "paired_margin": 204.0,
+      "cand_total": 165632.0,
+      "opp_total": 165428.0,
+      "cand_mean_cash": 82816.0,
+      "opp_mean_cash": 82714.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50086,
+      "match0": {
+        "cand_score": 88912.0,
+        "opp_score": 88957.0,
+        "margin": -45.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 88957.0,
+        "cand_score": 88912.0,
+        "margin": -45.0,
+        "steps": 719
+      },
+      "paired_margin": -90.0,
+      "cand_total": 177824.0,
+      "opp_total": 177914.0,
+      "cand_mean_cash": 88912.0,
+      "opp_mean_cash": 88957.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50087,
+      "match0": {
+        "cand_score": 112849.0,
+        "opp_score": 112742.0,
+        "margin": 107.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 112742.0,
+        "cand_score": 112849.0,
+        "margin": 107.0,
+        "steps": 719
+      },
+      "paired_margin": 214.0,
+      "cand_total": 225698.0,
+      "opp_total": 225484.0,
+      "cand_mean_cash": 112849.0,
+      "opp_mean_cash": 112742.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "YARN_STORE"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50088,
+      "match0": {
+        "cand_score": 66228.0,
+        "opp_score": 66219.0,
+        "margin": 9.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 66219.0,
+        "cand_score": 66228.0,
+        "margin": 9.0,
+        "steps": 719
+      },
+      "paired_margin": 18.0,
+      "cand_total": 132456.0,
+      "opp_total": 132438.0,
+      "cand_mean_cash": 66228.0,
+      "opp_mean_cash": 66219.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50089,
+      "match0": {
+        "cand_score": 95611.0,
+        "opp_score": 95671.0,
+        "margin": -60.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 95671.0,
+        "cand_score": 95611.0,
+        "margin": -60.0,
+        "steps": 719
+      },
+      "paired_margin": -120.0,
+      "cand_total": 191222.0,
+      "opp_total": 191342.0,
+      "cand_mean_cash": 95611.0,
+      "opp_mean_cash": 95671.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50090,
+      "match0": {
+        "cand_score": 70568.0,
+        "opp_score": 70490.0,
+        "margin": 78.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 70490.0,
+        "cand_score": 70568.0,
+        "margin": 78.0,
+        "steps": 719
+      },
+      "paired_margin": 156.0,
+      "cand_total": 141136.0,
+      "opp_total": 140980.0,
+      "cand_mean_cash": 70568.0,
+      "opp_mean_cash": 70490.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50091,
+      "match0": {
+        "cand_score": 94317.0,
+        "opp_score": 94358.0,
+        "margin": -41.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 94358.0,
+        "cand_score": 94317.0,
+        "margin": -41.0,
+        "steps": 719
+      },
+      "paired_margin": -82.0,
+      "cand_total": 188634.0,
+      "opp_total": 188716.0,
+      "cand_mean_cash": 94317.0,
+      "opp_mean_cash": 94358.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50092,
+      "match0": {
+        "cand_score": 103547.0,
+        "opp_score": 103637.0,
+        "margin": -90.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 103477.0,
+        "cand_score": 103707.0,
+        "margin": 230.0,
+        "steps": 719
+      },
+      "paired_margin": 140.0,
+      "cand_total": 207254.0,
+      "opp_total": 207114.0,
+      "cand_mean_cash": 103627.0,
+      "opp_mean_cash": 103557.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50093,
+      "match0": {
+        "cand_score": 139590.0,
+        "opp_score": 139626.0,
+        "margin": -36.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 139626.0,
+        "cand_score": 139590.0,
+        "margin": -36.0,
+        "steps": 719
+      },
+      "paired_margin": -72.0,
+      "cand_total": 279180.0,
+      "opp_total": 279252.0,
+      "cand_mean_cash": 139590.0,
+      "opp_mean_cash": 139626.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50094,
+      "match0": {
+        "cand_score": 118246.0,
+        "opp_score": 118133.0,
+        "margin": 113.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 118133.0,
+        "cand_score": 118246.0,
+        "margin": 113.0,
+        "steps": 719
+      },
+      "paired_margin": 226.0,
+      "cand_total": 236492.0,
+      "opp_total": 236266.0,
+      "cand_mean_cash": 118246.0,
+      "opp_mean_cash": 118133.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50095,
+      "match0": {
+        "cand_score": 99326.0,
+        "opp_score": 99254.0,
+        "margin": 72.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99254.0,
+        "cand_score": 99326.0,
+        "margin": 72.0,
+        "steps": 719
+      },
+      "paired_margin": 144.0,
+      "cand_total": 198652.0,
+      "opp_total": 198508.0,
+      "cand_mean_cash": 99326.0,
+      "opp_mean_cash": 99254.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "BRUNCH_SPOT"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50096,
+      "match0": {
+        "cand_score": 91939.0,
+        "opp_score": 91842.0,
+        "margin": 97.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91842.0,
+        "cand_score": 91939.0,
+        "margin": 97.0,
+        "steps": 719
+      },
+      "paired_margin": 194.0,
+      "cand_total": 183878.0,
+      "opp_total": 183684.0,
+      "cand_mean_cash": 91939.0,
+      "opp_mean_cash": 91842.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "PET_CAFE",
+        "YARN_STORE",
+        "YARN_STORE"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50097,
+      "match0": {
+        "cand_score": 82874.0,
+        "opp_score": 82754.0,
+        "margin": 120.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 82754.0,
+        "cand_score": 82874.0,
+        "margin": 120.0,
+        "steps": 719
+      },
+      "paired_margin": 240.0,
+      "cand_total": 165748.0,
+      "opp_total": 165508.0,
+      "cand_mean_cash": 82874.0,
+      "opp_mean_cash": 82754.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "YARN_STORE"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50098,
+      "match0": {
+        "cand_score": 56275.0,
+        "opp_score": 56155.0,
+        "margin": 120.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 56155.0,
+        "cand_score": 56275.0,
+        "margin": 120.0,
+        "steps": 719
+      },
+      "paired_margin": 240.0,
+      "cand_total": 112550.0,
+      "opp_total": 112310.0,
+      "cand_mean_cash": 56275.0,
+      "opp_mean_cash": 56155.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50099,
+      "match0": {
+        "cand_score": 91623.0,
+        "opp_score": 91639.0,
+        "margin": -16.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91639.0,
+        "cand_score": 91623.0,
+        "margin": -16.0,
+        "steps": 719
+      },
+      "paired_margin": -32.0,
+      "cand_total": 183246.0,
+      "opp_total": 183278.0,
+      "cand_mean_cash": 91623.0,
+      "opp_mean_cash": 91639.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    }
+  ],
+  "diagnostic_dev001_vs_v2": [
+    {
+      "seed": 50050,
+      "match0": {
+        "cand_score": 55210.0,
+        "opp_score": 55201.0,
+        "margin": 9.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 55201.0,
+        "cand_score": 55210.0,
+        "margin": 9.0,
+        "steps": 719
+      },
+      "paired_margin": 18.0,
+      "cand_total": 110420.0,
+      "opp_total": 110402.0,
+      "cand_mean_cash": 55210.0,
+      "opp_mean_cash": 55201.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "BAKERY",
+        "YARN_STORE",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50051,
+      "match0": {
+        "cand_score": 66190.0,
+        "opp_score": 66190.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 66190.0,
+        "cand_score": 66190.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 132380.0,
+      "opp_total": 132380.0,
+      "cand_mean_cash": 66190.0,
+      "opp_mean_cash": 66190.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50052,
+      "match0": {
+        "cand_score": 78300.0,
+        "opp_score": 78300.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 78300.0,
+        "cand_score": 78300.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 156600.0,
+      "opp_total": 156600.0,
+      "cand_mean_cash": 78300.0,
+      "opp_mean_cash": 78300.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50053,
+      "match0": {
+        "cand_score": 122789.0,
+        "opp_score": 122789.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 122789.0,
+        "cand_score": 122789.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 245578.0,
+      "opp_total": 245578.0,
+      "cand_mean_cash": 122789.0,
+      "opp_mean_cash": 122789.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PET_CAFE",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50054,
+      "match0": {
+        "cand_score": 70618.0,
+        "opp_score": 70618.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 70618.0,
+        "cand_score": 70618.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 141236.0,
+      "opp_total": 141236.0,
+      "cand_mean_cash": 70618.0,
+      "opp_mean_cash": 70618.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50055,
+      "match0": {
+        "cand_score": 117358.0,
+        "opp_score": 117358.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 117358.0,
+        "cand_score": 117358.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 234716.0,
+      "opp_total": 234716.0,
+      "cand_mean_cash": 117358.0,
+      "opp_mean_cash": 117358.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50056,
+      "match0": {
+        "cand_score": 56659.0,
+        "opp_score": 56649.0,
+        "margin": 10.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 56649.0,
+        "cand_score": 56659.0,
+        "margin": 10.0,
+        "steps": 719
+      },
+      "paired_margin": 20.0,
+      "cand_total": 113318.0,
+      "opp_total": 113298.0,
+      "cand_mean_cash": 56659.0,
+      "opp_mean_cash": 56649.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "BAKERY",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50057,
+      "match0": {
+        "cand_score": 82945.0,
+        "opp_score": 82945.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 82945.0,
+        "cand_score": 82945.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 165890.0,
+      "opp_total": 165890.0,
+      "cand_mean_cash": 82945.0,
+      "opp_mean_cash": 82945.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50058,
+      "match0": {
+        "cand_score": 147209.0,
+        "opp_score": 147209.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 147209.0,
+        "cand_score": 147209.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 294418.0,
+      "opp_total": 294418.0,
+      "cand_mean_cash": 147209.0,
+      "opp_mean_cash": 147209.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50059,
+      "match0": {
+        "cand_score": 89635.0,
+        "opp_score": 89635.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 89635.0,
+        "cand_score": 89635.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 179270.0,
+      "opp_total": 179270.0,
+      "cand_mean_cash": 89635.0,
+      "opp_mean_cash": 89635.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "YARN_STORE",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50060,
+      "match0": {
+        "cand_score": 60892.0,
+        "opp_score": 60892.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 60892.0,
+        "cand_score": 60892.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 121784.0,
+      "opp_total": 121784.0,
+      "cand_mean_cash": 60892.0,
+      "opp_mean_cash": 60892.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50061,
+      "match0": {
+        "cand_score": 80198.0,
+        "opp_score": 80198.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 80198.0,
+        "cand_score": 80198.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 160396.0,
+      "opp_total": 160396.0,
+      "cand_mean_cash": 80198.0,
+      "opp_mean_cash": 80198.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50062,
+      "match0": {
+        "cand_score": 120759.0,
+        "opp_score": 120939.0,
+        "margin": -180.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 120759.0,
+        "cand_score": 120939.0,
+        "margin": 180.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 241698.0,
+      "opp_total": 241698.0,
+      "cand_mean_cash": 120849.0,
+      "opp_mean_cash": 120849.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50063,
+      "match0": {
+        "cand_score": 106361.0,
+        "opp_score": 106361.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 106361.0,
+        "cand_score": 106361.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 212722.0,
+      "opp_total": 212722.0,
+      "cand_mean_cash": 106361.0,
+      "opp_mean_cash": 106361.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "YARN_STORE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50064,
+      "match0": {
+        "cand_score": 140074.0,
+        "opp_score": 140074.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 140074.0,
+        "cand_score": 140074.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 280148.0,
+      "opp_total": 280148.0,
+      "cand_mean_cash": 140074.0,
+      "opp_mean_cash": 140074.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50065,
+      "match0": {
+        "cand_score": 103427.0,
+        "opp_score": 103427.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 103427.0,
+        "cand_score": 103427.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 206854.0,
+      "opp_total": 206854.0,
+      "cand_mean_cash": 103427.0,
+      "opp_mean_cash": 103427.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50066,
+      "match0": {
+        "cand_score": 99754.0,
+        "opp_score": 99754.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99754.0,
+        "cand_score": 99754.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 199508.0,
+      "opp_total": 199508.0,
+      "cand_mean_cash": 99754.0,
+      "opp_mean_cash": 99754.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50067,
+      "match0": {
+        "cand_score": 83771.0,
+        "opp_score": 83771.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 83771.0,
+        "cand_score": 83771.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 167542.0,
+      "opp_total": 167542.0,
+      "cand_mean_cash": 83771.0,
+      "opp_mean_cash": 83771.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50068,
+      "match0": {
+        "cand_score": 146066.0,
+        "opp_score": 146066.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 146066.0,
+        "cand_score": 146066.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 292132.0,
+      "opp_total": 292132.0,
+      "cand_mean_cash": 146066.0,
+      "opp_mean_cash": 146066.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50069,
+      "match0": {
+        "cand_score": 90557.0,
+        "opp_score": 90557.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 90557.0,
+        "cand_score": 90557.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 181114.0,
+      "opp_total": 181114.0,
+      "cand_mean_cash": 90557.0,
+      "opp_mean_cash": 90557.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "YARN_STORE",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50070,
+      "match0": {
+        "cand_score": 113922.0,
+        "opp_score": 113922.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 113922.0,
+        "cand_score": 113922.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 227844.0,
+      "opp_total": 227844.0,
+      "cand_mean_cash": 113922.0,
+      "opp_mean_cash": 113922.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "YARN_STORE",
+        "PET_CAFE",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50071,
+      "match0": {
+        "cand_score": 94303.0,
+        "opp_score": 94303.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 94303.0,
+        "cand_score": 94303.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 188606.0,
+      "opp_total": 188606.0,
+      "cand_mean_cash": 94303.0,
+      "opp_mean_cash": 94303.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50072,
+      "match0": {
+        "cand_score": 125429.0,
+        "opp_score": 125429.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 125429.0,
+        "cand_score": 125429.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 250858.0,
+      "opp_total": 250858.0,
+      "cand_mean_cash": 125429.0,
+      "opp_mean_cash": 125429.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50073,
+      "match0": {
+        "cand_score": 146598.0,
+        "opp_score": 144975.0,
+        "margin": 1623.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 146598.0,
+        "cand_score": 144975.0,
+        "margin": -1623.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 291573.0,
+      "opp_total": 291573.0,
+      "cand_mean_cash": 145786.5,
+      "opp_mean_cash": 145786.5,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50074,
+      "match0": {
+        "cand_score": 81817.0,
+        "opp_score": 81817.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 81817.0,
+        "cand_score": 81817.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 163634.0,
+      "opp_total": 163634.0,
+      "cand_mean_cash": 81817.0,
+      "opp_mean_cash": 81817.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50075,
+      "match0": {
+        "cand_score": 98798.0,
+        "opp_score": 98798.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 98798.0,
+        "cand_score": 98798.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 197596.0,
+      "opp_total": 197596.0,
+      "cand_mean_cash": 98798.0,
+      "opp_mean_cash": 98798.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "PET_CAFE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50076,
+      "match0": {
+        "cand_score": 92137.0,
+        "opp_score": 98543.0,
+        "margin": -6406.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 92137.0,
+        "cand_score": 98543.0,
+        "margin": 6406.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 190680.0,
+      "opp_total": 190680.0,
+      "cand_mean_cash": 95340.0,
+      "opp_mean_cash": 95340.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "YARN_STORE",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50077,
+      "match0": {
+        "cand_score": 52736.0,
+        "opp_score": 52736.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 52736.0,
+        "cand_score": 52736.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 105472.0,
+      "opp_total": 105472.0,
+      "cand_mean_cash": 52736.0,
+      "opp_mean_cash": 52736.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50078,
+      "match0": {
+        "cand_score": 101096.0,
+        "opp_score": 101096.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 101096.0,
+        "cand_score": 101096.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 202192.0,
+      "opp_total": 202192.0,
+      "cand_mean_cash": 101096.0,
+      "opp_mean_cash": 101096.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "PET_CAFE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50079,
+      "match0": {
+        "cand_score": 101590.0,
+        "opp_score": 101590.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 101590.0,
+        "cand_score": 101590.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 203180.0,
+      "opp_total": 203180.0,
+      "cand_mean_cash": 101590.0,
+      "opp_mean_cash": 101590.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50080,
+      "match0": {
+        "cand_score": 84906.0,
+        "opp_score": 84906.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 84906.0,
+        "cand_score": 84906.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 169812.0,
+      "opp_total": 169812.0,
+      "cand_mean_cash": 84906.0,
+      "opp_mean_cash": 84906.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50081,
+      "match0": {
+        "cand_score": 99825.0,
+        "opp_score": 99825.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99825.0,
+        "cand_score": 99825.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 199650.0,
+      "opp_total": 199650.0,
+      "cand_mean_cash": 99825.0,
+      "opp_mean_cash": 99825.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "YARN_STORE",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50082,
+      "match0": {
+        "cand_score": 91201.0,
+        "opp_score": 91201.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91201.0,
+        "cand_score": 91201.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 182402.0,
+      "opp_total": 182402.0,
+      "cand_mean_cash": 91201.0,
+      "opp_mean_cash": 91201.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50083,
+      "match0": {
+        "cand_score": 54129.0,
+        "opp_score": 54142.0,
+        "margin": -13.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 54142.0,
+        "cand_score": 54129.0,
+        "margin": -13.0,
+        "steps": 719
+      },
+      "paired_margin": -26.0,
+      "cand_total": 108258.0,
+      "opp_total": 108284.0,
+      "cand_mean_cash": 54129.0,
+      "opp_mean_cash": 54142.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50084,
+      "match0": {
+        "cand_score": 152497.0,
+        "opp_score": 152497.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 152497.0,
+        "cand_score": 152497.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 304994.0,
+      "opp_total": 304994.0,
+      "cand_mean_cash": 152497.0,
+      "opp_mean_cash": 152497.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50085,
+      "match0": {
+        "cand_score": 82727.0,
+        "opp_score": 82722.0,
+        "margin": 5.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 82722.0,
+        "cand_score": 82727.0,
+        "margin": 5.0,
+        "steps": 719
+      },
+      "paired_margin": 10.0,
+      "cand_total": 165454.0,
+      "opp_total": 165444.0,
+      "cand_mean_cash": 82727.0,
+      "opp_mean_cash": 82722.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50086,
+      "match0": {
+        "cand_score": 88804.0,
+        "opp_score": 88804.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 88804.0,
+        "cand_score": 88804.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 177608.0,
+      "opp_total": 177608.0,
+      "cand_mean_cash": 88804.0,
+      "opp_mean_cash": 88804.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50087,
+      "match0": {
+        "cand_score": 112757.0,
+        "opp_score": 112757.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 112757.0,
+        "cand_score": 112757.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 225514.0,
+      "opp_total": 225514.0,
+      "cand_mean_cash": 112757.0,
+      "opp_mean_cash": 112757.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50088,
+      "match0": {
+        "cand_score": 66190.0,
+        "opp_score": 66190.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 66190.0,
+        "cand_score": 66190.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 132380.0,
+      "opp_total": 132380.0,
+      "cand_mean_cash": 66190.0,
+      "opp_mean_cash": 66190.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "YARN_STORE",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50089,
+      "match0": {
+        "cand_score": 95507.0,
+        "opp_score": 95507.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 95507.0,
+        "cand_score": 95507.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 191014.0,
+      "opp_total": 191014.0,
+      "cand_mean_cash": 95507.0,
+      "opp_mean_cash": 95507.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "YARN_STORE",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50090,
+      "match0": {
+        "cand_score": 70477.0,
+        "opp_score": 70482.0,
+        "margin": -5.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 70482.0,
+        "cand_score": 70477.0,
+        "margin": -5.0,
+        "steps": 719
+      },
+      "paired_margin": -10.0,
+      "cand_total": 140954.0,
+      "opp_total": 140964.0,
+      "cand_mean_cash": 70477.0,
+      "opp_mean_cash": 70482.0,
+      "cand_mode": "WHEAT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 5
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 1,
+      "tie": 0
+    },
+    {
+      "seed": 50091,
+      "match0": {
+        "cand_score": 94012.0,
+        "opp_score": 94012.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 94012.0,
+        "cand_score": 94012.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 188024.0,
+      "opp_total": 188024.0,
+      "cand_mean_cash": 94012.0,
+      "opp_mean_cash": 94012.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "YARN_STORE",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50092,
+      "match0": {
+        "cand_score": 103459.0,
+        "opp_score": 103619.0,
+        "margin": -160.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 103459.0,
+        "cand_score": 103619.0,
+        "margin": 160.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 207078.0,
+      "opp_total": 207078.0,
+      "cand_mean_cash": 103539.0,
+      "opp_mean_cash": 103539.0,
+      "cand_mode": "YARN",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "YARN_STORE",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50093,
+      "match0": {
+        "cand_score": 139558.0,
+        "opp_score": 139558.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 139558.0,
+        "cand_score": 139558.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 279116.0,
+      "opp_total": 279116.0,
+      "cand_mean_cash": 139558.0,
+      "opp_mean_cash": 139558.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50094,
+      "match0": {
+        "cand_score": 118016.0,
+        "opp_score": 118016.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 118016.0,
+        "cand_score": 118016.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 236032.0,
+      "opp_total": 236032.0,
+      "cand_mean_cash": 118016.0,
+      "opp_mean_cash": 118016.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "SMOOTHIE_SHOP",
+        "FARMERS_MARKET",
+        "SMOOTHIE_SHOP",
+        "BAKERY",
+        "PIZZA_SHOP",
+        "YARN_STORE",
+        "PIZZA_SHOP",
+        "FARMERS_MARKET"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50095,
+      "match0": {
+        "cand_score": 99240.0,
+        "opp_score": 99240.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 99240.0,
+        "cand_score": 99240.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 198480.0,
+      "opp_total": 198480.0,
+      "cand_mean_cash": 99240.0,
+      "opp_mean_cash": 99240.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "ICE_CREAM_SHOP",
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "SMOOTHIE_SHOP",
+        "YARN_STORE",
+        "BRUNCH_SPOT"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50096,
+      "match0": {
+        "cand_score": 91850.0,
+        "opp_score": 91850.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91850.0,
+        "cand_score": 91850.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 183700.0,
+      "opp_total": 183700.0,
+      "cand_mean_cash": 91850.0,
+      "opp_mean_cash": 91850.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET",
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "PET_CAFE",
+        "YARN_STORE",
+        "YARN_STORE"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    },
+    {
+      "seed": 50097,
+      "match0": {
+        "cand_score": 82784.0,
+        "opp_score": 82747.0,
+        "margin": 37.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 82747.0,
+        "cand_score": 82784.0,
+        "margin": 37.0,
+        "steps": 719
+      },
+      "paired_margin": 74.0,
+      "cand_total": 165568.0,
+      "opp_total": 165494.0,
+      "cand_mean_cash": 82784.0,
+      "opp_mean_cash": 82747.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "PET_CAFE",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "ICE_CREAM_SHOP",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "YARN_STORE"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50098,
+      "match0": {
+        "cand_score": 56182.0,
+        "opp_score": 56175.0,
+        "margin": 7.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 56175.0,
+        "cand_score": 56182.0,
+        "margin": 7.0,
+        "steps": 719
+      },
+      "paired_margin": 14.0,
+      "cand_total": 112364.0,
+      "opp_total": 112350.0,
+      "cand_mean_cash": 56182.0,
+      "opp_mean_cash": 56175.0,
+      "cand_mode": "CARROT",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE",
+        "SMOOTHIE_SHOP",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP",
+        "PET_CAFE",
+        "BRUNCH_SPOT",
+        "PIZZA_SHOP"
+      ],
+      "win": 1,
+      "loss": 0,
+      "tie": 0
+    },
+    {
+      "seed": 50099,
+      "match0": {
+        "cand_score": 91571.0,
+        "opp_score": 91571.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "match1": {
+        "opp_score": 91571.0,
+        "cand_score": 91571.0,
+        "margin": 0.0,
+        "steps": 719
+      },
+      "paired_margin": 0.0,
+      "cand_total": 183142.0,
+      "opp_total": 183142.0,
+      "cand_mean_cash": 91571.0,
+      "opp_mean_cash": 91571.0,
+      "cand_mode": "STRAWBERRY",
+      "crops_sub_m0": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "crops_sub_m1": {
+        "CARROT": 0,
+        "TOMATO": 0,
+        "WHEAT": 0
+      },
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "BAKERY",
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "win": 0,
+      "loss": 0,
+      "tie": 1
+    }
+  ],
+  "summary_statistics": {
+    "vs_closed_loop_v2": {
+      "n": 50,
+      "mean": 2.0,
+      "total_surplus": 100.0,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "sd": 12.013597738073509,
+      "se": 1.6989792854078294,
+      "t_stat": 1.1771773894935467,
+      "p_value_approx": 0.23912471130824553,
+      "ci_95": [
+        -1.4142262974734385,
+        5.414226297473439
+      ],
+      "min": -26.0,
+      "max": 74.0,
+      "p01": -18.16,
+      "p05": 0.0,
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "p90": 1.0000000000000142,
+      "p95": 16.19999999999999,
+      "p99": 47.53999999999989,
+      "worst_loss": -26.0,
+      "best_win": 74.0,
+      "downside_frequency": 0.04,
+      "downside_count": 2,
+      "loss_gt_200_count": 0,
+      "loss_gt_500_count": 0,
+      "loss_gt_800_count": 0,
+      "top1_pct": 74.0,
+      "top2_pct": 94.0,
+      "mean_ex_best": 0.5306122448979592,
+      "mean_ex_worst": 2.5714285714285716,
+      "mean_ex_top2": 0.125
+    },
+    "vs_dmitrii": {
+      "n": 50,
+      "mean": 24.88,
+      "total_surplus": 1244.0,
+      "trimmed_mean_10": 44.4,
+      "median": 4.0,
+      "sd": 192.03025271863723,
+      "se": 27.157178778062967,
+      "t_stat": 0.9161481832603898,
+      "p_value_approx": 0.35958917879909524,
+      "ci_95": [
+        -29.694387542925885,
+        79.45438754292589
+      ],
+      "min": -716.0,
+      "max": 242.0,
+      "p01": -658.1800000000001,
+      "p05": -139.79999999999998,
+      "p10": -114.39999999999999,
+      "p25": -74.0,
+      "p50": 4.0,
+      "p75": 181.5,
+      "p90": 215.2,
+      "p95": 234.59999999999997,
+      "p99": 241.01999999999998,
+      "worst_loss": -716.0,
+      "best_win": 242.0,
+      "downside_frequency": 0.5,
+      "downside_count": 25,
+      "loss_gt_200_count": 2,
+      "loss_gt_500_count": 2,
+      "loss_gt_800_count": 0,
+      "top1_pct": 19.45337620578778,
+      "top2_pct": 38.7459807073955,
+      "mean_ex_best": 20.448979591836736,
+      "mean_ex_worst": 40.0,
+      "mean_ex_top2": 15.875
+    },
+    "dev001_vs_v2": {
+      "n": 50,
+      "mean": 2.0,
+      "total_surplus": 100.0,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "sd": 12.013597738073509,
+      "se": 1.6989792854078294,
+      "t_stat": 1.1771773894935467,
+      "p_value_approx": 0.23912471130824553,
+      "ci_95": [
+        -1.4142262974734385,
+        5.414226297473439
+      ],
+      "min": -26.0,
+      "max": 74.0,
+      "p01": -18.16,
+      "p05": 0.0,
+      "p10": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 0.0,
+      "p90": 1.0000000000000142,
+      "p95": 16.19999999999999,
+      "p99": 47.53999999999989,
+      "worst_loss": -26.0,
+      "best_win": 74.0,
+      "downside_frequency": 0.04,
+      "downside_count": 2,
+      "loss_gt_200_count": 0,
+      "loss_gt_500_count": 0,
+      "loss_gt_800_count": 0,
+      "top1_pct": 74.0,
+      "top2_pct": 94.0,
+      "mean_ex_best": 0.5306122448979592,
+      "mean_ex_worst": 2.5714285714285716,
+      "mean_ex_top2": 0.125
+    },
+    "win_rate_vs_v2": 10.0,
+    "win_rate_vs_dmi": 50.0,
+    "wins_v2": 5,
+    "losses_v2": 2,
+    "ties_v2": 43,
+    "mode_distribution": {
+      "CARROT": 4,
+      "STRAWBERRY": 29,
+      "YARN": 14,
+      "WHEAT": 3
+    }
+  },
+  "qualification_verdict": "QUALIFICATION PASS WITH LIMITATIONS"
+}
