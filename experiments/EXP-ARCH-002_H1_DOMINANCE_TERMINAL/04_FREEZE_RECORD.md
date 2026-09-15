@@ -101,6 +101,9 @@ All source files are new and isolated under `experiments/EXP-ARCH-002_H1_DOMINAN
 
 ## 8. Commit Records
 
-- **Implementation Freeze Commit**: Recorded in git history upon creation.
-- **Governance Seal Commit**: Recorded in git history upon seal.
+- **Prior Repository HEAD**: `511148d4cc38e8e4bc7e97363cc9631c9a4b2dd7`
+- **Implementation Freeze Commit**: `862e35b75e375b49cd66e85c651fc4d463fd9b1e`
+- **Freeze Subject**: `feat(arch-002): freeze H1 dominance terminal implementation, shadow sim, and validation suite`
+- **Freeze Timestamp**: `2026-09-15T19:45:00+05:30`
+- **Governance Seal Commit**: Recorded in subsequent governance metadata commit
 - **Next Action**: Implement the execution runner (`P-RUN`) and execute the frozen protocol, OR proceed to independent DEV-007 resolution as prioritized by research governance.
