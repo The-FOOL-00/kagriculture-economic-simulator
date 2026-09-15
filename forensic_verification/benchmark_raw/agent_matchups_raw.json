@@ -1,0 +1,1382 @@
+{
+  "V66_vs_V2": {
+    "agent_a": {
+      "name": "V66",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\external_repos\\kaggriculture-v66-agent\\main.py",
+      "sha256": "a7059fd4cdde05bbab05c140c90ed9f386f44a050574514399bd97e030a150b3"
+    },
+    "agent_b": {
+      "name": "V2",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\agents\\slot4_control_frozen_v2.py",
+      "sha256": "d5cc1fb9f93926812849d499e1e24adc25fef1f7552debe28789d8ce0bba7845"
+    },
+    "orientation_a_p0_b_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 132447.0,
+        "seat1_reward": 14147.0,
+        "margin_a_minus_b": 118300.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 175447.0,
+        "seat1_reward": 38261.0,
+        "margin_a_minus_b": 137186.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 161180.0,
+        "seat1_reward": 28349.0,
+        "margin_a_minus_b": 132831.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 136135.0,
+        "seat1_reward": 32619.0,
+        "margin_a_minus_b": 103516.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 141925.0,
+        "seat1_reward": 26929.0,
+        "margin_a_minus_b": 114996.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 125765.0,
+        "seat1_reward": 23195.0,
+        "margin_a_minus_b": 102570.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 145594.0,
+        "seat1_reward": 32515.0,
+        "margin_a_minus_b": 113079.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 138161.0,
+        "seat1_reward": 22324.0,
+        "margin_a_minus_b": 115837.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 107980.0,
+        "seat1_reward": 25611.0,
+        "margin_a_minus_b": 82369.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "V66",
+        "seat1_agent": "V2",
+        "seat0_reward": 156536.0,
+        "seat1_reward": 32357.0,
+        "margin_a_minus_b": 124179.0,
+        "winner": "V66",
+        "error": null
+      }
+    ],
+    "orientation_b_p0_a_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 14147.0,
+        "seat1_reward": 132447.0,
+        "margin_a_minus_b": -118300.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 132447.0,
+          "reward_b": 14147.0,
+          "margin_a_minus_b": 118300.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 38261.0,
+        "seat1_reward": 175447.0,
+        "margin_a_minus_b": -137186.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 175447.0,
+          "reward_b": 38261.0,
+          "margin_a_minus_b": 137186.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 28349.0,
+        "seat1_reward": 161180.0,
+        "margin_a_minus_b": -132831.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 161180.0,
+          "reward_b": 28349.0,
+          "margin_a_minus_b": 132831.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 43466.0,
+        "seat1_reward": 154687.0,
+        "margin_a_minus_b": -111221.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 154687.0,
+          "reward_b": 43466.0,
+          "margin_a_minus_b": 111221.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 26929.0,
+        "seat1_reward": 141925.0,
+        "margin_a_minus_b": -114996.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 141925.0,
+          "reward_b": 26929.0,
+          "margin_a_minus_b": 114996.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 23195.0,
+        "seat1_reward": 125765.0,
+        "margin_a_minus_b": -102570.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 125765.0,
+          "reward_b": 23195.0,
+          "margin_a_minus_b": 102570.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 32515.0,
+        "seat1_reward": 145594.0,
+        "margin_a_minus_b": -113079.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 145594.0,
+          "reward_b": 32515.0,
+          "margin_a_minus_b": 113079.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 21714.0,
+        "seat1_reward": 132421.0,
+        "margin_a_minus_b": -110707.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 132421.0,
+          "reward_b": 21714.0,
+          "margin_a_minus_b": 110707.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 25611.0,
+        "seat1_reward": 107980.0,
+        "margin_a_minus_b": -82369.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 107980.0,
+          "reward_b": 25611.0,
+          "margin_a_minus_b": 82369.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "V2",
+        "seat1_agent": "V66",
+        "seat0_reward": 32357.0,
+        "seat1_reward": 156536.0,
+        "margin_a_minus_b": -124179.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 156536.0,
+          "reward_b": 32357.0,
+          "margin_a_minus_b": 124179.0,
+          "winner": "V66"
+        }
+      }
+    ]
+  },
+  "V66_vs_V54": {
+    "agent_a": {
+      "name": "V66",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\external_repos\\kaggriculture-v66-agent\\main.py",
+      "sha256": "a7059fd4cdde05bbab05c140c90ed9f386f44a050574514399bd97e030a150b3"
+    },
+    "agent_b": {
+      "name": "V54",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\external_repos\\lixingtao123-Kaggriculture\\variant_v54_h3q4\\main.py",
+      "sha256": "ef9b77603d1110126a133f972ca2155aa124a30fa3639f2f166664e0ba3361fe"
+    },
+    "orientation_a_p0_b_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 92903.0,
+        "seat1_reward": 65011.0,
+        "margin_a_minus_b": 27892.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 76360.0,
+        "seat1_reward": 84099.0,
+        "margin_a_minus_b": -7739.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 139907.0,
+        "seat1_reward": 139144.0,
+        "margin_a_minus_b": 763.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 62280.0,
+        "seat1_reward": 61073.0,
+        "margin_a_minus_b": 1207.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 93380.0,
+        "seat1_reward": 90525.0,
+        "margin_a_minus_b": 2855.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 41281.0,
+        "seat1_reward": 34856.0,
+        "margin_a_minus_b": 6425.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 104125.0,
+        "seat1_reward": 106550.0,
+        "margin_a_minus_b": -2425.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 141702.0,
+        "seat1_reward": 141247.0,
+        "margin_a_minus_b": 455.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 44145.0,
+        "seat1_reward": 43141.0,
+        "margin_a_minus_b": 1004.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "V66",
+        "seat1_agent": "V54",
+        "seat0_reward": 48095.0,
+        "seat1_reward": 47811.0,
+        "margin_a_minus_b": 284.0,
+        "winner": "V66",
+        "error": null
+      }
+    ],
+    "orientation_b_p0_a_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 65011.0,
+        "seat1_reward": 92903.0,
+        "margin_a_minus_b": -27892.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 92903.0,
+          "reward_b": 65011.0,
+          "margin_a_minus_b": 27892.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 84099.0,
+        "seat1_reward": 76360.0,
+        "margin_a_minus_b": 7739.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 76360.0,
+          "reward_b": 84099.0,
+          "margin_a_minus_b": -7739.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 139144.0,
+        "seat1_reward": 139907.0,
+        "margin_a_minus_b": -763.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 139907.0,
+          "reward_b": 139144.0,
+          "margin_a_minus_b": 763.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 61073.0,
+        "seat1_reward": 62280.0,
+        "margin_a_minus_b": -1207.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 62280.0,
+          "reward_b": 61073.0,
+          "margin_a_minus_b": 1207.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 90525.0,
+        "seat1_reward": 93380.0,
+        "margin_a_minus_b": -2855.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 93380.0,
+          "reward_b": 90525.0,
+          "margin_a_minus_b": 2855.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 34856.0,
+        "seat1_reward": 41281.0,
+        "margin_a_minus_b": -6425.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 41281.0,
+          "reward_b": 34856.0,
+          "margin_a_minus_b": 6425.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 106550.0,
+        "seat1_reward": 104125.0,
+        "margin_a_minus_b": 2425.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 104125.0,
+          "reward_b": 106550.0,
+          "margin_a_minus_b": -2425.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 141247.0,
+        "seat1_reward": 141702.0,
+        "margin_a_minus_b": -455.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 141702.0,
+          "reward_b": 141247.0,
+          "margin_a_minus_b": 455.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 43141.0,
+        "seat1_reward": 44145.0,
+        "margin_a_minus_b": -1004.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 44145.0,
+          "reward_b": 43141.0,
+          "margin_a_minus_b": 1004.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "V54",
+        "seat1_agent": "V66",
+        "seat0_reward": 47811.0,
+        "seat1_reward": 48095.0,
+        "margin_a_minus_b": -284.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 48095.0,
+          "reward_b": 47811.0,
+          "margin_a_minus_b": 284.0,
+          "winner": "V66"
+        }
+      }
+    ]
+  },
+  "V66_vs_Titan": {
+    "agent_a": {
+      "name": "V66",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\external_repos\\kaggriculture-v66-agent\\main.py",
+      "sha256": "a7059fd4cdde05bbab05c140c90ed9f386f44a050574514399bd97e030a150b3"
+    },
+    "agent_b": {
+      "name": "Titan",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\candidates\\slot1_titan_control.py",
+      "sha256": "70ca45bb216830c75e955de6e75462f997decb8060c2ca447dbc9e95dce7fc0f"
+    },
+    "orientation_a_p0_b_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 109325.0,
+        "seat1_reward": 10370.0,
+        "margin_a_minus_b": 98955.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 154426.0,
+        "seat1_reward": 12732.0,
+        "margin_a_minus_b": 141694.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 173172.0,
+        "seat1_reward": 9546.0,
+        "margin_a_minus_b": 163626.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 171331.0,
+        "seat1_reward": 9732.0,
+        "margin_a_minus_b": 161599.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 166198.0,
+        "seat1_reward": 10247.0,
+        "margin_a_minus_b": 155951.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 143299.0,
+        "seat1_reward": 9256.0,
+        "margin_a_minus_b": 134043.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 183721.0,
+        "seat1_reward": 9445.0,
+        "margin_a_minus_b": 174276.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 191213.0,
+        "seat1_reward": 10496.0,
+        "margin_a_minus_b": 180717.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 188752.0,
+        "seat1_reward": 10309.0,
+        "margin_a_minus_b": 178443.0,
+        "winner": "V66",
+        "error": null
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "V66",
+        "seat1_agent": "Titan",
+        "seat0_reward": 180663.0,
+        "seat1_reward": 6621.0,
+        "margin_a_minus_b": 174042.0,
+        "winner": "V66",
+        "error": null
+      }
+    ],
+    "orientation_b_p0_a_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 10402.0,
+        "seat1_reward": 157439.0,
+        "margin_a_minus_b": -147037.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 157439.0,
+          "reward_b": 10402.0,
+          "margin_a_minus_b": 147037.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 12732.0,
+        "seat1_reward": 154426.0,
+        "margin_a_minus_b": -141694.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 154426.0,
+          "reward_b": 12732.0,
+          "margin_a_minus_b": 141694.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 9546.0,
+        "seat1_reward": 173172.0,
+        "margin_a_minus_b": -163626.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 173172.0,
+          "reward_b": 9546.0,
+          "margin_a_minus_b": 163626.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 9760.0,
+        "seat1_reward": 171331.0,
+        "margin_a_minus_b": -161571.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 171331.0,
+          "reward_b": 9760.0,
+          "margin_a_minus_b": 161571.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 10247.0,
+        "seat1_reward": 166198.0,
+        "margin_a_minus_b": -155951.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 166198.0,
+          "reward_b": 10247.0,
+          "margin_a_minus_b": 155951.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 9256.0,
+        "seat1_reward": 143299.0,
+        "margin_a_minus_b": -134043.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 143299.0,
+          "reward_b": 9256.0,
+          "margin_a_minus_b": 134043.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 9445.0,
+        "seat1_reward": 183721.0,
+        "margin_a_minus_b": -174276.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 183721.0,
+          "reward_b": 9445.0,
+          "margin_a_minus_b": 174276.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 12828.0,
+        "seat1_reward": 162787.0,
+        "margin_a_minus_b": -149959.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 162787.0,
+          "reward_b": 12828.0,
+          "margin_a_minus_b": 149959.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 10317.0,
+        "seat1_reward": 178735.0,
+        "margin_a_minus_b": -168418.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 178735.0,
+          "reward_b": 10317.0,
+          "margin_a_minus_b": 168418.0,
+          "winner": "V66"
+        }
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "Titan",
+        "seat1_agent": "V66",
+        "seat0_reward": 9342.0,
+        "seat1_reward": 187807.0,
+        "margin_a_minus_b": -178465.0,
+        "winner": "V66",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 187807.0,
+          "reward_b": 9342.0,
+          "margin_a_minus_b": 178465.0,
+          "winner": "V66"
+        }
+      }
+    ]
+  },
+  "V54_vs_V2": {
+    "agent_a": {
+      "name": "V54",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\external_repos\\lixingtao123-Kaggriculture\\variant_v54_h3q4\\main.py",
+      "sha256": "ef9b77603d1110126a133f972ca2155aa124a30fa3639f2f166664e0ba3361fe"
+    },
+    "agent_b": {
+      "name": "V2",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\agents\\slot4_control_frozen_v2.py",
+      "sha256": "d5cc1fb9f93926812849d499e1e24adc25fef1f7552debe28789d8ce0bba7845"
+    },
+    "orientation_a_p0_b_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 130916.0,
+        "seat1_reward": 20998.0,
+        "margin_a_minus_b": 109918.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 132256.0,
+        "seat1_reward": 30600.0,
+        "margin_a_minus_b": 101656.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 112213.0,
+        "seat1_reward": 29935.0,
+        "margin_a_minus_b": 82278.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 117103.0,
+        "seat1_reward": 20969.0,
+        "margin_a_minus_b": 96134.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 163762.0,
+        "seat1_reward": 40481.0,
+        "margin_a_minus_b": 123281.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 123021.0,
+        "seat1_reward": 29791.0,
+        "margin_a_minus_b": 93230.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 153056.0,
+        "seat1_reward": 43966.0,
+        "margin_a_minus_b": 109090.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 110770.0,
+        "seat1_reward": 10895.0,
+        "margin_a_minus_b": 99875.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 123153.0,
+        "seat1_reward": 24031.0,
+        "margin_a_minus_b": 99122.0,
+        "winner": "V54",
+        "error": null
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "V54",
+        "seat1_agent": "V2",
+        "seat0_reward": 125957.0,
+        "seat1_reward": 28467.0,
+        "margin_a_minus_b": 97490.0,
+        "winner": "V54",
+        "error": null
+      }
+    ],
+    "orientation_b_p0_a_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 20998.0,
+        "seat1_reward": 130916.0,
+        "margin_a_minus_b": -109918.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 130916.0,
+          "reward_b": 20998.0,
+          "margin_a_minus_b": 109918.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 30600.0,
+        "seat1_reward": 132256.0,
+        "margin_a_minus_b": -101656.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 132256.0,
+          "reward_b": 30600.0,
+          "margin_a_minus_b": 101656.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 29935.0,
+        "seat1_reward": 112213.0,
+        "margin_a_minus_b": -82278.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 112213.0,
+          "reward_b": 29935.0,
+          "margin_a_minus_b": 82278.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 26055.0,
+        "seat1_reward": 126666.0,
+        "margin_a_minus_b": -100611.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 126666.0,
+          "reward_b": 26055.0,
+          "margin_a_minus_b": 100611.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 40481.0,
+        "seat1_reward": 163762.0,
+        "margin_a_minus_b": -123281.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 163762.0,
+          "reward_b": 40481.0,
+          "margin_a_minus_b": 123281.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 29791.0,
+        "seat1_reward": 123021.0,
+        "margin_a_minus_b": -93230.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 123021.0,
+          "reward_b": 29791.0,
+          "margin_a_minus_b": 93230.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 43966.0,
+        "seat1_reward": 153056.0,
+        "margin_a_minus_b": -109090.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 153056.0,
+          "reward_b": 43966.0,
+          "margin_a_minus_b": 109090.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 25991.0,
+        "seat1_reward": 135029.0,
+        "margin_a_minus_b": -109038.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 135029.0,
+          "reward_b": 25991.0,
+          "margin_a_minus_b": 109038.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 24056.0,
+        "seat1_reward": 113919.0,
+        "margin_a_minus_b": -89863.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 113919.0,
+          "reward_b": 24056.0,
+          "margin_a_minus_b": 89863.0,
+          "winner": "V54"
+        }
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "V2",
+        "seat1_agent": "V54",
+        "seat0_reward": 28467.0,
+        "seat1_reward": 125957.0,
+        "margin_a_minus_b": -97490.0,
+        "winner": "V54",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 125957.0,
+          "reward_b": 28467.0,
+          "margin_a_minus_b": 97490.0,
+          "winner": "V54"
+        }
+      }
+    ]
+  },
+  "Okami_vs_V2": {
+    "agent_a": {
+      "name": "Okami",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\external_repos\\okami001-Kaggriculture\\main.py",
+      "sha256": "419d7d2c3740755298a2f1965c23e7b26c755fc8af5fc2bb17013016ef469f60"
+    },
+    "agent_b": {
+      "name": "V2",
+      "path": "C:\\Users\\Sundareswaran\\Kagriculture\\agents\\slot4_control_frozen_v2.py",
+      "sha256": "d5cc1fb9f93926812849d499e1e24adc25fef1f7552debe28789d8ce0bba7845"
+    },
+    "orientation_a_p0_b_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 68553.0,
+        "seat1_reward": 47076.0,
+        "margin_a_minus_b": 21477.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 70513.0,
+        "seat1_reward": 25332.0,
+        "margin_a_minus_b": 45181.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 71374.0,
+        "seat1_reward": 45830.0,
+        "margin_a_minus_b": 25544.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 78689.0,
+        "seat1_reward": 51722.0,
+        "margin_a_minus_b": 26967.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 58523.0,
+        "seat1_reward": 35443.0,
+        "margin_a_minus_b": 23080.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 86481.0,
+        "seat1_reward": 50786.0,
+        "margin_a_minus_b": 35695.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 85752.0,
+        "seat1_reward": 58750.0,
+        "margin_a_minus_b": 27002.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 33818.0,
+        "seat1_reward": 15674.0,
+        "margin_a_minus_b": 18144.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 71924.0,
+        "seat1_reward": 57139.0,
+        "margin_a_minus_b": 14785.0,
+        "winner": "Okami",
+        "error": null
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "Okami",
+        "seat1_agent": "V2",
+        "seat0_reward": 60612.0,
+        "seat1_reward": 40032.0,
+        "margin_a_minus_b": 20580.0,
+        "winner": "Okami",
+        "error": null
+      }
+    ],
+    "orientation_b_p0_a_p1": [
+      {
+        "seed": 42,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 40419.0,
+        "seat1_reward": 60322.0,
+        "margin_a_minus_b": -19903.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 60322.0,
+          "reward_b": 40419.0,
+          "margin_a_minus_b": 19903.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 101,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 21259.0,
+        "seat1_reward": 66340.0,
+        "margin_a_minus_b": -45081.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 66340.0,
+          "reward_b": 21259.0,
+          "margin_a_minus_b": 45081.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 202,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 49235.0,
+        "seat1_reward": 77244.0,
+        "margin_a_minus_b": -28009.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 77244.0,
+          "reward_b": 49235.0,
+          "margin_a_minus_b": 28009.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 303,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 49527.0,
+        "seat1_reward": 64081.0,
+        "margin_a_minus_b": -14554.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 64081.0,
+          "reward_b": 49527.0,
+          "margin_a_minus_b": 14554.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 404,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 27264.0,
+        "seat1_reward": 66558.0,
+        "margin_a_minus_b": -39294.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 66558.0,
+          "reward_b": 27264.0,
+          "margin_a_minus_b": 39294.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 505,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 51484.0,
+        "seat1_reward": 89125.0,
+        "margin_a_minus_b": -37641.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 89125.0,
+          "reward_b": 51484.0,
+          "margin_a_minus_b": 37641.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 606,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 61669.0,
+        "seat1_reward": 71432.0,
+        "margin_a_minus_b": -9763.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 71432.0,
+          "reward_b": 61669.0,
+          "margin_a_minus_b": 9763.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 707,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 15901.0,
+        "seat1_reward": 30300.0,
+        "margin_a_minus_b": -14399.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 30300.0,
+          "reward_b": 15901.0,
+          "margin_a_minus_b": 14399.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 808,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 68344.0,
+        "seat1_reward": 95139.0,
+        "margin_a_minus_b": -26795.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 95139.0,
+          "reward_b": 68344.0,
+          "margin_a_minus_b": 26795.0,
+          "winner": "Okami"
+        }
+      },
+      {
+        "seed": 909,
+        "seat0_agent": "V2",
+        "seat1_agent": "Okami",
+        "seat0_reward": 11826.0,
+        "seat1_reward": 39585.0,
+        "margin_a_minus_b": -27759.0,
+        "winner": "Okami",
+        "error": null,
+        "perspective_a": {
+          "reward_a": 39585.0,
+          "reward_b": 11826.0,
+          "margin_a_minus_b": 27759.0,
+          "winner": "Okami"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+[
+  {
+    "layer": 0,
+    "file": "forensic_verification/extracted_sources/layer_0.py",
+    "size_bytes": 171508,
+    "line_count": 1972,
+    "sha256": "9c2d1b6345242892de63b257d1b32d0cb259c3d6aa64a864056b7fd5caa9d904",
+    "header": "\"\"\"v51: current-meta capital-flow hybrid.",
+    "functions_count": 3,
+    "functions_sample": [
+      "agent",
+      "_kaggle_submission_entrypoint",
+      "agent"
+    ],
+    "route_symbols": [
+      "_V51_ROUTE",
+      "_V54_ROUTE"
+    ],
+    "has_nested_source": true,
+    "nested_source_var": "_V51_BASE_SOURCE"
+  },
+  {
+    "layer": 1,
+    "file": "forensic_verification/extracted_sources/layer_1.py",
+    "size_bytes": 137521,
+    "line_count": 1613,
+    "sha256": "3b36352aa26f4fc6c58f11a543cda4734b29156516b6aae8cfbfd00eea512427",
+    "header": "\"\"\"v50: shared-prefix anti-lineage suffix hybrid.\"\"\"",
+    "functions_count": 4,
+    "functions_sample": [
+      "_v50_package",
+      "_v50_load",
+      "agent",
+      "_kaggle_submission_entrypoint"
+    ],
+    "route_symbols": [
+      "_V50_GIN_ROUTE"
+    ],
+    "has_nested_source": true,
+    "nested_source_var": "_V50_BASE_SOURCE"
+  },
+  {
+    "layer": 2,
+    "file": "forensic_verification/extracted_sources/layer_2.py",
+    "size_bytes": 117135,
+    "line_count": 1338,
+    "sha256": "1f33ff8d7d2bcfb71813c0f02e78d84e1136688e11fac2abb0ab0ab7766c5310",
+    "header": "\"\"\"v49: observation-conditioned residual action-value engine.\"\"\"",
+    "functions_count": 4,
+    "functions_sample": [
+      "_v49_package",
+      "_v49_load",
+      "agent",
+      "_kaggle_submission_entrypoint"
+    ],
+    "route_symbols": [
+      "_V49_ROUTE_CONFIG",
+      "_V49_ROUTES"
+    ],
+    "has_nested_source": false,
+    "nested_source_var": null
+  }
+]

@@ -1,0 +1,337 @@
+{
+  "seed": 42,
+  "steps": 720,
+  "action_hash_run1": "728da23edc007de4eb4b48f4826ec30131e11f77c309d3620bef9eb6e7588825",
+  "action_hash_run2": "728da23edc007de4eb4b48f4826ec30131e11f77c309d3620bef9eb6e7588825",
+  "state_hash_run1": "68f034a55ab3eb69de0a9fb735ecc0a20de2c3ab02cee81aa15f784b5819e375",
+  "state_hash_run2": "68f034a55ab3eb69de0a9fb735ecc0a20de2c3ab02cee81aa15f784b5819e375",
+  "hashes_identical": true,
+  "final_reward_run1": [
+    2950.0,
+    3000.0
+  ],
+  "final_reward_run2": [
+    2950.0,
+    3000.0
+  ],
+  "run1_sample_step_300": {
+    "t": 300,
+    "step": 301,
+    "bank0": 2950.0,
+    "bank1": 3000.0,
+    "market": {
+      "inventory": {
+        "WHEAT": 9907,
+        "CARROT": 9849,
+        "TOMATO": 9929,
+        "STRAWBERRY": 9907,
+        "MELON": 9987,
+        "EGG": 9987,
+        "MILK": 9965,
+        "WOOL": 9979,
+        "FERTILIZER": 10000
+      },
+      "prices": {
+        "WHEAT": 35,
+        "CARROT": 47,
+        "TOMATO": 69,
+        "STRAWBERRY": 201,
+        "MELON": 273,
+        "EGG": 51,
+        "MILK": 211,
+        "WOOL": 227,
+        "FERTILIZER": 100
+      }
+    },
+    "farm0_money": 2950.0,
+    "farm0_inv": null,
+    "farm0_tiles": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        null,
+        {
+          "kind": "WEED"
+        },
+        null,
+        null,
+        null,
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        null,
+        {
+          "kind": "WEED"
+        },
+        null,
+        null,
+        {
+          "kind": "WEED"
+        },
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ]
+    ]
+  },
+  "run2_sample_step_300": {
+    "t": 300,
+    "step": 301,
+    "bank0": 2950.0,
+    "bank1": 3000.0,
+    "market": {
+      "inventory": {
+        "WHEAT": 9907,
+        "CARROT": 9849,
+        "TOMATO": 9929,
+        "STRAWBERRY": 9907,
+        "MELON": 9987,
+        "EGG": 9987,
+        "MILK": 9965,
+        "WOOL": 9979,
+        "FERTILIZER": 10000
+      },
+      "prices": {
+        "WHEAT": 35,
+        "CARROT": 47,
+        "TOMATO": 69,
+        "STRAWBERRY": 201,
+        "MELON": 273,
+        "EGG": 51,
+        "MILK": 211,
+        "WOOL": 227,
+        "FERTILIZER": 100
+      }
+    },
+    "farm0_money": 2950.0,
+    "farm0_inv": null,
+    "farm0_tiles": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        null,
+        {
+          "kind": "WEED"
+        },
+        null,
+        null,
+        null,
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        null,
+        {
+          "kind": "WEED"
+        },
+        null,
+        null,
+        {
+          "kind": "WEED"
+        },
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ],
+      [
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED",
+        "LOCKED"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,722 @@
+[
+  {
+    "file": "a2_public_pool.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_a\\main.py",
+    "opponent": "",
+    "games": 32,
+    "win_rate": 1.0,
+    "wins": 32,
+    "mean_margin": 13359.46875,
+    "mean_reward": null
+  },
+  {
+    "file": "andrey_v16_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_andrey_v11\\output\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -32006.75,
+    "mean_reward": null
+  },
+  {
+    "file": "andrey_v16_vs_h3q4.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_andrey_v11\\output\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -31999.75,
+    "mean_reward": null
+  },
+  {
+    "file": "andrey_v16_vs_public2900.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_andrey_v11\\output\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -16132.75,
+    "mean_reward": null
+  },
+  {
+    "file": "auto_fermers_route_base_original_seed.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\auto_fermers_route_base\\main.py",
+    "opponent": "",
+    "games": 2,
+    "win_rate": 1.0,
+    "wins": 2,
+    "mean_margin": 6343.0,
+    "mean_reward": null
+  },
+  {
+    "file": "auto_fermers_route_base_vs_h3.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\auto_fermers_route_base\\main.py",
+    "opponent": "",
+    "games": 4,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -14920.0,
+    "mean_reward": null
+  },
+  {
+    "file": "auto_fermers_route_h3_smoke.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\auto_fermers_route_h3\\main.py",
+    "opponent": "",
+    "games": 2,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -15628.0,
+    "mean_reward": null
+  },
+  {
+    "file": "auto_route_shop_signature_scan.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\auto_fermers_route_base\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.625,
+    "wins": 10,
+    "mean_margin": 1515.5,
+    "mean_reward": null
+  },
+  {
+    "file": "auto_route_shop_signature_scan_07_14.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\auto_fermers_route_base\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.125,
+    "wins": 2,
+    "mean_margin": -8803.3125,
+    "mean_reward": null
+  },
+  {
+    "file": "a_online_loss_replay_pool.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_a\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 7,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "a_vs_baseline.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_a\\main.py",
+    "opponent": "",
+    "games": 24,
+    "win_rate": 0.5,
+    "wins": 12,
+    "mean_margin": 117.33333333333333,
+    "mean_reward": null
+  },
+  {
+    "file": "a_vs_public_2900.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_a\\main.py",
+    "opponent": "",
+    "games": 24,
+    "win_rate": 0.9166666666666666,
+    "wins": 22,
+    "mean_margin": 9572.708333333334,
+    "mean_reward": null
+  },
+  {
+    "file": "b2_public_pool.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_b\\main.py",
+    "opponent": "",
+    "games": 32,
+    "win_rate": 1.0,
+    "wins": 32,
+    "mean_margin": 13359.46875,
+    "mean_reward": null
+  },
+  {
+    "file": "baseline.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_baseline\\main.py",
+    "opponent": "",
+    "games": 32,
+    "win_rate": 1.0,
+    "wins": 32,
+    "mean_margin": 13320.78125,
+    "mean_reward": null
+  },
+  {
+    "file": "b_vs_baseline.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_b\\main.py",
+    "opponent": "",
+    "games": 24,
+    "win_rate": 0.7916666666666666,
+    "wins": 19,
+    "mean_margin": 743.25,
+    "mean_reward": null
+  },
+  {
+    "file": "b_vs_public_2900.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_b\\main.py",
+    "opponent": "",
+    "games": 24,
+    "win_rate": 0.9166666666666666,
+    "wins": 22,
+    "mean_margin": 9572.708333333334,
+    "mean_reward": null
+  },
+  {
+    "file": "c1_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2530_current\\output\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 0,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "c1_c2_replay_analysis.json",
+    "candidate": "aggregate",
+    "opponent": "replay",
+    "games": 24,
+    "win_rate": 0.6666666666666666,
+    "wins": 16,
+    "mean_margin": 22193.916666666668,
+    "mean_reward": 93790.58333333333
+  },
+  {
+    "file": "c1_loss_trace_reproduction.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2530_current\\output\\main.py",
+    "opponent": "",
+    "games": 5,
+    "win_rate": null,
+    "wins": 5,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "c1_single_trace_reproduction.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2530_current\\output\\main.py",
+    "opponent": "",
+    "games": 1,
+    "win_rate": null,
+    "wins": 0,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "c2_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h3q4\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 0,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "catchup_h4_g500_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\catchup_h4_g500\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 0,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "catchup_h4_g500_smoke.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\catchup_h4_g500\\main.py",
+    "opponent": "",
+    "games": 2,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": 0.0,
+    "mean_reward": null
+  },
+  {
+    "file": "catchup_h4_g500_vs_c1_public2900.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\catchup_h4_g500\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.8125,
+    "wins": 13,
+    "mean_margin": 7906.0625,
+    "mean_reward": null
+  },
+  {
+    "file": "current2530_vs_a.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2530_current\\output\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 1.0,
+    "wins": 16,
+    "mean_margin": 25027.4375,
+    "mean_reward": null
+  },
+  {
+    "file": "current2530_vs_b.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2530_current\\output\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 1.0,
+    "wins": 16,
+    "mean_margin": 25027.4375,
+    "mean_reward": null
+  },
+  {
+    "file": "current2530_vs_public2900.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2530_current\\output\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 1.0,
+    "wins": 16,
+    "mean_margin": 13814.375,
+    "mean_reward": null
+  },
+  {
+    "file": "defer2_native_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\defer2_native\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 0,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "drip_h3q4_smoke.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_drip_h3q4\\main.py",
+    "opponent": "",
+    "games": 2,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -2131.5,
+    "mean_reward": null
+  },
+  {
+    "file": "drip_h3q4_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_drip_h3q4\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -141629.625,
+    "mean_reward": null
+  },
+  {
+    "file": "drip_h3q4_vs_h3q4.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_drip_h3q4\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -141629.625,
+    "mean_reward": null
+  },
+  {
+    "file": "fert_front_h3q4_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_fert_front_h3q4\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 0.25,
+    "wins": 2,
+    "mean_margin": -369.25,
+    "mean_reward": null
+  },
+  {
+    "file": "fert_front_h3q4_vs_h3q4.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_fert_front_h3q4\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -453.75,
+    "mean_reward": null
+  },
+  {
+    "file": "fert_h2q4_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_fert_h2q4\\main.py",
+    "opponent": "",
+    "games": 12,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": 0.0,
+    "mean_reward": null
+  },
+  {
+    "file": "fert_h3q4_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_fert_h3q4\\main.py",
+    "opponent": "",
+    "games": 12,
+    "win_rate": 0.3333333333333333,
+    "wins": 4,
+    "mean_margin": 34.5,
+    "mean_reward": null
+  },
+  {
+    "file": "fert_h3q4_vs_h3q4.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_fert_h3q4\\main.py",
+    "opponent": "",
+    "games": 12,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": 0.0,
+    "mean_reward": null
+  },
+  {
+    "file": "h1q4_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h1q4\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 0.5,
+    "wins": 4,
+    "mean_margin": -7.0,
+    "mean_reward": null
+  },
+  {
+    "file": "h2q2_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h2q2\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 0.5,
+    "wins": 4,
+    "mean_margin": -5.25,
+    "mean_reward": null
+  },
+  {
+    "file": "h2q6_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h2q6\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 0.25,
+    "wins": 2,
+    "mean_margin": 25.5,
+    "mean_reward": null
+  },
+  {
+    "file": "h3q4_vs_a.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h3q4\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 1.0,
+    "wins": 16,
+    "mean_margin": 24007.0,
+    "mean_reward": null
+  },
+  {
+    "file": "h3q4_vs_b.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h3q4\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 1.0,
+    "wins": 16,
+    "mean_margin": 24007.0,
+    "mean_reward": null
+  },
+  {
+    "file": "h3q4_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h3q4\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 1.0,
+    "wins": 8,
+    "mean_margin": 51.75,
+    "mean_reward": null
+  },
+  {
+    "file": "h3q4_vs_current2530_long.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h3q4\\main.py",
+    "opponent": "",
+    "games": 24,
+    "win_rate": 0.5416666666666666,
+    "wins": 13,
+    "mean_margin": 38.25,
+    "mean_reward": null
+  },
+  {
+    "file": "h3q4_vs_public2900.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h3q4\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 1.0,
+    "wins": 16,
+    "mean_margin": 13642.5,
+    "mean_reward": null
+  },
+  {
+    "file": "h3_checkpoint_opponent_scan.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h3q4\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 1.0,
+    "wins": 8,
+    "mean_margin": 22597.75,
+    "mean_reward": null
+  },
+  {
+    "file": "h3_self_seed38.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_v54_h3q4\\main.py",
+    "opponent": "",
+    "games": 2,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": 0.0,
+    "mean_reward": null
+  },
+  {
+    "file": "h4_smoke.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\h4\\main.py",
+    "opponent": "",
+    "games": 2,
+    "win_rate": 0.5,
+    "wins": 1,
+    "mean_margin": 0.0,
+    "mean_reward": null
+  },
+  {
+    "file": "h4_vs_h3_c1.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\h4\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.5,
+    "wins": 8,
+    "mean_margin": 34.5,
+    "mean_reward": null
+  },
+  {
+    "file": "h5_vs_h3_c1.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\h5\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.375,
+    "wins": 6,
+    "mean_margin": 25.25,
+    "mean_reward": null
+  },
+  {
+    "file": "melon2736_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2736_melon\\output\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 0,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "melon2736_vs_a.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2736_melon\\artifact\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -23598.8125,
+    "mean_reward": null
+  },
+  {
+    "file": "melon2736_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2736_melon\\artifact\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -34188.875,
+    "mean_reward": null
+  },
+  {
+    "file": "melon2736_vs_public2900.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2736_melon\\artifact\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -22915.625,
+    "mean_reward": null
+  },
+  {
+    "file": "public2900_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2900\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 0,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "route_only_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\route_only\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 0,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_auto_h3_holdout_15_30.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_auto_h3\\main.py",
+    "opponent": "",
+    "games": 32,
+    "win_rate": 0.21875,
+    "wins": 7,
+    "mean_margin": -2474.625,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_refined_lazy_replay_losses.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 2,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_refined_lazy_sanity.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 0.25,
+    "wins": 2,
+    "mean_margin": 2918.0,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_refined_lazy_vs_c1_stratified.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 10,
+    "win_rate": 0.8,
+    "wins": 8,
+    "mean_margin": 4665.2,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_strict_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 2,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_strict_auto_h3_holdout_31_40.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 20,
+    "win_rate": 0.1,
+    "wins": 2,
+    "mean_margin": 1149.6,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_strict_lazy_bakery_yarn_holdout.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 8,
+    "win_rate": 1.0,
+    "wins": 8,
+    "mean_margin": 7892.75,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_strict_lazy_pet_yarn_holdout.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 6,
+    "win_rate": 1.0,
+    "wins": 6,
+    "mean_margin": 9426.0,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_strict_lazy_triggered_holdout.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.625,
+    "wins": 10,
+    "mean_margin": 1171.875,
+    "mean_reward": null
+  },
+  {
+    "file": "shop_selector_strict_vs_c1_holdout_31_40.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\local_variants\\shop_selector_strict_auto_h3\\main.py",
+    "opponent": "",
+    "games": 20,
+    "win_rate": 0.4,
+    "wins": 8,
+    "mean_margin": 1224.6,
+    "mean_reward": null
+  },
+  {
+    "file": "soil2843v16_vs_current2530.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2843_soil_v16\\output\\main.py",
+    "opponent": "",
+    "games": 16,
+    "win_rate": 0.25,
+    "wins": 4,
+    "mean_margin": -6620.9375,
+    "mean_reward": null
+  },
+  {
+    "file": "soil2843_all_recent_loss_traces.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\public_2843_soil_v16\\output\\main.py",
+    "opponent": "",
+    "games": 7,
+    "win_rate": null,
+    "wins": 2,
+    "mean_margin": null,
+    "mean_reward": null
+  },
+  {
+    "file": "top1_tetsuya_replay_analysis.json",
+    "candidate": "aggregate",
+    "opponent": "replay",
+    "games": 3,
+    "win_rate": 1.0,
+    "wins": 3,
+    "mean_margin": 10294.0,
+    "mean_reward": 117032.33333333333
+  },
+  {
+    "file": "top3_islet_replay_analysis.json",
+    "candidate": "aggregate",
+    "opponent": "replay",
+    "games": 2,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -8330.0,
+    "mean_reward": 98013.0
+  },
+  {
+    "file": "top8_zhyphirus_replay_analysis.json",
+    "candidate": "aggregate",
+    "opponent": "replay",
+    "games": 1,
+    "win_rate": 0.0,
+    "wins": 0,
+    "mean_margin": -14222.0,
+    "mean_reward": 124189.0
+  },
+  {
+    "file": "variant_a.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_a\\main.py",
+    "opponent": "",
+    "games": 32,
+    "win_rate": 1.0,
+    "wins": 32,
+    "mean_margin": 12121.5625,
+    "mean_reward": null
+  },
+  {
+    "file": "variant_b.json",
+    "candidate": "C:\\Users\\86130\\Desktop\\kaggle\\Kaggriculture\\variant_b\\main.py",
+    "opponent": "",
+    "games": 32,
+    "win_rate": 1.0,
+    "wins": 32,
+    "mean_margin": 12121.5625,
+    "mean_reward": null
+  }
+]

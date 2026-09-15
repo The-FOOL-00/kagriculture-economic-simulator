@@ -1,0 +1,262 @@
+{
+  "V66_vs_V2": {
+    "agent_a": "V66",
+    "agent_b": "V2",
+    "orientation_a_as_seat0": {
+      "n_games": 10,
+      "wins_a": 10,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 114486.3,
+      "median_margin": 115416.5,
+      "stdev_margin": 15840.273791474972,
+      "margin_ci95": [
+        104668.39658742053,
+        124304.20341257947
+      ]
+    },
+    "orientation_a_as_seat1": {
+      "n_games": 10,
+      "wins_a": 10,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 114743.8,
+      "median_margin": 114037.5,
+      "stdev_margin": 15493.148383864542,
+      "margin_ci95": [
+        105141.04714408614,
+        124346.55285591386
+      ]
+    },
+    "pooled": {
+      "n_games": 20,
+      "wins_a": 20,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 114615.05,
+      "median_margin": 114996.0,
+      "stdev_margin": 15250.364649566149,
+      "margin_ci95": [
+        107931.28300053443,
+        121298.81699946558
+      ]
+    }
+  },
+  "V66_vs_V54": {
+    "agent_a": "V66",
+    "agent_b": "V54",
+    "orientation_a_as_seat0": {
+      "n_games": 10,
+      "wins_a": 8,
+      "wins_b": 2,
+      "ties": 0,
+      "win_rate_a": 0.8,
+      "win_rate_b": 0.2,
+      "tie_rate": 0.0,
+      "mean_margin": 3072.1,
+      "median_margin": 883.5,
+      "stdev_margin": 9440.602563749131,
+      "margin_ci95": [
+        -2779.2460908309517,
+        8923.446090830952
+      ]
+    },
+    "orientation_a_as_seat1": {
+      "n_games": 10,
+      "wins_a": 8,
+      "wins_b": 2,
+      "ties": 0,
+      "win_rate_a": 0.8,
+      "win_rate_b": 0.2,
+      "tie_rate": 0.0,
+      "mean_margin": 3072.1,
+      "median_margin": 883.5,
+      "stdev_margin": 9440.602563749131,
+      "margin_ci95": [
+        -2779.2460908309517,
+        8923.446090830952
+      ]
+    },
+    "pooled": {
+      "n_games": 20,
+      "wins_a": 16,
+      "wins_b": 4,
+      "ties": 0,
+      "win_rate_a": 0.8,
+      "win_rate_b": 0.2,
+      "tie_rate": 0.0,
+      "mean_margin": 3072.1,
+      "median_margin": 883.5,
+      "stdev_margin": 9188.807785332625,
+      "margin_ci95": [
+        -955.072572675876,
+        7099.272572675876
+      ]
+    }
+  },
+  "V66_vs_Titan": {
+    "agent_a": "V66",
+    "agent_b": "Titan",
+    "orientation_a_as_seat0": {
+      "n_games": 10,
+      "wins_a": 10,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 156334.6,
+      "median_margin": 162612.5,
+      "stdev_margin": 25393.42717756353,
+      "margin_ci95": [
+        140595.59077417056,
+        172073.60922582945
+      ]
+    },
+    "orientation_a_as_seat1": {
+      "n_games": 10,
+      "wins_a": 10,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 157504.0,
+      "median_margin": 158761.0,
+      "stdev_margin": 14387.764161104238,
+      "margin_ci95": [
+        148586.37138345948,
+        166421.62861654052
+      ]
+    },
+    "pooled": {
+      "n_games": 20,
+      "wins_a": 20,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 156919.3,
+      "median_margin": 161585.0,
+      "stdev_margin": 20096.271707380005,
+      "margin_ci95": [
+        148111.72059212654,
+        165726.87940787344
+      ]
+    }
+  },
+  "V54_vs_V2": {
+    "agent_a": "V54",
+    "agent_b": "V2",
+    "orientation_a_as_seat0": {
+      "n_games": 10,
+      "wins_a": 10,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 101207.4,
+      "median_margin": 99498.5,
+      "stdev_margin": 11020.681176769429,
+      "margin_ci95": [
+        94376.71103851331,
+        108038.08896148668
+      ]
+    },
+    "orientation_a_as_seat1": {
+      "n_games": 10,
+      "wins_a": 10,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 101645.5,
+      "median_margin": 101133.5,
+      "stdev_margin": 11783.629116985423,
+      "margin_ci95": [
+        94341.93100597888,
+        108949.06899402112
+      ]
+    },
+    "pooled": {
+      "n_games": 20,
+      "wins_a": 20,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 101426.45,
+      "median_margin": 100243.0,
+      "stdev_margin": 11106.526334002667,
+      "margin_ci95": [
+        96558.80021616258,
+        106294.09978383742
+      ]
+    }
+  },
+  "Okami_vs_V2": {
+    "agent_a": "Okami",
+    "agent_b": "V2",
+    "orientation_a_as_seat0": {
+      "n_games": 10,
+      "wins_a": 10,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 25845.5,
+      "median_margin": 24312.0,
+      "stdev_margin": 8879.848612948808,
+      "margin_ci95": [
+        20341.712808696582,
+        31349.287191303418
+      ]
+    },
+    "orientation_a_as_seat1": {
+      "n_games": 10,
+      "wins_a": 10,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 26319.8,
+      "median_margin": 27277.0,
+      "stdev_margin": 11782.638072840715,
+      "margin_ci95": [
+        19016.845261503655,
+        33622.75473849635
+      ]
+    },
+    "pooled": {
+      "n_games": 20,
+      "wins_a": 20,
+      "wins_b": 0,
+      "ties": 0,
+      "win_rate_a": 1.0,
+      "win_rate_b": 0.0,
+      "tie_rate": 0.0,
+      "mean_margin": 26082.65,
+      "median_margin": 26169.5,
+      "stdev_margin": 10157.354723367487,
+      "margin_ci95": [
+        21630.99301592646,
+        30534.306984073544
+      ]
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "hardware": {
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-1355U",
+    "physical_cores": 10,
+    "logical_cores": 12,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "compiler_version": "MSVC v18.6.1 (14.51.36231)",
+    "compiler_flags": "/O2 /W3 /GL /DNDEBUG /MD /std:c++17"
+  },
+  "benchmarks": {
+    "L0_single_thread": {
+      "episodes": 2000,
+      "warmup": 200,
+      "threads": 1,
+      "seed_mode": "varied (2000 distinct seeds)",
+      "runs": [
+        {
+          "run": 1,
+          "episodes": 2000,
+          "wall_seconds": 0.7230538000003435,
+          "episodes_per_second": 2766.045901424002,
+          "ms_per_episode": 0.36152690000017174
+        },
+        {
+          "run": 2,
+          "episodes": 2000,
+          "wall_seconds": 0.7268554000002041,
+          "episodes_per_second": 2751.578924775737,
+          "ms_per_episode": 0.36342770000010205
+        },
+        {
+          "run": 3,
+          "episodes": 2000,
+          "wall_seconds": 0.7348786000002292,
+          "episodes_per_second": 2721.5379519819685,
+          "ms_per_episode": 0.3674393000001146
+        }
+      ],
+      "mean_eps": 2746.3875927272356,
+      "median_eps": 2751.578924775737,
+      "min_eps": 2721.5379519819685,
+      "max_eps": 2766.045901424002,
+      "includes_process_startup": false,
+      "includes_python_overhead": "minimal (run_many GIL released wrapper)"
+    },
+    "L0_multi_thread": {
+      "episodes": 10000,
+      "warmup": 1000,
+      "threads": 0,
+      "seed_mode": "varied (10000 distinct seeds)",
+      "runs": [
+        {
+          "run": 1,
+          "episodes": 10000,
+          "wall_seconds": 0.6548981999994794,
+          "episodes_per_second_total": 15269.54876346881,
+          "episodes_per_second_per_core": 1272.4623969557342,
+          "ms_per_episode_total": 0.06548981999994795
+        },
+        {
+          "run": 2,
+          "episodes": 10000,
+          "wall_seconds": 0.6530502999994496,
+          "episodes_per_second_total": 15312.756153711938,
+          "episodes_per_second_per_core": 1276.0630128093283,
+          "ms_per_episode_total": 0.06530502999994496
+        },
+        {
+          "run": 3,
+          "episodes": 10000,
+          "wall_seconds": 0.651375100000223,
+          "episodes_per_second_total": 15352.137347584481,
+          "episodes_per_second_per_core": 1279.3447789653735,
+          "ms_per_episode_total": 0.0651375100000223
+        }
+      ],
+      "mean_eps_total": 15311.480754921744,
+      "median_eps_total": 15312.756153711938,
+      "min_eps_total": 15269.54876346881,
+      "max_eps_total": 15352.137347584481,
+      "mean_eps_per_core": 1275.956729576812,
+      "includes_process_startup": false,
+      "includes_python_overhead": "minimal (GIL released C++ thread pool)"
+    },
+    "L1_step_mode": {
+      "episodes": 50,
+      "threads": 1,
+      "runs": [
+        {
+          "run": 1,
+          "episodes": 50,
+          "wall_seconds": 0.04211710000072344,
+          "episodes_per_second": 1187.16625786536,
+          "ms_per_episode": 0.8423420000144688
+        },
+        {
+          "run": 2,
+          "episodes": 50,
+          "wall_seconds": 0.0383044999998674,
+          "episodes_per_second": 1305.3296610104057,
+          "ms_per_episode": 0.7660899999973481
+        },
+        {
+          "run": 3,
+          "episodes": 50,
+          "wall_seconds": 0.03863259999980073,
+          "episodes_per_second": 1294.2437216303822,
+          "ms_per_episode": 0.7726519999960146
+        }
+      ],
+      "mean_eps": 1262.2465468353826,
+      "median_eps": 1294.2437216303822,
+      "min_eps": 1187.16625786536,
+      "max_eps": 1305.3296610104057,
+      "includes_process_startup": false,
+      "includes_python_overhead": "Full Python loop crossing per step"
+    }
+  }
+}

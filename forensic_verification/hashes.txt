@@ -1,0 +1,36 @@
+# FORENSIC SHA256 ARTIFACT HASH LEDGER
+# Generated during Adversarial Verification Audit
+
+## 1. Protected Baseline & Candidate Agents
+a7059fd4cdde05bbab05c140c90ed9f386f44a050574514399bd97e030a150b3  V66 Public Submission           (external_repos\kaggriculture-v66-agent\main.py)
+643dadf8e01d02c5e797bb80e73d12b27bdc8f77924e2ac6edbf9d39fb4daec9  V66 Meta Closed Loop            (external_repos\kaggriculture-v66-agent\candidate_v66_meta_closed_loop.py)
+ef9b77603d1110126a133f972ca2155aa124a30fa3639f2f166664e0ba3361fe  V54 h3q4 Candidate              (external_repos\lixingtao123-Kaggriculture\variant_v54_h3q4\main.py)
+d5cc1fb9f93926812849d499e1e24adc25fef1f7552debe28789d8ce0bba7845  V2 Protected Control            (agents\slot4_control_frozen_v2.py)
+70ca45bb216830c75e955de6e75462f997decb8060c2ca447dbc9e95dce7fc0f  Titan Protected Control         (candidates\slot1_titan_control.py)
+419d7d2c3740755298a2f1965c23e7b26c755fc8af5fc2bb17013016ef469f60  Okami Solution Agent            (external_repos\okami001-Kaggriculture\main.py)
+
+## 2. Extracted Lineage Source Artifacts
+ef9b77603d1110126a133f972ca2155aa124a30fa3639f2f166664e0ba3361fe  layer_0.py                      (forensic_verification\extracted_sources\layer_0.py)
+03f5a6f13c1e27bba450efd7a3d1f8a15ae08e00b9beef7382ab105485e310f7  layer_1.py                      (forensic_verification\extracted_sources\layer_1.py)
+87bf31d0813785aa8ad6b0641ae54195434bee4b2aa68cf1013f18b22c448e5f  layer_2.py                      (forensic_verification\extracted_sources\layer_2.py)
+
+## 3. Extracted V49 Lineage Modules
+50ea764555aa55f27ef5f58475cd979fbc7b0f8b7f180c32953da354df51fa9d  scripts_v19_terminal.py         (forensic_verification\extracted_sources\v49_modules\scripts_v19_terminal.py)
+39112e8b80d0258ea19804ed86d23be6382595631ec9bd9ccd572d74a33356f5  scripts_v21_route_memory_search.py  (forensic_verification\extracted_sources\v49_modules\scripts_v21_route_memory_search.py)
+213ce53aedb4a358e8ff452a58751a41311e953962f36059d29bd8c267aa2321  scripts_v22_market_impact.py    (forensic_verification\extracted_sources\v49_modules\scripts_v22_market_impact.py)
+f23bb1293fdc4a77693cddb58e596714824c4f7318bc92c5829629501134ccc2  scripts_v22_weed_repair.py      (forensic_verification\extracted_sources\v49_modules\scripts_v22_weed_repair.py)
+50ea764555aa55f27ef5f58475cd979fbc7b0f8b7f180c32953da354df51fa9d  v19_terminal.py                 (forensic_verification\extracted_sources\v49_modules\v19_terminal.py)
+7317e869350c0251014e3dda0663903f181f8a91859e1f8190a8c924062b2b27  v23_planner.py                  (forensic_verification\extracted_sources\v49_modules\v23_planner.py)
+6561e2e078e2d5633ba53a38359acaa35963a3bf7734bae9a6bb331534b7fc46  v23_policy_library.py           (forensic_verification\extracted_sources\v49_modules\v23_policy_library.py)
+b794f29d62a1b66d3025cb048f2265056186a774496493723d8715a27a9d3058  v23_simulator.py                (forensic_verification\extracted_sources\v49_modules\v23_simulator.py)
+04121d967d47f60c1ed049d86ec8c441f0cd0bf7ad76f4efbe28352be9ebde5a  v23_state_encoder.py            (forensic_verification\extracted_sources\v49_modules\v23_state_encoder.py)
+9a9c0142911a51c282cdbf8c15fc67c89d2f768d3af5555475b576d8bd7ced9f  v24_market_maker.py             (forensic_verification\extracted_sources\v49_modules\v24_market_maker.py)
+1d6d773d2d4741223a05ce235382c5f92695e58186cd40c9272754f6585a848b  v44_gold_floor.py               (forensic_verification\extracted_sources\v49_modules\v44_gold_floor.py)
+63ed01a017eb07b1d8f04bd718b7a3d5c9772d04a072f8b08cd81558141decb8  v48_fast_route_router.py        (forensic_verification\extracted_sources\v49_modules\v48_fast_route_router.py)
+0b09713a8f89d2da30754c2ef2b8384000f44d499cce99b3475167a820e1e554  v49_residual_controller.py      (forensic_verification\extracted_sources\v49_modules\v49_residual_controller.py)
+
+## 4. Benchmark Raw Data Artifacts
+4bacd9dfb3761826ea8026d9be65b1d70a1472bdfa929e52ca14f1911bff8914  agent_matchups_raw.json         (forensic_verification\benchmark_raw\agent_matchups_raw.json)
+3a0b079d1f93ce01d63087dc3a1d02aea4a57c95e1e26fec025852dcba13afc2  cppsim_benchmark.json           (forensic_verification\benchmark_raw\cppsim_benchmark.json)
+568b2113777c8e5211d351115b765d032690145f91b7fa2ad919ba39dbe54aed  end_to_end_throughput.json      (forensic_verification\benchmark_raw\end_to_end_throughput.json)
+ae1ce555fa0e025d32ef9f6c07e7f225973293f8b00e5a0fc83b2f1216f8a1cb  lixingtao_results_audit.json    (forensic_verification\benchmark_raw\lixingtao_results_audit.json)
