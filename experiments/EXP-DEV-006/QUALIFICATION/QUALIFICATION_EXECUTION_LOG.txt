@@ -1,0 +1,86 @@
+[2026-09-14 17:55:40 UTC] ================================================================================
+[2026-09-14 17:55:40 UTC] PREFLIGHT GOVERNANCE VERIFICATION FOR EXP-DEV-006 QUALIFICATION RUN
+[2026-09-14 17:55:40 UTC] ================================================================================
+[2026-09-14 17:55:40 UTC]   [1/10] Qualification protocol verified: 1484e0059f6196f82fe3db27fc07cf33b50cd99fadef298f156e642bb4466dc4
+[2026-09-14 17:55:40 UTC]   [2/10] Discovery protocol V1.5 unmutated (parent record intact)
+[2026-09-14 17:55:40 UTC]   [3/10] Baseline (V54++ Residual / Sub 56146971) verified: 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-14 17:55:40 UTC]   [4/10] Treatment dev_006 verified byte-identical to Discovery: 06db94e59e2c271b5490aad78fdb760bd8a250f28ec4407de2d2f6be0644f5eb
+[2026-09-14 17:55:40 UTC]   [5/10] Diagnostic dev_005 verified: f52b168619e47bea6a052faff890fc84804cb39b47392d247139967f910e2a78
+[2026-09-14 17:55:40 UTC]   [6/10] Frozen fallback (56146971) & control (56146947) verified bit-for-bit
+[2026-09-14 17:55:40 UTC]   [7/10] DEV-006 AST zero-leakage audit: clean (0 violations)
+[2026-09-14 17:55:40 UTC]   [8/10] Execution engine: kagsim_py port (0.4.0.port1), 4/4 files match validated manifest
+[2026-09-14 17:55:40 UTC]   [9/10] Simulator smoke test passed (Game construct + observe)
+[2026-09-14 17:55:40 UTC]   [10/10] Precheck / provenance / protocol documents verified on disk
+[2026-09-14 17:55:40 UTC] All preflight invariants passed.
+
+[2026-09-14 17:55:41 UTC] ================================================================================
+[2026-09-14 17:55:41 UTC] RUNNING EXP-DEV-006 QUALIFICATION (50050-50099, N=50)
+[2026-09-14 17:55:41 UTC] Primary arm: DEV-006 vs V54++ baseline | Diagnostic arm: DEV-005 vs baseline, identical CRN
+[2026-09-14 17:55:41 UTC] ================================================================================
+[2026-09-14 17:55:47 UTC] [01/50] Seed 50050 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 6.3s
+[2026-09-14 17:55:53 UTC] [02/50] Seed 50051 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 6.4s
+[2026-09-14 17:56:00 UTC] [03/50] Seed 50052 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 7.1s
+[2026-09-14 17:56:08 UTC] [04/50] Seed 50053 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 7.8s
+[2026-09-14 17:56:16 UTC] [05/50] Seed 50054 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.1s
+[2026-09-14 17:56:24 UTC] [06/50] Seed 50055 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 7.1s
+[2026-09-14 17:56:31 UTC] [07/50] Seed 50056 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 7.4s
+[2026-09-14 17:56:40 UTC] [08/50] Seed 50057 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.3s
+[2026-09-14 17:56:49 UTC] [09/50] Seed 50058 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.8s
+[2026-09-14 17:56:58 UTC] [10/50] Seed 50059 | DEV-006 $  +7888.0 (WIN) | DEV-005 $  +7888.0 (WIN) | contrast $     +0.0 | guard=- | 8.7s
+[2026-09-14 17:57:06 UTC] [11/50] Seed 50060 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.3s
+[2026-09-14 17:57:15 UTC] [12/50] Seed 50061 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.9s
+[2026-09-14 17:57:24 UTC] [13/50] Seed 50062 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.7s
+[2026-09-14 17:57:32 UTC] [14/50] Seed 50063 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.4s
+[2026-09-14 17:57:42 UTC] [15/50] Seed 50064 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.5s
+[2026-09-14 17:57:51 UTC] [16/50] Seed 50065 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.2s
+[2026-09-14 17:57:59 UTC] [17/50] Seed 50066 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.3s
+[2026-09-14 17:58:08 UTC] [18/50] Seed 50067 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.8s
+[2026-09-14 17:58:19 UTC] [19/50] Seed 50068 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 10.4s
+[2026-09-14 17:58:26 UTC] [20/50] Seed 50069 | DEV-006 $  +8110.0 (WIN) | DEV-005 $  +8110.0 (WIN) | contrast $     +0.0 | guard=- | 7.8s
+[2026-09-14 17:58:35 UTC] [21/50] Seed 50070 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.7s
+[2026-09-14 17:58:46 UTC] [22/50] Seed 50071 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 11.1s
+[2026-09-14 17:58:56 UTC] [23/50] Seed 50072 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.6s
+[2026-09-14 17:59:04 UTC] [24/50] Seed 50073 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.4s
+[2026-09-14 17:59:14 UTC] [25/50] Seed 50074 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.9s
+[2026-09-14 17:59:23 UTC] [26/50] Seed 50075 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.8s
+[2026-09-14 17:59:31 UTC] [27/50] Seed 50076 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.3s
+[2026-09-14 17:59:42 UTC] [28/50] Seed 50077 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 10.1s
+[2026-09-14 17:59:50 UTC] [29/50] Seed 50078 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.4s
+[2026-09-14 17:59:59 UTC] [30/50] Seed 50079 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.2s
+[2026-09-14 18:00:09 UTC] [31/50] Seed 50080 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 10.3s
+[2026-09-14 18:00:18 UTC] [32/50] Seed 50081 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.6s
+[2026-09-14 18:00:26 UTC] [33/50] Seed 50082 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.2s
+[2026-09-14 18:00:36 UTC] [34/50] Seed 50083 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.8s
+[2026-09-14 18:00:45 UTC] [35/50] Seed 50084 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.8s
+[2026-09-14 18:00:53 UTC] [36/50] Seed 50085 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.3s
+[2026-09-14 18:01:04 UTC] [37/50] Seed 50086 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 10.5s
+[2026-09-14 18:01:11 UTC] [38/50] Seed 50087 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 7.4s
+[2026-09-14 18:01:20 UTC] [39/50] Seed 50088 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.4s
+[2026-09-14 18:01:30 UTC] [40/50] Seed 50089 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 10.0s
+[2026-09-14 18:01:37 UTC] [41/50] Seed 50090 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 7.5s
+[2026-09-14 18:01:47 UTC] [42/50] Seed 50091 | DEV-006 $  +9881.0 (WIN) | DEV-005 $  +9881.0 (WIN) | contrast $     +0.0 | guard=- | 9.4s
+[2026-09-14 18:01:56 UTC] [43/50] Seed 50092 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.3s
+[2026-09-14 18:02:04 UTC] [44/50] Seed 50093 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.2s
+[2026-09-14 18:02:14 UTC] [45/50] Seed 50094 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.9s
+[2026-09-14 18:02:23 UTC] [46/50] Seed 50095 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.2s
+[2026-09-14 18:02:32 UTC] [47/50] Seed 50096 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 8.6s
+[2026-09-14 18:02:41 UTC] [48/50] Seed 50097 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.2s
+[2026-09-14 18:02:50 UTC] [49/50] Seed 50098 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 9.0s
+[2026-09-14 18:02:57 UTC] [50/50] Seed 50099 | DEV-006 $     +0.0 (TIE) | DEV-005 $     +0.0 (TIE) | contrast $     +0.0 | guard=- | 7.4s
+[2026-09-14 18:02:57 UTC] 
+All 50 seeds complete in 436.87s (8.74s/seed, 4 games each).
+[2026-09-14 18:02:57 UTC]   Saved /mnt/c/Users/Sundareswaran/Kagriculture/experiments/EXP-DEV-006/QUALIFICATION/QUALIFICATION_RAW_RESULTS.json
+[2026-09-14 18:02:58 UTC]   Saved /mnt/c/Users/Sundareswaran/Kagriculture/experiments/EXP-DEV-006/QUALIFICATION/QUALIFICATION_PAIRED_DELTAS.csv
+[2026-09-14 18:02:58 UTC]   Saved /mnt/c/Users/Sundareswaran/Kagriculture/experiments/EXP-DEV-006/QUALIFICATION/QUALIFICATION_DECISION_EVENTS.csv (800 rows)
+[2026-09-14 18:02:58 UTC]   Saved /mnt/c/Users/Sundareswaran/Kagriculture/experiments/EXP-DEV-006/QUALIFICATION/QUALIFICATION_SPECIALIZATION_EVENTS.csv (428 rows)
+[2026-09-14 18:02:58 UTC]   Saved /mnt/c/Users/Sundareswaran/Kagriculture/experiments/EXP-DEV-006/QUALIFICATION/QUALIFICATION_HORIZON_GUARD_EVENTS.csv (0 rows)
+[2026-09-14 18:02:59 UTC]   Saved /mnt/c/Users/Sundareswaran/Kagriculture/experiments/EXP-DEV-006/QUALIFICATION/QUALIFICATION_STATISTICS_RECOMPUTED.json
+[2026-09-14 18:02:59 UTC] ================================================================================
+[2026-09-14 18:02:59 UTC] EXP-DEV-006 QUALIFICATION SUMMARY (DEV-006 vs V54++ baseline)
+[2026-09-14 18:02:59 UTC] ================================================================================
+[2026-09-14 18:02:59 UTC]   Paired Mean Delta:  +517.58
+[2026-09-14 18:02:59 UTC]   10% Trimmed Mean:   +0.00
+[2026-09-14 18:02:59 UTC]   Median Delta:       +0.00
+[2026-09-14 18:02:59 UTC]   t = 1.76 (p = 0.0849), 95% CI [$-73.88, $1,109.04]
+[2026-09-14 18:02:59 UTC]   Record: 3W / 0L / 47T
+[2026-09-14 18:02:59 UTC]   Guard fired on 0 seeds; purity: OK

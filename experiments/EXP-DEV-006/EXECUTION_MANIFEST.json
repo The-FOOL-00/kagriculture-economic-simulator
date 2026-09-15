@@ -8,9 +8,9 @@
   "engine": "kagsim_py validated port",
   "engine_version": "1.32.7",
   "execution": {
-    "completed_utc": null,
-    "n_games_total": null,
-    "started_utc": null
+    "completed_utc": "2026-09-14T17:39:36Z",
+    "n_games_total": 200,
+    "started_utc": "2026-09-14T17:32:31Z"
   },
   "experiment": "EXP-DEV-006",
   "freeze_commit": {
@@ -18,6 +18,12 @@
     "timestamp_utc": "2026-09-14T17:32:11Z"
   },
   "games_per_seed": 4,
+  "outcome_summary": {
+    "guard_fired_seeds": 2,
+    "mean_dev006": 290.9,
+    "purity_ok": true,
+    "record_dev006": "2W/0L/48T"
+  },
   "port_manifest_sha256": "PORT_MANIFEST.json verified 4/4 + validators 2/2 (see PRECHECK.md)",
   "protocol_file": "DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_5.md",
   "protocol_sha256": "e52a0570a8bc9cfeafe1165f49f4c9d77ef9a3b7aa030783f8aef7e9ee7b04e8",
