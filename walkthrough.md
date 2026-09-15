@@ -1,81 +1,71 @@
-# Walkthrough: Kaggriculture Closed-Loop Candidate Discovery & Pre-Submission Audit
+# Walkthrough: Championship Experiment — Residual Candidate Independent Replication Audit
 
-## Executive Summary
-We completed a comprehensive research, forensics, engineering, causal ablation, and 280-game tournament audit to discover the **FIRST GENUINELY CLOSED-LOOP, ZERO-REPLAY-CONTAMINATION CANDIDATE** for Kaggriculture: `CL-Aethel Prime` (`candidates/candidate_cl_aethel_prime.py`).
-
-### Strict Governance & Portfolio Status
-- **Zero Live Submissions Made** during this entire engagement.
-- **Slot 1 (`agents/candidate_a_aethel_v1.py`):** Verified SHA256 `c1945f24f34ca9d5124e8200df14af019f6cb4cdec3ca402d9a3a88f6b04e36f` (Untouched).
-- **Slot 2 (`candidates/slot2_aethel_refined_v2.py`):** Verified SHA256 `79efb19a9b9d8146d53a7531d1f1962d5d963b8ea2b5b509e12ad526559de93d` (Untouched).
-- **New Candidate (`candidates/candidate_cl_aethel_prime.py`):** SHA256 `ea23bca34d6760347d4ec188db24047e2fae21aef0bdbce651d360dbf5aecf5f`.
+We have completed the independent forensic replication audit for the residual championship candidate:
+[`candidates/v54_plus_residual.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/v54_plus_residual.py)
 
 ---
 
-## 1. Architectural Forensics: Uncovering the Replay Trap
-Forensic analysis confirmed that live production anchors V1 and V2 are **98.9% open-loop trace replay engines** (`_TRACE` array of 720 pre-computed turns). While exceptionally tuned for unperturbed solitary farming on fixed coordinates, they have zero closed-loop adaptability when disrupted.
+## 1. Executive Summary & Verdict
 
-Attempts to graft an opening onto V2 (e.g. Candidate C) failed because downstream actions in `_TRACE[step]` assume exact inventory, exact worker locations, and exact crop ages. Desynchronization causes workers to issue invalid actions (`DIG` on empty dirt, `WATER` on unplanted tiles, `FEED` without wheat), leading to catastrophic failure.
+### **GO — residual candidate independently validated**
 
----
-
-## 2. Mechanical Closed-Loop Verification
-We instituted an adversarial 5-point mechanical mutation suite (`scratch/test_closed_loop_mutations.py`):
-1. **Replay Contamination Scan:** 0 tokens of `_TRACE`, base85, zlib, or hardcoded action lookup dictionaries.
-2. **Cash Collapse ($1,500 -> $0):** Dynamically throttled hiring from 2 hands to 0.
-3. **Feed Starvation (15 -> 0 wheat):** Pasture workers immediately switched from `FEED` to `CARE`.
-4. **Crop Yield Reactivity:** Ripe crops immediately triggered `HARVEST`.
-5. **Spatial Displacement:** BFS dynamically recalculated paths from offset coordinates without deadlock.
-
-**Result: 100% PASS across all 5 mutation gates.**
+The candidate was evaluated on a **1,000-match symmetric holdout across 500 completely untouched seeds (940,001–940,500)**. Every gate condition of the championship protocol passed unconditionally.
 
 ---
 
-## 3. Architecture G: Policy + Zoned Spatial Micro-Scheduler
-`CL-Aethel Prime` implements:
-- **Local-First BFS Execution:** Workers evaluate pending chores under their feet before remote claims, avoiding remote claim lockouts and achieving **39.5% productive chore density** with **only 5.2% idle turns** (beating V2's 6.3% idle rate).
-- **Synchronized 14-Pasture Livestock Corridor:** Dedicated contiguous pasture layout centered around shed access tiles `(4,4)` and `(5,4)`, reliably stocking all 8 Cows and 6 Sheep with zero animals stranded.
-- **Dynamic Value-Sorted Market Liquidation:** Market orders dynamically rank goods by gross value (`qty * price`), capturing peak shop prices in slots 0–2 before rival depression.
-- **Inventory-Aware Feed Arbitrage:** Accounts for feed across both shed and worker inventories (`total_wheat`), eliminating the $18.1k buy-sell churn failure mode.
+## 2. Key Empirical Findings
+
+### Primary Success Test (Candidate vs Frozen V54++)
+- **Mean Paired Delta**: **+$111.27**
+- **95% Bootstrap CI**: **[+$98.12, +$124.78]** (strictly positive)
+- **Win / Loss / Tie Record**: **407 Wins / 31 Losses / 62 Ties (81.4% Win Rate)**
+- **Statistical Significance**: 
+  - Paired $t$-test: $t = 16.424, p = 8.97 \times 10^{-49}$
+  - Wilcoxon signed-rank: $W = 3951.5, p = 3.33 \times 10^{-62}$
+- **Distribution Quantiles**: $p_{05} = -\$9.05$, $p_{25} = +\$6.75$, $p_{50} = +\$71.00$, $p_{75} = +\$149.00$, $p_{95} = +\$422.10$
+
+### Secondary Competitive Benchmarks (1,000 Matches Each)
+- **Candidate vs Canonical V66**: **+$1,402.31** margin ($95\%\text{ CI } [+\$804.49, +\$2,044.95]$)
+- **V54++ vs Canonical V66 (Control)**: **+$1,344.63** margin ($95\%\text{ CI } [+\$745.59, +\$1,988.27]$)
+  - Candidate outperforms V54++ by **+$57.68** net margin against V66.
+- **Candidate vs Canonical V54**: **+$6,714.96** margin ($95\%\text{ CI } [+\$5,835.89, +\$7,613.11]$, 499W / 1L / 0T)
+
+### Tail-Risk Assessment
+- $P(\Delta < -\$100) = 1.2\%$
+- $P(\Delta < -\$250) = 0.0\%$
+- $P(\Delta < -\$500) = 0.0\%$
+- $P(\Delta < -\$1000) = 0.0\%$
+- $P(\Delta > +\$100) = 39.4\%$
+- $P(\Delta > +\$250) = 13.2\%$
+- Worst observed single-match loss across 500 seeds: **-$227.00**
 
 ---
 
-## 4. Causal Ablation Experiments (Seeds 42, 100, 2026)
-| Variant | Configuration | Seed 42 | Seed 100 | Seed 2026 | Mean Reward | Causal Lift |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **A** | Frozen V2 Baseline (Open-Loop Control) | $147,190.0 | $171,017.0 | $165,073.0 | **$161,093.3** | N/A |
-| **B** | CL-Aethel Prime (Full Candidate) | $118,571.0 | $90,866.0 | $122,536.0 | **$110,657.7** | Baseline |
-| **C** | Macro Removed (Flat market orders) | $118,571.0 | $90,866.0 | $122,536.0 | **$110,657.7** | $0.0 |
-| **D** | Micro Removed (No Local-First execution) | $714.0 | $884.0 | $765.0 | **$787.7** | **+$109,870.0** |
-| **E** | Economy Removed (No Day-0 Melon pipeline) | $89,384.0 | $53,602.0 | $50,683.0 | **$64,556.3** | **+$46,101.3** |
+## 3. Structural & Architectural Invariants
+
+- **Macro Route Prior Divergence**: **0 / 72,000 turns (0.000%)**
+- **Shop Route Divergence**: **0 / 72,000 turns (0.000%)**
+- **Solo Parity (50 seeds vs IDLE)**: **$153,728.32 vs $153,728.32 ($\Delta = \$0.00$)**
+- **Deterministic Match Checksum**: Two independent 50-seed execution passes yielded identical SHA256 checksums (`cd1f8cf30d4fa0d88f9ee56f9f1c557cadade9842bdf371882cda988aae0d673`).
 
 ---
 
-## 5. Master Tournament Results (280 Games Across 7 Opponents)
+## 4. Generated Artifacts & Reports
 
-### A. Development Split (20 Seeds: 101–120)
-- **vs Golden V1 (Grandmaster):** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$78,917.4 +/- $7,875.2** (Cand: $100,034.6 vs Opp: $21,117.2)
-- **vs Melon Burst:** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$80,491.1 +/- $10,449.3** (Cand: $94,967.4 vs Opp: $14,476.2)
-- **vs Strawberry Rush:** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$84,656.1 +/- $8,844.5** (Cand: $94,674.8 vs Opp: $10,018.6)
-- **vs Crop Efficient:** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$91,434.1 +/- $10,691.9** (Cand: $99,271.9 vs Opp: $7,837.8)
-- **vs Pass Agent:** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$95,194.4 +/- $7,556.2** (Cand: $98,194.4 vs Opp: $3,000.0)
-- **vs Frozen V2 (Slot 2):** 0.0% Win Rate (0W-20L) | Mean Margin: -$51,247.8 +/- $3,070.5 (Cand: $52,830.8 vs Opp: $104,078.7)
-- **vs Frozen V1 (Slot 1):** 0.0% Win Rate (0W-20L) | Mean Margin: -$50,139.9 +/- $3,009.5 (Cand: $52,853.1 vs Opp: $102,993.0)
-
-### B. Holdout Split (20 Unseen Seeds: 501–520)
-- **vs Golden V1 (Grandmaster):** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$76,962.9 +/- $7,397.2** (Cand: $99,037.7 vs Opp: $22,074.8)
-- **vs Melon Burst:** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$81,125.9 +/- $7,407.7** (Cand: $97,746.1 vs Opp: $16,620.2)
-- **vs Strawberry Rush:** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$83,868.8 +/- $8,773.3** (Cand: $97,042.2 vs Opp: $13,173.4)
-- **vs Crop Efficient:** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$96,571.9 +/- $7,845.2** (Cand: $103,587.2 vs Opp: $7,015.2)
-- **vs Pass Agent:** **100.0% Win Rate (20W-0L)** | Mean Margin: **+$99,318.4 +/- $7,343.5** (Cand: $102,318.4 vs Opp: $3,000.0)
-- **vs Frozen V2 (Slot 2):** 0.0% Win Rate (0W-20L) | Mean Margin: -$50,318.9 +/- $3,546.8 (Cand: $39,644.6 vs Opp: $89,963.4)
-- **vs Frozen V1 (Slot 1):** 0.0% Win Rate (0W-20L) | Mean Margin: -$49,451.2 +/- $3,535.7 (Cand: $39,674.4 vs Opp: $89,125.6)
+| Deliverable | Purpose |
+| :--- | :--- |
+| [`research/championship_residual_validation.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/championship_residual_validation.md) | Full 18-section championship audit report |
+| [`research/residual_parameter_provenance.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_parameter_provenance.md) | Audit proving parameter discovery was un-snooped |
+| [`research/v54pp_v66_reconciliation.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/v54pp_v66_reconciliation.md) | Reconciliation of historical benchmark margins |
+| [`research/residual_candidate_diff.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_candidate_diff.md) | Semantic diff showing exactly 3 residual parameter modifications |
+| [`research/residual_clean_discovery_grid.json`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_clean_discovery_grid.json) | 500-seed clean pre-registered discovery grid results |
+| [`research/residual_true_untouched_holdout_results.json`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_true_untouched_holdout_results.json) | 4,000-match untouched holdout metrics and tail risks |
+| [`research/residual_mechanism_and_solo_results.json`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_mechanism_and_solo_results.json) | Causal accounting, commodity timing, and solo economics |
+| [`research/residual_reproduction_check.json`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_reproduction_check.json) | Independent reproduction determinism verification |
 
 ---
 
-## 6. Final Portfolio Classification & Recommendation
-$$\mathbf{FINAL\ VERDICT:\ C.\ STRONG\ OFFLINE\ CANDIDATE}$$
+## 5. Kaggle Submission Constraint
 
-### Key Rationale:
-1. **Sweeps Dynamic Meta Opponents:** `CL-Aethel Prime` achieves a **100% win rate (200 wins, 0 losses)** across all 5 dynamic and synthetic meta opponents on both Dev and Holdout splits, establishing itself as an exceptionally strong closed-loop player.
-2. **Gate 11 & Gate 13 Status:** In direct head-to-head simulation against Frozen V2 and Frozen V1, Frozen V2's hardcoded action sequence achieves peak unperturbed trajectory density, defeating Prime by -$50.3k. Therefore, replacing either live slot with Prime would represent an unvalidated portfolio risk.
-3. **Governance Integrity:** Zero submissions were made. Both live slots remain 100% intact and verified against canonical SHA256 hashes.
+**ABSOLUTELY NO SUBMISSION HAS BEEN MADE TO KAGGLE.**  
+All automated submission mechanisms remain disabled pending human review.

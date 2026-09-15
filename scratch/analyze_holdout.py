@@ -2,65 +2,56 @@ import json
 import numpy as np
 import scipy.stats as stats
 
-with open("scratch/jit_melon_results/holdout_results.json", "r") as f:
-    data = json.load(f)
+def analyze_holdout():
+    with open("scratch/holdout_validation_raw.json") as f:
+        data = json.load(f)
 
-h_games = [r for r in data if r["treatment"] == "H"]
-a_games = [r for r in data if r["treatment"] == "A"]
+    seeds = sorted([int(s) for s in data["Baseline"].keys()])
+    n_seeds = len(seeds)
+    print("=" * 80)
+    print(f"OUT-OF-SAMPLE HOLDOUT VALIDATION (SEEDS 1200-1249, N={n_seeds})")
+    print("=" * 80)
 
-print(f"Total H holdout games: {len(h_games)}")
-print(f"Total A holdout games: {len(a_games)}")
+    rews_a = np.array([data["Baseline"][str(s)]["reward"] for s in seeds])
+    rews_b = np.array([data["Gated_M1"][str(s)]["reward"] for s in seeds])
+    diff_rew = rews_b - rews_a
 
-def analyze_suite(games, label):
-    rewards = [g["reward_us"] for g in games]
-    opp_rewards = [g["reward_opp"] for g in games]
-    margins = [g["margin"] for g in games]
-    wins = [g["win"] for g in games]
-    starvations = [g["starvation_events"] for g in games]
-    min_feeds = [g["min_feed_seen"] for g in games]
-    
-    mean_score = np.mean(rewards)
-    mean_opp_score = np.mean(opp_rewards)
-    mean_margin = np.mean(margins)
-    median_margin = np.median(margins)
-    std_margin = np.std(margins, ddof=1)
-    sem_margin = stats.sem(margins)
-    ci95 = stats.t.interval(0.95, len(margins)-1, loc=mean_margin, scale=sem_margin)
-    t_stat, p_val = stats.ttest_1samp(margins, 0.0)
-    
-    win_rate = np.mean(wins) * 100.0
-    p5_margin = np.percentile(margins, 5)
-    worst_loss = np.min(margins)
-    best_win = np.max(margins)
-    catastrophic_losses = sum(1 for m in margins if m < -20000) / len(margins) * 100.0
-    
-    s0_games = [g for g in games if not g["swapped"]]
-    s1_games = [g for g in games if g["swapped"]]
-    s0_wr = np.mean([g["win"] for g in s0_games]) * 100.0
-    s1_wr = np.mean([g["win"] for g in s1_games]) * 100.0
-    s0_margin = np.mean([g["margin"] for g in s0_games])
-    s1_margin = np.mean([g["margin"] for g in s1_games])
-    
-    print(f"\n=======================================================")
-    print(f"UNSEEN HOLDOUT: {label} (N={len(games)} games)")
-    print(f"=======================================================")
-    print(f"Mean Score:            ${mean_score:,.1f}")
-    print(f"Opponent Mean Score:   ${mean_opp_score:,.1f}")
-    print(f"Mean Margin:           ${mean_margin:+,.1f}")
-    print(f"Median Margin:         ${median_margin:+,.1f}")
-    print(f"Win Rate:              {win_rate:.2f}% (Seat 0: {s0_wr:.1f}%, Seat 1: {s1_wr:.1f}%)")
-    print(f"Seat 0 Margin:         ${s0_margin:+,.1f}")
-    print(f"Seat 1 Margin:         ${s1_margin:+,.1f}")
-    print(f"Std Deviation:         ${std_margin:,.1f}")
-    print(f"95% Confidence Int:    [${ci95[0]:+,.1f}, ${ci95[1]:+,.1f}]")
-    print(f"t-statistic:           {t_stat:.3f}")
-    print(f"p-value:               {p_val:.4e}")
-    print(f"5th Percentile Margin: ${p5_margin:+,.1f}")
-    print(f"Worst Loss:            ${worst_loss:+,.1f}")
-    print(f"Best Win:              ${best_win:+,.1f}")
-    print(f"Catastrophic Loss (< -20k): {catastrophic_losses:.2f}%")
-    print(f"Starvation Events:     {sum(starvations)} (Mean: {np.mean(starvations):.2f})")
-    print(f"Min Feed Inventory:    {np.min(min_feeds)}")
+    m_diff = np.mean(diff_rew)
+    med_diff = np.median(diff_rew)
+    std_diff = np.std(diff_rew, ddof=1)
+    se_diff = std_diff / np.sqrt(n_seeds)
 
-analyze_suite(h_games, "TREATMENT H (Day-0 JIT Melon Pipeline)")
-analyze_suite(a_games, "TREATMENT A (Frozen V2 Control Self-Play)")
+    # Bootstrap
+    boot_means = [np.mean(np.random.choice(diff_rew, size=len(diff_rew), replace=True)) for _ in range(10000)]
+    ci_95 = (np.percentile(boot_means, 2.5), np.percentile(boot_means, 97.5))
+
+    t_stat, p_val = stats.ttest_rel(rews_b, rews_a)
+    wins = int(np.sum(diff_rew > 0))
+    losses = int(np.sum(diff_rew < 0))
+
+    print(f"Baseline Mean Reward:          ${np.mean(rews_a):>10,.2f}")
+    print(f"Gated M1 Mean Reward:          ${np.mean(rews_b):>10,.2f}")
+    print(f"Mean Delta Reward (M1 - Base): ${m_diff:>10,.2f}")
+    print(f"Median Delta Reward:           ${med_diff:>10,.2f}")
+    print(f"Standard Deviation:            ${std_diff:>10,.2f}")
+    print(f"Standard Error:                ${se_diff:>10,.2f}")
+    print(f"95% Bootstrap CI:              [${ci_95[0]:>8,.2f}, ${ci_95[1]:>8,.2f}]")
+    print(f"Paired t-test:                 t = {t_stat:>+.3f}, p = {p_val:.4f}")
+    print(f"Win / Loss:                    {wins} Wins ({wins/n_seeds*100:.1f}%) / {losses} Losses")
+
+    # Non-market advantage
+    nm_list = []
+    for s in seeds:
+        b = data["Baseline"][str(s)]
+        g = data["Gated_M1"][str(s)]
+        nm = (g["fert_rev"] - b["fert_rev"]) + (g["wool_rev"] - b["wool_rev"]) + (g["melon_rev"] - b["melon_rev"]) + (g["wheat_rev"] - b["wheat_rev"]) - (g["total_exp"] - b["total_exp"])
+        nm_list.append(nm)
+    print(f"Non-Market Advantage:          ${np.mean(nm_list):>10,.2f}")
+
+    # Physical strawberry
+    b_sold = np.mean([data["Baseline"][str(s)]["straw_sold"] for s in seeds])
+    g_sold = np.mean([data["Gated_M1"][str(s)]["straw_sold"] for s in seeds])
+    print(f"Strawberry Sold:               Baseline={b_sold:.2f}u, Gated={g_sold:.2f}u (Delta = {g_sold - b_sold:>+5.2f}u)")
+
+if __name__ == "__main__":
+    analyze_holdout()
