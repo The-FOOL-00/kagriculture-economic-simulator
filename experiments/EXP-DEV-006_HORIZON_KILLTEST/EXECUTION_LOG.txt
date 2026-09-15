@@ -1,0 +1,98 @@
+[2026-09-14 16:33:44 UTC] ================================================================================
+[2026-09-14 16:33:44 UTC] PHASE 0: GOVERNANCE & IMMUTABILITY VERIFICATION
+[2026-09-14 16:33:44 UTC] ================================================================================
+[2026-09-14 16:33:44 UTC]   [1/6] Baseline (V54++ Residual / Sub 56146971) SHA-256 Verified: 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-14 16:33:44 UTC]   [2/6] Historical DEV-005 Treatment SHA-256 Verified: f52b168619e47bea6a052faff890fc84804cb39b47392d247139967f910e2a78
+[2026-09-14 16:33:44 UTC]   [3/6] Historical DEV-005 Protocol SHA-256 Verified: ac69fc602083f232792ad5bdabd699e4b9f96e73462f9edc740ccd63c727e9f6
+[2026-09-14 16:33:44 UTC]   [4/6] DEV-006 Horizon Guard Treatment SHA-256 Verified: 13d328f9b6363aceeac9b5b2b9026355b1e3ffcd0d3854d7f44791067cb67091 (AST Clean, 0 violations)
+[2026-09-14 16:33:44 UTC]   [5/6] Frozen Fallback (56146971) & Control (56146947) Hashes Verified bit-for-bit.
+[2026-09-14 16:33:44 UTC]   [6/6] Simulator Engine kagsim 1.32.7 Verified.
+[2026-09-14 16:33:44 UTC] All Phase 0 Governance & Immutability Invariants Passed.
+
+[2026-09-14 16:33:44 UTC] ================================================================================
+[2026-09-14 16:33:44 UTC] RUNNING EXP-DEV-006 HORIZON-GATE KILL-TEST (50 SEEDS: 247000-247049)
+[2026-09-14 16:33:44 UTC] ================================================================================
+[2026-09-14 17:02:01 UTC] ================================================================================
+[2026-09-14 17:02:01 UTC] PHASE 0: GOVERNANCE & IMMUTABILITY VERIFICATION (ONE-FACTOR REVISION)
+[2026-09-14 17:02:01 UTC] ================================================================================
+[2026-09-14 17:02:01 UTC]   [1/9] Baseline (V54++ Residual / Sub 56146971) verified: 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-14 17:02:01 UTC]   [2/9] Historical DEV-005 treatment verified: f52b168619e47bea6a052faff890fc84804cb39b47392d247139967f910e2a78
+[2026-09-14 17:02:01 UTC]   [3/9] Historical DEV-005 protocol verified: ac69fc602083f232792ad5bdabd699e4b9f96e73462f9edc740ccd63c727e9f6
+[2026-09-14 17:02:01 UTC]   [4/9] One-factor DEV-006 treatment verified: 06db94e59e2c271b5490aad78fdb760bd8a250f28ec4407de2d2f6be0644f5eb
+[2026-09-14 17:02:01 UTC]   [5/9] DEV-006 AST zero-leakage audit: clean (0 violations)
+[2026-09-14 17:02:01 UTC]   [6/9] Frozen fallback (56146971) & control (56146947) verified bit-for-bit
+[2026-09-14 17:02:01 UTC]   [7/9] Execution engine: kagsim_py port (0.4.0.port1), 4/4 files match validated manifest
+[2026-09-14 17:02:01 UTC]   [8/9] Simulator smoke test passed (Game construct + observe)
+[2026-09-14 17:02:01 UTC]   [9/9] Engine validation evidence: 47,520/47,520 golden checkpoints + 100/100 DEV-005 replay games bit-identical (see PORT_MANIFEST.json)
+[2026-09-14 17:02:01 UTC] All Phase 0 governance invariants passed.
+
+[2026-09-14 17:02:01 UTC] ================================================================================
+[2026-09-14 17:02:01 UTC] RUNNING EXP-DEV-006 HORIZON-GATE KILL-TEST (50 SEEDS: 247000-247049)
+[2026-09-14 17:02:01 UTC] Both arms live: DEV-005 replay + DEV-006 guard, identical CRN
+[2026-09-14 17:02:01 UTC] ================================================================================
+[2026-09-14 17:02:08 UTC] Seed 247000: DEV-006 $  +5426.0 | DEV-005 replay $  +5426.0 (frozen $  +5426.0) | Diff $     +0.0 | WIN (was WIN) | guard=-
+[2026-09-14 17:02:15 UTC] Seed 247001: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:02:22 UTC] Seed 247002: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:02:29 UTC] Seed 247003: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:02:37 UTC] Seed 247004: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:02:45 UTC] Seed 247005: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:02:52 UTC] Seed 247006: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:03:00 UTC] Seed 247007: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:03:09 UTC] Seed 247008: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:03:17 UTC] Seed 247009: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:03:25 UTC] Seed 247010: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:03:34 UTC] Seed 247011: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:03:43 UTC] Seed 247012: DEV-006 $ +12235.0 | DEV-005 replay $ +12235.0 (frozen $ +12235.0) | Diff $     +0.0 | WIN (was WIN) | guard=-
+[2026-09-14 17:03:51 UTC] Seed 247013: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:04:00 UTC] Seed 247014: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:04:09 UTC] Seed 247015: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:04:17 UTC] Seed 247016: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:04:25 UTC] Seed 247017: DEV-006 $ +13064.0 | DEV-005 replay $ +13064.0 (frozen $ +13064.0) | Diff $     +0.0 | WIN (was WIN) | guard=-
+[2026-09-14 17:04:35 UTC] Seed 247018: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:04:43 UTC] Seed 247019: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:04:51 UTC] Seed 247020: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:05:01 UTC] Seed 247021: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:05:10 UTC] Seed 247022: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:05:19 UTC] Seed 247023: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:05:27 UTC] Seed 247024: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:05:37 UTC] Seed 247025: DEV-006 $     +0.0 | DEV-005 replay $  -1844.0 (frozen $  -1844.0) | Diff $  +1844.0 | TIE (was LOSS) | guard=FIRED
+[2026-09-14 17:05:46 UTC] Seed 247026: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:05:54 UTC] Seed 247027: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:06:04 UTC] Seed 247028: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:06:12 UTC] Seed 247029: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:06:20 UTC] Seed 247030: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:06:29 UTC] Seed 247031: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:06:39 UTC] Seed 247032: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:06:47 UTC] Seed 247033: DEV-006 $  +6139.0 | DEV-005 replay $  +6139.0 (frozen $  +6139.0) | Diff $     +0.0 | WIN (was WIN) | guard=-
+[2026-09-14 17:06:55 UTC] Seed 247034: DEV-006 $     +0.0 | DEV-005 replay $  -5393.0 (frozen $  -5393.0) | Diff $  +5393.0 | TIE (was LOSS) | guard=FIRED
+[2026-09-14 17:07:05 UTC] Seed 247035: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:07:14 UTC] Seed 247036: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:07:23 UTC] Seed 247037: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:07:32 UTC] Seed 247038: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:07:43 UTC] Seed 247039: DEV-006 $ +10261.0 | DEV-005 replay $ +10261.0 (frozen $ +10261.0) | Diff $     +0.0 | WIN (was WIN) | guard=-
+[2026-09-14 17:07:53 UTC] Seed 247040: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:08:02 UTC] Seed 247041: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:08:13 UTC] Seed 247042: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:08:22 UTC] Seed 247043: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:08:30 UTC] Seed 247044: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:08:39 UTC] Seed 247045: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:08:49 UTC] Seed 247046: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:08:59 UTC] Seed 247047: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:09:12 UTC] Seed 247048: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:09:22 UTC] Seed 247049: DEV-006 $     +0.0 | DEV-005 replay $     +0.0 (frozen $     +0.0) | Diff $     +0.0 | TIE (was TIE) | guard=-
+[2026-09-14 17:09:22 UTC] 
+All 50 seeds complete in 441.06s (8.82s/seed, 4 games each).
+[2026-09-14 17:09:23 UTC] 
+================================================================================
+[2026-09-14 17:09:23 UTC] SUMMARY RESULTS (DEV-006 guard MINUS DEV-005 original, identical CRN)
+[2026-09-14 17:09:23 UTC] ================================================================================
+[2026-09-14 17:09:23 UTC] DEV-005 replay mean:   $+797.76
+[2026-09-14 17:09:23 UTC] DEV-006 guard mean:    $+942.50
+[2026-09-14 17:09:23 UTC] Mean paired diff:      $+144.74
+[2026-09-14 17:09:23 UTC] Total cohort recovery: $+7237.00
+[2026-09-14 17:09:23 UTC] DEV-006 W/L/T: 5/0/45
+[2026-09-14 17:09:23 UTC]   Seed 247025: DEV-005 $-1844.0 -> DEV-006 $0.0 (diff $+1844.0)
+[2026-09-14 17:09:23 UTC]   Seed 247034: DEV-005 $-5393.0 -> DEV-006 $0.0 (diff $+5393.0)
+[2026-09-14 17:09:23 UTC] Losses introduced: 0 | Wins sacrificed: 0 | Other: 0
+[2026-09-14 17:09:23 UTC] Replay parity vs frozen: OK (50/50 bit-identical)
+[2026-09-14 17:09:23 UTC] One-factor purity: OK

@@ -1,0 +1,3052 @@
+[
+  {
+    "seed": 247000,
+    "dev005_replay": {
+      "match0_cand": 125975.0,
+      "match0_base": 120549.0,
+      "match0_delta": 5426.0,
+      "match1_base": 120549.0,
+      "match1_cand": 125975.0,
+      "match1_delta": 5426.0,
+      "paired_mean": 5426.0
+    },
+    "dev006_guard": {
+      "match0_cand": 125975.0,
+      "match0_base": 120549.0,
+      "match0_delta": 5426.0,
+      "match1_base": 120549.0,
+      "match1_cand": 125975.0,
+      "match1_delta": 5426.0,
+      "paired_mean": 5426.0
+    },
+    "frozen_dev005_paired_mean": 5426.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "WIN",
+    "outcome_dev006": "WIN",
+    "outcome_dev005_frozen": "WIN",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 216,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "SMOOTHIE_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "SMOOTHIE_SHOP;ICE_CREAM_SHOP"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 8838.16,
+        "remaining": 504,
+        "shops": "SMOOTHIE_SHOP;ICE_CREAM_SHOP;YARN_STORE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 11367.28,
+        "remaining": 432,
+        "shops": "SMOOTHIE_SHOP;ICE_CREAM_SHOP;YARN_STORE;ICE_CREAM_SHOP"
+      }
+    },
+    "runtime_sec": 6.558
+  },
+  {
+    "seed": 247001,
+    "dev005_replay": {
+      "match0_cand": 59076.0,
+      "match0_base": 59076.0,
+      "match0_delta": 0.0,
+      "match1_base": 59076.0,
+      "match1_cand": 59076.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 59076.0,
+      "match0_base": 59076.0,
+      "match0_delta": 0.0,
+      "match1_base": 59076.0,
+      "match1_cand": 59076.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2215.3,
+        "remaining": 648,
+        "shops": "PET_CAFE"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "PET_CAFE;SMOOTHIE_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "PET_CAFE;SMOOTHIE_SHOP;SMOOTHIE_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "PET_CAFE;SMOOTHIE_SHOP;SMOOTHIE_SHOP;BAKERY"
+      }
+    },
+    "runtime_sec": 6.676
+  },
+  {
+    "seed": 247002,
+    "dev005_replay": {
+      "match0_cand": 143128.0,
+      "match0_base": 143128.0,
+      "match0_delta": 0.0,
+      "match1_base": 143128.0,
+      "match1_cand": 143128.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 143128.0,
+      "match0_base": 143128.0,
+      "match0_delta": 0.0,
+      "match1_base": 143128.0,
+      "match1_cand": 143128.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 72,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25309.75,
+        "remaining": 648,
+        "shops": "YARN_STORE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 17325.4,
+        "remaining": 576,
+        "shops": "YARN_STORE;ICE_CREAM_SHOP"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 14597.16,
+        "remaining": 504,
+        "shops": "YARN_STORE;ICE_CREAM_SHOP;SMOOTHIE_SHOP"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 13591.48,
+        "remaining": 432,
+        "shops": "YARN_STORE;ICE_CREAM_SHOP;SMOOTHIE_SHOP;SMOOTHIE_SHOP"
+      }
+    },
+    "runtime_sec": 7.155
+  },
+  {
+    "seed": 247003,
+    "dev005_replay": {
+      "match0_cand": 89849.0,
+      "match0_base": 89849.0,
+      "match0_delta": 0.0,
+      "match1_base": 89849.0,
+      "match1_cand": 89849.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 89849.0,
+      "match0_base": 89849.0,
+      "match0_delta": 0.0,
+      "match1_base": 89849.0,
+      "match1_cand": 89849.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "ICE_CREAM_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "ICE_CREAM_SHOP;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "ICE_CREAM_SHOP;BRUNCH_SPOT;FARMERS_MARKET"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "ICE_CREAM_SHOP;BRUNCH_SPOT;FARMERS_MARKET;BAKERY"
+      }
+    },
+    "runtime_sec": 7.326
+  },
+  {
+    "seed": 247004,
+    "dev005_replay": {
+      "match0_cand": 93982.0,
+      "match0_base": 93982.0,
+      "match0_delta": 0.0,
+      "match1_base": 93982.0,
+      "match1_cand": 93982.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 93982.0,
+      "match0_base": 93982.0,
+      "match0_delta": 0.0,
+      "match1_base": 93982.0,
+      "match1_cand": 93982.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "SMOOTHIE_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "SMOOTHIE_SHOP;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "SMOOTHIE_SHOP;BRUNCH_SPOT;FARMERS_MARKET"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "SMOOTHIE_SHOP;BRUNCH_SPOT;FARMERS_MARKET;BRUNCH_SPOT"
+      }
+    },
+    "runtime_sec": 8.266
+  },
+  {
+    "seed": 247005,
+    "dev005_replay": {
+      "match0_cand": 97259.0,
+      "match0_base": 97259.0,
+      "match0_delta": 0.0,
+      "match1_base": 97259.0,
+      "match1_cand": 97259.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 97259.0,
+      "match0_base": 97259.0,
+      "match0_delta": 0.0,
+      "match1_base": 97259.0,
+      "match1_cand": 97259.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 72,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25309.75,
+        "remaining": 648,
+        "shops": "YARN_STORE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 16289.05,
+        "remaining": 576,
+        "shops": "YARN_STORE;PIZZA_SHOP"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 13550.91,
+        "remaining": 504,
+        "shops": "YARN_STORE;PIZZA_SHOP;BAKERY"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 14707.48,
+        "remaining": 432,
+        "shops": "YARN_STORE;PIZZA_SHOP;BAKERY;SMOOTHIE_SHOP"
+      }
+    },
+    "runtime_sec": 7.35
+  },
+  {
+    "seed": 247006,
+    "dev005_replay": {
+      "match0_cand": 56756.0,
+      "match0_base": 56756.0,
+      "match0_delta": 0.0,
+      "match1_base": 56756.0,
+      "match1_cand": 56756.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 56756.0,
+      "match0_base": 56756.0,
+      "match0_delta": 0.0,
+      "match1_base": 56756.0,
+      "match1_cand": 56756.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 144,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2659.45,
+        "remaining": 648,
+        "shops": "BAKERY"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 23380.25,
+        "remaining": 576,
+        "shops": "BAKERY;YARN_STORE"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 15122.91,
+        "remaining": 504,
+        "shops": "BAKERY;YARN_STORE;PIZZA_SHOP"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 15249.88,
+        "remaining": 432,
+        "shops": "BAKERY;YARN_STORE;PIZZA_SHOP;BAKERY"
+      }
+    },
+    "runtime_sec": 7.283
+  },
+  {
+    "seed": 247007,
+    "dev005_replay": {
+      "match0_cand": 42731.0,
+      "match0_base": 42731.0,
+      "match0_delta": 0.0,
+      "match1_base": 42731.0,
+      "match1_cand": 42731.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 42731.0,
+      "match0_base": 42731.0,
+      "match0_delta": 0.0,
+      "match1_base": 42731.0,
+      "match1_cand": 42731.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2215.3,
+        "remaining": 648,
+        "shops": "PET_CAFE"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3321.8,
+        "remaining": 576,
+        "shops": "PET_CAFE;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2817.4,
+        "remaining": 504,
+        "shops": "PET_CAFE;BRUNCH_SPOT;BAKERY"
+      },
+      "288": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2628.8,
+        "remaining": 432,
+        "shops": "PET_CAFE;BRUNCH_SPOT;BAKERY;BAKERY"
+      }
+    },
+    "runtime_sec": 8.013
+  },
+  {
+    "seed": 247008,
+    "dev005_replay": {
+      "match0_cand": 116469.0,
+      "match0_base": 116469.0,
+      "match0_delta": 0.0,
+      "match1_base": 116469.0,
+      "match1_cand": 116469.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 116469.0,
+      "match0_base": 116469.0,
+      "match0_delta": 0.0,
+      "match1_base": 116469.0,
+      "match1_cand": 116469.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "SMOOTHIE_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "SMOOTHIE_SHOP;PIZZA_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "SMOOTHIE_SHOP;PIZZA_SHOP;PET_CAFE"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "SMOOTHIE_SHOP;PIZZA_SHOP;PET_CAFE;ICE_CREAM_SHOP"
+      }
+    },
+    "runtime_sec": 8.763
+  },
+  {
+    "seed": 247009,
+    "dev005_replay": {
+      "match0_cand": 78403.0,
+      "match0_base": 78403.0,
+      "match0_delta": 0.0,
+      "match1_base": 78403.0,
+      "match1_cand": 78403.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 78403.0,
+      "match0_base": 78403.0,
+      "match0_delta": 0.0,
+      "match1_base": 78403.0,
+      "match1_cand": 78403.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 72,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25309.75,
+        "remaining": 648,
+        "shops": "YARN_STORE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 26013.4,
+        "remaining": 576,
+        "shops": "YARN_STORE;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 22997.16,
+        "remaining": 504,
+        "shops": "YARN_STORE;BRUNCH_SPOT;BAKERY"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 20067.4,
+        "remaining": 432,
+        "shops": "YARN_STORE;BRUNCH_SPOT;BAKERY;PET_CAFE"
+      }
+    },
+    "runtime_sec": 8.219
+  },
+  {
+    "seed": 247010,
+    "dev005_replay": {
+      "match0_cand": 70377.0,
+      "match0_base": 70377.0,
+      "match0_delta": 0.0,
+      "match1_base": 70377.0,
+      "match1_cand": 70377.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 70377.0,
+      "match0_base": 70377.0,
+      "match0_delta": 0.0,
+      "match1_base": 70377.0,
+      "match1_cand": 70377.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 72,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25309.75,
+        "remaining": 648,
+        "shops": "YARN_STORE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 24977.05,
+        "remaining": 576,
+        "shops": "YARN_STORE;BAKERY"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 21792.15,
+        "remaining": 504,
+        "shops": "YARN_STORE;BAKERY;PET_CAFE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 19061.2,
+        "remaining": 432,
+        "shops": "YARN_STORE;BAKERY;PET_CAFE;PET_CAFE"
+      }
+    },
+    "runtime_sec": 7.944
+  },
+  {
+    "seed": 247011,
+    "dev005_replay": {
+      "match0_cand": 97025.0,
+      "match0_base": 97025.0,
+      "match0_delta": 0.0,
+      "match1_base": 97025.0,
+      "match1_cand": 97025.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 97025.0,
+      "match0_base": 97025.0,
+      "match0_delta": 0.0,
+      "match1_base": 97025.0,
+      "match1_cand": 97025.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3793.45,
+        "remaining": 648,
+        "shops": "BRUNCH_SPOT"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 4004.6,
+        "remaining": 576,
+        "shops": "BRUNCH_SPOT;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "BRUNCH_SPOT;BRUNCH_SPOT;SMOOTHIE_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "BRUNCH_SPOT;BRUNCH_SPOT;SMOOTHIE_SHOP;PIZZA_SHOP"
+      }
+    },
+    "runtime_sec": 9.199
+  },
+  {
+    "seed": 247012,
+    "dev005_replay": {
+      "match0_cand": 80793.0,
+      "match0_base": 68558.0,
+      "match0_delta": 12235.0,
+      "match1_base": 68558.0,
+      "match1_cand": 80793.0,
+      "match1_delta": 12235.0,
+      "paired_mean": 12235.0
+    },
+    "dev006_guard": {
+      "match0_cand": 80793.0,
+      "match0_base": 68558.0,
+      "match0_delta": 12235.0,
+      "match1_base": 68558.0,
+      "match1_cand": 80793.0,
+      "match1_delta": 12235.0,
+      "paired_mean": 12235.0
+    },
+    "frozen_dev005_paired_mean": 12235.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "WIN",
+    "outcome_dev006": "WIN",
+    "outcome_dev005_frozen": "WIN",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 216,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2659.45,
+        "remaining": 648,
+        "shops": "BAKERY"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3584.6,
+        "remaining": 576,
+        "shops": "BAKERY;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 18783.16,
+        "remaining": 504,
+        "shops": "BAKERY;BRUNCH_SPOT;YARN_STORE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 16711.48,
+        "remaining": 432,
+        "shops": "BAKERY;BRUNCH_SPOT;YARN_STORE;PIZZA_SHOP"
+      }
+    },
+    "runtime_sec": 8.977
+  },
+  {
+    "seed": 247013,
+    "dev005_replay": {
+      "match0_cand": 60021.0,
+      "match0_base": 60021.0,
+      "match0_delta": 0.0,
+      "match1_base": 60021.0,
+      "match1_cand": 60021.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 60021.0,
+      "match0_base": 60021.0,
+      "match0_delta": 0.0,
+      "match1_base": 60021.0,
+      "match1_cand": 60021.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3793.45,
+        "remaining": 648,
+        "shops": "BRUNCH_SPOT"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3828.2,
+        "remaining": 576,
+        "shops": "BRUNCH_SPOT;PET_CAFE"
+      },
+      "216": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3053.2,
+        "remaining": 504,
+        "shops": "BRUNCH_SPOT;PET_CAFE;PET_CAFE"
+      },
+      "288": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2748.8,
+        "remaining": 432,
+        "shops": "BRUNCH_SPOT;PET_CAFE;PET_CAFE;FARMERS_MARKET"
+      }
+    },
+    "runtime_sec": 8.131
+  },
+  {
+    "seed": 247014,
+    "dev005_replay": {
+      "match0_cand": 87805.0,
+      "match0_base": 87805.0,
+      "match0_delta": 0.0,
+      "match1_base": 87805.0,
+      "match1_cand": 87805.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 87805.0,
+      "match0_base": 87805.0,
+      "match0_delta": 0.0,
+      "match1_base": 87805.0,
+      "match1_cand": 87805.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "SMOOTHIE_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "SMOOTHIE_SHOP;PET_CAFE"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "SMOOTHIE_SHOP;PET_CAFE;BRUNCH_SPOT"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "SMOOTHIE_SHOP;PET_CAFE;BRUNCH_SPOT;SMOOTHIE_SHOP"
+      }
+    },
+    "runtime_sec": 8.47
+  },
+  {
+    "seed": 247015,
+    "dev005_replay": {
+      "match0_cand": 155929.0,
+      "match0_base": 155929.0,
+      "match0_delta": 0.0,
+      "match1_base": 155929.0,
+      "match1_cand": 155929.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 155929.0,
+      "match0_base": 155929.0,
+      "match0_delta": 0.0,
+      "match1_base": 155929.0,
+      "match1_cand": 155929.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 144,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "SMOOTHIE_SHOP"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 14822.6,
+        "remaining": 576,
+        "shops": "SMOOTHIE_SHOP;YARN_STORE"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 12690.96,
+        "remaining": 504,
+        "shops": "SMOOTHIE_SHOP;YARN_STORE;YARN_STORE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 13420.48,
+        "remaining": 432,
+        "shops": "SMOOTHIE_SHOP;YARN_STORE;YARN_STORE;SMOOTHIE_SHOP"
+      }
+    },
+    "runtime_sec": 9.328
+  },
+  {
+    "seed": 247016,
+    "dev005_replay": {
+      "match0_cand": 82216.0,
+      "match0_base": 82216.0,
+      "match0_delta": 0.0,
+      "match1_base": 82216.0,
+      "match1_cand": 82216.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 82216.0,
+      "match0_base": 82216.0,
+      "match0_delta": 0.0,
+      "match1_base": 82216.0,
+      "match1_cand": 82216.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 72,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25309.75,
+        "remaining": 648,
+        "shops": "YARN_STORE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25837.0,
+        "remaining": 576,
+        "shops": "YARN_STORE;FARMERS_MARKET"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 22825.8,
+        "remaining": 504,
+        "shops": "YARN_STORE;FARMERS_MARKET;BRUNCH_SPOT"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 20155.0,
+        "remaining": 432,
+        "shops": "YARN_STORE;FARMERS_MARKET;BRUNCH_SPOT;PET_CAFE"
+      }
+    },
+    "runtime_sec": 7.723
+  },
+  {
+    "seed": 247017,
+    "dev005_replay": {
+      "match0_cand": 136758.0,
+      "match0_base": 123694.0,
+      "match0_delta": 13064.0,
+      "match1_base": 123694.0,
+      "match1_cand": 136758.0,
+      "match1_delta": 13064.0,
+      "paired_mean": 13064.0
+    },
+    "dev006_guard": {
+      "match0_cand": 136758.0,
+      "match0_base": 123694.0,
+      "match0_delta": 13064.0,
+      "match1_base": 123694.0,
+      "match1_cand": 136758.0,
+      "match1_delta": 13064.0,
+      "paired_mean": 13064.0
+    },
+    "frozen_dev005_paired_mean": 13064.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "WIN",
+    "outcome_dev006": "WIN",
+    "outcome_dev005_frozen": "WIN",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 216,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "ICE_CREAM_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "ICE_CREAM_SHOP;PIZZA_SHOP"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 8709.16,
+        "remaining": 504,
+        "shops": "ICE_CREAM_SHOP;PIZZA_SHOP;YARN_STORE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 11195.68,
+        "remaining": 432,
+        "shops": "ICE_CREAM_SHOP;PIZZA_SHOP;YARN_STORE;ICE_CREAM_SHOP"
+      }
+    },
+    "runtime_sec": 7.959
+  },
+  {
+    "seed": 247018,
+    "dev005_replay": {
+      "match0_cand": 57052.0,
+      "match0_base": 57052.0,
+      "match0_delta": 0.0,
+      "match1_base": 57052.0,
+      "match1_cand": 57052.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 57052.0,
+      "match0_base": 57052.0,
+      "match0_delta": 0.0,
+      "match1_base": 57052.0,
+      "match1_cand": 57052.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "PIZZA_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET;BAKERY"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET;BAKERY;FARMERS_MARKET"
+      }
+    },
+    "runtime_sec": 9.832
+  },
+  {
+    "seed": 247019,
+    "dev005_replay": {
+      "match0_cand": 52922.0,
+      "match0_base": 52922.0,
+      "match0_delta": 0.0,
+      "match1_base": 52922.0,
+      "match1_cand": 52922.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 52922.0,
+      "match0_base": 52922.0,
+      "match0_delta": 0.0,
+      "match1_base": 52922.0,
+      "match1_cand": 52922.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2215.3,
+        "remaining": 648,
+        "shops": "PET_CAFE"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3321.8,
+        "remaining": 576,
+        "shops": "PET_CAFE;FARMERS_MARKET"
+      },
+      "216": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2792.2,
+        "remaining": 504,
+        "shops": "PET_CAFE;FARMERS_MARKET;BRUNCH_SPOT"
+      },
+      "288": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2716.4,
+        "remaining": 432,
+        "shops": "PET_CAFE;FARMERS_MARKET;BRUNCH_SPOT;BAKERY"
+      }
+    },
+    "runtime_sec": 8.494
+  },
+  {
+    "seed": 247020,
+    "dev005_replay": {
+      "match0_cand": 108912.0,
+      "match0_base": 108912.0,
+      "match0_delta": 0.0,
+      "match1_base": 108912.0,
+      "match1_cand": 108912.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 108912.0,
+      "match0_base": 108912.0,
+      "match0_delta": 0.0,
+      "match1_base": 108912.0,
+      "match1_cand": 108912.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3595.0,
+        "remaining": 648,
+        "shops": "FARMERS_MARKET"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "FARMERS_MARKET;ICE_CREAM_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "FARMERS_MARKET;ICE_CREAM_SHOP;SMOOTHIE_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "FARMERS_MARKET;ICE_CREAM_SHOP;SMOOTHIE_SHOP;BRUNCH_SPOT"
+      }
+    },
+    "runtime_sec": 7.853
+  },
+  {
+    "seed": 247021,
+    "dev005_replay": {
+      "match0_cand": 123055.0,
+      "match0_base": 123055.0,
+      "match0_delta": 0.0,
+      "match1_base": 123055.0,
+      "match1_cand": 123055.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 123055.0,
+      "match0_base": 123055.0,
+      "match0_delta": 0.0,
+      "match1_base": 123055.0,
+      "match1_cand": 123055.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 144,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3595.0,
+        "remaining": 648,
+        "shops": "FARMERS_MARKET"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 24631.4,
+        "remaining": 576,
+        "shops": "FARMERS_MARKET;YARN_STORE"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 22357.2,
+        "remaining": 504,
+        "shops": "FARMERS_MARKET;YARN_STORE;YARN_STORE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 17876.2,
+        "remaining": 432,
+        "shops": "FARMERS_MARKET;YARN_STORE;YARN_STORE;ICE_CREAM_SHOP"
+      }
+    },
+    "runtime_sec": 9.284
+  },
+  {
+    "seed": 247022,
+    "dev005_replay": {
+      "match0_cand": 62284.0,
+      "match0_base": 62284.0,
+      "match0_delta": 0.0,
+      "match1_base": 62284.0,
+      "match1_cand": 62284.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 62284.0,
+      "match0_base": 62284.0,
+      "match0_delta": 0.0,
+      "match1_base": 62284.0,
+      "match1_cand": 62284.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "SMOOTHIE_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "SMOOTHIE_SHOP;PET_CAFE"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "SMOOTHIE_SHOP;PET_CAFE;PET_CAFE"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "SMOOTHIE_SHOP;PET_CAFE;PET_CAFE;FARMERS_MARKET"
+      }
+    },
+    "runtime_sec": 9.792
+  },
+  {
+    "seed": 247023,
+    "dev005_replay": {
+      "match0_cand": 77290.0,
+      "match0_base": 77290.0,
+      "match0_delta": 0.0,
+      "match1_base": 77290.0,
+      "match1_cand": 77290.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 77290.0,
+      "match0_base": 77290.0,
+      "match0_delta": 0.0,
+      "match1_base": 77290.0,
+      "match1_cand": 77290.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2215.3,
+        "remaining": 648,
+        "shops": "PET_CAFE"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "PET_CAFE;ICE_CREAM_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "PET_CAFE;ICE_CREAM_SHOP;ICE_CREAM_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "PET_CAFE;ICE_CREAM_SHOP;ICE_CREAM_SHOP;BAKERY"
+      }
+    },
+    "runtime_sec": 8.66
+  },
+  {
+    "seed": 247024,
+    "dev005_replay": {
+      "match0_cand": 136533.0,
+      "match0_base": 136533.0,
+      "match0_delta": 0.0,
+      "match1_base": 136533.0,
+      "match1_cand": 136533.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 136533.0,
+      "match0_base": 136533.0,
+      "match0_delta": 0.0,
+      "match1_base": 136533.0,
+      "match1_cand": 136533.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 72,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25309.75,
+        "remaining": 648,
+        "shops": "YARN_STORE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 17098.6,
+        "remaining": 576,
+        "shops": "YARN_STORE;SMOOTHIE_SHOP"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 14579.16,
+        "remaining": 504,
+        "shops": "YARN_STORE;SMOOTHIE_SHOP;ICE_CREAM_SHOP"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 13439.2,
+        "remaining": 432,
+        "shops": "YARN_STORE;SMOOTHIE_SHOP;ICE_CREAM_SHOP;FARMERS_MARKET"
+      }
+    },
+    "runtime_sec": 8.22
+  },
+  {
+    "seed": 247025,
+    "dev005_replay": {
+      "match0_cand": 58338.0,
+      "match0_base": 60182.0,
+      "match0_delta": -1844.0,
+      "match1_base": 60182.0,
+      "match1_cand": 58338.0,
+      "match1_delta": -1844.0,
+      "paired_mean": -1844.0
+    },
+    "dev006_guard": {
+      "match0_cand": 62648.0,
+      "match0_base": 62648.0,
+      "match0_delta": 0.0,
+      "match1_base": 62648.0,
+      "match1_cand": 62648.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": -1844.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 1844.0,
+    "outcome_dev005_replay": "LOSS",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "LOSS",
+    "activated_dev006": false,
+    "horizon_rejected": true,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2215.3,
+        "remaining": 648,
+        "shops": "PET_CAFE"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2058.65,
+        "remaining": 576,
+        "shops": "PET_CAFE;PET_CAFE"
+      },
+      "216": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2476.6,
+        "remaining": 504,
+        "shops": "PET_CAFE;PET_CAFE;BRUNCH_SPOT"
+      },
+      "288": {
+        "decision": "REJECT_HORIZON",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 13491.8,
+        "remaining": 432,
+        "shops": "PET_CAFE;PET_CAFE;BRUNCH_SPOT;YARN_STORE"
+      }
+    },
+    "runtime_sec": 9.47
+  },
+  {
+    "seed": 247026,
+    "dev005_replay": {
+      "match0_cand": 89697.0,
+      "match0_base": 89697.0,
+      "match0_delta": 0.0,
+      "match1_base": 89697.0,
+      "match1_cand": 89697.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 89697.0,
+      "match0_base": 89697.0,
+      "match0_delta": 0.0,
+      "match1_base": 89697.0,
+      "match1_cand": 89697.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 144,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "PIZZA_SHOP"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 13636.25,
+        "remaining": 576,
+        "shops": "PIZZA_SHOP;YARN_STORE"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 12476.16,
+        "remaining": 504,
+        "shops": "PIZZA_SHOP;YARN_STORE;BRUNCH_SPOT"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 12919.6,
+        "remaining": 432,
+        "shops": "PIZZA_SHOP;YARN_STORE;BRUNCH_SPOT;PET_CAFE"
+      }
+    },
+    "runtime_sec": 8.999
+  },
+  {
+    "seed": 247027,
+    "dev005_replay": {
+      "match0_cand": 100697.0,
+      "match0_base": 100697.0,
+      "match0_delta": 0.0,
+      "match1_base": 100697.0,
+      "match1_cand": 100697.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 100697.0,
+      "match0_base": 100697.0,
+      "match0_delta": 0.0,
+      "match1_base": 100697.0,
+      "match1_cand": 100697.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "PIZZA_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "PIZZA_SHOP;ICE_CREAM_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "PIZZA_SHOP;ICE_CREAM_SHOP;PIZZA_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "PIZZA_SHOP;ICE_CREAM_SHOP;PIZZA_SHOP;BAKERY"
+      }
+    },
+    "runtime_sec": 8.102
+  },
+  {
+    "seed": 247028,
+    "dev005_replay": {
+      "match0_cand": 77604.0,
+      "match0_base": 77604.0,
+      "match0_delta": 0.0,
+      "match1_base": 77604.0,
+      "match1_cand": 77604.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 77604.0,
+      "match0_base": 77604.0,
+      "match0_delta": 0.0,
+      "match1_base": 77604.0,
+      "match1_cand": 77604.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 144,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "SMOOTHIE_SHOP"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 14822.6,
+        "remaining": 576,
+        "shops": "SMOOTHIE_SHOP;YARN_STORE"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 12532.2,
+        "remaining": 504,
+        "shops": "SMOOTHIE_SHOP;YARN_STORE;PET_CAFE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 13118.8,
+        "remaining": 432,
+        "shops": "SMOOTHIE_SHOP;YARN_STORE;PET_CAFE;BAKERY"
+      }
+    },
+    "runtime_sec": 9.555
+  },
+  {
+    "seed": 247029,
+    "dev005_replay": {
+      "match0_cand": 92711.0,
+      "match0_base": 92711.0,
+      "match0_delta": 0.0,
+      "match1_base": 92711.0,
+      "match1_cand": 92711.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 92711.0,
+      "match0_base": 92711.0,
+      "match0_delta": 0.0,
+      "match1_base": 92711.0,
+      "match1_cand": 92711.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 72,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25309.75,
+        "remaining": 648,
+        "shops": "YARN_STORE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 24573.85,
+        "remaining": 576,
+        "shops": "YARN_STORE;PET_CAFE"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 21748.95,
+        "remaining": 504,
+        "shops": "YARN_STORE;PET_CAFE;BAKERY"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 19012.6,
+        "remaining": 432,
+        "shops": "YARN_STORE;PET_CAFE;BAKERY;YARN_STORE"
+      }
+    },
+    "runtime_sec": 8.555
+  },
+  {
+    "seed": 247030,
+    "dev005_replay": {
+      "match0_cand": 89739.0,
+      "match0_base": 89739.0,
+      "match0_delta": 0.0,
+      "match1_base": 89739.0,
+      "match1_cand": 89739.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 89739.0,
+      "match0_base": 89739.0,
+      "match0_delta": 0.0,
+      "match1_base": 89739.0,
+      "match1_cand": 89739.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2659.45,
+        "remaining": 648,
+        "shops": "BAKERY"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "BAKERY;SMOOTHIE_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "BAKERY;SMOOTHIE_SHOP;SMOOTHIE_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "BAKERY;SMOOTHIE_SHOP;SMOOTHIE_SHOP;ICE_CREAM_SHOP"
+      }
+    },
+    "runtime_sec": 7.852
+  },
+  {
+    "seed": 247031,
+    "dev005_replay": {
+      "match0_cand": 130913.0,
+      "match0_base": 130913.0,
+      "match0_delta": 0.0,
+      "match1_base": 130913.0,
+      "match1_cand": 130913.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 130913.0,
+      "match0_base": 130913.0,
+      "match0_delta": 0.0,
+      "match1_base": 130913.0,
+      "match1_cand": 130913.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "SMOOTHIE_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "SMOOTHIE_SHOP;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "SMOOTHIE_SHOP;BRUNCH_SPOT;ICE_CREAM_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "SMOOTHIE_SHOP;BRUNCH_SPOT;ICE_CREAM_SHOP;PIZZA_SHOP"
+      }
+    },
+    "runtime_sec": 8.989
+  },
+  {
+    "seed": 247032,
+    "dev005_replay": {
+      "match0_cand": 106762.0,
+      "match0_base": 106762.0,
+      "match0_delta": 0.0,
+      "match1_base": 106762.0,
+      "match1_cand": 106762.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 106762.0,
+      "match0_base": 106762.0,
+      "match0_delta": 0.0,
+      "match1_base": 106762.0,
+      "match1_cand": 106762.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3595.0,
+        "remaining": 648,
+        "shops": "FARMERS_MARKET"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "FARMERS_MARKET;PIZZA_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "FARMERS_MARKET;PIZZA_SHOP;ICE_CREAM_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "FARMERS_MARKET;PIZZA_SHOP;ICE_CREAM_SHOP;ICE_CREAM_SHOP"
+      }
+    },
+    "runtime_sec": 9.876
+  },
+  {
+    "seed": 247033,
+    "dev005_replay": {
+      "match0_cand": 95093.0,
+      "match0_base": 88954.0,
+      "match0_delta": 6139.0,
+      "match1_base": 88954.0,
+      "match1_cand": 95093.0,
+      "match1_delta": 6139.0,
+      "paired_mean": 6139.0
+    },
+    "dev006_guard": {
+      "match0_cand": 95093.0,
+      "match0_base": 88954.0,
+      "match0_delta": 6139.0,
+      "match1_base": 88954.0,
+      "match1_cand": 95093.0,
+      "match1_delta": 6139.0,
+      "paired_mean": 6139.0
+    },
+    "frozen_dev005_paired_mean": 6139.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "WIN",
+    "outcome_dev006": "WIN",
+    "outcome_dev005_frozen": "WIN",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 216,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "PIZZA_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 9029.8,
+        "remaining": 504,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET;YARN_STORE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 12167.2,
+        "remaining": 432,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET;YARN_STORE;SMOOTHIE_SHOP"
+      }
+    },
+    "runtime_sec": 8.645
+  },
+  {
+    "seed": 247034,
+    "dev005_replay": {
+      "match0_cand": 120362.0,
+      "match0_base": 125755.0,
+      "match0_delta": -5393.0,
+      "match1_base": 125755.0,
+      "match1_cand": 120362.0,
+      "match1_delta": -5393.0,
+      "paired_mean": -5393.0
+    },
+    "dev006_guard": {
+      "match0_cand": 119732.0,
+      "match0_base": 119732.0,
+      "match0_delta": 0.0,
+      "match1_base": 119732.0,
+      "match1_cand": 119732.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": -5393.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 5393.0,
+    "outcome_dev005_replay": "LOSS",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "LOSS",
+    "activated_dev006": false,
+    "horizon_rejected": true,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "ICE_CREAM_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "ICE_CREAM_SHOP;PIZZA_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "ICE_CREAM_SHOP;PIZZA_SHOP;SMOOTHIE_SHOP"
+      },
+      "288": {
+        "decision": "REJECT_HORIZON",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 6027.68,
+        "remaining": 432,
+        "shops": "ICE_CREAM_SHOP;PIZZA_SHOP;SMOOTHIE_SHOP;YARN_STORE"
+      }
+    },
+    "runtime_sec": 7.907
+  },
+  {
+    "seed": 247035,
+    "dev005_replay": {
+      "match0_cand": 78331.0,
+      "match0_base": 78331.0,
+      "match0_delta": 0.0,
+      "match1_base": 78331.0,
+      "match1_cand": 78331.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 78331.0,
+      "match0_base": 78331.0,
+      "match0_delta": 0.0,
+      "match1_base": 78331.0,
+      "match1_cand": 78331.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3595.0,
+        "remaining": 648,
+        "shops": "FARMERS_MARKET"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3799.4,
+        "remaining": 576,
+        "shops": "FARMERS_MARKET;PET_CAFE"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "FARMERS_MARKET;PET_CAFE;ICE_CREAM_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "FARMERS_MARKET;PET_CAFE;ICE_CREAM_SHOP;FARMERS_MARKET"
+      }
+    },
+    "runtime_sec": 9.213
+  },
+  {
+    "seed": 247036,
+    "dev005_replay": {
+      "match0_cand": 52230.0,
+      "match0_base": 52230.0,
+      "match0_delta": 0.0,
+      "match1_base": 52230.0,
+      "match1_cand": 52230.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 52230.0,
+      "match0_base": 52230.0,
+      "match0_delta": 0.0,
+      "match1_base": 52230.0,
+      "match1_cand": 52230.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2215.3,
+        "remaining": 648,
+        "shops": "PET_CAFE"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3321.8,
+        "remaining": 576,
+        "shops": "PET_CAFE;FARMERS_MARKET"
+      },
+      "216": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2792.2,
+        "remaining": 504,
+        "shops": "PET_CAFE;FARMERS_MARKET;FARMERS_MARKET"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 570.8,
+        "remaining": 432,
+        "shops": "PET_CAFE;FARMERS_MARKET;FARMERS_MARKET;PIZZA_SHOP"
+      }
+    },
+    "runtime_sec": 9.642
+  },
+  {
+    "seed": 247037,
+    "dev005_replay": {
+      "match0_cand": 76296.0,
+      "match0_base": 76296.0,
+      "match0_delta": 0.0,
+      "match1_base": 76296.0,
+      "match1_cand": 76296.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 76296.0,
+      "match0_base": 76296.0,
+      "match0_delta": 0.0,
+      "match1_base": 76296.0,
+      "match1_cand": 76296.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3595.0,
+        "remaining": 648,
+        "shops": "FARMERS_MARKET"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3799.4,
+        "remaining": 576,
+        "shops": "FARMERS_MARKET;BAKERY"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "FARMERS_MARKET;BAKERY;ICE_CREAM_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "FARMERS_MARKET;BAKERY;ICE_CREAM_SHOP;ICE_CREAM_SHOP"
+      }
+    },
+    "runtime_sec": 9.032
+  },
+  {
+    "seed": 247038,
+    "dev005_replay": {
+      "match0_cand": 75148.0,
+      "match0_base": 75148.0,
+      "match0_delta": 0.0,
+      "match1_base": 75148.0,
+      "match1_cand": 75148.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 75148.0,
+      "match0_base": 75148.0,
+      "match0_delta": 0.0,
+      "match1_base": 75148.0,
+      "match1_cand": 75148.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "ICE_CREAM_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "ICE_CREAM_SHOP;PET_CAFE"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "ICE_CREAM_SHOP;PET_CAFE;BAKERY"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "ICE_CREAM_SHOP;PET_CAFE;BAKERY;ICE_CREAM_SHOP"
+      }
+    },
+    "runtime_sec": 8.183
+  },
+  {
+    "seed": 247039,
+    "dev005_replay": {
+      "match0_cand": 86410.0,
+      "match0_base": 76149.0,
+      "match0_delta": 10261.0,
+      "match1_base": 76149.0,
+      "match1_cand": 86410.0,
+      "match1_delta": 10261.0,
+      "paired_mean": 10261.0
+    },
+    "dev006_guard": {
+      "match0_cand": 86410.0,
+      "match0_base": 76149.0,
+      "match0_delta": 10261.0,
+      "match1_base": 76149.0,
+      "match1_cand": 86410.0,
+      "match1_delta": 10261.0,
+      "paired_mean": 10261.0
+    },
+    "frozen_dev005_paired_mean": 10261.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "WIN",
+    "outcome_dev006": "WIN",
+    "outcome_dev005_frozen": "WIN",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 216,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2659.45,
+        "remaining": 648,
+        "shops": "BAKERY"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3584.6,
+        "remaining": 576,
+        "shops": "BAKERY;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 18783.16,
+        "remaining": 504,
+        "shops": "BAKERY;BRUNCH_SPOT;YARN_STORE"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 18835.48,
+        "remaining": 432,
+        "shops": "BAKERY;BRUNCH_SPOT;YARN_STORE;BRUNCH_SPOT"
+      }
+    },
+    "runtime_sec": 10.967
+  },
+  {
+    "seed": 247040,
+    "dev005_replay": {
+      "match0_cand": 91963.0,
+      "match0_base": 91963.0,
+      "match0_delta": 0.0,
+      "match1_base": 91963.0,
+      "match1_cand": 91963.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 91963.0,
+      "match0_base": 91963.0,
+      "match0_delta": 0.0,
+      "match1_base": 91963.0,
+      "match1_cand": 91963.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 144,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2215.3,
+        "remaining": 648,
+        "shops": "PET_CAFE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 22890.65,
+        "remaining": 576,
+        "shops": "PET_CAFE;YARN_STORE"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 15626.4,
+        "remaining": 504,
+        "shops": "PET_CAFE;YARN_STORE;ICE_CREAM_SHOP"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 15824.8,
+        "remaining": 432,
+        "shops": "PET_CAFE;YARN_STORE;ICE_CREAM_SHOP;BAKERY"
+      }
+    },
+    "runtime_sec": 10.902
+  },
+  {
+    "seed": 247041,
+    "dev005_replay": {
+      "match0_cand": 109343.0,
+      "match0_base": 109343.0,
+      "match0_delta": 0.0,
+      "match1_base": 109343.0,
+      "match1_cand": 109343.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 109343.0,
+      "match0_base": 109343.0,
+      "match0_delta": 0.0,
+      "match1_base": 109343.0,
+      "match1_cand": 109343.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "ICE_CREAM_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "ICE_CREAM_SHOP;FARMERS_MARKET"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "ICE_CREAM_SHOP;FARMERS_MARKET;SMOOTHIE_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "ICE_CREAM_SHOP;FARMERS_MARKET;SMOOTHIE_SHOP;BRUNCH_SPOT"
+      }
+    },
+    "runtime_sec": 8.993
+  },
+  {
+    "seed": 247042,
+    "dev005_replay": {
+      "match0_cand": 96653.0,
+      "match0_base": 96653.0,
+      "match0_delta": 0.0,
+      "match1_base": 96653.0,
+      "match1_cand": 96653.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 96653.0,
+      "match0_base": 96653.0,
+      "match0_delta": 0.0,
+      "match1_base": 96653.0,
+      "match1_cand": 96653.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 144,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2215.3,
+        "remaining": 648,
+        "shops": "PET_CAFE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 22890.65,
+        "remaining": 576,
+        "shops": "PET_CAFE;YARN_STORE"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 21818.4,
+        "remaining": 504,
+        "shops": "PET_CAFE;YARN_STORE;FARMERS_MARKET"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 19439.2,
+        "remaining": 432,
+        "shops": "PET_CAFE;YARN_STORE;FARMERS_MARKET;YARN_STORE"
+      }
+    },
+    "runtime_sec": 10.14
+  },
+  {
+    "seed": 247043,
+    "dev005_replay": {
+      "match0_cand": 108114.0,
+      "match0_base": 108114.0,
+      "match0_delta": 0.0,
+      "match1_base": 108114.0,
+      "match1_cand": 108114.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 108114.0,
+      "match0_base": 108114.0,
+      "match0_delta": 0.0,
+      "match1_base": 108114.0,
+      "match1_cand": 108114.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "ICE_CREAM_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "ICE_CREAM_SHOP;FARMERS_MARKET"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "ICE_CREAM_SHOP;FARMERS_MARKET;BRUNCH_SPOT"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "ICE_CREAM_SHOP;FARMERS_MARKET;BRUNCH_SPOT;PIZZA_SHOP"
+      }
+    },
+    "runtime_sec": 9.319
+  },
+  {
+    "seed": 247044,
+    "dev005_replay": {
+      "match0_cand": 85668.0,
+      "match0_base": 85668.0,
+      "match0_delta": 0.0,
+      "match1_base": 85668.0,
+      "match1_cand": 85668.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 85668.0,
+      "match0_base": 85668.0,
+      "match0_delta": 0.0,
+      "match1_base": 85668.0,
+      "match1_cand": 85668.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 648,
+        "shops": "PIZZA_SHOP"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET;ICE_CREAM_SHOP"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "PIZZA_SHOP;FARMERS_MARKET;ICE_CREAM_SHOP;FARMERS_MARKET"
+      }
+    },
+    "runtime_sec": 7.973
+  },
+  {
+    "seed": 247045,
+    "dev005_replay": {
+      "match0_cand": 51616.0,
+      "match0_base": 51616.0,
+      "match0_delta": 0.0,
+      "match1_base": 51616.0,
+      "match1_cand": 51616.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 51616.0,
+      "match0_base": 51616.0,
+      "match0_delta": 0.0,
+      "match1_base": 51616.0,
+      "match1_cand": 51616.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3793.45,
+        "remaining": 648,
+        "shops": "BRUNCH_SPOT"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3828.2,
+        "remaining": 576,
+        "shops": "BRUNCH_SPOT;PET_CAFE"
+      },
+      "216": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3053.2,
+        "remaining": 504,
+        "shops": "BRUNCH_SPOT;PET_CAFE;BAKERY"
+      },
+      "288": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2786.6,
+        "remaining": 432,
+        "shops": "BRUNCH_SPOT;PET_CAFE;BAKERY;FARMERS_MARKET"
+      }
+    },
+    "runtime_sec": 9.46
+  },
+  {
+    "seed": 247046,
+    "dev005_replay": {
+      "match0_cand": 66054.0,
+      "match0_base": 66054.0,
+      "match0_delta": 0.0,
+      "match1_base": 66054.0,
+      "match1_cand": 66054.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 66054.0,
+      "match0_base": 66054.0,
+      "match0_delta": 0.0,
+      "match1_base": 66054.0,
+      "match1_cand": 66054.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3793.45,
+        "remaining": 648,
+        "shops": "BRUNCH_SPOT"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3828.2,
+        "remaining": 576,
+        "shops": "BRUNCH_SPOT;PET_CAFE"
+      },
+      "216": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3053.2,
+        "remaining": 504,
+        "shops": "BRUNCH_SPOT;PET_CAFE;FARMERS_MARKET"
+      },
+      "288": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 2883.8,
+        "remaining": 432,
+        "shops": "BRUNCH_SPOT;PET_CAFE;FARMERS_MARKET;PET_CAFE"
+      }
+    },
+    "runtime_sec": 9.281
+  },
+  {
+    "seed": 247047,
+    "dev005_replay": {
+      "match0_cand": 90627.0,
+      "match0_base": 90627.0,
+      "match0_delta": 0.0,
+      "match1_base": 90627.0,
+      "match1_cand": 90627.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 90627.0,
+      "match0_base": 90627.0,
+      "match0_delta": 0.0,
+      "match1_base": 90627.0,
+      "match1_cand": 90627.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3595.0,
+        "remaining": 648,
+        "shops": "FARMERS_MARKET"
+      },
+      "144": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 576,
+        "shops": "FARMERS_MARKET;SMOOTHIE_SHOP"
+      },
+      "216": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 504,
+        "shops": "FARMERS_MARKET;SMOOTHIE_SHOP;BAKERY"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "BASELINE_BACKBONE",
+        "exp_val": 0.0,
+        "remaining": 432,
+        "shops": "FARMERS_MARKET;SMOOTHIE_SHOP;BAKERY;BRUNCH_SPOT"
+      }
+    },
+    "runtime_sec": 10.271
+  },
+  {
+    "seed": 247048,
+    "dev005_replay": {
+      "match0_cand": 128801.0,
+      "match0_base": 128801.0,
+      "match0_delta": 0.0,
+      "match1_base": 128801.0,
+      "match1_cand": 128801.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 128801.0,
+      "match0_base": 128801.0,
+      "match0_delta": 0.0,
+      "match1_base": 128801.0,
+      "match1_cand": 128801.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": true,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": 72,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 25309.75,
+        "remaining": 648,
+        "shops": "YARN_STORE"
+      },
+      "144": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 17098.6,
+        "remaining": 576,
+        "shops": "YARN_STORE;SMOOTHIE_SHOP"
+      },
+      "216": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 14579.16,
+        "remaining": 504,
+        "shops": "YARN_STORE;SMOOTHIE_SHOP;PIZZA_SHOP"
+      },
+      "288": {
+        "decision": "SPECIALIZE_CONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 13455.28,
+        "remaining": 432,
+        "shops": "YARN_STORE;SMOOTHIE_SHOP;PIZZA_SHOP;BAKERY"
+      }
+    },
+    "runtime_sec": 12.467
+  },
+  {
+    "seed": 247049,
+    "dev005_replay": {
+      "match0_cand": 86173.0,
+      "match0_base": 86173.0,
+      "match0_delta": 0.0,
+      "match1_base": 86173.0,
+      "match1_cand": 86173.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "dev006_guard": {
+      "match0_cand": 86173.0,
+      "match0_base": 86173.0,
+      "match0_delta": 0.0,
+      "match1_base": 86173.0,
+      "match1_cand": 86173.0,
+      "match1_delta": 0.0,
+      "paired_mean": 0.0
+    },
+    "frozen_dev005_paired_mean": 0.0,
+    "replay_matches_frozen": true,
+    "diff_dev006_minus_dev005": 0.0,
+    "outcome_dev005_replay": "TIE",
+    "outcome_dev006": "TIE",
+    "outcome_dev005_frozen": "TIE",
+    "activated_dev006": false,
+    "horizon_rejected": false,
+    "dev006_first_spec_step_m0": null,
+    "dev006_decision_steps_m0": {
+      "72": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3793.45,
+        "remaining": 648,
+        "shops": "BRUNCH_SPOT"
+      },
+      "144": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 4004.6,
+        "remaining": 576,
+        "shops": "BRUNCH_SPOT;BRUNCH_SPOT"
+      },
+      "216": {
+        "decision": "REJECT_UNCONFIRMED",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 3261.4,
+        "remaining": 504,
+        "shops": "BRUNCH_SPOT;BRUNCH_SPOT;PET_CAFE"
+      },
+      "288": {
+        "decision": "BASELINE",
+        "best_plan": "YARN_SPECIALIZED",
+        "exp_val": 899.0,
+        "remaining": 432,
+        "shops": "BRUNCH_SPOT;BRUNCH_SPOT;PET_CAFE;SMOOTHIE_SHOP"
+      }
+    },
+    "runtime_sec": 10.893
+  }
+]

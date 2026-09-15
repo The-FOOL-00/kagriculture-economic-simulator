@@ -1,0 +1,37 @@
+{
+  "n_seeds": 50,
+  "n_games_per_seed": 4,
+  "mean_dev005_replay": 797.76,
+  "mean_dev006": 942.5,
+  "mean_difference_dev006_minus_dev005": 144.74,
+  "total_recovery": 7237.0,
+  "sd_dev006": 3024.947,
+  "se_dev006": 427.7921,
+  "sd_diff": 800.9854,
+  "se_diff": 113.2764,
+  "wins_dev006": 5,
+  "losses_dev006": 0,
+  "ties_dev006": 45,
+  "residual_loss_recovery": [
+    {
+      "seed": 247025,
+      "dev005": -1844.0,
+      "dev006": 0.0,
+      "diff": 1844.0
+    },
+    {
+      "seed": 247034,
+      "dev005": -5393.0,
+      "dev006": 0.0,
+      "diff": 5393.0
+    }
+  ],
+  "losses_introduced": [],
+  "wins_sacrificed": [],
+  "other_seed_changes": [],
+  "replay_mismatches_vs_frozen": [],
+  "replay_parity_ok": true,
+  "one_factor_purity_violations": [],
+  "one_factor_purity_ok": true,
+  "total_runtime_sec": 441.06
+}
