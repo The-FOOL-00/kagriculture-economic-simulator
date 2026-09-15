@@ -1,0 +1,388 @@
+{
+  "experiment": "EXP-DEV-005_KILLTEST",
+  "cohort_type": "Retrospective Mechanism Kill-Test",
+  "loss_seeds_tested": [
+    {
+      "seed": 246003,
+      "m0_cand": 52094.0,
+      "m0_base": 52643.0,
+      "m0_delta": -549.0,
+      "m1_cand": 52094.0,
+      "m1_base": 52643.0,
+      "m1_delta": -549.0,
+      "paired_delta": -549.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246005,
+      "m0_cand": 83889.0,
+      "m0_base": 82866.0,
+      "m0_delta": 1023.0,
+      "m1_cand": 83889.0,
+      "m1_base": 82866.0,
+      "m1_delta": 1023.0,
+      "paired_delta": 1023.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246007,
+      "m0_cand": 83246.0,
+      "m0_base": 88035.0,
+      "m0_delta": -4789.0,
+      "m1_cand": 83246.0,
+      "m1_base": 88035.0,
+      "m1_delta": -4789.0,
+      "paired_delta": -4789.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246008,
+      "m0_cand": 79436.0,
+      "m0_base": 81744.0,
+      "m0_delta": -2308.0,
+      "m1_cand": 79436.0,
+      "m1_base": 81744.0,
+      "m1_delta": -2308.0,
+      "paired_delta": -2308.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": false,
+      "safety_override": false
+    },
+    {
+      "seed": 246010,
+      "m0_cand": 81251.0,
+      "m0_base": 82627.0,
+      "m0_delta": -1376.0,
+      "m1_cand": 81251.0,
+      "m1_base": 82627.0,
+      "m1_delta": -1376.0,
+      "paired_delta": -1376.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": false,
+      "safety_override": false
+    },
+    {
+      "seed": 246016,
+      "m0_cand": 54701.0,
+      "m0_base": 54860.0,
+      "m0_delta": -159.0,
+      "m1_cand": 54701.0,
+      "m1_base": 54860.0,
+      "m1_delta": -159.0,
+      "paired_delta": -159.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": false,
+      "safety_override": false
+    },
+    {
+      "seed": 246022,
+      "m0_cand": 101426.0,
+      "m0_base": 109614.0,
+      "m0_delta": -8188.0,
+      "m1_cand": 101426.0,
+      "m1_base": 109614.0,
+      "m1_delta": -8188.0,
+      "paired_delta": -8188.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "YARN_SPECIALIZED"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246024,
+      "m0_cand": 54243.0,
+      "m0_base": 55254.0,
+      "m0_delta": -1011.0,
+      "m1_cand": 54243.0,
+      "m1_base": 55254.0,
+      "m1_delta": -1011.0,
+      "paired_delta": -1011.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246028,
+      "m0_cand": 69809.0,
+      "m0_base": 61034.0,
+      "m0_delta": 8775.0,
+      "m1_cand": 69809.0,
+      "m1_base": 61034.0,
+      "m1_delta": 8775.0,
+      "paired_delta": 8775.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "YARN_SPECIALIZED"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246030,
+      "m0_cand": 76532.0,
+      "m0_base": 83138.0,
+      "m0_delta": -6606.0,
+      "m1_cand": 76532.0,
+      "m1_base": 83138.0,
+      "m1_delta": -6606.0,
+      "paired_delta": -6606.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246032,
+      "m0_cand": 84550.0,
+      "m0_base": 89599.0,
+      "m0_delta": -5049.0,
+      "m1_cand": 84550.0,
+      "m1_base": 89599.0,
+      "m1_delta": -5049.0,
+      "paired_delta": -5049.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246035,
+      "m0_cand": 54626.0,
+      "m0_base": 54577.0,
+      "m0_delta": 49.0,
+      "m1_cand": 54626.0,
+      "m1_base": 54577.0,
+      "m1_delta": 49.0,
+      "paired_delta": 49.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246036,
+      "m0_cand": 75606.0,
+      "m0_base": 79357.0,
+      "m0_delta": -3751.0,
+      "m1_cand": 75606.0,
+      "m1_base": 79357.0,
+      "m1_delta": -3751.0,
+      "paired_delta": -3751.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246039,
+      "m0_cand": 83998.0,
+      "m0_base": 90209.0,
+      "m0_delta": -6211.0,
+      "m1_cand": 83998.0,
+      "m1_base": 90209.0,
+      "m1_delta": -6211.0,
+      "paired_delta": -6211.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246042,
+      "m0_cand": 82083.0,
+      "m0_base": 86874.0,
+      "m0_delta": -4791.0,
+      "m1_cand": 82083.0,
+      "m1_base": 86874.0,
+      "m1_delta": -4791.0,
+      "paired_delta": -4791.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "YARN_SPECIALIZED"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246049,
+      "m0_cand": 49366.0,
+      "m0_base": 51793.0,
+      "m0_delta": -2427.0,
+      "m1_cand": 49366.0,
+      "m1_base": 51793.0,
+      "m1_delta": -2427.0,
+      "paired_delta": -2427.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    }
+  ],
+  "positive_control_seeds_tested": [
+    {
+      "seed": 246012,
+      "m0_cand": 80261.0,
+      "m0_base": 71778.0,
+      "m0_delta": 8483.0,
+      "m1_cand": 80261.0,
+      "m1_base": 71778.0,
+      "m1_delta": 8483.0,
+      "paired_delta": 8483.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246026,
+      "m0_cand": 54099.0,
+      "m0_base": 46088.0,
+      "m0_delta": 8011.0,
+      "m1_cand": 54099.0,
+      "m1_base": 46088.0,
+      "m1_delta": 8011.0,
+      "paired_delta": 8011.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246034,
+      "m0_cand": 89520.0,
+      "m0_base": 66078.0,
+      "m0_delta": 23442.0,
+      "m1_cand": 89520.0,
+      "m1_base": 66078.0,
+      "m1_delta": 23442.0,
+      "paired_delta": 23442.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "YARN_SPECIALIZED"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    },
+    {
+      "seed": 246048,
+      "m0_cand": 69275.0,
+      "m0_base": 80852.0,
+      "m0_delta": -11577.0,
+      "m1_cand": 69275.0,
+      "m1_base": 80852.0,
+      "m1_delta": -11577.0,
+      "paired_delta": -11577.0,
+      "c0_plans": [
+        "YARN_SPECIALIZED",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE",
+        "BASELINE_BACKBONE"
+      ],
+      "c0_final_plan": "YARN_SPECIALIZED",
+      "guard_activated": true,
+      "safety_override": false
+    }
+  ]
+}

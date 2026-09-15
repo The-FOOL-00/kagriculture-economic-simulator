@@ -1,0 +1,22 @@
+{
+  "n_loss_seeds": 16,
+  "n_control_seeds": 4,
+  "original_loss_magnitude_total_16": 47041.5,
+  "original_loss_magnitude_reversals_13": 43198.5,
+  "killtest_loss_magnitude_total_16": 37368.0,
+  "killtest_loss_magnitude_reversals_13": 33525.0,
+  "aggregate_net_recovery_total_16": 9673.5,
+  "aggregate_net_recovery_reversals_13": 9673.5,
+  "recovery_percentage_total_16": 20.56,
+  "recovery_percentage_reversals_13": 22.39,
+  "pre_registered_threshold_pct": 50.0,
+  "threshold_met": false,
+  "improved_loss_seeds_count": 6,
+  "worsened_loss_seeds_count": 7,
+  "unchanged_loss_seeds_count": 3,
+  "positive_control_original_sum": 36742.0,
+  "positive_control_killtest_sum": 28359.0,
+  "positive_control_net_difference": -8383.0,
+  "catastrophic_positive_control_collapses": 1,
+  "primary_verdict": "MIXED_UNSAFE"
+}

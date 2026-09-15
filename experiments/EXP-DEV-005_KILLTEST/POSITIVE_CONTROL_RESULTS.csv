@@ -1,0 +1,5 @@
+seed,original_delta,killtest_delta,difference,guard_activated,beneficial_reversal_blocked,new_loss_introduced
+246012,8330.0,8483.0,153.0,True,False,False
+246026,8816.0,8011.0,-805.0,True,True,False
+246034,5453.0,23442.0,17989.0,True,False,False
+246048,14143.0,-11577.0,-25720.0,True,True,True
