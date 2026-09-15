@@ -1,0 +1,25 @@
+CATEGORY,METRIC,V54_VALUE,V66_VALUE,DELTA (V66 - V54),DETAILS
+Labor,Total Worker Days,320,320,0,V54 avg 10.7/day vs V66 avg 10.7/day
+Labor,Total Hiring Cost ($),5800,5800,0,Direct hiring fees plus daily maintenance
+Land,Expansion Steps,"[150, 265]","[150, 265]",0,Timesteps when BUY_LAND / EXPAND executed
+Livestock,Total Cows Purchased,9,9,0,"V54: [(1, 2), (66, 1), (88, 1), (150, 2), (169, 1), (176, 1), (195, 1)] vs V66: [(1, 2), (65, 1), (88, 1), (150, 2), (169, 1), (176, 1), (195, 1)]"
+Livestock,Total Sheep Purchased,5,5,0,"V54: [(1, 2), (195, 2), (313, 1)] vs V66: [(1, 2), (195, 2), (313, 1)]"
+Wheat,Total Wheat Purchased,370,329,-41,V54: 370 units vs V66: 329 units (-41 units purchased in V66)
+Wheat,Wheat Plant Actions,187,187,0,Total PLANT WHEAT actions across the route
+Strawberry,Strawberry Seeds Purchased,38,44,6,"V54: 38 vs V66: 44 (+6 seeds in raw route, dynamically trimmed by V60 seed_trim)"
+Strawberry,Strawberry Plant Actions,38,38,0,Both agents plant exactly 38 strawberry plants on Days 5 to 11
+Melon,Melon Seeds Purchased,12,12,0,Opening melon seed procurement
+Selling: WHEAT,Total Planned Sales Units,386,381,-5,V54: 48 turns (avg 8.0) | V66: 58 turns (avg 6.6)
+Selling: WHEAT,Sale Window (First -> Last),Step 4 -> 717,Step 2 -> 718,-2 start,First sale turn comparison
+Selling: STRAWBERRY,Total Planned Sales Units,295,269,-26,V54: 39 turns (avg 7.6) | V66: 35 turns (avg 7.7)
+Selling: STRAWBERRY,Sale Window (First -> Last),Step 381 -> 701,Step 381 -> 699,+0 start,First sale turn comparison
+Selling: MELON,Total Planned Sales Units,72,72,0,V54: 6 turns (avg 12.0) | V66: 6 turns (avg 12.0)
+Selling: MELON,Sale Window (First -> Last),Step 249 -> 264,Step 249 -> 264,+0 start,First sale turn comparison
+Selling: MILK,Total Planned Sales Units,270,270,0,V54: 43 turns (avg 6.3) | V66: 47 turns (avg 5.7)
+Selling: MILK,Sale Window (First -> Last),Step 195 -> 717,Step 195 -> 716,+0 start,First sale turn comparison
+Selling: WOOL,Total Planned Sales Units,154,138,-16,V54: 27 turns (avg 5.7) | V66: 32 turns (avg 4.3)
+Selling: WOOL,Sale Window (First -> Last),Step 150 -> 708,Step 150 -> 716,+0 start,First sale turn comparison
+Selling: FERTILIZER,Total Planned Sales Units,334,326,-8,V54: 89 turns (avg 3.8) | V66: 98 turns (avg 3.3)
+Selling: FERTILIZER,Sale Window (First -> Last),Step 28 -> 715,Step 30 -> 718,+2 start,First sale turn comparison
+Terminal,Loaded Actor Return Override,None (standard route steps 713-718),Active (steps 713-716 _route_loaded_units),V66 Recalls Loaded Hands,Recalls hands carrying valuable products to shed on exact departure distance
+Terminal,Final Turn Complete Liquidation,Standard residual collision,Step 718 _TERMINAL_MARKET(replace=True),Guaranteed 100% Liquidation,Forces sell orders on all sellable goods in shed at step 718

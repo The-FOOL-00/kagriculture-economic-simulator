@@ -1,0 +1,8 @@
+seed,first_divergence_step,divergence_category,v54_action_state,v66_action_state,downstream_consequence
+1542,98,Hand Hiring / Liquidity Allocation,Step 98: V54++ money=75933.0,Step 98: V66 money=81492.0,V66 final lead: +$5559.0; Wheat sales 342.0 vs 2296.0; Sheep 1 vs 1
+1609,98,Hand Hiring / Liquidity Allocation,Step 98: V54++ money=88708.0,Step 98: V66 money=93914.0,V66 final lead: +$5206.0; Wheat sales 361.0 vs 2314.0; Sheep 1 vs 1
+1773,145,Hand Hiring / Liquidity Allocation,Step 145: V54++ money=46530.0,Step 145: V66 money=65334.0,V66 final lead: +$18804.0; Wheat sales 2306.0 vs 380.0; Sheep 1 vs 1
+1871,75,Hand Hiring / Liquidity Allocation,Step 75: V54++ money=44269.0,Step 75: V66 money=49277.0,V66 final lead: +$5008.0; Wheat sales 2119.0 vs 380.0; Sheep 1 vs 1
+1948,98,Hand Hiring / Liquidity Allocation,Step 98: V54++ money=86779.0,Step 98: V66 money=92036.0,V66 final lead: +$5257.0; Wheat sales 342.0 vs 2296.0; Sheep 1 vs 1
+1949,145,Hand Hiring / Liquidity Allocation,Step 145: V54++ money=61402.0,Step 145: V66 money=89233.0,V66 final lead: +$27831.0; Wheat sales 2305.0 vs 380.0; Sheep 1 vs 1
+1969,75,Hand Hiring / Liquidity Allocation,Step 75: V54++ money=33360.0,Step 75: V66 money=38863.0,V66 final lead: +$5503.0; Wheat sales 2118.0 vs 380.0; Sheep 1 vs 1
