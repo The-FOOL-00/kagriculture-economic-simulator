@@ -1,0 +1,9 @@
+d10ee1857b380ee1254a29bf9fc1a49e33c10783b9e49ef1e68beb75bab80cff  PROTOCOL.md
+10ea5be80dcf9412ab13dc848a2565652ba6b569542ba7b7ebe3c1bebd348418  SEED_SELECTION_RULE.md
+3bf2492c4f818d4980d9f0e56efbfd94f599c6b8d422ce6348dd452d1e5880f3  SEED_PROVENANCE.md
+4e3536a5f3a482dc92b154aec94a98e46b6ff613574a0e9701e052c96b48c4ef  POWER_PLANNING.md
+899d4797ed997cee269c37791db0e1df0b556bd4ce29f1dedcac8942d3c313b8  PRECHECK.md
+
+Protocol freeze: commit hash and timestamp recorded after Git commit.
+Freeze must predate any runner work and any experimental seed execution.
+Primary protocol SHA-256: d10ee1857b380ee1254a29bf9fc1a49e33c10783b9e49ef1e68beb75bab80cff
