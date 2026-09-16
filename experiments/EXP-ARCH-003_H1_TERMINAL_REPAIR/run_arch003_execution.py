@@ -48,6 +48,7 @@ from h1_const import (
     COHORT_SIZE,
     COHORT_START,
     ENTRY_STEP,
+    EXPERIMENT_ID,
     FINAL_STEP,
     PIN_BOARD_SIZE,
     PIN_EPISODE_STEPS,
@@ -270,6 +271,178 @@ def run_paired_seed(
     }
 
 
+def save_results_checkpoint(
+    results_map: Dict[int, Any],
+    start_time_iso: str,
+    status: str = "IN_PROGRESS",
+    elapsed_seconds: float = 0.0,
+):
+    sorted_seeds = sorted(results_map.keys())
+
+    # 1. RAW_RESULTS.json
+    tmp_raw = RAW_RESULTS_FILE + ".tmp"
+    with open(tmp_raw, "w", encoding="utf-8") as f:
+        json.dump({str(s): results_map[s] for s in sorted_seeds}, f, indent=2)
+    os.replace(tmp_raw, RAW_RESULTS_FILE)
+
+    # 2. PAIRED_DELTAS.csv
+    tmp_csv = PAIRED_DELTAS_FILE + ".tmp"
+    with open(tmp_csv, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            "seed", "delta_a", "delta_b", "delta_paired", "exposed",
+            "h1_score_a", "base_score_a", "h1_score_b", "base_score_b",
+            "activated_a", "activated_b", "reason_a", "reason_b",
+        ])
+        for s in sorted_seeds:
+            item = results_map[s]
+            exposed = int(bool(item["activated_a"] or item["activated_b"]))
+            writer.writerow([
+                item["seed"],
+                f"{item['delta_a']:.2f}",
+                f"{item['delta_b']:.2f}",
+                f"{item['delta_paired']:.2f}",
+                exposed,
+                f"{item['h1_score_a']:.2f}",
+                f"{item['base_score_a']:.2f}",
+                f"{item['h1_score_b']:.2f}",
+                f"{item['base_score_b']:.2f}",
+                int(item["activated_a"]),
+                int(item["activated_b"]),
+                item["reason_a"],
+                item["reason_b"],
+            ])
+    os.replace(tmp_csv, PAIRED_DELTAS_FILE)
+
+    # 3. TELEMETRY_EVENTS.csv
+    tmp_tel = TELEMETRY_EVENTS_FILE + ".tmp"
+    with open(tmp_tel, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            "seed", "h1_seat", "h1_score", "opp_score", "delta", "activated",
+            "reason", "pure_pre_e_pass", "pure_712_717_market_pass", "pure_step_pass",
+            "route", "simulations", "planning_ms", "changed_workers_count",
+            "money_delta", "stock_value_gain", "candidate_overflow", "baseline_overflow",
+            "markets_verbatim", "buy_units_U", "fertilizer_reaped", "fertilizer_baseline",
+        ])
+        for s in sorted_seeds:
+            item = results_map[s]
+            for g, seat, delta in (
+                (item["game_a"], 0, item["delta_a"]),
+                (item["game_b"], 1, item["delta_b"]),
+            ):
+                rec = g.get("telemetry", [{}])[0] if g.get("telemetry") else {}
+                writer.writerow([
+                    g["seed"],
+                    seat,
+                    f"{g['h1_score']:.2f}",
+                    f"{g['opp_score']:.2f}",
+                    f"{delta:.2f}",
+                    int(g["activated"]),
+                    g["reason"],
+                    int(g["pure_pre_e_pass"]),
+                    int(g["pure_712_717_market_pass"]),
+                    int(g["pure_step_pass"]),
+                    rec.get("route", "") or "",
+                    rec.get("simulations", "") if rec.get("simulations") is not None else "",
+                    f"{rec['planning_ms']:.2f}" if rec.get("planning_ms") is not None else "",
+                    len(rec.get("changed_workers", []) or []),
+                    f"{rec['money_delta']:.2f}" if rec.get("money_delta") is not None else "",
+                    f"{rec['stock_value_gain']:.2f}" if rec.get("stock_value_gain") is not None else "",
+                    rec.get("candidate_overflow", "") if rec.get("candidate_overflow") is not None else "",
+                    rec.get("baseline_overflow", "") if rec.get("baseline_overflow") is not None else "",
+                    rec.get("markets_verbatim", "") if rec.get("markets_verbatim") is not None else "",
+                    rec.get("buy_units_U", "") if rec.get("buy_units_U") is not None else "",
+                    rec.get("fertilizer_reaped", "") if rec.get("fertilizer_reaped") is not None else "",
+                    rec.get("fertilizer_baseline", "") if rec.get("fertilizer_baseline") is not None else "",
+                ])
+    os.replace(tmp_tel, TELEMETRY_EVENTS_FILE)
+
+    # 4. EXECUTION_MANIFEST.json
+    now_iso = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    manifest = {
+        "experiment": EXPERIMENT_ID,
+        "cohort_lo": AUTHORIZED_COHORT_LO,
+        "cohort_hi": AUTHORIZED_COHORT_HI,
+        "authorized_seeds": AUTHORIZED_SEEDS_COUNT,
+        "executed_seeds": len(results_map),
+        "total_games": len(results_map) * 2,
+        "start_time": start_time_iso,
+        "end_time": now_iso,
+        "elapsed_seconds": elapsed_seconds,
+        "baseline_sha256": BASELINE_SHA256,
+        "runner_sha256": sha256_of_file(__file__),
+        "status": status,
+    }
+    tmp_man = MANIFEST_FILE + ".tmp"
+    with open(tmp_man, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    os.replace(tmp_man, MANIFEST_FILE)
+
+
+def execute_production_cohort(workers: int = 4):
+    """Execute the preregistered prospective cohort 330000-330499 under CRN."""
+    log("=" * 70)
+    log(f"STARTING {EXPERIMENT_ID} AUTHORIZED PRODUCTION EXECUTION")
+    log("=" * 70)
+    log(f"Authorized Cohort: [{AUTHORIZED_COHORT_LO}, {AUTHORIZED_COHORT_HI}] (N={AUTHORIZED_SEEDS_COUNT} seeds)")
+    log(f"Total Games Scheduled: {AUTHORIZED_SEEDS_COUNT * 2}")
+    log(f"Parallel Workers: {workers}")
+
+    log("Verifying pre-execution integrity hashes (G-HASH)...")
+    verify_integrity_hashes()
+    log("G-HASH passed: Baseline verified bit-identical.")
+
+    start_time_iso = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    t0 = time.perf_counter()
+
+    seeds_to_run = list(range(AUTHORIZED_COHORT_LO, AUTHORIZED_COHORT_HI + 1))
+    results_map = {}
+    completed_count = 0
+
+    if workers <= 1:
+        for seed in seeds_to_run:
+            seed_res = run_paired_seed(seed, allow_consumed_validation=False)
+            results_map[seed] = seed_res
+            completed_count += 1
+            if completed_count % 25 == 0 or completed_count == AUTHORIZED_SEEDS_COUNT:
+                elapsed = time.perf_counter() - t0
+                rate = completed_count / max(elapsed, 0.001)
+                log(f"Progress: {completed_count}/{AUTHORIZED_SEEDS_COUNT} seeds "
+                    f"({completed_count * 2}/{AUTHORIZED_SEEDS_COUNT * 2} games) "
+                    f"[{rate:.2f} seeds/s] - Latest seed {seed}: delta_paired={seed_res['delta_paired']:.2f}")
+                save_results_checkpoint(results_map, start_time_iso, status="IN_PROGRESS", elapsed_seconds=elapsed)
+    else:
+        with ProcessPoolExecutor(max_workers=workers, max_tasks_per_child=10) as pool:
+            future_to_seed = {
+                pool.submit(run_paired_seed, s, False): s for s in seeds_to_run
+            }
+            for future in as_completed(future_to_seed):
+                seed = future_to_seed[future]
+                try:
+                    seed_res = future.result()
+                    results_map[seed] = seed_res
+                    completed_count += 1
+                except Exception as exc:
+                    elapsed = time.perf_counter() - t0
+                    log(f"FATAL ERROR on seed {seed}: {exc}")
+                    save_results_checkpoint(results_map, start_time_iso, status="FAILED_EXCEPTION", elapsed_seconds=elapsed)
+                    raise
+
+                if completed_count % 25 == 0 or completed_count == AUTHORIZED_SEEDS_COUNT:
+                    elapsed = time.perf_counter() - t0
+                    rate = completed_count / max(elapsed, 0.001)
+                    log(f"Progress: {completed_count}/{AUTHORIZED_SEEDS_COUNT} seeds "
+                        f"({completed_count * 2}/{AUTHORIZED_SEEDS_COUNT * 2} games) "
+                        f"[{rate:.2f} seeds/s] - Latest seed {seed}: delta_paired={seed_res['delta_paired']:.2f}")
+                    save_results_checkpoint(results_map, start_time_iso, status="IN_PROGRESS", elapsed_seconds=elapsed)
+
+    t_end = time.perf_counter()
+    total_elapsed = t_end - t0
+    log(f"Execution complete: {len(results_map)} seeds ({len(results_map)*2} games) finished in {total_elapsed:.1f}s.")
+    save_results_checkpoint(results_map, start_time_iso, status="COMPLETED", elapsed_seconds=total_elapsed)
+
+
 def main():
     parser = argparse.ArgumentParser(description="EXP-ARCH-003 Execution Runner")
     parser.add_argument("--execute-authorized-cohort", action="store_true",
@@ -293,8 +466,7 @@ def main():
         log("Cohort 330000–330499 remains 100% untouched and protected. Exiting.")
         sys.exit(0)
 
-    log(f"Starting authorized execution of cohort [{AUTHORIZED_COHORT_LO}, {AUTHORIZED_COHORT_HI}]...")
-    # Protected cohort execution logic (when authorized after freeze)
+    execute_production_cohort(workers=args.workers)
 
 
 if __name__ == "__main__":

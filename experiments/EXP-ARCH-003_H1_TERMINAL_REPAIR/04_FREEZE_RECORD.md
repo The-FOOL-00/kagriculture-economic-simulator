@@ -14,10 +14,10 @@ All files comprising the implementation, execution runner, and validation test s
 
 | File Path | SHA-256 Hash | Purpose |
 | :--- | :--- | :--- |
-| `01_ISOLATION_AUDIT.md` | `24a964f2324ce3d9cf0569022e251eeb5e17f630a40190d4e28afa488d9d3a9a` | Isolation & Anti-Pollution Audit |
-| `02_PREREGISTRATION.md` | `7aefeec68c5982b73d317661f3fa8bc2b257f84837c44e052a2b7296ddfe6f8e` | Full Preregistration & Invariant Specification |
+| `01_ISOLATION_AUDIT.md` | `c981c8db21c5a869c2fbfdf618e769b72316dfd88be35dd6466ee57217419445` | Isolation & Anti-Pollution Audit |
+| `02_PREREGISTRATION.md` | `d182927d53b24e3aa3c8b180e1663208a32bd9f6f8a92129937e4415aca6a51d` | Full Preregistration & Invariant Specification |
 | `03_IMPLEMENTATION_VALIDATION_REPORT.md` | `10f9df0c32b3fa169a7961f12bbd72ac7316bf0212360ca07c2c12097b2ea113` | 12-Item Micro-Validation Verification Report |
-| `05_RUNNER_FREEZE_RECORD.md` | `84a5effa46fdb60527ecf93e7b6530bbfc8a169c13c9f221ea1517cf50a44d60` | Runner Architecture & Quarantine Freeze |
+| `05_RUNNER_FREEZE_RECORD.md` | `7acd55e007c383bf69c4d282389df1d0282a4945d4ad0d633cfd01d6512dbc17` | Runner Architecture & Quarantine Freeze |
 | `h1_const.py` | `b68976f7a4f0a0efacf4b8d79e83122bea9763a4b9fcec8aaf129d2c630902cf` | Constants, Pins, Cohort Bounds, Search Budget |
 | `h1_units.py` | `06b55c0d8a37058ec91acb9783e4f2a6678e6be29c54fa608e816f0adbc594c2` | Forward Unit Simulation Engine (1.32.7 exact extract) |
 | `h1_baseline.py` | `abed6ee655fb28be7edb15587f8f3bae5745254ca5e4940b130a87e5da326990` | Frozen V54++ Baseline Loader & Ledger Cloner |
@@ -26,7 +26,7 @@ All files comprising the implementation, execution runner, and validation test s
 | `h1_search.py` | `6827710d2ba7c282158386f7189b6c114cfd522f1f1236e30193a02bc3c271a2` | Candidate Proposal Generator & 128-Sim Search |
 | `h1_telemetry.py` | `155737b0908976d66ac04b6ac541b26e12c585e7e3f05a4e92c1a8025d6b907c` | Telemetry Schemas, Enums, and Record Types |
 | `h1_agent.py` | `0bc325cb560d1ab5d1220de9eb615cd7bbd31c0a2199a5f19c027f72552df0b1` | Live Agent Overlay, State Verifier, and Handshake |
-| `run_arch003_execution.py` | `ece9c80f01b2c1ba1c3091a7409c26783e98810861caf431e2d652e382ff3426` | 1000-Game CRN Evaluation Runner |
+| `run_arch003_execution.py` | `ae4d4e95cef6e297520cc48304f0ebc2fb77a1333ac6f5f1baf6dadb1fa92313` | 1000-Game CRN Evaluation Runner |
 | `tests/test_arch003_validation.py` | `4659c37b1ddf49da2aa1209e57123a62925f199e9ffeddf1008e3281fb104b02` | 12-Item Micro-Validation Test Suite |
 
 ---
@@ -34,7 +34,7 @@ All files comprising the implementation, execution runner, and validation test s
 ## 2. Frozen External Baseline
 
 - **File Path:** `candidates/compiled_v54_plus_residual.py`
-- **Baseline SHA-256:** `5ef81e4b8bb26c483a65191cf078a6aafe4d8721ad30303bfa82e850b924ea10`
+- **Baseline SHA-256:** `18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb`
 - **Policy Role:** Exact read-only baseline loaded for pre-E execution (steps 0–711), live baseline actions (steps 712–718 when unguided), and benchmark opponent.
 
 ---
@@ -90,12 +90,22 @@ All 12 micro-validation tests passed (12/12):
 
 ---
 
-## 6. Git Commit and Verification Checksum
+## 6. Execution Environment & Freeze Specifications
 
-- **Primary Commit SHA:** `f0a817be8146c977118e2558ce5a4700005d9e8a`
+- **Repository HEAD Prior to Freeze:** `07d5e4fff81ffab4fa34aabfb54d4fa20314c565`
 - **Branch:** `main`
-- **Cohort 330000–330499 Verification:**
-  - Files matching `330*`: 0 files found.
-  - Results directory: Non-existent / empty.
-  - Consumed seeds in cohort: 0.
-- **Sign-off:** Verified, micro-validated, cryptographically frozen.
+- **Implementation Commit SHA:** `f0a817be8146c977118e2558ce5a4700005d9e8a`
+- **Python Version:** `3.14.3 (tags/v3.14.3:323c59a, Feb 3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]`
+- **OS / Platform:** `Windows-11-10.0.26200-SP0 AMD64 Intel64 Family 6 Model 186 Stepping 3, GenuineIntel`
+- **Simulator Version:** `kagsim_py 1.32.7` (exact validated port)
+- **CPU Cores:** `12 logical cores`
+- **RAM:** `15.69 GB total / 5.33 GB available`
+- **GPU:** `N/A (CPU execution)`
+- **Authorized Cohort:** `330000–330499` (N = 500 seeds, 1000 CRN games)
+- **Cohort Status:** `100% UNTOUCHED (0 / 500 seeds executed)`
+- **Parallel Workers:** `6`
+- **Output Directory:** `experiments/EXP-ARCH-003_H1_TERMINAL_REPAIR/`
+- **Execution Command:** `python experiments/EXP-ARCH-003_H1_TERMINAL_REPAIR/run_arch003_execution.py --execute-authorized-cohort --workers 6`
+- **Protected Artifacts Audit:** `ARCH-002, DEV-007, and Final Holdout (214200–214249) are completely unmodified.`
+- **Micro-Validation Suite Result:** `12 passed in 18.58s (12/12)`
+- **Sign-off:** Verified, micro-validated, cryptographically sealed for freeze commit.

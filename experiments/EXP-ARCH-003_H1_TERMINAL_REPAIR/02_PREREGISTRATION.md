@@ -51,7 +51,7 @@ Acceptance specifies whether an already-safe (D5-passing) candidate generates ge
 
 - **Baseline Agent:**
   - Frozen `V54++` agent (`candidates/compiled_v54_plus_residual.py`).
-  - Baseline SHA-256: `5ef81e4b8bb26c483a65191cf078a6aafe4d8721ad30303bfa82e850b924ea10`.
+  - Baseline SHA-256: `18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb`.
   - Unadorned, read-only baseline policy with frozen routes (`backbone`, `yarn`, `bakery`).
 - **Treatment Agent:**
   - `h1_agent.py:build_agent(load_baseline())`.

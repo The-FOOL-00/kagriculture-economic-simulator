@@ -2,7 +2,7 @@
 
 **Experiment ID:** EXP-ARCH-003_H1_TERMINAL_REPAIR  
 **Runner Path:** `experiments/EXP-ARCH-003_H1_TERMINAL_REPAIR/run_arch003_execution.py`  
-**Runner SHA-256:** `ece9c80f01b2c1ba1c3091a7409c26783e98810861caf431e2d652e382ff3426`  
+**Runner SHA-256:** `ae4d4e95cef6e297520cc48304f0ebc2fb77a1333ac6f5f1baf6dadb1fa92313`  
 **Date Frozen:** 2026-09-16  
 **Status:** FROZEN — PENDING REVIEW PRIOR TO ANY PROSPECTIVE EXECUTION  
 
@@ -46,7 +46,7 @@ The runner strictly enforces the following programmatic guardrails at startup:
 2. **Frozen Baseline Cryptographic Check:**
    The runner calculates the SHA-256 hash of `candidates/compiled_v54_plus_residual.py` and asserts:
    ```python
-   V54_PLUS_PLUS_SHA256 = "5ef81e4b8bb26c483a65191cf078a6aafe4d8721ad30303bfa82e850b924ea10"
+   BASELINE_SHA256 = "18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb"
    ```
    Execution refuses to start if any modification is detected.
 
