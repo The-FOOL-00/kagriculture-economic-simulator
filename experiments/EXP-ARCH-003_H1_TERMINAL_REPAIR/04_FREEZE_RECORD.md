@@ -87,3 +87,15 @@ All 12 micro-validation tests passed (12/12):
 - **Kaggle Execution:** None.
 - **Holdout Execution:** None.
 - **Next Authorized Step:** Final review and freeze sign-off.
+
+---
+
+## 6. Git Commit and Verification Checksum
+
+- **Primary Commit SHA:** `f0a817be8146c977118e2558ce5a4700005d9e8a`
+- **Branch:** `main`
+- **Cohort 330000–330499 Verification:**
+  - Files matching `330*`: 0 files found.
+  - Results directory: Non-existent / empty.
+  - Consumed seeds in cohort: 0.
+- **Sign-off:** Verified, micro-validated, cryptographically frozen.
