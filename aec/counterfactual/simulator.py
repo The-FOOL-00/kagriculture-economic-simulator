@@ -9,6 +9,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from aec.config import (
     BOARD_SIZE,
+    CROP_SEED_PRICE,
     PRODUCTS,
     SHED_CAPACITY,
     TURNS_PER_DAY,
@@ -56,6 +57,9 @@ class SimulationOutcome:
     
     intermediate_solvency_ok: bool
     horizon: int
+
+    baseline_trace: Optional[List[Dict[str, Any]]] = None
+    candidate_trace: Optional[List[Dict[str, Any]]] = None
 
 
 class ShadowRolloutState:
@@ -131,6 +135,28 @@ def execute_market_lockstep(
                     # Increase market inventory (price depression)
                     rollout.market_inv[item] = rollout.market_inv.get(item, 10000) + actual_sell
                     rollout.market_prices[item] = max(1, price - actual_sell // 2)
+            elif isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "BUY_PRODUCT":
+                item = o[1]
+                qty = int(o[2])
+                price = rollout.market_prices.get(item, BASE_PRICES.get(item, 10))
+                for _ in range(qty):
+                    if rollout.money >= price and sum(rollout.shed.values()) < SHED_CAPACITY and rollout.market_inv.get(item, 0) > 0:
+                        rollout.money -= price
+                        rollout.shed[item] = rollout.shed.get(item, 0) + 1
+                        rollout.market_inv[item] -= 1
+                        rollout.market_prices[item] = min(price * 2, rollout.market_prices.get(item, 10) + 1)
+            elif isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "BUY_SEED":
+                crop = o[1]
+                qty = int(o[2])
+                seed_cost = CROP_SEED_PRICE.get(crop, 20)
+                total_cost = qty * seed_cost
+                if rollout.money >= total_cost:
+                    rollout.money -= total_cost
+                    rollout.seeds[crop] = rollout.seeds.get(crop, 0) + qty
+            elif isinstance(o, (list, tuple)) and len(o) >= 1 and o[0] == "HIRE":
+                hire_cost = 100.0
+                if rollout.money >= hire_cost:
+                    rollout.money -= hire_cost
 
         # 2. Opponent order execution
         if i < len(opp_q):
@@ -157,22 +183,29 @@ def simulate_rollout(
     econ_state: EconomicState,
     initial_action: Dict[str, Any],
     horizon: int,
-    opp_model: OpponentPressureModel
+    opp_model: OpponentPressureModel,
+    continuation_actions: Optional[List[Dict[str, Any]]] = None,
+    trace_log: Optional[List[Dict[str, Any]]] = None,
 ) -> ShadowRolloutState:
-    """Run an isolated forward rollout starting with initial_action at step 0."""
+    """Run an isolated forward rollout starting with initial_action at step 0, followed by continuation."""
     rollout = ShadowRolloutState(econ_state)
     n_workers = len(rollout.inventories)
 
     for offset in range(horizon):
         cur_step = econ_state.step + offset
+        if cur_step >= 720:
+            break
         rollout.step = cur_step
         rollout.day = cur_step // TURNS_PER_DAY
         
-        # Step action: initial_action on offset 0; passive continuation thereafter
+        # Step action: initial_action on offset 0; continuation thereafter
         if offset == 0:
-            action = initial_action
+            action = copy.deepcopy(initial_action)
         else:
-            action = {"farmer": ["PASS"], "hands": [["PASS"] for _ in range(n_workers - 1)], "market": []}
+            if continuation_actions and (offset - 1) < len(continuation_actions):
+                action = copy.deepcopy(continuation_actions[offset - 1])
+            else:
+                action = {"farmer": ["PASS"], "hands": [["PASS"] for _ in range(n_workers - 1)], "market": []}
 
         # 1. Apply worker movements and tasks
         farm_dict = rollout.get_farm_dict()
@@ -182,9 +215,14 @@ def simulate_rollout(
         commands = [action.get("farmer", ["PASS"])] + (action.get("hands", []) or [])
         while len(commands) < n_workers:
             commands.append(["PASS"])
+        commands = commands[:n_workers]
 
         for actor in range(n_workers):
             cmd = commands[actor] if actor < len(commands) and commands[actor] else ["PASS"]
+            watch_drop = bool(cmd and cmd[0] == "DROP")
+            before_inv_sum = sum(private_dict["inventories"][actor].values()) if watch_drop else 0
+            before_shed_sum = sum(private_dict["shed"].values()) if watch_drop else 0
+
             try:
                 _apply_unit_action(
                     farm_dict,
@@ -199,6 +237,19 @@ def simulate_rollout(
             except Exception:
                 pass  # Ignore invalid worker step in simulation
 
+            if watch_drop:
+                after_shed_sum = sum(private_dict["shed"].values())
+                after_inv_sum = sum(private_dict["inventories"][actor].values())
+                shed_delta = max(0, after_shed_sum - before_shed_sum)
+                inv_dropped = max(0, before_inv_sum - after_inv_sum)
+                lost_units = max(0, inv_dropped - shed_delta)
+                if lost_units > 0:
+                    rollout.overflow_units += lost_units
+
+        # Synchronize worker positions back to rollout state
+        rollout.farmer_pos = list(farm_dict["farmer"])
+        rollout.hands_pos = [list(p) for p in farm_dict.get("hands", [])]
+
         # 2. Market execution under opponent pressure
         opp_market = opp_model.generate_simulated_opponent_market(econ_state.step, offset)
         execute_market_lockstep(rollout, action.get("market", []), opp_market)
@@ -210,35 +261,71 @@ def simulate_rollout(
             pass
 
         # 4. Record row
-        rollout.rows.append({
+        row_data = {
             "step": cur_step,
             "pre_market_shed": pre_market_shed,
             "post_market_shed": dict(rollout.shed),
             "money": rollout.money,
             "opp_money": rollout.opp_money,
-        })
+        }
+        rollout.rows.append(row_data)
+
+        # 5. Record trace if requested
+        if trace_log is not None:
+            trace_entry = {
+                "offset": offset,
+                "step": cur_step,
+                "worker_positions": [list(farm_dict["farmer"])] + [list(p) for p in farm_dict.get("hands", [])],
+                "worker_actions": commands,
+                "inventory": copy.deepcopy(private_dict["inventories"]),
+                "shed": dict(private_dict["shed"]),
+                "cash": rollout.money,
+                "opp_cash": rollout.opp_money,
+                "market_prices": dict(rollout.market_prices),
+                "market_inventory": dict(rollout.market_inv),
+                "opponent_pressure": {p: opp_model.state.sale_pressure.get(p, 0.0) for p in PRODUCTS},
+            }
+            trace_log.append(trace_entry)
 
     return rollout
 
 
 class CounterfactualSimulator:
-    """Evaluates candidate patches against baseline under opponent pressure."""
+    """Evaluates candidate patches against baseline under opponent pressure with full continuation."""
 
     def evaluate(
         self,
         candidate_patch: CoupledPatch,
         baseline_action: Dict[str, Any],
         econ_state: EconomicState,
-        horizon: int
+        horizon: int,
+        continuation_trajectory: Optional[List[Dict[str, Any]]] = None,
+        trace: bool = False
     ) -> SimulationOutcome:
         opp_model = OpponentPressureModel(econ_state.opponent)
 
         # 1. Simulate Baseline Future
-        baseline_rollout = simulate_rollout(econ_state, baseline_action, horizon, opp_model)
+        baseline_trace: Optional[List[Dict[str, Any]]] = [] if trace else None
+        baseline_rollout = simulate_rollout(
+            econ_state=econ_state,
+            initial_action=baseline_action,
+            horizon=horizon,
+            opp_model=opp_model,
+            continuation_actions=continuation_trajectory,
+            trace_log=baseline_trace
+        )
 
         # 2. Simulate Candidate Future
         cand_action = candidate_patch.apply(baseline_action)
-        candidate_rollout = simulate_rollout(econ_state, cand_action, horizon, opp_model)
+        candidate_trace: Optional[List[Dict[str, Any]]] = [] if trace else None
+        candidate_rollout = simulate_rollout(
+            econ_state=econ_state,
+            initial_action=cand_action,
+            horizon=horizon,
+            opp_model=opp_model,
+            continuation_actions=continuation_trajectory,
+            trace_log=candidate_trace
+        )
 
         # 3. Compute Deltas & Margins
         delta_our_money = candidate_rollout.money - baseline_rollout.money
@@ -272,5 +359,7 @@ class CounterfactualSimulator:
             candidate_sold=candidate_rollout.cumulative_sold,
             baseline_sold=baseline_rollout.cumulative_sold,
             intermediate_solvency_ok=intermediate_solvency_ok,
-            horizon=horizon
+            horizon=horizon,
+            baseline_trace=baseline_trace,
+            candidate_trace=candidate_trace
         )

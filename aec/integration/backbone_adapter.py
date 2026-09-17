@@ -38,10 +38,13 @@ class BackboneAdapter:
         self,
         agent_fn: Optional[Callable[[Dict[str, Any], Optional[Dict[str, Any]]], Dict[str, Any]]] = None,
         config: Optional[AECConfig] = None,
-        v3_callable: Optional[Callable[[Dict[str, Any], Optional[Dict[str, Any]]], Dict[str, Any]]] = None
+        v3_callable: Optional[Callable[[Dict[str, Any], Optional[Dict[str, Any]]], Dict[str, Any]]] = None,
+        continuation_provider: Optional[Callable[[int, int, int, int], List[Dict[str, Any]]]] = None
     ) -> None:
         self.config = config or AECConfig()
         self._agent_fn = agent_fn or v3_callable
+        self._continuation_provider = continuation_provider
+        self._v3_chassis: Any = None
         self._last_called_step: int = -1
         self._cached_result: Optional[BaselineResult] = None
         self._call_count: int = 0
@@ -83,6 +86,116 @@ class BackboneAdapter:
             raise RuntimeError("V3 frozen main.py does not define callable 'agent'")
 
         self._agent_fn = agent_callable
+        # Extract underlying Chassis for read-only route tape lookahead
+        impl = ns.get("_PARENT_NS", {}).get("_IMPL", None)
+        if impl is not None:
+            self._v3_chassis = getattr(impl, "chassis", None)
+
+    @staticmethod
+    def _align_hands(action: Dict[str, Any], n_hands: int) -> Dict[str, Any]:
+        """Ensure hand count matches live farm topology."""
+        act = copy.deepcopy(action)
+        hands = act.get("hands", []) or []
+        if not isinstance(hands, list):
+            hands = []
+        if len(hands) < n_hands:
+            hands = hands + [["PASS"] for _ in range(n_hands - len(hands))]
+        elif len(hands) > n_hands:
+            hands = hands[:n_hands]
+        act["hands"] = hands
+        act.setdefault("farmer", ["PASS"])
+        act.setdefault("market", [])
+        return act
+
+    def get_future_trajectory(
+        self,
+        step: int,
+        horizon: int,
+        player: int = 0,
+        n_hands: int = 0
+    ) -> List[Dict[str, Any]]:
+        """Extract deterministic planned backbone actions for future steps (step+1 .. step+horizon-1).
+        
+        Hard Invariants:
+        1. Never invokes the live backbone agent.
+        2. Never mutates live state, ledgers, or chassis.
+        3. Completely read-only lookup from the pre-computed route tape or continuation provider.
+        """
+        if horizon <= 1:
+            return []
+
+        # 1. Custom continuation provider if explicitly supplied
+        if self._continuation_provider is not None:
+            return self._continuation_provider(step, horizon, player, n_hands)
+
+        # 2. Frozen V3 Chassis extraction
+        chassis = self._v3_chassis or getattr(self._agent_fn, "chassis", None)
+        if chassis is not None and hasattr(chassis, "routes"):
+            players = getattr(chassis, "players", {})
+            native = players.get(player) if isinstance(players, dict) else None
+            route_id = 2 if step >= 648 else (native or {}).get("route")
+            if route_id is None:
+                route_id = 0
+            
+            routes = getattr(chassis, "routes", {})
+            tape = routes.get(route_id, [])
+            trajectory: List[Dict[str, Any]] = []
+            for offset in range(1, horizon):
+                future_step = step + offset
+                if 0 <= future_step < len(tape) and isinstance(tape[future_step], dict):
+                    act = self._align_hands(tape[future_step], n_hands)
+                    trajectory.append(act)
+                else:
+                    trajectory.append({
+                        "farmer": ["PASS"],
+                        "hands": [["PASS"] for _ in range(n_hands)],
+                        "market": []
+                    })
+            return trajectory
+
+        # 3. If mock/agent has schedule or routes attribute
+        if hasattr(self._agent_fn, "schedule"):
+            schedule = getattr(self._agent_fn, "schedule")
+            trajectory = []
+            for offset in range(1, horizon):
+                future_step = step + offset
+                if 0 <= future_step < len(schedule) and isinstance(schedule[future_step], dict):
+                    trajectory.append(self._align_hands(schedule[future_step], n_hands))
+                else:
+                    trajectory.append({
+                        "farmer": ["PASS"],
+                        "hands": [["PASS"] for _ in range(n_hands)],
+                        "market": []
+                    })
+            return trajectory
+
+        if hasattr(self._agent_fn, "routes"):
+            routes = getattr(self._agent_fn, "routes")
+            tape = routes.get(0, []) if isinstance(routes, dict) else routes
+            trajectory = []
+            for offset in range(1, horizon):
+                future_step = step + offset
+                if 0 <= future_step < len(tape) and isinstance(tape[future_step], dict):
+                    trajectory.append(self._align_hands(tape[future_step], n_hands))
+                else:
+                    trajectory.append({
+                        "farmer": ["PASS"],
+                        "hands": [["PASS"] for _ in range(n_hands)],
+                        "market": []
+                    })
+            return trajectory
+
+        # 4. Fallback for simple callable mocks with no future schedule:
+        # Repeat the cached baseline action padded with aligned hands
+        if self._cached_result is not None:
+            base_act = self._align_hands(self._cached_result.action, n_hands)
+            return [copy.deepcopy(base_act) for _ in range(horizon - 1)]
+
+        return [{
+            "farmer": ["PASS"],
+            "hands": [["PASS"] for _ in range(n_hands)],
+            "market": []
+        } for _ in range(horizon - 1)]
 
     def call_once(
         self,

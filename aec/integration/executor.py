@@ -191,15 +191,31 @@ class AECExecutor:
             best_certificate: Optional[SafetyCertificate] = None
             best_eval_result = None
 
-            for patch in candidate_patches[:self.config.max_simulations]:
+            # Extract read-only future backbone continuation trajectory (zero live calls)
+            active_patches = candidate_patches[:self.config.max_simulations]
+            max_horizon = max(
+                (select_adaptive_horizon(p, econ_state, self.config) for p in active_patches),
+                default=self.config.normal_horizon
+            )
+            n_hands = max(0, len(econ_state.workers.workers) - 1)
+            future_trajectory = self.backbone.get_future_trajectory(
+                step=step,
+                horizon=max_horizon,
+                player=econ_state.player,
+                n_hands=n_hands
+            )
+
+            for patch in active_patches:
                 horizon = select_adaptive_horizon(patch, econ_state, self.config)
+                patch_continuation = future_trajectory[:max(0, horizon - 1)] if future_trajectory else None
                 
                 # Run isolated forward simulation under opponent pressure
                 sim_outcome = self.simulator.evaluate(
                     candidate_patch=patch,
                     baseline_action=baseline_action,
                     econ_state=econ_state,
-                    horizon=horizon
+                    horizon=horizon,
+                    continuation_trajectory=patch_continuation
                 )
                 telemetry.simulations_run += 1
 
