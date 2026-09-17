@@ -36,19 +36,38 @@ class SafetyChecker:
             "determinism_ok": True,
             "spatial_consistency_ok": True,
             "fidelity_ok": True,
+            "spatial_validity_ok": True,
+            "timing_validity_ok": True,
+            "route_continuity_ok": True,
+            "worker_consistency_ok": True,
+            "resource_consistency_ok": True,
+            "obligation_consistency_ok": True,
+            "market_consistency_ok": True,
         }
+
+        # 0. Route Reconnection result verification (§15)
+        reconnect_res = getattr(patch, "reconnect_result", None)
+        if reconnect_res is not None:
+            if not getattr(reconnect_res, "safety", True):
+                checks["route_continuity_ok"] = False
+                checks["spatial_validity_ok"] = False
+                reason = getattr(reconnect_res, "rejection_reason", "Trajectory reconnection safety failure")
+                return False, checks, f"Route reconnection failed safety audit: {reason}"
 
         # 1. Legality check
         if patch.market_mutations is not None:
             if len(patch.market_mutations) > MAX_MARKET_ORDERS:
                 checks["legality_ok"] = False
+                checks["market_consistency_ok"] = False
                 return False, checks, f"Market order count {len(patch.market_mutations)} exceeds max {MAX_MARKET_ORDERS}"
             for order in patch.market_mutations:
                 if not isinstance(order, (list, tuple)) or not order:
                     checks["legality_ok"] = False
+                    checks["market_consistency_ok"] = False
                     return False, checks, "Malformed market order"
                 if order[0] not in ("SELL", "BUY_PRODUCT", "BUY_SEED", "BUY_ANIMAL", "HIRE", "BUY_LAND"):
                     checks["legality_ok"] = False
+                    checks["market_consistency_ok"] = False
                     return False, checks, f"Illegal market op {order[0]}"
 
         # 2. Feasibility of worker movements
@@ -56,17 +75,21 @@ class SafetyChecker:
             worker = econ_state.workers.get_worker(worker_id)
             if worker is None:
                 checks["feasibility_ok"] = False
+                checks["worker_consistency_ok"] = False
                 return False, checks, f"Non-existent worker_id {worker_id}"
             if cmd and cmd[0] in MOVES:
                 dx, dy = MOVES[cmd[0]]
                 x, y = worker.position
                 if not (0 <= x + dx < BOARD_SIZE and 0 <= y + dy < BOARD_SIZE):
                     checks["feasibility_ok"] = False
+                    checks["spatial_validity_ok"] = False
+                    checks["worker_consistency_ok"] = False
                     return False, checks, f"Worker {worker_id} move {cmd[0]} out of bounds from {(x, y)}"
 
         # 3. Overflow check: zero shed overflow discard in forward simulation
         if outcome.candidate_overflow_units > 0:
             checks["overflow_ok"] = False
+            checks["resource_consistency_ok"] = False
             return False, checks, f"Candidate caused {outcome.candidate_overflow_units} units of shed overflow"
 
         # 4. Solvency check: candidate money remains non-negative
@@ -77,6 +100,7 @@ class SafetyChecker:
         # 5. Obligation preservation / intermediate solvency check
         if not outcome.intermediate_solvency_ok:
             checks["obligation_ok"] = False
+            checks["obligation_consistency_ok"] = False
             return False, checks, "Failed intermediate market solvency (shed deficit on scheduled sell)"
 
         # 6. Terminal feasibility check: executable terminal state
@@ -87,6 +111,8 @@ class SafetyChecker:
         # 7. Spatial continuation consistency check
         if not getattr(outcome, "spatial_consistency_ok", True):
             checks["spatial_consistency_ok"] = False
+            checks["spatial_validity_ok"] = False
+            checks["route_continuity_ok"] = False
             reason = getattr(outcome, "desynchronization_reason", "diverged position")
             return False, checks, f"Candidate caused spatial desynchronization in continuation: {reason}"
 

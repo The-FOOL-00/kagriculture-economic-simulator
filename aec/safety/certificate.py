@@ -32,6 +32,15 @@ class SafetyCertificate:
     spatial_consistency_check: bool = True
     fidelity_check: bool = True
     
+    # Extended Route-Splicing Safety Invariants (§15)
+    spatial_validity_check: bool = True
+    timing_validity_check: bool = True
+    route_continuity_check: bool = True
+    worker_consistency_check: bool = True
+    resource_consistency_check: bool = True
+    obligation_consistency_check: bool = True
+    market_consistency_check: bool = True
+    
     # Fidelity classification (§14): VERIFIED, PARTIAL, UNKNOWN, FAILED
     counterfactual_fidelity: str = "VERIFIED"
     
@@ -52,6 +61,13 @@ class SafetyCertificate:
             and self.determinism_check
             and self.spatial_consistency_check
             and self.fidelity_check
+            and self.spatial_validity_check
+            and self.timing_validity_check
+            and self.route_continuity_check
+            and self.worker_consistency_check
+            and self.resource_consistency_check
+            and self.obligation_consistency_check
+            and self.market_consistency_check
             and self.counterfactual_fidelity != "FAILED"
         )
 
@@ -74,6 +90,13 @@ class SafetyCertificate:
                 "determinism": self.determinism_check,
                 "spatial_consistency": self.spatial_consistency_check,
                 "fidelity": self.fidelity_check,
+                "spatial_validity": self.spatial_validity_check,
+                "timing_validity": self.timing_validity_check,
+                "route_continuity": self.route_continuity_check,
+                "worker_consistency": self.worker_consistency_check,
+                "resource_consistency": self.resource_consistency_check,
+                "obligation_consistency": self.obligation_consistency_check,
+                "market_consistency": self.market_consistency_check,
             },
             "commit_decision": self.commit_decision,
             "abstain_reason": self.abstain_reason,

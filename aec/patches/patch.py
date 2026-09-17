@@ -38,6 +38,10 @@ class CoupledPatch:
     expected_horizon: int = 12
     rationale: str = ""
 
+    # Dynamic route splicing and continuation (§8, §14)
+    spliced_continuation: Optional[List[Dict[str, Any]]] = None
+    reconnect_result: Optional[Any] = None
+
     def apply(self, baseline_action: Dict[str, Any]) -> Dict[str, Any]:
         """Apply patch to a deep copy of baseline action, returning modified action."""
         new_action = copy.deepcopy(baseline_action)

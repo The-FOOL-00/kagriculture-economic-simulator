@@ -15,7 +15,7 @@ The Adaptive Economic Compiler (AEC) architecture has successfully completed its
 Treat this evidence as immutable historical fact:
 * **Production Cohort:** 100 matches across 50 paired CRN seeds (`340250–340299`), mirror-seat swapped, 71,900 turns simulated.
 * **Mean Paired Terminal-Margin Delta ($\bar{\Delta}$):** `+$57.36`
-* **Directional Lower 95% Confidence Bound:** `+$23.17` (Rejecting $H_0: \mu_\Delta < 0$, $p = 0.0003$)
+* **Directional Lower 95% Confidence Bound:** `+$23.17` (Rejecting $H_0: \mu_\Delta < 0$, $p = 0.00352747$ [Corrected from typographical error $0.0003$ to match independent forensic audit reproduction])
 * **Win-Rate Delta:** `+56.00 percentage points` (Treatment 75 wins, Control 19 wins, 6 ties)
 * **Commit Activity:** 140 commits across 45 active seeds (5 inactive seeds).
 * **Mechanism Purity:** 140/140 commits (`100%`) were `DEPENDENCY_AWARE_MARKET_TIMING`.

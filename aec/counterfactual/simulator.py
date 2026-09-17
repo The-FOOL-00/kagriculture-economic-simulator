@@ -337,6 +337,8 @@ def simulate_rollout(
     continuation_actions: Optional[List[Dict[str, Any]]] = None,
     trace_log: Optional[List[Dict[str, Any]]] = None,
     baseline_positions: Optional[List[List[List[int]]]] = None,
+    spliced_workers: Optional[Set[int]] = None,
+    reconnect_result: Optional[Any] = None,
 ) -> ShadowRolloutState:
     """Run an isolated forward rollout starting with initial_action at step 0, followed by continuation."""
     rollout = ShadowRolloutState(econ_state)
@@ -373,6 +375,16 @@ def simulate_rollout(
         if baseline_positions is not None and offset >= 1 and (offset - 1) < len(baseline_positions):
             expected_positions = baseline_positions[offset - 1]
             for actor in range(n_workers):
+                # If actor is managed by route splicing, check route continuity instead of raw baseline positions
+                if spliced_workers is not None and actor in spliced_workers:
+                    cmd_actor = commands[actor] if actor < len(commands) and commands[actor] else ["PASS"]
+                    cur_pos = farm_dict["farmer"] if actor == 0 else (farm_dict["hands"][actor - 1] if actor - 1 < len(farm_dict["hands"]) else None)
+                    if cur_pos is not None and not (0 <= cur_pos[0] < BOARD_SIZE and 0 <= cur_pos[1] < BOARD_SIZE):
+                        rollout.spatial_desynchronized = True
+                        rollout.desynchronization_reason = f"Spliced Worker {actor} moved out of bounds: {cur_pos}"
+                        commands[actor] = ["PASS"]
+                    continue
+
                 cur_pos = farm_dict["farmer"] if actor == 0 else (farm_dict["hands"][actor - 1] if actor - 1 < len(farm_dict["hands"]) else None)
                 exp_pos = expected_positions[actor] if actor < len(expected_positions) else None
                 if cur_pos != exp_pos and exp_pos is not None:
@@ -493,14 +505,29 @@ class CounterfactualSimulator:
         # 2. Simulate Candidate Future
         cand_action = candidate_patch.apply(baseline_action)
         candidate_trace: Optional[List[Dict[str, Any]]] = [] if trace else None
+        
+        cand_continuation = (
+            candidate_patch.spliced_continuation
+            if getattr(candidate_patch, "spliced_continuation", None) is not None
+            else continuation_trajectory
+        )
+        spliced_workers: Optional[Set[int]] = None
+        reconnect_res = getattr(candidate_patch, "reconnect_result", None)
+        if reconnect_res is not None:
+            spliced_workers = getattr(reconnect_res, "affected_workers", None)
+        elif getattr(candidate_patch, "spliced_continuation", None) is not None:
+            spliced_workers = set(candidate_patch.worker_mutations.keys())
+
         candidate_rollout = simulate_rollout(
             econ_state=econ_state,
             initial_action=cand_action,
             horizon=horizon,
             opp_model=opp_model,
-            continuation_actions=continuation_trajectory,
+            continuation_actions=cand_continuation,
             trace_log=candidate_trace,
             baseline_positions=baseline_rollout.worker_positions_history,
+            spliced_workers=spliced_workers,
+            reconnect_result=reconnect_res,
         )
 
         # 3. Compute Deltas & Margins
