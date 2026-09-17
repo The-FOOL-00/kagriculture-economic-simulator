@@ -82,7 +82,23 @@ class PatchGenerator:
                 )
                 patches.append(patch)
 
-            # 2. Market Front-Loading
+            # 2. Dependency-Aware Market Timing (§8, §14)
+            elif fam == "DEPENDENCY_AWARE_MARKET_TIMING":
+                current_orders = baseline_action.get("market", [])
+                from aec.market.transformations import transform_dependency_aware_market_timing
+                reordered, _ = transform_dependency_aware_market_timing(current_orders, econ_state)
+                if reordered != current_orders:
+                    patch = CoupledPatch(
+                        patch_id=f"PATCH_{opp.opportunity_id}",
+                        source_opportunity_id=opp.opportunity_id,
+                        mechanism_family=fam,
+                        market_mutations=reordered,
+                        expected_horizon=opp.required_horizon,
+                        rationale=opp.rationale
+                    )
+                    patches.append(patch)
+
+            # Legacy Market Front-Loading (RETIRED / FALSIFIED)
             elif fam == "FRONTLOAD_ORDERS":
                 current_orders = baseline_action.get("market", [])
                 reordered = reorder_frontload(current_orders)

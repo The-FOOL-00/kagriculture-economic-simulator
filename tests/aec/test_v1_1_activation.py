@@ -71,7 +71,7 @@ class TestCategoryAMarketAnalyzer:
         }
         opps = analyzer.analyze(econ_state, [], baseline_action)
         assert len(opps) == 1
-        assert opps[0].candidate_transformation_family == "FRONTLOAD_ORDERS"
+        assert opps[0].candidate_transformation_family in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS")
 
     def test_case_3_sell_already_first(self, normal_opening_obs):
         """Case 3: SELL already first. Expected: no frontload opportunity."""
@@ -325,13 +325,13 @@ class TestCategoryDPatchAndDeltaCorrectness:
         assert p_weed.mechanism_family == "LOCAL_WEED_DIG"
         assert p_weed.worker_mutations == {0: ["DIG"]}
 
-        # 2. FRONTLOAD_ORDERS
+        # 2. Market Timing
         econ_mkt = build_economic_state(normal_opening_obs)
         opp_mkt = MarketOpportunityAnalyzer().analyze(
             econ_mkt, [], {"market": [["HIRE", 1], ["SELL", "WHEAT", 2]]}
         )[0]
         p_mkt = generator.generate_patches([opp_mkt], econ_mkt, {"market": [["HIRE", 1], ["SELL", "WHEAT", 2]]})[0]
-        assert p_mkt.mechanism_family == "FRONTLOAD_ORDERS"
+        assert p_mkt.mechanism_family in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS")
         assert p_mkt.market_mutations == [["SELL", "WHEAT", 2], ["HIRE", 1]]
 
         # 3. TERMINAL_LIQUIDATION
@@ -578,7 +578,7 @@ class TestSyntheticMechanismFixtures:
             detect_events(build_economic_state(obs)),
             base_act
         )
-        frontload_opps = [o for o in opps if o.candidate_transformation_family == "FRONTLOAD_ORDERS"]
+        frontload_opps = [o for o in opps if o.candidate_transformation_family in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS")]
         assert len(frontload_opps) == 1
         patches = executor.patch_generator.generate_patches(frontload_opps, build_economic_state(obs), base_act)
         assert len(patches) == 1

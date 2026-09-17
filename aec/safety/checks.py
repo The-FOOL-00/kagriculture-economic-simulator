@@ -92,9 +92,9 @@ class SafetyChecker:
 
         # 8. Counterfactual fidelity certification check (§14)
         fidelity = getattr(outcome, "fidelity", "VERIFIED")
-        if fidelity == "FAILED":
+        if fidelity in ("FAILED", "UNKNOWN"):
             checks["fidelity_ok"] = False
             reasons = getattr(outcome, "fidelity_reasons", [])
-            return False, checks, f"Counterfactual fidelity FAILED: {', '.join(reasons) or 'unverified'}"
+            return False, checks, f"Counterfactual fidelity {fidelity}: {', '.join(reasons) or 'unverified simulation'}"
 
         return True, checks, None

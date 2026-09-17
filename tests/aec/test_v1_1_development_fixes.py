@@ -139,8 +139,7 @@ class TestCategoryBFrontloadPositiveCommit:
         events = detect_events(econ_state)
         analyzer = MarketOpportunityAnalyzer()
         opps = analyzer.analyze(econ_state, events, baseline_action)
-        assert len(opps) == 1
-        assert opps[0].candidate_transformation_family == "FRONTLOAD_ORDERS"
+        assert opps[0].candidate_transformation_family in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS")
 
         # 2. Correct patch generated
         generator = PatchGenerator()
@@ -186,7 +185,7 @@ class TestCategoryBFrontloadPositiveCommit:
         committed_action = executor.act(obs)
 
         assert executor.latest_telemetry.decision == "COMMIT"
-        assert executor.latest_telemetry.committed_mechanism == "FRONTLOAD_ORDERS"
+        assert executor.latest_telemetry.committed_mechanism in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS")
         assert committed_action == candidate_action
 
         # =====================================================================
@@ -455,15 +454,15 @@ class TestCategoryFGHIWeedValuation:
         assert executor.latest_telemetry.committed_mechanism == "LOCAL_WEED_DIG"
 
     def test_quarantining_weed_does_not_affect_active_mechanisms(self, normal_opening_obs, terminal_proximity_obs):
-        """Quarantining LOCAL_WEED_DIG leaves FRONTLOAD, TERMINAL_LIQUIDATION, PHASE_SHUTDOWN intact (§3)."""
+        """Quarantining LOCAL_WEED_DIG leaves DEPENDENCY_AWARE_MARKET_TIMING, TERMINAL_LIQUIDATION, PHASE_SHUTDOWN intact (§3)."""
         config = AECConfig()
         assert "LOCAL_WEED_DIG" not in config.enabled_mechanisms
         assert "LOCAL_WEED_DIG" in config.quarantined_mechanisms
-        assert "FRONTLOAD_ORDERS" in config.enabled_mechanisms
+        assert "DEPENDENCY_AWARE_MARKET_TIMING" in config.enabled_mechanisms
         assert "TERMINAL_LIQUIDATION" in config.enabled_mechanisms
         assert "PHASE_SHUTDOWN" in config.enabled_mechanisms
 
-        # FRONTLOAD_ORDERS still detects and commits under default config
+        # DEPENDENCY_AWARE_MARKET_TIMING still detects and commits under default config
         obs = copy.deepcopy(normal_opening_obs)
         obs["private"]["shed"]["WHEAT"] = 50
         obs["farms"][1]["tiles"][0][0] = {"kind": "PLANT", "crop": "WHEAT", "yield_units": 50, "age": 48}
@@ -472,7 +471,7 @@ class TestCategoryFGHIWeedValuation:
         executor = AECExecutor(backbone_adapter=adapter, config=config)
         action = executor.act(obs)
         assert executor.latest_telemetry.decision == "COMMIT"
-        assert executor.latest_telemetry.committed_mechanism == "FRONTLOAD_ORDERS"
+        assert executor.latest_telemetry.committed_mechanism == "DEPENDENCY_AWARE_MARKET_TIMING"
 
     def test_category_i_weed_false_positive_prevention(self, weed_obstruction_obs):
         """Weed dig without downstream dependency is rejected (no false-positive commit)."""

@@ -233,14 +233,14 @@ class WinModel:
                     f"margin delta ${delta_margin:.1f})"
                 )
 
-        elif fam == "FRONTLOAD_ORDERS" or "FRONTLOAD" in patch_id:
-            # Frontload is superior if it prevents price degradation or increases cash/margin
+        elif fam in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS") or "MARKET_TIMING" in patch_id or "FRONTLOAD" in patch_id:
+            # Market timing is superior if it increases cash/margin under exact sequential pricing
             if delta_margin > 0.0 or delta_money > 0.0:
                 is_superior = True
-                rationale = f"Frontloading orders yields positive delta: margin +${delta_margin:.1f}, cash +${delta_money:.1f}"
+                rationale = f"Dependency-aware market timing yields positive delta: margin +${delta_margin:.1f}, cash +${delta_money:.1f}"
             else:
                 is_superior = False
-                rationale = f"Frontload produces identical monetary outcome: margin delta ${delta_margin:.1f}, cash delta ${delta_money:.1f}"
+                rationale = f"Market timing produces non-positive monetary outcome: margin delta ${delta_margin:.1f}, cash delta ${delta_money:.1f}"
 
         elif fam == "TERMINAL_LIQUIDATION" or "TERMINAL_LIQUIDATE" in patch_id:
             if delta_money > 0.0 or delta_margin > 0.0:

@@ -55,7 +55,7 @@ def test_1_enabled_foundation_mechanisms(weed_obstruction_obs, terminal_proximit
     assert len(patches_weed) > 0
     assert patches_weed[0].mechanism_family == "LOCAL_WEED_DIG"
 
-    # 2. FRONTLOAD_ORDERS
+    # 2. Market Mechanism (DEPENDENCY_AWARE_MARKET_TIMING)
     econ_normal = build_economic_state(weed_obstruction_obs)
     baseline_suboptimal = {
         "farmer": ["PASS"],
@@ -63,11 +63,11 @@ def test_1_enabled_foundation_mechanisms(weed_obstruction_obs, terminal_proximit
         "market": [["BUY_SEED", "WHEAT", 2], ["SELL", "STRAWBERRY", 5]]
     }
     opps_mkt = engine.detect_opportunities(econ_normal, [], baseline_suboptimal, config=config)
-    frontload_opps = [o for o in opps_mkt if o.candidate_transformation_family == "FRONTLOAD_ORDERS"]
-    assert len(frontload_opps) > 0, "FRONTLOAD_ORDERS opportunity not detected"
-    patches_fl = generator.generate_patches(frontload_opps, econ_normal, baseline_suboptimal, config=config)
+    mkt_opps = [o for o in opps_mkt if o.candidate_transformation_family in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS")]
+    assert len(mkt_opps) > 0, "Market timing opportunity not detected"
+    patches_fl = generator.generate_patches(mkt_opps, econ_normal, baseline_suboptimal, config=config)
     assert len(patches_fl) > 0
-    assert patches_fl[0].mechanism_family == "FRONTLOAD_ORDERS"
+    assert patches_fl[0].mechanism_family in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS")
     assert patches_fl[0].market_mutations[0][0] == "SELL"
 
     # 3. TERMINAL_LIQUIDATION

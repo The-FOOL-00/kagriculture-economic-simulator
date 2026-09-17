@@ -51,15 +51,15 @@ class MechanismHorizonPolicy:
                 h = min(remaining, config.short_horizon)
                 return max(1, h), f"LOCAL_WEED_DIG no downstream dependency detected; fast-reject short horizon {h}"
 
-        # 2. FRONTLOAD_ORDERS: normal horizon when opponent market interaction is relevant
-        elif fam == "FRONTLOAD_ORDERS" or "FRONTLOAD" in patch_id:
+        # 2. DEPENDENCY_AWARE_MARKET_TIMING / FRONTLOAD_ORDERS
+        elif fam in ("DEPENDENCY_AWARE_MARKET_TIMING", "FRONTLOAD_ORDERS") or "MARKET_TIMING" in patch_id or "FRONTLOAD" in patch_id:
             opp_active = self._has_opponent_market_activity(econ_state, patch)
             if opp_active:
                 h = min(remaining, config.normal_horizon)
-                return max(1, h), f"FRONTLOAD_ORDERS opponent market interaction active; normal horizon {h}"
+                return max(1, h), f"{fam} opponent market interaction active; normal horizon {h}"
             else:
                 h = min(remaining, config.short_horizon)
-                return max(1, h), f"FRONTLOAD_ORDERS isolated order reorder; short horizon {h}"
+                return max(1, h), f"{fam} isolated order reorder; short horizon {h}"
 
         # 3. TERMINAL_LIQUIDATION: terminal-local simulation
         elif fam == "TERMINAL_LIQUIDATION" or "TERMINAL_LIQUIDATE" in patch_id:

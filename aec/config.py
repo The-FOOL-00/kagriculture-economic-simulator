@@ -18,6 +18,7 @@ class ScientificStatus(str, Enum):
     PLAUSIBLE_UNPROVEN = "PLAUSIBLE_UNPROVEN" # Analytically sound hypothesis; unproven in cohort
     EXPERIMENTAL = "EXPERIMENTAL"             # Active candidate under test
     QUARANTINED = "QUARANTINED"               # Scientifically unready / unvalidated
+    FALSIFIED = "FALSIFIED"                   # Empirically falsified by prospective CRN trial
 
 # -----------------------------------------------------------------------------
 # 2. VERIFIED ENGINE CONSTANTS (C++ sim.hpp / kaggle_environments 1.32.7)
@@ -59,9 +60,16 @@ SHED_TILES: Tuple[Tuple[int, int], ...] = ((4, 4), (5, 4), (4, 5), (5, 5))
 # -----------------------------------------------------------------------------
 MECHANISM_REGISTRY: Dict[str, Dict[str, Any]] = {
     "FRONTLOAD_ORDERS": {
-        "status": ScientificStatus.VERIFIED_SOURCE,
+        "status": ScientificStatus.FALSIFIED,
+        "category": "MARKET",
+        "role": "RETIRED",
+        "rationale": "Falsified in EXP-AEC-002; order-blind sell-before-buy inverts intra-basket sequential price appreciation.",
+    },
+    "DEPENDENCY_AWARE_MARKET_TIMING": {
+        "status": ScientificStatus.EXPERIMENTAL,
         "category": "MARKET",
         "role": "ACTIVE",
+        "rationale": "Causal dependency-aware market order reordering certified via exact sequential simulator pricing and ActionBasketDependencyGraph.",
     },
     "TERMINAL_LIQUIDATION": {
         "status": ScientificStatus.VERIFIED_SOURCE,
@@ -82,12 +90,13 @@ MECHANISM_REGISTRY: Dict[str, Dict[str, Any]] = {
 }
 
 ENABLED_FOUNDATION_MECHANISMS: Tuple[str, ...] = (
-    "FRONTLOAD_ORDERS",
+    "DEPENDENCY_AWARE_MARKET_TIMING",
     "TERMINAL_LIQUIDATION",
     "PHASE_SHUTDOWN",
 )
 
 QUARANTINED_MECHANISMS: Tuple[str, ...] = (
+    "FRONTLOAD_ORDERS",
     "LOCAL_WEED_DIG",
     "DYNAMIC_SHADOW_HARVEST",
     "CARGO_FERRY_PRIORITY",
