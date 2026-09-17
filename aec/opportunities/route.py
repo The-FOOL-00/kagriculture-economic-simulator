@@ -40,7 +40,7 @@ class RouteOpportunityAnalyzer:
                         required_horizon=4,
                         rationale=f"Worker {w.worker_id} standing on weed at {(x, y)}; DIG clears path",
                         confidence=1.0,
-                        scientific_status=ScientificStatus.VERIFIED_SOURCE
+                        scientific_status=ScientificStatus.QUARANTINED
                     ))
 
         return opportunities

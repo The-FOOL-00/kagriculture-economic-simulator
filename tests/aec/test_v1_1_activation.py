@@ -535,11 +535,17 @@ class TestSyntheticMechanismFixtures:
             {"farmer": ["PLANT", "WHEAT"], "hands": [["PASS"]], "market": []}
             for _ in range(12)
         ]
+        # Preserved for research branch evaluation (§2)
+        research_config = AECConfig(
+            enabled_mechanisms=("LOCAL_WEED_DIG", "FRONTLOAD_ORDERS", "TERMINAL_LIQUIDATION", "PHASE_SHUTDOWN"),
+            quarantined_mechanisms=()
+        )
         adapter = BackboneAdapter(
             agent_fn=lambda obs, cfg: copy.deepcopy(base_act),
-            continuation_provider=lambda s, h, p, nh: continuation[:h-1]
+            continuation_provider=lambda s, h, p, nh: continuation[:h-1],
+            config=research_config
         )
-        executor = AECExecutor(backbone_adapter=adapter)
+        executor = AECExecutor(backbone_adapter=adapter, config=research_config)
         action = executor.act(weed_obstruction_obs)
 
         # AEC should commit the weed DIG!

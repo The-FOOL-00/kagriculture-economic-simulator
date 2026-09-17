@@ -151,18 +151,16 @@ def test_3_candidate_backbone_fairness(normal_opening_obs: Dict[str, Any]) -> No
     assert b_trace[0]["worker_positions"][0] == [4, 5]
     assert c_trace[0]["worker_positions"][0] == [4, 4]
 
-    # Offsets 1..3 receive EQUIVALENT continuation commands
+    # Under Fix C (Spatial Consistency Guard), candidate detects position divergence
+    # from baseline route tape and safely truncates stale continuation commands
+    assert outcome.spatial_consistency_ok is False
+    assert "spatially desynchronized" in outcome.desynchronization_reason
+
+    # Baseline receives continuation, candidate truncates stale spatial commands to PASS
     for offset in range(1, 4):
         assert b_trace[offset]["worker_actions"][0] == continuation[offset - 1]["farmer"]
-        assert c_trace[offset]["worker_actions"][0] == continuation[offset - 1]["farmer"]
+        assert c_trace[offset]["worker_actions"][0] == ["PASS"]
 
-    # Candidate position shifted relative to baseline by the initial offset 0 deviation
-    assert b_trace[1]["worker_positions"][0] == [5, 5]
-    assert c_trace[1]["worker_positions"][0] == [5, 4]
-    assert b_trace[2]["worker_positions"][0] == [6, 5]
-    assert c_trace[2]["worker_positions"][0] == [6, 4]
-    assert b_trace[3]["worker_positions"][0] == [6, 4]
-    assert c_trace[3]["worker_positions"][0] == [6, 3]
 
 
 def test_4_market_continuation(shed_capacity_obs: Dict[str, Any]) -> None:

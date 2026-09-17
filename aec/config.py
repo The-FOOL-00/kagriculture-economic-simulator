@@ -17,6 +17,7 @@ class ScientificStatus(str, Enum):
     IMPLEMENTATION_ONLY = "IMPLEMENTATION_ONLY" # Architectural glue / plumbing
     PLAUSIBLE_UNPROVEN = "PLAUSIBLE_UNPROVEN" # Analytically sound hypothesis; unproven in cohort
     EXPERIMENTAL = "EXPERIMENTAL"             # Active candidate under test
+    QUARANTINED = "QUARANTINED"               # Scientifically unready / unvalidated
 
 # -----------------------------------------------------------------------------
 # 2. VERIFIED ENGINE CONSTANTS (C++ sim.hpp / kaggle_environments 1.32.7)
@@ -56,14 +57,38 @@ SHED_TILES: Tuple[Tuple[int, int], ...] = ((4, 4), (5, 4), (4, 5), (5, 5))
 # -----------------------------------------------------------------------------
 # 3. MECHANISM GOVERNANCE & TAXONOMY (§36, §37)
 # -----------------------------------------------------------------------------
+MECHANISM_REGISTRY: Dict[str, Dict[str, Any]] = {
+    "FRONTLOAD_ORDERS": {
+        "status": ScientificStatus.VERIFIED_SOURCE,
+        "category": "MARKET",
+        "role": "ACTIVE",
+    },
+    "TERMINAL_LIQUIDATION": {
+        "status": ScientificStatus.VERIFIED_SOURCE,
+        "category": "TERMINAL",
+        "role": "DEFENSE_IN_DEPTH",
+    },
+    "PHASE_SHUTDOWN": {
+        "status": ScientificStatus.VERIFIED_SOURCE,
+        "category": "TERMINAL",
+        "role": "DEFENSE_IN_DEPTH",
+    },
+    "LOCAL_WEED_DIG": {
+        "status": ScientificStatus.QUARANTINED,
+        "category": "ROUTE",
+        "role": "QUARANTINED",
+        "rationale": "Sunk-cost labor valuation and unverified 48-step downstream heuristic",
+    },
+}
+
 ENABLED_FOUNDATION_MECHANISMS: Tuple[str, ...] = (
-    "LOCAL_WEED_DIG",
     "FRONTLOAD_ORDERS",
     "TERMINAL_LIQUIDATION",
     "PHASE_SHUTDOWN",
 )
 
 QUARANTINED_MECHANISMS: Tuple[str, ...] = (
+    "LOCAL_WEED_DIG",
     "DYNAMIC_SHADOW_HARVEST",
     "CARGO_FERRY_PRIORITY",
     "OPPONENT_PREEMPT_SELL",

@@ -8,7 +8,7 @@ import time
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
-from aec.config import AECConfig
+from aec.config import AECConfig, MECHANISM_REGISTRY, ScientificStatus
 from aec.counterfactual.horizon import select_adaptive_horizon
 from aec.counterfactual.simulator import CounterfactualSimulator
 from aec.evaluation.win_model import WinModel
@@ -42,6 +42,11 @@ class CandidateTelemetry:
     delta_dependency_completion: float = 0.0
     delta_opponent_pressure: float = 0.0
     weed_asset_value: float = 0.0
+    delta_money_realized: float = 0.0
+    delta_margin_realized: float = 0.0
+    projected_asset_value: float = 0.0
+    projection_status: str = "REALIZED"
+    spatial_consistency_ok: bool = True
     safety_pass: bool = False
     safety_rejection_reason: Optional[str] = None
     economic_rejection_reason: Optional[str] = None
@@ -64,6 +69,11 @@ class CandidateTelemetry:
             "delta_dependency_completion": self.delta_dependency_completion,
             "delta_opponent_pressure": round(self.delta_opponent_pressure, 2),
             "weed_asset_value": round(self.weed_asset_value, 2),
+            "delta_money_realized": round(self.delta_money_realized, 2),
+            "delta_margin_realized": round(self.delta_margin_realized, 2),
+            "projected_asset_value": round(self.projected_asset_value, 2),
+            "projection_status": self.projection_status,
+            "spatial_consistency_ok": self.spatial_consistency_ok,
             "safety_pass": self.safety_pass,
             "safety_rejection": self.safety_rejection_reason,
             "economic_rejection": self.economic_rejection_reason,
@@ -71,6 +81,7 @@ class CandidateTelemetry:
             "baseline_action": self.baseline_action,
             "candidate_action": self.candidate_action,
         }
+
 
 
 @dataclass
@@ -98,6 +109,11 @@ class AECTelemetry:
 
     # Detailed per-candidate audit trace (§14)
     candidates: List[CandidateTelemetry] = field(default_factory=list)
+
+    @property
+    def mechanism(self) -> Optional[str]:
+        """Alias for committed_mechanism or attempted mechanism for telemetry inspection."""
+        return self.committed_mechanism
 
     # Latencies in milliseconds
     ir_time_ms: float = 0.0
@@ -298,6 +314,7 @@ class AECExecutor:
             best_candidate: Optional[CoupledPatch] = None
             best_certificate: Optional[SafetyCertificate] = None
             best_eval_result = None
+            quarantined_superior_patch: Optional[CoupledPatch] = None
 
             # Extract read-only future backbone continuation trajectory (zero live calls)
             active_patches = candidate_patches[:self.config.max_simulations]
@@ -329,7 +346,8 @@ class AECExecutor:
                     patch=patch,
                     outcome=sim_outcome,
                     econ_state=econ_state,
-                    continuation_trajectory=patch_continuation
+                    continuation_trajectory=patch_continuation,
+                    baseline_action=baseline_action
                 )
 
                 # Hard Safety Verification
@@ -342,8 +360,21 @@ class AECExecutor:
                 )
                 telemetry.safety_time_ms += (time.perf_counter() - t_saf0) * 1000.0
 
+                # Scientific Quarantine and Governance Gate (§2, §3)
+                mech_fam = getattr(patch, "mechanism_family", "")
+                reg_entry = MECHANISM_REGISTRY.get(mech_fam, {})
+                is_quarantined = (
+                    reg_entry.get("status") == ScientificStatus.QUARANTINED
+                    or mech_fam == "LOCAL_WEED_DIG"
+                ) and (mech_fam in self.config.quarantined_mechanisms or mech_fam not in self.config.enabled_mechanisms)
+                candidate_otherwise_attractive = bool(passed_safety and eval_res.is_superior)
+
                 if not passed_safety:
                     telemetry.patches_safety_rejected_count += 1
+                elif is_quarantined and candidate_otherwise_attractive:
+                    telemetry.patches_quarantined_count += 1
+                    telemetry.quarantined_by_mechanism[mech_fam] = telemetry.quarantined_by_mechanism.get(mech_fam, 0) + 1
+                    quarantined_superior_patch = patch
                 elif not eval_res.is_superior:
                     telemetry.patches_economically_rejected_count += 1
 
@@ -364,10 +395,18 @@ class AECExecutor:
                     delta_dependency_completion=eval_res.delta_dependency_completion,
                     delta_opponent_pressure=eval_res.delta_opponent_pressure,
                     weed_asset_value=eval_res.weed_asset_value,
+                    delta_money_realized=eval_res.delta_money_realized,
+                    delta_margin_realized=eval_res.delta_margin_realized,
+                    projected_asset_value=eval_res.projected_asset_value,
+                    projection_status=eval_res.projection_status,
+                    spatial_consistency_ok=eval_res.spatial_consistency_ok,
                     safety_pass=passed_safety,
-                    safety_rejection_reason=abstain_reason if not passed_safety else None,
+                    safety_rejection_reason=(
+                        "SCIENTIFIC_QUARANTINE" if (is_quarantined and candidate_otherwise_attractive)
+                        else (abstain_reason if not passed_safety else None)
+                    ),
                     economic_rejection_reason=eval_res.rationale if not eval_res.is_superior else None,
-                    commit_decision=passed_safety and eval_res.is_superior,
+                    commit_decision=candidate_otherwise_attractive and not is_quarantined,
                     baseline_action=copy.deepcopy(baseline_action),
                     candidate_action=copy.deepcopy(cand_action),
                 )
@@ -388,15 +427,18 @@ class AECExecutor:
                     terminal_feasibility_check=checks.get("terminal_feasible", False),
                     market_collision_check=checks.get("market_collision_ok", False),
                     determinism_check=checks.get("determinism_ok", False),
-                    commit_decision=passed_safety and eval_res.is_superior,
-                    abstain_reason=abstain_reason if not passed_safety else (
-                        None if eval_res.is_superior else "ECONOMICALLY_INFERIOR"
+                    commit_decision=candidate_otherwise_attractive and not is_quarantined,
+                    abstain_reason=(
+                        "SCIENTIFIC_QUARANTINE" if (is_quarantined and candidate_otherwise_attractive)
+                        else (abstain_reason if not passed_safety else (
+                            None if eval_res.is_superior else "ECONOMICALLY_INFERIOR"
+                        ))
                     ),
                     metadata=eval_res.to_dict()
                 )
                 self._certificates.append(cert)
 
-                # Select best committed patch
+                # Select best committed patch among authorized, non-quarantined mechanisms
                 if cert.commit_decision:
                     if best_eval_result is None or eval_res.expected_p_win > best_eval_result.expected_p_win:
                         best_candidate = patch
@@ -411,7 +453,23 @@ class AECExecutor:
             if best_candidate is not None and best_certificate is not None:
                 # Assert mechanism is authorized under immutable config (§9)
                 mech_fam = getattr(best_candidate, "mechanism_family", "")
-                if mech_fam not in self.config.enabled_mechanisms:
+                reg_entry = MECHANISM_REGISTRY.get(mech_fam, {})
+                is_scientifically_quarantined = (
+                    reg_entry.get("status") == ScientificStatus.QUARANTINED
+                    or mech_fam == "LOCAL_WEED_DIG"
+                ) and (mech_fam in self.config.quarantined_mechanisms or mech_fam not in self.config.enabled_mechanisms)
+                if is_scientifically_quarantined:
+                    # Fail Closed: Reject quarantined mechanism for scientific validation status
+                    telemetry.decision = "ABSTAIN"
+                    telemetry.abstain_reason = "SCIENTIFIC_QUARANTINE"
+                    telemetry.committed_patch_id = None
+                    telemetry.committed_mechanism = mech_fam
+                    final_action = baseline_action
+                    for c in telemetry.candidates:
+                        if c.patch_id == best_candidate.patch_id:
+                            c.commit_decision = False
+                            c.safety_rejection_reason = "SCIENTIFIC_QUARANTINE"
+                elif mech_fam not in self.config.enabled_mechanisms:
                     # Fail Closed: Reject unauthorized patch family
                     telemetry.decision = "ABSTAIN"
                     telemetry.abstain_reason = "MECHANISM_POLICY_VIOLATION"
@@ -432,7 +490,12 @@ class AECExecutor:
                     final_action = best_candidate.apply(baseline_result.canonical_action_copy())
             else:
                 telemetry.decision = "ABSTAIN"
-                telemetry.abstain_reason = "NO_CANDIDATE_CERTIFIED_SUPERIOR"
+                if quarantined_superior_patch is not None:
+                    telemetry.abstain_reason = "SCIENTIFIC_QUARANTINE"
+                    telemetry.committed_mechanism = getattr(quarantined_superior_patch, "mechanism_family", "LOCAL_WEED_DIG")
+                else:
+                    telemetry.abstain_reason = "NO_CANDIDATE_CERTIFIED_SUPERIOR"
+                    telemetry.committed_mechanism = None
                 for c in telemetry.candidates:
                     c.commit_decision = False
                 final_action = baseline_action

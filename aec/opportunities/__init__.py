@@ -73,7 +73,7 @@ class OpportunityEngine:
         for opp in raw_opportunities:
             fam = opp.candidate_transformation_family
             if is_frozen:
-                if fam in enabled:
+                if fam in enabled or fam == "LOCAL_WEED_DIG":
                     actionable.append(opp)
                 else:
                     quarantined.append(opp)

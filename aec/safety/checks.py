@@ -34,6 +34,7 @@ class SafetyChecker:
             "terminal_feasible": True,
             "market_collision_ok": True,
             "determinism_ok": True,
+            "spatial_consistency_ok": True,
         }
 
         # 1. Legality check
@@ -82,4 +83,11 @@ class SafetyChecker:
             checks["terminal_feasible"] = False
             return False, checks, "Infeasible terminal money"
 
+        # 7. Spatial continuation consistency check
+        if not getattr(outcome, "spatial_consistency_ok", True):
+            checks["spatial_consistency_ok"] = False
+            reason = getattr(outcome, "desynchronization_reason", "diverged position")
+            return False, checks, f"Candidate caused spatial desynchronization in continuation: {reason}"
+
         return True, checks, None
+

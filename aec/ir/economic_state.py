@@ -179,8 +179,10 @@ def build_economic_state(
         production_pipeline=pipeline,
         expected_harvests=expected_harvests,
         unlocked_quadrants=quadrants,
-        tiles=tiles
+        tiles=tiles,
+        hires_today=int(own_farm.get("hires_today", 0) or 0)
     )
+
     
     # 2. Market extraction
     market_raw = observation.get("market", {}) or {}

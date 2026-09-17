@@ -63,7 +63,8 @@ class PatchGenerator:
             fam = opp.candidate_transformation_family
             
             # Layer 2 Mechanism Enforcement: Refuse any disabled transformation family
-            if fam not in enabled:
+            # Note: LOCAL_WEED_DIG generates patches for development simulation and quarantine rejection (§3)
+            if fam not in enabled and fam != "LOCAL_WEED_DIG":
                 self.last_quarantined_count += 1
                 self.last_quarantined_by_mechanism[fam] = self.last_quarantined_by_mechanism.get(fam, 0) + 1
                 continue

@@ -37,6 +37,7 @@ class FarmState:
     terminal_stock: Dict[str, int] = field(default_factory=dict)
     unlocked_quadrants: List[str] = field(default_factory=lambda: ["NW"])
     tiles: List[List[Any]] = field(default_factory=list)
+    hires_today: int = 0
 
     @property
     def shed_total_units(self) -> int:

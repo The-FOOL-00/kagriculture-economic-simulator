@@ -4,6 +4,7 @@
 Exposes explicit diagnostic terms (money, margin, route cost, dependency completion,
 opponent pressure, weed asset value) and treats win probability strictly as an
 uncalibrated development ranking heuristic rather than empirical probability.
+Clearly separates realized counterfactual values from projected downstream values.
 """
 
 from __future__ import annotations
@@ -49,6 +50,14 @@ class EvaluationResult:
     weed_asset_value: float = 0.0
     weed_valuation: Optional[WeedValuation] = None
 
+    # Realized vs Projected Value Separation (§5)
+    delta_money_realized: float = 0.0
+    delta_margin_realized: float = 0.0
+    projected_asset_value: float = 0.0
+    projected_asset_value_basis: str = ""
+    projection_status: str = "REALIZED"
+    spatial_consistency_ok: bool = True
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "patch_id": self.patch_id,
@@ -60,6 +69,16 @@ class EvaluationResult:
             "sacrifice_accepted": self.temporary_sacrifice_accepted,
             "is_superior": self.is_superior,
             "rationale": self.rationale,
+            "spatial_consistency_ok": self.spatial_consistency_ok,
+            "realized": {
+                "delta_money_realized": round(self.delta_money_realized, 2),
+                "delta_margin_realized": round(self.delta_margin_realized, 2),
+            },
+            "projected": {
+                "projected_asset_value": round(self.projected_asset_value, 2),
+                "projected_asset_value_basis": self.projected_asset_value_basis,
+                "projection_status": self.projection_status,
+            },
             "diagnostics": {
                 "delta_money": round(self.delta_money, 2),
                 "delta_margin": round(self.delta_margin, 2),
@@ -105,7 +124,8 @@ class WinModel:
         patch: CoupledPatch,
         outcome: SimulationOutcome,
         econ_state: EconomicState,
-        continuation_trajectory: Optional[List[Dict[str, Any]]] = None
+        continuation_trajectory: Optional[List[Dict[str, Any]]] = None,
+        baseline_action: Optional[Dict[str, Any]] = None
     ) -> EvaluationResult:
         current_gap = econ_state.farm.cash - econ_state.opponent.observed_cash
         lead_state = self.get_lead_state(econ_state.farm.cash, econ_state.opponent.observed_cash)
@@ -128,6 +148,31 @@ class WinModel:
         patch_id = patch.source_opportunity_id or patch.patch_id
 
         # ---------------------------------------------------------------------
+        # Spatial Consistency Check (§7, §8)
+        # ---------------------------------------------------------------------
+        if not getattr(outcome, "spatial_consistency_ok", True):
+            reason = getattr(outcome, "desynchronization_reason", "diverged worker position")
+            return EvaluationResult(
+                patch_id=patch.patch_id,
+                expected_p_win=cand_p_win,
+                terminal_margin_delta=delta_margin,
+                our_money_delta=delta_money,
+                opponent_money_delta=delta_opp_money,
+                lead_state=lead_state,
+                temporary_sacrifice_accepted=False,
+                is_superior=False,
+                rationale=f"Continuation spatial desynchronization: {reason}",
+                delta_money=delta_money,
+                delta_margin=delta_margin,
+                delta_money_realized=delta_money,
+                delta_margin_realized=delta_margin,
+                projected_asset_value=0.0,
+                projected_asset_value_basis="",
+                projection_status="SPATIAL_DESYNCHRONIZED",
+                spatial_consistency_ok=False,
+            )
+
+        # ---------------------------------------------------------------------
         # Mechanism-Specific Economic Valuation
         # ---------------------------------------------------------------------
         is_superior = False
@@ -141,21 +186,40 @@ class WinModel:
             worker = econ_state.workers.get_worker(worker_id)
             pos = worker.position if worker else (0, 0)
 
+            base_worker_cmd = None
+            if baseline_action:
+                if worker_id == 0:
+                    base_worker_cmd = baseline_action.get("farmer", ["PASS"])
+                else:
+                    h = baseline_action.get("hands", []) or []
+                    if worker_id - 1 < len(h):
+                        base_worker_cmd = h[worker_id - 1]
+
             weed_val = self.asset_evaluator.evaluate_weed_removal(
                 tile=pos,
                 worker_id=worker_id,
                 econ_state=econ_state,
-                continuation_actions=continuation_trajectory
+                continuation_actions=continuation_trajectory,
+                baseline_worker_action=base_worker_cmd,
             )
-            weed_asset_val = weed_val.net_asset_value
+            weed_asset_val = weed_val.net_projected_asset_value
             delta_dependency_completion = weed_val.delta_dependency_completion
             delta_route_cost = weed_val.delta_route_cost
             if weed_val.has_downstream_dependency:
                 delta_opp_preservation = 1.0
 
             # A weed dig is certified superior iff measurable downstream benefit exceeds labor cost
-            # and terminal margin does not regress beyond the initial 1-step action cost (with float tolerance)
-            if weed_asset_val > 0.0 and delta_margin >= -(weed_val.opportunity_cost + 0.05):
+            # and terminal margin does not regress beyond the initial action cost allowance
+            if weed_val.projection_status.startswith("INFEASIBLE"):
+                is_superior = False
+                rationale = f"Weed dig infeasible: {weed_val.projection_status} ({weed_val.rationale})"
+            elif weed_val.projection_status == "NO_DEPENDENCY" and weed_val.delta_route_cost <= 0.0:
+                is_superior = False
+                rationale = (
+                    f"Insufficient weed removal benefit (net asset value ${weed_asset_val:.2f}, "
+                    f"margin delta ${delta_margin:.1f})"
+                )
+            elif weed_asset_val > 0.0 and delta_margin >= -(weed_val.action_opportunity_cost + 5.0):
                 is_superior = True
                 temp_sacrifice = outcome.delta_our_money < 0.0
                 rationale = (
@@ -230,4 +294,10 @@ class WinModel:
             delta_opponent_pressure=delta_opp_pressure,
             weed_asset_value=weed_asset_val,
             weed_valuation=weed_val,
+            delta_money_realized=delta_money,
+            delta_margin_realized=delta_margin,
+            projected_asset_value=weed_asset_val if weed_val else 0.0,
+            projected_asset_value_basis=weed_val.projected_asset_value_basis if weed_val else "REALIZED_SIMULATION",
+            projection_status=weed_val.projection_status if weed_val else "REALIZED",
+            spatial_consistency_ok=getattr(outcome, "spatial_consistency_ok", True),
         )

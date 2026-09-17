@@ -35,6 +35,16 @@ except ImportError:
         _decay_plants,
     )
 
+try:
+    from config import compute_market_price, fib_hire_cost, FARMER_MOVES
+except ImportError:
+    import os
+    import sys
+    _REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    if _REPO not in sys.path:
+        sys.path.insert(0, _REPO)
+    from config import compute_market_price, fib_hire_cost, FARMER_MOVES
+
 from aec.ir.market_state import BASE_PRICES, TOWN_SHOP_CONSUMPTION
 
 
@@ -60,6 +70,8 @@ class SimulationOutcome:
 
     baseline_trace: Optional[List[Dict[str, Any]]] = None
     candidate_trace: Optional[List[Dict[str, Any]]] = None
+    spatial_consistency_ok: bool = True
+    desynchronization_reason: str = ""
 
 
 class ShadowRolloutState:
@@ -90,6 +102,10 @@ class ShadowRolloutState:
         self.overflow_units = 0
         self.cumulative_sold: Dict[str, int] = {p: 0 for p in PRODUCTS}
         self.rows: List[Dict[str, Any]] = []
+        self.hires_today = int(getattr(econ_state.farm, "hires_today", 0) or 0)
+        self.spatial_desynchronized: bool = False
+        self.desynchronization_reason: str = ""
+        self.worker_positions_history: List[List[List[int]]] = []
 
     def get_farm_dict(self) -> Dict[str, Any]:
         return {
@@ -97,7 +113,7 @@ class ShadowRolloutState:
             "farmer": self.farmer_pos,
             "hands": self.hands_pos,
             "tiles": self.tiles,
-            "hires_today": 0,
+            "hires_today": self.hires_today,
         }
 
     def get_private_dict(self) -> Dict[str, Any]:
@@ -113,61 +129,185 @@ def execute_market_lockstep(
     own_orders: List[List[Any]],
     opp_orders: List[List[Any]]
 ) -> None:
-    """Execute own orders against opponent orders in lockstep per-unit semantics."""
+    """Execute own orders against opponent orders in lockstep per-unit semantics matching sim.hpp."""
     own_q = list(own_orders)[:10]
     opp_q = list(opp_orders)[:10]
     max_len = max(len(own_q), len(opp_q))
 
     for i in range(max_len):
-        # 1. Own order execution
+        # 1. Atomic orders resolve once in player order (HIRE, BUY_LAND)
         if i < len(own_q):
             o = own_q[i]
-            if isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "SELL":
-                item = o[1]
-                qty = int(o[2])
-                avail = rollout.shed.get(item, 0)
-                actual_sell = min(qty, avail)
-                if actual_sell > 0:
-                    price = rollout.market_prices.get(item, BASE_PRICES.get(item, 1))
-                    rollout.money += actual_sell * price
-                    rollout.shed[item] -= actual_sell
-                    rollout.cumulative_sold[item] += actual_sell
-                    # Increase market inventory (price depression)
-                    rollout.market_inv[item] = rollout.market_inv.get(item, 10000) + actual_sell
-                    rollout.market_prices[item] = max(1, price - actual_sell // 2)
-            elif isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "BUY_PRODUCT":
-                item = o[1]
-                qty = int(o[2])
-                price = rollout.market_prices.get(item, BASE_PRICES.get(item, 10))
-                for _ in range(qty):
-                    if rollout.money >= price and sum(rollout.shed.values()) < SHED_CAPACITY and rollout.market_inv.get(item, 0) > 0:
-                        rollout.money -= price
-                        rollout.shed[item] = rollout.shed.get(item, 0) + 1
-                        rollout.market_inv[item] -= 1
-                        rollout.market_prices[item] = min(price * 2, rollout.market_prices.get(item, 10) + 1)
-            elif isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "BUY_SEED":
-                crop = o[1]
-                qty = int(o[2])
-                seed_cost = CROP_SEED_PRICE.get(crop, 20)
-                total_cost = qty * seed_cost
-                if rollout.money >= total_cost:
-                    rollout.money -= total_cost
-                    rollout.seeds[crop] = rollout.seeds.get(crop, 0) + qty
-            elif isinstance(o, (list, tuple)) and len(o) >= 1 and o[0] == "HIRE":
-                hire_cost = 100.0
-                if rollout.money >= hire_cost:
-                    rollout.money -= hire_cost
+            if isinstance(o, (list, tuple)) and o and o[0] == "HIRE":
+                h_cost = float(fib_hire_cost(rollout.hires_today))
+                if rollout.money >= h_cost:
+                    rollout.money -= h_cost
+                    rollout.hires_today += 1
+            elif isinstance(o, (list, tuple)) and o and o[0] == "BUY_LAND":
+                pass
 
-        # 2. Opponent order execution
         if i < len(opp_q):
             o = opp_q[i]
-            if isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "SELL":
-                item = o[1]
-                qty = int(o[2])
-                price = rollout.market_prices.get(item, BASE_PRICES.get(item, 1))
-                rollout.opp_money += qty * price
-                rollout.market_inv[item] = rollout.market_inv.get(item, 10000) + qty
-                rollout.market_prices[item] = max(1, price - qty // 2)
+            if isinstance(o, (list, tuple)) and o and o[0] == "HIRE":
+                pass
+
+        # 2. Per-unit lockstep loop for goods orders at slot i (matching sim.hpp:578-617)
+        own_live = False
+        own_op, own_item, own_rem = None, None, 0
+        if i < len(own_q):
+            o = own_q[i]
+            if isinstance(o, (list, tuple)) and len(o) >= 3:
+                own_op, own_item = o[0], o[1]
+                try:
+                    own_rem = int(o[2])
+                except (ValueError, TypeError):
+                    own_rem = 0
+                own_live = own_rem > 0 and own_op in ("SELL", "BUY_PRODUCT", "BUY_SEED")
+
+        opp_live = False
+        opp_op, opp_item, opp_rem = None, None, 0
+        if i < len(opp_q):
+            o = opp_q[i]
+            if isinstance(o, (list, tuple)) and len(o) >= 3:
+                opp_op, opp_item = o[0], o[1]
+                try:
+                    opp_rem = int(o[2])
+                except (ValueError, TypeError):
+                    opp_rem = 0
+                opp_live = opp_rem > 0 and opp_op in ("SELL", "BUY_PRODUCT", "BUY_SEED")
+
+        while own_live or opp_live:
+            # PHASE 1: QUOTE BOTH PLAYERS FROM IDENTICAL PRE-COMMIT INVENTORY SNAPSHOT (sim.hpp:578-597)
+            # Player 0 (Our) quote
+            q0_ok = False
+            q0_op = own_op
+            q0_item = own_item
+            q0_price = 0
+            if own_live and own_rem > 0:
+                if own_op == "SELL":
+                    avail = rollout.shed.get(own_item, 0)
+                    if avail > 0:
+                        cur_inv = rollout.market_inv.get(own_item, 10000)
+                        q0_price = compute_market_price(own_item, cur_inv)
+                        q0_ok = True
+                    else:
+                        own_live = False
+                elif own_op == "BUY_PRODUCT":
+                    cur_inv = rollout.market_inv.get(own_item, 10000)
+                    q0_price = compute_market_price(own_item, cur_inv - 1)
+                    if rollout.money >= q0_price and sum(rollout.shed.values()) < SHED_CAPACITY and cur_inv > 0:
+                        q0_ok = True
+                    else:
+                        own_live = False
+                elif own_op == "BUY_SEED":
+                    seed_cost = CROP_SEED_PRICE.get(own_item, 20)
+                    if rollout.money >= seed_cost:
+                        q0_price = seed_cost
+                        q0_ok = True
+                    else:
+                        own_live = False
+
+            # Player 1 (Opponent) quote
+            q1_ok = False
+            q1_op = opp_op
+            q1_item = opp_item
+            q1_price = 0
+            if opp_live and opp_rem > 0:
+                if opp_op == "SELL":
+                    cur_inv = rollout.market_inv.get(opp_item, 10000)
+                    q1_price = compute_market_price(opp_item, cur_inv)
+                    q1_ok = True
+                elif opp_op == "BUY_PRODUCT":
+                    cur_inv = rollout.market_inv.get(opp_item, 10000)
+                    q1_price = compute_market_price(opp_item, cur_inv - 1)
+                    if rollout.opp_money >= q1_price and cur_inv > 0:
+                        q1_ok = True
+                    else:
+                        opp_live = False
+                elif opp_op == "BUY_SEED":
+                    seed_cost = CROP_SEED_PRICE.get(opp_item, 20)
+                    if rollout.opp_money >= seed_cost:
+                        q1_price = seed_cost
+                        q1_ok = True
+                    else:
+                        opp_live = False
+
+            if not q0_ok and not q1_ok:
+                break
+
+            # PHASE 2: COMMIT QUOTED UNITS (sim.hpp:598-617)
+            committed_any = False
+
+            # Player 0 unit commit
+            if q0_ok:
+                if q0_op == "SELL":
+                    avail = rollout.shed.get(q0_item, 0)
+                    if avail > 0:
+                        rollout.money += q0_price
+                        rollout.shed[q0_item] -= 1
+                        rollout.cumulative_sold[q0_item] += 1
+                        if q0_price > 1:
+                            rollout.market_inv[q0_item] = rollout.market_inv.get(q0_item, 10000) + 1
+                        rollout.market_prices[q0_item] = compute_market_price(q0_item, rollout.market_inv[q0_item])
+                        own_rem -= 1
+                        committed_any = True
+                    else:
+                        own_live = False
+                elif q0_op == "BUY_PRODUCT":
+                    cur_inv = rollout.market_inv.get(q0_item, 10000)
+                    if rollout.money >= q0_price and sum(rollout.shed.values()) < SHED_CAPACITY and cur_inv > 0:
+                        rollout.money -= q0_price
+                        rollout.shed[q0_item] = rollout.shed.get(q0_item, 0) + 1
+                        rollout.market_inv[q0_item] = cur_inv - 1
+                        rollout.market_prices[q0_item] = compute_market_price(q0_item, rollout.market_inv[q0_item])
+                        own_rem -= 1
+                        committed_any = True
+                    else:
+                        own_live = False
+                elif q0_op == "BUY_SEED":
+                    if rollout.money >= q0_price:
+                        rollout.money -= q0_price
+                        rollout.seeds[q0_item] = rollout.seeds.get(q0_item, 0) + 1
+                        own_rem -= 1
+                        committed_any = True
+                    else:
+                        own_live = False
+
+                if own_rem <= 0:
+                    own_live = False
+
+            # Player 1 unit commit
+            if q1_ok:
+                if q1_op == "SELL":
+                    rollout.opp_money += q1_price
+                    if q1_price > 1:
+                        rollout.market_inv[q1_item] = rollout.market_inv.get(q1_item, 10000) + 1
+                    rollout.market_prices[q1_item] = compute_market_price(q1_item, rollout.market_inv[q1_item])
+                    opp_rem -= 1
+                    committed_any = True
+                elif q1_op == "BUY_PRODUCT":
+                    cur_inv = rollout.market_inv.get(q1_item, 10000)
+                    if rollout.opp_money >= q1_price and cur_inv > 0:
+                        rollout.opp_money -= q1_price
+                        rollout.market_inv[q1_item] = cur_inv - 1
+                        rollout.market_prices[q1_item] = compute_market_price(q1_item, rollout.market_inv[q1_item])
+                        opp_rem -= 1
+                        committed_any = True
+                    else:
+                        opp_live = False
+                elif q1_op == "BUY_SEED":
+                    if rollout.opp_money >= q1_price:
+                        rollout.opp_money -= q1_price
+                        opp_rem -= 1
+                        committed_any = True
+                    else:
+                        opp_live = False
+
+                if opp_rem <= 0:
+                    opp_live = False
+
+            if not committed_any:
+                break
 
     # Town consumption tick every 4 steps
     if rollout.step % 4 == 0:
@@ -175,8 +315,7 @@ def execute_market_lockstep(
             for it, q in TOWN_SHOP_CONSUMPTION.get(shop, ()):
                 if it in rollout.market_inv:
                     rollout.market_inv[it] = max(0, rollout.market_inv[it] - q)
-                    base_p = BASE_PRICES.get(it, 10)
-                    rollout.market_prices[it] = min(base_p * 2, rollout.market_prices[it] + 2)
+                    rollout.market_prices[it] = compute_market_price(it, rollout.market_inv[it])
 
 
 def simulate_rollout(
@@ -186,10 +325,12 @@ def simulate_rollout(
     opp_model: OpponentPressureModel,
     continuation_actions: Optional[List[Dict[str, Any]]] = None,
     trace_log: Optional[List[Dict[str, Any]]] = None,
+    baseline_positions: Optional[List[List[List[int]]]] = None,
 ) -> ShadowRolloutState:
     """Run an isolated forward rollout starting with initial_action at step 0, followed by continuation."""
     rollout = ShadowRolloutState(econ_state)
     n_workers = len(rollout.inventories)
+    tile_ops = {"PLANT", "WATER", "HARVEST", "FERTILIZE", "BUILD_COOP", "BUILD_PASTURE", "DROP", "PICKUP", "PLACE"}
 
     for offset in range(horizon):
         cur_step = econ_state.step + offset
@@ -216,6 +357,24 @@ def simulate_rollout(
         while len(commands) < n_workers:
             commands.append(["PASS"])
         commands = commands[:n_workers]
+
+        # Spatial consistency check against baseline worker trajectory
+        if baseline_positions is not None and offset >= 1 and (offset - 1) < len(baseline_positions):
+            expected_positions = baseline_positions[offset - 1]
+            for actor in range(n_workers):
+                cur_pos = farm_dict["farmer"] if actor == 0 else (farm_dict["hands"][actor - 1] if actor - 1 < len(farm_dict["hands"]) else None)
+                exp_pos = expected_positions[actor] if actor < len(expected_positions) else None
+                if cur_pos != exp_pos and exp_pos is not None:
+                    cmd_actor = commands[actor] if actor < len(commands) and commands[actor] else ["PASS"]
+                    op_actor = cmd_actor[0] if cmd_actor else "PASS"
+                    if op_actor in tile_ops or op_actor in FARMER_MOVES:
+                        rollout.spatial_desynchronized = True
+                        if not rollout.desynchronization_reason:
+                            rollout.desynchronization_reason = (
+                                f"Worker {actor} spatially desynchronized at offset {offset}: "
+                                f"expected {exp_pos}, actual {cur_pos}; cannot execute {op_actor}"
+                            )
+                        commands[actor] = ["PASS"]
 
         for actor in range(n_workers):
             cmd = commands[actor] if actor < len(commands) and commands[actor] else ["PASS"]
@@ -249,6 +408,7 @@ def simulate_rollout(
         # Synchronize worker positions back to rollout state
         rollout.farmer_pos = list(farm_dict["farmer"])
         rollout.hands_pos = [list(p) for p in farm_dict.get("hands", [])]
+        rollout.worker_positions_history.append([list(farm_dict["farmer"])] + [list(p) for p in farm_dict.get("hands", [])])
 
         # 2. Market execution under opponent pressure
         opp_market = opp_model.generate_simulated_opponent_market(econ_state.step, offset)
@@ -324,7 +484,8 @@ class CounterfactualSimulator:
             horizon=horizon,
             opp_model=opp_model,
             continuation_actions=continuation_trajectory,
-            trace_log=candidate_trace
+            trace_log=candidate_trace,
+            baseline_positions=baseline_rollout.worker_positions_history,
         )
 
         # 3. Compute Deltas & Margins
@@ -361,5 +522,8 @@ class CounterfactualSimulator:
             intermediate_solvency_ok=intermediate_solvency_ok,
             horizon=horizon,
             baseline_trace=baseline_trace,
-            candidate_trace=candidate_trace
+            candidate_trace=candidate_trace,
+            spatial_consistency_ok=not candidate_rollout.spatial_desynchronized,
+            desynchronization_reason=candidate_rollout.desynchronization_reason,
         )
+
