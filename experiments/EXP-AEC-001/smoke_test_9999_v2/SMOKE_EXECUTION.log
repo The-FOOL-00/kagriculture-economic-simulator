@@ -1,0 +1,51 @@
+[2026-09-17 08:28:43 UTC] ================================================================================
+[2026-09-17 08:28:43 UTC] EXP-AEC-001 INFRASTRUCTURE & MECHANISM ISOLATION SMOKE TEST (SEED 9999)
+[2026-09-17 08:28:43 UTC] OUTPUT DIRECTORY: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-AEC-001\smoke_test_9999_v2
+[2026-09-17 08:28:43 UTC] NON-INFERENTIAL INFRASTRUCTURE VALIDATION ONLY
+[2026-09-17 08:28:43 UTC] ================================================================================
+[2026-09-17 08:28:43 UTC] [Preflight 1/4] Verifying quarantine boundaries...
+[2026-09-17 08:28:43 UTC]   Quarantine check passed. Seed 9999 authorized for smoke test only.
+[2026-09-17 08:28:43 UTC] [Preflight 2/4] Verifying frozen V3 SHA-256...
+[2026-09-17 08:28:43 UTC]   Frozen V3 verified: 845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943
+[2026-09-17 08:28:43 UTC] [Preflight 3/4] Recording initial hashes of all frozen assets...
+[2026-09-17 08:28:43 UTC]   Pre-execution hashes captured for 5 core frozen files.
+[2026-09-17 08:28:43 UTC] [Preflight 4/4] Verifying Python & Engine environments...
+[2026-09-17 08:28:43 UTC]   Python: 3.14.3 | kagsim: 0.4.0 | Engine: 1.32.7
+[2026-09-17 08:28:43 UTC] 
+[EXECUTION] Match 1: Seed 9999, P0=AEC, P1=V3
+[2026-09-17 08:28:43 UTC] --- Starting MATCH_1_P0_AEC_VS_P1_V3: Seed=9999, AEC Seat=0, Control Seat=1 ---
+[2026-09-17 08:28:46 UTC]   MATCH_1_P0_AEC_VS_P1_V3 completed in 2.15s (719 steps)
+[2026-09-17 08:28:46 UTC]   AEC Score: $133589.00 | V3 Score: $133589.00 | Margin: $0.00
+[2026-09-17 08:28:46 UTC]   Baseline calls: 719/719 | Duplicates: 0
+[2026-09-17 08:28:46 UTC]   Events: 708 | Committed: 0 | Exceptions: 0
+[2026-09-17 08:28:46 UTC]   Commits by mechanism: {}
+[2026-09-17 08:28:46 UTC]   Quarantined proposals by mechanism: {'EMERGENCY_FEED_PURCHASE': 89, 'DYNAMIC_SHADOW_HARVEST': 282, 'CARGO_FERRY_PRIORITY': 1555, 'OPPONENT_PREEMPT_SELL': 328, 'TERMINAL_HARVEST_SWEEP': 20}
+[2026-09-17 08:28:46 UTC]   Latency (mean/p95/max): 1.70ms / 4.26ms / 35.07ms
+[2026-09-17 08:28:46 UTC] 
+[EXECUTION] Match 2: Seed 9999, P0=V3, P1=AEC
+[2026-09-17 08:28:46 UTC] --- Starting MATCH_2_P0_V3_VS_P1_AEC: Seed=9999, AEC Seat=1, Control Seat=0 ---
+[2026-09-17 08:28:53 UTC]   MATCH_2_P0_V3_VS_P1_AEC completed in 6.86s (719 steps)
+[2026-09-17 08:28:53 UTC]   AEC Score: $133589.00 | V3 Score: $133589.00 | Margin: $0.00
+[2026-09-17 08:28:53 UTC]   Baseline calls: 719/719 | Duplicates: 0
+[2026-09-17 08:28:53 UTC]   Events: 708 | Committed: 0 | Exceptions: 0
+[2026-09-17 08:28:53 UTC]   Commits by mechanism: {}
+[2026-09-17 08:28:53 UTC]   Quarantined proposals by mechanism: {'EMERGENCY_FEED_PURCHASE': 89, 'DYNAMIC_SHADOW_HARVEST': 282, 'CARGO_FERRY_PRIORITY': 1555, 'OPPONENT_PREEMPT_SELL': 328, 'TERMINAL_HARVEST_SWEEP': 20}
+[2026-09-17 08:28:53 UTC]   Latency (mean/p95/max): 5.78ms / 11.61ms / 129.69ms
+[2026-09-17 08:28:53 UTC] 
+[DETERMINISM AUDIT] Infrastructure Replay of Match 1...
+[2026-09-17 08:28:53 UTC] --- Starting INFRASTRUCTURE_REPLAY_MATCH_1: Seed=9999, AEC Seat=0, Control Seat=1 ---
+[2026-09-17 08:29:00 UTC]   INFRASTRUCTURE_REPLAY_MATCH_1 completed in 7.78s (719 steps)
+[2026-09-17 08:29:00 UTC]   AEC Score: $133589.00 | V3 Score: $133589.00 | Margin: $0.00
+[2026-09-17 08:29:00 UTC]   Baseline calls: 719/719 | Duplicates: 0
+[2026-09-17 08:29:00 UTC]   Events: 708 | Committed: 0 | Exceptions: 0
+[2026-09-17 08:29:00 UTC]   Commits by mechanism: {}
+[2026-09-17 08:29:00 UTC]   Quarantined proposals by mechanism: {'EMERGENCY_FEED_PURCHASE': 89, 'DYNAMIC_SHADOW_HARVEST': 282, 'CARGO_FERRY_PRIORITY': 1555, 'OPPONENT_PREEMPT_SELL': 328, 'TERMINAL_HARVEST_SWEEP': 20}
+[2026-09-17 08:29:00 UTC]   Latency (mean/p95/max): 6.09ms / 10.21ms / 97.85ms
+[2026-09-17 08:29:00 UTC]   Actions identical across all 719 steps: True
+[2026-09-17 08:29:00 UTC]   Scores identical (AEC=$133589.00, V3=$133589.00): True
+[2026-09-17 08:29:00 UTC]   Deterministic replay audit PASSED: 100% bit-for-bit reproducibility verified.
+[2026-09-17 08:29:00 UTC]   Post-execution hash audit PASSED: Zero changes across 5 frozen files.
+[2026-09-17 08:29:01 UTC] 
+================================================================================
+[2026-09-17 08:29:01 UTC] SMOKE TEST COMPLETE — OVERALL VERDICT: PASS — INFRASTRUCTURE READY AND MECHANISM ISOLATION CERTIFIED
+[2026-09-17 08:29:01 UTC] ================================================================================

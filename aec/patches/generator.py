@@ -6,7 +6,7 @@ from __future__ import annotations
 import copy
 from typing import Any, Dict, List, Optional, Tuple
 
-from aec.config import PRODUCTS
+from aec.config import AECConfig, ENABLED_FOUNDATION_MECHANISMS, PRODUCTS
 from aec.ir.economic_state import EconomicState
 from aec.opportunities.base import Opportunity
 from aec.patches.patch import CoupledPatch
@@ -29,18 +29,44 @@ def reorder_frontload(market_orders: List[List[Any]]) -> List[List[Any]]:
 
 
 class PatchGenerator:
-    """Compiles detected opportunities into concrete CoupledPatch proposals."""
+    """Compiles detected opportunities into concrete CoupledPatch proposals with mechanism gating (§8, §11)."""
+
+    def __init__(
+        self,
+        config: Optional[AECConfig] = None,
+        enabled_mechanisms: Optional[Any] = None
+    ) -> None:
+        if config is not None:
+            self.enabled_mechanisms = set(config.enabled_mechanisms)
+        elif enabled_mechanisms is not None:
+            self.enabled_mechanisms = set(enabled_mechanisms)
+        else:
+            self.enabled_mechanisms = set(ENABLED_FOUNDATION_MECHANISMS)
+
+        self.last_quarantined_count: int = 0
+        self.last_quarantined_by_mechanism: Dict[str, int] = {}
 
     def generate_patches(
         self,
         opportunities: List[Opportunity],
         econ_state: EconomicState,
-        baseline_action: Dict[str, Any]
+        baseline_action: Dict[str, Any],
+        config: Optional[AECConfig] = None
     ) -> List[CoupledPatch]:
+        enabled = set(config.enabled_mechanisms) if config is not None else self.enabled_mechanisms
+        self.last_quarantined_count = 0
+        self.last_quarantined_by_mechanism = {}
+
         patches: List[CoupledPatch] = []
 
         for opp in opportunities:
             fam = opp.candidate_transformation_family
+            
+            # Layer 2 Mechanism Enforcement: Refuse any disabled transformation family
+            if fam not in enabled:
+                self.last_quarantined_count += 1
+                self.last_quarantined_by_mechanism[fam] = self.last_quarantined_by_mechanism.get(fam, 0) + 1
+                continue
             
             # 1. Route / Weed Dig
             if fam == "LOCAL_WEED_DIG":
@@ -48,6 +74,7 @@ class PatchGenerator:
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
                     source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
                     worker_mutations={worker_id: ["DIG"]},
                     expected_horizon=opp.required_horizon,
                     rationale=opp.rationale
@@ -62,6 +89,7 @@ class PatchGenerator:
                     patch = CoupledPatch(
                         patch_id=f"PATCH_{opp.opportunity_id}",
                         source_opportunity_id=opp.opportunity_id,
+                        mechanism_family=fam,
                         market_mutations=reordered,
                         expected_horizon=opp.required_horizon,
                         rationale=opp.rationale
@@ -87,6 +115,7 @@ class PatchGenerator:
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
                     source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
                     market_mutations=orders[:10],
                     expected_horizon=opp.required_horizon,
                     rationale=opp.rationale
@@ -106,6 +135,7 @@ class PatchGenerator:
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
                     source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
                     market_mutations=liq_orders,
                     expected_horizon=1,
                     rationale=opp.rationale
@@ -125,6 +155,7 @@ class PatchGenerator:
                     patch = CoupledPatch(
                         patch_id=f"PATCH_{opp.opportunity_id}",
                         source_opportunity_id=opp.opportunity_id,
+                        mechanism_family=fam,
                         market_mutations=trimmed,
                         expected_horizon=opp.required_horizon,
                         rationale=opp.rationale
@@ -154,6 +185,7 @@ class PatchGenerator:
                     patch = CoupledPatch(
                         patch_id=f"PATCH_{opp.opportunity_id}",
                         source_opportunity_id=opp.opportunity_id,
+                        mechanism_family=fam,
                         worker_mutations={worker_id: cmd},
                         expected_horizon=opp.required_horizon,
                         rationale=opp.rationale
@@ -161,3 +193,4 @@ class PatchGenerator:
                     patches.append(patch)
 
         return patches
+

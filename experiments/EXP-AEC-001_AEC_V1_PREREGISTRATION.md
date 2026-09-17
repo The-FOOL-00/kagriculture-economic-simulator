@@ -6,7 +6,8 @@
 **Author**: Senior Research Engineer & Adversarial Reviewer  
 **Date**: 2026-09-17  
 **Status**: **PREREGISTERED — PENDING EXECUTION AUTHORIZATION**  
-**Execution Covenant**: **NO PROSPECTIVE EXPERIMENT HAS BEEN EXECUTED. EXECUTION IS BLOCKED PENDING EXPLICIT USER APPROVAL.**
+**Execution Covenant**: **NO PROSPECTIVE EXPERIMENT HAS BEEN EXECUTED. EXECUTION IS BLOCKED PENDING EXPLICIT USER APPROVAL.**  
+**Governance Amendment Note (2026-09-17)**: Pre-execution implementation audit detected that the original runtime did not enforce the declared mechanism allowlist. No prospective seeds were executed. The implementation has been corrected before prospective execution.
 
 ---
 

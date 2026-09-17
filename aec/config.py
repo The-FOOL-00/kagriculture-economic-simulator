@@ -54,11 +54,36 @@ MOVES: Dict[str, Tuple[int, int]] = {
 SHED_TILES: Tuple[Tuple[int, int], ...] = ((4, 4), (5, 4), (4, 5), (5, 5))
 
 # -----------------------------------------------------------------------------
-# 3. AEC CONFIGURATION PARAMETERS (§36)
+# 3. MECHANISM GOVERNANCE & TAXONOMY (§36, §37)
+# -----------------------------------------------------------------------------
+ENABLED_FOUNDATION_MECHANISMS: Tuple[str, ...] = (
+    "LOCAL_WEED_DIG",
+    "FRONTLOAD_ORDERS",
+    "TERMINAL_LIQUIDATION",
+    "PHASE_SHUTDOWN",
+)
+
+QUARANTINED_MECHANISMS: Tuple[str, ...] = (
+    "DYNAMIC_SHADOW_HARVEST",
+    "CARGO_FERRY_PRIORITY",
+    "OPPONENT_PREEMPT_SELL",
+    "EMERGENCY_FEED_PURCHASE",
+    "TERMINAL_HARVEST_SWEEP",
+    "TOWN_CYCLE",
+)
+
+
+# -----------------------------------------------------------------------------
+# 4. AEC CONFIGURATION PARAMETERS (§36)
 # -----------------------------------------------------------------------------
 @dataclass
 class AECConfig:
     """Explicit parameters governing the AEC planning layer."""
+    
+    # Mechanism Boundaries & Governance
+    enabled_mechanisms: Tuple[str, ...] = ENABLED_FOUNDATION_MECHANISMS
+    quarantined_mechanisms: Tuple[str, ...] = QUARANTINED_MECHANISMS
+    frozen_mode: bool = True         # EXP-AEC-001 frozen treatment isolation mode
     
     # Adaptive Horizons (§12, §22)
     short_horizon: int = 6           # Local / cheap events
@@ -84,3 +109,8 @@ class AECConfig:
     backbone_type: str = "v3"
     v3_tarball_path: str = "submission_Vj_kc_v3.tar.gz"
     v3_tarball_sha256: str = "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943"
+
+    def is_mechanism_enabled(self, mechanism: str) -> bool:
+        """Check if a mechanism family is explicitly authorized."""
+        return mechanism in self.enabled_mechanisms
+

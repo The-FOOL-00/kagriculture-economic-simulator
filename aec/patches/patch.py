@@ -33,6 +33,7 @@ class CoupledPatch:
     terminal_changes: Dict[str, Any] = field(default_factory=dict)
     
     # Execution and evaluation metadata
+    mechanism_family: str = ""
     dependencies: List[str] = field(default_factory=list)
     expected_horizon: int = 12
     rationale: str = ""
@@ -62,8 +63,10 @@ class CoupledPatch:
         return {
             "patch_id": self.patch_id,
             "opportunity_id": self.source_opportunity_id,
+            "mechanism_family": self.mechanism_family,
             "workers_modified": list(self.worker_mutations.keys()),
             "market_modified": self.market_mutations is not None,
             "horizon": self.expected_horizon,
             "rationale": self.rationale,
         }
+

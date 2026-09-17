@@ -1,0 +1,44 @@
+[2026-09-17 07:00:27 UTC] ================================================================================
+[2026-09-17 07:00:27 UTC] EXP-AEC-001 INFRASTRUCTURE SMOKE TEST (SEED 9999)
+[2026-09-17 07:00:27 UTC] NON-INFERENTIAL INFRASTRUCTURE VALIDATION ONLY
+[2026-09-17 07:00:27 UTC] ================================================================================
+[2026-09-17 07:00:27 UTC] [Preflight 1/4] Verifying quarantine boundaries...
+[2026-09-17 07:00:27 UTC]   Quarantine check passed. Seed 9999 authorized for smoke test only.
+[2026-09-17 07:00:27 UTC] [Preflight 2/4] Verifying frozen V3 SHA-256...
+[2026-09-17 07:00:27 UTC]   Frozen V3 verified: 845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943
+[2026-09-17 07:00:27 UTC] [Preflight 3/4] Recording initial hashes of all frozen assets...
+[2026-09-17 07:00:27 UTC]   Pre-execution hashes captured for 5 core frozen files.
+[2026-09-17 07:00:27 UTC] [Preflight 4/4] Verifying Python & Engine environments...
+[2026-09-17 07:00:27 UTC]   Python: 3.14.3 | kagsim: 0.4.0 | Engine: 1.32.7
+[2026-09-17 07:00:27 UTC] 
+[EXECUTION] Match 1: Seed 9999, P0=AEC, P1=V3
+[2026-09-17 07:00:27 UTC] --- Starting MATCH_1_P0_AEC_VS_P1_V3: Seed=9999, AEC Seat=0, Control Seat=1 ---
+[2026-09-17 07:00:29 UTC]   MATCH_1_P0_AEC_VS_P1_V3 completed in 2.20s (719 steps)
+[2026-09-17 07:00:29 UTC]   AEC Score: $132984.00 | V3 Score: $133611.00 | Margin: $-627.00
+[2026-09-17 07:00:29 UTC]   Baseline calls: 719/719 | Duplicates: 0
+[2026-09-17 07:00:29 UTC]   Events: 708 | Committed: 9 | Exceptions: 0
+[2026-09-17 07:00:29 UTC]   Latency (mean/p95/max): 2.10ms / 5.75ms / 31.74ms
+[2026-09-17 07:00:29 UTC] 
+[EXECUTION] Match 2: Seed 9999, P0=V3, P1=AEC
+[2026-09-17 07:00:29 UTC] --- Starting MATCH_2_P0_V3_VS_P1_AEC: Seed=9999, AEC Seat=1, Control Seat=0 ---
+[2026-09-17 07:00:31 UTC]   MATCH_2_P0_V3_VS_P1_AEC completed in 1.93s (719 steps)
+[2026-09-17 07:00:31 UTC]   AEC Score: $132984.00 | V3 Score: $133611.00 | Margin: $-627.00
+[2026-09-17 07:00:31 UTC]   Baseline calls: 719/719 | Duplicates: 0
+[2026-09-17 07:00:31 UTC]   Events: 708 | Committed: 9 | Exceptions: 0
+[2026-09-17 07:00:31 UTC]   Latency (mean/p95/max): 1.84ms / 5.28ms / 24.24ms
+[2026-09-17 07:00:31 UTC] 
+[DETERMINISM AUDIT] Infrastructure Replay of Match 1...
+[2026-09-17 07:00:31 UTC] --- Starting INFRASTRUCTURE_REPLAY_MATCH_1: Seed=9999, AEC Seat=0, Control Seat=1 ---
+[2026-09-17 07:00:33 UTC]   INFRASTRUCTURE_REPLAY_MATCH_1 completed in 1.94s (719 steps)
+[2026-09-17 07:00:33 UTC]   AEC Score: $132984.00 | V3 Score: $133611.00 | Margin: $-627.00
+[2026-09-17 07:00:33 UTC]   Baseline calls: 719/719 | Duplicates: 0
+[2026-09-17 07:00:33 UTC]   Events: 708 | Committed: 9 | Exceptions: 0
+[2026-09-17 07:00:33 UTC]   Latency (mean/p95/max): 1.85ms / 5.38ms / 23.24ms
+[2026-09-17 07:00:33 UTC]   Actions identical across all 719 steps: True
+[2026-09-17 07:00:33 UTC]   Scores identical (AEC=$132984.00, V3=$133611.00): True
+[2026-09-17 07:00:33 UTC]   Deterministic replay audit PASSED: 100% bit-for-bit reproducibility verified.
+[2026-09-17 07:00:33 UTC]   Post-execution hash audit PASSED: Zero changes across 5 frozen files.
+[2026-09-17 07:00:33 UTC] 
+================================================================================
+[2026-09-17 07:00:33 UTC] SMOKE TEST COMPLETE — OVERALL VERDICT: PASS — INFRASTRUCTURE READY
+[2026-09-17 07:00:33 UTC] ================================================================================
