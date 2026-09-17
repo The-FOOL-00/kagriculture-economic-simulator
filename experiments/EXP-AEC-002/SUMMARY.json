@@ -1,0 +1,89 @@
+{
+  "cohort_size": 50,
+  "total_matches": 100,
+  "expected_turns": 71900,
+  "mean_delta_margin": -0.92,
+  "median_delta_margin": 0.0,
+  "std_delta_margin": 4.83,
+  "se_delta_margin": 0.68,
+  "min_delta_margin": -31.0,
+  "max_delta_margin": 0.0,
+  "percentile_05_delta_margin": 0.0,
+  "percentile_95_delta_margin": 0.0,
+  "ci95_two_sided_t": [
+    -2.29,
+    0.45
+  ],
+  "lower_95_one_sided_bound": -2.07,
+  "ci95_bootstrap_bca": [
+    -3.69,
+    0.0
+  ],
+  "paired_t_test_one_sided": {
+    "t_statistic": -1.3465,
+    "p_value": 0.907838,
+    "df": 49,
+    "alternative": "greater"
+  },
+  "wilcoxon_test_two_sided": {
+    "w_statistic": 0.0,
+    "p_value": 0.179712
+  },
+  "treatment_wins": 5,
+  "control_wins": 9,
+  "ties": 86,
+  "win_rate_treatment": 0.05,
+  "win_rate_control": 0.09,
+  "delta_win_rate_percentage_points": -4.0,
+  "delta_win_rate_excl_ties_pp": -28.57,
+  "delta_wins_raw": -4,
+  "mean_treatment_score": 100212.14,
+  "mean_control_score": 100213.06,
+  "score_delta": -0.92,
+  "commits_by_mechanism": {
+    "FRONTLOAD_ORDERS": 20
+  },
+  "quarantined_by_mechanism": {
+    "EMERGENCY_FEED_PURCHASE": 9218,
+    "DYNAMIC_SHADOW_HARVEST": 38056,
+    "CARGO_FERRY_PRIORITY": 169803,
+    "OPPONENT_PREEMPT_SELL": 23713,
+    "LOCAL_WEED_DIG": 1494,
+    "TERMINAL_HARVEST_SWEEP": 2000
+  },
+  "quarantined_commits_zero": true,
+  "total_commits": 20,
+  "total_events": 70800,
+  "total_abstains": 71880,
+  "abstain_rate": 1.0153,
+  "total_safety_violations": 0,
+  "max_shed_units_seen": 100,
+  "max_turn_latency_ms": 56.76,
+  "acceptance_criteria": {
+    "ACC_1_lower_95_ci_ge_0": false,
+    "ACC_2_delta_win_rate_ge_minus_2pp": false,
+    "ACC_3_median_margin_ge_0": true,
+    "ACC_4_p05_margin_ge_minus_250": true,
+    "ACC_5_zero_safety_regressions": true,
+    "ACC_6_zero_quarantined_commits": true,
+    "ACC_7_two_phase_lockstep_parity": true,
+    "ALL_ACCEPTANCE_CRITERIA_MET": false
+  },
+  "falsification_checks": {
+    "FALS_1_win_rate_lt_minus_2pp": true,
+    "FALS_2_lower_ci_lt_0": true,
+    "FALS_3_safety_violation": false,
+    "FALS_4_shed_overflow": false,
+    "FALS_5_latency_ge_1000ms": false,
+    "FALS_6_quarantined_commit": false,
+    "ANY_FALSIFIED": true
+  },
+  "result_classification": "ACTIVE_NEGATIVE",
+  "primary_verdict": "FALSIFIED",
+  "git_commit": "d6d6ac344662b7e6dcf31af7b781aef0195c70d2",
+  "start_time": "2026-09-17T14:21:32.136948+00:00",
+  "end_time": "2026-09-17T14:21:32.165564+00:00",
+  "elapsed_seconds": 0.03,
+  "frozen_artifact_integrity_pass": true,
+  "audit_passed": true
+}

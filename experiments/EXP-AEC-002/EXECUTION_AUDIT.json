@@ -1,0 +1,57 @@
+{
+  "A_cohort_completeness": {
+    "pass": true,
+    "seed_count": 50,
+    "expected_count": 50,
+    "min_seed": 340200,
+    "max_seed": 340249
+  },
+  "B_turn_completeness": {
+    "pass": true,
+    "total_treatment_turns": 71900,
+    "expected_turns": 71900
+  },
+  "C_seat_symmetry": {
+    "pass": true,
+    "note": "Match A has AEC Seat 0, Match B has AEC Seat 1 for all seeds"
+  },
+  "D_crn_integrity": {
+    "pass": true
+  },
+  "E_baseline_call_count": {
+    "pass": true,
+    "total_baseline_calls": 71900,
+    "duplicate_calls": 0
+  },
+  "F_G_safety_and_exceptions": {
+    "pass": true,
+    "disqualifications": 0,
+    "illegal_actions": 0,
+    "unhandled_exceptions": 0
+  },
+  "H_quarantined_commits_zero": {
+    "pass": true
+  },
+  "I_holdout_untouched": {
+    "pass": true,
+    "holdout_range": "340050-340199",
+    "overlap_count": 0
+  },
+  "J_no_out_of_cohort_execution": {
+    "pass": true
+  },
+  "K_L_cryptographic_hashes": {
+    "pass": true,
+    "v3_hash": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "v3_expected": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "config_py_hash": "240deda295ce68490bf68a1fb046be2905044e78fafafb2a51aeb8b5c2f71f63",
+    "config_py_expected": "240deda295ce68490bf68a1fb046be2905044e78fafafb2a51aeb8b5c2f71f63"
+  },
+  "M_deterministic_replay": {
+    "pass": true,
+    "replay_seed": 340200,
+    "original_margin": 0.0,
+    "replay_margin": 0.0
+  },
+  "OVERALL_AUDIT_PASS": true
+}

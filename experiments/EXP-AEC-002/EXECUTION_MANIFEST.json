@@ -35,11 +35,26 @@
     "TERMINAL_HARVEST_SWEEP",
     "TOWN_CYCLE"
   ],
-  "execution_status": "FROZEN_NOT_LAUNCHED",
+  "execution_status": "COMPLETED",
   "artifact_hashes": {
     "submission_Vj_kc_v3.tar.gz": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
     "aec/config.py": "240deda295ce68490bf68a1fb046be2905044e78fafafb2a51aeb8b5c2f71f63",
     "reports/EXP_AEC_002_PREREGISTRATION_FINAL.md": "3e861f5f4608b87ae3a295965681612af1a160f94a27d67f1e0e63d351a12585",
     "reports/EXP_AEC_002_COHORT_AUDIT.md": "383ff9915c01bfadac5c61b9ceb70d300eaac94eebe99302a700fad23021a657"
+  },
+  "start_time": "2026-09-17T14:21:32.136948+00:00",
+  "git_commit_runtime": "d6d6ac344662b7e6dcf31af7b781aef0195c70d2",
+  "end_time": "2026-09-17T14:21:32.165564+00:00",
+  "elapsed_seconds": 0.03,
+  "final_stats": {
+    "mean_delta_margin": -0.92,
+    "median_delta_margin": 0.0,
+    "treatment_wins": 5,
+    "control_wins": 9,
+    "ties": 86,
+    "delta_win_rate_percentage_points": -4.0,
+    "lower_95_one_sided_bound": -2.07,
+    "result_classification": "ACTIVE_NEGATIVE",
+    "primary_verdict": "FALSIFIED"
   }
 }

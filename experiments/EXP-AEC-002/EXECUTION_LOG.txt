@@ -1,0 +1,460 @@
+[2026-09-17T14:18:13.199462+00:00] ================================================================================
+[2026-09-17T14:18:13.199957+00:00] EXP-AEC-002 PROSPECTIVE COHORT EXECUTION COMMENCING
+[2026-09-17T14:18:13.200220+00:00] ================================================================================
+[2026-09-17T14:18:13.200427+00:00] Running preflight verification...
+[2026-09-17T14:18:13.226423+00:00] Git HEAD Commit: d6d6ac344662b7e6dcf31af7b781aef0195c70d2
+[2026-09-17T14:18:13.227252+00:00] Verified frozen artifact: submission_Vj_kc_v3.tar.gz -> 845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943
+[2026-09-17T14:18:13.232091+00:00] Verified frozen artifact: aec\config.py -> 240deda295ce68490bf68a1fb046be2905044e78fafafb2a51aeb8b5c2f71f63
+[2026-09-17T14:18:13.232349+00:00] Verified frozen artifact: reports\EXP_AEC_002_PREREGISTRATION_FINAL.md -> 3e861f5f4608b87ae3a295965681612af1a160f94a27d67f1e0e63d351a12585
+[2026-09-17T14:18:13.232507+00:00] Verified frozen artifact: reports\EXP_AEC_002_COHORT_AUDIT.md -> 383ff9915c01bfadac5c61b9ceb70d300eaac94eebe99302a700fad23021a657
+[2026-09-17T14:18:13.234255+00:00] Wrote CONFIG.json: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-AEC-002\CONFIG.json
+[2026-09-17T14:18:13.236159+00:00] EXECUTION_MANIFEST.json updated: execution_status=IN_PROGRESS
+[2026-09-17T14:18:13.237746+00:00] 
+=== Executing Prospective Seed 340200 (1/50) ===
+[2026-09-17T14:18:13.238212+00:00] [1/100] Starting EXP-AEC-002_340200_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:14.712554+00:00]   Completed EXP-AEC-002_340200_A: AEC Score=121590, V3 Score=121590, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.18ms, max=7.44ms)
+[2026-09-17T14:18:14.713697+00:00] [2/100] Starting EXP-AEC-002_340200_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:16.153247+00:00]   Completed EXP-AEC-002_340200_B: AEC Score=121590, V3 Score=121590, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.16ms, max=16.71ms)
+[2026-09-17T14:18:16.167790+00:00] Seed 340200 atomically checkpointed. Cumulative completed: 1/50
+[2026-09-17T14:18:16.167981+00:00] 
+=== Executing Prospective Seed 340201 (2/50) ===
+[2026-09-17T14:18:16.168116+00:00] [3/100] Starting EXP-AEC-002_340201_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:17.497127+00:00]   Completed EXP-AEC-002_340201_A: AEC Score=78944, V3 Score=78944, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.07ms, max=22.83ms)
+[2026-09-17T14:18:17.498540+00:00] [4/100] Starting EXP-AEC-002_340201_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:18.911251+00:00]   Completed EXP-AEC-002_340201_B: AEC Score=78944, V3 Score=78944, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=29.17ms)
+[2026-09-17T14:18:18.926473+00:00] Seed 340201 atomically checkpointed. Cumulative completed: 2/50
+[2026-09-17T14:18:18.926661+00:00] 
+=== Executing Prospective Seed 340202 (3/50) ===
+[2026-09-17T14:18:18.926799+00:00] [5/100] Starting EXP-AEC-002_340202_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:20.326398+00:00]   Completed EXP-AEC-002_340202_A: AEC Score=101826, V3 Score=101826, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.15ms, max=21.38ms)
+[2026-09-17T14:18:20.327463+00:00] [6/100] Starting EXP-AEC-002_340202_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:21.718587+00:00]   Completed EXP-AEC-002_340202_B: AEC Score=101826, V3 Score=101826, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.14ms, max=21.29ms)
+[2026-09-17T14:18:21.733279+00:00] Seed 340202 atomically checkpointed. Cumulative completed: 3/50
+[2026-09-17T14:18:21.733491+00:00] 
+=== Executing Prospective Seed 340203 (4/50) ===
+[2026-09-17T14:18:21.733626+00:00] [7/100] Starting EXP-AEC-002_340203_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:23.119529+00:00]   Completed EXP-AEC-002_340203_A: AEC Score=141972, V3 Score=141972, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=20.42ms)
+[2026-09-17T14:18:23.120826+00:00] [8/100] Starting EXP-AEC-002_340203_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:24.427534+00:00]   Completed EXP-AEC-002_340203_B: AEC Score=141972, V3 Score=141972, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.04ms, max=21.55ms)
+[2026-09-17T14:18:24.439298+00:00] Seed 340203 atomically checkpointed. Cumulative completed: 4/50
+[2026-09-17T14:18:24.439501+00:00] 
+=== Executing Prospective Seed 340204 (5/50) ===
+[2026-09-17T14:18:24.439641+00:00] [9/100] Starting EXP-AEC-002_340204_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:25.780499+00:00]   Completed EXP-AEC-002_340204_A: AEC Score=135167, V3 Score=135167, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.09ms, max=20.34ms)
+[2026-09-17T14:18:25.781908+00:00] [10/100] Starting EXP-AEC-002_340204_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:27.104234+00:00]   Completed EXP-AEC-002_340204_B: AEC Score=135167, V3 Score=135167, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.08ms, max=23.79ms)
+[2026-09-17T14:18:27.119677+00:00] Seed 340204 atomically checkpointed. Cumulative completed: 5/50
+[2026-09-17T14:18:27.119854+00:00] 
+=== Executing Prospective Seed 340205 (6/50) ===
+[2026-09-17T14:18:27.119994+00:00] [11/100] Starting EXP-AEC-002_340205_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:28.435849+00:00]   Completed EXP-AEC-002_340205_A: AEC Score=113616, V3 Score=113616, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.08ms, max=21.34ms)
+[2026-09-17T14:18:28.437101+00:00] [12/100] Starting EXP-AEC-002_340205_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:29.734045+00:00]   Completed EXP-AEC-002_340205_B: AEC Score=113616, V3 Score=113616, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.06ms, max=21.61ms)
+[2026-09-17T14:18:29.748171+00:00] Seed 340205 atomically checkpointed. Cumulative completed: 6/50
+[2026-09-17T14:18:29.748352+00:00] 
+=== Executing Prospective Seed 340206 (7/50) ===
+[2026-09-17T14:18:29.748489+00:00] [13/100] Starting EXP-AEC-002_340206_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:31.084395+00:00]   Completed EXP-AEC-002_340206_A: AEC Score=99526, V3 Score=99526, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.08ms, max=21.95ms)
+[2026-09-17T14:18:31.085758+00:00] [14/100] Starting EXP-AEC-002_340206_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:32.386239+00:00]   Completed EXP-AEC-002_340206_B: AEC Score=99526, V3 Score=99526, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.06ms, max=21.40ms)
+[2026-09-17T14:18:32.400735+00:00] Seed 340206 atomically checkpointed. Cumulative completed: 7/50
+[2026-09-17T14:18:32.400916+00:00] 
+=== Executing Prospective Seed 340207 (8/50) ===
+[2026-09-17T14:18:32.401054+00:00] [15/100] Starting EXP-AEC-002_340207_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:33.799257+00:00]   Completed EXP-AEC-002_340207_A: AEC Score=90875, V3 Score=90875, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.14ms, max=12.86ms)
+[2026-09-17T14:18:33.800739+00:00] [16/100] Starting EXP-AEC-002_340207_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:35.260193+00:00]   Completed EXP-AEC-002_340207_B: AEC Score=90875, V3 Score=90875, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.18ms, max=12.13ms)
+[2026-09-17T14:18:35.277616+00:00] Seed 340207 atomically checkpointed. Cumulative completed: 8/50
+[2026-09-17T14:18:35.277840+00:00] 
+=== Executing Prospective Seed 340208 (9/50) ===
+[2026-09-17T14:18:35.277997+00:00] [17/100] Starting EXP-AEC-002_340208_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:36.596785+00:00]   Completed EXP-AEC-002_340208_A: AEC Score=73580, V3 Score=73580, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.06ms, max=24.35ms)
+[2026-09-17T14:18:36.597957+00:00] [18/100] Starting EXP-AEC-002_340208_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:37.880364+00:00]   Completed EXP-AEC-002_340208_B: AEC Score=73580, V3 Score=73580, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.04ms, max=24.03ms)
+[2026-09-17T14:18:37.895361+00:00] Seed 340208 atomically checkpointed. Cumulative completed: 9/50
+[2026-09-17T14:18:37.895532+00:00] 
+=== Executing Prospective Seed 340209 (10/50) ===
+[2026-09-17T14:18:37.895657+00:00] [19/100] Starting EXP-AEC-002_340209_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:39.359812+00:00]   Completed EXP-AEC-002_340209_A: AEC Score=107949, V3 Score=107949, Margin=+0, Commits=2, Elapsed=1.5s, Latency(mean=1.20ms, max=16.20ms)
+[2026-09-17T14:18:39.361099+00:00] [20/100] Starting EXP-AEC-002_340209_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:40.811164+00:00]   Completed EXP-AEC-002_340209_B: AEC Score=107949, V3 Score=107949, Margin=+0, Commits=2, Elapsed=1.4s, Latency(mean=1.18ms, max=8.54ms)
+[2026-09-17T14:18:40.826446+00:00] Seed 340209 atomically checkpointed. Cumulative completed: 10/50
+[2026-09-17T14:18:40.826636+00:00] 
+=== Executing Prospective Seed 340210 (11/50) ===
+[2026-09-17T14:18:40.826783+00:00] [21/100] Starting EXP-AEC-002_340210_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:42.144928+00:00]   Completed EXP-AEC-002_340210_A: AEC Score=70040, V3 Score=70040, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.07ms, max=22.65ms)
+[2026-09-17T14:18:42.146293+00:00] [22/100] Starting EXP-AEC-002_340210_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:43.468006+00:00]   Completed EXP-AEC-002_340210_B: AEC Score=70040, V3 Score=70040, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.09ms, max=23.07ms)
+[2026-09-17T14:18:43.478351+00:00] Seed 340210 atomically checkpointed. Cumulative completed: 11/50
+[2026-09-17T14:18:43.478532+00:00] 
+=== Executing Prospective Seed 340211 (12/50) ===
+[2026-09-17T14:18:43.478677+00:00] [23/100] Starting EXP-AEC-002_340211_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:44.802236+00:00]   Completed EXP-AEC-002_340211_A: AEC Score=74815, V3 Score=74710, Margin=+105, Commits=0, Elapsed=1.3s, Latency(mean=1.09ms, max=22.65ms)
+[2026-09-17T14:18:44.803671+00:00] [24/100] Starting EXP-AEC-002_340211_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:46.252759+00:00]   Completed EXP-AEC-002_340211_B: AEC Score=74710, V3 Score=74815, Margin=-105, Commits=0, Elapsed=1.4s, Latency(mean=1.17ms, max=46.32ms)
+[2026-09-17T14:18:46.265294+00:00] Seed 340211 atomically checkpointed. Cumulative completed: 12/50
+[2026-09-17T14:18:46.265582+00:00] 
+=== Executing Prospective Seed 340212 (13/50) ===
+[2026-09-17T14:18:46.265861+00:00] [25/100] Starting EXP-AEC-002_340212_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:47.638319+00:00]   Completed EXP-AEC-002_340212_A: AEC Score=85112, V3 Score=85112, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.12ms, max=34.57ms)
+[2026-09-17T14:18:47.639774+00:00] [26/100] Starting EXP-AEC-002_340212_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:48.980714+00:00]   Completed EXP-AEC-002_340212_B: AEC Score=85112, V3 Score=85112, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.10ms, max=23.08ms)
+[2026-09-17T14:18:48.996404+00:00] Seed 340212 atomically checkpointed. Cumulative completed: 13/50
+[2026-09-17T14:18:48.996575+00:00] 
+=== Executing Prospective Seed 340213 (14/50) ===
+[2026-09-17T14:18:48.996703+00:00] [27/100] Starting EXP-AEC-002_340213_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:50.348293+00:00]   Completed EXP-AEC-002_340213_A: AEC Score=78804, V3 Score=78804, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.10ms, max=22.05ms)
+[2026-09-17T14:18:50.349872+00:00] [28/100] Starting EXP-AEC-002_340213_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:51.738774+00:00]   Completed EXP-AEC-002_340213_B: AEC Score=78804, V3 Score=78804, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=22.26ms)
+[2026-09-17T14:18:51.755010+00:00] Seed 340213 atomically checkpointed. Cumulative completed: 14/50
+[2026-09-17T14:18:51.755184+00:00] 
+=== Executing Prospective Seed 340214 (15/50) ===
+[2026-09-17T14:18:51.755314+00:00] [29/100] Starting EXP-AEC-002_340214_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:53.058707+00:00]   Completed EXP-AEC-002_340214_A: AEC Score=80064, V3 Score=80079, Margin=-15, Commits=2, Elapsed=1.3s, Latency(mean=1.07ms, max=22.31ms)
+[2026-09-17T14:18:53.059859+00:00] [30/100] Starting EXP-AEC-002_340214_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:54.386750+00:00]   Completed EXP-AEC-002_340214_B: AEC Score=80064, V3 Score=80079, Margin=-15, Commits=2, Elapsed=1.3s, Latency(mean=1.06ms, max=22.04ms)
+[2026-09-17T14:18:54.403644+00:00] Seed 340214 atomically checkpointed. Cumulative completed: 15/50
+[2026-09-17T14:18:54.403850+00:00] 
+=== Executing Prospective Seed 340215 (16/50) ===
+[2026-09-17T14:18:54.403993+00:00] [31/100] Starting EXP-AEC-002_340215_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:55.743397+00:00]   Completed EXP-AEC-002_340215_A: AEC Score=102451, V3 Score=102451, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.08ms, max=22.97ms)
+[2026-09-17T14:18:55.744840+00:00] [32/100] Starting EXP-AEC-002_340215_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:57.108637+00:00]   Completed EXP-AEC-002_340215_B: AEC Score=102451, V3 Score=102451, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=32.78ms)
+[2026-09-17T14:18:57.121039+00:00] Seed 340215 atomically checkpointed. Cumulative completed: 16/50
+[2026-09-17T14:18:57.121222+00:00] 
+=== Executing Prospective Seed 340216 (17/50) ===
+[2026-09-17T14:18:57.121347+00:00] [33/100] Starting EXP-AEC-002_340216_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:18:58.453418+00:00]   Completed EXP-AEC-002_340216_A: AEC Score=123401, V3 Score=122384, Margin=+1017, Commits=0, Elapsed=1.3s, Latency(mean=1.10ms, max=36.78ms)
+[2026-09-17T14:18:58.455214+00:00] [34/100] Starting EXP-AEC-002_340216_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:18:59.780039+00:00]   Completed EXP-AEC-002_340216_B: AEC Score=122384, V3 Score=123401, Margin=-1017, Commits=0, Elapsed=1.3s, Latency(mean=1.08ms, max=22.33ms)
+[2026-09-17T14:18:59.796520+00:00] Seed 340216 atomically checkpointed. Cumulative completed: 17/50
+[2026-09-17T14:18:59.796698+00:00] 
+=== Executing Prospective Seed 340217 (18/50) ===
+[2026-09-17T14:18:59.796829+00:00] [35/100] Starting EXP-AEC-002_340217_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:01.180229+00:00]   Completed EXP-AEC-002_340217_A: AEC Score=84472, V3 Score=84472, Margin=+0, Commits=1, Elapsed=1.4s, Latency(mean=1.15ms, max=22.24ms)
+[2026-09-17T14:19:01.181850+00:00] [36/100] Starting EXP-AEC-002_340217_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:02.600474+00:00]   Completed EXP-AEC-002_340217_B: AEC Score=84472, V3 Score=84472, Margin=+0, Commits=1, Elapsed=1.4s, Latency(mean=1.13ms, max=35.07ms)
+[2026-09-17T14:19:02.620202+00:00] Seed 340217 atomically checkpointed. Cumulative completed: 18/50
+[2026-09-17T14:19:02.620416+00:00] 
+=== Executing Prospective Seed 340218 (19/50) ===
+[2026-09-17T14:19:02.620562+00:00] [37/100] Starting EXP-AEC-002_340218_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:03.985485+00:00]   Completed EXP-AEC-002_340218_A: AEC Score=69337, V3 Score=69337, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=36.56ms)
+[2026-09-17T14:19:03.986773+00:00] [38/100] Starting EXP-AEC-002_340218_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:05.305603+00:00]   Completed EXP-AEC-002_340218_B: AEC Score=69337, V3 Score=69337, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.07ms, max=22.56ms)
+[2026-09-17T14:19:05.322802+00:00] Seed 340218 atomically checkpointed. Cumulative completed: 19/50
+[2026-09-17T14:19:05.323003+00:00] 
+=== Executing Prospective Seed 340219 (20/50) ===
+[2026-09-17T14:19:05.323151+00:00] [39/100] Starting EXP-AEC-002_340219_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:06.737513+00:00]   Completed EXP-AEC-002_340219_A: AEC Score=109741, V3 Score=109741, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=23.11ms)
+[2026-09-17T14:19:06.739235+00:00] [40/100] Starting EXP-AEC-002_340219_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:08.073997+00:00]   Completed EXP-AEC-002_340219_B: AEC Score=109741, V3 Score=109741, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.09ms, max=22.96ms)
+[2026-09-17T14:19:08.089670+00:00] Seed 340219 atomically checkpointed. Cumulative completed: 20/50
+[2026-09-17T14:19:08.089878+00:00] 
+=== Executing Prospective Seed 340220 (21/50) ===
+[2026-09-17T14:19:08.090020+00:00] [41/100] Starting EXP-AEC-002_340220_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:09.534513+00:00]   Completed EXP-AEC-002_340220_A: AEC Score=132458, V3 Score=132458, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.17ms, max=35.92ms)
+[2026-09-17T14:19:09.536152+00:00] [42/100] Starting EXP-AEC-002_340220_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:10.951873+00:00]   Completed EXP-AEC-002_340220_B: AEC Score=132458, V3 Score=132458, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.16ms, max=23.86ms)
+[2026-09-17T14:19:10.964620+00:00] Seed 340220 atomically checkpointed. Cumulative completed: 21/50
+[2026-09-17T14:19:10.964834+00:00] 
+=== Executing Prospective Seed 340221 (22/50) ===
+[2026-09-17T14:19:10.964993+00:00] [43/100] Starting EXP-AEC-002_340221_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:12.503720+00:00]   Completed EXP-AEC-002_340221_A: AEC Score=128495, V3 Score=128495, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.25ms, max=18.36ms)
+[2026-09-17T14:19:12.505273+00:00] [44/100] Starting EXP-AEC-002_340221_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:13.948946+00:00]   Completed EXP-AEC-002_340221_B: AEC Score=128495, V3 Score=128495, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.20ms, max=24.27ms)
+[2026-09-17T14:19:13.964125+00:00] Seed 340221 atomically checkpointed. Cumulative completed: 22/50
+[2026-09-17T14:19:13.964348+00:00] 
+=== Executing Prospective Seed 340222 (23/50) ===
+[2026-09-17T14:19:13.964510+00:00] [45/100] Starting EXP-AEC-002_340222_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:15.321019+00:00]   Completed EXP-AEC-002_340222_A: AEC Score=106986, V3 Score=107610, Margin=-624, Commits=0, Elapsed=1.4s, Latency(mean=1.12ms, max=38.06ms)
+[2026-09-17T14:19:15.322524+00:00] [46/100] Starting EXP-AEC-002_340222_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:16.666680+00:00]   Completed EXP-AEC-002_340222_B: AEC Score=107610, V3 Score=106986, Margin=+624, Commits=0, Elapsed=1.3s, Latency(mean=1.08ms, max=23.21ms)
+[2026-09-17T14:19:16.680155+00:00] Seed 340222 atomically checkpointed. Cumulative completed: 23/50
+[2026-09-17T14:19:16.680356+00:00] 
+=== Executing Prospective Seed 340223 (24/50) ===
+[2026-09-17T14:19:16.680501+00:00] [47/100] Starting EXP-AEC-002_340223_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:18.065619+00:00]   Completed EXP-AEC-002_340223_A: AEC Score=92212, V3 Score=92212, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.15ms, max=16.24ms)
+[2026-09-17T14:19:18.067086+00:00] [48/100] Starting EXP-AEC-002_340223_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:19.393863+00:00]   Completed EXP-AEC-002_340223_B: AEC Score=92212, V3 Score=92212, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.09ms, max=15.20ms)
+[2026-09-17T14:19:19.409947+00:00] Seed 340223 atomically checkpointed. Cumulative completed: 24/50
+[2026-09-17T14:19:19.410124+00:00] 
+=== Executing Prospective Seed 340224 (25/50) ===
+[2026-09-17T14:19:19.410259+00:00] [49/100] Starting EXP-AEC-002_340224_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:20.773281+00:00]   Completed EXP-AEC-002_340224_A: AEC Score=107600, V3 Score=107631, Margin=-31, Commits=2, Elapsed=1.4s, Latency(mean=1.13ms, max=22.57ms)
+[2026-09-17T14:19:20.774551+00:00] [50/100] Starting EXP-AEC-002_340224_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:22.192314+00:00]   Completed EXP-AEC-002_340224_B: AEC Score=107600, V3 Score=107631, Margin=-31, Commits=2, Elapsed=1.4s, Latency(mean=1.16ms, max=23.66ms)
+[2026-09-17T14:19:22.210021+00:00] Seed 340224 atomically checkpointed. Cumulative completed: 25/50
+[2026-09-17T14:19:22.210247+00:00] 
+=== Executing Prospective Seed 340225 (26/50) ===
+[2026-09-17T14:19:22.210407+00:00] [51/100] Starting EXP-AEC-002_340225_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:23.647060+00:00]   Completed EXP-AEC-002_340225_A: AEC Score=92888, V3 Score=92888, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.15ms, max=23.67ms)
+[2026-09-17T14:19:23.648624+00:00] [52/100] Starting EXP-AEC-002_340225_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:25.052175+00:00]   Completed EXP-AEC-002_340225_B: AEC Score=92888, V3 Score=92888, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.15ms, max=23.94ms)
+[2026-09-17T14:19:25.068072+00:00] Seed 340225 atomically checkpointed. Cumulative completed: 26/50
+[2026-09-17T14:19:25.068259+00:00] 
+=== Executing Prospective Seed 340226 (27/50) ===
+[2026-09-17T14:19:25.068441+00:00] [53/100] Starting EXP-AEC-002_340226_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:26.490648+00:00]   Completed EXP-AEC-002_340226_A: AEC Score=92922, V3 Score=92922, Margin=+0, Commits=2, Elapsed=1.4s, Latency(mean=1.18ms, max=37.14ms)
+[2026-09-17T14:19:26.492460+00:00] [54/100] Starting EXP-AEC-002_340226_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:27.940541+00:00]   Completed EXP-AEC-002_340226_B: AEC Score=92922, V3 Score=92922, Margin=+0, Commits=2, Elapsed=1.4s, Latency(mean=1.18ms, max=32.65ms)
+[2026-09-17T14:19:27.955208+00:00] Seed 340226 atomically checkpointed. Cumulative completed: 27/50
+[2026-09-17T14:19:27.955453+00:00] 
+=== Executing Prospective Seed 340227 (28/50) ===
+[2026-09-17T14:19:27.955594+00:00] [55/100] Starting EXP-AEC-002_340227_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:29.379280+00:00]   Completed EXP-AEC-002_340227_A: AEC Score=85470, V3 Score=85470, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.18ms, max=20.69ms)
+[2026-09-17T14:19:29.380672+00:00] [56/100] Starting EXP-AEC-002_340227_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:30.797759+00:00]   Completed EXP-AEC-002_340227_B: AEC Score=85470, V3 Score=85470, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.18ms, max=20.25ms)
+[2026-09-17T14:19:30.817480+00:00] Seed 340227 atomically checkpointed. Cumulative completed: 28/50
+[2026-09-17T14:19:30.817689+00:00] 
+=== Executing Prospective Seed 340228 (29/50) ===
+[2026-09-17T14:19:30.817829+00:00] [57/100] Starting EXP-AEC-002_340228_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:32.201543+00:00]   Completed EXP-AEC-002_340228_A: AEC Score=74968, V3 Score=74968, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.15ms, max=17.62ms)
+[2026-09-17T14:19:32.203009+00:00] [58/100] Starting EXP-AEC-002_340228_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:33.631856+00:00]   Completed EXP-AEC-002_340228_B: AEC Score=74968, V3 Score=74968, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.19ms, max=15.35ms)
+[2026-09-17T14:19:33.648992+00:00] Seed 340228 atomically checkpointed. Cumulative completed: 29/50
+[2026-09-17T14:19:33.649181+00:00] 
+=== Executing Prospective Seed 340229 (30/50) ===
+[2026-09-17T14:19:33.649319+00:00] [59/100] Starting EXP-AEC-002_340229_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:35.189117+00:00]   Completed EXP-AEC-002_340229_A: AEC Score=123778, V3 Score=123778, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.26ms, max=16.87ms)
+[2026-09-17T14:19:35.190587+00:00] [60/100] Starting EXP-AEC-002_340229_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:36.800013+00:00]   Completed EXP-AEC-002_340229_B: AEC Score=123778, V3 Score=123778, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.32ms, max=20.17ms)
+[2026-09-17T14:19:36.819947+00:00] Seed 340229 atomically checkpointed. Cumulative completed: 30/50
+[2026-09-17T14:19:36.820168+00:00] 
+=== Executing Prospective Seed 340230 (31/50) ===
+[2026-09-17T14:19:36.820343+00:00] [61/100] Starting EXP-AEC-002_340230_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:38.521027+00:00]   Completed EXP-AEC-002_340230_A: AEC Score=136678, V3 Score=136678, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.41ms, max=56.76ms)
+[2026-09-17T14:19:38.522693+00:00] [62/100] Starting EXP-AEC-002_340230_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:40.153265+00:00]   Completed EXP-AEC-002_340230_B: AEC Score=136678, V3 Score=136678, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.34ms, max=26.94ms)
+[2026-09-17T14:19:40.168865+00:00] Seed 340230 atomically checkpointed. Cumulative completed: 31/50
+[2026-09-17T14:19:40.169088+00:00] 
+=== Executing Prospective Seed 340231 (32/50) ===
+[2026-09-17T14:19:40.169250+00:00] [63/100] Starting EXP-AEC-002_340231_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:41.811788+00:00]   Completed EXP-AEC-002_340231_A: AEC Score=82376, V3 Score=82376, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.33ms, max=31.11ms)
+[2026-09-17T14:19:41.813295+00:00] [64/100] Starting EXP-AEC-002_340231_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:43.436076+00:00]   Completed EXP-AEC-002_340231_B: AEC Score=82376, V3 Score=82376, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.32ms, max=46.78ms)
+[2026-09-17T14:19:43.455651+00:00] Seed 340231 atomically checkpointed. Cumulative completed: 32/50
+[2026-09-17T14:19:43.455882+00:00] 
+=== Executing Prospective Seed 340232 (33/50) ===
+[2026-09-17T14:19:43.456336+00:00] [65/100] Starting EXP-AEC-002_340232_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:44.838333+00:00]   Completed EXP-AEC-002_340232_A: AEC Score=86433, V3 Score=86433, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=25.17ms)
+[2026-09-17T14:19:44.839600+00:00] [66/100] Starting EXP-AEC-002_340232_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:46.310976+00:00]   Completed EXP-AEC-002_340232_B: AEC Score=86433, V3 Score=86433, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.15ms, max=27.94ms)
+[2026-09-17T14:19:46.336728+00:00] Seed 340232 atomically checkpointed. Cumulative completed: 33/50
+[2026-09-17T14:19:46.336963+00:00] 
+=== Executing Prospective Seed 340233 (34/50) ===
+[2026-09-17T14:19:46.337130+00:00] [67/100] Starting EXP-AEC-002_340233_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:47.995510+00:00]   Completed EXP-AEC-002_340233_A: AEC Score=64227, V3 Score=64227, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.35ms, max=29.62ms)
+[2026-09-17T14:19:47.997003+00:00] [68/100] Starting EXP-AEC-002_340233_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:49.530276+00:00]   Completed EXP-AEC-002_340233_B: AEC Score=64227, V3 Score=64227, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.25ms, max=22.55ms)
+[2026-09-17T14:19:49.548223+00:00] Seed 340233 atomically checkpointed. Cumulative completed: 34/50
+[2026-09-17T14:19:49.548419+00:00] 
+=== Executing Prospective Seed 340234 (35/50) ===
+[2026-09-17T14:19:49.548585+00:00] [69/100] Starting EXP-AEC-002_340234_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:50.909469+00:00]   Completed EXP-AEC-002_340234_A: AEC Score=140169, V3 Score=140169, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.09ms, max=22.09ms)
+[2026-09-17T14:19:50.910815+00:00] [70/100] Starting EXP-AEC-002_340234_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:52.234655+00:00]   Completed EXP-AEC-002_340234_B: AEC Score=140169, V3 Score=140169, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.07ms, max=27.82ms)
+[2026-09-17T14:19:52.256545+00:00] Seed 340234 atomically checkpointed. Cumulative completed: 35/50
+[2026-09-17T14:19:52.256769+00:00] 
+=== Executing Prospective Seed 340235 (36/50) ===
+[2026-09-17T14:19:52.257032+00:00] [71/100] Starting EXP-AEC-002_340235_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:53.969172+00:00]   Completed EXP-AEC-002_340235_A: AEC Score=94004, V3 Score=94004, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.43ms, max=26.68ms)
+[2026-09-17T14:19:53.976743+00:00] [72/100] Starting EXP-AEC-002_340235_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:55.618787+00:00]   Completed EXP-AEC-002_340235_B: AEC Score=94004, V3 Score=94004, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.33ms, max=37.81ms)
+[2026-09-17T14:19:55.641602+00:00] Seed 340235 atomically checkpointed. Cumulative completed: 36/50
+[2026-09-17T14:19:55.641831+00:00] 
+=== Executing Prospective Seed 340236 (37/50) ===
+[2026-09-17T14:19:55.642010+00:00] [73/100] Starting EXP-AEC-002_340236_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:19:57.248570+00:00]   Completed EXP-AEC-002_340236_A: AEC Score=105549, V3 Score=105549, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.34ms, max=28.49ms)
+[2026-09-17T14:19:57.249976+00:00] [74/100] Starting EXP-AEC-002_340236_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:19:58.606584+00:00]   Completed EXP-AEC-002_340236_B: AEC Score=105549, V3 Score=105549, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=23.25ms)
+[2026-09-17T14:19:58.625418+00:00] Seed 340236 atomically checkpointed. Cumulative completed: 37/50
+[2026-09-17T14:19:58.625591+00:00] 
+=== Executing Prospective Seed 340237 (38/50) ===
+[2026-09-17T14:19:58.625724+00:00] [75/100] Starting EXP-AEC-002_340237_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:00.065216+00:00]   Completed EXP-AEC-002_340237_A: AEC Score=104945, V3 Score=104945, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=22.72ms)
+[2026-09-17T14:20:00.066801+00:00] [76/100] Starting EXP-AEC-002_340237_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:01.699948+00:00]   Completed EXP-AEC-002_340237_B: AEC Score=104945, V3 Score=104945, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.31ms, max=27.36ms)
+[2026-09-17T14:20:01.723174+00:00] Seed 340237 atomically checkpointed. Cumulative completed: 38/50
+[2026-09-17T14:20:01.723389+00:00] 
+=== Executing Prospective Seed 340238 (39/50) ===
+[2026-09-17T14:20:01.723558+00:00] [77/100] Starting EXP-AEC-002_340238_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:03.375241+00:00]   Completed EXP-AEC-002_340238_A: AEC Score=66789, V3 Score=67106, Margin=-317, Commits=0, Elapsed=1.7s, Latency(mean=1.36ms, max=32.92ms)
+[2026-09-17T14:20:03.376643+00:00] [78/100] Starting EXP-AEC-002_340238_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:04.920710+00:00]   Completed EXP-AEC-002_340238_B: AEC Score=67106, V3 Score=66789, Margin=+317, Commits=0, Elapsed=1.5s, Latency(mean=1.25ms, max=27.65ms)
+[2026-09-17T14:20:04.937424+00:00] Seed 340238 atomically checkpointed. Cumulative completed: 39/50
+[2026-09-17T14:20:04.937647+00:00] 
+=== Executing Prospective Seed 340239 (40/50) ===
+[2026-09-17T14:20:04.937815+00:00] [79/100] Starting EXP-AEC-002_340239_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:06.306512+00:00]   Completed EXP-AEC-002_340239_A: AEC Score=91297, V3 Score=91297, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.10ms, max=21.94ms)
+[2026-09-17T14:20:06.307986+00:00] [80/100] Starting EXP-AEC-002_340239_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:07.954649+00:00]   Completed EXP-AEC-002_340239_B: AEC Score=91297, V3 Score=91297, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.30ms, max=26.74ms)
+[2026-09-17T14:20:07.971829+00:00] Seed 340239 atomically checkpointed. Cumulative completed: 40/50
+[2026-09-17T14:20:07.972047+00:00] 
+=== Executing Prospective Seed 340240 (41/50) ===
+[2026-09-17T14:20:07.972202+00:00] [81/100] Starting EXP-AEC-002_340240_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:09.707818+00:00]   Completed EXP-AEC-002_340240_A: AEC Score=134011, V3 Score=134011, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.46ms, max=56.31ms)
+[2026-09-17T14:20:09.709578+00:00] [82/100] Starting EXP-AEC-002_340240_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:11.412440+00:00]   Completed EXP-AEC-002_340240_B: AEC Score=134011, V3 Score=134011, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.39ms, max=23.40ms)
+[2026-09-17T14:20:11.426754+00:00] Seed 340240 atomically checkpointed. Cumulative completed: 41/50
+[2026-09-17T14:20:11.426966+00:00] 
+=== Executing Prospective Seed 340241 (42/50) ===
+[2026-09-17T14:20:11.427118+00:00] [83/100] Starting EXP-AEC-002_340241_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:12.773878+00:00]   Completed EXP-AEC-002_340241_A: AEC Score=115110, V3 Score=115110, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.11ms, max=22.57ms)
+[2026-09-17T14:20:12.775340+00:00] [84/100] Starting EXP-AEC-002_340241_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:14.139814+00:00]   Completed EXP-AEC-002_340241_B: AEC Score=115110, V3 Score=115110, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.12ms, max=26.65ms)
+[2026-09-17T14:20:14.156133+00:00] Seed 340241 atomically checkpointed. Cumulative completed: 42/50
+[2026-09-17T14:20:14.156350+00:00] 
+=== Executing Prospective Seed 340242 (43/50) ===
+[2026-09-17T14:20:14.156491+00:00] [85/100] Starting EXP-AEC-002_340242_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:15.907045+00:00]   Completed EXP-AEC-002_340242_A: AEC Score=111187, V3 Score=111187, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.49ms, max=29.40ms)
+[2026-09-17T14:20:15.908579+00:00] [86/100] Starting EXP-AEC-002_340242_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:17.662830+00:00]   Completed EXP-AEC-002_340242_B: AEC Score=111187, V3 Score=111187, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=31.36ms)
+[2026-09-17T14:20:17.683626+00:00] Seed 340242 atomically checkpointed. Cumulative completed: 43/50
+[2026-09-17T14:20:17.683855+00:00] 
+=== Executing Prospective Seed 340243 (44/50) ===
+[2026-09-17T14:20:17.684033+00:00] [87/100] Starting EXP-AEC-002_340243_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:19.143411+00:00]   Completed EXP-AEC-002_340243_A: AEC Score=75950, V3 Score=75950, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.20ms, max=29.46ms)
+[2026-09-17T14:20:19.144750+00:00] [88/100] Starting EXP-AEC-002_340243_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:20.600764+00:00]   Completed EXP-AEC-002_340243_B: AEC Score=75950, V3 Score=75950, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.19ms, max=28.44ms)
+[2026-09-17T14:20:20.615993+00:00] Seed 340243 atomically checkpointed. Cumulative completed: 44/50
+[2026-09-17T14:20:20.616174+00:00] 
+=== Executing Prospective Seed 340244 (45/50) ===
+[2026-09-17T14:20:20.616313+00:00] [89/100] Starting EXP-AEC-002_340244_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:21.986613+00:00]   Completed EXP-AEC-002_340244_A: AEC Score=103438, V3 Score=103438, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.11ms, max=22.17ms)
+[2026-09-17T14:20:21.987969+00:00] [90/100] Starting EXP-AEC-002_340244_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:23.282595+00:00]   Completed EXP-AEC-002_340244_B: AEC Score=103438, V3 Score=103438, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.06ms, max=22.19ms)
+[2026-09-17T14:20:23.303398+00:00] Seed 340244 atomically checkpointed. Cumulative completed: 45/50
+[2026-09-17T14:20:23.303583+00:00] 
+=== Executing Prospective Seed 340245 (46/50) ===
+[2026-09-17T14:20:23.303747+00:00] [91/100] Starting EXP-AEC-002_340245_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:24.638303+00:00]   Completed EXP-AEC-002_340245_A: AEC Score=114896, V3 Score=114896, Margin=+0, Commits=0, Elapsed=1.3s, Latency(mean=1.07ms, max=22.13ms)
+[2026-09-17T14:20:24.639849+00:00] [92/100] Starting EXP-AEC-002_340245_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:26.063189+00:00]   Completed EXP-AEC-002_340245_B: AEC Score=114896, V3 Score=114896, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.14ms, max=33.47ms)
+[2026-09-17T14:20:26.078529+00:00] Seed 340245 atomically checkpointed. Cumulative completed: 46/50
+[2026-09-17T14:20:26.078734+00:00] 
+=== Executing Prospective Seed 340246 (47/50) ===
+[2026-09-17T14:20:26.079002+00:00] [93/100] Starting EXP-AEC-002_340246_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:27.453908+00:00]   Completed EXP-AEC-002_340246_A: AEC Score=88011, V3 Score=88011, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.14ms, max=25.12ms)
+[2026-09-17T14:20:27.455043+00:00] [94/100] Starting EXP-AEC-002_340246_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:28.839758+00:00]   Completed EXP-AEC-002_340246_B: AEC Score=88011, V3 Score=88011, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.14ms, max=40.10ms)
+[2026-09-17T14:20:28.859953+00:00] Seed 340246 atomically checkpointed. Cumulative completed: 47/50
+[2026-09-17T14:20:28.860136+00:00] 
+=== Executing Prospective Seed 340247 (48/50) ===
+[2026-09-17T14:20:28.860272+00:00] [95/100] Starting EXP-AEC-002_340247_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:30.287772+00:00]   Completed EXP-AEC-002_340247_A: AEC Score=110508, V3 Score=110508, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.18ms, max=34.66ms)
+[2026-09-17T14:20:30.289415+00:00] [96/100] Starting EXP-AEC-002_340247_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:31.655370+00:00]   Completed EXP-AEC-002_340247_B: AEC Score=110508, V3 Score=110508, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=22.09ms)
+[2026-09-17T14:20:31.674701+00:00] Seed 340247 atomically checkpointed. Cumulative completed: 48/50
+[2026-09-17T14:20:31.674904+00:00] 
+=== Executing Prospective Seed 340248 (49/50) ===
+[2026-09-17T14:20:31.675063+00:00] [97/100] Starting EXP-AEC-002_340248_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:33.150257+00:00]   Completed EXP-AEC-002_340248_A: AEC Score=94109, V3 Score=94109, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.19ms, max=17.98ms)
+[2026-09-17T14:20:33.152521+00:00] [98/100] Starting EXP-AEC-002_340248_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:34.614989+00:00]   Completed EXP-AEC-002_340248_B: AEC Score=94109, V3 Score=94109, Margin=+0, Commits=0, Elapsed=1.5s, Latency(mean=1.19ms, max=22.21ms)
+[2026-09-17T14:20:34.634925+00:00] Seed 340248 atomically checkpointed. Cumulative completed: 49/50
+[2026-09-17T14:20:34.635120+00:00] 
+=== Executing Prospective Seed 340249 (50/50) ===
+[2026-09-17T14:20:34.635265+00:00] [99/100] Starting EXP-AEC-002_340249_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:36.136561+00:00]   Completed EXP-AEC-002_340249_A: AEC Score=109621, V3 Score=110282, Margin=-661, Commits=1, Elapsed=1.5s, Latency(mean=1.23ms, max=26.66ms)
+[2026-09-17T14:20:36.137966+00:00] [100/100] Starting EXP-AEC-002_340249_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T14:20:37.494962+00:00]   Completed EXP-AEC-002_340249_B: AEC Score=110282, V3 Score=109621, Margin=+661, Commits=1, Elapsed=1.4s, Latency(mean=1.09ms, max=22.73ms)
+[2026-09-17T14:20:37.509986+00:00] Seed 340249 atomically checkpointed. Cumulative completed: 50/50
+[2026-09-17T14:20:37.510183+00:00] 
+================================================================================
+[2026-09-17T14:20:37.510307+00:00] ALL 50 PROSPECTIVE SEEDS (100 MATCHES) COMPLETED.
+[2026-09-17T14:20:37.510422+00:00] COMMENCING POST-RUN EXECUTION AUDIT BEFORE STATISTICAL ANALYSIS (§13)...
+[2026-09-17T14:20:37.510629+00:00] ================================================================================
+[2026-09-17T14:20:37.510806+00:00] Running independent post-run execution audit...
+[2026-09-17T14:20:37.511434+00:00] Running deterministic replay verification on seed 340200...
+[2026-09-17T14:20:37.511646+00:00] [999/100] Starting EXP-AEC-002_340200_B: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:20:38.895062+00:00]   Completed EXP-AEC-002_340200_B: AEC Score=121590, V3 Score=121590, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.13ms, max=7.15ms)
+[2026-09-17T14:20:38.898462+00:00] Execution audit complete. Overall audit pass: True
+[2026-09-17T14:20:38.899235+00:00] 
+COMPUTING PREREGISTERED STATISTICAL SUMMARY (§14)...
+[2026-09-17T14:21:32.082543+00:00] ================================================================================
+[2026-09-17T14:21:32.082892+00:00] EXP-AEC-002 PROSPECTIVE COHORT EXECUTION COMMENCING
+[2026-09-17T14:21:32.083161+00:00] ================================================================================
+[2026-09-17T14:21:32.083420+00:00] Running preflight verification...
+[2026-09-17T14:21:32.126633+00:00] Git HEAD Commit: d6d6ac344662b7e6dcf31af7b781aef0195c70d2
+[2026-09-17T14:21:32.127655+00:00] Verified frozen artifact: submission_Vj_kc_v3.tar.gz -> 845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943
+[2026-09-17T14:21:32.127916+00:00] Verified frozen artifact: aec\config.py -> 240deda295ce68490bf68a1fb046be2905044e78fafafb2a51aeb8b5c2f71f63
+[2026-09-17T14:21:32.128093+00:00] Verified frozen artifact: reports\EXP_AEC_002_PREREGISTRATION_FINAL.md -> 3e861f5f4608b87ae3a295965681612af1a160f94a27d67f1e0e63d351a12585
+[2026-09-17T14:21:32.128244+00:00] Verified frozen artifact: reports\EXP_AEC_002_COHORT_AUDIT.md -> 383ff9915c01bfadac5c61b9ceb70d300eaac94eebe99302a700fad23021a657
+[2026-09-17T14:21:32.135982+00:00] Wrote CONFIG.json: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-AEC-002\CONFIG.json
+[2026-09-17T14:21:32.136730+00:00] Resuming from checkpoint: 50 completed seeds already recorded.
+[2026-09-17T14:21:32.155334+00:00] EXECUTION_MANIFEST.json updated: execution_status=IN_PROGRESS
+[2026-09-17T14:21:32.156422+00:00] Seed 340200 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.156653+00:00] Seed 340201 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.156820+00:00] Seed 340202 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.156969+00:00] Seed 340203 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.157099+00:00] Seed 340204 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.157247+00:00] Seed 340205 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.157435+00:00] Seed 340206 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.157579+00:00] Seed 340207 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.157752+00:00] Seed 340208 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.157974+00:00] Seed 340209 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.158241+00:00] Seed 340210 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.158476+00:00] Seed 340211 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.158673+00:00] Seed 340212 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.158843+00:00] Seed 340213 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.158978+00:00] Seed 340214 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.159109+00:00] Seed 340215 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.159247+00:00] Seed 340216 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.159374+00:00] Seed 340217 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.159495+00:00] Seed 340218 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.159621+00:00] Seed 340219 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.159785+00:00] Seed 340220 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.160065+00:00] Seed 340221 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.160238+00:00] Seed 340222 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.160495+00:00] Seed 340223 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.160671+00:00] Seed 340224 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.160839+00:00] Seed 340225 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.161035+00:00] Seed 340226 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.161205+00:00] Seed 340227 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.161385+00:00] Seed 340228 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.161586+00:00] Seed 340229 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.161802+00:00] Seed 340230 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.161962+00:00] Seed 340231 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.162159+00:00] Seed 340232 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.162524+00:00] Seed 340233 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.162733+00:00] Seed 340234 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.162878+00:00] Seed 340235 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.163020+00:00] Seed 340236 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.163166+00:00] Seed 340237 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.163293+00:00] Seed 340238 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.163419+00:00] Seed 340239 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.163539+00:00] Seed 340240 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.163662+00:00] Seed 340241 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.163853+00:00] Seed 340242 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.164095+00:00] Seed 340243 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.164288+00:00] Seed 340244 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.164479+00:00] Seed 340245 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.164738+00:00] Seed 340246 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.164968+00:00] Seed 340247 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.165153+00:00] Seed 340248 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.165390+00:00] Seed 340249 already completed in checkpoint. Skipping re-execution.
+[2026-09-17T14:21:32.165569+00:00] 
+================================================================================
+[2026-09-17T14:21:32.165706+00:00] ALL 50 PROSPECTIVE SEEDS (100 MATCHES) COMPLETED.
+[2026-09-17T14:21:32.165834+00:00] COMMENCING POST-RUN EXECUTION AUDIT BEFORE STATISTICAL ANALYSIS (§13)...
+[2026-09-17T14:21:32.166032+00:00] ================================================================================
+[2026-09-17T14:21:32.166361+00:00] Running independent post-run execution audit...
+[2026-09-17T14:21:32.166937+00:00] Running deterministic replay verification on seed 340200...
+[2026-09-17T14:21:32.167130+00:00] [999/100] Starting EXP-AEC-002_340200_B: AEC Seat=0, V3 Seat=1
+[2026-09-17T14:21:33.591079+00:00]   Completed EXP-AEC-002_340200_B: AEC Score=121590, V3 Score=121590, Margin=+0, Commits=0, Elapsed=1.4s, Latency(mean=1.12ms, max=7.43ms)
+[2026-09-17T14:21:33.597771+00:00] Execution audit complete. Overall audit pass: True
+[2026-09-17T14:21:33.598275+00:00] 
+COMPUTING PREREGISTERED STATISTICAL SUMMARY (§14)...
+[2026-09-17T14:21:33.607414+00:00] SUMMARY.json written: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-AEC-002\SUMMARY.json
+[2026-09-17T14:21:33.610111+00:00] Final EXECUTION_MANIFEST.json written: execution_status=COMPLETED
+[2026-09-17T14:21:33.610348+00:00] 
+================================================================================
+[2026-09-17T14:21:33.610492+00:00] EXP-AEC-002 EXECUTION COMPLETE IN 0.0s
+[2026-09-17T14:21:33.610623+00:00] Classification: ACTIVE_NEGATIVE
+[2026-09-17T14:21:33.610742+00:00] Primary Verdict: FALSIFIED
+[2026-09-17T14:21:33.610881+00:00] Mean Paired Margin Delta: $-0.92
+[2026-09-17T14:21:33.611115+00:00] Lower 95% Confidence Bound: $-2.07
+[2026-09-17T14:21:33.611236+00:00] Win Rate Delta: -4.00 pp
+[2026-09-17T14:21:33.611355+00:00] Total Commits: 20
+[2026-09-17T14:21:33.611469+00:00] Quarantined Commits: 0 (verified: True)
+[2026-09-17T14:21:33.612048+00:00] ================================================================================
