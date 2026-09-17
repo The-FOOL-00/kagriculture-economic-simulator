@@ -35,6 +35,7 @@ class SafetyChecker:
             "market_collision_ok": True,
             "determinism_ok": True,
             "spatial_consistency_ok": True,
+            "fidelity_ok": True,
         }
 
         # 1. Legality check
@@ -89,5 +90,11 @@ class SafetyChecker:
             reason = getattr(outcome, "desynchronization_reason", "diverged position")
             return False, checks, f"Candidate caused spatial desynchronization in continuation: {reason}"
 
-        return True, checks, None
+        # 8. Counterfactual fidelity certification check (§14)
+        fidelity = getattr(outcome, "fidelity", "VERIFIED")
+        if fidelity == "FAILED":
+            checks["fidelity_ok"] = False
+            reasons = getattr(outcome, "fidelity_reasons", [])
+            return False, checks, f"Counterfactual fidelity FAILED: {', '.join(reasons) or 'unverified'}"
 
+        return True, checks, None

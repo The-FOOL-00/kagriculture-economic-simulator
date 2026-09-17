@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-"""Machine-Readable Safety Certificate (§15)."""
+"""Machine-Readable Safety Certificate (§14, §15)."""
 
 from __future__ import annotations
 
@@ -29,6 +29,11 @@ class SafetyCertificate:
     terminal_feasibility_check: bool = True
     market_collision_check: bool = True
     determinism_check: bool = True
+    spatial_consistency_check: bool = True
+    fidelity_check: bool = True
+    
+    # Fidelity classification (§14): VERIFIED, PARTIAL, UNKNOWN, FAILED
+    counterfactual_fidelity: str = "VERIFIED"
     
     commit_decision: bool = False
     abstain_reason: Optional[str] = None
@@ -45,6 +50,9 @@ class SafetyCertificate:
             and self.terminal_feasibility_check
             and self.market_collision_check
             and self.determinism_check
+            and self.spatial_consistency_check
+            and self.fidelity_check
+            and self.counterfactual_fidelity != "FAILED"
         )
 
     def to_dict(self) -> Dict[str, Any]:
@@ -55,6 +63,7 @@ class SafetyCertificate:
             "delta_our_money": round(self.delta_our_money, 2),
             "delta_opp_money": round(self.delta_opponent_money, 2),
             "delta_terminal_margin": round(self.delta_terminal_margin, 2),
+            "counterfactual_fidelity": self.counterfactual_fidelity,
             "checks": {
                 "overflow": self.overflow_check,
                 "obligation": self.obligation_check,
@@ -63,6 +72,8 @@ class SafetyCertificate:
                 "terminal_feasibility": self.terminal_feasibility_check,
                 "market_collision": self.market_collision_check,
                 "determinism": self.determinism_check,
+                "spatial_consistency": self.spatial_consistency_check,
+                "fidelity": self.fidelity_check,
             },
             "commit_decision": self.commit_decision,
             "abstain_reason": self.abstain_reason,

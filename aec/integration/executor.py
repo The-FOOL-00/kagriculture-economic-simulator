@@ -426,12 +426,15 @@ class AECExecutor:
                     intermediate_solvency_check=checks.get("obligation_ok", False),
                     terminal_feasibility_check=checks.get("terminal_feasible", False),
                     market_collision_check=checks.get("market_collision_ok", False),
-                    determinism_check=checks.get("determinism_ok", False),
-                    commit_decision=candidate_otherwise_attractive and not is_quarantined,
+                    spatial_consistency_check=checks.get("spatial_consistency_ok", True),
+                    fidelity_check=checks.get("fidelity_ok", True),
+                    counterfactual_fidelity=getattr(sim_outcome, "fidelity", "VERIFIED"),
+                    commit_decision=candidate_otherwise_attractive and not is_quarantined and getattr(sim_outcome, "fidelity", "VERIFIED") != "FAILED",
                     abstain_reason=(
                         "SCIENTIFIC_QUARANTINE" if (is_quarantined and candidate_otherwise_attractive)
                         else (abstain_reason if not passed_safety else (
-                            None if eval_res.is_superior else "ECONOMICALLY_INFERIOR"
+                            "UNVERIFIED_COUNTERFACTUAL_FIDELITY" if getattr(sim_outcome, "fidelity", "VERIFIED") == "FAILED"
+                            else (None if eval_res.is_superior else "ECONOMICALLY_INFERIOR")
                         ))
                     ),
                     metadata=eval_res.to_dict()

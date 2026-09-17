@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import copy
 from dataclasses import dataclass, field
+from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple
 
 from aec.config import (
@@ -25,7 +26,6 @@ try:
         _decay_plants,
     )
 except ImportError:
-    # Fallback to local import if extracted_agents is mapped via repo root
     import os
     import sys
     _REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -46,6 +46,14 @@ except ImportError:
     from config import compute_market_price, fib_hire_cost, FARMER_MOVES
 
 from aec.ir.market_state import BASE_PRICES, TOWN_SHOP_CONSUMPTION
+
+
+class CounterfactualFidelityLevel(Enum):
+    """Fidelity classification for counterfactual evaluations (§14)."""
+    VERIFIED = "VERIFIED"
+    PARTIAL = "PARTIAL"
+    UNKNOWN = "UNKNOWN"
+    FAILED = "FAILED"
 
 
 @dataclass
@@ -72,6 +80,10 @@ class SimulationOutcome:
     candidate_trace: Optional[List[Dict[str, Any]]] = None
     spatial_consistency_ok: bool = True
     desynchronization_reason: str = ""
+
+    # Counterfactual fidelity certification (§14)
+    fidelity: str = "VERIFIED"
+    fidelity_reasons: List[str] = field(default_factory=list)
 
 
 class ShadowRolloutState:
@@ -178,7 +190,6 @@ def execute_market_lockstep(
 
         while own_live or opp_live:
             # PHASE 1: QUOTE BOTH PLAYERS FROM IDENTICAL PRE-COMMIT INVENTORY SNAPSHOT (sim.hpp:578-597)
-            # Player 0 (Our) quote
             q0_ok = False
             q0_op = own_op
             q0_item = own_item
@@ -310,7 +321,7 @@ def execute_market_lockstep(
                 break
 
     # Town consumption tick every 4 steps
-    if rollout.step % 4 == 0:
+    if rollout.step % 4 == 0 and rollout.unlocked_shops:
         for shop in rollout.unlocked_shops:
             for it, q in TOWN_SHOP_CONSUMPTION.get(shop, ()):
                 if it in rollout.market_inv:
@@ -443,7 +454,7 @@ def simulate_rollout(
                 "opp_cash": rollout.opp_money,
                 "market_prices": dict(rollout.market_prices),
                 "market_inventory": dict(rollout.market_inv),
-                "opponent_pressure": {p: opp_model.state.sale_pressure.get(p, 0.0) for p in PRODUCTS},
+                "opponent_pressure": {p: opp_model.state.sale_pressure.get(p, 0.0) for p in PRODUCTS} if opp_model.state else {},
             }
             trace_log.append(trace_entry)
 
@@ -460,9 +471,13 @@ class CounterfactualSimulator:
         econ_state: EconomicState,
         horizon: int,
         continuation_trajectory: Optional[List[Dict[str, Any]]] = None,
-        trace: bool = False
+        trace: bool = False,
+        opponent_mode: str = "CALIBRATED_ESTIMATE"
     ) -> SimulationOutcome:
-        opp_model = OpponentPressureModel(econ_state.opponent)
+        opp_model = OpponentPressureModel(
+            opponent_state=econ_state.opponent,
+            mode=opponent_mode
+        )
 
         # 1. Simulate Baseline Future
         baseline_trace: Optional[List[Dict[str, Any]]] = [] if trace else None
@@ -492,7 +507,6 @@ class CounterfactualSimulator:
         delta_our_money = candidate_rollout.money - baseline_rollout.money
         delta_opp_money = candidate_rollout.opp_money - baseline_rollout.opp_money
         
-        # Terminal margin delta = (Our_cand - Opp_cand) - (Our_base - Opp_base)
         cand_margin = candidate_rollout.money - candidate_rollout.opp_money
         base_margin = baseline_rollout.money - baseline_rollout.opp_money
         delta_terminal_margin = cand_margin - base_margin
@@ -501,12 +515,22 @@ class CounterfactualSimulator:
         intermediate_solvency_ok = True
         for offset in range(min(len(candidate_rollout.rows), len(baseline_rollout.rows))):
             cand_pre = candidate_rollout.rows[offset]["pre_market_shed"]
-            base_pre = baseline_rollout.rows[offset]["pre_market_shed"]
             for p in PRODUCTS:
-                # Candidate pre-shed must not drop below zero
                 if cand_pre.get(p, 0) < 0:
                     intermediate_solvency_ok = False
                     break
+
+        # 5. Counterfactual Fidelity Certification (§14)
+        fidelity = CounterfactualFidelityLevel.VERIFIED.value
+        fidelity_reasons: List[str] = []
+
+        if not intermediate_solvency_ok:
+            fidelity = CounterfactualFidelityLevel.FAILED.value
+            fidelity_reasons.append("Intermediate shed solvency breached during rollout")
+
+        if candidate_rollout.spatial_desynchronized:
+            fidelity = CounterfactualFidelityLevel.PARTIAL.value
+            fidelity_reasons.append(candidate_rollout.desynchronization_reason)
 
         return SimulationOutcome(
             candidate_final_money=candidate_rollout.money,
@@ -525,5 +549,6 @@ class CounterfactualSimulator:
             candidate_trace=candidate_trace,
             spatial_consistency_ok=not candidate_rollout.spatial_desynchronized,
             desynchronization_reason=candidate_rollout.desynchronization_reason,
+            fidelity=fidelity,
+            fidelity_reasons=fidelity_reasons,
         )
-
