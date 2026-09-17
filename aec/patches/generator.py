@@ -10,6 +10,7 @@ from aec.config import AECConfig, ENABLED_FOUNDATION_MECHANISMS, PRODUCTS
 from aec.ir.economic_state import EconomicState
 from aec.opportunities.base import Opportunity
 from aec.patches.patch import CoupledPatch
+from aec.replanning.reconnect import ReconnectRequest, ReconnectionEngine
 
 
 def reorder_frontload(market_orders: List[List[Any]]) -> List[List[Any]]:
@@ -43,6 +44,7 @@ class PatchGenerator:
         else:
             self.enabled_mechanisms = set(ENABLED_FOUNDATION_MECHANISMS)
 
+        self.reconnect_engine = ReconnectionEngine()
         self.last_quarantined_count: int = 0
         self.last_quarantined_by_mechanism: Dict[str, int] = {}
 
@@ -227,10 +229,66 @@ class PatchGenerator:
 
             # 8. Dynamic Resource Conversion (§8, §9)
             elif fam == "RESOURCE_CONVERSION":
+                plan_dict = opp.dependency_info.get("execution_plan")
+                market_mutations = None
+                worker_mutations = {}
+                reconnect_res = None
+                spliced_cont = None
+
+                if plan_dict and plan_dict.get("is_executable"):
+                    # 1. Physical market mutations
+                    plan_market = plan_dict.get("market_actions", [])
+                    if plan_market:
+                        orders = copy.deepcopy(baseline_action.get("market", []))
+                        for m_act in reversed(plan_market):
+                            orders.insert(0, list(m_act))
+                        market_mutations = orders[:10]
+
+                    # 2. Physical worker mutations
+                    plan_worker_actions = plan_dict.get("worker_actions", [])
+                    worker_id = plan_dict.get("worker_id", 0)
+                    if plan_worker_actions:
+                        worker_mutations[worker_id] = list(plan_worker_actions)
+
+                        # 3. Route Reconnection integration if detour required (§5, §6)
+                        if plan_dict.get("reconnect_required") and plan_dict.get("target_location"):
+                            tx, ty = plan_dict["target_location"]
+                            reconnect_req = ReconnectRequest(
+                                worker=worker_id,
+                                divergence_point=econ_state.step,
+                                patched_action=plan_worker_actions,
+                                intended_target_state=(tx, ty),
+                                baseline_continuation=[],
+                                remaining_steps=econ_state.remaining_horizon,
+                                econ_state=econ_state
+                            )
+                            reconnect_res = self.reconnect_engine.reconnect(reconnect_req)
+                            if not reconnect_res.safety:
+                                # Infeasible/unsafe route detour: fail closed and abstain
+                                continue
+                            if getattr(reconnect_res, "spliced_trajectory", None):
+                                spliced_cont = reconnect_res.spliced_trajectory
+
+                elif opp.dependency_info.get("target"):
+                    # Fallback physical synthesis for symbolic fixtures
+                    target = opp.dependency_info["target"]
+                    if target in ("MILK", "EGG", "WOOL"):
+                        orders = copy.deepcopy(baseline_action.get("market", []))
+                        orders.insert(0, ["BUY_PRODUCT", "WHEAT", 1])
+                        market_mutations = orders[:10]
+                    elif target == "CARROT":
+                        orders = copy.deepcopy(baseline_action.get("market", []))
+                        orders.insert(0, ["BUY_SEED", "CARROT", 1])
+                        market_mutations = orders[:10]
+
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
                     source_opportunity_id=opp.opportunity_id,
                     mechanism_family=fam,
+                    worker_mutations=worker_mutations,
+                    market_mutations=market_mutations,
+                    spliced_continuation=spliced_cont,
+                    reconnect_result=reconnect_res,
                     conversion_metadata=dict(opp.dependency_info),
                     expected_horizon=opp.required_horizon,
                     rationale=opp.rationale

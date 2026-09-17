@@ -53,6 +53,7 @@ class SafetyChecker:
             "temporal_availability_ok": True,
             "reservation_consistency_ok": True,
             "terminal_resource_ok": True,
+            "terminal_purpose_ok": True,
         }
 
         # 0. Route Reconnection result verification (§15)
@@ -187,4 +188,51 @@ class SafetyChecker:
             checks["terminal_resource_ok"] = False
             return False, checks, "Terminal conversion cannot complete before game ends"
 
+        # 9j. Terminal Purpose Consistency Check (§10, §11, §15)
+        if patch.mechanism_family == "EMERGENCY_FEED_PURCHASE":
+            passed_tp, tp_reason = self.verify_terminal_purpose(patch, outcome, econ_state)
+            if not passed_tp:
+                checks["terminal_purpose_ok"] = False
+                checks["terminal_resource_ok"] = False
+                return False, checks, f"Terminal purpose inconsistency: {tp_reason}"
+        if patch.resource_changes.get("terminal_purpose_inconsistent"):
+            checks["terminal_purpose_ok"] = False
+            return False, checks, "Explicit terminal purpose inconsistency recorded on patch"
+
         return True, checks, None
+
+    def verify_terminal_purpose(
+        self,
+        patch: CoupledPatch,
+        outcome: SimulationOutcome,
+        econ_state: EconomicState
+    ) -> Tuple[bool, Optional[str]]:
+        """Verifies that an emergency feed purchase has a realizable downstream purpose before terminal (§10, §11, §13, §15)."""
+        remaining_steps = econ_state.remaining_horizon
+        step = econ_state.step
+        turns_per_day = 24
+        turn_of_day = step % turns_per_day
+        turns_to_day_end = turns_per_day - turn_of_day
+
+        final_action_step = 718
+        steps_to_final_action = max(0, final_action_step - step)
+
+        # 1. Minimum steps to buy and feed before final action step
+        if steps_to_final_action < 2:
+            return False, f"Purchase cannot execute and feed animal before final action step {final_action_step}"
+
+        # 2. Final day feed purchase check:
+        # On final day, animals cannot produce yields before step 718 because product refresh is at step 720.
+        if remaining_steps <= turns_to_day_end:
+            return False, "Final day feed purchase cannot yield realizable harvest before game conclusion"
+
+        # 3. Multi-day chain check: purchase (1) + feed (1) + day_end refresh + harvest (1) + drop (1) + sell (1)
+        min_realizable_steps = turns_to_day_end + 3
+        if steps_to_final_action < min_realizable_steps:
+            return False, f"Feed purchase cannot complete production, harvest, and sale chain ({min_realizable_steps} steps needed, {steps_to_final_action} available)"
+
+        # 4. Solvency / Net realizable margin check in simulation
+        if outcome.delta_terminal_margin < -50.0:
+            return False, f"Purchase causes net terminal margin degradation (${outcome.delta_terminal_margin:.2f})"
+
+        return True, None

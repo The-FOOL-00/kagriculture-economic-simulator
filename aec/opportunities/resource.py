@@ -43,24 +43,38 @@ class ResourceOpportunityAnalyzer:
         if animals_requiring_feed > 0 and total_wheat < animals_requiring_feed:
             deficit = animals_requiring_feed - total_wheat
             wheat_price = econ_state.market.get_price("WHEAT")
-            opportunities.append(Opportunity(
-                opportunity_id=f"RESOURCE_FEED_DEFICIT_{deficit}",
-                category="RESOURCE",
-                event_trigger=EventType.E2_CASH_DEVIATION,
-                affected_entities=["WHEAT", animals_requiring_feed],
-                estimated_economic_relevance=deficit * 40.0,
-                candidate_transformation_family="EMERGENCY_FEED_PURCHASE",
-                dependency_info={"deficit": deficit, "price": wheat_price},
-                required_horizon=6,
-                rationale=f"Wheat stock ({total_wheat}) insufficient for {animals_requiring_feed} head of livestock (COW/SHEEP/GOOSE)",
-                confidence=0.95,
-                scientific_status=ScientificStatus.VERIFIED_SOURCE
-            ))
+            
+            # Check terminal feed feasibility (§10, §11, §13)
+            is_feasible, reason = self.is_feed_purchase_terminally_feasible(econ_state, animals, deficit)
+            if is_feasible:
+                opportunities.append(Opportunity(
+                    opportunity_id=f"RESOURCE_FEED_DEFICIT_{deficit}",
+                    category="RESOURCE",
+                    event_trigger=EventType.E2_CASH_DEVIATION,
+                    affected_entities=["WHEAT", animals_requiring_feed],
+                    estimated_economic_relevance=deficit * 40.0,
+                    candidate_transformation_family="EMERGENCY_FEED_PURCHASE",
+                    dependency_info={"deficit": deficit, "price": wheat_price, "is_terminally_feasible": True},
+                    required_horizon=min(36, econ_state.remaining_horizon),
+                    rationale=f"Wheat stock ({total_wheat}) insufficient for {animals_requiring_feed} head of livestock (COW/SHEEP/GOOSE)",
+                    confidence=0.95,
+                    scientific_status=ScientificStatus.VERIFIED_SOURCE
+                ))
 
         # 2. Dynamic Inventory Conversion Discovery (§8, §9)
         conversion_paths = self.conversion_engine.discover_conversion_paths(econ_state)
         for path in conversion_paths:
             if path.is_feasible and path.net_value_est > 0:
+                dep_info: Dict[str, Any] = {
+                    "path_id": path.path_id,
+                    "target": path.target_commodity,
+                    "cost": path.total_cost_est,
+                    "net_value": path.net_value_est,
+                    "steps": path.total_steps,
+                }
+                if path.execution_plan is not None:
+                    dep_info["execution_plan"] = path.execution_plan.to_dict()
+
                 opportunities.append(Opportunity(
                     opportunity_id=f"CONV_{path.path_id}",
                     category="RESOURCE",
@@ -68,13 +82,7 @@ class ResourceOpportunityAnalyzer:
                     affected_entities=[path.target_commodity],
                     estimated_economic_relevance=float(path.net_value_est),
                     candidate_transformation_family="RESOURCE_CONVERSION",
-                    dependency_info={
-                        "path_id": path.path_id,
-                        "target": path.target_commodity,
-                        "cost": path.total_cost_est,
-                        "net_value": path.net_value_est,
-                        "steps": path.total_steps,
-                    },
+                    dependency_info=dep_info,
                     required_horizon=min(36, max(6, path.total_steps // 2)),
                     rationale=f"Feasible conversion path for {path.target_commodity} yielding net est ${path.net_value_est:.1f}",
                     confidence=0.85,
@@ -82,3 +90,35 @@ class ResourceOpportunityAnalyzer:
                 ))
 
         return opportunities
+
+    def is_feed_purchase_terminally_feasible(
+        self,
+        econ_state: EconomicState,
+        animals: List[Any],
+        deficit: int
+    ) -> Tuple[bool, str]:
+        """Validates that a feed purchase has realizable downstream purpose before terminal (§10, §11, §13)."""
+        remaining_steps = econ_state.remaining_horizon
+        step = econ_state.step
+        turns_per_day = 24
+        turn_of_day = step % turns_per_day
+        turns_to_day_end = turns_per_day - turn_of_day
+
+        final_action_step = 718
+        steps_to_final_action = max(0, final_action_step - step)
+        min_feed_delay = 2
+
+        # 1. Insufficient time to execute purchase and feed before final action step
+        if steps_to_final_action < min_feed_delay:
+            return False, f"Insufficient time to execute feed before final action step {final_action_step}"
+
+        # 2. Final day: no subsequent day rollover occurs before episode end
+        if remaining_steps <= turns_to_day_end:
+            return False, "Final day feed purchase cannot yield realizable harvest/sales before episode concludes"
+
+        # 3. Multi-day chain: purchase (1) + feed (1) + day_end refresh + harvest (1) + drop (1) + sell (1)
+        min_realizable_steps = turns_to_day_end + 3
+        if steps_to_final_action < min_realizable_steps:
+            return False, f"Feed purchase cannot complete harvest-and-sell chain ({min_realizable_steps} steps needed, {steps_to_final_action} available)"
+
+        return True, "Feed purchase has realizable downstream economic purpose"

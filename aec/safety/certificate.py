@@ -51,6 +51,7 @@ class SafetyCertificate:
     temporal_availability_check: bool = True
     reservation_consistency_check: bool = True
     terminal_resource_check: bool = True
+    terminal_purpose_check: bool = True
     
     # Fidelity classification (§14): VERIFIED, PARTIAL, UNKNOWN, FAILED
     counterfactual_fidelity: str = "VERIFIED"
@@ -88,6 +89,7 @@ class SafetyCertificate:
             and self.temporal_availability_check
             and self.reservation_consistency_check
             and self.terminal_resource_check
+            and self.terminal_purpose_check
             and self.counterfactual_fidelity != "FAILED"
         )
 
@@ -126,6 +128,7 @@ class SafetyCertificate:
                 "temporal_availability": self.temporal_availability_check,
                 "reservation_consistency": self.reservation_consistency_check,
                 "terminal_resource": self.terminal_resource_check,
+                "terminal_purpose": self.terminal_purpose_check,
             },
             "commit_decision": self.commit_decision,
             "abstain_reason": self.abstain_reason,

@@ -38,6 +38,47 @@ class ConversionRecipe:
 
 
 @dataclass
+class ConversionExecutionPlan:
+    """Formal physical execution plan for a conversion path (§3, §4)."""
+    plan_id: str
+    conversion_id: str
+    target_commodity: str
+    required_inputs: Dict[str, int]
+    produced_outputs: Dict[str, int]
+    prerequisites: List[str] = field(default_factory=list)
+    worker_id: Optional[int] = None
+    target_location: Optional[Tuple[int, int]] = None
+    market_actions: List[List[Any]] = field(default_factory=list)
+    worker_actions: List[str] = field(default_factory=list)
+    reconnect_required: bool = False
+    start_step: int = 0
+    estimated_duration: int = 1
+    net_value_est: float = 0.0
+    is_executable: bool = True
+    infeasibility_reason: Optional[str] = None
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "plan_id": self.plan_id,
+            "conversion_id": self.conversion_id,
+            "target_commodity": self.target_commodity,
+            "required_inputs": self.required_inputs,
+            "produced_outputs": self.produced_outputs,
+            "prerequisites": self.prerequisites,
+            "worker_id": self.worker_id,
+            "target_location": list(self.target_location) if self.target_location else None,
+            "market_actions": self.market_actions,
+            "worker_actions": self.worker_actions,
+            "reconnect_required": self.reconnect_required,
+            "start_step": self.start_step,
+            "estimated_duration": self.estimated_duration,
+            "net_value_est": self.net_value_est,
+            "is_executable": self.is_executable,
+            "infeasibility_reason": self.infeasibility_reason,
+        }
+
+
+@dataclass
 class ConversionPath:
     """A single-step or multi-step conversion trajectory (§8)."""
     path_id: str
@@ -49,6 +90,7 @@ class ConversionPath:
     net_value_est: float
     is_feasible: bool = True
     infeasibility_reason: Optional[str] = None
+    execution_plan: Optional[ConversionExecutionPlan] = None
 
 
 class ConversionCatalog:
@@ -232,6 +274,7 @@ class ConversionDiscoveryEngine:
             is_feas, reason = self.check_path_feasibility(sheep_path, econ_state)
             sheep_path.is_feasible = is_feas
             sheep_path.infeasibility_reason = reason
+            sheep_path.execution_plan = self.synthesize_execution_plan(sheep_path, econ_state)
             paths.append(sheep_path)
 
         # 2. Fast Crop Conversion: Carrot cycle
@@ -249,7 +292,13 @@ class ConversionDiscoveryEngine:
             is_feas, reason = self.check_path_feasibility(carrot_path, econ_state)
             carrot_path.is_feasible = is_feas
             carrot_path.infeasibility_reason = reason
+            carrot_path.execution_plan = self.synthesize_execution_plan(carrot_path, econ_state)
             paths.append(carrot_path)
+
+        # Populate execution plans for cow and goose paths as well
+        for p in paths:
+            if p.execution_plan is None and p.is_feasible:
+                p.execution_plan = self.synthesize_execution_plan(p, econ_state)
 
         return paths
 
@@ -282,3 +331,131 @@ class ConversionDiscoveryEngine:
                 return False, f"Shed capacity overflow: projected storage {accum_shed} exceeds limit {SHED_CAPACITY}"
 
         return True, None
+
+    def synthesize_execution_plan(
+        self,
+        path: ConversionPath,
+        econ_state: EconomicState
+    ) -> Optional[ConversionExecutionPlan]:
+        """Synthesizes physical market orders and worker actions for a feasible conversion path (§2, §3, §4)."""
+        if not path.is_feasible:
+            return None
+
+        target_animal_map = {
+            "MILK": "COW",
+            "EGG": "GOOSE",
+            "WOOL": "SHEEP"
+        }
+
+        if path.target_commodity in target_animal_map:
+            animal_type = target_animal_map[path.target_commodity]
+            target_loc = None
+            tiles = econ_state.farm.tiles
+            for y, row in enumerate(tiles):
+                for x, tile in enumerate(row):
+                    if isinstance(tile, dict) and tile.get("animal") == animal_type:
+                        target_loc = (x, y)
+                        break
+                if target_loc:
+                    break
+
+            if not target_loc:
+                return None
+
+            wheat_in_shed = econ_state.farm.get_shed_qty("WHEAT")
+            wheat_in_hands = econ_state.farm.carried_inventory.get("WHEAT", 0)
+
+            worker_id = 0
+            worker = econ_state.workers.get_worker(worker_id)
+            if not worker:
+                return None
+
+            wx, wy = worker.position
+            market_actions: List[List[Any]] = []
+            worker_actions: List[str] = []
+            reconnect_required = False
+
+            if wheat_in_shed == 0 and wheat_in_hands == 0:
+                market_actions.append(["BUY_PRODUCT", "WHEAT", 1])
+                if (wx, wy) == target_loc:
+                    worker_actions = ["PASS"]
+                else:
+                    reconnect_required = True
+                    tx, ty = target_loc
+                    if tx > wx: worker_actions = ["EAST"]
+                    elif tx < wx: worker_actions = ["WEST"]
+                    elif ty > wy: worker_actions = ["SOUTH"]
+                    else: worker_actions = ["NORTH"]
+            elif wheat_in_hands > 0:
+                if (wx, wy) == target_loc:
+                    worker_actions = ["FEED"]
+                    reconnect_required = False
+                else:
+                    reconnect_required = True
+                    tx, ty = target_loc
+                    if tx > wx: worker_actions = ["EAST"]
+                    elif tx < wx: worker_actions = ["WEST"]
+                    elif ty > wy: worker_actions = ["SOUTH"]
+                    else: worker_actions = ["NORTH"]
+            else:
+                # Wheat is in shed; worker pickups or approaches shed
+                from aec.config import SHED_TILES
+                is_shed_adj = (wx, wy) in SHED_TILES or any(abs(wx - sx) + abs(wy - sy) <= 1 for sx, sy in SHED_TILES)
+                if is_shed_adj:
+                    worker_actions = ["PICKUP", "WHEAT", 1]
+                    reconnect_required = False
+                else:
+                    reconnect_required = True
+                    sx, sy = 4, 4
+                    if sx > wx: worker_actions = ["EAST"]
+                    elif sx < wx: worker_actions = ["WEST"]
+                    elif sy > wy: worker_actions = ["SOUTH"]
+                    else: worker_actions = ["NORTH"]
+
+            return ConversionExecutionPlan(
+                plan_id=f"PLAN_{path.path_id}",
+                conversion_id=path.path_id,
+                target_commodity=path.target_commodity,
+                required_inputs={"WHEAT": 1},
+                produced_outputs={path.target_commodity: 1},
+                worker_id=worker_id,
+                target_location=target_loc,
+                market_actions=market_actions,
+                worker_actions=worker_actions,
+                reconnect_required=reconnect_required,
+                start_step=econ_state.step,
+                estimated_duration=path.total_steps,
+                net_value_est=path.net_value_est,
+                is_executable=bool(market_actions or worker_actions)
+            )
+
+        elif path.target_commodity == "CARROT":
+            carrot_seeds = econ_state.farm.seeds.get("CARROT", 0)
+            worker = econ_state.workers.get_worker(0)
+            if not worker:
+                return None
+            wx, wy = worker.position
+            market_actions = []
+            worker_actions = []
+
+            if carrot_seeds == 0 and float(econ_state.farm.cash) >= 20.0:
+                market_actions.append(["BUY_SEED", "CARROT", 1])
+
+            return ConversionExecutionPlan(
+                plan_id=f"PLAN_{path.path_id}",
+                conversion_id=path.path_id,
+                target_commodity="CARROT",
+                required_inputs={"CASH": 20},
+                produced_outputs={"CARROT": 4},
+                worker_id=0,
+                target_location=(wx, wy),
+                market_actions=market_actions,
+                worker_actions=worker_actions,
+                reconnect_required=False,
+                start_step=econ_state.step,
+                estimated_duration=path.total_steps,
+                net_value_est=path.net_value_est,
+                is_executable=bool(market_actions or worker_actions)
+            )
+
+        return None

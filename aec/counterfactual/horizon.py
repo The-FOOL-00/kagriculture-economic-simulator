@@ -71,11 +71,19 @@ class MechanismHorizonPolicy:
             h = min(remaining, config.short_horizon)
             return max(1, h), f"PHASE_SHUTDOWN dead-input trim verification; phase-local horizon {h}"
 
-        # 5. Terminal endgame proximity overrides for all other mechanisms
+        # 5. EMERGENCY_FEED_PURCHASE / RESOURCE_CONVERSION (§10, §12)
+        elif fam in ("EMERGENCY_FEED_PURCHASE", "RESOURCE_CONVERSION") or "FEED" in patch_id or "CONV" in patch_id:
+            if remaining <= 48:
+                return max(1, remaining), f"{fam} terminal proximity; evaluating full remaining horizon {remaining}"
+            else:
+                h = min(remaining, max(patch.expected_horizon, config.normal_horizon))
+                return max(1, h), f"{fam} standard horizon {h}"
+
+        # 6. Terminal endgame proximity overrides for all other mechanisms
         elif remaining <= 12:
             return min(remaining, 12), f"Terminal endgame window proximity; horizon {min(remaining, 12)}"
 
-        # 6. Fallback / Standard economic patches
+        # 7. Fallback / Standard economic patches
         else:
             h = min(remaining, max(patch.expected_horizon, config.normal_horizon))
             return max(1, h), f"Standard economic patch horizon {h}"
