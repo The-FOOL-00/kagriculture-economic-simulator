@@ -25,18 +25,18 @@ Following that empirical result, the AEC architecture was overhauled:
 
 ## 2. Experimental Hypotheses
 
-### 2.1 Primary Hypothesis ($H_1$)
-A causal, dependency-aware market timing compiler pass (`DEPENDENCY_AWARE_MARKET_TIMING`) that:
-1. Detects intra-basket coupling via `SAME_ASSET_MARKET_COUPLING` edges,
-2. Accounts for endogenous sequential price feedback across multi-order queues,
-3. Refuses to frontload `SELL` before `BUY` on identical assets,
-4. Evaluates clearing under conservative neutral rival modeling, and
-5. Strictly requires `COUNTERFACTUAL_FIDELITY: VERIFIED`,
+### 2.1 Null Hypothesis ($H_0$)
+$$H_0: \mu_\Delta < \$0.00$$
 
-will achieve **statistical non-inferiority** ($\overline{\Delta} \ge \$0.00$, Lower 95% Bound $\ge \$0.00$, $\Delta \text{WinRate} \ge -2.0\text{ pp}$) against the Frozen V3 Control baseline across a prospective 50-seed cohort, completely eliminating the $-4.00\text{ pp}$ win-rate deficit caused by unconditional frontloading.
+### 2.2 Alternative / Primary Hypothesis ($H_1$)
+$$H_1: \mu_\Delta \ge \$0.00$$
 
-### 2.2 Null Hypothesis ($H_0$)
-Tactical market order reordering, even when dependency-aware and verified under exact lockstep semantics, produces inferior or non-equivalent terminal margins ($\overline{\Delta} < \$0.00$ or Lower 95% Bound $< \$0.00$).
+where $\mu_\Delta$ is the population mean paired terminal-margin delta between the Treatment agent (`DEPENDENCY_AWARE_MARKET_TIMING` on Frozen V3) and the Control agent (Frozen V3).
+
+### 2.3 Primary Statistical Test
+- **Test:** One-sided paired $t$-test on seed-paired terminal-margin deltas $\Delta_s$.
+- **Significance Level ($\alpha$):** $0.05$
+- **Degrees of Freedom ($df$):** $N - 1 = 49$ ($N = 50$ paired seeds)
 
 ---
 
@@ -88,12 +88,35 @@ Tactical market order reordering, even when dependency-aware and verified under 
   $$\Delta_s = \frac{1}{2} \left[ \left(\text{Margin}_{\text{treat, Seat 0}} - \text{Margin}_{\text{ctrl, Seat 1}}\right) + \left(\text{Margin}_{\text{treat, Seat 1}} - \text{Margin}_{\text{ctrl, Seat 0}}\right) \right]$$
 - **Primary Metric:** Mean Paired Terminal-Margin Delta ($\overline{\Delta} = \frac{1}{N} \sum_{s=1}^N \Delta_s$).
 
+### 5.1 Secondary Statistical & Robustness Analyses
+The following preregistered secondary robustness tests and estimators are pre-specified and retained:
+- **Two-Sided Wilcoxon Signed-Rank Test:** Paired non-parametric analysis on seed-averaged margin deltas $\Delta_s$.
+- **Student-$t$ Confidence Intervals:** One-sided lower 95% confidence bound ($\overline{\Delta} - t_{0.05, 49} \times \text{SE}$) and two-sided 90% confidence interval for $\mu_\Delta$.
+- **Bootstrap Procedure:** 95% BCa (bias-corrected and accelerated) bootstrap confidence interval for $\mu_\Delta$ based on $10,000$ paired resamples.
+- **Win-Rate Definitions:**
+  - *Primary Standard:* Total tournament matches $M = 100$:
+    $$\Delta \text{WinRate} = \frac{W_{\text{treat}} - W_{\text{ctrl}}}{M} \times 100\text{ pp}$$
+  - *Secondary Robustness Standard:* Ties excluded from denominator:
+    $$\Delta \text{WinRate}_{\text{excl}} = \left( \frac{W_{\text{treat}}}{W_{\text{treat}} + W_{\text{ctrl}}} - \frac{W_{\text{ctrl}}}{W_{\text{treat}} + W_{\text{ctrl}}} \right) \times 100\text{ pp} \quad (\text{if } W_{\text{treat}} + W_{\text{ctrl}} > 0)$$
+- **No Post-Hoc Tests:** No post-hoc statistical tests or altered thresholds may be introduced during or after execution.
+
 ---
 
 ## 6. Pre-Specified Decision Criteria
 
-### 6.1 Acceptance Criteria (Must satisfy all 7)
-1. `ACC_1`: One-sided lower 95% confidence bound of $\overline{\Delta} \ge \$0.00$.
+### 6.1 Primary Acceptance Criteria
+Primary acceptance is kept strictly separate from the hypothesis definition. Primary acceptance requires satisfying **both** of the following conditions:
+1. **Lower 95% Confidence Bound:**
+   $$\text{Lower 95\% Bound for } \mu_\Delta \ge \$0.00$$
+   (The one-sided lower 95% Student-$t$ confidence bound for the population mean paired terminal-margin delta must be $\ge \$0.00$).
+2. **Win-Rate Non-Inferiority:**
+   $$\Delta \text{WinRate} \ge -2.0\text{ percentage points}$$
+   (Across all $M = 100$ mirror CRN matches).
+
+*(Note: The confidence-bound condition is an operational decision criterion, not part of $H_0$.)*
+
+### 6.2 Full Operational Acceptance Criteria (Must satisfy all 7)
+1. `ACC_1`: One-sided lower 95% confidence bound for $\mu_\Delta \ge \$0.00$.
 2. `ACC_2`: Win-rate delta $\Delta \text{WinRate} \ge -2.0\text{ percentage points}$.
 3. `ACC_3`: Median paired margin delta $\ge \$0.00$.
 4. `ACC_4`: 5th percentile margin delta $\ge -\$250.00$.
@@ -101,9 +124,9 @@ Tactical market order reordering, even when dependency-aware and verified under 
 6. `ACC_6`: Zero quarantined mechanism commits (100% quarantine adherence).
 7. `ACC_7`: 100% adherence to `COUNTERFACTUAL_FIDELITY: VERIFIED`.
 
-### 6.2 Falsification Bounds (Any triggers FALSIFIED classification)
+### 6.3 Falsification Bounds (Any triggers FALSIFIED classification)
 1. `FALS_1`: Win-rate delta $\Delta \text{WinRate} < -2.0\text{ percentage points}$.
-2. `FALS_2`: Lower 95% confidence bound $< \$0.00$.
+2. `FALS_2`: One-sided lower 95% confidence bound for $\mu_\Delta < \$0.00$.
 3. `FALS_3`: Any rule violation, disqualification, or unhandled exception.
 4. `FALS_4`: Any unquarantined commit of quarantined mechanism families.
 5. `FALS_5`: Any execution of seeds within locked holdout `340050–340199`.
@@ -112,15 +135,27 @@ Tactical market order reordering, even when dependency-aware and verified under 
 
 ## 7. Statistical Power & Sensitivity Analysis
 
-- **Sample Size:** $N = 50$ paired seeds ($100$ CRN matches).
-- **Historical Standard Error:** In EXP-AEC-002, $s_{\Delta} \approx \$4.80$, yielding standard error $\text{SE} \approx \$0.68$.
-- **Critical Threshold:** For a one-sided 95% lower bound $\ge \$0.00$, the sample mean must satisfy:
-  $$\overline{\Delta} \ge 1.677 \times \text{SE} \approx \$1.14$$
-- **Sensitivity:** The design is powered to detect an economic effect of $\ge +\$1.15$ per episode, or confirm non-inferiority if the true margin delta is non-negative and variance is comparable.
+- **Sample Size:** $N = 50$ paired seeds ($100$ CRN mirror matches, $71,900$ treatment decision turns, $df = 49$).
+- **Historical Variance & Standard Error:** Based on historical paired variance in EXP-AEC-002 ($s_{\Delta} \approx \$4.80$), the standard error of the mean for $N = 50$ is:
+  $$\text{SE} = \frac{s_{\Delta}}{\sqrt{50}} = \frac{\$4.80}{7.071} \approx \$0.679$$
+- **Critical Rejection Threshold ($\alpha = 0.05$, One-Sided, $df = 49$):**
+  For degrees of freedom $df = 49$, the one-sided critical $t$-value is $t_{0.05, 49} \approx 1.6766$. The minimum observed sample mean required to reject $H_0$ and achieve a lower 95% confidence bound $\ge \$0.00$ is:
+  $$\overline{\Delta}_{\text{crit}} = t_{0.05, 49} \times \text{SE} \approx 1.6766 \times \$0.6788 \approx +\$1.14$$
+  *(Note: An observed effect size at the critical boundary $\mu_\Delta = +\$1.14$ corresponds to exactly 50.1% detection probability / 50% statistical power).*
+- **Prospective Power & Minimum Detectable Effects:**
+  Under the prospective $N = 50$ design with $\alpha = 0.05$ (one-sided) and historical variance ($s_\Delta \approx \$4.80$):
+  - **80% Power ($\beta = 0.20$):** Powered to detect a true population effect size of:
+    $$\mu_{\Delta, 80\%} = (t_{0.95, 49} + t_{0.80, 49}) \times \text{SE} \approx (1.6766 + 0.8480) \times \$0.6788 \approx +\$1.71$$
+    (Standardized effect size Cohen's $d_z = \frac{\$1.71}{\$4.80} \approx 0.357$, small-to-medium effect).
+  - **90% Power ($\beta = 0.10$):** Powered to detect a true population effect size of:
+    $$\mu_{\Delta, 90\%} = (t_{0.95, 49} + t_{0.90, 49}) \times \text{SE} \approx (1.6766 + 1.2991) \times \$0.6788 \approx +\$2.02$$
+    (Standardized effect size Cohen's $d_z = \frac{\$2.02}{\$4.80} \approx 0.421$).
+- **Non-Inferiority Sensitivity:**
+  The design provides rigorous 5% Type I error control against false non-inferiority claims when $\mu_\Delta < \$0.00$. If the true population delta is near zero ($\mu_\Delta \approx \$0.00$), the probability of obtaining a sample lower bound $\ge \$0.00$ is capped at $\alpha = 0.05$.
 
 ---
 
-## 8. Classification Decision Matrix
+## 8. Classification Decision Matrix & Dormancy Interpretation
 
 | Classification | Conditions | Scientific Interpretation |
 |---|---|---|
@@ -130,6 +165,10 @@ Tactical market order reordering, even when dependency-aware and verified under 
 | **DORMANT / INCONCLUSIVE** | All safety checks pass, but commits $< 5$. | Inconclusive evaluation due to low activation opportunity. |
 | **INVALID** | Safety violations, unquarantined commits, or holdout breach. | Execution invalid; protocol voided. |
 
+### Dormancy Rule Specification
+- **Threshold:** $\text{Commits} < 5 \implies \text{DORMANT / INCONCLUSIVE}$.
+- **Governance Role:** The dormancy rule is strictly an **interpretation gate**, not an efficacy threshold. A trial with fewer than 5 commits reflects insufficient opportunity encounters during the 100 matches to establish causal efficacy, and must not be classified as active positive or non-inferior. Conversely, the dormancy threshold must never be used to post-hoc filter or manufacture statistical significance.
+
 ---
 
 ## 9. Immutable Freeze Verification Hashes
@@ -137,9 +176,10 @@ Tactical market order reordering, even when dependency-aware and verified under 
 | Entity | Path | Expected SHA-256 |
 |---|---|---|
 | **V3 Backbone Tarball** | `submission_Vj_kc_v3.tar.gz` | `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943` |
-| **Prelaunch Audit** | `reports/EXP_AEC_003_PRELAUNCH_AUDIT.md` | Recorded upon creation |
-| **Cohort Audit** | `reports/EXP_AEC_003_COHORT_AUDIT.md` | Recorded upon creation |
-| **AEC Config** | `aec/config.py` | Recorded in commit `d9e03e8` + updates |
+| **Prelaunch Audit** | `reports/EXP_AEC_003_PRELAUNCH_AUDIT.md` | `f36148c4cb955f9e7d64d4298cf1f32e1518e67a3648de523cd1486a79845fd3` |
+| **Cohort Audit** | `reports/EXP_AEC_003_COHORT_AUDIT.md` | `14f9a1f3937a32e85c5207dbb839fab8de8f83148038283d84877b0889b5255a` |
+| **Freeze Certification** | `reports/EXP_AEC_003_FINAL_FREEZE_CERTIFICATION.md` | Recorded upon certification |
+| **AEC Config** | `aec/config.py` | `a92bb57785535d0c5b51895d5242fbf5a33f4a09c89b8160e8424bf245d63d55` |
 
 ---
 

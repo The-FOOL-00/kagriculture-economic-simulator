@@ -1,0 +1,83 @@
+{
+  "experiment_id": "EXP-AEC-003",
+  "status": "FROZEN_NOT_LAUNCHED",
+  "directive": "DO_NOT_EXECUTE_WITHOUT_USER_APPROVAL",
+  "timestamp_frozen": "2026-09-17T20:28:00+05:30",
+  "protocol": "PREREG-EXP-AEC-003-20260917-FINAL",
+  "preregistration_document": "reports/EXP_AEC_003_PREREGISTRATION_FINAL.md",
+  "prelaunch_audit_document": "reports/EXP_AEC_003_PRELAUNCH_AUDIT.md",
+  "cohort_audit_document": "reports/EXP_AEC_003_COHORT_AUDIT.md",
+  "decision_document": "reports/AEC_EXP003_DECISION.md",
+  "freeze_certification_document": "reports/EXP_AEC_003_FINAL_FREEZE_CERTIFICATION.md",
+  "cohort": {
+    "partition_id": "PROSPECTIVE-AEC-003",
+    "seed_start": 340250,
+    "seed_end": 340299,
+    "seed_count": 50,
+    "matches_per_seed": 2,
+    "total_matches": 100,
+    "total_turns": 71900,
+    "crn_design": "MIRROR_SEAT_SWAP",
+    "virgin_certified": true
+  },
+  "holdout_protection": {
+    "locked_holdout_range": [340050, 340199],
+    "holdout_seed_count": 150,
+    "distance_to_holdout": 51,
+    "holdout_touched": false
+  },
+  "historical_baselines": {
+    "exp_aec_001_range": [340000, 340049],
+    "exp_aec_002_range": [340200, 340249],
+    "exp_aec_002_commit": "741cc03ed12370039d7d1dfbb78d7a7cab68f10f",
+    "exp_aec_002_result": "FALSIFIED (mean -$0.92, lower 95% -$2.07, win-rate delta -4.00 pp)"
+  },
+  "control": {
+    "backbone_type": "V3",
+    "tarball_path": "submission_Vj_kc_v3.tar.gz",
+    "tarball_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "aec_enabled": false
+  },
+  "treatment": {
+    "backbone_type": "V3",
+    "tarball_path": "submission_Vj_kc_v3.tar.gz",
+    "tarball_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "active_mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "defense_mechanisms": ["TERMINAL_LIQUIDATION", "PHASE_SHUTDOWN"],
+    "quarantined_mechanisms": [
+      "FRONTLOAD_ORDERS",
+      "LOCAL_WEED_DIG",
+      "DYNAMIC_SHADOW_HARVEST",
+      "CARGO_FERRY_PRIORITY",
+      "OPPONENT_PREEMPT_SELL",
+      "EMERGENCY_FEED_PURCHASE",
+      "TERMINAL_HARVEST_SWEEP",
+      "TOWN_CYCLE"
+    ],
+    "required_counterfactual_fidelity": "VERIFIED",
+    "reject_fidelity_levels": ["FAILED", "UNKNOWN"]
+  },
+  "primary_hypothesis": {
+    "null_hypothesis_H0": "mu_delta < 0.00",
+    "alternative_hypothesis_H1": "mu_delta >= 0.00",
+    "primary_test": "one_sided_paired_t_test",
+    "alpha": 0.05,
+    "df": 49
+  },
+  "acceptance_criteria": {
+    "ACC_1_lower_95_bound_margin_delta": 0.0,
+    "ACC_2_win_rate_delta_min_pp": -2.0,
+    "ACC_3_median_margin_delta_min": 0.0,
+    "ACC_4_p05_margin_delta_min": -250.0,
+    "ACC_5_safety_violations_max": 0,
+    "ACC_6_quarantined_commits_max": 0,
+    "ACC_7_fidelity_verified_adherence_pct": 100.0
+  },
+  "test_suite_verification": {
+    "total_tests": 139,
+    "passed": 139,
+    "failed": 0,
+    "errors": 0,
+    "market_parity_suite": "15/15 EXACT NUMERIC EQUALITY"
+  }
+}
