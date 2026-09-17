@@ -43,6 +43,16 @@ class SafetyChecker:
             "resource_consistency_ok": True,
             "obligation_consistency_ok": True,
             "market_consistency_ok": True,
+            # Resource & Feed Security Invariants (§17, §18)
+            "resource_conservation_ok": True,
+            "negative_inventory_ok": True,
+            "conversion_precondition_ok": True,
+            "feed_security_ok": True,
+            "capacity_consistency_ok": True,
+            "cash_liquidity_ok": True,
+            "temporal_availability_ok": True,
+            "reservation_consistency_ok": True,
+            "terminal_resource_ok": True,
         }
 
         # 0. Route Reconnection result verification (§15)
@@ -90,11 +100,13 @@ class SafetyChecker:
         if outcome.candidate_overflow_units > 0:
             checks["overflow_ok"] = False
             checks["resource_consistency_ok"] = False
+            checks["capacity_consistency_ok"] = False
             return False, checks, f"Candidate caused {outcome.candidate_overflow_units} units of shed overflow"
 
         # 4. Solvency check: candidate money remains non-negative
         if outcome.candidate_final_money < 0.0:
             checks["solvency_ok"] = False
+            checks["cash_liquidity_ok"] = False
             return False, checks, f"Negative cash balance (${outcome.candidate_final_money:.2f})"
 
         # 5. Obligation preservation / intermediate solvency check
@@ -106,6 +118,7 @@ class SafetyChecker:
         # 6. Terminal feasibility check: executable terminal state
         if outcome.candidate_final_money < 0:
             checks["terminal_feasible"] = False
+            checks["terminal_resource_ok"] = False
             return False, checks, "Infeasible terminal money"
 
         # 7. Spatial continuation consistency check
@@ -122,5 +135,56 @@ class SafetyChecker:
             checks["fidelity_ok"] = False
             reasons = getattr(outcome, "fidelity_reasons", [])
             return False, checks, f"Counterfactual fidelity {fidelity}: {', '.join(reasons) or 'unverified simulation'}"
+
+        # 9. Extended Resource Safety Invariants (§17, §18)
+        # 9a. Feed Security Invariant
+        if not getattr(outcome, "feed_security_ok", True) or getattr(outcome, "feed_deficit_units", 0) > 0:
+            checks["feed_security_ok"] = False
+            checks["obligation_consistency_ok"] = False
+            return False, checks, f"Feed security invariant breached: {getattr(outcome, 'feed_deficit_units', 0)} deficit units"
+        if patch.resource_changes.get("feed_security_breach"):
+            checks["feed_security_ok"] = False
+            return False, checks, "Candidate explicitly breaches livestock feed security obligation"
+
+        # 9b. Negative Inventory Invariant
+        if patch.resource_changes.get("negative_inventory"):
+            checks["negative_inventory_ok"] = False
+            return False, checks, "Candidate causes negative inventory stock"
+
+        # 9c. Resource Conservation Invariant
+        if patch.resource_changes.get("conservation_violation"):
+            checks["resource_conservation_ok"] = False
+            return False, checks, "Candidate violates strict resource conservation balance"
+
+        # 9d. Capacity Consistency Invariant
+        if patch.resource_changes.get("capacity_overflow") or outcome.candidate_overflow_units > 0:
+            checks["capacity_consistency_ok"] = False
+            return False, checks, "Candidate violates shed storage capacity limit (100 units)"
+
+        # 9e. Cash Liquidity Invariant
+        if patch.resource_changes.get("cash_deadlock"):
+            checks["cash_liquidity_ok"] = False
+            return False, checks, "Candidate creates intermediate cash liquidity deadlock"
+
+        # 9f. Conversion Preconditions Invariant
+        if patch.resource_changes.get("missing_prerequisites") or patch.conversion_metadata.get("is_feasible") is False:
+            checks["conversion_precondition_ok"] = False
+            reason = patch.conversion_metadata.get("infeasibility_reason", "missing conversion prerequisites")
+            return False, checks, f"Conversion prerequisite failure: {reason}"
+
+        # 9g. Temporal Availability Invariant
+        if patch.resource_changes.get("delayed_arrival") or patch.resource_changes.get("temporal_violation"):
+            checks["temporal_availability_ok"] = False
+            return False, checks, "Candidate attempts consumption before resource arrival/maturation"
+
+        # 9h. Reservation Consistency Invariant
+        if patch.resource_changes.get("double_allocation") or patch.resource_changes.get("reservation_conflict"):
+            checks["reservation_consistency_ok"] = False
+            return False, checks, "Candidate double-allocates inventory unit to conflicting obligations"
+
+        # 9i. Terminal Resource Usability Invariant
+        if patch.resource_changes.get("terminal_infeasible") or patch.conversion_metadata.get("terminal_infeasible"):
+            checks["terminal_resource_ok"] = False
+            return False, checks, "Terminal conversion cannot complete before game ends"
 
         return True, checks, None

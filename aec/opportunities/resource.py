@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-"""Resource Opportunity Analyzer (7C)."""
+"""Resource Opportunity Analyzer (7C, §8, §9)."""
 
 from __future__ import annotations
 
@@ -9,10 +9,16 @@ from aec.config import ScientificStatus
 from aec.events.event_types import EventType
 from aec.ir.economic_state import EconomicState
 from aec.opportunities.base import Opportunity
+from aec.resource.conversions import ConversionDiscoveryEngine
+from aec.resource.feed_security import FeedSecurityEngine
 
 
 class ResourceOpportunityAnalyzer:
-    """Detects scarce-resource conflicts, feed security, and inventory conversion."""
+    """Detects scarce-resource conflicts, feed security deficits, and inventory conversions (§8, §9)."""
+
+    def __init__(self) -> None:
+        self.feed_engine = FeedSecurityEngine()
+        self.conversion_engine = ConversionDiscoveryEngine()
 
     def analyze(
         self,
@@ -21,20 +27,22 @@ class ResourceOpportunityAnalyzer:
         baseline_action: Optional[Dict[str, Any]] = None
     ) -> List[Opportunity]:
         opportunities: List[Opportunity] = []
-        
-        # Check feed security for livestock
+
+        # 1. Feed Security Analysis (§5, §6)
+        animals = self.feed_engine.extract_livestock(econ_state)
+        pipeline_animals = [
+            p for p in econ_state.farm.production_pipeline
+            if p.item_type == "ANIMAL" and p.subtype in ("COW", "SHEEP", "GOOSE")
+        ]
+        animals_requiring_feed = max(len(animals), len(pipeline_animals))
+
         wheat_in_shed = econ_state.farm.get_shed_qty("WHEAT")
         wheat_in_hands = econ_state.farm.carried_inventory.get("WHEAT", 0)
         total_wheat = wheat_in_shed + wheat_in_hands
-        
-        # Count animals that require daily feeding
-        animals_requiring_feed = sum(
-            1 for p in econ_state.farm.production_pipeline
-            if p.item_type == "ANIMAL" and p.subtype in ("COW", "SHEEP")
-        )
-        
+
         if animals_requiring_feed > 0 and total_wheat < animals_requiring_feed:
             deficit = animals_requiring_feed - total_wheat
+            wheat_price = econ_state.market.get_price("WHEAT")
             opportunities.append(Opportunity(
                 opportunity_id=f"RESOURCE_FEED_DEFICIT_{deficit}",
                 category="RESOURCE",
@@ -42,11 +50,35 @@ class ResourceOpportunityAnalyzer:
                 affected_entities=["WHEAT", animals_requiring_feed],
                 estimated_economic_relevance=deficit * 40.0,
                 candidate_transformation_family="EMERGENCY_FEED_PURCHASE",
-                dependency_info={"deficit": deficit, "price": econ_state.market.get_price("WHEAT")},
+                dependency_info={"deficit": deficit, "price": wheat_price},
                 required_horizon=6,
-                rationale=f"Wheat stock ({total_wheat}) insufficient for {animals_requiring_feed} head of livestock",
+                rationale=f"Wheat stock ({total_wheat}) insufficient for {animals_requiring_feed} head of livestock (COW/SHEEP/GOOSE)",
                 confidence=0.95,
                 scientific_status=ScientificStatus.VERIFIED_SOURCE
             ))
+
+        # 2. Dynamic Inventory Conversion Discovery (§8, §9)
+        conversion_paths = self.conversion_engine.discover_conversion_paths(econ_state)
+        for path in conversion_paths:
+            if path.is_feasible and path.net_value_est > 0:
+                opportunities.append(Opportunity(
+                    opportunity_id=f"CONV_{path.path_id}",
+                    category="RESOURCE",
+                    event_trigger=EventType.E4_MARKET_REGIME_SHIFT,
+                    affected_entities=[path.target_commodity],
+                    estimated_economic_relevance=float(path.net_value_est),
+                    candidate_transformation_family="RESOURCE_CONVERSION",
+                    dependency_info={
+                        "path_id": path.path_id,
+                        "target": path.target_commodity,
+                        "cost": path.total_cost_est,
+                        "net_value": path.net_value_est,
+                        "steps": path.total_steps,
+                    },
+                    required_horizon=min(36, max(6, path.total_steps // 2)),
+                    rationale=f"Feasible conversion path for {path.target_commodity} yielding net est ${path.net_value_est:.1f}",
+                    confidence=0.85,
+                    scientific_status=ScientificStatus.QUARANTINED
+                ))
 
         return opportunities

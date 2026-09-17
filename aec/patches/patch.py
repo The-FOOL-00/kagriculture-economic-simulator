@@ -42,6 +42,10 @@ class CoupledPatch:
     spliced_continuation: Optional[List[Dict[str, Any]]] = None
     reconnect_result: Optional[Any] = None
 
+    # Dynamic resource DAG and obligation tracking (§14)
+    affected_obligations: List[str] = field(default_factory=list)
+    conversion_metadata: Dict[str, Any] = field(default_factory=dict)
+
     def apply(self, baseline_action: Dict[str, Any]) -> Dict[str, Any]:
         """Apply patch to a deep copy of baseline action, returning modified action."""
         new_action = copy.deepcopy(baseline_action)
@@ -72,5 +76,7 @@ class CoupledPatch:
             "market_modified": self.market_mutations is not None,
             "horizon": self.expected_horizon,
             "rationale": self.rationale,
+            "affected_obligations": list(self.affected_obligations),
+            "conversion_metadata": dict(self.conversion_metadata),
         }
 

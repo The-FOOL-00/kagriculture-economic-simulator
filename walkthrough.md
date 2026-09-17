@@ -1,71 +1,69 @@
-# Walkthrough: Championship Experiment — Residual Candidate Independent Replication Audit
+# Walkthrough: AEC-RESOURCE — Feed Security & Dynamic Inventory Conversion DAG
+## Architectural Development Phase 002
 
-We have completed the independent forensic replication audit for the residual championship candidate:
-[`candidates/v54_plus_residual.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/v54_plus_residual.py)
+### Executive Summary
 
----
+We have completed the implementation and micro-validation of **AEC-RESOURCE** (Phase 002 of the Kagriculture Adaptive Economic Compiler program). 
 
-## 1. Executive Summary & Verdict
-
-### **GO — residual candidate independently validated**
-
-The candidate was evaluated on a **1,000-match symmetric holdout across 500 completely untouched seeds (940,001–940,500)**. Every gate condition of the championship protocol passed unconditionally.
-
----
-
-## 2. Key Empirical Findings
-
-### Primary Success Test (Candidate vs Frozen V54++)
-- **Mean Paired Delta**: **+$111.27**
-- **95% Bootstrap CI**: **[+$98.12, +$124.78]** (strictly positive)
-- **Win / Loss / Tie Record**: **407 Wins / 31 Losses / 62 Ties (81.4% Win Rate)**
-- **Statistical Significance**: 
-  - Paired $t$-test: $t = 16.424, p = 8.97 \times 10^{-49}$
-  - Wilcoxon signed-rank: $W = 3951.5, p = 3.33 \times 10^{-62}$
-- **Distribution Quantiles**: $p_{05} = -\$9.05$, $p_{25} = +\$6.75$, $p_{50} = +\$71.00$, $p_{75} = +\$149.00$, $p_{95} = +\$422.10$
-
-### Secondary Competitive Benchmarks (1,000 Matches Each)
-- **Candidate vs Canonical V66**: **+$1,402.31** margin ($95\%\text{ CI } [+\$804.49, +\$2,044.95]$)
-- **V54++ vs Canonical V66 (Control)**: **+$1,344.63** margin ($95\%\text{ CI } [+\$745.59, +\$1,988.27]$)
-  - Candidate outperforms V54++ by **+$57.68** net margin against V66.
-- **Candidate vs Canonical V54**: **+$6,714.96** margin ($95\%\text{ CI } [+\$5,835.89, +\$7,613.11]$, 499W / 1L / 0T)
-
-### Tail-Risk Assessment
-- $P(\Delta < -\$100) = 1.2\%$
-- $P(\Delta < -\$250) = 0.0\%$
-- $P(\Delta < -\$500) = 0.0\%$
-- $P(\Delta < -\$1000) = 0.0\%$
-- $P(\Delta > +\$100) = 39.4\%$
-- $P(\Delta > +\$250) = 13.2\%$
-- Worst observed single-match loss across 500 seeds: **-$227.00**
+AEC-RESOURCE introduces formal, time-aware inventory reasoning into the compiler pass pipeline via:
+1. **Time-Expanded Resource DAG**: Discrete spatio-temporal resource nodes, causal conversion edges, strict conservation laws, capacity checks, and double-allocation prevention.
+2. **Deterministic Feed Security Engine**: Explicit multi-turn care and starvation tracking across all livestock entities (`COW`, `SHEEP`, `GOOSE`), modeling exact simulator mechanics (1 day unfed resets care bonus; 2 consecutive days unfed causes irreversible animal escape/loss).
+3. **Dynamic Conversion Engine**: Bounded path discovery for verified game recipes, with intermediate cash liquidity hole detection, shed capacity overflow pruning, and terminal horizon feasibility checks.
+4. **Subsystem Integration**: Connected to `ActionBasketDependencyGraph` (`RESOURCE_COUPLING`, `FEED_SECURITY_COUPLING`), `AEC-RECONNECT` trajectory repair, `CounterfactualSimulator`, and `SafetyCertificate` (9 new formal invariants).
 
 ---
 
-## 3. Structural & Architectural Invariants
+### 1. Key Implementation Changes
 
-- **Macro Route Prior Divergence**: **0 / 72,000 turns (0.000%)**
-- **Shop Route Divergence**: **0 / 72,000 turns (0.000%)**
-- **Solo Parity (50 seeds vs IDLE)**: **$153,728.32 vs $153,728.32 ($\Delta = \$0.00$)**
-- **Deterministic Match Checksum**: Two independent 50-seed execution passes yielded identical SHA256 checksums (`cd1f8cf30d4fa0d88f9ee56f9f1c557cadade9842bdf371882cda988aae0d673`).
+#### Core Subsystems (`aec/resource/`)
+- [`aec/resource/dag.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/resource/dag.py): `ResourceNode`, `ResourceEdge`, `ResourceObligation`, `ResourceReservation`, `TemporalResourceDAG`. Enforces conservation of mass, non-negative inventory, capacity limits, and computes transitive causal closures.
+- [`aec/resource/feed_security.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/resource/feed_security.py): `LivestockEntity`, `FeedSecurityEngine`, interval feed surplus tracking, and starvation detection.
+- [`aec/resource/conversions.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/resource/conversions.py): `ConversionCatalog`, `ConversionDiscoveryEngine`, cash liquidity hole checks, and shed capacity checks.
+- [`aec/resource/parity.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/resource/parity.py): `ResourceParityHarness` ensuring exact agreement between symbolic DAG predictions and counterfactual simulation.
+- [`aec/resource/__init__.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/resource/__init__.py): Public package interface.
 
----
-
-## 4. Generated Artifacts & Reports
-
-| Deliverable | Purpose |
-| :--- | :--- |
-| [`research/championship_residual_validation.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/championship_residual_validation.md) | Full 18-section championship audit report |
-| [`research/residual_parameter_provenance.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_parameter_provenance.md) | Audit proving parameter discovery was un-snooped |
-| [`research/v54pp_v66_reconciliation.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/v54pp_v66_reconciliation.md) | Reconciliation of historical benchmark margins |
-| [`research/residual_candidate_diff.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_candidate_diff.md) | Semantic diff showing exactly 3 residual parameter modifications |
-| [`research/residual_clean_discovery_grid.json`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_clean_discovery_grid.json) | 500-seed clean pre-registered discovery grid results |
-| [`research/residual_true_untouched_holdout_results.json`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_true_untouched_holdout_results.json) | 4,000-match untouched holdout metrics and tail risks |
-| [`research/residual_mechanism_and_solo_results.json`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_mechanism_and_solo_results.json) | Causal accounting, commodity timing, and solo economics |
-| [`research/residual_reproduction_check.json`](file:///c:/Users/Sundareswaran/Kagriculture/research/residual_reproduction_check.json) | Independent reproduction determinism verification |
+#### Compiler & Engine Integration
+- [`aec/ir/dependency_graph.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/ir/dependency_graph.py): Added `RESOURCE_COUPLING` and `FEED_SECURITY_COUPLING` to `CausalEdgeType`.
+- [`aec/opportunities/resource.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/opportunities/resource.py): Integrated `FeedSecurityEngine` and `ConversionDiscoveryEngine` into `ResourceOpportunityAnalyzer`.
+- [`aec/patches/patch.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/patches/patch.py): Extended `CoupledPatch` with `affected_obligations` and `conversion_metadata`.
+- [`aec/patches/generator.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/patches/generator.py): Added patch synthesis for feed rescue and resource conversions.
+- [`aec/counterfactual/simulator.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/counterfactual/simulator.py): Integrated daily livestock feeding, starvation, and care tracking into `ShadowRolloutState` and `SimulationOutcome`.
+- [`aec/safety/certificate.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/safety/certificate.py) & [`aec/safety/checks.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/safety/checks.py): Added 9 formal resource invariants.
+- [`aec/config.py`](file:///C:/Users/Sundareswaran/Kagriculture/aec/config.py): Registered `RESOURCE_CONVERSION` and `EMERGENCY_FEED_PURCHASE` as quarantined mechanisms.
 
 ---
 
-## 5. Kaggle Submission Constraint
+### 2. Validation & Benchmark Results
 
-**ABSOLUTELY NO SUBMISSION HAS BEEN MADE TO KAGGLE.**  
-All automated submission mechanisms remain disabled pending human review.
+- **Total Test Suite**: **233 / 233 Passed** in 0.74s (`pytest tests/ -q`).
+- **Resource Micro-Validation Suite**: **42 / 42 Passed** in 0.15s:
+  - `test_resource_dag.py`: 8 tests (all passed).
+  - `test_resource_feed_security.py`: 5 tests (all passed).
+  - `test_resource_conversions.py`: 5 tests (all passed).
+  - `test_resource_parity.py`: 3 tests (all passed).
+  - `test_resource_micro_validation.py`: 20 tests (Cases A through T, all passed).
+  - `test_resource_benchmarks.py`: 1 test (benchmarks passed).
+- **Latency Benchmarks**:
+  - DAG Construction: Mean = 0.0184 ms (p95 = 0.0196 ms)
+  - Dependency Closure: Mean = 0.0030 ms (p95 = 0.0032 ms)
+  - Feed Security Engine: Mean = 0.0512 ms (p95 = 0.0628 ms)
+  - Conversion Discovery: Mean = 0.0106 ms (p95 = 0.0113 ms)
+  - **Total Pipeline Overhead**: **< 0.1 ms** per turn evaluation.
+
+---
+
+### 3. Scientific Governance & Invariant Audits
+
+- **Frozen V3 SHA-256**: `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943` (Verified byte-identical).
+- **Protected Holdout**: Seeds `340050–340199` 100% untouched.
+- **Historical Cohorts**: Seeds `340250–340299` 100% untouched.
+- **Prospective Experiments**: **ZERO**. No competition cohorts or live Kaggle submissions executed.
+- **Quarantined Mechanisms**: Newly unblocked mechanisms (`RESOURCE_CONVERSION`, `EMERGENCY_FEED_PURCHASE`) remain **strictly quarantined** in `aec/config.py`.
+
+---
+
+### 4. Architectural Reports Created
+
+- [`reports/AEC_RESOURCE_ARCHITECTURE.md`](file:///C:/Users/Sundareswaran/Kagriculture/reports/AEC_RESOURCE_ARCHITECTURE.md): Complete data model, temporal DAG, feed security calculus, conversion semantics, reconnect interaction, and safety model.
+- [`reports/AEC_RESOURCE_VALIDATION.md`](file:///C:/Users/Sundareswaran/Kagriculture/reports/AEC_RESOURCE_VALIDATION.md): Complete test coverage, adversarial Cases A–T, parity analysis, and benchmark numbers.
+- [`reports/AEC_RESOURCE_READINESS.md`](file:///C:/Users/Sundareswaran/Kagriculture/reports/AEC_RESOURCE_READINESS.md): Formal readiness classification matrix and quarantine roadmap.

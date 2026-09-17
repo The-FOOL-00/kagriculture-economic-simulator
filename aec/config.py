@@ -87,6 +87,18 @@ MECHANISM_REGISTRY: Dict[str, Dict[str, Any]] = {
         "role": "QUARANTINED",
         "rationale": "Sunk-cost labor valuation and unverified 48-step downstream heuristic",
     },
+    "RESOURCE_CONVERSION": {
+        "status": ScientificStatus.QUARANTINED,
+        "category": "RESOURCE",
+        "role": "QUARANTINED",
+        "rationale": "Dynamic inventory conversion and feed security DAG compiler pass; architecturally unblocked, pending micro-validation.",
+    },
+    "EMERGENCY_FEED_PURCHASE": {
+        "status": ScientificStatus.QUARANTINED,
+        "category": "RESOURCE",
+        "role": "QUARANTINED",
+        "rationale": "Feed security rescue purchase; architecturally unblocked, pending micro-validation.",
+    },
 }
 
 ENABLED_FOUNDATION_MECHANISMS: Tuple[str, ...] = (
@@ -102,6 +114,7 @@ QUARANTINED_MECHANISMS: Tuple[str, ...] = (
     "CARGO_FERRY_PRIORITY",
     "OPPONENT_PREEMPT_SELL",
     "EMERGENCY_FEED_PURCHASE",
+    "RESOURCE_CONVERSION",
     "TERMINAL_HARVEST_SWEEP",
     "TOWN_CYCLE",
 )

@@ -40,6 +40,17 @@ class SafetyCertificate:
     resource_consistency_check: bool = True
     obligation_consistency_check: bool = True
     market_consistency_check: bool = True
+
+    # Extended Resource & Feed Security Safety Invariants (§17, §18)
+    resource_conservation_check: bool = True
+    negative_inventory_check: bool = True
+    conversion_precondition_check: bool = True
+    feed_security_check: bool = True
+    capacity_consistency_check: bool = True
+    cash_liquidity_check: bool = True
+    temporal_availability_check: bool = True
+    reservation_consistency_check: bool = True
+    terminal_resource_check: bool = True
     
     # Fidelity classification (§14): VERIFIED, PARTIAL, UNKNOWN, FAILED
     counterfactual_fidelity: str = "VERIFIED"
@@ -68,6 +79,15 @@ class SafetyCertificate:
             and self.resource_consistency_check
             and self.obligation_consistency_check
             and self.market_consistency_check
+            and self.resource_conservation_check
+            and self.negative_inventory_check
+            and self.conversion_precondition_check
+            and self.feed_security_check
+            and self.capacity_consistency_check
+            and self.cash_liquidity_check
+            and self.temporal_availability_check
+            and self.reservation_consistency_check
+            and self.terminal_resource_check
             and self.counterfactual_fidelity != "FAILED"
         )
 
@@ -97,6 +117,15 @@ class SafetyCertificate:
                 "resource_consistency": self.resource_consistency_check,
                 "obligation_consistency": self.obligation_consistency_check,
                 "market_consistency": self.market_consistency_check,
+                "resource_conservation": self.resource_conservation_check,
+                "negative_inventory": self.negative_inventory_check,
+                "conversion_precondition": self.conversion_precondition_check,
+                "feed_security": self.feed_security_check,
+                "capacity_consistency": self.capacity_consistency_check,
+                "cash_liquidity": self.cash_liquidity_check,
+                "temporal_availability": self.temporal_availability_check,
+                "reservation_consistency": self.reservation_consistency_check,
+                "terminal_resource": self.terminal_resource_check,
             },
             "commit_decision": self.commit_decision,
             "abstain_reason": self.abstain_reason,

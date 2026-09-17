@@ -209,5 +209,33 @@ class PatchGenerator:
                     )
                     patches.append(patch)
 
+            # 7. Emergency Feed Purchase (§5, §6)
+            elif fam == "EMERGENCY_FEED_PURCHASE":
+                deficit = opp.dependency_info.get("deficit", 1)
+                orders = copy.deepcopy(baseline_action.get("market", []))
+                orders.insert(0, ["BUY_PRODUCT", "WHEAT", deficit])
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    market_mutations=orders[:10],
+                    affected_obligations=["LIVESTOCK_FEED"],
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
+
+            # 8. Dynamic Resource Conversion (§8, §9)
+            elif fam == "RESOURCE_CONVERSION":
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    conversion_metadata=dict(opp.dependency_info),
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
+
         return patches
 

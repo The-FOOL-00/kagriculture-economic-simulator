@@ -20,6 +20,8 @@ class CausalEdgeType(Enum):
     CAPACITY_COUPLING = "CAPACITY_COUPLING"
     OBLIGATION_COUPLING = "OBLIGATION_COUPLING"
     TIMING_COUPLING = "TIMING_COUPLING"
+    RESOURCE_COUPLING = "RESOURCE_COUPLING"
+    FEED_SECURITY_COUPLING = "FEED_SECURITY_COUPLING"
 
 
 @dataclass
@@ -238,6 +240,7 @@ def build_basket_dependency_graph(
     )
     graph.add_node(f_node)
 
+    worker_nodes = [f_node]
     hands_cmds = action.get("hands", []) or []
     for h_idx, h_cmd in enumerate(hands_cmds):
         h_op = h_cmd[0] if (h_cmd and isinstance(h_cmd, (list, tuple))) else "PASS"
@@ -248,5 +251,42 @@ def build_basket_dependency_graph(
             action_type=h_op
         )
         graph.add_node(h_node)
+        worker_nodes.append(h_node)
+
+    # 4. Connect Resource & Feed Security Coupling Edges (§13)
+    for w_node in worker_nodes:
+        # If worker feeds, and market sells wheat, market sell can starve feeding
+        if w_node.action_type == "FEED":
+            for m_node in market_nodes:
+                if m_node.item == "WHEAT":
+                    if m_node.action_type == "SELL":
+                        desc = f"Market order {m_node.node_id} sells WHEAT, competing with {w_node.node_id} feeding obligation"
+                        graph.add_edge(
+                            source_id=m_node.node_id,
+                            target_id=w_node.node_id,
+                            edge_type=CausalEdgeType.FEED_SECURITY_COUPLING,
+                            weight=1.0,
+                            description=desc
+                        )
+                    elif m_node.action_type == "BUY_PRODUCT":
+                        desc = f"Market order {m_node.node_id} buys WHEAT, providing feed for {w_node.node_id}"
+                        graph.add_edge(
+                            source_id=m_node.node_id,
+                            target_id=w_node.node_id,
+                            edge_type=CausalEdgeType.FEED_SECURITY_COUPLING,
+                            weight=0.9,
+                            description=desc
+                        )
+        elif w_node.action_type in ("DROP", "PICKUP"):
+            for m_node in market_nodes:
+                if m_node.action_type in ("SELL", "BUY_PRODUCT"):
+                    desc = f"Worker shed operation {w_node.node_id} couples with market shed transfer {m_node.node_id}"
+                    graph.add_edge(
+                        source_id=w_node.node_id,
+                        target_id=m_node.node_id,
+                        edge_type=CausalEdgeType.RESOURCE_COUPLING,
+                        weight=0.7,
+                        description=desc
+                    )
 
     return graph

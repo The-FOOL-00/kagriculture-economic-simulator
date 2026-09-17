@@ -85,6 +85,10 @@ class SimulationOutcome:
     fidelity: str = "VERIFIED"
     fidelity_reasons: List[str] = field(default_factory=list)
 
+    # Resource and Feed Security Invariants (§5, §6, §17)
+    feed_security_ok: bool = True
+    feed_deficit_units: int = 0
+
 
 class ShadowRolloutState:
     """Isolated memory container for forward simulation."""
@@ -118,6 +122,9 @@ class ShadowRolloutState:
         self.spatial_desynchronized: bool = False
         self.desynchronization_reason: str = ""
         self.worker_positions_history: List[List[List[int]]] = []
+        self.feed_security_ok: bool = True
+        self.feed_deficit_units: int = 0
+        self.escaped_animals_count: int = 0
 
     def get_farm_dict(self) -> Dict[str, Any]:
         return {
@@ -343,7 +350,10 @@ def simulate_rollout(
     """Run an isolated forward rollout starting with initial_action at step 0, followed by continuation."""
     rollout = ShadowRolloutState(econ_state)
     n_workers = len(rollout.inventories)
-    tile_ops = {"PLANT", "WATER", "HARVEST", "FERTILIZE", "BUILD_COOP", "BUILD_PASTURE", "DROP", "PICKUP", "PLACE"}
+    tile_ops = {
+        "PLANT", "WATER", "HARVEST", "FERTILIZE", "BUILD_COOP", "BUILD_PASTURE",
+        "DROP", "PICKUP", "PLACE", "FEED", "CARE", "COLLECT_FERTILIZER"
+    }
 
     for offset in range(horizon):
         cur_step = econ_state.step + offset
@@ -442,6 +452,22 @@ def simulate_rollout(
             _decay_plants(farm_dict, cur_step)
         except Exception:
             pass
+
+        # 3b. Daily livestock refresh and feed security tracking (§5, §6)
+        if (cur_step + 1) % TURNS_PER_DAY == 0:
+            for row in farm_dict.get("tiles", []):
+                for tile in row:
+                    if isinstance(tile, dict) and "animal" in tile:
+                        if tile.get("fed_today"):
+                            tile["consecutive_unfed"] = 0
+                        else:
+                            tile["consecutive_unfed"] = tile.get("consecutive_unfed", 0) + 1
+                            rollout.feed_deficit_units += 1
+                            if tile["consecutive_unfed"] >= 2:
+                                rollout.escaped_animals_count += 1
+                                rollout.feed_security_ok = False
+                        tile["fed_today"] = False
+                        tile["cared_today"] = False
 
         # 4. Record row
         row_data = {
@@ -555,6 +581,13 @@ class CounterfactualSimulator:
             fidelity = CounterfactualFidelityLevel.FAILED.value
             fidelity_reasons.append("Intermediate shed solvency breached during rollout")
 
+        if not candidate_rollout.feed_security_ok:
+            fidelity = CounterfactualFidelityLevel.FAILED.value
+            fidelity_reasons.append(
+                f"Feed security breached during rollout: {candidate_rollout.escaped_animals_count} animal(s) escaped, "
+                f"{candidate_rollout.feed_deficit_units} deficit units"
+            )
+
         if candidate_rollout.spatial_desynchronized:
             fidelity = CounterfactualFidelityLevel.PARTIAL.value
             fidelity_reasons.append(candidate_rollout.desynchronization_reason)
@@ -578,4 +611,6 @@ class CounterfactualSimulator:
             desynchronization_reason=candidate_rollout.desynchronization_reason,
             fidelity=fidelity,
             fidelity_reasons=fidelity_reasons,
+            feed_security_ok=candidate_rollout.feed_security_ok,
+            feed_deficit_units=candidate_rollout.feed_deficit_units,
         )
