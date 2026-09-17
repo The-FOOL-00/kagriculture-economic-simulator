@@ -27,6 +27,53 @@ _SAFE = {"farmer": ["PASS"], "hands": [], "market": []}
 
 
 @dataclass
+class CandidateTelemetry:
+    """Detailed audit trace for an individual candidate mechanism (§14)."""
+    patch_id: str
+    mechanism_family: str
+    opportunity_detected: bool = True
+    patch_generated: bool = False
+    patch_pruned: bool = False
+    simulation_run: bool = False
+    simulation_horizon: int = 0
+    delta_money: float = 0.0
+    delta_margin: float = 0.0
+    delta_route_cost: float = 0.0
+    delta_dependency_completion: float = 0.0
+    delta_opponent_pressure: float = 0.0
+    weed_asset_value: float = 0.0
+    safety_pass: bool = False
+    safety_rejection_reason: Optional[str] = None
+    economic_rejection_reason: Optional[str] = None
+    commit_decision: bool = False
+    baseline_action: Optional[Dict[str, Any]] = None
+    candidate_action: Optional[Dict[str, Any]] = None
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "patch_id": self.patch_id,
+            "family": self.mechanism_family,
+            "opp_detected": self.opportunity_detected,
+            "patch_generated": self.patch_generated,
+            "patch_pruned": self.patch_pruned,
+            "sim_run": self.simulation_run,
+            "horizon": self.simulation_horizon,
+            "delta_money": round(self.delta_money, 2),
+            "delta_margin": round(self.delta_margin, 2),
+            "delta_route_cost": round(self.delta_route_cost, 2),
+            "delta_dependency_completion": self.delta_dependency_completion,
+            "delta_opponent_pressure": round(self.delta_opponent_pressure, 2),
+            "weed_asset_value": round(self.weed_asset_value, 2),
+            "safety_pass": self.safety_pass,
+            "safety_rejection": self.safety_rejection_reason,
+            "economic_rejection": self.economic_rejection_reason,
+            "commit_decision": self.commit_decision,
+            "baseline_action": self.baseline_action,
+            "candidate_action": self.candidate_action,
+        }
+
+
+@dataclass
 class AECTelemetry:
     """Structured telemetry recording AEC compiler decision trail per turn."""
     step: int = 0
@@ -40,7 +87,7 @@ class AECTelemetry:
     committed_patch_id: Optional[str] = None
     committed_mechanism: Optional[str] = None
     abstain_reason: Optional[str] = None
-    
+
     # Patch lifecycle counts
     patches_generated_count: int = 0
     patches_quarantined_count: int = 0
@@ -48,7 +95,10 @@ class AECTelemetry:
     patches_simulated_count: int = 0
     patches_safety_rejected_count: int = 0
     patches_economically_rejected_count: int = 0
-    
+
+    # Detailed per-candidate audit trace (§14)
+    candidates: List[CandidateTelemetry] = field(default_factory=list)
+
     # Latencies in milliseconds
     ir_time_ms: float = 0.0
     event_time_ms: float = 0.0
@@ -79,6 +129,7 @@ class AECTelemetry:
                 "economically_rejected": self.patches_economically_rejected_count,
                 "committed": 1 if self.decision == "COMMIT" else 0,
             },
+            "candidates": [c.to_dict() for c in self.candidates],
             "latency_ms": {
                 "ir": round(self.ir_time_ms, 2),
                 "event": round(self.event_time_ms, 2),
@@ -92,9 +143,9 @@ class AECTelemetry:
 
 class AECExecutor:
     """The Adaptive Economic Compiler runtime orchestrator.
-    
+
     Coordinates the pipeline:
-    Observe -> Baseline -> IR -> Events -> Opportunities -> Patches -> 
+    Observe -> Baseline -> IR -> Events -> Opportunities -> Patches ->
     Counterfactuals -> Win Model -> Safety Certificate -> Commit / Abstain
     """
 
@@ -105,7 +156,7 @@ class AECExecutor:
     ) -> None:
         self.config = config or AECConfig()
         self.backbone = backbone_adapter or BackboneAdapter(config=self.config)
-        
+
         # Subsystems with mechanism gating configuration
         self.event_bus = EventBus()
         self.opp_engine = OpportunityEngine(config=self.config)
@@ -113,7 +164,7 @@ class AECExecutor:
         self.simulator = CounterfactualSimulator()
         self.win_model = WinModel()
         self.safety_checker = SafetyChecker()
-        
+
         # State tracking across steps
         self._prev_econ_state: Optional[EconomicState] = None
         self._telemetry_history: List[AECTelemetry] = []
@@ -218,6 +269,21 @@ class AECExecutor:
             telemetry.patches_pruned_count = max(0, len(raw_patches) - len(candidate_patches))
             telemetry.candidates_count = len(candidate_patches)
 
+            # Record pruned patches in candidate telemetry (§14)
+            cand_ids = {p.patch_id for p in candidate_patches}
+            for p in raw_patches:
+                if p.patch_id not in cand_ids:
+                    telemetry.candidates.append(CandidateTelemetry(
+                        patch_id=p.patch_id,
+                        mechanism_family=p.mechanism_family,
+                        opportunity_detected=True,
+                        patch_generated=True,
+                        patch_pruned=True,
+                        simulation_run=False,
+                        safety_pass=False,
+                        economic_rejection_reason="STATIC_PRUNING_FEASIBILITY"
+                    ))
+
             if not candidate_patches:
                 telemetry.decision = "BACKBONE"
                 telemetry.abstain_reason = "NO_FEASIBLE_CANDIDATE_PATCHES"
@@ -235,22 +301,18 @@ class AECExecutor:
 
             # Extract read-only future backbone continuation trajectory (zero live calls)
             active_patches = candidate_patches[:self.config.max_simulations]
-            max_horizon = max(
-                (select_adaptive_horizon(p, econ_state, self.config) for p in active_patches),
-                default=self.config.normal_horizon
-            )
             n_hands = max(0, len(econ_state.workers.workers) - 1)
             future_trajectory = self.backbone.get_future_trajectory(
                 step=step,
-                horizon=max_horizon,
+                horizon=self.config.extended_horizon,
                 player=econ_state.player,
                 n_hands=n_hands
             )
 
             for patch in active_patches:
-                horizon = select_adaptive_horizon(patch, econ_state, self.config)
+                horizon = select_adaptive_horizon(patch, econ_state, self.config, future_trajectory)
                 patch_continuation = future_trajectory[:max(0, horizon - 1)] if future_trajectory else None
-                
+
                 # Run isolated forward simulation under opponent pressure
                 sim_outcome = self.simulator.evaluate(
                     candidate_patch=patch,
@@ -263,7 +325,12 @@ class AECExecutor:
                 telemetry.patches_simulated_count += 1
 
                 # Strategic Evaluation (WinModel)
-                eval_res = self.win_model.evaluate(patch, sim_outcome, econ_state)
+                eval_res = self.win_model.evaluate(
+                    patch=patch,
+                    outcome=sim_outcome,
+                    econ_state=econ_state,
+                    continuation_trajectory=patch_continuation
+                )
 
                 # Hard Safety Verification
                 t_saf0 = time.perf_counter()
@@ -280,6 +347,32 @@ class AECExecutor:
                 elif not eval_res.is_superior:
                     telemetry.patches_economically_rejected_count += 1
 
+                cand_action = patch.apply(baseline_action)
+
+                # Record per-candidate telemetry (§14)
+                cand_telem = CandidateTelemetry(
+                    patch_id=patch.patch_id,
+                    mechanism_family=patch.mechanism_family,
+                    opportunity_detected=True,
+                    patch_generated=True,
+                    patch_pruned=False,
+                    simulation_run=True,
+                    simulation_horizon=horizon,
+                    delta_money=eval_res.delta_money,
+                    delta_margin=eval_res.delta_margin,
+                    delta_route_cost=eval_res.delta_route_cost,
+                    delta_dependency_completion=eval_res.delta_dependency_completion,
+                    delta_opponent_pressure=eval_res.delta_opponent_pressure,
+                    weed_asset_value=eval_res.weed_asset_value,
+                    safety_pass=passed_safety,
+                    safety_rejection_reason=abstain_reason if not passed_safety else None,
+                    economic_rejection_reason=eval_res.rationale if not eval_res.is_superior else None,
+                    commit_decision=passed_safety and eval_res.is_superior,
+                    baseline_action=copy.deepcopy(baseline_action),
+                    candidate_action=copy.deepcopy(cand_action),
+                )
+                telemetry.candidates.append(cand_telem)
+
                 # Generate machine-readable SafetyCertificate (§15)
                 cert = SafetyCertificate(
                     patch_id=patch.patch_id,
@@ -288,13 +381,13 @@ class AECExecutor:
                     delta_our_money=sim_outcome.delta_our_money,
                     delta_opponent_money=sim_outcome.delta_opponent_money,
                     delta_terminal_margin=sim_outcome.delta_terminal_margin,
-                    overflow_check=checks["overflow_ok"],
-                    obligation_check=checks["obligation_ok"],
-                    purchase_check=True,
-                    intermediate_solvency_check=checks["obligation_ok"],
-                    terminal_feasibility_check=checks["terminal_feasible"],
-                    market_collision_check=checks["market_collision_ok"],
-                    determinism_check=checks["determinism_ok"],
+                    overflow_check=checks.get("overflow_ok", False),
+                    obligation_check=checks.get("obligation_ok", False),
+                    purchase_check=checks.get("purchase_ok", True),
+                    intermediate_solvency_check=checks.get("obligation_ok", False),
+                    terminal_feasibility_check=checks.get("terminal_feasible", False),
+                    market_collision_check=checks.get("market_collision_ok", False),
+                    determinism_check=checks.get("determinism_ok", False),
                     commit_decision=passed_safety and eval_res.is_superior,
                     abstain_reason=abstain_reason if not passed_safety else (
                         None if eval_res.is_superior else "ECONOMICALLY_INFERIOR"
@@ -325,20 +418,29 @@ class AECExecutor:
                     telemetry.committed_patch_id = None
                     telemetry.committed_mechanism = None
                     final_action = baseline_action
+                    for c in telemetry.candidates:
+                        if c.patch_id == best_candidate.patch_id:
+                            c.commit_decision = False
+                            c.safety_rejection_reason = "MECHANISM_POLICY_VIOLATION"
                 else:
                     telemetry.decision = "COMMIT"
                     telemetry.committed_patch_id = best_candidate.patch_id
                     telemetry.committed_mechanism = mech_fam
+                    for c in telemetry.candidates:
+                        c.commit_decision = (c.patch_id == best_candidate.patch_id)
                     # Apply certified patch to a fresh canonical copy of baseline action
                     final_action = best_candidate.apply(baseline_result.canonical_action_copy())
             else:
                 telemetry.decision = "ABSTAIN"
                 telemetry.abstain_reason = "NO_CANDIDATE_CERTIFIED_SUPERIOR"
+                for c in telemetry.candidates:
+                    c.commit_decision = False
                 final_action = baseline_action
 
             telemetry.total_time_ms = (time.perf_counter() - t_start) * 1000.0
             self._record_step(econ_state, telemetry)
             return final_action
+
 
         except Exception as e:
             # Top-Level Fail-Closed Boundary (§30): Fall back to baseline action

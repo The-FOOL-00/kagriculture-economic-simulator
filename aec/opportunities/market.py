@@ -26,20 +26,21 @@ class MarketOpportunityAnalyzer:
 
         market_orders = baseline_action.get("market", [])
         if len(market_orders) >= 2:
-            # Check if any SELL order is preceded by non-market orders (HIRE, BUY_LAND, BUY_SEED)
+            # Check if any SELL order is preceded by non-SELL orders (HIRE, BUY_LAND, BUY_SEED, BUY_ANIMAL, BUY_PRODUCT)
+            has_sell = False
+            seen_non_sell = False
             has_suboptimal_order = False
-            first_sell_idx = -1
-            for idx, order in enumerate(market_orders):
+            for order in market_orders:
                 if isinstance(order, (list, tuple)) and order:
                     op = order[0]
-                    if op == "SELL" and first_sell_idx < 0:
-                        first_sell_idx = idx
-                    elif op in ("HIRE", "BUY_LAND", "BUY_SEED", "BUY_ANIMAL") and first_sell_idx >= 0:
-                        pass
-                    elif op in ("HIRE", "BUY_LAND", "BUY_SEED", "BUY_ANIMAL") and first_sell_idx < 0:
-                        has_suboptimal_order = True
+                    if op == "SELL":
+                        has_sell = True
+                        if seen_non_sell:
+                            has_suboptimal_order = True
+                    elif op in ("HIRE", "BUY_LAND", "BUY_SEED", "BUY_ANIMAL", "BUY_PRODUCT"):
+                        seen_non_sell = True
 
-            if has_suboptimal_order:
+            if has_sell and has_suboptimal_order:
                 opportunities.append(Opportunity(
                     opportunity_id=f"MARKET_FRONTLOAD_STEP_{econ_state.step}",
                     category="MARKET",
