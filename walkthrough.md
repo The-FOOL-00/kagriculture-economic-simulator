@@ -1,83 +1,111 @@
-# Walkthrough: EXP-AEC-004 Emergency Feed Purchase Prospective Validation
+# Walkthrough: AEC Phase 003 — Multi-Worker Logistics Coordination
 
-## Execution Summary & Final Scientific Outcome
+## 1. Overview & Architectural Milestone
 
-We have completed the prospective validation trial for **`EXP-AEC-004`**, evaluating the isolated activation of `EMERGENCY_FEED_PURCHASE` within the Kagriculture Adaptive Economic Compiler (AEC) architecture.
+AEC Phase 003 introduces the **Multi-Worker Logistics Coordination Layer**, resolving the primary structural bottleneck in the Adaptive Economic Compiler (AEC): **labor cannibalization**.
 
-### Final Outcome: **`DORMANT_INCONCLUSIVE`**
-### Statutory Recommendation: **`RETAIN IN QUARANTINE`**
-
----
-
-### Authoritative Scientific Governance Conformance:
-- **Exact Frozen Protocol:** Executed `PREREG-EXP-AEC-004-20260918-FINAL` without modifications, post-hoc tuning, or parameter adjustments.
-- **Intention-to-Treat (ITT) Standard:** Primary statistical estimator covers all $N = 50$ prospective seeds (`340300–340349`) across 100 mirror CRN matches (71,900 treatment turns).
-- **Protected Holdout Covenant Intact:**
-  - Primary Locked Holdout (`340050–340199`, 150 seeds): **100% untouched (0 touches)**.
-  - Secondary Locked Holdout (`214200–214249`, 50 seeds): **100% untouched (0 touches)**.
-- **Frozen V3 Chassis SHA-256:** `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943` verified byte-identical before and after the run.
-- **Single-Mechanism Isolation Preserved:** Treatment differed from Control by exactly `EMERGENCY_FEED_PURCHASE`. `RESOURCE_CONVERSION` remained strictly quarantined in both arms.
-- **100% Counterfactual Fidelity:** All 4 committed feed purchases matched engine ground-truth counterfactual profits bit-exact ($0.00$ residual).
+Previous physical deviations (such as `RESOURCE_CONVERSION` and `EMERGENCY_FEED_PURCHASE`) suffered severe economic regression when evaluated on offline replay because they diverted the primary worker (Farmer) away from high-value harvesting and planting duties. Phase 003 provides the architectural capability to:
+1. Identify when baseline worker obligations are at risk of cannibalization.
+2. Formulate deviations as discrete, dependency-constrained `WorkerTask` sets.
+3. Optimally allocate tasks to available auxiliary workers (Hand 1, Hand 2, etc.) while preserving the Farmer's baseline schedule.
+4. Derive exact marginal labor opportunity costs without arbitrary hourly wages ($hire\_cost / 24$).
+5. Coordinate space-time paths and resource ownership without collision or contention.
 
 ---
 
-## 1. Key Experimental Results
+## 2. Core Implementation Components
 
-| Metric | Empirical Result | Preregistered Threshold | Status |
-| :--- | :---: | :---: | :---: |
-| **Cohort Seeds** | `340300–340349` ($N=50$) | $N=50$ | Exact match |
-| **Total Matches** | 100 matches | $M=100$ | Exact match |
-| **Total Turns** | 71,900 turns | 71,900 | Exact match |
-| **Mean Paired Margin Delta ($\overline{\Delta}$)** | **$+\$1.62$** | Directionally $\ge \$0.00$ | Positive |
-| **Standard Error ($SE$)** | $\$1.14$ | — | — |
-| **One-Sided Lower 95% Bound** | **$-\$0.30$** | **$\ge \$0.00$** | Miss (ITT dilution) |
-| **One-Sided $p$-Value ($t = 1.4153$)** | $p = 0.0816$ | $\alpha = 0.05$ | Inconclusive |
-| **Tournament Win-Rate Delta** | **$+4.00\text{ pp}$** | $\ge -2.00\text{ pp}$ | **PASS (GATE 8)** |
-| **Ties-Excluded Win Rate** | **$64.29\%$** (9 wins, 5 losses) | — | $+28.57\text{ pp}$ |
-| **Emergency Feed Commits** | **4 commits** across 2 seeds | $\ge 5$ commits | **Dormant ($<5$)** |
-| **Activation Frequency** | **$4.0\%$** of seeds | — | Low natural occurrence |
-| **Control Feed Commits** | **0** | $0$ | **PASS (GATE 3)** |
-| **Quarantined Commits** | **0** | $0$ | **PASS (GATE 3)** |
-| **Safety Violations** | **0** | $0$ | **PASS (GATE 1)** |
-| **Shed Overflow Violations** | **0** (Max units = 100) | $\le 100$ | **PASS (GATE 2)** |
-| **Counterfactual Fidelity** | **100% VERIFIED** | 100% | **PASS (GATE 6)** |
-| **Holdout Touches** | **0** | $0$ | **PASS (GATE 4)** |
-| **V3 Chassis Integrity** | **Identical** | Hash match | **PASS (GATE 5)** |
+### 2.1 Multi-Worker Coordination Package (`aec/coordination/`)
+- `worker_model.py`:
+  `WorkerType` (`FARMER`, `HAND`), `WorkerCapability`, `WorkerState`, and `extract_farm_workers` factory.
+- `task_model.py`:
+  `WorkerTask`, explicit 8-tier `TaskPriority` hierarchy, and `TaskDependencyGraph` DAG.
+- `assignment.py`:
+  `WorkerAssignment`, `WorkerSchedule`, `DisplacementOutcome`, and exact `compute_marginal_labor_cost`.
+- `dominance.py`:
+  `MultiWorkerDominancePruner` enforcing Pareto-dominance over candidate assignments.
+- `scheduler.py`:
+  `MultiWorkerLogisticsCoordinator` bounded deterministic assignment and routing compiler.
+- `__init__.py`:
+  Unified module exports.
 
----
+### 2.2 Reconnection & Space-Time Extensions (`aec/replanning/reconnect.py`)
+- Extended `SpacetimeReservationTable` with:
+  - Task exclusivity reservations (`reserve_task`, `is_task_available`)
+  - Resource locking (`reserve_resource`, `is_resource_available`)
+  - Building site reservations (`reserve_building`, `is_building_available`)
+  - Full trajectory collision checking (`reserve_trajectory`, `is_trajectory_collision_free`)
 
-## 2. Commit Forensics & Mechanism Attribution
+### 2.3 Safety Invariant Battery Extensions (`aec/safety/checks.py`)
+- Integrated 9 formal multi-worker invariants:
+  - `worker_assignment_consistency`
+  - `worker_capability_validity`
+  - `worker_task_exclusivity`
+  - `worker_spacetime_collision`
+  - `worker_resource_ownership`
+  - `worker_task_deadline`
+  - `worker_route_continuity`
+  - `worker_handoff_validity`
+  - `worker_baseline_obligation_preservation`
 
-All 4 commits of `EMERGENCY_FEED_PURCHASE` were individually audited:
-1. **Seed 340333 (Match A, Turn 297, Seat 0):** Buy 6 feed at cost $\$38.00$. Prevented livestock starvation and escape. Predicted delta $= +\$2,351.00$, realized delta $= +\$2,351.00$. Counterfactual fidelity `VERIFIED`.
-2. **Seed 340333 (Match B, Turn 297, Seat 1):** Symmetrical purchase in Seat 1. Predicted delta $= +\$2,351.00$, realized delta $= +\$2,351.00$. Counterfactual fidelity `VERIFIED`.
-3. **Seed 340349 (Match A, Turn 242, Seat 0):** Buy 4 feed at cost $\$34.00$. Enabled animal production harvested and sold before step 718. Predicted delta $= +\$51.00$, realized delta $= +\$51.00$. Counterfactual fidelity `VERIFIED`.
-4. **Seed 340349 (Match B, Turn 242, Seat 1):** Symmetrical purchase in Seat 1. Predicted delta $= +\$51.00$, realized delta $= +\$51.00$. Counterfactual fidelity `VERIFIED`.
-
-- **Terminal-Blind Purchase Audit:** Exactly 0 feed purchases occurred on Day 29 (Step $\ge 696$). Causal purpose verification successfully eliminated all terminal-blind waste.
-- **Foundation Parity:** `DEPENDENCY_AWARE_MARKET_TIMING` committed 159 times in Treatment and 159 times in Control (exact parity).
-
----
-
-## 3. Scientific Interpretation & Dormancy Evaluation
-
-1. **Safety and Mechanism Correctness are Proven:**
-   `EMERGENCY_FEED_PURCHASE` is causally sound, zero-residual in counterfactual prediction, and safe across all 71,900 turns. When activated, it prevented catastrophic animal escapes and yielded net profit without collateral damage.
-2. **The ITT Power Dilemma:**
-   The V3 baseline agent rarely buys large herds that exhaust feed mid-game. In a random sample of 50 contiguous seeds, animal starvation occurred in only 2 seeds ($4\%$). On the remaining 48 seeds, delta was identically $\$0.00$. This $96\%$ dormancy dilutes the ITT statistical signal, yielding a lower 95% bound of $-\$0.30$.
-3. **Preregistered Decision Rule:**
-   Section 6.3 of the frozen protocol specifies that trials with $< 5$ active commits must be classified as **`DORMANT_INCONCLUSIVE`** and retained in quarantine. We strictly respect this rule without post-hoc conditioning or threshold relaxation.
+### 2.4 Task Decomposition Integrations
+- `feed_security.py`:
+  `decompose_feed_rescue_to_tasks` (shed pickup $\to$ animal feed delivery).
+- `conversions.py`:
+  `decompose_conversion_to_tasks` for multi-worker conversion execution.
 
 ---
 
-## 4. Key Artifacts & Deliverables
+## 3. Adversarial Micro-Validation Matrix (`MW-01` to `MW-20`)
 
-- **Final Scientific Report:** [`reports/EXP_AEC_004_FINAL_REPORT.md`](file:///C:/Users/Sundareswaran/Kagriculture/reports/EXP_AEC_004_FINAL_REPORT.md)
-- **Independent Forensic Audit:** [`reports/EXP_AEC_004_AUDIT.md`](file:///C:/Users/Sundareswaran/Kagriculture/reports/EXP_AEC_004_AUDIT.md)
-- **Readiness & Certification:** [`reports/EXP_AEC_004_READINESS.md`](file:///C:/Users/Sundareswaran/Kagriculture/reports/EXP_AEC_004_READINESS.md)
-- **Machine-Readable Summary:** [`experiments/EXP-AEC-004/SUMMARY.json`](file:///C:/Users/Sundareswaran/Kagriculture/experiments/EXP-AEC-004/SUMMARY.json) and [`results/EXP_AEC_004_SUMMARY.json`](file:///C:/Users/Sundareswaran/Kagriculture/results/EXP_AEC_004_SUMMARY.json)
-- **Raw Match Deltas:** [`experiments/EXP-AEC-004/PAIRED_DELTAS.csv`](file:///C:/Users/Sundareswaran/Kagriculture/experiments/EXP-AEC-004/PAIRED_DELTAS.csv) and [`results/EXP_AEC_004_MATCHES.csv`](file:///C:/Users/Sundareswaran/Kagriculture/results/EXP_AEC_004_MATCHES.csv)
-- **Committed Patches Provenance:** [`experiments/EXP-AEC-004/COMMITTED_PATCHES.csv`](file:///C:/Users/Sundareswaran/Kagriculture/experiments/EXP-AEC-004/COMMITTED_PATCHES.csv)
-- **Execution Telemetry:** [`experiments/EXP-AEC-004/TELEMETRY_EVENTS.csv`](file:///C:/Users/Sundareswaran/Kagriculture/experiments/EXP-AEC-004/TELEMETRY_EVENTS.csv)
-- **Execution Manifest:** [`experiments/EXP-AEC-004/EXECUTION_MANIFEST.json`](file:///C:/Users/Sundareswaran/Kagriculture/experiments/EXP-AEC-004/EXECUTION_MANIFEST.json)
-- **Audit Script:** [`scripts/audit_exp_aec_004.py`](file:///C:/Users/Sundareswaran/Kagriculture/scripts/audit_exp_aec_004.py)
+All 20 predeclared adversarial scenarios passed with 100% compliance in `tests/aec/test_phase003_multiworker.py`:
+
+| Scenario | Description | Key Mechanism Tested | Verdict |
+| :--- | :--- | :--- | :---: |
+| **MW-01** | Two workers, urgent feed + crop harvest | Non-critical worker assigned feed; harvest preserved | **PASSED** |
+| **MW-02** | Only primary worker can reach feed | Primary worker assigned; remaining schedule preserved | **PASSED** |
+| **MW-03** | Simultaneous impossible obligations | Conflict detected; fail-closed abstention | **PASSED** |
+| **MW-04** | Farmer diverted from harvest | Hand 1 absorbs feed task, preventing cannibalization | **PASSED** |
+| **MW-05** | Route swap collision | Space-time reservation table detects and reroutes | **PASSED** |
+| **MW-06** | Direct worker-to-worker handoff | Physically illegal handoff rejected (must use shed) | **PASSED** |
+| **MW-07** | Local gain destroying market sale | Dependency closure catches deadline failure | **PASSED** |
+| **MW-08** | Two feasible assignments | Dominance pruner selects obligation-preserving plan | **PASSED** |
+| **MW-09** | Emergency feed safe with Hand 1 | Safe 2-worker configuration discovered | **PASSED** |
+| **MW-10** | Resource conversion with Hand 1 | Multi-worker execution ready without cannibalization | **PASSED** |
+| **MW-11** | Building tile contention | Space-time table enforces single-worker exclusivity | **PASSED** |
+| **MW-12** | Resource double-allocation | Resource locking prevents second worker pickup | **PASSED** |
+| **MW-13** | Worker unavailable mid-route | Escalates and abstains to backbone | **PASSED** |
+| **MW-14** | Terminal task cannot complete | Rejection due to horizon deadline breach | **PASSED** |
+| **MW-15** | Optional baseline task replacement | Optional weed dig superseded by high-value duty | **PASSED** |
+| **MW-16** | Mandatory baseline task displacement | Rejection certified when no peer can absorb | **PASSED** |
+| **MW-17** | Cash timing dependency | Task DAG enforces prerequisite funding order | **PASSED** |
+| **MW-18** | Shed arrival overflow | Capacity check rejects cargo exceeding shed cap | **PASSED** |
+| **MW-19** | 5 consecutive identical runs | Bit-exact deterministic reproducibility | **PASSED** |
+| **MW-20** | 3 active workers | Deterministic bounded assignment across 3 workers | **PASSED** |
+
+---
+
+## 4. Performance & Latency Benchmarks
+
+Measured on the development environment across 500–1000 trials (`scratch/benchmark_phase003.py`):
+
+```
+Task Graph Construction (1000 trials):  mean=0.0059ms, med=0.0053ms, p95=0.0087ms
+Dominance Pruning (1000 trials):        mean=0.0007ms, med=0.0007ms, p95=0.0008ms
+Route & Spacetime Pathfinding (500):    mean=0.0712ms, med=0.0607ms, p95=0.1167ms
+Coordinator E2E (1 Worker, 500 trials): mean=0.3539ms, med=0.3275ms, p95=0.5400ms
+Coordinator E2E (2 Workers, 500 trials):mean=0.3736ms, med=0.3489ms, p95=0.4905ms
+Coordinator E2E (3 Workers, 500 trials):mean=0.6720ms, med=0.6189ms, p95=0.9983ms
+```
+
+---
+
+## 5. Full Repository Regression Status
+
+```powershell
+pytest tests/ -q
+319 passed in 1.93s
+```
+- Total test count: **319 passed** (0 failures, 0 regressions).
+- Prospective matches run: **0**.
+- Live quarantine status: `RESOURCE_CONVERSION` and `EMERGENCY_FEED_PURCHASE` remain strictly **QUARANTINED**.
