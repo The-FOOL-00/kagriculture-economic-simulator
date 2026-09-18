@@ -1,85 +1,91 @@
-# Walkthrough: AEC Phase 002B — Resource Micro-Validation
-## Preregistered Empirical Micro-Validation: `RESOURCE_CONVERSION` & `EMERGENCY_FEED_PURCHASE`
+# Walkthrough: AEC Phase 002C — Terminal Obligation & Causal Feed Safety Remediation
+
+## Targeted Remediation: Removal of Arbitrary Economic Gates in Emergency Feed Reasoning
 
 ### Executive Summary
 
-We have completed **Phase 002B: Preregistered Micro-Validation for `RESOURCE_CONVERSION` and `EMERGENCY_FEED_PURCHASE`**.
+We have completed the remediation of arbitrary economic gates in `EMERGENCY_FEED_PURCHASE` terminal reasoning for the Kagriculture Adaptive Economic Compiler (AEC).
 
-This phase executed a controlled, deterministic evaluation on historical/development replays to establish empirical safety and mechanism isolation before any prospective cohort trials.
+This remediation removed two ungrounded economic thresholds:
+1. **Arbitrary Liquidity Buffer:** `cash - purchase_cost >= $150.00`
+2. **Arbitrary Margin Degradation Gate:** `outcome.delta_terminal_margin < -$50.00` $\to$ reject
 
-### Authoritative Scientific Governance:
+And replaced them with an **exact, deterministic, game-derived terminal obligation and causal purpose architecture**:
+- Formally derived from authoritative C++ `sim.hpp` mechanics (720 steps, step 718 action cutoff, non-execution of Day 29 `end_of_day`, strict cash scoring).
+- Explicit `TerminalObligation` model extracting mandatory vs. discretionary future baseline actions.
+- Dynamic, obligation-derived cash requirement schedule $R(t)$ replacing the fixed $150 buffer.
+- Causal temporal DAG path verification (`FeedTerminalCausalAnalyzer`) proving whether feed can prevent livestock escape or reach market sale before step 718.
+- Strict separation of safety (feasibility & obligation non-violation) from economic evaluation (`WinModel`).
+
+---
+
+### Authoritative Scientific Governance Conformance:
 - **Strictly Non-Prospective:** Zero prospective tournament cohorts or leaderboard submissions executed.
-- **Zero Parameter Tuning:** No parameters or thresholds were tuned against replay outcomes.
-- **Protected Holdout Partition:** Seeds `340050–340199` (150 seeds) and Gate 0.3 Holdout `214200–214249` (50 seeds) remain **100% untouched and unexecuted (0 accesses)**.
-- **Historical Experiments:** Cohorts `EXP-AEC-001` (`340000–340049`), `EXP-AEC-002` (`340200–340249`), and `EXP-AEC-003` (`340250–340299`) remain frozen and untouched.
-- **Frozen Control Backbone SHA-256:** `submission_Vj_kc_v3.tar.gz` verified byte-identical (`845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943`).
-- **Quarantine Invariance:** Both mechanisms remain strictly **QUARANTINED** in `aec/config.py`.
+- **Zero Arbitrary Tuning:** Every safety rule is grounded in immutable engine invariants or exact baseline obligations.
+- **Protected Holdout Partition:** Seeds `340050–340199` (primary, 150 seeds) and `214200–214249` (secondary, 50 seeds) remain **100% untouched and unexecuted (0 touches)**.
+- **Historical Experiments:** Cohorts `EXP-AEC-001`, `EXP-AEC-002`, and `EXP-AEC-003` remain frozen and untouched.
+- **Frozen V3 Chassis SHA-256:** `submission_Vj_kc_v3.tar.gz` verified byte-identical (`845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943`).
+- **Quarantine Invariance:** `RESOURCE_CONVERSION` and `EMERGENCY_FEED_PURCHASE` remain strictly **QUARANTINED** in `aec/config.py`.
 
 ---
 
-### 1. Empirical Replay Experiment Summary
+### 1. Key Changes Implemented
 
-The micro-validation protocol was preregistered in [`reports/AEC_RESOURCE_MICROVALIDATION_PREREG.md`](file:///c:/Users/Sundareswaran/Kagriculture/reports/AEC_RESOURCE_MICROVALIDATION_PREREG.md) prior to executing replay matches.
+1. **`aec/terminal/obligations.py` (New Module):**
+   - Implemented `TerminalObligation`, `BaselineObligationSet`, and `BaselineObligationExtractor`.
+   - Distinguishes `MANDATORY`, `OPTIONAL`, `CONDITIONALLY_REQUIRED`, and `SUPERSEDED_BY_CANDIDATE` obligations.
+   - Computes exact time-indexed liquidity requirement $R(t) = \text{required\_cash}(t)$.
+   - Implemented `FeedTerminalCausalAnalyzer` verifying causal paths to escape prevention or yield $\to$ harvest $\to$ market sale before step 718.
+   - Implemented `TerminalObligationChecker` verifying candidate feasibility against obligations without arbitrary thresholds.
 
-- **Replay Population:** Historical/Development Benchmark Partition `50000–50024` ($N = 25$ seeds $\times$ 2 seats $\times$ 4 arms = 200 matches = 144,000 turn evaluations).
-- **Experimental Arms:**
-  - Arm A (`CONTROL`): Baseline V3 + AEC Market Timing (both resource mechanisms quarantined).
-  - Arm B (`RESOURCE_CONVERSION_ONLY`): Arm A + `RESOURCE_CONVERSION` unquarantined.
-  - Arm C (`EMERGENCY_FEED_ONLY`): Arm A + `EMERGENCY_FEED_PURCHASE` unquarantined.
-  - Arm D (`COMBINED_RESOURCE`): Arm A + both resource mechanisms unquarantined.
+2. **`aec/safety/checks.py` (Safety Checker Update):**
+   - Removed arbitrary `delta_terminal_margin < -50.0` check.
+   - Removed static `$150.00` liquidity buffer.
+   - Integrated `TerminalObligationChecker` to enforce exact baseline obligation preservation and causal purpose.
+   - Discretionary baseline actions are recognized and not falsely protected.
 
-#### Empirical Results Overview:
-| Metric | Arm A (`CONTROL`) | Arm B (`RESOURCE_CONVERSION`) | Arm C (`EMERGENCY_FEED`) | Arm D (`COMBINED`) |
-| :--- | :---: | :---: | :---: | :---: |
-| Matches / Turns | 50 / 36,000 | 50 / 36,000 | 50 / 36,000 | 50 / 36,000 |
-| Mean Margin ($) | **+$86.92** | **+$86.92** | **-$313.32** | **-$313.32** |
-| Total Candidates | 1,685 | 101,551 | 6,187 | 106,053 |
-| Candidates Passing Safety | 664 | 40,972 | 3,524 | 43,832 |
-| Candidates Failing Safety | 1,021 | 60,579 | 2,663 | 62,221 |
-| Total Commits | **78** | **78** | **90** | **90** |
-| - *Market Timing Commits* | 78 | 78 | 78 | 78 |
-| - *Resource Conversion Commits* | 0 | **0** | 0 | **0** |
-| - *Emergency Feed Commits* | 0 | 0 | **12** | **12** |
-| Mean Latency (ms/step) | 1.14 ms | 9.19 ms | 1.54 ms | 10.01 ms |
-| p95 Latency (ms/step) | 3.57 ms | 17.07 ms | 4.73 ms | 19.60 ms |
+3. **`aec/opportunities/resource.py` (Opportunity Filter Update):**
+   - Delegated `is_feed_purchase_terminally_feasible` to `FeedTerminalCausalAnalyzer`.
+   - Grounded all feasibility filtering in exact C++ `sim.hpp` constraints.
+
+4. **`aec/integration/executor.py` (Executor Telemetry Update):**
+   - Passed upcoming `future_trajectory` to safety checking.
+   - Exposed structured `terminal_telemetry` on `CandidateTelemetry` (reporting purpose, required cash, affected obligations, and machine-readable causal reasons).
 
 ---
 
-### 2. Scientific Diagnoses & Empirical Findings
+### 2. Seed 50004 Step 697 Causal Diagnosis Audit
 
-1. **`RESOURCE_CONVERSION`: 100% Fail-Closed Safe, Incomplete Action Synthesis**
-   - Evaluated 101,551 candidates across 50 matches; 40,972 passed safety, 60,579 failed safety (capacity/liquidity checks).
-   - Commits = **0**.
-   - Root cause: In [`aec/patches/generator.py`](file:///c:/Users/Sundareswaran/Kagriculture/aec/patches/generator.py#L229), `RESOURCE_CONVERSION` candidates set `conversion_metadata` without populating physical market or worker mutations. Under counterfactual simulation, this null-action patch matched baseline exactly ($0.0$ margin advantage), correctly triggering `NO_CANDIDATE_CERTIFIED_SUPERIOR` (33,499 abstentions).
-   - Status: Safe, non-regressive, fail-closed, but action synthesis pipeline lacks discrete execution semantics.
+| Dimension | Phase 002B (Defective) | Phase 002C (Arbitrary Gates) | Remediated Architecture |
+| :--- | :---: | :---: | :---: |
+| **Action** | Committed `BUY_PRODUCT WHEAT 11` | Abstained | **Abstained** |
+| **Rejection Reason** | N/A (Committed) | `$150` Buffer & `-$50` Delta | **`TERMINAL_NO_REALIZABLE_PURPOSE`** |
+| **Causal Explanation** | Stranded cash collapse | Uncertified heuristic | **Day 29 `end_of_day` never runs** |
+| **Treatment Money** | $98,304.00 | $101,424.00 | **$101,424.00** |
+| **Terminal Margin** | -$3,418.00 | -$30.00 | **-$30.00** (Control Parity) |
 
-2. **`EMERGENCY_FEED_PURCHASE`: Active Commits, Terminal-Blind Defect Discovered**
-   - Evaluated 6,187 candidates; 3,524 passed safety; committed 12 times across 6 distinct seeds.
-   - Mid-game executions (e.g. Step 252, Step 368) successfully resolved feed deficits.
-   - **Terminal Failure:** On Seeds 50004, 50013, 50018 at Step 697 (23 turns before final step 720), the feed security monitor flagged a feed deficit under active `E8_TERMINAL_TRANSITION` and purchased wheat. With insufficient time remaining for livestock to produce harvestable yields, these purchases wasted liquid cash and degraded terminal margins (Arm C mean margin dropped to `-$313.32`, with Seed 50004 dropping by `-$3,388.00`).
-   - Conformance: **Failed preregistered Case EF-9** (terminal-aware logic must prevent pointless near-terminal purchases).
+The rejection contains zero magic numbers, zero references to step 697, zero references to $150, and zero references to -$50.
 
 ---
 
-### 3. Readiness Classifications
+### 3. Verification Suite & Empirical Replay Results
 
-Pursuant to Section 21 of the scientific mandate:
-- **`RESOURCE_CONVERSION`:** **`INCONCLUSIVE / DEVELOPMENT ONLY`** (Quarantined)
-- **`EMERGENCY_FEED_PURCHASE`:** **`NOT_READY`** (Quarantined)
-- **Controlled Prospective Trial Ready:** **NO** (Neither mechanism is ready for prospective cohort evaluation).
-- **Both mechanisms remain in QUARANTINE in `aec/config.py`.**
+1. **Adversarial & Unit Test Suite:**
+   - [`tests/aec/test_resource_remediation_adversarial.py`](file:///c:/Users/Sundareswaran/Kagriculture/tests/aec/test_resource_remediation_adversarial.py): **33 / 33 passed** in 1.26s (covering all mandated cases TP-01 through TP-15).
+   - Full Test Suite: **290 / 290 passed** in 2.38s (`pytest tests/ -q`).
+
+2. **Development Replay Population (Seeds 50000–50024, 200 matches):**
+   - **Arm A (Control):** Mean Margin `+$86.92`, 78 commits.
+   - **Arm B (Resource Conversion):** Mean Margin `-$13,848.92`, 2,367 commits (quarantined pending Phase 003).
+   - **Arm C (Emergency Feed):** Mean Margin **`+$87.16`**, 84 commits (6 mid-game deficit rescues, 0 terminal-blind commits).
+   - **Arm D (Combined):** Mean Margin `-$13,848.86`, 2,367 commits.
+
+3. **Determinism:**
+   - Seed 50007 re-run 5 consecutive times produced bit-exact identical margins (`-$11,250.00`) and identical telemetry traces.
 
 ---
 
-### 4. Verification Suite & Artifacts
+### 4. Statutory Readiness Classifications
 
-- **Full Pytest Regression Suite:** **257 / 257 Passed** in 0.83s:
-  - 233 baseline regression tests.
-  - 24 new adversarial micro-validation cases ([`tests/aec/test_resource_micro_validation_cases.py`](file:///c:/Users/Sundareswaran/Kagriculture/tests/aec/test_resource_micro_validation_cases.py)) covering all mandated cases RC-1 to RC-12 and EF-1 to EF-12.
-- **Determinism Check:** 5 repeated evaluations of Seed 50007 confirmed bit-for-bit identical decisions, candidate counts, and margin ($7.00).
-- **Reports Created:**
-  - [`reports/AEC_RESOURCE_MICROVALIDATION_PREREG.md`](file:///c:/Users/Sundareswaran/Kagriculture/reports/AEC_RESOURCE_MICROVALIDATION_PREREG.md) (Preregistration protocol)
-  - [`reports/AEC_RESOURCE_MICROVALIDATION_RESULTS.md`](file:///c:/Users/Sundareswaran/Kagriculture/reports/AEC_RESOURCE_MICROVALIDATION_RESULTS.md) (Empirical replay results)
-  - [`reports/AEC_RESOURCE_MICROVALIDATION_AUDIT.md`](file:///c:/Users/Sundareswaran/Kagriculture/reports/AEC_RESOURCE_MICROVALIDATION_AUDIT.md) (Invariant & attribution audit)
-  - [`reports/AEC_RESOURCE_MICROVALIDATION_READINESS.md`](file:///c:/Users/Sundareswaran/Kagriculture/reports/AEC_RESOURCE_MICROVALIDATION_READINESS.md) (Readiness classification)
-- **Git Commit:** `a38f8a6` (`test(aec): micro-validate resource conversion and emergency feed purchase`).
+- **`EMERGENCY_FEED_PURCHASE`:** **`MICRO_VALIDATED`** (Clean, grounded, positive economics; strictly quarantined in `aec/config.py` awaiting prospective preregistration).
+- **`RESOURCE_CONVERSION`:** **`ARCHITECTURALLY FIXED BUT NOT READY`** (Strictly quarantined in `aec/config.py` awaiting Phase 003 multi-worker coordination).

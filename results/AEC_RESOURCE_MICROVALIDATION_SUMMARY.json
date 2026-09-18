@@ -20,89 +20,91 @@
       "SCIENTIFIC_QUARANTINE": 122,
       "NO_FEASIBLE_CANDIDATE_PATCHES": 6545
     },
-    "mean_latency_ms": 1.1407579443575475,
-    "p95_latency_ms": 3.574262498113967,
-    "elapsed_seconds": 68.47738899999968,
+    "mean_latency_ms": 1.6778891321276175,
+    "p95_latency_ms": 5.082168500028958,
+    "elapsed_seconds": 100.09760919999985,
     "matches_count": 50
   },
   "RESOURCE_CONVERSION_ONLY": {
     "total_matches": 50,
     "total_turns": 36000,
-    "mean_terminal_margin": 86.92,
-    "std_terminal_margin": 254.15104485325259,
-    "median_terminal_margin": 17.0,
-    "total_candidates": 101551,
+    "mean_terminal_margin": -13848.92,
+    "std_terminal_margin": 4955.861002247743,
+    "median_terminal_margin": -13003.5,
+    "total_candidates": 102144,
     "total_simulations": 0,
-    "total_safety_passes": 40972,
-    "total_safety_failures": 60579,
-    "total_commits": 78,
+    "total_safety_passes": 24557,
+    "total_safety_failures": 77587,
+    "total_commits": 2367,
     "commits_by_mechanism": {
-      "DEPENDENCY_AWARE_MARKET_TIMING": 78
+      "RESOURCE_CONVERSION": 2291,
+      "DEPENDENCY_AWARE_MARKET_TIMING": 76
     },
     "abstains_by_reason": {
       "NO_EVENT_FAST_PATH": 550,
-      "NO_CANDIDATE_CERTIFIED_SUPERIOR": 33499,
-      "NO_OPPORTUNITIES_FOUND": 350,
-      "SCIENTIFIC_QUARANTINE": 122,
-      "NO_FEASIBLE_CANDIDATE_PATCHES": 1351
+      "NO_CANDIDATE_CERTIFIED_SUPERIOR": 31060,
+      "NO_OPPORTUNITIES_FOUND": 508,
+      "SCIENTIFIC_QUARANTINE": 100,
+      "NO_FEASIBLE_CANDIDATE_PATCHES": 1365
     },
-    "mean_latency_ms": 9.188529162714183,
-    "p95_latency_ms": 17.072055501175782,
-    "elapsed_seconds": 362.023588,
+    "mean_latency_ms": 11.943427705145764,
+    "p95_latency_ms": 23.686901999996053,
+    "elapsed_seconds": 475.086941,
     "matches_count": 50
   },
   "EMERGENCY_FEED_ONLY": {
     "total_matches": 50,
     "total_turns": 36000,
-    "mean_terminal_margin": -313.32,
-    "std_terminal_margin": 1248.7325484666442,
+    "mean_terminal_margin": 87.16,
+    "std_terminal_margin": 254.13936019436267,
     "median_terminal_margin": 18.0,
-    "total_candidates": 6187,
+    "total_candidates": 5477,
     "total_simulations": 0,
-    "total_safety_passes": 3524,
-    "total_safety_failures": 2663,
-    "total_commits": 90,
+    "total_safety_passes": 1888,
+    "total_safety_failures": 3589,
+    "total_commits": 84,
     "commits_by_mechanism": {
-      "EMERGENCY_FEED_PURCHASE": 12,
-      "DEPENDENCY_AWARE_MARKET_TIMING": 78
+      "DEPENDENCY_AWARE_MARKET_TIMING": 78,
+      "EMERGENCY_FEED_PURCHASE": 6
     },
     "abstains_by_reason": {
       "NO_EVENT_FAST_PATH": 550,
-      "NO_OPPORTUNITIES_FOUND": 23896,
-      "NO_CANDIDATE_CERTIFIED_SUPERIOR": 5494,
+      "NO_OPPORTUNITIES_FOUND": 23876,
+      "NO_CANDIDATE_CERTIFIED_SUPERIOR": 4797,
       "SCIENTIFIC_QUARANTINE": 122,
-      "NO_FEASIBLE_CANDIDATE_PATCHES": 5798
+      "NO_FEASIBLE_CANDIDATE_PATCHES": 6521
     },
-    "mean_latency_ms": 1.536825098744389,
-    "p95_latency_ms": 4.7265845002220885,
-    "elapsed_seconds": 85.37690989999828,
+    "mean_latency_ms": 2.2534537385254656,
+    "p95_latency_ms": 7.842665500055546,
+    "elapsed_seconds": 121.5766008999999,
     "matches_count": 50
   },
   "COMBINED_RESOURCE": {
     "total_matches": 50,
     "total_turns": 36000,
-    "mean_terminal_margin": -313.32,
-    "std_terminal_margin": 1248.7325484666442,
-    "median_terminal_margin": 18.0,
-    "total_candidates": 106053,
+    "mean_terminal_margin": -13848.86,
+    "std_terminal_margin": 4955.875111461143,
+    "median_terminal_margin": -13003.5,
+    "total_candidates": 104985,
     "total_simulations": 0,
-    "total_safety_passes": 43832,
-    "total_safety_failures": 62221,
-    "total_commits": 90,
+    "total_safety_passes": 25866,
+    "total_safety_failures": 79119,
+    "total_commits": 2367,
     "commits_by_mechanism": {
-      "EMERGENCY_FEED_PURCHASE": 12,
-      "DEPENDENCY_AWARE_MARKET_TIMING": 78
+      "RESOURCE_CONVERSION": 2290,
+      "DEPENDENCY_AWARE_MARKET_TIMING": 76,
+      "EMERGENCY_FEED_PURCHASE": 1
     },
     "abstains_by_reason": {
       "NO_EVENT_FAST_PATH": 550,
-      "NO_CANDIDATE_CERTIFIED_SUPERIOR": 34510,
-      "NO_OPPORTUNITIES_FOUND": 50,
-      "SCIENTIFIC_QUARANTINE": 122,
-      "NO_FEASIBLE_CANDIDATE_PATCHES": 628
+      "NO_CANDIDATE_CERTIFIED_SUPERIOR": 31410,
+      "NO_OPPORTUNITIES_FOUND": 158,
+      "SCIENTIFIC_QUARANTINE": 100,
+      "NO_FEASIBLE_CANDIDATE_PATCHES": 1365
     },
-    "mean_latency_ms": 10.005574556337596,
-    "p95_latency_ms": 19.604159500868263,
-    "elapsed_seconds": 393.6750237999986,
+    "mean_latency_ms": 12.033135821974927,
+    "p95_latency_ms": 22.206561999978476,
+    "elapsed_seconds": 477.3226244000002,
     "matches_count": 50
   }
 }
