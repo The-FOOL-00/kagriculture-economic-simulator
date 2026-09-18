@@ -1,0 +1,80 @@
+{
+  "cohort": {
+    "start": 50000,
+    "end": 50024,
+    "count": 25
+  },
+  "v3_chassis_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "total_ground_truth_states_evaluated": 100,
+  "total_sign_agreements": 47,
+  "overall_sign_agreement_rate": 0.47,
+  "breakdown_by_case_type": {
+    "IDLE_WORKER_HARVEST": {
+      "total": 25,
+      "sign_agreed": 6,
+      "mean_exact_delta": -7452.32,
+      "mean_engine_net": 60.0
+    },
+    "PRODUCTIVE_WORKER_DIVERSION": {
+      "total": 25,
+      "sign_agreed": 0,
+      "mean_exact_delta": -7669.4,
+      "mean_engine_net": 0.0
+    },
+    "ZERO_DELTA_NEUTRAL": {
+      "total": 25,
+      "sign_agreed": 25
+    },
+    "TERMINAL_HARVEST": {
+      "total": 25,
+      "sign_agreed": 16
+    }
+  },
+  "genuine_harvest_candidates_discovered": {
+    "total_candidates": 89590,
+    "idle_worker_candidates": 3734,
+    "busy_worker_candidates": 85856,
+    "immediately_harvestable_dist_0": 18376,
+    "route_compression_dist_1_3": 71214
+  },
+  "latency_by_level": {
+    "Level_0": {
+      "invocations": 3461,
+      "p50_ms": 0.007,
+      "p95_ms": 0.015,
+      "p99_ms": 0.023,
+      "max_ms": 0.179
+    },
+    "Level_1": {
+      "invocations": 1785,
+      "p50_ms": 0.144,
+      "p95_ms": 0.248,
+      "p99_ms": 0.397,
+      "max_ms": 0.782
+    },
+    "Level_2": {
+      "invocations": 9795,
+      "p50_ms": 3.486,
+      "p95_ms": 7.935,
+      "p99_ms": 9.91,
+      "max_ms": 46.009
+    },
+    "Level_3": {
+      "invocations": 71092,
+      "p50_ms": 3.655,
+      "p95_ms": 10.672,
+      "p99_ms": 13.361,
+      "max_ms": 96.777
+    },
+    "Level_4": {
+      "invocations": 3557,
+      "p50_ms": 2.528,
+      "p95_ms": 8.288,
+      "p99_ms": 11.68,
+      "max_ms": 21.553
+    }
+  },
+  "holdout_protection": "VERIFIED_UNTOUCHED",
+  "prospective_cohort": "VERIFIED_UNTOUCHED",
+  "resource_conversion_status": "QUARANTINED"
+}
