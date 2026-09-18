@@ -108,3 +108,49 @@ Executed across development seeds `50000–50024` (25 seeds $\times$ 2 mirror se
 4. **Safety Violations**: **0** across all 200 matches (0 collisions, 0 illegal handoffs, 0 shed overflows).
 5. **Turn Latency**: Mean treatment overhead < 17ms (p95 < 20ms).
 6. **Quarantine Covenant**: Both `RESOURCE_CONVERSION` and `EMERGENCY_FEED_PURCHASE` remain strictly **QUARANTINED** in `aec/config.py`.
+
+---
+
+## 6. AEC Phase 004B: Resource Conversion Remediation & Replay Evaluation
+
+### 6.1 Architectural Remediation Implemented
+1. **Working-Capital Liquidity & Causal Realizability (`aec/resource/liquidity.py`)**:
+   - `ConversionLiquidityProfile`: Dynamic model capturing upfront cash, intermediate requirements, downstream cash release, recovery timing, and mandatory cash obligations.
+   - `ConversionLiquidityAnalyzer`: Step-by-step cash solvency simulation enforcing $C(\tau) \ge 0$ against baseline mandatory obligations extracted by `BaselineObligationExtractor`.
+   - `ConversionCausalPathType`: Strictly enforced 6 valid value paths, eliminating ungrounded transformations.
+2. **Strict Auxiliary Worker Preconditions & Farmer Fallback Guard (`aec/resource/labor.py`)**:
+   - `ConversionLaborClass`: Formal classification (`NO_WORKER_REQUIRED`, `PRIMARY_WORKER_REQUIRED`, `AUXILIARY_WORKER_PREFERRED`, `AUXILIARY_WORKER_REQUIRED`).
+   - `ConversionLaborPreconditionValidator`: Day-boundary contract expiry protection (`step % 24 == 23`), strict auxiliary dispatch, and formal 7-condition Farmer Fallback Rule.
+3. **Opportunity Family Audit & Isolation**:
+   - Excluded pure market seed purchases (`BUY_SEED CARROT`) from `RESOURCE_CONVERSION` and routed them to `RESOURCE_ACQUISITION`.
+   - Attached comprehensive machine-readable `attribution_info` to all emitted patches.
+4. **Dominance Selector Enhancements (`aec/coordination/dominance.py`)**:
+   - Integrated auxiliary worker preference and completion timing dominance.
+
+### 6.2 Micro-Validation Test Battery (RC-R1..20)
+All 20 adversarial fixtures in [`tests/aec/test_resource_remediation_fixtures.py`](file:///c:/Users/Sundareswaran/Kagriculture/tests/aec/test_resource_remediation_fixtures.py) passed in 0.14s.  
+**Full Repository Regression Suite**: **354 passed** in 2.08s.
+
+### 6.3 Authoritative Phase 004B Replay Evaluation (200 Matches)
+
+| Experimental Arm | Matches | Mean Margin ($) | Median Margin ($) | ITT Mean $\Delta$ vs CONTROL ($) | Commits | Farmer Displaced | Aux Absorbed | Wins / Losses / Ties |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Arm A (CONTROL)** | 50 | **+$86.92** | +$17.00 | Baseline | 78 | **0** | 0 | — |
+| **Arm B (RESOURCE_CONV)** | 50 | **-$1330.62** | -$8.00 | **-$1417.54** | 362 | **0** | **288** | 0 / 14 / **36** |
+| **Arm C (EMERGENCY_FEED)** | 50 | **+$87.24** | +$18.00 | **+$0.32** | 82 | **0** | 4 | 2 / 2 / **46** |
+| **Arm D (COMBINED)** | 50 | **-$1330.30** | -$8.00 | **-$1417.22** | 366 | **0** | **292** | 2 / 16 / **32** |
+
+### 6.4 Key Forensic Findings & Section 36 Governance Decision
+1. **Defects Repaired**:
+   - Farmer displacement dropped from 24 (Phase 004) to **0** (Phase 004B).
+   - Market seed purchases under conversion dropped from 184 (Phase 004) to **0** (Phase 004B).
+   - 100% of physical conversions absorbed by auxiliary hands.
+2. **Economic Diagnosis**:
+   - In 36 / 50 matches (72%), `RESOURCE_CONVERSION` tied CONTROL exactly ($\Delta = \$0.00$).
+   - In 14 matches across 7 seeds, Hand 1 was diverted from high-value cash crop cultivation (Strawberry/Tomato/Melon) to feed livestock. The opportunity cost of lost agricultural field production exceeds the gross revenue of milk yield ($135).
+3. **Section 36 Decision**:
+   - In accordance with Section 36, no ad-hoc heuristics or tuning will be added.
+   - `RESOURCE_CONVERSION` is formally classified as **NOT READY FOR PROSPECTIVE DEPLOYMENT**.
+   - Live production status remains **PERMANENTLY QUARANTINED**.
+   - Zero prospective matches were run (`340300–340349` untouched).
+
