@@ -202,4 +202,62 @@ Executed passive diagnostic evaluation across 25 development seeds (`50000–500
    - `LaborOpportunityCostEngine`: **READY FOR OFFLINE CONSUMPTION / MICRO-VALIDATED**.
    - `RESOURCE_CONVERSION`: **NOT READY / QUARANTINED** (no live activation attempted).
 
+---
 
+## 8. AEC Phase 005B: Labor Opportunity Ground-Truth Audit & Harvest Opportunity Discovery
+
+### 8.1 Forensic Audit & Reconciliation of Phase 005 Claims
+1. **Exact 888-Record Reconciliation**:
+   - Independently reproduced from `results/PHASE005_LABOR_DIAGNOSTIC.csv`:
+     $$\sum \text{Records} = 576 \text{ (RESOURCE\_CONVERSION)} + 304 \text{ (MARKET\_TIMING)} + 8 \text{ (EMERGENCY\_FEED)} = 888$$
+   - **Approved (440)**: 100% of approved records were Resource Conversion (`FEED`) records (400 Level 1, 40 Level 2).
+   - **Rejected (448)**: 136 Resource Conversion + 304 Market Timing + 8 Emergency Feed.
+   - **Correction of Harvest Claim**: Phase 005 claimed 440 opportunities where workers were idle near cash crops. The raw data showed **zero harvest records were approved in Phase 005**; the 440 approved records were animal conversions.
+2. **Breakdown of 576 Resource Conversion Records**:
+   - **Idle Auxiliary Workers (`PASS`)**: 548 records (440 approved, 108 rejected at Level 3 where candidate action was a physical no-op).
+   - **Busy Auxiliary Workers (`Active`)**: 28 records (20 `BASE_1_157_CARE`, 4 `BASE_1_331_CARE`, 4 `BASE_1_650_FEED_ANIMAL`, all 28 rejected at Level 3).
+   - **Farmer Involvement**: 0 records (all 576 targeted auxiliary Hand 1).
+   - **Peer Absorption**: 40 records (Level 2).
+
+### 8.2 Engine Reformulation & Root Cause Corrections
+1. **Biological Asset Double-Counting Fixed (`_estimate_growing_crops_value`)**:
+   - Mature unharvested crops on tiles were previously valued at 100% of product price, canceling out worker inventory gains during harvest and creating phantom opportunity cost. Unharvested crops are now recognized as biological potential requiring harvest labor.
+2. **Terminal Horizon Cutoff Implemented**:
+   - Growing crops that cannot mature before Day 30 (step 720) receive $0.00 valuation.
+3. **Transit Misclassification Resolved**:
+   - Removed `MOVES` from `is_idle_baseline`. Moving workers are in transit and must be simulated forward to measure diversion delay.
+4. **No-Op Phantom Opportunity Cost Fixed**:
+   - When candidate actions fail or produce nothing in simulation, the engine no longer hallucinates opportunity cost from heuristic candidate estimates.
+5. **Circular Import Resolved**:
+   - Replaced eager re-exports in `aec/coordination/__init__.py` with module `__getattr__` lazy loading.
+
+### 8.3 Exact Simulator Ground-Truth Audit (`results/PHASE005_LABOR_GROUND_TRUTH.csv`)
+Executed 100 exact counterfactual game completions in `kagsim` across seeds `50000–50024`:
+- **Overall Sign Agreement**: **47.0%** (47/100).
+- **Neutral States (`ZERO_DELTA_NEUTRAL`)**: **100.0%** (25/25) agreement.
+- **Terminal Harvest**: **64.0%** (16/25) agreement.
+- **Trajectory Desynchronization Finding**: In full 720-step matches, isolated 1-turn worker interventions often cause backpack cargo desynchronization in subsequent baseline turns (mean delta: -$7,452.32), proving that harvest patches must be coupled with return routes (`CoupledPatch`).
+
+### 8.4 Genuine Harvest Opportunity Discovery (`results/PHASE005_HARVEST_CANDIDATES.csv`)
+- **Total Genuine Harvest Opportunities Discovered**: **89,590** across seeds `50000–50024`.
+- **Idle-Worker Harvests**: **3,734** opportunities.
+- **Immediately Harvestable ($D=0$)**: **18,376** instances where worker stands directly on ripe crop.
+- **Route Compression Detours ($D \in [1, 3]$)**: **71,214** instances.
+
+### 8.5 Performance by Valuation Tier (89,690 Invocations)
+- **Level 0 (Feasibility)**: 3,461 calls, p50 = 0.007ms, p95 = 0.015ms, max = 0.179ms.
+- **Level 1 (Local Exact)**: 1,785 calls, p50 = 0.144ms, p95 = 0.248ms, max = 0.782ms.
+- **Level 2 (Broader Trajectory)**: 9,795 calls, p50 = 3.486ms, p95 = 7.935ms, max = 46.009ms.
+- **Level 3 (Simulation Rollout)**: 71,092 calls, p50 = 3.655ms, p95 = 10.672ms, max = 96.777ms.
+- **Level 4 (Full Horizon)**: 3,557 calls, p50 = 2.528ms, p95 = 8.288ms, max = 21.553ms.
+
+### 8.6 Dedicated GT Tests (GT-01 to GT-12) & Regression
+- Implemented `tests/aec/test_phase005b_ground_truth.py` (12/12 PASSED).
+- Full test suite regression: **396/396 PASSED** in 2.08s.
+
+### 8.7 Readiness Classifications
+- **Labor Opportunity Engine**: **VALIDATED WITH QUALIFICATIONS** (valid for local marginal offline gating; isolated 1-turn patches must not bypass coupled return routing).
+- **Harvest Opportunity Family**: **STRUCTURALLY VALID / READY FOR OFFLINE PREREGISTRATION**.
+- **RESOURCE_CONVERSION**: **STRICTLY QUARANTINED**.
+- **V3 Chassis SHA-256**: `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943` (byte-identical).
+- **Holdouts / Prospective Cohort**: **100% UNTOUCHED**.
