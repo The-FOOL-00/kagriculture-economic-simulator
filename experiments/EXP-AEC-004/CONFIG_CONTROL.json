@@ -1,0 +1,36 @@
+{
+  "arm": "CONTROL",
+  "description": "Frozen validated AEC baseline (EXP-AEC-003 lineage) with EMERGENCY_FEED_PURCHASE quarantined",
+  "enabled_mechanisms": [
+    "DEPENDENCY_AWARE_MARKET_TIMING",
+    "TERMINAL_LIQUIDATION",
+    "PHASE_SHUTDOWN"
+  ],
+  "quarantined_mechanisms": [
+    "FRONTLOAD_ORDERS",
+    "LOCAL_WEED_DIG",
+    "DYNAMIC_SHADOW_HARVEST",
+    "CARGO_FERRY_PRIORITY",
+    "OPPONENT_PREEMPT_SELL",
+    "EMERGENCY_FEED_PURCHASE",
+    "RESOURCE_CONVERSION",
+    "TERMINAL_HARVEST_SWEEP",
+    "TOWN_CYCLE"
+  ],
+  "frozen_mode": true,
+  "short_horizon": 6,
+  "normal_horizon": 18,
+  "extended_horizon": 36,
+  "max_opportunities": 16,
+  "max_candidates": 8,
+  "max_simulations": 8,
+  "cash_deviation_threshold": 200.0,
+  "shed_alarm_threshold": 95,
+  "price_shock_relative": 0.25,
+  "opponent_supply_shock_qty": 4,
+  "per_step_latency_limit_ms": 100.0,
+  "fail_closed": true,
+  "backbone_type": "v3",
+  "v3_tarball_path": "submission_Vj_kc_v3.tar.gz",
+  "v3_tarball_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943"
+}

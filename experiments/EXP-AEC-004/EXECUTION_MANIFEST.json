@@ -1,0 +1,106 @@
+{
+  "experiment_id": "EXP-AEC-004",
+  "status": "FROZEN_NOT_LAUNCHED",
+  "directive": "DO_NOT_EXECUTE_WITHOUT_USER_APPROVAL",
+  "timestamp_frozen": "2026-09-18T10:30:00+05:30",
+  "protocol": "PREREG-EXP-AEC-004-20260918-FINAL",
+  "preregistration_document": "reports/EXP_AEC_004_EMERGENCY_FEED_PREREGISTRATION.md",
+  "cohort_audit_document": "reports/EXP_AEC_004_COHORT_AUDIT.md",
+  "prelaunch_audit_document": "reports/EXP_AEC_004_PRELAUNCH_AUDIT.md",
+  "cohort": {
+    "partition_id": "PROSPECTIVE-AEC-004",
+    "seed_start": 340300,
+    "seed_end": 340349,
+    "seed_count": 50,
+    "matches_per_seed": 2,
+    "total_matches": 100,
+    "total_turns": 71900,
+    "crn_design": "MIRROR_SEAT_SWAP",
+    "virgin_certified": true
+  },
+  "holdout_protection": {
+    "locked_holdout_primary": [340050, 340199],
+    "primary_seed_count": 150,
+    "distance_to_primary": 101,
+    "locked_holdout_secondary": [214200, 214249],
+    "secondary_seed_count": 50,
+    "holdout_touched": false
+  },
+  "historical_baselines": {
+    "exp_aec_001_range": [340000, 340049],
+    "exp_aec_002_range": [340200, 340249],
+    "exp_aec_003_range": [340250, 340299],
+    "exp_aec_003_result": "ACCEPTED (mean +$57.36, lower 95% +$23.17, win-rate delta +56.00 pp)"
+  },
+  "control": {
+    "arm": "CONTROL",
+    "backbone_type": "V3",
+    "tarball_path": "submission_Vj_kc_v3.tar.gz",
+    "tarball_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "aec_enabled": true,
+    "enabled_mechanisms": [
+      "DEPENDENCY_AWARE_MARKET_TIMING",
+      "TERMINAL_LIQUIDATION",
+      "PHASE_SHUTDOWN"
+    ],
+    "quarantined_mechanisms": [
+      "FRONTLOAD_ORDERS",
+      "LOCAL_WEED_DIG",
+      "DYNAMIC_SHADOW_HARVEST",
+      "CARGO_FERRY_PRIORITY",
+      "OPPONENT_PREEMPT_SELL",
+      "EMERGENCY_FEED_PURCHASE",
+      "RESOURCE_CONVERSION",
+      "TERMINAL_HARVEST_SWEEP",
+      "TOWN_CYCLE"
+    ]
+  },
+  "treatment": {
+    "arm": "TREATMENT",
+    "backbone_type": "V3",
+    "tarball_path": "submission_Vj_kc_v3.tar.gz",
+    "tarball_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "aec_enabled": true,
+    "active_mechanism": "EMERGENCY_FEED_PURCHASE",
+    "foundation_mechanisms": [
+      "DEPENDENCY_AWARE_MARKET_TIMING",
+      "TERMINAL_LIQUIDATION",
+      "PHASE_SHUTDOWN"
+    ],
+    "enabled_mechanisms": [
+      "DEPENDENCY_AWARE_MARKET_TIMING",
+      "TERMINAL_LIQUIDATION",
+      "PHASE_SHUTDOWN",
+      "EMERGENCY_FEED_PURCHASE"
+    ],
+    "quarantined_mechanisms": [
+      "FRONTLOAD_ORDERS",
+      "LOCAL_WEED_DIG",
+      "DYNAMIC_SHADOW_HARVEST",
+      "CARGO_FERRY_PRIORITY",
+      "OPPONENT_PREEMPT_SELL",
+      "RESOURCE_CONVERSION",
+      "TERMINAL_HARVEST_SWEEP",
+      "TOWN_CYCLE"
+    ],
+    "required_counterfactual_fidelity": "VERIFIED",
+    "reject_fidelity_levels": ["FAILED", "UNKNOWN"]
+  },
+  "primary_hypothesis": {
+    "null_hypothesis_H0": "mu_delta < 0.00",
+    "alternative_hypothesis_H1": "mu_delta >= 0.00",
+    "primary_test": "one_sided_paired_t_test",
+    "alpha": 0.05,
+    "df": 49
+  },
+  "acceptance_criteria": {
+    "GATE_1_zero_safety_violations": true,
+    "GATE_2_zero_shed_overflow": true,
+    "GATE_3_zero_isolation_violations": true,
+    "GATE_4_zero_holdout_touches": true,
+    "GATE_5_v3_chassis_integrity": true,
+    "GATE_6_counterfactual_fidelity_verified": true,
+    "GATE_7_lower_95_bound_margin_delta_min": 0.0,
+    "GATE_8_win_rate_delta_min_pp": -2.0
+  }
+}

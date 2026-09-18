@@ -1,0 +1,42 @@
+[2026-09-18T04:38:47.928639+00:00] ======================================================================
+[2026-09-18T04:38:47.929594+00:00] EXP-AEC-004 RUNNER INITIALIZATION
+[2026-09-18T04:38:47.929968+00:00] ======================================================================
+[2026-09-18T04:38:47.930323+00:00] STAGE 1: Preflight Verification...
+[2026-09-18T04:38:47.931855+00:00] Preflight verified successfully: {'v3_tarball': '845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943', 'config_control_sha': '858b59ad0ab02ca6ae3d3e506fb1c517f29fe8c3088f4315c2e741e95231ed74', 'config_treatment_sha': '56256ef2d1befea4461e2d1f55ce72e0642958ade8313e1e344418856b801fe3', 'manifest_sha': '74d11d5f2f68399d6e8b59b6a82cdf76c2f6a29333fa04c798089a8b6bf64cd5'}
+[2026-09-18T04:38:47.932443+00:00] PREFLIGHT CHECK COMPLETED SUCCESSFULLY. (Preflight-only requested)
+[2026-09-18T04:38:52.590453+00:00] ======================================================================
+[2026-09-18T04:38:52.590793+00:00] EXP-AEC-004 RUNNER INITIALIZATION
+[2026-09-18T04:38:52.591039+00:00] ======================================================================
+[2026-09-18T04:38:52.591313+00:00] STAGE 1: Preflight Verification...
+[2026-09-18T04:38:52.592967+00:00] Preflight verified successfully: {'v3_tarball': '845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943', 'config_control_sha': '858b59ad0ab02ca6ae3d3e506fb1c517f29fe8c3088f4315c2e741e95231ed74', 'config_treatment_sha': '56256ef2d1befea4461e2d1f55ce72e0642958ade8313e1e344418856b801fe3', 'manifest_sha': '74d11d5f2f68399d6e8b59b6a82cdf76c2f6a29333fa04c798089a8b6bf64cd5'}
+[2026-09-18T04:38:52.593278+00:00] ======================================================================
+[2026-09-18T04:38:52.593560+00:00] GOVERNANCE DIRECTIVE: EXECUTION STRICTLY HALTED.
+[2026-09-18T04:38:52.593852+00:00] The protocol is FROZEN. Prospective cohort matches (340300–340349) are NOT authorized in this task.
+[2026-09-18T04:38:52.594122+00:00] To verify the execution infrastructure, run with --preflight-only or --smoke-only.
+[2026-09-18T04:38:52.594381+00:00] ======================================================================
+[2026-09-18T04:38:57.464246+00:00] ======================================================================
+[2026-09-18T04:38:57.464711+00:00] EXP-AEC-004 RUNNER INITIALIZATION
+[2026-09-18T04:38:57.465059+00:00] ======================================================================
+[2026-09-18T04:38:57.465317+00:00] STAGE 1: Preflight Verification...
+[2026-09-18T04:38:57.466722+00:00] Preflight verified successfully: {'v3_tarball': '845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943', 'config_control_sha': '858b59ad0ab02ca6ae3d3e506fb1c517f29fe8c3088f4315c2e741e95231ed74', 'config_treatment_sha': '56256ef2d1befea4461e2d1f55ce72e0642958ade8313e1e344418856b801fe3', 'manifest_sha': '74d11d5f2f68399d6e8b59b6a82cdf76c2f6a29333fa04c798089a8b6bf64cd5'}
+[2026-09-18T04:38:57.467027+00:00] STAGE 2: Development Smoke Test on Seed 50015...
+[2026-09-18T04:38:57.467360+00:00] === RUNNING DEVELOPMENT SMOKE TEST ON SEED 50015 ===
+[2026-09-18T04:38:57.468547+00:00] Preflight hashes verified: {'v3_tarball': '845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943', 'config_control_sha': '858b59ad0ab02ca6ae3d3e506fb1c517f29fe8c3088f4315c2e741e95231ed74', 'config_treatment_sha': '56256ef2d1befea4461e2d1f55ce72e0642958ade8313e1e344418856b801fe3', 'manifest_sha': '74d11d5f2f68399d6e8b59b6a82cdf76c2f6a29333fa04c798089a8b6bf64cd5'}
+[2026-09-18T04:38:57.468856+00:00] [1/100] Starting EXP-AEC-004_50015_A: Treatment Seat=0, Control Seat=1
+[2026-09-18T04:40:29.753425+00:00] ======================================================================
+[2026-09-18T04:40:29.753830+00:00] EXP-AEC-004 RUNNER INITIALIZATION
+[2026-09-18T04:40:29.754172+00:00] ======================================================================
+[2026-09-18T04:40:29.754480+00:00] STAGE 1: Preflight Verification...
+[2026-09-18T04:40:29.755789+00:00] Preflight verified successfully: {'v3_tarball': '845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943', 'config_control_sha': '858b59ad0ab02ca6ae3d3e506fb1c517f29fe8c3088f4315c2e741e95231ed74', 'config_treatment_sha': '56256ef2d1befea4461e2d1f55ce72e0642958ade8313e1e344418856b801fe3', 'manifest_sha': '74d11d5f2f68399d6e8b59b6a82cdf76c2f6a29333fa04c798089a8b6bf64cd5'}
+[2026-09-18T04:40:29.756028+00:00] STAGE 2: Development Smoke Test on Seed 50015...
+[2026-09-18T04:40:29.756309+00:00] === RUNNING DEVELOPMENT SMOKE TEST ON SEED 50015 ===
+[2026-09-18T04:40:29.757315+00:00] Preflight hashes verified: {'v3_tarball': '845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943', 'config_control_sha': '858b59ad0ab02ca6ae3d3e506fb1c517f29fe8c3088f4315c2e741e95231ed74', 'config_treatment_sha': '56256ef2d1befea4461e2d1f55ce72e0642958ade8313e1e344418856b801fe3', 'manifest_sha': '74d11d5f2f68399d6e8b59b6a82cdf76c2f6a29333fa04c798089a8b6bf64cd5'}
+[2026-09-18T04:40:29.757537+00:00] [1/100] Starting EXP-AEC-004_50015_A: Treatment Seat=0, Control Seat=1
+[2026-09-18T04:40:32.709056+00:00]   Completed EXP-AEC-004_50015_A: Treatment Score=79304, Control Score=79312, Margin=-8, Feed Commits=2, Total Treat Commits=5, Control Feed Commits=0, Elapsed=3.0s, Latency(mean=2.10ms, max=30.51ms)
+[2026-09-18T04:40:32.710591+00:00] [2/100] Starting EXP-AEC-004_50015_B: Treatment Seat=1, Control Seat=0
+[2026-09-18T04:40:35.631942+00:00]   Completed EXP-AEC-004_50015_B: Treatment Score=79304, Control Score=79312, Margin=-8, Feed Commits=2, Total Treat Commits=5, Control Feed Commits=0, Elapsed=2.9s, Latency(mean=2.07ms, max=28.48ms)
+[2026-09-18T04:40:35.634096+00:00] Smoke Test Results: Match A Margin=-8, Match B Margin=-8
+[2026-09-18T04:40:35.634777+00:00] Smoke Test Paired Delta: -8.00, Emergency Feed Commits: 4
+[2026-09-18T04:40:35.635262+00:00] Control Feed Commits: Match A=0, Match B=0
+[2026-09-18T04:40:35.635834+00:00] === SMOKE TEST PASSED: HARNESS, AGENTS, AND ISOLATION VERIFIED ===
+[2026-09-18T04:40:35.638320+00:00] SMOKE TEST COMPLETED SUCCESSFULLY.
