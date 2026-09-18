@@ -11,7 +11,8 @@ from aec.coordination.scheduler import MultiWorkerLogisticsCoordinator, Coordina
 from aec.coordination.worker_model import extract_farm_workers
 from aec.ir.economic_state import EconomicState
 from aec.opportunities.base import Opportunity
-from aec.patches.patch import CoupledPatch
+from aec.patches.patch import CoupledPatch, CoupledPatchRequest
+from aec.patches.harvest_patch import HarvestCoupledPatchGenerator
 from aec.replanning.reconnect import ReconnectRequest, ReconnectionEngine
 from aec.resource.conversions import ConversionExecutionPlan, decompose_conversion_to_tasks
 from aec.resource.feed_security import decompose_feed_rescue_to_tasks
@@ -54,6 +55,7 @@ class PatchGenerator:
         self.multiworker_coordinator = MultiWorkerLogisticsCoordinator()
         self.labor_validator = ConversionLaborPreconditionValidator(self.multiworker_coordinator)
         self.liquidity_analyzer = ConversionLiquidityAnalyzer()
+        self.harvest_generator = HarvestCoupledPatchGenerator(board_size=self.multiworker_coordinator.board_size)
         self.last_quarantined_count: int = 0
         self.last_quarantined_by_mechanism: Dict[str, int] = {}
 
@@ -62,7 +64,9 @@ class PatchGenerator:
         opportunities: List[Opportunity],
         econ_state: EconomicState,
         baseline_action: Dict[str, Any],
-        config: Optional[AECConfig] = None
+        config: Optional[AECConfig] = None,
+        baseline_continuation: Optional[List[Dict[str, Any]]] = None,
+        co_worker_trajectories: Optional[Dict[int, List[Tuple[int, int]]]] = None
     ) -> List[CoupledPatch]:
         enabled = set(config.enabled_mechanisms) if config is not None else self.enabled_mechanisms
         self.last_quarantined_count = 0
@@ -190,35 +194,38 @@ class PatchGenerator:
                     )
                     patches.append(patch)
 
-            # 6. Dynamic Shadow Harvest (Labor reallocation)
-            elif fam == "DYNAMIC_SHADOW_HARVEST":
+            # 6. Dynamic Shadow Harvest & Terminal Harvest Sweep (§10, §13, §14)
+            elif fam in ("DYNAMIC_SHADOW_HARVEST", "TERMINAL_HARVEST_SWEEP"):
                 worker_id = opp.dependency_info.get("worker_id", 0)
                 target_xy = opp.dependency_info.get("target_xy")
-                worker = econ_state.workers.get_worker(worker_id)
-                if worker and target_xy:
-                    wx, wy = worker.position
-                    tx, ty = target_xy
-                    # If already at tile: HARVEST. If adjacent or distant: step toward tile.
-                    if (wx, wy) == (tx, ty):
-                        cmd = ["HARVEST"]
-                    elif tx > wx:
-                        cmd = ["EAST"]
-                    elif tx < wx:
-                        cmd = ["WEST"]
-                    elif ty > wy:
-                        cmd = ["SOUTH"]
-                    else:
-                        cmd = ["NORTH"]
-                        
-                    patch = CoupledPatch(
-                        patch_id=f"PATCH_{opp.opportunity_id}",
-                        source_opportunity_id=opp.opportunity_id,
-                        mechanism_family=fam,
-                        worker_mutations={worker_id: cmd},
-                        expected_horizon=opp.required_horizon,
-                        rationale=opp.rationale
-                    )
-                    patches.append(patch)
+                crop = opp.dependency_info.get("crop")
+
+                # Default baseline continuation if not passed
+                cont = baseline_continuation if baseline_continuation is not None else [
+                    copy.deepcopy(baseline_action) for _ in range(max(12, opp.required_horizon))
+                ]
+
+                req = CoupledPatchRequest(
+                    opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    worker_ids=[worker_id],
+                    start_step=econ_state.step,
+                    econ_state=econ_state,
+                    baseline_action=baseline_action,
+                    baseline_continuation=cont,
+                    target_location=target_xy,
+                    target_commodity=crop,
+                    co_worker_trajectories=co_worker_trajectories,
+                    horizon=opp.required_horizon,
+                    is_terminal_sweep=(fam == "TERMINAL_HARVEST_SWEEP" or econ_state.step >= 650)
+                )
+
+                res = self.harvest_generator.generate_harvest_patch(req)
+                if res.patch is not None and res.status in ("ACCEPTED", "VERIFIED", "COMMITTED"):
+                    patches.append(res.patch)
+                elif res.patch is not None and res.trajectory_certificate and res.trajectory_certificate.is_valid:
+                    # Provide patch for evaluation / diagnostic inspection
+                    patches.append(res.patch)
 
             # 7. Emergency Feed Purchase (§5, §6)
             # 7. Emergency Feed Purchase (§5, §6, Phase 003/004)
