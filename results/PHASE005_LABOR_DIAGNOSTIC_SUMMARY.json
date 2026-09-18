@@ -1,0 +1,19 @@
+{
+  "cohort": {
+    "start": 50000,
+    "end": 50024,
+    "count": 25
+  },
+  "total_opportunities_evaluated": 888,
+  "total_rejected_due_to_opportunity_cost": 448,
+  "total_approved": 440,
+  "rejection_rate": 0.5045045045045045,
+  "latency_ms": {
+    "p50": 1.27,
+    "p95": 6.29,
+    "worst": 15.84
+  },
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "holdout_protection": "VERIFIED_UNTOUCHED",
+  "prospective_cohort": "VERIFIED_UNTOUCHED"
+}
