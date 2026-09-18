@@ -1,0 +1,57 @@
+{
+  "A_cohort_completeness": {
+    "pass": true,
+    "seed_count": 50,
+    "expected_count": 50,
+    "min_seed": 340300,
+    "max_seed": 340349
+  },
+  "B_turn_completeness": {
+    "pass": true,
+    "total_treatment_turns": 71900,
+    "expected_turns": 71900
+  },
+  "C_seat_symmetry": {
+    "pass": true,
+    "note": "Match A has Treatment Seat 0, Match B has Treatment Seat 1 for all seeds"
+  },
+  "D_crn_integrity": {
+    "pass": true,
+    "note": "Match A and Match B share identical seeds across all 50 pairs"
+  },
+  "E_holdout_protection": {
+    "pass": true,
+    "primary_holdout_touches": 0,
+    "secondary_holdout_touches": 0
+  },
+  "F_v3_chassis_integrity": {
+    "pass": true,
+    "actual_sha": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "expected_sha": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943"
+  },
+  "G_mechanism_isolation": {
+    "pass": true,
+    "control_feed_commits": 0,
+    "resource_conversion_commits_treatment": 0,
+    "resource_conversion_commits_control": 0
+  },
+  "H_counterfactual_fidelity": {
+    "pass": true,
+    "note": "100% of committed patches confirmed counterfactual_fidelity == VERIFIED"
+  },
+  "I_shed_overflow_integrity": {
+    "pass": true,
+    "max_shed_units": 100
+  },
+  "J_latency_bound": {
+    "pass": true,
+    "max_latency_ms": 230.14690000036353
+  },
+  "K_deterministic_replay": {
+    "pass": true,
+    "replay_seed": 340300,
+    "original_margin": -80.0,
+    "replay_margin": -80.0
+  },
+  "OVERALL_AUDIT_PASS": true
+}

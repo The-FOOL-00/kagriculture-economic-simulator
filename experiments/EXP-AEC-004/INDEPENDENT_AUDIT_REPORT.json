@@ -1,0 +1,65 @@
+{
+  "1_v3_chassis_hash": {
+    "pass": true,
+    "actual": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "expected": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943"
+  },
+  "2_holdout_protection": {
+    "pass": true,
+    "primary_holdout": [
+      340050,
+      340199
+    ],
+    "secondary_holdout": [
+      214200,
+      214249
+    ],
+    "raw_results_holdout_touches": 0,
+    "log_holdout_hits": 0
+  },
+  "3_cohort_completeness": {
+    "pass": true,
+    "count": 50,
+    "expected_count": 50,
+    "min_seed": 340300,
+    "max_seed": 340349
+  },
+  "4_mechanism_isolation": {
+    "pass": true,
+    "control_emergency_feed_commits": 0,
+    "treatment_emergency_feed_commits": 4,
+    "resource_conversion_treatment": 0,
+    "resource_conversion_control": 0
+  },
+  "5_shed_overflow": {
+    "pass": true,
+    "max_shed_units_seen": 100,
+    "overflow_count": 0
+  },
+  "6_counterfactual_fidelity": {
+    "pass": true,
+    "total_committed_patches": 163,
+    "non_verified_count": 0
+  },
+  "7_terminal_safety_audit": {
+    "total_feed_commits": 4,
+    "late_feed_commits_step_ge_600": 0,
+    "day29_feed_commits_step_ge_696": 0,
+    "zero_terminal_blind_pass": true
+  },
+  "8_statistical_reproduction": {
+    "pass": true,
+    "N": 50,
+    "independent_mean": 1.62,
+    "runner_mean": 1.62,
+    "independent_lower_95": -0.3,
+    "runner_lower_95": -0.3,
+    "t_statistic": 1.4153,
+    "p_value_one_sided": 0.0816469,
+    "treat_wins": 9,
+    "ctrl_wins": 5,
+    "ties": 86,
+    "win_rate_delta_pp": 4.0
+  },
+  "OVERALL_AUDIT_PASS": true
+}

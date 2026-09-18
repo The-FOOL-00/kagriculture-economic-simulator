@@ -1,6 +1,6 @@
 {
   "experiment_id": "EXP-AEC-004",
-  "status": "FROZEN_NOT_LAUNCHED",
+  "status": "COMPLETED",
   "directive": "DO_NOT_EXECUTE_WITHOUT_USER_APPROVAL",
   "timestamp_frozen": "2026-09-18T10:30:00+05:30",
   "protocol": "PREREG-EXP-AEC-004-20260918-FINAL",
@@ -19,17 +19,32 @@
     "virgin_certified": true
   },
   "holdout_protection": {
-    "locked_holdout_primary": [340050, 340199],
+    "locked_holdout_primary": [
+      340050,
+      340199
+    ],
     "primary_seed_count": 150,
     "distance_to_primary": 101,
-    "locked_holdout_secondary": [214200, 214249],
+    "locked_holdout_secondary": [
+      214200,
+      214249
+    ],
     "secondary_seed_count": 50,
     "holdout_touched": false
   },
   "historical_baselines": {
-    "exp_aec_001_range": [340000, 340049],
-    "exp_aec_002_range": [340200, 340249],
-    "exp_aec_003_range": [340250, 340299],
+    "exp_aec_001_range": [
+      340000,
+      340049
+    ],
+    "exp_aec_002_range": [
+      340200,
+      340249
+    ],
+    "exp_aec_003_range": [
+      340250,
+      340299
+    ],
     "exp_aec_003_result": "ACCEPTED (mean +$57.36, lower 95% +$23.17, win-rate delta +56.00 pp)"
   },
   "control": {
@@ -84,7 +99,10 @@
       "TOWN_CYCLE"
     ],
     "required_counterfactual_fidelity": "VERIFIED",
-    "reject_fidelity_levels": ["FAILED", "UNKNOWN"]
+    "reject_fidelity_levels": [
+      "FAILED",
+      "UNKNOWN"
+    ]
   },
   "primary_hypothesis": {
     "null_hypothesis_H0": "mu_delta < 0.00",
@@ -102,5 +120,22 @@
     "GATE_6_counterfactual_fidelity_verified": true,
     "GATE_7_lower_95_bound_margin_delta_min": 0.0,
     "GATE_8_win_rate_delta_min_pp": -2.0
+  },
+  "start_time": "2026-09-18T04:52:12.001970+00:00",
+  "end_time": "2026-09-18T05:00:21.789000+00:00",
+  "elapsed_seconds": 489.79,
+  "final_stats": {
+    "mean_delta_margin": 1.62,
+    "median_delta_margin": 0.0,
+    "lower_95_one_sided_bound": -0.3,
+    "p_value_one_sided": 0.0816469,
+    "delta_win_rate_percentage_points": 4.0,
+    "treatment_wins": 9,
+    "control_wins": 5,
+    "ties": 86,
+    "emergency_feed_commits": 4,
+    "seeds_with_feed_commits": 2,
+    "result_classification": "DORMANT_INCONCLUSIVE",
+    "primary_verdict": "DORMANT"
   }
 }

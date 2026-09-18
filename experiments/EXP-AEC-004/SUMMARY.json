@@ -1,0 +1,95 @@
+{
+  "experiment_id": "EXP-AEC-004",
+  "cohort_size": 50,
+  "total_matches": 100,
+  "expected_turns": 71900,
+  "mean_delta_margin": 1.62,
+  "median_delta_margin": 0.0,
+  "std_delta_margin": 8.09,
+  "se_delta_margin": 1.14,
+  "min_delta_margin": 0.0,
+  "max_delta_margin": 46.0,
+  "iqr_delta_margin": 0.0,
+  "percentile_05_delta_margin": 0.0,
+  "percentile_95_delta_margin": 0.0,
+  "ci95_two_sided_t": [
+    -0.68,
+    3.92
+  ],
+  "lower_95_one_sided_bound": -0.3,
+  "paired_t_test_one_sided": {
+    "t_statistic": 1.4153,
+    "p_value": 0.0816469,
+    "df": 49,
+    "alternative": "greater"
+  },
+  "wilcoxon_test": {
+    "w_statistic": 0.0,
+    "p_value": 1.0,
+    "nonzero_n": 2
+  },
+  "treatment_wins": 9,
+  "control_wins": 5,
+  "ties": 86,
+  "win_rate_treatment": 0.09,
+  "win_rate_control": 0.05,
+  "delta_win_rate_percentage_points": 4.0,
+  "delta_win_rate_excl_ties_pp": 28.57,
+  "delta_wins_raw": 4,
+  "mean_treatment_score": 99270.12,
+  "mean_control_score": 99268.5,
+  "score_delta": 1.62,
+  "emergency_feed_commits": 4,
+  "seeds_with_feed_commits": 2,
+  "activation_rate": 0.04,
+  "commits_by_mechanism_treatment": {
+    "DEPENDENCY_AWARE_MARKET_TIMING": 159,
+    "EMERGENCY_FEED_PURCHASE": 4
+  },
+  "commits_by_mechanism_control": {
+    "DEPENDENCY_AWARE_MARKET_TIMING": 159
+  },
+  "control_feed_commits": 0,
+  "quarantined_by_mechanism": {
+    "RESOURCE_CONVERSION": 192195,
+    "DYNAMIC_SHADOW_HARVEST": 36197,
+    "CARGO_FERRY_PRIORITY": 167194,
+    "OPPONENT_PREEMPT_SELL": 25664,
+    "TERMINAL_HARVEST_SWEEP": 2000,
+    "LOCAL_WEED_DIG": 318
+  },
+  "quarantined_commits_zero": true,
+  "total_commits_treatment": 163,
+  "total_events": 71900,
+  "total_abstains": 71737,
+  "abstain_rate": 0.9977,
+  "total_safety_violations": 0,
+  "max_shed_units_seen": 100,
+  "max_turn_latency_ms": 230.15,
+  "acceptance_criteria": {
+    "GATE_1_zero_safety_violations": true,
+    "GATE_2_zero_shed_overflow": true,
+    "GATE_3_zero_isolation_violations": true,
+    "GATE_4_zero_holdout_touches": true,
+    "GATE_5_v3_chassis_integrity": true,
+    "GATE_6_counterfactual_fidelity_verified": true,
+    "GATE_7_economic_non_inferiority": false,
+    "GATE_8_win_rate_preservation": true,
+    "ALL_ACCEPTANCE_CRITERIA_MET": false
+  },
+  "falsification_checks": {
+    "FALS_1_safety_or_shed_overflow": false,
+    "FALS_2_isolation_breach": false,
+    "FALS_3_holdout_breach": false,
+    "FALS_4_lower_ci_lt_0": true,
+    "FALS_5_win_rate_lt_minus_2pp": false,
+    "FALS_6_p05_margin_lt_minus_250": false,
+    "ANY_FALSIFIED": true
+  },
+  "result_classification": "DORMANT_INCONCLUSIVE",
+  "primary_verdict": "DORMANT",
+  "start_time": "2026-09-18T04:52:12.001970+00:00",
+  "end_time": "2026-09-18T05:00:21.789000+00:00",
+  "elapsed_seconds": 489.79,
+  "audit_passed": true
+}

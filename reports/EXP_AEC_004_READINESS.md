@@ -1,11 +1,11 @@
-# EXP-AEC-004 Prelaunch Readiness & Protocol Freeze Certification
+# EXP-AEC-004 Post-Execution Readiness & Final Scientific Certification
 
 **Document Identifier:** `CERT-EXP-AEC-004-20260918-FINAL`  
 **Mechanism Evaluated:** `EMERGENCY_FEED_PURCHASE` (Isolated)  
 **Lead Validation Engineer & Architect:** Principal AEC Architect & Scientific Validation Engineer  
 **Date Established:** 2026-09-18  
-**Statutory Status:** **FROZEN PROTOCOL — READY FOR SEPARATE PROSPECTIVE EXECUTION**  
-**Prospective Execution Directive:** **EXECUTION STRICTLY HALTED IN THIS TASK.**  
+**Statutory Status:** **PROSPECTIVE EXECUTION COMPLETED — DORMANT_INCONCLUSIVE**  
+**Final Statutory Recommendation:** **RETAIN IN QUARANTINE**  
 
 ---
 
@@ -83,17 +83,42 @@ Every required audit, manifest, isolation guard, and preflight check has passed:
 
 ---
 
-## 5. Execution Handoff & Launch Command
+## 5. Prospective Execution Audit & Outcome
 
-The prospective trial is fully prepared and frozen. It must only be executed under separate authorization by invoking:
-
-```powershell
-python experiments/EXP-AEC-004/run_experiment.py --authorized-execute-prospective-cohort
-```
-
-Until that separate task is invoked:
-**NO PROSPECTIVE MATCHES MAY BE EXECUTED.**
+The authorized prospective evaluation of EXP-AEC-004 was executed on 2026-09-18:
+- **Command:** `python experiments/EXP-AEC-004/run_experiment.py --authorized-execute-prospective-cohort`
+- **Elapsed Duration:** 489.8 seconds
+- **Completed Matches:** 100 matches across Seeds `340300–340349`
+- **Total Treatment Turns:** 71,900 turns
+- **Primary Estimator:** Mean paired margin delta $\overline{\Delta} = +\$1.62$
+- **Lower 95% Bound:** $-\$0.30$ ($t = 1.4153, df = 49, p = 0.0816$)
+- **Tournament Win-Rate Delta:** $+4.00\text{ pp}$ (Treat: 9, Ctrl: 5, Ties: 86)
+- **Ties-Excluded Win-Rate Delta:** $+28.57\text{ pp}$ (Treatment $64.3\%$)
+- **Active Emergency Feed Commits:** 4 commits (across 2 seeds: Seed 340333 and Seed 340349)
+- **Control Feed Commits:** 0 (100% single-mechanism isolation confirmed)
+- **Quarantined Commits:** 0 (RESOURCE_CONVERSION and all others strictly quarantined)
+- **Safety Violations:** 0
+- **Max Shed Units Seen:** 100 units (0 shed overflows)
+- **Counterfactual Fidelity:** 100% VERIFIED (4 of 4 commits verified bit-exact against engine ground truth)
+- **Holdout Touches:** 0 touches of Primary Holdout `340050–340199` and Secondary Holdout `214200–214249`
 
 ---
 
-READY FOR SEPARATE PROSPECTIVE EXECUTION
+## 6. Preregistered Decision Rule & Classification
+
+Under Section 6.3 of `PREREG-EXP-AEC-004-20260918-FINAL`:
+- **Dormancy Rule:** Total feed commits $< 5$ triggers formal classification as `DORMANT_INCONCLUSIVE`.
+- Observed commits $= 4$ ($< 5$).
+- Direction of effect is strictly non-negative ($\overline{\Delta} = +\$1.62, \Delta\text{WinRate} = +4.00\text{ pp}$).
+- Minimum paired delta across all 50 seeds $= \$0.00$ (zero negative seeds).
+- However, with a $4\%$ activation rate in random seeds, the ITT sample ($N=50$) is statistically underpowered.
+
+---
+
+## 7. Final Statutory Verdict
+
+### Final Readiness Classification: **`DORMANT_INCONCLUSIVE`**
+### Statutory Action: **`RETAIN IN QUARANTINE`**
+
+`EMERGENCY_FEED_PURCHASE` is certified **SAFETY-SOUND, NON-DEGRADATIVE, AND CAUSALLY VERIFIED**, but remains **QUARANTINED** because standalone statistical power cannot be established in standard random seeds without enrichment. It must not be deployed to production as a standalone mechanism at this time.
+
