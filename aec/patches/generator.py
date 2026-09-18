@@ -15,6 +15,8 @@ from aec.patches.patch import CoupledPatch
 from aec.replanning.reconnect import ReconnectRequest, ReconnectionEngine
 from aec.resource.conversions import ConversionExecutionPlan, decompose_conversion_to_tasks
 from aec.resource.feed_security import decompose_feed_rescue_to_tasks
+from aec.resource.labor import ConversionLaborClass, ConversionLaborPreconditionValidator
+from aec.resource.liquidity import ConversionLiquidityAnalyzer
 
 
 def reorder_frontload(market_orders: List[List[Any]]) -> List[List[Any]]:
@@ -50,6 +52,8 @@ class PatchGenerator:
 
         self.reconnect_engine = ReconnectionEngine()
         self.multiworker_coordinator = MultiWorkerLogisticsCoordinator()
+        self.labor_validator = ConversionLaborPreconditionValidator(self.multiworker_coordinator)
+        self.liquidity_analyzer = ConversionLiquidityAnalyzer()
         self.last_quarantined_count: int = 0
         self.last_quarantined_by_mechanism: Dict[str, int] = {}
 
@@ -261,9 +265,34 @@ class PatchGenerator:
                 )
                 patches.append(patch)
 
-            # 8. Dynamic Resource Conversion (§8, §9, Phase 003/004)
+            # 8. Dynamic Resource Conversion (§8, §9, Phase 003/004, Phase 004B Remediation)
             elif fam == "RESOURCE_CONVERSION":
                 plan_dict = opp.dependency_info.get("execution_plan")
+                target = opp.dependency_info.get("target")
+
+                # Reject generic seed purchases / non-conversions (§13, §14, §18)
+                if target == "CARROT" or opp.dependency_info.get("opportunity_family") == "RESOURCE_ACQUISITION":
+                    continue
+
+                # 1. Working-Capital Liquidity Precondition (§3, §4, §5, §6, §7)
+                liq_dict = opp.dependency_info.get("liquidity_profile", {})
+                if liq_dict and liq_dict.get("is_solvent_trajectory") is False:
+                    # Insolvent working-capital trajectory: fail closed and abstain
+                    continue
+
+                cost = float(opp.dependency_info.get("cost", 0.0))
+                net_val = float(opp.dependency_info.get("net_value", 0.0))
+                dur = int(opp.dependency_info.get("steps", 24))
+                profile = self.liquidity_analyzer.analyze_profile(
+                    candidate_target=target or "",
+                    upfront_cost=cost,
+                    duration_steps=dur,
+                    expected_revenue=cost + net_val,
+                    econ_state=econ_state
+                )
+                if not profile.is_solvent_trajectory:
+                    continue
+
                 market_mutations = None
                 worker_mutations = {}
                 reconnect_res = None
@@ -271,7 +300,21 @@ class PatchGenerator:
                 coord_plan = None
 
                 if plan_dict and plan_dict.get("is_executable"):
-                    # 1. Physical market mutations
+                    # Determine labor requirement class (§10)
+                    labor_class_str = opp.dependency_info.get("labor_class") or plan_dict.get("labor_class")
+                    if labor_class_str:
+                        try:
+                            labor_class = ConversionLaborClass(labor_class_str)
+                        except Exception:
+                            labor_class = ConversionLaborClass.AUXILIARY_WORKER_REQUIRED
+                    else:
+                        labor_class = self.labor_validator.classify_labor_requirement(
+                            worker_actions=plan_dict.get("worker_actions", []),
+                            target_commodity=target or "",
+                            target_location=tuple(plan_dict["target_location"]) if plan_dict.get("target_location") else None
+                        )
+
+                    # 2. Physical market mutations
                     plan_market = plan_dict.get("market_actions", [])
                     if plan_market:
                         orders = copy.deepcopy(baseline_action.get("market", []))
@@ -279,43 +322,47 @@ class PatchGenerator:
                             orders.insert(0, list(m_act))
                         market_mutations = orders[:10]
 
-                    # 2. Multi-worker logistics coordination (§7, §16)
+                    # 3. Worker scheduling with Strict Auxiliary Precondition (§9, §11, §12)
                     plan_worker_actions = plan_dict.get("worker_actions", [])
                     workers = extract_farm_workers(econ_state, current_turn=econ_state.step)
 
-                    if len(workers) > 1 and plan_dict.get("target_location"):
-                        plan_obj = ConversionExecutionPlan(
-                            plan_id=plan_dict.get("plan_id", "CONV"),
-                            conversion_id=plan_dict.get("conversion_id", "CONV"),
-                            target_commodity=plan_dict.get("target_commodity", ""),
-                            required_inputs=plan_dict.get("required_inputs", {}),
-                            produced_outputs=plan_dict.get("produced_outputs", {}),
-                            worker_id=plan_dict.get("worker_id", 0),
-                            target_location=tuple(plan_dict["target_location"]) if plan_dict.get("target_location") else None,
-                            worker_actions=plan_worker_actions,
-                            estimated_duration=plan_dict.get("estimated_duration", 1),
-                            net_value_est=plan_dict.get("net_value_est", 0.0),
+                    plan_obj = ConversionExecutionPlan(
+                        plan_id=plan_dict.get("plan_id", "CONV"),
+                        conversion_id=plan_dict.get("conversion_id", "CONV"),
+                        target_commodity=plan_dict.get("target_commodity", target or ""),
+                        required_inputs=plan_dict.get("required_inputs", {}),
+                        produced_outputs=plan_dict.get("produced_outputs", {}),
+                        worker_id=plan_dict.get("worker_id", 1 if len(workers) > 1 else 0),
+                        target_location=tuple(plan_dict["target_location"]) if plan_dict.get("target_location") else None,
+                        worker_actions=plan_worker_actions,
+                        estimated_duration=plan_dict.get("estimated_duration", 1),
+                        net_value_est=plan_dict.get("net_value_est", net_val),
+                        labor_class=labor_class,
+                    )
+                    tasks = decompose_conversion_to_tasks(plan_obj, start_step=econ_state.step)
+
+                    if tasks:
+                        is_labor_feasible, c_plan, labor_reason = self.labor_validator.validate_and_schedule(
+                            tasks=tasks,
+                            labor_class=labor_class,
+                            workers=workers,
+                            baseline_action=baseline_action,
+                            baseline_continuation=[],
+                            current_step=econ_state.step,
+                            estimated_duration=plan_obj.estimated_duration
                         )
-                        tasks = decompose_conversion_to_tasks(plan_obj, start_step=econ_state.step)
-                        if tasks:
-                            c_plan = self.multiworker_coordinator.plan_coordination(
-                                candidate_tasks=tasks,
-                                workers=workers,
-                                baseline_action=baseline_action,
-                                baseline_continuation=[],
-                                current_step=econ_state.step
-                            )
-                            if c_plan.is_executable:
-                                worker_mutations = dict(c_plan.worker_mutations)
-                                coord_plan = c_plan
 
-                    # Fallback single-worker if multi-worker not applicable or single worker farm
-                    if not worker_mutations and plan_worker_actions:
+                        if not is_labor_feasible or c_plan is None or not c_plan.is_executable:
+                            # Strict worker precondition failed: fail-closed and abstain (no Farmer fallback)
+                            continue
+
+                        worker_mutations = dict(c_plan.worker_mutations)
+                        coord_plan = c_plan
+
+                    # 4. Route Reconnection integration if detour required and approved (§5, §6)
+                    if plan_worker_actions and plan_dict.get("reconnect_required") and plan_dict.get("target_location"):
                         worker_id = plan_dict.get("worker_id", 0)
-                        worker_mutations[worker_id] = list(plan_worker_actions)
-
-                        # 3. Route Reconnection integration if detour required (§5, §6)
-                        if plan_dict.get("reconnect_required") and plan_dict.get("target_location"):
+                        if worker_id in worker_mutations:
                             tx, ty = plan_dict["target_location"]
                             reconnect_req = ReconnectRequest(
                                 worker=worker_id,
@@ -328,7 +375,6 @@ class PatchGenerator:
                             )
                             reconnect_res = self.reconnect_engine.reconnect(reconnect_req)
                             if not reconnect_res.safety:
-                                # Infeasible/unsafe route detour: fail closed and abstain
                                 continue
                             if getattr(reconnect_res, "spliced_trajectory", None):
                                 spliced_cont = reconnect_res.spliced_trajectory
@@ -340,10 +386,12 @@ class PatchGenerator:
                         orders = copy.deepcopy(baseline_action.get("market", []))
                         orders.insert(0, ["BUY_PRODUCT", "WHEAT", 1])
                         market_mutations = orders[:10]
-                    elif target == "CARROT":
-                        orders = copy.deepcopy(baseline_action.get("market", []))
-                        orders.insert(0, ["BUY_SEED", "CARROT", 1])
-                        market_mutations = orders[:10]
+                    else:
+                        # Non-conversion targets abstain
+                        continue
+
+                conv_meta = dict(opp.dependency_info)
+                conv_meta["liquidity_profile"] = profile.to_dict()
 
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
@@ -354,7 +402,7 @@ class PatchGenerator:
                     coordination_plan=coord_plan,
                     spliced_continuation=spliced_cont,
                     reconnect_result=reconnect_res,
-                    conversion_metadata=dict(opp.dependency_info),
+                    conversion_metadata=conv_meta,
                     expected_horizon=opp.required_horizon,
                     rationale=opp.rationale
                 )

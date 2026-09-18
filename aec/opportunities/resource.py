@@ -76,9 +76,13 @@ class ResourceOpportunityAnalyzer:
                     "cost": path.total_cost_est,
                     "net_value": path.net_value_est,
                     "steps": path.total_steps,
+                    "labor_class": path.labor_class.value if hasattr(path, "labor_class") else "AUXILIARY_WORKER_REQUIRED",
+                    "opportunity_family": getattr(path, "opportunity_family", "RESOURCE_CONVERSION"),
+                    "liquidity_profile": path.liquidity_profile.to_dict() if path.liquidity_profile else {},
                 }
                 if path.execution_plan is not None:
                     dep_info["execution_plan"] = path.execution_plan.to_dict()
+                    dep_info["attribution_info"] = path.execution_plan.attribution_info
 
                 opportunities.append(Opportunity(
                     opportunity_id=f"CONV_{path.path_id}",
@@ -86,7 +90,7 @@ class ResourceOpportunityAnalyzer:
                     event_trigger=EventType.E4_MARKET_REGIME_SHIFT,
                     affected_entities=[path.target_commodity],
                     estimated_economic_relevance=float(path.net_value_est),
-                    candidate_transformation_family="RESOURCE_CONVERSION",
+                    candidate_transformation_family=getattr(path, "opportunity_family", "RESOURCE_CONVERSION"),
                     dependency_info=dep_info,
                     required_horizon=min(36, max(6, path.total_steps // 2)),
                     rationale=f"Feasible conversion path for {path.target_commodity} yielding net est ${path.net_value_est:.1f}",

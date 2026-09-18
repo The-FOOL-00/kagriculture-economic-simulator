@@ -2,7 +2,8 @@
 """AEC-RESOURCE: Dynamic Inventory Conversion Catalog and Bounded Discovery (§8, §9, §10, §11).
 
 Defines exact game conversion recipes, multi-stage conversion chains,
-cash liquidity coupling, shed capacity constraints, and bounded discovery.
+working-capital liquidity coupling, strict auxiliary labor classification,
+and bounded discovery without arbitrary dollar thresholds.
 """
 
 from __future__ import annotations
@@ -20,6 +21,15 @@ from aec.config import (
     TURNS_PER_DAY,
 )
 from aec.ir.economic_state import EconomicState
+from aec.resource.labor import (
+    ConversionLaborClass,
+    ConversionLaborPreconditionValidator,
+)
+from aec.resource.liquidity import (
+    ConversionCausalPathType,
+    ConversionLiquidityAnalyzer,
+    ConversionLiquidityProfile,
+)
 
 
 @dataclass
@@ -56,6 +66,9 @@ class ConversionExecutionPlan:
     net_value_est: float = 0.0
     is_executable: bool = True
     infeasibility_reason: Optional[str] = None
+    labor_class: ConversionLaborClass = ConversionLaborClass.AUXILIARY_WORKER_REQUIRED
+    opportunity_family: str = "RESOURCE_CONVERSION"
+    attribution_info: Dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -75,6 +88,9 @@ class ConversionExecutionPlan:
             "net_value_est": self.net_value_est,
             "is_executable": self.is_executable,
             "infeasibility_reason": self.infeasibility_reason,
+            "labor_class": self.labor_class.value if isinstance(self.labor_class, ConversionLaborClass) else str(self.labor_class),
+            "opportunity_family": self.opportunity_family,
+            "attribution_info": self.attribution_info,
         }
 
 
@@ -91,6 +107,9 @@ class ConversionPath:
     is_feasible: bool = True
     infeasibility_reason: Optional[str] = None
     execution_plan: Optional[ConversionExecutionPlan] = None
+    labor_class: ConversionLaborClass = ConversionLaborClass.AUXILIARY_WORKER_REQUIRED
+    liquidity_profile: Optional[ConversionLiquidityProfile] = None
+    opportunity_family: str = "RESOURCE_CONVERSION"
 
 
 class ConversionCatalog:
@@ -192,21 +211,21 @@ class ConversionDiscoveryEngine:
 
     def __init__(self) -> None:
         self.catalog = ConversionCatalog()
+        self.liquidity_analyzer = ConversionLiquidityAnalyzer()
+        self.labor_validator = ConversionLaborPreconditionValidator()
 
     def discover_conversion_paths(
         self,
         econ_state: EconomicState,
-        max_horizon: int = 48
+        max_horizon: int = 48,
+        baseline_trajectory: Optional[List[Dict[str, Any]]] = None
     ) -> List[ConversionPath]:
-        """Bounded discovery of valid conversion paths constrained by cash, capacity, and terminal distance."""
+        """Bounded discovery of valid conversion paths constrained by cash liquidity, capacity, and terminal distance."""
         paths: List[ConversionPath] = []
         recipes = self.catalog.get_standard_recipes()
-        current_cash = float(econ_state.farm.cash)
-        current_shed_units = econ_state.farm.shed_total_units
         remaining_steps = econ_state.remaining_horizon
 
-        # 1. Animal Feed Conversion Paths
-        # Check active animals that produce high-value products
+        # 1. Animal Feed Conversion Paths (genuine physical transformations)
         tiles = econ_state.farm.tiles
         has_cow = False
         has_sheep = False
@@ -237,9 +256,11 @@ class ConversionDiscoveryEngine:
                 total_steps=49,
                 total_cost_est=wheat_price,
                 expected_revenue_est=milk_price,
-                net_value_est=milk_price - wheat_price
+                net_value_est=milk_price - wheat_price,
+                labor_class=ConversionLaborClass.AUXILIARY_WORKER_REQUIRED,
+                opportunity_family="RESOURCE_CONVERSION"
             )
-            is_feas, reason = self.check_path_feasibility(cow_path, econ_state)
+            is_feas, reason = self.check_path_feasibility(cow_path, econ_state, baseline_trajectory)
             cow_path.is_feasible = is_feas
             cow_path.infeasibility_reason = reason
             paths.append(cow_path)
@@ -253,9 +274,11 @@ class ConversionDiscoveryEngine:
                 total_steps=25,
                 total_cost_est=wheat_price,
                 expected_revenue_est=egg_price,
-                net_value_est=egg_price - wheat_price
+                net_value_est=egg_price - wheat_price,
+                labor_class=ConversionLaborClass.AUXILIARY_WORKER_REQUIRED,
+                opportunity_family="RESOURCE_CONVERSION"
             )
-            is_feas, reason = self.check_path_feasibility(goose_path, econ_state)
+            is_feas, reason = self.check_path_feasibility(goose_path, econ_state, baseline_trajectory)
             goose_path.is_feasible = is_feas
             goose_path.infeasibility_reason = reason
             paths.append(goose_path)
@@ -269,15 +292,17 @@ class ConversionDiscoveryEngine:
                 total_steps=73,
                 total_cost_est=wheat_price,
                 expected_revenue_est=wool_price,
-                net_value_est=wool_price - wheat_price
+                net_value_est=wool_price - wheat_price,
+                labor_class=ConversionLaborClass.AUXILIARY_WORKER_REQUIRED,
+                opportunity_family="RESOURCE_CONVERSION"
             )
-            is_feas, reason = self.check_path_feasibility(sheep_path, econ_state)
+            is_feas, reason = self.check_path_feasibility(sheep_path, econ_state, baseline_trajectory)
             sheep_path.is_feasible = is_feas
             sheep_path.infeasibility_reason = reason
             sheep_path.execution_plan = self.synthesize_execution_plan(sheep_path, econ_state)
             paths.append(sheep_path)
 
-        # 2. Fast Crop Conversion: Carrot cycle
+        # 2. Fast Crop Cycle: Carrot cycle (Classified as RESOURCE_ACQUISITION §13, §14)
         carrot_price = float(econ_state.market.get_price("CARROT"))
         if remaining_steps >= 48:
             carrot_path = ConversionPath(
@@ -287,15 +312,17 @@ class ConversionDiscoveryEngine:
                 total_steps=48,
                 total_cost_est=20.0,
                 expected_revenue_est=carrot_price * 4,
-                net_value_est=(carrot_price * 4) - 20.0
+                net_value_est=(carrot_price * 4) - 20.0,
+                labor_class=ConversionLaborClass.NO_WORKER_REQUIRED,
+                opportunity_family="RESOURCE_ACQUISITION"
             )
-            is_feas, reason = self.check_path_feasibility(carrot_path, econ_state)
+            is_feas, reason = self.check_path_feasibility(carrot_path, econ_state, baseline_trajectory)
             carrot_path.is_feasible = is_feas
             carrot_path.infeasibility_reason = reason
             carrot_path.execution_plan = self.synthesize_execution_plan(carrot_path, econ_state)
             paths.append(carrot_path)
 
-        # Populate execution plans for cow and goose paths as well
+        # Populate execution plans for paths
         for p in paths:
             if p.execution_plan is None and p.is_feasible:
                 p.execution_plan = self.synthesize_execution_plan(p, econ_state)
@@ -305,30 +332,37 @@ class ConversionDiscoveryEngine:
     def check_path_feasibility(
         self,
         path: ConversionPath,
-        econ_state: EconomicState
+        econ_state: EconomicState,
+        baseline_trajectory: Optional[List[Dict[str, Any]]] = None
     ) -> Tuple[bool, Optional[str]]:
         """Verify strict cash liquidity, shed capacity, and terminal horizon constraints (§10, §11, §12)."""
-        current_cash = float(econ_state.farm.cash)
         current_shed = econ_state.farm.shed_total_units
         remaining_steps = econ_state.remaining_horizon
 
-        # 1. Terminal feasibility (§12)
+        # 1. Terminal distance feasibility (§12)
         if path.total_steps > remaining_steps:
             return False, f"Terminal infeasibility: path requires {path.total_steps} steps, but only {remaining_steps} remain"
 
-        # 2. Cash liquidity feasibility (§10)
-        accum_cash = current_cash
-        for r in path.recipes:
-            if accum_cash < r.cash_cost_est:
-                return False, f"Cash liquidity hole: requires ${r.cash_cost_est:.1f} but available cash is ${accum_cash:.1f}"
-            accum_cash -= r.cash_cost_est
-
-        # 3. Shed capacity feasibility (§11)
+        # 2. Shed capacity feasibility (§11)
         accum_shed = current_shed
         for r in path.recipes:
             accum_shed += r.shed_capacity_delta
             if accum_shed > SHED_CAPACITY:
                 return False, f"Shed capacity overflow: projected storage {accum_shed} exceeds limit {SHED_CAPACITY}"
+
+        # 3. Exact Working-Capital Liquidity & Causal Realizable Value Analysis (§4, §5, §7)
+        profile = self.liquidity_analyzer.analyze_profile(
+            candidate_target=path.target_commodity,
+            upfront_cost=path.total_cost_est,
+            duration_steps=path.total_steps,
+            expected_revenue=path.expected_revenue_est,
+            econ_state=econ_state,
+            baseline_trajectory=baseline_trajectory
+        )
+        path.liquidity_profile = profile
+
+        if not profile.is_solvent_trajectory:
+            return False, profile.insolvency_reason or "Working-capital liquidity failure"
 
         return True, None
 
@@ -365,8 +399,9 @@ class ConversionDiscoveryEngine:
             wheat_in_shed = econ_state.farm.get_shed_qty("WHEAT")
             wheat_in_hands = econ_state.farm.carried_inventory.get("WHEAT", 0)
 
-            worker_id = 0
-            worker = econ_state.workers.get_worker(worker_id)
+            # Prefer auxiliary worker if present
+            worker_id = 1 if len(econ_state.workers.workers) > 1 else 0
+            worker = econ_state.workers.get_worker(worker_id) or econ_state.workers.get_worker(0)
             if not worker:
                 return None
 
@@ -412,6 +447,21 @@ class ConversionDiscoveryEngine:
                     elif sy > wy: worker_actions = ["SOUTH"]
                     else: worker_actions = ["NORTH"]
 
+            attribution = {
+                "opportunity_family": path.opportunity_family,
+                "resource_graph_path": f"WHEAT -> FEED -> {path.target_commodity}",
+                "physical_conversion": True,
+                "market_actions": market_actions,
+                "worker_actions": worker_actions,
+                "labor_class": path.labor_class.value,
+                "input": "WHEAT",
+                "output": path.target_commodity,
+                "cash_effect": path.net_value_est,
+                "capacity_effect": 0,
+                "downstream_purpose": path.liquidity_profile.value_path_type.value if path.liquidity_profile else "SALEABLE_OUTPUT",
+                "terminal_relevance": True
+            }
+
             return ConversionExecutionPlan(
                 plan_id=f"PLAN_{path.path_id}",
                 conversion_id=path.path_id,
@@ -426,7 +476,10 @@ class ConversionDiscoveryEngine:
                 start_step=econ_state.step,
                 estimated_duration=path.total_steps,
                 net_value_est=path.net_value_est,
-                is_executable=bool(market_actions or worker_actions)
+                is_executable=bool(market_actions or worker_actions),
+                labor_class=path.labor_class,
+                opportunity_family=path.opportunity_family,
+                attribution_info=attribution
             )
 
         elif path.target_commodity == "CARROT":
@@ -440,6 +493,21 @@ class ConversionDiscoveryEngine:
 
             if carrot_seeds == 0 and float(econ_state.farm.cash) >= 20.0:
                 market_actions.append(["BUY_SEED", "CARROT", 1])
+
+            attribution = {
+                "opportunity_family": "RESOURCE_ACQUISITION",
+                "resource_graph_path": "CASH -> SEED -> CARROT",
+                "physical_conversion": False,
+                "market_actions": market_actions,
+                "worker_actions": worker_actions,
+                "labor_class": path.labor_class.value if isinstance(path.labor_class, ConversionLaborClass) else str(path.labor_class),
+                "input": "CASH",
+                "output": "CARROT",
+                "cash_effect": path.net_value_est,
+                "capacity_effect": 0,
+                "downstream_purpose": "ACQUISITION_NOT_CONVERSION",
+                "terminal_relevance": True
+            }
 
             return ConversionExecutionPlan(
                 plan_id=f"PLAN_{path.path_id}",
@@ -455,9 +523,13 @@ class ConversionDiscoveryEngine:
                 start_step=econ_state.step,
                 estimated_duration=path.total_steps,
                 net_value_est=path.net_value_est,
-                is_executable=bool(market_actions or worker_actions)
+                is_executable=bool(market_actions or worker_actions),
+                labor_class=path.labor_class,
+                opportunity_family=path.opportunity_family,
+                attribution_info=attribution
             )
 
+        # Non-livestock paths (e.g. pure seed purchases) are rejected from RESOURCE_CONVERSION
         return None
 
 
@@ -474,7 +546,6 @@ def decompose_conversion_to_tasks(
 
     # If physical worker actions are needed
     if plan.worker_actions:
-        # Determine primary action op
         primary_op = plan.worker_actions[-1] if plan.worker_actions else "PASS"
         fam = {
             "FEED": TaskActionFamily.FEED_ANIMAL,

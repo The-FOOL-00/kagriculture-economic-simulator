@@ -73,6 +73,24 @@ class MultiWorkerDominancePruner:
         farmer_harvests_b = sum(1 for b in plan_b_assignments if b.worker_id == 0 and "HARVEST" in b.task.action_family.value)
         if farmer_harvests_a > farmer_harvests_b:
             return True
+        if farmer_harvests_a < farmer_harvests_b:
+            return False
+
+        # Auxiliary worker preference: Plans utilizing auxiliary workers dominate plans diverting Farmer
+        farmer_diverted_a = any(a.worker_id == 0 for a in plan_a_assignments)
+        farmer_diverted_b = any(b.worker_id == 0 for b in plan_b_assignments)
+        if not farmer_diverted_a and farmer_diverted_b:
+            return True
+        if farmer_diverted_a and not farmer_diverted_b:
+            return False
+
+        # Completion timing dominance: Plan completing earlier dominates
+        max_step_a = max((a.completion_step for a in plan_a_assignments), default=0)
+        max_step_b = max((b.completion_step for b in plan_b_assignments), default=0)
+        if max_step_a < max_step_b:
+            return True
+        if max_step_a > max_step_b:
+            return False
 
         return False
 

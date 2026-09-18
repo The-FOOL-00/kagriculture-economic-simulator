@@ -179,11 +179,25 @@ class SafetyChecker:
             checks["cash_liquidity_ok"] = False
             return False, checks, "Candidate creates intermediate cash liquidity deadlock"
 
+        liq_prof = patch.conversion_metadata.get("liquidity_profile")
+        if isinstance(liq_prof, dict) and liq_prof.get("is_solvent_trajectory") is False:
+            checks["cash_liquidity_ok"] = False
+            return False, checks, f"Working-capital liquidity deadlock: {liq_prof.get('insolvency_reason', 'cash shortfall')}"
+
         # 9f. Conversion Preconditions Invariant
         if patch.resource_changes.get("missing_prerequisites") or patch.conversion_metadata.get("is_feasible") is False:
             checks["conversion_precondition_ok"] = False
             reason = patch.conversion_metadata.get("infeasibility_reason", "missing conversion prerequisites")
             return False, checks, f"Conversion prerequisite failure: {reason}"
+
+        if isinstance(liq_prof, dict) and liq_prof.get("has_realizable_value_path") is False:
+            checks["conversion_precondition_ok"] = False
+            return False, checks, f"Conversion has no realizable value path: {liq_prof.get('value_path_description', 'dead-end transformation')}"
+
+        labor_cls = patch.conversion_metadata.get("labor_class")
+        if labor_cls == "AUXILIARY_WORKER_REQUIRED" and 0 in patch.worker_mutations:
+            checks["conversion_precondition_ok"] = False
+            return False, checks, "Strict auxiliary labor precondition breach: primary Farmer assigned to AUXILIARY_WORKER_REQUIRED conversion"
 
         # 9g. Temporal Availability Invariant
         if patch.resource_changes.get("delayed_arrival") or patch.resource_changes.get("temporal_violation"):
