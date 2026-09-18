@@ -468,9 +468,9 @@ class PatchGenerator:
 
                 # Direct compressed pathfinding
                 move_path = deterministic_find_path(
-                    start_pos=worker.position,
-                    target_pos=target_pos,
-                    start_step=econ_state.step,
+                    start=worker.position,
+                    target=target_pos,
+                    start_step=0,
                     reservations=res_table,
                     worker_id=wid,
                     board_size=self.multiworker_coordinator.board_size,
@@ -544,9 +544,9 @@ class PatchGenerator:
                 )
 
                 path_to_target = deterministic_find_path(
-                    start_pos=ferry_worker.position,
-                    target_pos=target_pos,
-                    start_step=econ_state.step,
+                    start=ferry_worker.position,
+                    target=target_pos,
+                    start_step=0,
                     reservations=res_table,
                     worker_id=ferry_wid,
                     board_size=self.multiworker_coordinator.board_size,
@@ -556,12 +556,12 @@ class PatchGenerator:
                     continue
 
                 moves_to_target = path_to_target if path_to_target is not None else []
-                pickup_step = econ_state.step + len(moves_to_target)
+                pickup_step = len(moves_to_target)
 
                 shed_pos = (0, 0)
                 path_to_shed = deterministic_find_path(
-                    start_pos=target_pos,
-                    target_pos=shed_pos,
+                    start=target_pos,
+                    target=shed_pos,
                     start_step=pickup_step + 1,
                     reservations=res_table,
                     worker_id=ferry_wid,
