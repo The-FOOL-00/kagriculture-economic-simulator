@@ -189,6 +189,7 @@ class AECExecutor:
         self._prev_econ_state: Optional[EconomicState] = None
         self._telemetry_history: List[AECTelemetry] = []
         self._certificates: List[SafetyCertificate] = []
+        self._latest_committed_patch: Optional[Any] = None
 
     def act(
         self,
@@ -196,6 +197,7 @@ class AECExecutor:
         configuration: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """Main execution entrypoint for Kaggle game turns."""
+        self._latest_committed_patch = None
         t_start = time.perf_counter()
         step = int(observation.get("step", 0) or 0)
         telemetry = AECTelemetry(step=step)
@@ -528,6 +530,7 @@ class AECExecutor:
                     telemetry.decision = "COMMIT"
                     telemetry.committed_patch_id = best_candidate.patch_id
                     telemetry.committed_mechanism = mech_fam
+                    self._latest_committed_patch = best_candidate
                     for c in telemetry.candidates:
                         c.commit_decision = (c.patch_id == best_candidate.patch_id)
                     # Apply certified patch to a fresh canonical copy of baseline action
@@ -571,3 +574,7 @@ class AECExecutor:
 
     def get_all_certificates(self) -> List[SafetyCertificate]:
         return list(self._certificates)
+
+    @property
+    def latest_committed_patch(self) -> Optional[Any]:
+        return self._latest_committed_patch

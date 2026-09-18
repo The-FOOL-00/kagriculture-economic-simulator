@@ -1,0 +1,90 @@
+{
+  "cohort": {
+    "start": 50000,
+    "end": 50024,
+    "count": 25
+  },
+  "arms": {
+    "CONTROL": {
+      "total_matches": 50,
+      "mean_margin": 86.92,
+      "median_margin": 17.0,
+      "std_margin": 254.15104485325259,
+      "p05_margin": -49.0,
+      "p95_margin": 525.2499999999995,
+      "total_commits": 78,
+      "seeds_with_commits": 25,
+      "farmer_displaced_total": 0,
+      "auxiliary_absorbed_total": 0,
+      "shed_overflow_any": false,
+      "arm_elapsed_sec": 98.46
+    },
+    "RESOURCE_CONVERSION_ONLY": {
+      "total_matches": 50,
+      "mean_margin": -172.04,
+      "median_margin": -83.5,
+      "std_margin": 718.3900322248354,
+      "p05_margin": -549.9499999999999,
+      "p95_margin": 493.6999999999996,
+      "total_commits": 288,
+      "seeds_with_commits": 25,
+      "farmer_displaced_total": 24,
+      "auxiliary_absorbed_total": 2,
+      "shed_overflow_any": false,
+      "arm_elapsed_sec": 632.09
+    },
+    "EMERGENCY_FEED_ONLY": {
+      "total_matches": 50,
+      "mean_margin": 87.24,
+      "median_margin": 18.0,
+      "std_margin": 254.10655717631533,
+      "p05_margin": -49.0,
+      "p95_margin": 525.2499999999995,
+      "total_commits": 82,
+      "seeds_with_commits": 25,
+      "farmer_displaced_total": 0,
+      "auxiliary_absorbed_total": 4,
+      "shed_overflow_any": false,
+      "arm_elapsed_sec": 126.26
+    },
+    "COMBINED_RESOURCE": {
+      "total_matches": 50,
+      "mean_margin": -172.04,
+      "median_margin": -83.5,
+      "std_margin": 718.3900322248354,
+      "p05_margin": -549.9499999999999,
+      "p95_margin": 493.6999999999996,
+      "total_commits": 288,
+      "seeds_with_commits": 25,
+      "farmer_displaced_total": 24,
+      "auxiliary_absorbed_total": 2,
+      "shed_overflow_any": false,
+      "arm_elapsed_sec": 657.0
+    }
+  },
+  "paired_deltas": {
+    "RESOURCE_CONVERSION_ONLY": {
+      "itt_mean_delta": -258.96,
+      "itt_median_delta": -81.0,
+      "itt_std": 647.7068151563637,
+      "triggered_count": 50,
+      "triggered_mean_delta": -258.96
+    },
+    "EMERGENCY_FEED_ONLY": {
+      "itt_mean_delta": 0.32,
+      "itt_median_delta": 0.0,
+      "itt_std": 3.0294553966018376,
+      "triggered_count": 50,
+      "triggered_mean_delta": 0.32
+    },
+    "COMBINED_RESOURCE": {
+      "itt_mean_delta": -258.96,
+      "itt_median_delta": -81.0,
+      "itt_std": 647.7068151563637,
+      "triggered_count": 50,
+      "triggered_mean_delta": -258.96
+    }
+  },
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "holdout_protection": "VERIFIED_UNTOUCHED"
+}
