@@ -27,13 +27,17 @@ from aec.coordination.worker_model import (
     WorkerType,
     extract_farm_workers,
 )
-from aec.resource.labor_engine import (
-    AbstentionReason,
-    LaborOpportunityAssessment,
-    LaborOpportunityCostEngine,
-    LaborOpportunityRequest,
-    ValuationLevel,
-)
+def __getattr__(name: str):
+    if name in (
+        "AbstentionReason",
+        "LaborOpportunityAssessment",
+        "LaborOpportunityCostEngine",
+        "LaborOpportunityRequest",
+        "ValuationLevel",
+    ):
+        from aec.resource import labor_engine
+        return getattr(labor_engine, name)
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 
 __all__ = [
     "AbstentionReason",

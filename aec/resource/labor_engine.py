@@ -289,11 +289,8 @@ class LaborOpportunityCostEngine:
             c_cmd = fam_map.get(request.candidate_task.action_family, "PASS")
 
         # 4. LEVEL 1: Local Exact Dependency Valuation
-        # Worker is idle / passing / moving over empty ground with zero cargo and zero active crop duties
-        is_idle_baseline = (
-            b_cmd in ("PASS", "WAIT") or
-            (b_cmd in MOVES and not worker_baseline_tasks and worker_entity.total_cargo_units == 0)
-        )
+        # Worker is genuinely idle (PASS or WAIT) with zero active crop duties
+        is_idle_baseline = b_cmd in ("PASS", "WAIT")
 
         # Check if Level 1 is sufficient
         has_multiworker_coupling = (
@@ -484,7 +481,7 @@ class LaborOpportunityCostEngine:
                 if consecutive_unfed >= 1:
                     preservation_val = 500.0  # Asset preservation
             else:
-                direct_val = max(0.0, 160.0 - wheat_cost)
+                direct_val = 0.0
 
         # Case C: Plant
         elif candidate_cmd == "PLANT":
@@ -617,9 +614,9 @@ class LaborOpportunityCostEngine:
         cand_worker_inv = sum(sum(q * float(prices.get(p, 20.0)) for p, q in inv.items()) for inv in cand_rollout.inventories)
         delta_worker_inv = cand_worker_inv - base_worker_inv
 
-        # Farm tile valuation (growing crops)
-        base_crop_val = self._estimate_growing_crops_value(base_rollout.tiles, prices)
-        cand_crop_val = self._estimate_growing_crops_value(cand_rollout.tiles, prices)
+        # Farm tile valuation (growing biological assets)
+        base_crop_val = self._estimate_growing_crops_value(base_rollout.tiles, prices, current_step=step + horizon)
+        cand_crop_val = self._estimate_growing_crops_value(cand_rollout.tiles, prices, current_step=step + horizon)
         delta_crops = cand_crop_val - base_crop_val
 
         # Net Economic Trajectory Delta
@@ -634,13 +631,22 @@ class LaborOpportunityCostEngine:
             econ=econ
         )
 
-        # Causal Opportunity Cost:
-        # If net_delta < cand_gross_val, the difference represents baseline value lost!
-        # OC = cand_gross_val - net_delta
-        # When baseline loses nothing: net_delta == cand_gross_val => OC = 0.0
-        # When baseline loses more than candidate gains: net_delta < 0 => OC = cand_gross_val - net_delta > cand_gross_val
-        opportunity_cost = max(0.0, cand_gross_val - net_delta)
-        net_incremental_value = cand_gross_val - opportunity_cost
+        if candidate_cmd in ("PASS", "WAIT"):
+            opportunity_cost = max(0.0, -net_delta)
+            net_incremental_value = net_delta
+            cand_gross_val = 0.0
+        else:
+            cand_inv_gain = cand_worker_inv - base_worker_inv
+            cand_shed_gain = cand_shed_val - base_shed_val
+            cand_produced = (cand_inv_gain > 0 or cand_shed_gain > 0 or delta_money > 0 or delta_crops > 0 or pres_val > 0)
+            if not cand_produced and abs(net_delta) < 0.001:
+                # Candidate action was an unexecutable no-op in simulation
+                cand_gross_val = 0.0
+                opportunity_cost = 0.0
+                net_incremental_value = 0.0
+            else:
+                opportunity_cost = max(0.0, cand_gross_val - net_delta)
+                net_incremental_value = cand_gross_val - opportunity_cost
 
         # Displaced Tasks
         displaced = [t.task_id for t in worker_baseline_tasks]
@@ -681,22 +687,44 @@ class LaborOpportunityCostEngine:
             abstention_reason=None
         )
 
-    def _estimate_growing_crops_value(self, tiles: List[List[Any]], prices: Dict[str, Any]) -> float:
-        """Estimate the eventual discounted value of growing crop tiles."""
+    def _estimate_growing_crops_value(self, tiles: List[List[Any]], prices: Dict[str, Any], current_step: int = 0) -> float:
+        """Estimate the biological investment value of growing crop tiles (§8).
+        
+        Crucial Ground-Truth Invariants:
+        1. Mature unharvested crops on tiles (yield_units > 0) are biological potential that
+           requires harvest labor to realize. They are NOT liquid inventory. Valuing them at
+           100% of product price cancels out harvest deltas and creates phantom opportunity cost.
+        2. Terminal cutoff: Crops that cannot mature before final step (step 720 / Day 30) have
+           zero realizable economic value at game end.
+        3. Growing crops that can mature before Day 30 are valued proportionally to growth progress.
+        """
         val = 0.0
+        current_day = current_step // TURNS_PER_DAY
         for row in tiles:
             for tile in row:
                 if isinstance(tile, dict) and tile.get("kind") == "PLANT":
                     crop = tile.get("crop")
+                    if not crop or crop not in CROPS:
+                        continue
+                    growth_days = CROP_GROWTH_DAYS.get(crop, 2)
+                    unit_p = float(prices.get(crop, 50.0))
+                    planted_day = int(tile.get("planted_day", current_day) or 0)
+                    maturity_day = planted_day + growth_days
+
+                    # Terminal feasibility cutoff: Day 30 is the hard game horizon
+                    if maturity_day >= 30:
+                        continue
+
                     yield_u = int(tile.get("yield_units", 0) or 0)
-                    if crop:
-                        unit_p = float(prices.get(crop, 50.0))
-                        # Value proportional to growth or yield
-                        if yield_u > 0:
-                            val += yield_u * unit_p
-                        else:
-                            # Growing plant
-                            val += 2.0 * unit_p * 0.8
+                    if yield_u == 0:
+                        # Growing plant: value progress towards maturity
+                        days_needed = growth_days
+                        days_grown = max(0, current_day - planted_day)
+                        fraction = min(1.0, days_grown / max(1, days_needed))
+                        val += 2.0 * unit_p * 0.5 * fraction
+                    else:
+                        # Mature crop in ground: requires harvest labor. Not liquid cash.
+                        pass
         return val
 
     def _build_abstention(
