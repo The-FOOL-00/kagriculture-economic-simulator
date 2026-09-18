@@ -261,3 +261,59 @@ class FeedSecurityEngine:
         full_trajectory = [cand_action] + list(continuation)[:max(0, horizon - 1)]
 
         return self.evaluate_feed_trajectory(econ_state, full_trajectory, horizon)
+
+
+def decompose_feed_rescue_to_tasks(
+    deficit: int,
+    animal_pos: Tuple[int, int],
+    current_step: int,
+    shed_pos: Tuple[int, int] = (4, 4),
+    latest_step: Optional[int] = None
+) -> List[Any]:
+    """Decompose an emergency feed intervention into discrete WorkerTasks for multi-worker coordination (§14, §15)."""
+    from aec.coordination.task_model import TaskActionFamily, TaskPriority, WorkerTask
+    from aec.coordination.worker_model import WorkerCapability
+
+    if latest_step is None:
+        day_end = ((current_step // 24) + 1) * 24 - 1
+        latest_step = day_end
+
+    tasks: List[WorkerTask] = []
+
+    # Task 1: PICKUP WHEAT at shed access tile
+    pickup_task = WorkerTask(
+        task_id=f"FEED_PICKUP_{current_step}",
+        action_family=TaskActionFamily.PICKUP_RESOURCE,
+        location=shed_pos,
+        earliest_start=current_step,
+        latest_completion=max(current_step + 1, latest_step - 2),
+        required_capabilities={WorkerCapability.MOVE, WorkerCapability.PICKUP},
+        duration=1,
+        resource_inputs={},
+        resource_outputs={"WHEAT": deficit},
+        priority_class=TaskPriority.LIVESTOCK_SECURITY,
+        is_mandatory=True,
+        target_commodity="WHEAT",
+    )
+    tasks.append(pickup_task)
+
+    # Task 2: FEED ANIMAL at animal position
+    feed_task = WorkerTask(
+        task_id=f"FEED_DELIVER_{current_step}",
+        action_family=TaskActionFamily.FEED_ANIMAL,
+        location=animal_pos,
+        earliest_start=current_step + 1,
+        latest_completion=latest_step,
+        required_capabilities={WorkerCapability.MOVE, WorkerCapability.FEED},
+        duration=1,
+        resource_inputs={"WHEAT": 1},
+        resource_outputs={},
+        dependent_tasks=[pickup_task.task_id],
+        priority_class=TaskPriority.LIVESTOCK_SECURITY,
+        is_mandatory=True,
+        target_commodity="WHEAT",
+        target_entity=f"ANIMAL_{animal_pos[0]}_{animal_pos[1]}",
+    )
+    tasks.append(feed_task)
+
+    return tasks

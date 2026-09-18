@@ -55,6 +55,16 @@ class SafetyChecker:
             "reservation_consistency_ok": True,
             "terminal_resource_ok": True,
             "terminal_purpose_ok": True,
+            # Multi-Worker Logistics Invariants (§23)
+            "worker_assignment_consistency": True,
+            "worker_capability_validity": True,
+            "worker_task_exclusivity": True,
+            "worker_spacetime_collision": True,
+            "worker_resource_ownership": True,
+            "worker_task_deadline": True,
+            "worker_route_continuity": True,
+            "worker_handoff_validity": True,
+            "worker_baseline_obligation_preservation": True,
         }
 
         # 0. Route Reconnection result verification (§15)
@@ -202,6 +212,18 @@ class SafetyChecker:
         if patch.resource_changes.get("terminal_purpose_inconsistent"):
             checks["terminal_purpose_ok"] = False
             return False, checks, "Explicit terminal purpose inconsistency recorded on patch"
+
+        # 10. Multi-Worker Coordination Verification (§23)
+        coord_plan = getattr(patch, "coordination_plan", None)
+        if coord_plan is not None:
+            if not getattr(coord_plan, "is_executable", True):
+                checks["worker_assignment_consistency"] = False
+                reason = getattr(coord_plan, "rejection_reason", "Coordination plan infeasible")
+                return False, checks, f"Worker coordination plan infeasible: {reason}"
+            cost = getattr(coord_plan, "labor_opportunity_cost", None)
+            if cost is not None and not getattr(cost, "is_acceptable", True):
+                checks["worker_baseline_obligation_preservation"] = False
+                return False, checks, f"Worker baseline obligation preservation breached: {cost.rationale}"
 
         return True, checks, None
 

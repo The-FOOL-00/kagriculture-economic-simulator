@@ -170,6 +170,12 @@ class SpacetimeReservationTable:
         self.vertex_reservations: Dict[Tuple[int, Tuple[int, int]], int] = {}
         # (time_step, from_pos, to_pos) -> worker_id
         self.edge_reservations: Dict[Tuple[int, Tuple[int, int], Tuple[int, int]], int] = {}
+        # (time_step, task_id) -> worker_id
+        self.task_reservations: Dict[Tuple[int, str], int] = {}
+        # (time_step, resource_key) -> worker_id
+        self.resource_reservations: Dict[Tuple[int, str], int] = {}
+        # (time_step, pos) -> worker_id (exclusive structure building / access)
+        self.building_reservations: Dict[Tuple[int, Tuple[int, int]], int] = {}
 
     def reserve_vertex(self, step: int, pos: Tuple[int, int], worker_id: int) -> bool:
         key = (step, pos)
@@ -196,6 +202,74 @@ class SpacetimeReservationTable:
     def is_edge_available(self, step: int, from_pos: Tuple[int, int], to_pos: Tuple[int, int], worker_id: int) -> bool:
         reverse_existing = self.edge_reservations.get((step, to_pos, from_pos))
         return reverse_existing is None or reverse_existing == worker_id
+
+    def reserve_task(self, step: int, task_id: str, worker_id: int) -> bool:
+        key = (step, task_id)
+        existing = self.task_reservations.get(key)
+        if existing is not None and existing != worker_id:
+            return False
+        self.task_reservations[key] = worker_id
+        return True
+
+    def is_task_available(self, step: int, task_id: str, worker_id: int) -> bool:
+        existing = self.task_reservations.get((step, task_id))
+        return existing is None or existing == worker_id
+
+    def reserve_resource(self, step: int, resource_key: str, worker_id: int) -> bool:
+        key = (step, resource_key)
+        existing = self.resource_reservations.get(key)
+        if existing is not None and existing != worker_id:
+            return False
+        self.resource_reservations[key] = worker_id
+        return True
+
+    def is_resource_available(self, step: int, resource_key: str, worker_id: int) -> bool:
+        existing = self.resource_reservations.get((step, resource_key))
+        return existing is None or existing == worker_id
+
+    def reserve_building(self, step: int, pos: Tuple[int, int], worker_id: int) -> bool:
+        key = (step, pos)
+        existing = self.building_reservations.get(key)
+        if existing is not None and existing != worker_id:
+            return False
+        self.building_reservations[key] = worker_id
+        return True
+
+    def is_building_available(self, step: int, pos: Tuple[int, int], worker_id: int) -> bool:
+        existing = self.building_reservations.get((step, pos))
+        return existing is None or existing == worker_id
+
+    def reserve_trajectory(
+        self,
+        trajectory_points: List[Tuple[int, Tuple[int, int]]],
+        worker_id: int
+    ) -> bool:
+        """Reserve all vertex and edge transitions along a trajectory."""
+        prev_p: Optional[Tuple[int, int]] = None
+        for step, pos in trajectory_points:
+            if not self.reserve_vertex(step, pos, worker_id):
+                return False
+            if prev_p is not None:
+                if not self.reserve_edge(step, prev_p, pos, worker_id):
+                    return False
+            prev_p = pos
+        return True
+
+    def is_trajectory_collision_free(
+        self,
+        trajectory_points: List[Tuple[int, Tuple[int, int]]],
+        worker_id: int
+    ) -> bool:
+        """Check if entire trajectory can be executed without collision."""
+        prev_p: Optional[Tuple[int, int]] = None
+        for step, pos in trajectory_points:
+            if not self.is_vertex_available(step, pos, worker_id):
+                return False
+            if prev_p is not None:
+                if not self.is_edge_available(step, prev_p, pos, worker_id):
+                    return False
+            prev_p = pos
+        return True
 
 
 def deterministic_find_path(

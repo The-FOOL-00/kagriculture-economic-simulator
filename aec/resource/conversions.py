@@ -459,3 +459,47 @@ class ConversionDiscoveryEngine:
             )
 
         return None
+
+
+def decompose_conversion_to_tasks(
+    plan: ConversionExecutionPlan,
+    start_step: int = 0
+) -> List[Any]:
+    """Decompose a ConversionExecutionPlan into discrete WorkerTasks for multi-worker coordination (§14, §16)."""
+    from aec.coordination.task_model import TaskActionFamily, TaskPriority, WorkerTask
+    from aec.coordination.worker_model import WorkerCapability
+
+    tasks: List[WorkerTask] = []
+    loc = plan.target_location or (4, 4)
+
+    # If physical worker actions are needed
+    if plan.worker_actions:
+        # Determine primary action op
+        primary_op = plan.worker_actions[-1] if plan.worker_actions else "PASS"
+        fam = {
+            "FEED": TaskActionFamily.FEED_ANIMAL,
+            "PICKUP": TaskActionFamily.PICKUP_RESOURCE,
+            "DROP": TaskActionFamily.DROP_RESOURCE,
+            "HARVEST": TaskActionFamily.HARVEST,
+            "WATER": TaskActionFamily.WATER,
+            "PLANT": TaskActionFamily.PLANT,
+        }.get(primary_op, TaskActionFamily.WAIT)
+
+        task = WorkerTask(
+            task_id=f"CONV_{plan.conversion_id}_{start_step}",
+            action_family=fam,
+            location=loc,
+            earliest_start=start_step,
+            latest_completion=start_step + max(10, plan.estimated_duration),
+            required_capabilities={WorkerCapability.MOVE},
+            duration=1,
+            resource_inputs=dict(plan.required_inputs),
+            resource_outputs=dict(plan.produced_outputs),
+            cash_effect=plan.net_value_est,
+            priority_class=TaskPriority.SCHEDULED_PRODUCTION,
+            is_mandatory=False,
+            target_commodity=plan.target_commodity,
+        )
+        tasks.append(task)
+
+    return tasks
