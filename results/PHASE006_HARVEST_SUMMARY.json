@@ -1,0 +1,45 @@
+{
+  "phase": "AEC Phase 006",
+  "date": "September 2026",
+  "cohort": "Development Seeds 50000-50024",
+  "total_seeds": 25,
+  "total_candidates": 33155,
+  "total_ab_evaluations": 25,
+  "exact_sign_agreement_pct": 36.0,
+  "phase005b_baseline_sign_agreement_pct": 47.0,
+  "mean_delta_naive_b": -7452.32,
+  "mean_delta_coupled_c": -8823.44,
+  "positive_delta_cases": 9,
+  "negative_delta_cases": 16,
+  "zero_delta_cases": 0,
+  "median_delta_c": -12745.0,
+  "p05_delta_c": -64610.0,
+  "p95_delta_c": 37549.0,
+  "patches_constructed": 24672,
+  "patches_rejected": 8483,
+  "reconnect_failures": 0,
+  "cargo_failures": 164,
+  "dependency_failures": 0,
+  "terminal_failures": 174,
+  "safety_violations": {
+    "illegal_actions": 0,
+    "route_collisions": 0,
+    "edge_swaps": 0,
+    "shed_contention": 0,
+    "inventory_violations": 0,
+    "cash_violations": 0,
+    "terminal_violations": 0
+  },
+  "latencies_ms": {
+    "detection_p50": 0.679,
+    "patch_gen_p50": 8.211,
+    "counterfactual_p50": 1864.046
+  },
+  "governance": {
+    "v3_chassis_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "v3_chassis_verified": true,
+    "holdouts_untouched": true,
+    "prospective_matches": 0,
+    "resource_conversion_status": "QUARANTINED"
+  }
+}
