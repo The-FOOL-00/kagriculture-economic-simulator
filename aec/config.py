@@ -231,3 +231,12 @@ class AECConfig:
         """Check if a mechanism family is explicitly authorized."""
         return mechanism in self.enabled_mechanisms
 
+    def is_family_live_eligible(self, family: str) -> bool:
+        """Check if a family is cleared for live execution (enabled and not quarantined)."""
+        return family in self.enabled_mechanisms and family not in self.quarantined_mechanisms
+
+    @property
+    def resource_conversion_enabled(self) -> bool:
+        """Direct check enforcing that RESOURCE_CONVERSION remains strictly quarantined."""
+        return self.is_family_live_eligible("RESOURCE_CONVERSION")
+

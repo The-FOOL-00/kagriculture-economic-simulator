@@ -46,9 +46,37 @@ class TacticalProposal:
             "rejection": self.rejection_reason,
         }
 
+    @property
+    def upfront_cost(self) -> float:
+        return float(self.payload.get("upfront_cost", 0.0))
+
 
 class TacticalPlanner:
     """Coordinates tactical opportunity generation under macro constraints."""
+
+    def __init__(self, macro_controller: Optional[Any] = None) -> None:
+        self.macro_controller = macro_controller
+
+    def validate_proposal_compatibility(
+        self,
+        proposal: TacticalProposal,
+        current_cash: float,
+        strategy: Optional[MacroStrategy] = None
+    ) -> Tuple[bool, str]:
+        """Validate if proposal satisfies macro constraints and cash reserves (§10)."""
+        strat = strategy
+        if strat is None and self.macro_controller is not None:
+            strat = getattr(self.macro_controller, "_fixed_strategy", None)
+
+        if strat is not None:
+            if proposal.upfront_cost > 0:
+                post_cash = current_cash - proposal.upfront_cost
+                if post_cash < strat.min_cash_reserve:
+                    return False, f"Violates minimum cash reserve: {post_cash:.1f} < {strat.min_cash_reserve:.1f}"
+            if not strat.allow_capital_expenditures and proposal.category == TacticalCategory.RESOURCE_CONVERSION:
+                return False, "Macro policy prohibits capital expenditures"
+
+        return True, ""
 
     def filter_proposals_by_macro(
         self,

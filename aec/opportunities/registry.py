@@ -48,10 +48,17 @@ class OpportunityRegistry:
     def __init__(self) -> None:
         self._families: Dict[str, OpportunityFamilySpec] = {}
 
+    @classmethod
+    def default_registry(cls) -> OpportunityRegistry:
+        return GLOBAL_OPPORTUNITY_REGISTRY
+
     def register(self, spec: OpportunityFamilySpec) -> None:
         self._families[spec.name] = spec
 
     def get(self, name: str) -> Optional[OpportunityFamilySpec]:
+        return self._families.get(name)
+
+    def get_spec(self, name: str) -> Optional[OpportunityFamilySpec]:
         return self._families.get(name)
 
     def list_families(self) -> List[OpportunityFamilySpec]:

@@ -28,6 +28,30 @@ class Opportunity:
     confidence: float = 1.0
     scientific_status: ScientificStatus = ScientificStatus.PLAUSIBLE_UNPROVEN
 
+    @property
+    def mechanism_family(self) -> str:
+        return self.candidate_transformation_family
+
+    @property
+    def estimated_net_delta(self) -> float:
+        return self.estimated_economic_relevance
+
+    @property
+    def worker_id(self) -> int:
+        for e in self.affected_entities:
+            if isinstance(e, int):
+                return e
+        return 0
+
+    @property
+    def target_pos(self) -> Tuple[int, int]:
+        if "target_pos" in self.dependency_info:
+            return self.dependency_info["target_pos"]
+        for e in self.affected_entities:
+            if isinstance(e, (tuple, list)) and len(e) == 2:
+                return (e[0], e[1])
+        return (0, 0)
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             "id": self.opportunity_id,

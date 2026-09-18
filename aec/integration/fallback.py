@@ -102,5 +102,8 @@ class RobustFallbackPolicy:
     def get_latest_record(self) -> Optional[FallbackRecord]:
         return self._history[-1] if self._history else None
 
+    def get_history(self) -> List[FallbackRecord]:
+        return list(self._history)
+
     def clear(self) -> None:
         self._history.clear()

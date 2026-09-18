@@ -44,22 +44,34 @@ def get_game_phase(step: int) -> str:
 @dataclass
 class EconomicState:
     """Master Economic IR representing the complete game at decision time."""
-    step: int
-    day: int
-    hour: int
-    player: int
-    phase: str
-    remaining_horizon: int
-    terminal_distance: int
-    
-    workers: WorkerState
-    farm: FarmState
-    market: MarketState
-    opponent: OpponentState
+    step: int = 0
+    day: int = 0
+    hour: int = 0
+    player: int = 0
+    phase: str = ""
+    remaining_horizon: Optional[int] = None
+    terminal_distance: Optional[int] = None
+
+    workers: WorkerState = field(default_factory=WorkerState)
+    farm: FarmState = field(default_factory=FarmState)
+    market: MarketState = field(default_factory=MarketState)
+    opponent: OpponentState = field(default_factory=OpponentState)
     
     # Feasibility windows: crop -> can reach harvest before step 718 if planted today
     crop_feasibility: Dict[str, bool] = field(default_factory=dict)
     raw_obs_snapshot: Optional[Dict[str, Any]] = None
+
+    def __post_init__(self) -> None:
+        if self.day == 0 and self.step > 0:
+            self.day = self.step // TURNS_PER_DAY
+        if self.hour == 0 and self.step > 0:
+            self.hour = self.step % TURNS_PER_DAY
+        if not self.phase:
+            self.phase = get_game_phase(self.step)
+        if self.remaining_horizon is None:
+            self.remaining_horizon = max(0, FINAL_STEP - self.step)
+        if self.terminal_distance is None:
+            self.terminal_distance = self.remaining_horizon
 
     @property
     def is_terminal_phase(self) -> bool:

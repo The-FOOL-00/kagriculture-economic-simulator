@@ -21,7 +21,7 @@ from aec.opportunities.route_compression import RouteCompressionDetector
 from aec.opportunities.terminal import TerminalOpportunityAnalyzer
 from aec.opportunities.timing import TimingOpportunityAnalyzer
 from aec.opportunities.town_cycle import TownCycleSignalDetector
-from aec.terminal.conversion import TerminalConversionDetector
+from aec.opportunities.terminal_conversion import TerminalConversionDetector
 
 
 class OpportunityEngine:

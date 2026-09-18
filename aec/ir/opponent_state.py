@@ -22,10 +22,17 @@ class OpponentState:
     
     # Observable physical features
     observed_cash: float = 0.0
+    cash: float = 0.0
     observed_hires_today: int = 0
     observed_worker_count: int = 1
     observed_mature_crops: Dict[str, int] = field(default_factory=dict)
     observed_animals: Dict[str, int] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.cash > 0.0 and self.observed_cash == 0.0:
+            self.observed_cash = self.cash
+        elif self.observed_cash > 0.0 and self.cash == 0.0:
+            self.cash = self.observed_cash
     
     # Coordinate and behavioral signals
     tape_similarity: float = 0.0

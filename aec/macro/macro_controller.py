@@ -64,11 +64,20 @@ class MacroController:
     do not silently violate or subvert long-term farm direction.
     """
 
+    def __init__(self, fixed_strategy: Optional[MacroStrategy] = None) -> None:
+        self._fixed_strategy = fixed_strategy
+
+    def set_strategy(self, strategy: MacroStrategy) -> None:
+        self._fixed_strategy = strategy
+
     def formulate_strategy(
         self,
         econ_state: EconomicState,
         pressure_state: Optional[OpponentPressureState] = None
     ) -> MacroStrategy:
+        if self._fixed_strategy is not None:
+            return self._fixed_strategy
+
         step = econ_state.step
         cash = econ_state.cash
 

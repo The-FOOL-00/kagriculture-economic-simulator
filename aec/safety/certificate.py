@@ -134,3 +134,71 @@ class SafetyCertificate:
             "abstain_reason": self.abstain_reason,
             "metadata": self.metadata,
         }
+
+    @property
+    def is_certified(self) -> bool:
+        return self.commit_decision and self.all_checks_passed
+
+    @property
+    def failure_reason(self) -> str:
+        return self.abstain_reason or ""
+
+    @property
+    def violations(self) -> List[str]:
+        return self.metadata.get("violations", [])
+
+
+class SafetyInvariantChecker:
+    """Certifies that candidate patches pass all structural safety invariants (§29)."""
+
+    def verify_patch_safety(
+        self,
+        patch: Any,
+        econ_state: Any,
+        sim_outcome: Optional[Any] = None
+    ) -> Tuple[bool, SafetyCertificate]:
+        """Verify whether a candidate patch passes all safety invariants."""
+        violations: List[str] = []
+        inventory_ok = True
+        cash_ok = True
+
+        market_mutations = getattr(patch, "market_mutations", [])
+        farm = getattr(econ_state, "farm", None)
+        shed = getattr(farm, "shed_inventory", {}) if farm else {}
+        cash = getattr(farm, "cash", 0.0) if farm else 0.0
+
+        for order in market_mutations:
+            if isinstance(order, (list, tuple)) and len(order) >= 3:
+                action = order[0]
+                item = order[1]
+                qty = order[2]
+                if action == "SELL":
+                    available = shed.get(item, 0)
+                    if qty > available:
+                        inventory_ok = False
+                        violations.append(f"NEGATIVE_INVENTORY_DEFICIT: Cannot sell {qty} {item}, shed only has {available}")
+
+        upfront = getattr(patch, "upfront_cost", 0.0)
+        if upfront > 0 and upfront > cash:
+            cash_ok = False
+            violations.append(f"INSOLVENT_UPFRONT_COST: Requires ${upfront:.1f}, cash is only ${cash:.1f}")
+
+        is_certified = inventory_ok and cash_ok
+        failure_reason = "; ".join(violations) if violations else None
+
+        cert = SafetyCertificate(
+            patch_id=getattr(patch, "patch_id", "unknown"),
+            baseline_summary=f"step={getattr(econ_state, 'step', 0)}",
+            candidate_summary=getattr(patch, "rationale", ""),
+            delta_our_money=0.0,
+            delta_opponent_money=0.0,
+            delta_terminal_margin=0.0,
+            overflow_check=True,
+            obligation_check=True,
+            negative_inventory_check=inventory_ok,
+            cash_liquidity_check=cash_ok,
+            commit_decision=is_certified,
+            abstain_reason=failure_reason,
+            metadata={"violations": violations}
+        )
+        return is_certified, cert

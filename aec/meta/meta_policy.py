@@ -89,6 +89,10 @@ class MetaOrchestrator:
         self.configured_mode = mode
         self.confidence_threshold = confidence_threshold
 
+    @property
+    def current_mode(self) -> AECMode:
+        return self.configured_mode
+
     def orchestrate(
         self,
         pressure_state: OpponentPressureState,
