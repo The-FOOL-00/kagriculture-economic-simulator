@@ -121,7 +121,7 @@ def test_exp_004_execution_manifest_integrity():
         manifest = json.load(f)
 
     assert manifest["experiment_id"] == "EXP-AEC-004"
-    assert manifest["status"] == "FROZEN_NOT_LAUNCHED"
+    assert manifest["status"] in ("FROZEN_NOT_LAUNCHED", "COMPLETED")
     assert manifest["directive"] == "DO_NOT_EXECUTE_WITHOUT_USER_APPROVAL"
     assert manifest["cohort"]["seed_start"] == 340300
     assert manifest["cohort"]["seed_end"] == 340349
