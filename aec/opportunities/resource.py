@@ -54,7 +54,12 @@ class ResourceOpportunityAnalyzer:
                     affected_entities=["WHEAT", animals_requiring_feed],
                     estimated_economic_relevance=deficit * 40.0,
                     candidate_transformation_family="EMERGENCY_FEED_PURCHASE",
-                    dependency_info={"deficit": deficit, "price": wheat_price, "is_terminally_feasible": True},
+                    dependency_info={
+                        "deficit": deficit,
+                        "price": wheat_price,
+                        "is_terminally_feasible": True,
+                        "terminal_details": getattr(self, "last_terminal_details", {})
+                    },
                     required_horizon=min(36, econ_state.remaining_horizon),
                     rationale=f"Wheat stock ({total_wheat}) insufficient for {animals_requiring_feed} head of livestock (COW/SHEEP/GOOSE)",
                     confidence=0.95,
@@ -98,27 +103,12 @@ class ResourceOpportunityAnalyzer:
         deficit: int
     ) -> Tuple[bool, str]:
         """Validates that a feed purchase has realizable downstream purpose before terminal (§10, §11, §13)."""
-        remaining_steps = econ_state.remaining_horizon
-        step = econ_state.step
-        turns_per_day = 24
-        turn_of_day = step % turns_per_day
-        turns_to_day_end = turns_per_day - turn_of_day
-
-        final_action_step = 718
-        steps_to_final_action = max(0, final_action_step - step)
-        min_feed_delay = 2
-
-        # 1. Insufficient time to execute purchase and feed before final action step
-        if steps_to_final_action < min_feed_delay:
-            return False, f"Insufficient time to execute feed before final action step {final_action_step}"
-
-        # 2. Final day: no subsequent day rollover occurs before episode end
-        if remaining_steps <= turns_to_day_end:
-            return False, "Final day feed purchase cannot yield realizable harvest/sales before episode concludes"
-
-        # 3. Multi-day chain: purchase (1) + feed (1) + day_end refresh + harvest (1) + drop (1) + sell (1)
-        min_realizable_steps = turns_to_day_end + 3
-        if steps_to_final_action < min_realizable_steps:
-            return False, f"Feed purchase cannot complete harvest-and-sell chain ({min_realizable_steps} steps needed, {steps_to_final_action} available)"
-
-        return True, "Feed purchase has realizable downstream economic purpose"
+        from aec.terminal.obligations import FeedTerminalCausalAnalyzer
+        analyzer = FeedTerminalCausalAnalyzer()
+        is_feasible, purpose_cat, reason, details = analyzer.assess_terminal_feed_purpose(
+            econ_state=econ_state,
+            animals=animals,
+            deficit=deficit
+        )
+        self.last_terminal_details = details
+        return is_feasible, reason

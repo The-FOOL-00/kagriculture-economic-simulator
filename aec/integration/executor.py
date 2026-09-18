@@ -53,9 +53,10 @@ class CandidateTelemetry:
     commit_decision: bool = False
     baseline_action: Optional[Dict[str, Any]] = None
     candidate_action: Optional[Dict[str, Any]] = None
+    terminal_telemetry: Optional[Dict[str, Any]] = None
 
     def to_dict(self) -> Dict[str, Any]:
-        return {
+        d = {
             "patch_id": self.patch_id,
             "family": self.mechanism_family,
             "opp_detected": self.opportunity_detected,
@@ -81,6 +82,9 @@ class CandidateTelemetry:
             "baseline_action": self.baseline_action,
             "candidate_action": self.candidate_action,
         }
+        if self.terminal_telemetry is not None:
+            d["terminal_telemetry"] = self.terminal_telemetry
+        return d
 
 
 
@@ -356,7 +360,8 @@ class AECExecutor:
                     patch=patch,
                     outcome=sim_outcome,
                     econ_state=econ_state,
-                    baseline_action=baseline_action
+                    baseline_action=baseline_action,
+                    future_trajectory=patch_continuation
                 )
                 telemetry.safety_time_ms += (time.perf_counter() - t_saf0) * 1000.0
 
@@ -379,6 +384,41 @@ class AECExecutor:
                     telemetry.patches_economically_rejected_count += 1
 
                 cand_action = patch.apply(baseline_action)
+
+                # Terminal Telemetry for emergency feed purchases (§21)
+                term_telem = None
+                if mech_fam == "EMERGENCY_FEED_PURCHASE":
+                    from aec.terminal.obligations import FeedTerminalCausalAnalyzer
+                    causal_analyzer = FeedTerminalCausalAnalyzer()
+                    animals = getattr(econ_state.farm, "animals", [])
+                    if not animals:
+                        from aec.resource.feed_security import FeedSecurityEngine
+                        animals = FeedSecurityEngine().extract_livestock(econ_state)
+                    deficit_val = 1
+                    if hasattr(patch, "dependency_info") and isinstance(patch.dependency_info, dict):
+                        deficit_val = patch.dependency_info.get("deficit", 1)
+                    _, p_cat, p_reason, p_details = causal_analyzer.assess_terminal_feed_purpose(
+                        econ_state=econ_state,
+                        animals=animals,
+                        deficit=deficit_val,
+                        baseline_trajectory=patch_continuation
+                    )
+                    term_telem = {
+                        "candidate_id": patch.patch_id,
+                        "current_step": econ_state.step,
+                        "remaining_steps": econ_state.remaining_horizon,
+                        "feed_deficit_horizon": patch.expected_horizon,
+                        "purpose": p_details.get("purpose", p_cat.value),
+                        "required_downstream_actions": ["FEED", "HARVEST", "DROP", "SELL"],
+                        "required_cash_obligations": p_details.get("purchase_cost", 0.0),
+                        "earliest_realizable_benefit": p_details.get("earliest_realizable_benefit"),
+                        "latest_feasible_execution": p_details.get("latest_feasible_execution"),
+                        "baseline_obligations_affected": list(patch.affected_obligations),
+                        "terminal_purpose_status": p_cat.value,
+                        "counterfactual_status": getattr(sim_outcome, "fidelity", "VERIFIED"),
+                        "safety_status": "PASS" if passed_safety else "FAIL",
+                        "abstain_commit_reason": abstain_reason if not passed_safety else ("COMMIT" if candidate_otherwise_attractive and not is_quarantined else "ABSTAIN"),
+                    }
 
                 # Record per-candidate telemetry (§14)
                 cand_telem = CandidateTelemetry(
@@ -409,6 +449,7 @@ class AECExecutor:
                     commit_decision=candidate_otherwise_attractive and not is_quarantined,
                     baseline_action=copy.deepcopy(baseline_action),
                     candidate_action=copy.deepcopy(cand_action),
+                    terminal_telemetry=term_telem,
                 )
                 telemetry.candidates.append(cand_telem)
 
