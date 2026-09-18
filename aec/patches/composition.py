@@ -52,28 +52,30 @@ class PatchCompositionEngine:
         conflicts: List[str] = []
 
         # 1. Worker Disjointness
-        wid_a = getattr(patch_a, "worker_id", 0)
-        wid_b = getattr(patch_b, "worker_id", 0)
-        same_worker = (wid_a == wid_b)
+        workers_a = set(getattr(patch_a, "worker_ids", []) or ([patch_a.worker_id] if hasattr(patch_a, "worker_id") else []))
+        workers_b = set(getattr(patch_b, "worker_ids", []) or ([patch_b.worker_id] if hasattr(patch_b, "worker_id") else []))
+        shared_workers = workers_a & workers_b
+        same_worker = len(shared_workers) > 0
 
         # 2. Economic Dominance
-        val_a = float(getattr(patch_a, "estimated_economic_value", 0.0) or 0.0)
-        val_b = float(getattr(patch_b, "estimated_economic_value", 0.0) or 0.0)
-        dur_a = int(getattr(patch_a, "duration_steps", 1) or 1)
-        dur_b = int(getattr(patch_b, "duration_steps", 1) or 1)
+        val_a = float(getattr(patch_a, "estimated_economic_value", 0.0) or getattr(patch_a, "economic_effect", 0.0) or 0.0)
+        val_b = float(getattr(patch_b, "estimated_economic_value", 0.0) or getattr(patch_b, "economic_effect", 0.0) or 0.0)
+        dur_a = int(getattr(patch_a, "duration_steps", 1) or getattr(patch_a, "duration", 1) or 1)
+        dur_b = int(getattr(patch_b, "duration_steps", 1) or getattr(patch_b, "duration", 1) or 1)
 
         if same_worker:
+            contested_w = sorted(list(shared_workers))[0]
             if val_a >= val_b and dur_a <= dur_b:
                 return PatchCompatibilityReport(
                     relation=CompositionRelation.DOMINATES,
                     compatible=False,
-                    conflicts=[f"Worker {wid_a} contested: Patch A dominates Patch B."],
+                    conflicts=[f"Worker {contested_w} contested: Patch A dominates Patch B."],
                     rationale="Dominates on same worker: execute A, discard B."
                 )
             return PatchCompatibilityReport(
                 relation=CompositionRelation.MUTUALLY_EXCLUSIVE,
                 compatible=False,
-                conflicts=[f"Same worker {wid_a} cannot execute two simultaneous trajectories."],
+                conflicts=[f"Same worker {contested_w} cannot execute two simultaneous trajectories."],
                 rationale="Mutually exclusive worker assignment."
             )
 

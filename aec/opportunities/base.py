@@ -37,6 +37,14 @@ class Opportunity:
         return self.estimated_economic_relevance
 
     @property
+    def estimated_economic_value(self) -> float:
+        return self.estimated_economic_relevance
+
+    @property
+    def upfront_cost(self) -> float:
+        return float(self.dependency_info.get("upfront_cost", 0.0))
+
+    @property
     def worker_id(self) -> int:
         for e in self.affected_entities:
             if isinstance(e, int):

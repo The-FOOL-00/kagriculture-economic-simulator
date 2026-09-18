@@ -88,8 +88,13 @@ class OpportunityCandidateFunnel:
     ensuring only top-K viable candidates reach the simulation oracle.
     """
 
-    def __init__(self, budget: Optional[InferenceBudget] = None) -> None:
+    def __init__(
+        self,
+        budget: Optional[InferenceBudget] = None,
+        macro_controller: Optional[Any] = None
+    ) -> None:
         self.budget = budget or InferenceBudget()
+        self.macro_controller = macro_controller
 
     def filter_candidates(
         self,
@@ -97,10 +102,12 @@ class OpportunityCandidateFunnel:
         econ_state: EconomicState,
         budget: Optional[InferenceBudget] = None,
         labor_engine: Optional[Any] = None,
+        macro_controller: Optional[Any] = None,
     ) -> Tuple[List[Any], FunnelTelemetry]:
         """Execute the 10-stage tiered pruning pipeline (§7)."""
         t_start = time.perf_counter()
         budget = budget or self.budget
+        macro = macro_controller or self.macro_controller
         telemetry = FunnelTelemetry(
             initial_candidates=len(raw_candidates),
             exact_simulations_budgeted=budget.max_exact_simulations
@@ -117,7 +124,7 @@ class OpportunityCandidateFunnel:
         telemetry.stage_records.append(rec2)
 
         # Stage 3: Resource Feasibility
-        current, rec3 = self._stage_resource_feasibility(current, econ_state)
+        current, rec3 = self._stage_resource_feasibility(current, econ_state, macro)
         telemetry.stage_records.append(rec3)
 
         # Stage 4: Worker Availability
@@ -197,16 +204,32 @@ class OpportunityCandidateFunnel:
         )
         return survived, rec
 
-    def _stage_resource_feasibility(self, candidates: List[Any], econ_state: EconomicState) -> Tuple[List[Any], FunnelStageRecord]:
+    def _stage_resource_feasibility(
+        self,
+        candidates: List[Any],
+        econ_state: EconomicState,
+        macro_controller: Optional[Any] = None
+    ) -> Tuple[List[Any], FunnelStageRecord]:
         t0 = time.perf_counter()
         survived = []
         reasons: Dict[str, int] = {}
         cash = econ_state.cash
+
+        min_reserve = 0.0
+        if macro_controller is not None:
+            strat = macro_controller.formulate_strategy(econ_state)
+            min_reserve = getattr(strat, "min_cash_reserve", 0.0)
+
         for c in candidates:
-            req_cash = getattr(c, "required_cash", 0.0) or getattr(c, "upfront_cost", 0.0)
-            if req_cash > cash:
-                reasons["INSUFFICIENT_CASH"] = reasons.get("INSUFFICIENT_CASH", 0) + 1
-                continue
+            dep_info = getattr(c, "dependency_info", {}) or {}
+            req_cash = float(getattr(c, "required_cash", 0.0) or getattr(c, "upfront_cost", 0.0) or dep_info.get("upfront_cost", 0.0))
+            if req_cash > 0:
+                if req_cash > cash:
+                    reasons["INSUFFICIENT_CASH"] = reasons.get("INSUFFICIENT_CASH", 0) + 1
+                    continue
+                if cash - req_cash < min_reserve:
+                    reasons["VIOLATES_MACRO_RESERVE"] = reasons.get("VIOLATES_MACRO_RESERVE", 0) + 1
+                    continue
             survived.append(c)
         rec = FunnelStageRecord(
             stage=FunnelStage.S3_RESOURCE_FEASIBILITY,
@@ -302,7 +325,7 @@ class OpportunityCandidateFunnel:
                 # Sort descending by value, ascending by duration
                 group.sort(
                     key=lambda x: (
-                        -getattr(x, "estimated_economic_value", 0.0),
+                        -float(getattr(x, "estimated_economic_value", 0.0) or getattr(x, "estimated_economic_relevance", 0.0) or getattr(x, "estimated_net_delta", 0.0) or 0.0),
                         getattr(x, "duration_steps", 999)
                     )
                 )
