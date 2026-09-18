@@ -94,6 +94,7 @@ class OpportunityEngine:
         raw_opportunities.extend(self.terminal_conversion_detector.detect(econ_state))
         raw_opportunities.extend(self.opponent_preemption_detector.detect(econ_state, pressure_state))
         raw_opportunities.extend(self.emergency_recovery_detector.detect(econ_state, baseline_action))
+        raw_opportunities.extend(self.town_cycle_detector.detect(econ_state, baseline_action))
 
         # Layer 1 Mechanism Filtering (§9, §34)
         actionable: List[Opportunity] = []

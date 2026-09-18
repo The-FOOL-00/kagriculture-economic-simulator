@@ -499,15 +499,45 @@ class PatchGenerator:
 
             # 14. Town Cycle Signal Timing (§22)
             elif fam == "TOWN_CYCLE":
-                current_orders = baseline_action.get("market", [])
-                patch = CoupledPatch(
-                    patch_id=f"PATCH_{opp.opportunity_id}",
-                    source_opportunity_id=opp.opportunity_id,
-                    mechanism_family=fam,
-                    market_mutations=copy.deepcopy(current_orders),
-                    expected_horizon=opp.required_horizon,
-                    rationale=opp.rationale
-                )
-                patches.append(patch)
+                timing_action = opp.dependency_info.get("timing_action", "DELAY_SALE")
+                item = opp.dependency_info.get("item")
+                qty = opp.dependency_info.get("qty", 1)
+                current_orders = copy.deepcopy(baseline_action.get("market", []))
+                mutated_orders = None
+
+                if timing_action == "DELAY_SALE" and item:
+                    # Defer sale by omitting SELL of this item from current turn's basket
+                    filtered = [
+                        o for o in current_orders
+                        if not (isinstance(o, (list, tuple)) and len(o) >= 2 and o[0] == "SELL" and o[1] == item)
+                    ]
+                    if filtered != current_orders:
+                        mutated_orders = filtered
+                elif timing_action == "ADVANCE_SALE" and item:
+                    # Accelerate sale by inserting SELL of shed inventory
+                    if len(current_orders) < 10:
+                        mutated_orders = [["SELL", item, qty]] + [
+                            o for o in current_orders
+                            if not (isinstance(o, (list, tuple)) and len(o) >= 2 and o[0] == "SELL" and o[1] == item)
+                        ][:9]
+                elif item:
+                    # Generic timing alteration
+                    filtered = [
+                        o for o in current_orders
+                        if not (isinstance(o, (list, tuple)) and len(o) >= 2 and o[0] == "SELL" and o[1] == item)
+                    ]
+                    if filtered != current_orders:
+                        mutated_orders = filtered
+
+                if mutated_orders is not None:
+                    patch = CoupledPatch(
+                        patch_id=f"PATCH_{opp.opportunity_id}",
+                        source_opportunity_id=opp.opportunity_id,
+                        mechanism_family=fam,
+                        market_mutations=mutated_orders,
+                        expected_horizon=opp.required_horizon,
+                        rationale=opp.rationale
+                    )
+                    patches.append(patch)
 
         return patches
