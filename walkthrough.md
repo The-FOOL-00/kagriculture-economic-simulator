@@ -154,3 +154,52 @@ All 20 adversarial fixtures in [`tests/aec/test_resource_remediation_fixtures.py
    - Live production status remains **PERMANENTLY QUARANTINED**.
    - Zero prospective matches were run (`340300–340349` untouched).
 
+---
+
+## 7. AEC Phase 005: Generic Labor Shadow Valuation & Opportunity-Cost Engine
+
+### 7.1 Architecture & Implementation (`aec/resource/labor_engine.py`, `aec/economic/`)
+1. **Generic Labor Valuation Service**:
+   - `LaborOpportunityRequest`: Encapsulates worker ID, candidate task, game state, projected horizon, and candidate gross revenue/cash effect.
+   - `LaborOpportunityAssessment`: Produces audited marginal labor metrics: `opportunity_cost`, `candidate_incremental_value`, `net_incremental_value`, `displaced_consequences`, `preserved_consequences`, `valuation_level`, `commit_recommendation`, and `abstention_reason`.
+   - `LaborOpportunityCostEngine`: Reusable, cross-cutting valuation service computing marginal worker opportunity cost without domain-specific heuristics.
+2. **Hierarchical Escalation (Levels 0–4)**:
+   - **Level 0 (Feasibility Entry Gate)**: Checks spatial reachability, capability validity, and daily wage contract boundary (`step % 24 == 23`). Fails closed on infeasibility.
+   - **Level 1 (Local Exact Dependency)**: Detects idle workers (`PASS`) with 0 baseline displacement, returning $0.00 opportunity cost in sub-millisecond time.
+   - **Level 2 (Broader Trajectory & Peer Absorption)**: Interfaces with `MultiWorkerLogisticsCoordinator` to evaluate whether peer workers can absorb displaced duties (`ABSORBED_BY_PEER`).
+   - **Level 3 (Wider Counterfactual Replay)**: Executes forward counterfactual simulation via `simulate_rollout` under opponent pressure, evaluating cash balance, shed inventory, carried worker cargo, and growing crop assets.
+   - **Level 4 (Full-Horizon Fallback)**: Escalates to terminal horizon for late-game decisions (remaining steps $\le 72$).
+3. **Formal Economic & Governance Invariants**:
+   - **No Ordinal-to-Dollar Cheating (§7)**: Ordinal scheduler priority integers (1000, 600, 100) are never converted into dollar amounts.
+   - **No Arbitrary Thresholds (§12, §30)**: Decisions strictly evaluate causal economic delta: $\text{CandidateGross} > \text{OpportunityCost}$.
+   - **Multi-Worker Attribution & Zero Double Counting (§12, §13)**: Evaluates marginal loss through counterfactual divergence; never attributes more than 100% of terminal crop liquidation value.
+   - **Fail-Closed Governance (§17)**: Abstains safely under missing trajectories, spatial desynchronization, or contract expiry.
+4. **Economic IR Extensions (`aec/ir/worker_state.py`)**:
+   - Added typed fields to `WorkerEntity`: `shadow_value_est`, `current_task_value_est`, `displacement_cost_est`, `valuation_confidence`, and `valuation_method`.
+5. **Dominance Integration (`aec/coordination/dominance.py`)**:
+   - Integrated `dominates_assessment` into `MultiWorkerDominancePruner` using causal economic dominance.
+
+### 7.2 Micro-Validation & Adversarial Suite (30 Tests)
+- Implemented `tests/aec/test_labor_opportunity_engine.py` covering:
+  - Scenarios `LO-01` to `LO-20` (idle worker zero-cost, productive displacement, peer absorption, livestock preservation, terminal deadline, determinism, negative cash preservation, etc.).
+  - Formal Property Invariants `A` through `H`.
+  - Dominance and sub-100ms latency benchmark tests.
+- **Micro Suite Result**: **30/30 PASSED** in 0.22s.
+- **Full Repository Regression Suite**: **384/384 PASSED** in 2.04s.
+
+### 7.3 Offline Diagnostic Replay Results (Seeds 50000–50024)
+Executed passive diagnostic evaluation across 25 development seeds (`50000–50024`) on 888 historical patch records:
+- **Total Opportunities Evaluated**: 888
+- **Total Rejected Due to Opportunity Cost**: **448 (50.45% rejection rate)**
+- **Resource Conversion Triage**: Out of 576 conversion patches, **136 were identified as destructive worker diversions** (incurring up to $198.00 in opportunity cost by diverting workers from active crop maintenance/care) and rejected.
+- **Latency Benchmark**: p50 = **1.27 ms**, p95 = **6.29 ms**, peak = **15.84 ms** (well below the 100 ms target).
+
+### 7.4 Scientific Governance, Audit & Readiness
+1. **Frozen V3 Chassis**: Verified byte-identical: SHA-256 `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943`.
+2. **Protected Data Isolation**: Prospective tournament cohort (`340300–340349`) and holdout cohorts (`340050–340199`, `214200–214249`) remained **100% UNTOUCHED** (0 matches run).
+3. **Phase 004B Accounting Reconciliation**: Reconciled historical report text (576 conversions across treatment arms B and D: 288 + 288) in `reports/AEC_PHASE004B_RESOURCE_REMEDIATION_VALIDATION.md` without modifying raw data.
+4. **Readiness Classification**:
+   - `LaborOpportunityCostEngine`: **READY FOR OFFLINE CONSUMPTION / MICRO-VALIDATED**.
+   - `RESOURCE_CONVERSION`: **NOT READY / QUARANTINED** (no live activation attempted).
+
+
