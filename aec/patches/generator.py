@@ -200,6 +200,24 @@ class PatchGenerator:
                 target_xy = opp.dependency_info.get("target_xy")
                 crop = opp.dependency_info.get("crop")
 
+                # Fallback tile resolution if target_xy not directly provided
+                if target_xy is None:
+                    tiles = econ_state.farm.tiles
+                    w = econ_state.workers.get_worker(worker_id)
+                    w_pos = w.position if w else (0, 0)
+                    best_t = None
+                    min_d = 999
+                    for y, row in enumerate(tiles):
+                        for x, tile in enumerate(row):
+                            if isinstance(tile, dict) and tile.get("kind") == "PLANT" and int(tile.get("yield_units", 0) or 0) > 0:
+                                d = abs(w_pos[0] - x) + abs(w_pos[1] - y)
+                                if d < min_d:
+                                    min_d = d
+                                    best_t = ((x, y), tile.get("crop"))
+                    if best_t:
+                        target_xy = best_t[0]
+                        crop = best_t[1]
+
                 # Default baseline continuation if not passed
                 cont = baseline_continuation if baseline_continuation is not None else [
                     copy.deepcopy(baseline_action) for _ in range(max(12, opp.required_horizon))

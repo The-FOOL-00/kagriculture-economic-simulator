@@ -43,9 +43,45 @@ class TerminalOpportunityAnalyzer:
 
         # Late-Game Harvest Sweep (steps 696–717)
         elif step >= 696:
-            # Check if any mature crops are unharvested
-            mature_crops = sum(econ_state.farm.expected_harvests.values())
-            if mature_crops > 0:
+            tiles = econ_state.farm.tiles
+            workers = [w for w in econ_state.workers.workers if not getattr(w, "is_frozen", False)]
+            prices = econ_state.market.current_prices
+
+            mature_tiles = []
+            for y, row in enumerate(tiles):
+                for x, tile in enumerate(row):
+                    if isinstance(tile, dict) and tile.get("kind") == "PLANT":
+                        crop = tile.get("crop")
+                        yield_u = int(tile.get("yield_units", 0) or 0)
+                        if yield_u > 0 and crop:
+                            mature_tiles.append(((x, y), crop, yield_u))
+
+            if mature_tiles and workers:
+                for (xy, crop, yield_u) in mature_tiles:
+                    best_w = min(workers, key=lambda w: abs(w.position[0] - xy[0]) + abs(w.position[1] - xy[1]))
+                    dist = abs(best_w.position[0] - xy[0]) + abs(best_w.position[1] - xy[1])
+                    val = yield_u * float(prices.get(crop, 50))
+                    opportunities.append(Opportunity(
+                        opportunity_id=f"TERMINAL_SWEEP_W{best_w.worker_id}_{crop}_{xy[0]}_{xy[1]}",
+                        category="TERMINAL",
+                        event_trigger=EventType.E8_TERMINAL_TRANSITION,
+                        affected_entities=[best_w.worker_id, crop],
+                        estimated_economic_relevance=val,
+                        candidate_transformation_family="TERMINAL_HARVEST_SWEEP",
+                        dependency_info={
+                            "worker_id": best_w.worker_id,
+                            "target_xy": xy,
+                            "crop": crop,
+                            "yield_units": yield_u,
+                            "dist": dist,
+                        },
+                        required_horizon=max(6, min(24, FINAL_STEP - step)),
+                        rationale=f"Terminal harvest sweep: Worker {best_w.worker_id} salvage {crop} at {xy} before step 718.",
+                        confidence=0.95,
+                        scientific_status=ScientificStatus.REUSED_SAFETY
+                    ))
+            elif sum(econ_state.farm.expected_harvests.values()) > 0:
+                mature_crops = sum(econ_state.farm.expected_harvests.values())
                 opportunities.append(Opportunity(
                     opportunity_id=f"TERMINAL_SWEEP_STEP_{step}",
                     category="TERMINAL",
@@ -53,7 +89,7 @@ class TerminalOpportunityAnalyzer:
                     affected_entities=["HARVEST_SWEEP"],
                     estimated_economic_relevance=float(mature_crops * 80),
                     candidate_transformation_family="TERMINAL_HARVEST_SWEEP",
-                    dependency_info={"mature_crops": mature_crops},
+                    dependency_info={"mature_crops": mature_crops, "worker_id": 0},
                     required_horizon=max(1, FINAL_STEP - step),
                     rationale=f"Terminal harvest sweep: {mature_crops} mature units awaiting collection",
                     confidence=0.9,
