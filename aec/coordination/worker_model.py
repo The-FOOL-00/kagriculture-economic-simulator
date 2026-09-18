@@ -117,7 +117,12 @@ def extract_farm_workers(
 
     # Case 1: EconomicState
     if hasattr(farm_state_or_econ, "workers") and hasattr(farm_state_or_econ.workers, "workers"):
-        for wid, w in farm_state_or_econ.workers.workers.items():
+        w_collection = farm_state_or_econ.workers.workers
+        if isinstance(w_collection, dict):
+            w_items = list(w_collection.items())
+        else:
+            w_items = [(getattr(w, "worker_id", idx), w) for idx, w in enumerate(w_collection)]
+        for wid, w in w_items:
             wtype = WorkerType.FARMER if wid == 0 else WorkerType.HAND
             workers[wid] = WorkerState(
                 worker_id=wid,

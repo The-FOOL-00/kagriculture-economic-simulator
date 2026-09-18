@@ -45,6 +45,7 @@ class CoupledPatch:
     # Dynamic resource DAG and obligation tracking (§14)
     affected_obligations: List[str] = field(default_factory=list)
     conversion_metadata: Dict[str, Any] = field(default_factory=dict)
+    coordination_plan: Optional[Any] = None
 
     def apply(self, baseline_action: Dict[str, Any]) -> Dict[str, Any]:
         """Apply patch to a deep copy of baseline action, returning modified action."""

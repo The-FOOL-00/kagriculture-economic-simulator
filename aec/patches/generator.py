@@ -7,10 +7,14 @@ import copy
 from typing import Any, Dict, List, Optional, Tuple
 
 from aec.config import AECConfig, ENABLED_FOUNDATION_MECHANISMS, PRODUCTS
+from aec.coordination.scheduler import MultiWorkerLogisticsCoordinator, CoordinationStatus
+from aec.coordination.worker_model import extract_farm_workers
 from aec.ir.economic_state import EconomicState
 from aec.opportunities.base import Opportunity
 from aec.patches.patch import CoupledPatch
 from aec.replanning.reconnect import ReconnectRequest, ReconnectionEngine
+from aec.resource.conversions import ConversionExecutionPlan, decompose_conversion_to_tasks
+from aec.resource.feed_security import decompose_feed_rescue_to_tasks
 
 
 def reorder_frontload(market_orders: List[List[Any]]) -> List[List[Any]]:
@@ -45,6 +49,7 @@ class PatchGenerator:
             self.enabled_mechanisms = set(ENABLED_FOUNDATION_MECHANISMS)
 
         self.reconnect_engine = ReconnectionEngine()
+        self.multiworker_coordinator = MultiWorkerLogisticsCoordinator()
         self.last_quarantined_count: int = 0
         self.last_quarantined_by_mechanism: Dict[str, int] = {}
 
@@ -212,28 +217,58 @@ class PatchGenerator:
                     patches.append(patch)
 
             # 7. Emergency Feed Purchase (§5, §6)
+            # 7. Emergency Feed Purchase (§5, §6, Phase 003/004)
             elif fam == "EMERGENCY_FEED_PURCHASE":
                 deficit = opp.dependency_info.get("deficit", 1)
                 orders = copy.deepcopy(baseline_action.get("market", []))
                 orders.insert(0, ["BUY_PRODUCT", "WHEAT", deficit])
+                worker_mutations = {}
+                coord_plan = None
+
+                workers = extract_farm_workers(econ_state, current_turn=econ_state.step)
+                if len(workers) > 1:
+                    from aec.resource.feed_security import FeedSecurityEngine
+                    livestock_list = FeedSecurityEngine().extract_livestock(econ_state)
+                    unfed = [a for a in livestock_list if not a.fed_today]
+                    if unfed:
+                        target_animal = unfed[0]
+                        tasks = decompose_feed_rescue_to_tasks(
+                            deficit=deficit,
+                            animal_pos=target_animal.position,
+                            current_step=econ_state.step
+                        )
+                        c_plan = self.multiworker_coordinator.plan_coordination(
+                            candidate_tasks=tasks,
+                            workers=workers,
+                            baseline_action=baseline_action,
+                            baseline_continuation=[],
+                            current_step=econ_state.step
+                        )
+                        if c_plan.is_executable:
+                            worker_mutations = dict(c_plan.worker_mutations)
+                            coord_plan = c_plan
+
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
                     source_opportunity_id=opp.opportunity_id,
                     mechanism_family=fam,
+                    worker_mutations=worker_mutations,
                     market_mutations=orders[:10],
+                    coordination_plan=coord_plan,
                     affected_obligations=["LIVESTOCK_FEED"],
                     expected_horizon=opp.required_horizon,
                     rationale=opp.rationale
                 )
                 patches.append(patch)
 
-            # 8. Dynamic Resource Conversion (§8, §9)
+            # 8. Dynamic Resource Conversion (§8, §9, Phase 003/004)
             elif fam == "RESOURCE_CONVERSION":
                 plan_dict = opp.dependency_info.get("execution_plan")
                 market_mutations = None
                 worker_mutations = {}
                 reconnect_res = None
                 spliced_cont = None
+                coord_plan = None
 
                 if plan_dict and plan_dict.get("is_executable"):
                     # 1. Physical market mutations
@@ -244,10 +279,39 @@ class PatchGenerator:
                             orders.insert(0, list(m_act))
                         market_mutations = orders[:10]
 
-                    # 2. Physical worker mutations
+                    # 2. Multi-worker logistics coordination (§7, §16)
                     plan_worker_actions = plan_dict.get("worker_actions", [])
-                    worker_id = plan_dict.get("worker_id", 0)
-                    if plan_worker_actions:
+                    workers = extract_farm_workers(econ_state, current_turn=econ_state.step)
+
+                    if len(workers) > 1 and plan_dict.get("target_location"):
+                        plan_obj = ConversionExecutionPlan(
+                            plan_id=plan_dict.get("plan_id", "CONV"),
+                            conversion_id=plan_dict.get("conversion_id", "CONV"),
+                            target_commodity=plan_dict.get("target_commodity", ""),
+                            required_inputs=plan_dict.get("required_inputs", {}),
+                            produced_outputs=plan_dict.get("produced_outputs", {}),
+                            worker_id=plan_dict.get("worker_id", 0),
+                            target_location=tuple(plan_dict["target_location"]) if plan_dict.get("target_location") else None,
+                            worker_actions=plan_worker_actions,
+                            estimated_duration=plan_dict.get("estimated_duration", 1),
+                            net_value_est=plan_dict.get("net_value_est", 0.0),
+                        )
+                        tasks = decompose_conversion_to_tasks(plan_obj, start_step=econ_state.step)
+                        if tasks:
+                            c_plan = self.multiworker_coordinator.plan_coordination(
+                                candidate_tasks=tasks,
+                                workers=workers,
+                                baseline_action=baseline_action,
+                                baseline_continuation=[],
+                                current_step=econ_state.step
+                            )
+                            if c_plan.is_executable:
+                                worker_mutations = dict(c_plan.worker_mutations)
+                                coord_plan = c_plan
+
+                    # Fallback single-worker if multi-worker not applicable or single worker farm
+                    if not worker_mutations and plan_worker_actions:
+                        worker_id = plan_dict.get("worker_id", 0)
                         worker_mutations[worker_id] = list(plan_worker_actions)
 
                         # 3. Route Reconnection integration if detour required (§5, §6)
@@ -287,6 +351,7 @@ class PatchGenerator:
                     mechanism_family=fam,
                     worker_mutations=worker_mutations,
                     market_mutations=market_mutations,
+                    coordination_plan=coord_plan,
                     spliced_continuation=spliced_cont,
                     reconnect_result=reconnect_res,
                     conversion_metadata=dict(opp.dependency_info),
