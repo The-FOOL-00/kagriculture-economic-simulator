@@ -226,7 +226,7 @@ class OpportunityCandidateFunnel:
             wid = getattr(c, "worker_id", None)
             if wid is not None:
                 w = next((x for x in econ_state.workers.workers if x.worker_id == wid), None)
-                if w is not None and w.is_frozen:
+                if w is not None and getattr(w, "is_frozen", False):
                     reasons["WORKER_FROZEN"] = reasons.get("WORKER_FROZEN", 0) + 1
                     continue
             survived.append(c)

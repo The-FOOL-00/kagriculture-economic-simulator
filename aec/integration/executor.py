@@ -16,12 +16,19 @@ from aec.events.detectors import detect_events
 from aec.events.event_bus import EventBus
 from aec.integration.backbone_adapter import BackboneAdapter, BaselineResult
 from aec.ir.economic_state import EconomicState, build_economic_state
+from aec.counterfactual.opponent_pressure import ContinuousOpponentPressureAnalyzer, OpponentPressureState
+from aec.funnel.candidate_funnel import FunnelTelemetry, InferenceBudget, OpportunityCandidateFunnel
+from aec.integration.fallback import FallbackReason, FallbackRecord, RobustFallbackPolicy
+from aec.macro.macro_controller import MacroController, MacroStrategy
+from aec.meta.meta_policy import AECMode, MetaOrchestrator, MetaPolicyDecision
 from aec.opportunities import OpportunityEngine
 from aec.patches.generator import PatchGenerator
 from aec.patches.patch import CoupledPatch
 from aec.patches.pruning import prune_patches
+from aec.replanning.event_replanner import EventTriggeredReplanner, ReplanDecision
 from aec.safety.certificate import SafetyCertificate
 from aec.safety.checks import SafetyChecker
+from aec.tactical.tactical_planner import TacticalPlanner
 
 _SAFE = {"farmer": ["PASS"], "hands": [], "market": []}
 
@@ -185,6 +192,17 @@ class AECExecutor:
         self.win_model = WinModel()
         self.safety_checker = SafetyChecker()
 
+        # Phase 007 Architectural Subsystems (§5, §8, §10, §11, §12, §30)
+        self.replanner = EventTriggeredReplanner()
+        self.opponent_analyzer = ContinuousOpponentPressureAnalyzer()
+        self.macro_controller = MacroController()
+        self.tactical_planner = TacticalPlanner()
+        mode_str = getattr(self.config, "operational_mode", "ROBUST_MODE")
+        mode_enum = getattr(AECMode, mode_str, AECMode.ROBUST_MODE)
+        self.meta_orchestrator = MetaOrchestrator(mode=mode_enum)
+        self.funnel = OpportunityCandidateFunnel()
+        self.fallback_policy = RobustFallbackPolicy()
+
         # State tracking across steps
         self._prev_econ_state: Optional[EconomicState] = None
         self._telemetry_history: List[AECTelemetry] = []
@@ -225,12 +243,20 @@ class AECExecutor:
             telemetry.ir_time_ms = (time.perf_counter() - t_ir0) * 1000.0
 
             # -----------------------------------------------------------------
-            # 3. EVENT BUS & DETECTORS
+            # 2B. OPPONENT PRESSURE, MACRO STRATEGY, & META ORCHESTRATION (§8, §10, §12)
+            # -----------------------------------------------------------------
+            pressure_state = self.opponent_analyzer.analyze(econ_state, self._prev_econ_state)
+            macro_strategy = self.macro_controller.formulate_strategy(econ_state, pressure_state)
+            meta_decision = self.meta_orchestrator.orchestrate(pressure_state, econ_state)
+
+            # -----------------------------------------------------------------
+            # 3. EVENT BUS, DETECTORS, & EVENT-TRIGGERED REPLANNER (§5, §6)
             # -----------------------------------------------------------------
             t_ev0 = time.perf_counter()
             self.event_bus.clear()
             events = detect_events(econ_state, self._prev_econ_state, baseline_action, self.config)
             self.event_bus.publish_many(events)
+            replan_decision = self.replanner.decide(econ_state, self._prev_econ_state, baseline_action, self._latest_committed_patch)
             telemetry.event_time_ms = (time.perf_counter() - t_ev0) * 1000.0
             telemetry.events_detected = [e.event_type.value for e in events]
 
@@ -244,7 +270,7 @@ class AECExecutor:
                 return baseline_action
 
             # -----------------------------------------------------------------
-            # 4. OPPORTUNITY ENGINE (Layer 1 Defense)
+            # 4. OPPORTUNITY ENGINE (Layer 1 Defense & §23)
             # -----------------------------------------------------------------
             t_opp0 = time.perf_counter()
             opportunities = self.opp_engine.detect_opportunities(
@@ -252,7 +278,8 @@ class AECExecutor:
                 events,
                 baseline_action,
                 max_opportunities=self.config.max_opportunities,
-                config=self.config
+                config=self.config,
+                pressure_state=pressure_state,
             )
             telemetry.opportunities_count = len(opportunities)
             telemetry.opp_time_ms = (time.perf_counter() - t_opp0) * 1000.0
@@ -273,7 +300,7 @@ class AECExecutor:
                 return baseline_action
 
             # -----------------------------------------------------------------
-            # 5. COUPLED PATCH GENERATION & STATIC PRUNING (Layer 2 Defense)
+            # 5. COUPLED PATCH GENERATION, FUNNEL, & MACRO/META SCREENING (Layer 2 Defense & §7, §10, §12)
             # -----------------------------------------------------------------
             raw_patches = self.patch_generator.generate_patches(
                 opportunities, econ_state, baseline_action, config=self.config
@@ -285,8 +312,41 @@ class AECExecutor:
                     telemetry.quarantined_by_mechanism.get(fam, 0) + count
                 )
 
+            # 5A. Candidate Funnel Screening (§7, §30)
+            funnel_budget = InferenceBudget(
+                max_turn_time_ms=self.config.per_step_latency_limit_ms,
+                max_exact_simulations=self.config.max_simulations,
+                max_candidates_screened=self.config.max_candidates,
+            )
+            screened_patches, funnel_telem = self.funnel.filter_candidates(
+                raw_patches, econ_state, budget=funnel_budget
+            )
+
+            # 5B. Macro Compatibility Validation (§10)
+            macro_approved_patches = []
+            for p in screened_patches:
+                m_ok, m_reason = self.macro_controller.validate_tactical_compatibility(p, macro_strategy, econ_state)
+                if m_ok:
+                    macro_approved_patches.append(p)
+                else:
+                    telemetry.candidates.append(CandidateTelemetry(
+                        patch_id=p.patch_id,
+                        mechanism_family=p.mechanism_family,
+                        opportunity_detected=True,
+                        patch_generated=True,
+                        patch_pruned=True,
+                        simulation_run=False,
+                        safety_pass=False,
+                        economic_rejection_reason=f"MACRO_INCOMPATIBLE: {m_reason}"
+                    ))
+
+            # 5C. META Strategic Prioritization (§12, §13)
+            prioritized_patches = self.meta_orchestrator.prioritize_candidates(
+                macro_approved_patches, meta_decision, pressure_state
+            )
+
             candidate_patches = prune_patches(
-                raw_patches, econ_state, max_candidates=self.config.max_candidates
+                prioritized_patches, econ_state, max_candidates=self.config.max_candidates
             )
             telemetry.patches_pruned_count = max(0, len(raw_patches) - len(candidate_patches))
             telemetry.candidates_count = len(candidate_patches)
@@ -546,6 +606,14 @@ class AECExecutor:
                 for c in telemetry.candidates:
                     c.commit_decision = False
                 final_action = baseline_action
+                self.fallback_policy.record_fallback(
+                    step=step,
+                    reason=FallbackReason.SCIENTIFIC_QUARANTINE if telemetry.abstain_reason == "SCIENTIFIC_QUARANTINE" else FallbackReason.ECONOMICALLY_INFERIOR,
+                    baseline_action=baseline_action,
+                    candidate_id=getattr(best_candidate, "patch_id", None),
+                    mechanism_family=telemetry.committed_mechanism,
+                    rationale=telemetry.abstain_reason or "ABSTAIN"
+                )
 
             telemetry.total_time_ms = (time.perf_counter() - t_start) * 1000.0
             self._record_step(econ_state, telemetry)
@@ -554,6 +622,12 @@ class AECExecutor:
 
         except Exception as e:
             # Top-Level Fail-Closed Boundary (§30): Fall back to baseline action
+            self.fallback_policy.record_fallback(
+                step=step,
+                reason=FallbackReason.BACKBONE_INVOCATION_EXCEPTION,
+                baseline_action=baseline_action,
+                rationale=str(e)
+            )
             telemetry.decision = "ABSTAIN_EXCEPTION"
             telemetry.abstain_reason = f"Unhandled AEC exception: {str(e)}"
             telemetry.total_time_ms = (time.perf_counter() - t_start) * 1000.0

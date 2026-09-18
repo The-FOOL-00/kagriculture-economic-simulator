@@ -415,5 +415,99 @@ class PatchGenerator:
                 )
                 patches.append(patch)
 
-        return patches
+            # 9. Route Compression (§14)
+            elif fam == "ROUTE_COMPRESSION":
+                wid = getattr(opp, "worker_id", 0)
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    worker_mutations={wid: ["HARVEST"]},
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
 
+            # 10. Cargo Ferry (§15)
+            elif fam == "CARGO_FERRY":
+                wid = getattr(opp, "ferry_worker_id", 1)
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    worker_mutations={wid: ["HARVEST"]},
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
+
+            # 11. Shop & Production Arbitrage (§16)
+            elif fam in ("SHOP_ARBITRAGE", "PRODUCTION_ARBITRAGE"):
+                orders = copy.deepcopy(baseline_action.get("market", []))
+                input_item = getattr(opp, "input_item", "")
+                if input_item and len(orders) < 10:
+                    orders.append(["BUY_SEED", input_item.replace("_SEED", ""), 1])
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    market_mutations=orders[:10],
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
+
+            # 12. Terminal Conversion (§18)
+            elif fam == "TERMINAL_CONVERSION":
+                orders = copy.deepcopy(baseline_action.get("market", []))
+                in_item = getattr(opp, "input_item", "WHEAT")
+                in_units = getattr(opp, "input_units", 1)
+                if len(orders) < 10:
+                    orders.insert(0, ["SELL", in_item, in_units])
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    market_mutations=orders[:10],
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
+
+            # 13. Emergency Recovery (§20)
+            elif fam == "EMERGENCY_RECOVERY":
+                orders = copy.deepcopy(baseline_action.get("market", []))
+                threat = getattr(opp, "threat_type", None)
+                if str(threat).endswith("STARVATION"):
+                    orders.insert(0, ["BUY_PRODUCT", "WHEAT", 1])
+                elif str(threat).endswith("INSOLVENCY"):
+                    # Emergency liquidation of top item
+                    shed = econ_state.farm.shed_inventory
+                    for p in ("STRAWBERRY", "MELON", "TOMATO", "CARROT", "WHEAT"):
+                        if shed.get(p, 0) > 0:
+                            orders.insert(0, ["SELL", p, shed[p]])
+                            break
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    market_mutations=orders[:10],
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
+
+            # 14. Town Cycle Signal Timing (§22)
+            elif fam == "TOWN_CYCLE":
+                current_orders = baseline_action.get("market", [])
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    market_mutations=copy.deepcopy(current_orders),
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
+
+        return patches

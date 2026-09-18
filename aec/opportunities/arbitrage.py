@@ -35,7 +35,7 @@ class ShopArbitrageOpportunity(Opportunity):
 
 
 class ProductionArbitrageDetector:
-    """Evaluates the viability of cash -> input -> production -> output -> sale.
+    r"""Evaluates the viability of cash -> input -> production -> output -> sale.
     
     Strict constraints enforced:
     1. Upfront liquidity check ($C_{upfront} \le Cash - SafetyBuffer$).

@@ -142,7 +142,7 @@ class EventTriggeredReplanner:
                 if h_idx < len(hands_acts) and hands_acts[h_idx]:
                     cmd = hands_acts[h_idx][0]
 
-            if cmd == "PASS" and not w.is_frozen:
+            if cmd == "PASS" and not getattr(w, "is_frozen", False):
                 events.append(ReplanEvent(
                     trigger=ReplanTrigger.WORKER_IDLE,
                     step=step,

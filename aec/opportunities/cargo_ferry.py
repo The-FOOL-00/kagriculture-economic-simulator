@@ -44,7 +44,7 @@ class CargoFerryDetector:
         hands = workers[1:]
 
         # Check if any auxiliary hand is idle
-        idle_hands = [h for h in hands if not h.is_frozen and not h.cargo]
+        idle_hands = [h for h in hands if not getattr(h, "is_frozen", False) and not h.cargo]
         if not idle_hands:
             return []
 

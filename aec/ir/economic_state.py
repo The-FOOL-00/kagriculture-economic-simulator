@@ -69,6 +69,10 @@ class EconomicState:
     def is_wind_down_phase(self) -> bool:
         return self.phase in ("WIND_DOWN", "TERMINAL")
 
+    @property
+    def cash(self) -> float:
+        return self.farm.cash
+
 
 def build_economic_state(
     observation: Dict[str, Any],

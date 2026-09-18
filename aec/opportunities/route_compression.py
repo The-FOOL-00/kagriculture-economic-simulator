@@ -36,7 +36,7 @@ class RouteCompressionDetector:
     ) -> List[RouteCompressionOpportunity]:
         opportunities: List[RouteCompressionOpportunity] = []
         w = next((x for x in econ_state.workers.workers if x.worker_id == worker_id), None)
-        if w is None or w.is_frozen:
+        if w is None or getattr(w, "is_frozen", False):
             return []
 
         # Inspect if worker has mature crop nearby that can be harvested along transit route

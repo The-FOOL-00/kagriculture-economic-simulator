@@ -44,6 +44,10 @@ class FarmState:
         return sum(self.shed_inventory.values())
 
     @property
+    def shed_inventory_count(self) -> int:
+        return self.shed_total_units
+
+    @property
     def shed_free_space(self) -> int:
         return max(0, self.capacity - self.shed_total_units)
 

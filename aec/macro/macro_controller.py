@@ -138,8 +138,10 @@ class MacroController:
             return False, "MACRO_POSTURE_VIOLATION: Novel planting shut down post-day 24"
 
         # 3. Minimum cash reserve
-        post_cash = econ_state.cash - float(getattr(candidate_patch, "upfront_cost", 0.0) or getattr(candidate_patch, "required_cash", 0.0))
-        if post_cash < strategy.min_cash_reserve and strategy.posture != MacroPosture.TERMINAL_HARVEST_RUN:
-            return False, f"MACRO_CASH_VIOLATION: Post-patch cash ${post_cash:.1f} breaches min reserve ${strategy.min_cash_reserve:.1f}"
+        upfront = float(getattr(candidate_patch, "upfront_cost", 0.0) or getattr(candidate_patch, "required_cash", 0.0))
+        if upfront > 0:
+            post_cash = econ_state.cash - upfront
+            if post_cash < strategy.min_cash_reserve and strategy.posture != MacroPosture.TERMINAL_HARVEST_RUN:
+                return False, f"MACRO_CASH_VIOLATION: Post-patch cash ${post_cash:.1f} breaches min reserve ${strategy.min_cash_reserve:.1f}"
 
         return True, None

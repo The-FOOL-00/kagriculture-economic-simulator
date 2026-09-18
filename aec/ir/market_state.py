@@ -37,6 +37,10 @@ class MarketState:
     liquidity_ratios: Dict[str, float] = field(default_factory=dict)
     market_pressure: Dict[str, float] = field(default_factory=dict)
 
+    @property
+    def prices(self) -> Dict[str, int]:
+        return self.current_prices
+
     def get_price(self, item: str) -> int:
         return self.current_prices.get(item, BASE_PRICES.get(item, 1))
 

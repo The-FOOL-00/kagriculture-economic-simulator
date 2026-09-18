@@ -91,13 +91,73 @@ MECHANISM_REGISTRY: Dict[str, Dict[str, Any]] = {
         "status": ScientificStatus.QUARANTINED,
         "category": "RESOURCE",
         "role": "QUARANTINED",
-        "rationale": "Dynamic inventory conversion and feed security DAG compiler pass; architecturally unblocked, pending micro-validation.",
+        "rationale": "Dynamic inventory conversion and feed security DAG compiler pass; permanently quarantined per Phase 004B negative ITT.",
     },
     "EMERGENCY_FEED_PURCHASE": {
         "status": ScientificStatus.QUARANTINED,
         "category": "RESOURCE",
         "role": "QUARANTINED",
-        "rationale": "Feed security rescue purchase; architecturally unblocked, pending micro-validation.",
+        "rationale": "Feed security rescue purchase; superseded by generalized emergency recovery.",
+    },
+    "DYNAMIC_SHADOW_HARVEST": {
+        "status": ScientificStatus.EXPERIMENTAL,
+        "category": "LABOR",
+        "role": "ACTIVE",
+        "rationale": "Coupled trajectory-preserving patch for mature crop salvage; candidate validated in Phase 006.",
+    },
+    "TERMINAL_HARVEST_SWEEP": {
+        "status": ScientificStatus.EXPERIMENTAL,
+        "category": "TERMINAL",
+        "role": "ACTIVE",
+        "rationale": "Coupled multi-worker terminal harvest salvage before step 718; candidate validated in Phase 006.",
+    },
+    "ROUTE_COMPRESSION": {
+        "status": ScientificStatus.PLAUSIBLE_UNPROVEN,
+        "category": "ROUTE",
+        "role": "DEVELOPMENT",
+        "rationale": "Task sequencing optimization to complete obligations in fewer movement steps.",
+    },
+    "CARGO_FERRY": {
+        "status": ScientificStatus.PLAUSIBLE_UNPROVEN,
+        "category": "LABOR",
+        "role": "DEVELOPMENT",
+        "rationale": "Auxiliary worker hauling to shed to unburden primary farmer field labor.",
+    },
+    "SHOP_ARBITRAGE": {
+        "status": ScientificStatus.PLAUSIBLE_UNPROVEN,
+        "category": "MARKET",
+        "role": "DEVELOPMENT",
+        "rationale": "Inter-turn price elasticity and town shop unlock interval arbitrage.",
+    },
+    "PRODUCTION_ARBITRAGE": {
+        "status": ScientificStatus.PLAUSIBLE_UNPROVEN,
+        "category": "RESOURCE",
+        "role": "DEVELOPMENT",
+        "rationale": "Cash -> input -> production -> output -> sale full lifecycle margin optimization.",
+    },
+    "TERMINAL_CONVERSION": {
+        "status": ScientificStatus.PLAUSIBLE_UNPROVEN,
+        "category": "TERMINAL",
+        "role": "DEVELOPMENT",
+        "rationale": "Endgame inventory liquidation conversion before step 718.",
+    },
+    "OPPONENT_PREEMPT_SELL": {
+        "status": ScientificStatus.PLAUSIBLE_UNPROVEN,
+        "category": "MARKET",
+        "role": "DEVELOPMENT",
+        "rationale": "Capture market clearing depth before anticipated rival supply dump.",
+    },
+    "EMERGENCY_RECOVERY": {
+        "status": ScientificStatus.PLAUSIBLE_UNPROVEN,
+        "category": "RESOURCE",
+        "role": "DEVELOPMENT",
+        "rationale": "Causal rescue for livestock starvation, wage default, or critical shed blockage.",
+    },
+    "TOWN_CYCLE": {
+        "status": ScientificStatus.PLAUSIBLE_UNPROVEN,
+        "category": "TIMING",
+        "role": "DEVELOPMENT",
+        "rationale": "Probabilistic signal tracking 72-step town demand refresh.",
     },
 }
 
@@ -112,11 +172,17 @@ QUARANTINED_MECHANISMS: Tuple[str, ...] = (
     "LOCAL_WEED_DIG",
     "DYNAMIC_SHADOW_HARVEST",
     "CARGO_FERRY_PRIORITY",
+    "CARGO_FERRY",
     "OPPONENT_PREEMPT_SELL",
     "EMERGENCY_FEED_PURCHASE",
     "RESOURCE_CONVERSION",
     "TERMINAL_HARVEST_SWEEP",
     "TOWN_CYCLE",
+    "SHOP_ARBITRAGE",
+    "PRODUCTION_ARBITRAGE",
+    "TERMINAL_CONVERSION",
+    "EMERGENCY_RECOVERY",
+    "ROUTE_COMPRESSION",
 )
 
 
@@ -126,11 +192,15 @@ QUARANTINED_MECHANISMS: Tuple[str, ...] = (
 @dataclass
 class AECConfig:
     """Explicit parameters governing the AEC planning layer."""
-    
+
+    # Operational Mode (§33)
+    operational_mode: str = "ROBUST_MODE"  # "ROBUST_MODE", "META_MODE", "RESEARCH_MODE"
+
     # Mechanism Boundaries & Governance
     enabled_mechanisms: Tuple[str, ...] = ENABLED_FOUNDATION_MECHANISMS
     quarantined_mechanisms: Tuple[str, ...] = QUARANTINED_MECHANISMS
     frozen_mode: bool = True         # EXP-AEC-001 frozen treatment isolation mode
+
     
     # Adaptive Horizons (§12, §22)
     short_horizon: int = 6           # Local / cheap events
