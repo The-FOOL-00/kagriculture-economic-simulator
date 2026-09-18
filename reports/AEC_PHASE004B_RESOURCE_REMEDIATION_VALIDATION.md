@@ -45,14 +45,29 @@ The complete 200-match offline development replay matrix ($25 \text{ seeds} \tim
 4. **Zero Invariant Violations**:
    - Zero shed overflows, zero cash overdrafts, zero illegal movement commands, and zero trajectory desynchronizations.
 
-#### 2.2 Conversion Category Distribution
+#### 2.2 Conversion Category Distribution & Accounting Reconciliation
 Across all committed patches in Phase 004B:
-- **`TRUE_PHYSICAL_CONVERSION`**: 576 commits across Arms B and D.
-  * Farmer displaced: **0**
-  * Auxiliary absorbed: **576 (100%)**
+- **`TRUE_PHYSICAL_CONVERSION`**: 576 commits across the entire 4-arm experiment (Arms B and D combined):
+  * **Arm B (`RESOURCE_CONVERSION_ONLY`)**: 288 physical conversions (all absorbed by auxiliary Hand 1).
+  * **Arm D (`COMBINED_RESOURCE`)**: 288 physical conversions (all absorbed by auxiliary Hand 1).
+  * Arms A and C: 0 physical conversions.
+  * Farmer displaced: **0** (100% auxiliary absorption across all physical conversions).
   * Target commodities: `MILK` (Wheat $\to$ Cow $\to$ Milk), `EGG` (Wheat $\to$ Goose $\to$ Egg).
 - **`MARKET_ACQUISITION`**: **0 commits** committed under `RESOURCE_CONVERSION`.
-- **`OTHER` (`DEPENDENCY_AWARE_MARKET_TIMING`)**: 312 commits (exactly 78 per arm across all 4 arms, proving bit-exact determinism).
+- **`OTHER`**: 312 total commits across all 4 arms:
+  * Arm A (`CONTROL`): 78 `DEPENDENCY_AWARE_MARKET_TIMING` commits.
+  * Arm B (`RESOURCE_CONVERSION_ONLY`): 74 `DEPENDENCY_AWARE_MARKET_TIMING` commits (4 superseded by conversion scheduling).
+  * Arm C (`EMERGENCY_FEED_ONLY`): 78 `DEPENDENCY_AWARE_MARKET_TIMING` + 4 `EMERGENCY_FEED` commits = 82 commits.
+  * Arm D (`COMBINED_RESOURCE`): 74 `DEPENDENCY_AWARE_MARKET_TIMING` + 4 `EMERGENCY_FEED` commits = 78 commits.
+  * Total `OTHER`: $78 + 74 + 82 + 78 = 312$ ($304 \text{ market timing} + 8 \text{ emergency feed}$).
+- **Total Commits Reconciliation**:
+  * Arm A (78) + Arm B (362) + Arm C (82) + Arm D (366) = **888 total commits** ($576 \text{ physical conversions} + 312 \text{ other}$).
+- **Total Auxiliary Absorption Reconciliation**:
+  * Arm A (0) + Arm B (288) + Arm C (4) + Arm D (292) = **584 total auxiliary absorptions** ($576 \text{ on physical conversions} + 8 \text{ on emergency feed}$).
+
+> [!NOTE]
+> **Phase 005 Accounting Reconciliation Note**:
+> The category totals above reflect the complete experiment across all 4 experimental arms (200 matches). The 576 physical conversions represent the sum of 288 commits in Arm B and 288 commits in Arm D. Raw data files (`results/PHASE004B_MATCHES.csv`, `results/PHASE004B_PATCHES.csv`, `results/PHASE004B_SUMMARY.json`) remain strictly unmodified.
 
 ---
 
