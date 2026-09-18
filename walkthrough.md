@@ -261,3 +261,50 @@ Executed 100 exact counterfactual game completions in `kagsim` across seeds `500
 - **RESOURCE_CONVERSION**: **STRICTLY QUARANTINED**.
 - **V3 Chassis SHA-256**: `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943` (byte-identical).
 - **Holdouts / Prospective Cohort**: **100% UNTOUCHED**.
+
+---
+
+## 9. AEC Phase 006: Coupled Trajectory-Preserving Patch Engine & Dynamic Shadow Harvest
+
+### 9.1 The Breakthrough: Bounded Alternative Trajectories
+Phase 005B proved that single-turn worker action injections (`HARVEST` at turn $t$) failed catastrophically (-$7,452.32 mean delta, with crashes up to -$57,743.00) because workers acquired cargo in their backpacks and were abandoned at $t+1$. The frozen V3 agent loop resumed expecting an empty backpack, inducing paralysis.
+
+Phase 006 introduces the reusable `CoupledPatch` primitive:
+$$\text{CoupledPatch} = [\text{NAVIGATE\_TO\_TARGET}] \to [\text{EXECUTE\_TARGET}] \to [\text{NAVIGATE\_TO\_SHED}] \to [\text{DROP} + \text{OPTIONAL\_SELL}] \to [\text{RECONNECT}]$$
+
+### 9.2 Core Architecture & Invariant Enforcement
+- [`aec/patches/coupled_patch.py`](file:///c:/Users/Sundareswaran/Kagriculture/aec/patches/coupled_patch.py):
+  Canonical typed dataclasses: `CoupledPatch`, `CoupledPatchStep`, `PatchPrecondition`, `PatchPostcondition`, `PatchStateDelta`, `TrajectoryPreservationCertificate`, `CoupledPatchState`.
+- [`aec/patches/coupled_patch_engine.py`](file:///c:/Users/Sundareswaran/Kagriculture/aec/patches/coupled_patch_engine.py):
+  Mechanism-agnostic compilation pipeline: Feasibility $\to$ Multi-Worker Space-Time Reservation $\to$ Trajectory Synthesis $\to$ Waypoint Reconnect $\to$ Trajectory Preservation Certification $\to$ Exact Forward Simulation $\to$ Safety/Economic Gate.
+- [`aec/patches/harvest_patch.py`](file:///c:/Users/Sundareswaran/Kagriculture/aec/patches/harvest_patch.py):
+  Concrete generator for `DYNAMIC_SHADOW_HARVEST` (mid-game adaptive) and `TERMINAL_HARVEST_SWEEP` (step $\le 718$ strict realization).
+- **Strict Invariants**:
+  1. Worker cargo strictly $\{ \}$ upon completion of patch.
+  2. First baseline continuation command verified 100% legal from terminal patch waypoint.
+  3. Fail-closed economic gate ($\Delta_{\text{exact}} > 0$) rejects disruptive diversions.
+
+### 9.3 Test Verification Battery (33 / 33 Passed)
+- Implemented [`tests/aec/test_coupled_patch.py`](file:///c:/Users/Sundareswaran/Kagriculture/tests/aec/test_coupled_patch.py) (CP-01 to CP-15).
+- Implemented [`tests/aec/test_dynamic_shadow_harvest.py`](file:///c:/Users/Sundareswaran/Kagriculture/tests/aec/test_dynamic_shadow_harvest.py) (CP-16 to CP-30 + ADV-01 to ADV-03).
+- **Full Repository Regression**: **429 / 429 passed** in 2.35s.
+
+### 9.4 Exact Simulator Empirical Replay (`results/PHASE006_HARVEST_SUMMARY.json`)
+Evaluated across development seeds `50000–50024` (33,155 candidates, 24,672 patches compiled):
+- **Elimination of Cargo Desynchronization**:
+  - Seed 50008: Naive 1-turn = -$17.00 $\to$ Coupled Patch = **+$16,991.00** (+17k swing!)
+  - Seed 50010: Naive 1-turn = -$2,983.00 $\to$ Coupled Patch = **+$12,301.00** (+15k swing!)
+  - Seed 50017: Naive 1-turn = -$23.00 $\to$ Coupled Patch = **+$38,485.00** (+38k swing!)
+  - Seed 50022: Naive 1-turn = -$6,606.00 $\to$ Coupled Patch = **+$37,549.00** (+44k swing!)
+- **Committed Economic Yield**:
+  - 9 seeds delivered positive terminal deltas. Average yield among committed patches: **+$19,964.89 per committed match**!
+  - 16 seeds with early watering disruptions were rejected by the exact counterfactual gate ($\Delta \le 0$), preventing any false-positive commitments (**0.0% false commitment rate**).
+- **Safety**: 0 illegal actions, 0 collisions, 0 edge swaps, 0 shed contentions, 0 cargo/cash leaks.
+
+### 9.5 Formal Scientific Classification
+- **`CoupledPatch` Architecture**: **OFFLINE VALIDATED**.
+- **`DYNAMIC_SHADOW_HARVEST`**: **OFFLINE CANDIDATE VALIDATED**.
+- **`TERMINAL_HARVEST_SWEEP`**: **OFFLINE CANDIDATE VALIDATED**.
+- **`RESOURCE_CONVERSION`**: **STRICTLY QUARANTINED**.
+- **V3 Chassis SHA-256**: `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943` (byte-identical).
+- **Holdouts (`340050–340199`, `214200–214249`, `340300–340349`)**: **100% UNTOUCHED**.
