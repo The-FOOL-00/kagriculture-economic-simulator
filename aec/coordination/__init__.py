@@ -27,17 +27,29 @@ from aec.coordination.worker_model import (
     WorkerType,
     extract_farm_workers,
 )
+from aec.resource.labor_engine import (
+    AbstentionReason,
+    LaborOpportunityAssessment,
+    LaborOpportunityCostEngine,
+    LaborOpportunityRequest,
+    ValuationLevel,
+)
 
 __all__ = [
+    "AbstentionReason",
     "CoordinationStatus",
     "DisplacementOutcome",
+    "LaborOpportunityAssessment",
     "LaborOpportunityCost",
+    "LaborOpportunityCostEngine",
+    "LaborOpportunityRequest",
     "MultiWorkerDominancePruner",
     "MultiWorkerLogisticsCoordinator",
     "STANDARD_WORKER_CAPABILITIES",
     "TaskActionFamily",
     "TaskDependencyGraph",
     "TaskPriority",
+    "ValuationLevel",
     "WorkerAssignment",
     "WorkerCapability",
     "WorkerCoordinationPlan",

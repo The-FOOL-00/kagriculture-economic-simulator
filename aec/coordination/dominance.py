@@ -94,6 +94,38 @@ class MultiWorkerDominancePruner:
 
         return False
 
+    @staticmethod
+    def dominates_assessment(
+        assessment_a: Any,
+        assessment_b: Any
+    ) -> bool:
+        """Return True if LaborOpportunityAssessment A strictly dominates B under formal economic relations (§27).
+        
+        Plan A dominates Plan B if:
+        1. Plan A is safe/acceptable and Plan B is not, OR
+        2. Both are safe, and:
+           - A achieves strictly higher net incremental value with equal or lower opportunity cost, OR
+           - A achieves equal net incremental value with strictly lower opportunity cost.
+        """
+        if getattr(assessment_a, "safe_to_use", False) and not getattr(assessment_b, "safe_to_use", False):
+            return True
+        if not getattr(assessment_a, "safe_to_use", False) and getattr(assessment_b, "safe_to_use", False):
+            return False
+        if not getattr(assessment_a, "safe_to_use", False) and not getattr(assessment_b, "safe_to_use", False):
+            return False
+
+        net_a = getattr(assessment_a, "net_incremental_value", 0.0)
+        net_b = getattr(assessment_b, "net_incremental_value", 0.0)
+        oc_a = getattr(assessment_a, "opportunity_cost", 0.0)
+        oc_b = getattr(assessment_b, "opportunity_cost", 0.0)
+
+        if net_a > net_b + 1e-6 and oc_a <= oc_b + 1e-6:
+            return True
+        if net_a >= net_b - 1e-6 and oc_a < oc_b - 1e-6:
+            return True
+
+        return False
+
     @classmethod
     def prune(
         cls,

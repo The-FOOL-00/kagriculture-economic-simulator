@@ -28,6 +28,13 @@ from aec.resource.labor import (
     ConversionLaborClass,
     ConversionLaborPreconditionValidator,
 )
+from aec.resource.labor_engine import (
+    AbstentionReason,
+    LaborOpportunityAssessment,
+    LaborOpportunityCostEngine,
+    LaborOpportunityRequest,
+    ValuationLevel,
+)
 from aec.resource.liquidity import (
     ConversionCausalPathType,
     ConversionLiquidityAnalyzer,
@@ -58,6 +65,11 @@ __all__ = [
     "decompose_conversion_to_tasks",
     "ConversionLaborClass",
     "ConversionLaborPreconditionValidator",
+    "LaborOpportunityCostEngine",
+    "LaborOpportunityRequest",
+    "LaborOpportunityAssessment",
+    "ValuationLevel",
+    "AbstentionReason",
     "ConversionLiquidityProfile",
     "ConversionLiquidityAnalyzer",
     "ConversionCausalPathType",

@@ -30,6 +30,11 @@ class WorkerEntity:
     deposit_path_len: int = 0
     available_slack_steps: int = 0
     marginal_opportunity_value: float = 0.0
+    shadow_value_est: float = 0.0
+    current_task_value_est: float = 0.0
+    displacement_cost_est: float = 0.0
+    valuation_confidence: float = 1.0
+    valuation_method: str = "EXACT_COUNTERFACTUAL"
 
     @property
     def total_cargo_units(self) -> int:
