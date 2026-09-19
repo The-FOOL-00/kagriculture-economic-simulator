@@ -76,27 +76,32 @@ class LaborOpportunityAnalyzer:
             # 1. Evaluate Dynamic Shadow Harvest reallocation
             if mature_harvest_tiles:
                 candidate_opps = []
+                # Pre-filter by Manhattan distance <= 4 and sort by proximity
+                nearby_tiles = []
                 for (xy, crop, yield_u, val) in mature_harvest_tiles:
-                    dist = manhattan(w.position, xy)
-                    # Candidate must be reachable within local/tactical horizon (dist <= 6)
-                    if dist <= 6:
-                        # Construct formal labor opportunity query
-                        req = LaborOpportunityRequest(
-                            worker_id=w.worker_id,
-                            candidate_action_cmd="HARVEST",
-                            econ_state=econ_state,
-                            baseline_action=baseline_action or {},
-                            current_step=econ_state.step,
-                            target_location=xy,
-                            target_commodity=crop,
-                            horizon=max(8, dist * 2 + 4),
-                            allow_multiworker_expansion=True
-                        )
-                        assessment = self.labor_engine.assess_opportunity(req)
+                    d = manhattan(w.position, xy)
+                    if d <= 4:
+                        nearby_tiles.append((d, xy, crop, yield_u, val))
+                nearby_tiles.sort(key=lambda t: t[0])
 
-                        # Check whether reallocation creates net positive economic value
-                        if assessment.safe_to_use and assessment.net_incremental_value > 0.0:
-                            candidate_opps.append((assessment.net_incremental_value, xy, crop, yield_u, val, dist, assessment))
+                for (dist, xy, crop, yield_u, val) in nearby_tiles[:3]:
+                    # Construct formal labor opportunity query
+                    req = LaborOpportunityRequest(
+                        worker_id=w.worker_id,
+                        candidate_action_cmd="HARVEST",
+                        econ_state=econ_state,
+                        baseline_action=baseline_action or {},
+                        current_step=econ_state.step,
+                        target_location=xy,
+                        target_commodity=crop,
+                        horizon=max(8, dist * 2 + 4),
+                        allow_multiworker_expansion=True
+                    )
+                    assessment = self.labor_engine.assess_opportunity(req)
+
+                    # Check whether reallocation creates net positive economic value
+                    if assessment.safe_to_use and assessment.net_incremental_value > 0.0:
+                        candidate_opps.append((assessment.net_incremental_value, xy, crop, yield_u, val, dist, assessment))
 
                 # Sort by net incremental value descending and emit top opportunities
                 candidate_opps.sort(key=lambda x: -x[0])

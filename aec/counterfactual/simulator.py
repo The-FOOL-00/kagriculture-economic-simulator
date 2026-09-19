@@ -556,12 +556,23 @@ class CounterfactualSimulator:
             reconnect_result=reconnect_res,
         )
 
-        # 3. Compute Deltas & Margins
+        # 3. Compute Deltas & Margins (Total Economic Wealth Accounting)
+        prices = econ_state.market.current_prices if hasattr(econ_state, "market") else {}
+        
+        cand_shed_val = sum(q * float(prices.get(p, 20.0)) for p, q in candidate_rollout.shed.items())
+        base_shed_val = sum(q * float(prices.get(p, 20.0)) for p, q in baseline_rollout.shed.items())
+        
+        cand_inv_val = sum(sum(q * float(prices.get(p, 20.0)) for p, q in inv.items()) for inv in candidate_rollout.inventories)
+        base_inv_val = sum(sum(q * float(prices.get(p, 20.0)) for p, q in inv.items()) for inv in baseline_rollout.inventories)
+        
+        cand_total_wealth = candidate_rollout.money + cand_shed_val + cand_inv_val
+        base_total_wealth = baseline_rollout.money + base_shed_val + base_inv_val
+        
         delta_our_money = candidate_rollout.money - baseline_rollout.money
         delta_opp_money = candidate_rollout.opp_money - baseline_rollout.opp_money
         
-        cand_margin = candidate_rollout.money - candidate_rollout.opp_money
-        base_margin = baseline_rollout.money - baseline_rollout.opp_money
+        cand_margin = cand_total_wealth - candidate_rollout.opp_money
+        base_margin = base_total_wealth - baseline_rollout.opp_money
         delta_terminal_margin = cand_margin - base_margin
 
         # 4. Intermediate Solvency Check

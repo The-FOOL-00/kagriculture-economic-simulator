@@ -513,10 +513,31 @@ class PatchGenerator:
                             reconnect_res = self.reconnect_engine.reconnect(reconnect_req)
                             if reconnect_res.safety:
                                 spliced_cont = getattr(reconnect_res, "spliced_trajectory", None)
+                                comp_actions = []
+                                for r_idx, act_c in enumerate(patched_actions):
+                                    b_act = copy.deepcopy(baseline_action if r_idx == 0 else (cont[r_idx - 1] if (r_idx - 1) < len(cont) else {}))
+                                    if wid == 0:
+                                        b_act["farmer"] = [act_c]
+                                    else:
+                                        h_list = b_act.setdefault("hands", [])
+                                        while len(h_list) < wid:
+                                            h_list.append(["PASS"])
+                                        h_list[wid - 1] = [act_c]
+                                    if act_c == "DROP":
+                                        m_ord = copy.deepcopy(b_act.get("market", []) or [])
+                                        if crop:
+                                            m_ord.insert(0, ["SELL", crop, 1])
+                                        b_act["market"] = m_ord[:10]
+                                    comp_actions.append(b_act)
+
                                 patch = CoupledPatch(
                                     patch_id=f"PATCH_{opp.opportunity_id}",
                                     source_opportunity_id=opp.opportunity_id,
                                     mechanism_family=fam,
+                                    worker_ids=[wid],
+                                    start_step=econ_state.step,
+                                    end_step=econ_state.step + len(patched_actions) - 1,
+                                    actions=comp_actions,
                                     worker_mutations={wid: [patched_actions[0]]},
                                     spliced_continuation=spliced_cont,
                                     reconnect_result=reconnect_res,

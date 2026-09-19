@@ -208,6 +208,8 @@ class AECExecutor:
         self._telemetry_history: List[AECTelemetry] = []
         self._certificates: List[SafetyCertificate] = []
         self._latest_committed_patch: Optional[Any] = None
+        self._in_flight_patch: Optional[Any] = None
+        self._in_flight_start_step: int = 0
 
     def act(
         self,
@@ -259,6 +261,63 @@ class AECExecutor:
             replan_decision = self.replanner.decide(econ_state, self._prev_econ_state, baseline_action, self._latest_committed_patch)
             telemetry.event_time_ms = (time.perf_counter() - t_ev0) * 1000.0
             telemetry.events_detected = [e.event_type.value for e in events]
+
+            # -----------------------------------------------------------------
+            # 3B. IN-FLIGHT COUPLED TRAJECTORY PATCH CONTINUATION (§4, §8)
+            # -----------------------------------------------------------------
+            if step == 0:
+                self._in_flight_patch = None
+                self._in_flight_start_step = 0
+
+            if self._in_flight_patch is not None:
+                offset = step - self._in_flight_start_step
+                # Critical abort if emergency feed deficit or solvency risk detected
+                critical_abort = any(
+                    e.event_type.value in ("FEED_DEFICIT_RISK", "SOLVENCY_RISK") for e in events
+                )
+                flight_actions = getattr(self._in_flight_patch, "actions", [])
+                if not critical_abort and 0 < offset < len(flight_actions):
+                    flight_act = flight_actions[offset]
+                    final_action = copy.deepcopy(baseline_action)
+                    w_ids = getattr(self._in_flight_patch, "worker_ids", [0])
+                    spatial_valid = True
+                    for wid in w_ids:
+                        worker = econ_state.workers.get_worker(wid)
+                        if worker is None:
+                            spatial_valid = False
+                            break
+                        if wid == 0:
+                            cmd = flight_act.get("farmer", ["PASS"])
+                            final_action["farmer"] = list(cmd)
+                        else:
+                            h_cmds = flight_act.get("hands", []) or []
+                            if wid - 1 < len(h_cmds):
+                                while len(final_action.get("hands", [])) < wid:
+                                    final_action.setdefault("hands", []).append(["PASS"])
+                                final_action["hands"][wid - 1] = list(h_cmds[wid - 1])
+
+                    if flight_act.get("market"):
+                        m_orders = copy.deepcopy(final_action.get("market", []) or [])
+                        for o in flight_act["market"]:
+                            has_o = any(
+                                isinstance(existing, (list, tuple)) and len(existing) >= 2 and len(o) >= 2 and existing[0] == o[0] and existing[1] == o[1]
+                                for existing in m_orders
+                            )
+                            if not has_o and len(m_orders) < 10:
+                                m_orders.insert(0, copy.deepcopy(o))
+                        final_action["market"] = m_orders[:10]
+
+                    if spatial_valid:
+                        telemetry.decision = "COMMIT"
+                        telemetry.committed_patch_id = f"{self._in_flight_patch.patch_id}_step_{offset}"
+                        telemetry.committed_mechanism = getattr(self._in_flight_patch, "mechanism_family", "")
+                        telemetry.total_time_ms = (time.perf_counter() - t_start) * 1000.0
+                        self._record_step(econ_state, telemetry)
+                        return final_action
+                    else:
+                        self._in_flight_patch = None
+                else:
+                    self._in_flight_patch = None
 
             # NO-EVENT FAST PATH (§8):
             # If no planning event exists, immediately emit baseline unchanged
@@ -599,11 +658,17 @@ class AECExecutor:
                     telemetry.committed_patch_id = best_candidate.patch_id
                     telemetry.committed_mechanism = mech_fam
                     self._latest_committed_patch = best_candidate
+                    if len(getattr(best_candidate, "actions", [])) > 1:
+                        self._in_flight_patch = best_candidate
+                        self._in_flight_start_step = step
+                    else:
+                        self._in_flight_patch = None
                     for c in telemetry.candidates:
                         c.commit_decision = (c.patch_id == best_candidate.patch_id)
                     # Apply certified patch to a fresh canonical copy of baseline action
                     final_action = best_candidate.apply(baseline_result.canonical_action_copy())
             else:
+                self._in_flight_patch = None
                 telemetry.decision = "ABSTAIN"
                 if quarantined_superior_patch is not None:
                     telemetry.abstain_reason = "SCIENTIFIC_QUARANTINE"
