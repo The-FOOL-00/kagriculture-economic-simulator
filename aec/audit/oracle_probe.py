@@ -136,9 +136,9 @@ class BoundedOracleProbe:
                     best_delta = wealth_delta
                     best_alt = res
 
-        # Check deep horizon F if no local headroom found
+        # Check deep horizon F on periodic day boundaries if no local headroom found
         deep_headroom_found = False
-        if best_alt is None and horizon < 36:
+        if best_alt is None and horizon < 36 and (step % 24 == 0):
             deep_res = self._check_deeper_horizon(econ_state, baseline_action, continuation_trajectory, 36)
             if deep_res is not None:
                 best_alt = deep_res
@@ -258,13 +258,13 @@ class BoundedOracleProbe:
         # ---------------------------------------------------------------------
         # 3. RESOURCE TRANSFORMATIONS
         # ---------------------------------------------------------------------
-        # If raw materials exist in shed, propose local production/conversion
+        # If raw materials exist in shed, propose local procurement / conversion
         if shed.get("STRAWBERRY", 0) >= 3 and cash >= 100:
             act = copy.deepcopy(baseline_action)
             m = list(act.get("market", []))
-            m.insert(0, ["BUY_PRODUCT", "JUICE", 1])
+            m.insert(0, ["BUY_PRODUCT", "FERTILIZER", 1])
             act["market"] = m[:10]
-            alternatives.append(("RESOURCE", "Arbitrage procurement of JUICE", act))
+            alternatives.append(("RESOURCE", "Arbitrage procurement of FERTILIZER", act))
 
         # ---------------------------------------------------------------------
         # 4. TERMINAL TRANSFORMATIONS
@@ -296,14 +296,14 @@ class BoundedOracleProbe:
         # ---------------------------------------------------------------------
         # 6. EMERGENCY TRANSFORMATIONS
         # ---------------------------------------------------------------------
-        # Feed emergency purchase
+        # Feed emergency purchase (animals consume WHEAT)
         animals = getattr(econ_state.farm, "animals", [])
-        if animals and shed.get("FEED", 0) < len(animals) and cash >= 100:
+        if animals and shed.get("WHEAT", 0) < len(animals) and cash >= 100:
             act = copy.deepcopy(baseline_action)
             m = list(act.get("market", []))
-            m.insert(0, ["BUY_PRODUCT", "FEED", len(animals) * 2])
+            m.insert(0, ["BUY_PRODUCT", "WHEAT", len(animals) * 2])
             act["market"] = m[:10]
-            alternatives.append(("EMERGENCY", "Emergency livestock feed purchase", act))
+            alternatives.append(("EMERGENCY", "Emergency livestock feed purchase (WHEAT)", act))
 
         # ---------------------------------------------------------------------
         # 7. OPPONENT PREEMPTION TRANSFORMATIONS

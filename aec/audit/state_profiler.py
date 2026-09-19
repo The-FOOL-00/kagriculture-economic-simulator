@@ -139,10 +139,10 @@ class StateProfiler:
         if shed_stock >= 90:
             return "shed-constrained"
 
-        # Feed check
+        # Feed check (animals consume WHEAT)
         animals = getattr(econ_state.farm, "animals", [])
         if animals:
-            feed_units = econ_state.farm.shed_inventory.get("FEED", 0)
+            feed_units = econ_state.farm.shed_inventory.get("WHEAT", 0)
             if feed_units < len(animals) * 2:
                 return "feed-constrained"
 
@@ -330,7 +330,7 @@ class StateProfiler:
             indicators.append("MATURE_CROP_NEAR_TERMINAL")
 
         # 9. UNUSED_SHED_CAPACITY
-        if 150 <= step <= 600 and shed_stock < 20 and mature_coords:
+        if (step % 24 == 0) and 150 <= step <= 600 and shed_stock < 20 and mature_coords:
             indicators.append("UNUSED_SHED_CAPACITY")
 
         # 10. UNUSED_WORKER_CAPACITY
