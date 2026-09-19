@@ -238,6 +238,9 @@ class AECConfig:
     enable_funnel_reservation: bool = False
     funnel_reserved_fraction: float = 0.25
 
+    # Phase 018 Repair B: boundary-safe quantity construction (default OFF; isolated arm only)
+    enable_boundary_safe_quantities: bool = False
+
     # Performance & Safety
     per_step_latency_limit_ms: float = 100.0
     fail_closed: bool = True
@@ -317,5 +320,17 @@ def build_phase018_arm_a2_config() -> AECConfig:
     """
     cfg = build_phase015_treatment_config()
     cfg.enable_funnel_reservation = True
+    return cfg
+
+
+def build_phase018_arm_b1_config() -> AECConfig:
+    """Phase 018 Arm B1: Phase 015 treatment + boundary-safe quantities ONLY.
+
+    Isolation: differs from build_phase015_treatment_config() solely by
+    enable_boundary_safe_quantities=True. Reservation OFF, trigger unmodified,
+    evaluator unchanged.
+    """
+    cfg = build_phase015_treatment_config()
+    cfg.enable_boundary_safe_quantities = True
     return cfg
 

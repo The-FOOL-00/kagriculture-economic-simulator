@@ -9,9 +9,24 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Set, Tuple
 
 from aec.config import BOARD_SIZE, FINAL_STEP, PRODUCTS, ScientificStatus, SHED_CAPACITY
+from aec.counterfactual.macro_detector import V3_CASH_GATES
 from aec.ir.economic_state import EconomicState
 from aec.ir.market_state import BASE_PRICES
 from aec.patches.patch import CoupledPatch
+
+
+# Phase 018 Repair B: effective cash-boundary set mirrored from the frozen probe
+# (read-only; the probe itself is never modified).
+# - V3_CASH_GATES: any cross escalates (probe §3).
+# - 8000.0: cash-bracket edge 2->3 (classify_cash_bracket).
+# - 11000.0: Day-18 tomato proximity tripwire, only when step < 432 (probe §3).
+CASH_BRACKET_EDGE_EXTRA: float = 8000.0
+TOMATO_PROXIMITY_LEVEL: float = 11000.0
+BOUNDARY_SAFE_EPSILON: float = 1.0
+BOUNDARY_NOISE_MARGIN: float = 150.0  # probe §4 budget-guard cash tripwire
+FEED_SAFE_WHEAT_FLOOR: int = 12       # probe §6: post-sale shed wheat floor
+FEED_SAFE_MAX_DROP: int = 3           # probe §6: wheat drop must stay < 4
+MAX_BOUNDARY_QUANTITIES: int = 4
 
 
 @dataclass
@@ -102,11 +117,155 @@ class AutonomousTrancheOrderSynthesizer:
 
         return True, realizable_qty, None
 
+    def effective_cash_boundaries(self, step: int) -> List[float]:
+        """Cash levels whose crossing escalates, mirrored from the frozen probe."""
+        levels = set(float(g) for g in V3_CASH_GATES)
+        levels.add(CASH_BRACKET_EDGE_EXTRA)
+        if step < 432:
+            levels.add(TOMATO_PROXIMITY_LEVEL)
+        return sorted(levels)
+
+    def project_post_queue_cash(
+        self,
+        econ_state: EconomicState,
+        baseline_market_orders: List[Any],
+        commodity: str,
+        quantity: int,
+    ) -> Tuple[float, Dict[str, int]]:
+        """Project post-queue (cash, shed) mirroring probe §2 arithmetic exactly.
+
+        Uses the same merged-queue construction, price source, 20.0 fallback,
+        and min(shed, qty) realization cap as MacroRegimeTransitionDetector, so
+        the generator's prediction agrees with the probe's escalation input.
+        """
+        merged = self.construct_sequential_market_orders(
+            baseline_market_orders or [], commodity, quantity
+        )
+        cash = float(econ_state.farm.cash)
+        shed = {k: int(v) for k, v in econ_state.farm.shed_inventory.items()}
+        prices = econ_state.market.current_prices
+        for o in merged:
+            if not isinstance(o, (list, tuple)) or len(o) < 2:
+                continue
+            op = o[0]
+            if op == "SELL" and len(o) >= 3:
+                item, qty = o[1], int(o[2])
+                price = float(prices.get(item, 20.0))
+                real_qty = min(shed.get(item, 0), qty)
+                cash += real_qty * price
+                shed[item] = max(0, shed.get(item, 0) - real_qty)
+            elif op == "BUY_PRODUCT" and len(o) >= 3:
+                item, qty = o[1], int(o[2])
+                price = float(prices.get(item, 20.0))
+                cash -= qty * price
+                shed[item] = shed.get(item, 0) + qty
+        return cash, shed
+
+    def _herd_size(self, econ_state: EconomicState) -> int:
+        """Livestock census using the same cascade as realizability gating."""
+        herd_size = 0
+        if getattr(econ_state.farm, "animals", None):
+            herd_size = len(econ_state.farm.animals)
+        elif getattr(econ_state.farm, "production_pipeline", None):
+            herd_size = sum(
+                1 for p in econ_state.farm.production_pipeline
+                if getattr(p, "item_type", "") == "ANIMAL"
+            )
+        if herd_size == 0 and getattr(econ_state.farm, "tiles", None):
+            for row in econ_state.farm.tiles:
+                for cell in row:
+                    if isinstance(cell, dict) and (
+                        "animal" in cell or cell.get("kind") in ("COW", "SHEEP", "GOOSE")
+                    ):
+                        herd_size += 1
+        return herd_size
+
+    def _max_qty_under_cash(
+        self,
+        econ_state: EconomicState,
+        baseline_market_orders: List[Any],
+        commodity: str,
+        uncommitted_qty: int,
+        cash_cap: float,
+    ) -> int:
+        """Largest q in [0, uncommitted] with projected cash <= cash_cap."""
+        best = 0
+        for q in range(1, uncommitted_qty + 1):
+            cash, _ = self.project_post_queue_cash(
+                econ_state, baseline_market_orders, commodity, q
+            )
+            if cash <= cash_cap:
+                best = q
+        return best
+
+    def _apply_feed_clamp(
+        self, econ_state: EconomicState, commodity: str, quantity: int
+    ) -> int:
+        """Clamp a wheat quantity to the probe §6 non-escalating envelope."""
+        if commodity != "WHEAT" or quantity <= 0:
+            return quantity
+        if self._herd_size(econ_state) <= 0:
+            return quantity
+        shed_wheat = int(econ_state.farm.shed_inventory.get("WHEAT", 0) or 0)
+        headroom = shed_wheat - FEED_SAFE_WHEAT_FLOOR
+        if headroom <= 0:
+            return 0
+        return max(0, min(quantity, headroom, FEED_SAFE_MAX_DROP))
+
+    def compute_boundary_safe_quantities(
+        self,
+        econ_state: EconomicState,
+        commodity: str,
+        uncommitted_qty: int,
+        baseline_market_orders: List[Any],
+    ) -> List[Tuple[int, str]]:
+        """Boundary-aware anchors: largest value capture without an avoidable cross."""
+        if uncommitted_qty <= 1:
+            return []
+        cash0 = float(econ_state.farm.cash)
+        gates = [g for g in self.effective_cash_boundaries(econ_state.step) if g > cash0]
+        out: List[Tuple[int, str]] = []
+        if gates:
+            gate = min(gates)
+            q_current = min(5, uncommitted_qty)
+            cash_current, _ = self.project_post_queue_cash(
+                econ_state, baseline_market_orders, commodity, q_current
+            )
+            q_safe = self._max_qty_under_cash(
+                econ_state, baseline_market_orders, commodity, uncommitted_qty,
+                gate - BOUNDARY_SAFE_EPSILON,
+            )
+            q_safe = self._apply_feed_clamp(econ_state, commodity, q_safe)
+            binds = bool(cash_current >= gate) or (
+                commodity == "WHEAT"
+                and self._apply_feed_clamp(econ_state, commodity, q_current) < q_current
+            )
+            if binds and q_safe >= 1 and q_safe != q_current:
+                out.append((q_safe, "BOUNDARY_SAFE"))
+            if binds:
+                q_minus = self._max_qty_under_cash(
+                    econ_state, baseline_market_orders, commodity, uncommitted_qty,
+                    gate - BOUNDARY_NOISE_MARGIN,
+                )
+                q_minus = self._apply_feed_clamp(econ_state, commodity, q_minus)
+                taken = {1, q_current} | {q for q, _ in out}
+                if q_minus >= 1 and q_minus not in taken:
+                    out.append((q_minus, "BOUNDARY_MINUS"))
+        elif commodity == "WHEAT" and self._herd_size(econ_state) > 0:
+            # No cash gate binds, but a feed-safe wheat anchor may still add value.
+            q_current = min(5, uncommitted_qty)
+            q_feed = self._apply_feed_clamp(econ_state, commodity, uncommitted_qty)
+            if q_feed >= 1 and q_feed not in (1, q_current):
+                out.append((q_feed, "BOUNDARY_SAFE"))
+        return out
+
     def compute_structural_quantities(
         self,
         econ_state: EconomicState,
         commodity: str,
         uncommitted_qty: int,
+        baseline_market_orders: Optional[List[Any]] = None,
+        boundary_safe: bool = False,
     ) -> List[Tuple[int, str]]:
         """Generates bounded structural candidate quantities without combinatorial explosion (§12, §15).
         
@@ -117,9 +276,19 @@ class AutonomousTrancheOrderSynthesizer:
         - q_market_depth: single-order max parcel (up to 10)
         - q_terminal: endgame dump (steps >= 680)
         - q_full: complete uncommitted inventory
+
+        Phase 018 Repair B (boundary_safe=True): the B1 menu {q_small,
+        q_current, q_boundary_safe?, q_boundary_minus?} replaces the legacy
+        anchors. Legacy path executes verbatim when boundary_safe=False.
         """
         if uncommitted_qty <= 0:
             return []
+
+        if boundary_safe:
+            return self._compute_boundary_menu(
+                econ_state, commodity, uncommitted_qty,
+                baseline_market_orders or [],
+            )
 
         prices = econ_state.market.current_prices
         base = float(BASE_PRICES.get(commodity, 100))
@@ -172,6 +341,31 @@ class AutonomousTrancheOrderSynthesizer:
         # Bound to at most 4 candidate quantities per turn
         return unique_quantities[:4]
 
+    def _compute_boundary_menu(
+        self,
+        econ_state: EconomicState,
+        commodity: str,
+        uncommitted_qty: int,
+        baseline_market_orders: List[Any],
+    ) -> List[Tuple[int, str]]:
+        """Phase 018 B1 menu: {q_small, q_current} + boundary alternatives (≤4)."""
+        menu: List[Tuple[int, str]] = [(1, "Q_SMALL")]
+        q_current = min(5, uncommitted_qty)
+        if q_current != 1:
+            menu.append((q_current, "Q_CURRENT"))
+        for q, reason in self.compute_boundary_safe_quantities(
+            econ_state, commodity, uncommitted_qty, baseline_market_orders
+        ):
+            menu.append((q, reason))
+        seen: Set[int] = set()
+        deduped: List[Tuple[int, str]] = []
+        for q, reason in menu:
+            q_clamped = max(1, min(int(q), uncommitted_qty))
+            if q_clamped not in seen:
+                seen.add(q_clamped)
+                deduped.append((q_clamped, reason))
+        return deduped[:MAX_BOUNDARY_QUANTITIES]
+
     def construct_sequential_market_orders(
         self,
         baseline_market_orders: List[Any],
@@ -196,12 +390,13 @@ class AutonomousTrancheOrderSynthesizer:
         # If baseline already had market orders, evaluate sequential interleaving
         base_orders = copy.deepcopy(baseline_market_orders or [])
         
-        # Partition base orders into buys vs sells
+        # Partition base orders into buys vs sells vs atomics (HIRE, etc.)
         buys = [o for o in base_orders if isinstance(o, (list, tuple)) and o and o[0].startswith("BUY")]
         sells = [o for o in base_orders if isinstance(o, (list, tuple)) and o and o[0] == "SELL"]
+        others = [o for o in base_orders if isinstance(o, (list, tuple)) and o and not (o[0].startswith("BUY") or o[0] == "SELL")]
 
-        # Insert new sell orders first (unlocks liquidity), then existing sells, then buys
-        merged = sell_orders + sells + buys
+        # Insert new sell orders first (unlocks liquidity), then existing sells, then others, then buys
+        merged = sell_orders + sells + others + buys
         return merged[:10]
 
     def determine_why_v3_did_not_do_this(
@@ -235,6 +430,7 @@ class AutonomousTrancheOrderSynthesizer:
         opportunity: Any,
         econ_state: EconomicState,
         baseline_action: Dict[str, Any],
+        boundary_safe_quantities: bool = False,
     ) -> List[CoupledPatch]:
         """Compiles an asset-holding opportunity into a set of candidate CoupledPatch objects (§12)."""
         commodity = opportunity.affected_entities[0] if opportunity.affected_entities else ""
@@ -257,7 +453,11 @@ class AutonomousTrancheOrderSynthesizer:
 
         # Generate structural candidate quantities
         structural_quantities = self.compute_structural_quantities(
-            econ_state, commodity, max_realizable
+            econ_state,
+            commodity,
+            max_realizable,
+            baseline_market_orders=baseline_action.get("market", []),
+            boundary_safe=boundary_safe_quantities,
         )
         if not structural_quantities:
             return []

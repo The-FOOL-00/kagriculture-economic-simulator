@@ -121,6 +121,10 @@ class PatchGenerator:
                     opportunity=opp,
                     econ_state=econ_state,
                     baseline_action=baseline_action,
+                    boundary_safe_quantities=bool(
+                        config is not None
+                        and getattr(config, "enable_boundary_safe_quantities", False)
+                    ),
                 )
                 patches.extend(synth_patches)
 
