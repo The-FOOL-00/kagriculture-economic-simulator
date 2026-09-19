@@ -21,6 +21,11 @@ from aec.opportunities.town_cycle import (
     TownCycleSignalDetector,
     compute_required_liquidity,
 )
+from aec.opportunities.emergency import (
+    EmergencyRecoveryDetector,
+    EmergencyThreatType,
+    IrreversibilityClass,
+)
 from aec.patches.generator import PatchGenerator
 
 
@@ -235,3 +240,170 @@ def test_tc_12_advance_sale_bounds_parcel_to_ten(group2_base_obs: Dict[str, Any]
     assert len(patches) == 1
     sell_order = next(o for o in patches[0].market_mutations if o[0] == "SELL")
     assert sell_order[2] <= 10
+
+
+# =============================================================================
+# 2. EMERGENCY_RECOVERY / DAMAGE AVOIDANCE (12 ADVERSARIAL SCENARIOS - §15, §31)
+# =============================================================================
+
+def test_emr_01_one_turn_before_starvation(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-01: Cow with 1 turn to starve triggers CURRENT_HARD_FAILURE."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["farms"][0]["tiles"][0][0] = {
+        "kind": "PASTURE", "subtype": "COW", "turns_to_starve": 1
+    }
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ)
+    assert len(opps) == 1
+    assert opps[0].threat_type == EmergencyThreatType.LIVESTOCK_STARVATION
+    assert opps[0].irreversibility_class == IrreversibilityClass.CURRENT_HARD_FAILURE
+
+
+def test_emr_02_two_turns_before_starvation(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-02: Cow with 2 turns to starve triggers EMERGING_IRREVERSIBLE_LOSS."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["farms"][0]["tiles"][0][0] = {
+        "kind": "PASTURE", "subtype": "COW", "turns_to_starve": 2
+    }
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ)
+    assert len(opps) == 1
+    assert opps[0].threat_type == EmergencyThreatType.LIVESTOCK_STARVATION
+    assert opps[0].irreversibility_class == IrreversibilityClass.EMERGING_IRREVERSIBLE_LOSS
+
+
+def test_emr_03_four_turns_before_starvation_false_alarm(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-03: Cow with 10 turns to starve is recoverable; detector abstains cleanly."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["farms"][0]["tiles"][0][0] = {
+        "kind": "PASTURE", "subtype": "COW", "turns_to_starve": 10
+    }
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ)
+    assert len(opps) == 0  # Reversible / recoverable -> no panic
+
+
+def test_emr_04_worker_already_carrying_feed_false_alarm(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-04: If a worker carries feed, baseline is actively recovering -> abstains."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["farms"][0]["tiles"][0][0] = {
+        "kind": "PASTURE", "subtype": "COW", "turns_to_starve": 1
+    }
+    # Hand worker at [2, 2] is already carrying 1 wheat
+    obs["private"]["inventories"][1] = {"WHEAT": 1}
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ)
+    assert len(opps) == 0  # Feed is in transit -> false alarm rejected
+
+
+def test_emr_05_wage_deficit_at_hour_23_triggers(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-05: Hour 23 wage deficit with no pending sales triggers CURRENT_HARD_FAILURE."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 71  # Day 2, Hour 23
+    obs["farms"][0]["money"] = 20.0  # $20 cash vs $100 wages
+    obs["private"]["shed"] = {"WHEAT": 10, "MELON": 5}
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ, baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []})
+    assert len(opps) == 1
+    assert opps[0].threat_type == EmergencyThreatType.CRITICAL_CASH_INSOLVENCY
+    assert opps[0].irreversibility_class == IrreversibilityClass.CURRENT_HARD_FAILURE
+    assert opps[0].dependency_info["deficit"] == 80.0
+
+
+def test_emr_06_wage_deficit_with_pending_sales_false_alarm(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-06: Hour 22 cash is $20, but baseline sells 2 strawberry ($240) -> abstains."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 70  # Day 2, Hour 22
+    obs["farms"][0]["money"] = 20.0
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    baseline_action = {
+        "farmer": ["PASS"],
+        "hands": [["PASS"]],
+        "market": [["SELL", "STRAWBERRY", 2]]  # 2 * 120 = 240 covers 100 wages
+    }
+    opps = detector.detect(econ, baseline_action)
+    assert len(opps) == 0  # Recoverable via baseline orders -> false alarm rejected
+
+
+def test_emr_07_wage_deficit_at_hour_10_false_alarm(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-07: Cash is $20 at Hour 10 (13 turns to night); normal farming will recover -> abstains."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 58  # Hour 10 (steps_to_night = 13)
+    obs["farms"][0]["money"] = 20.0
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ, baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []})
+    assert len(opps) == 0  # Reversible daylight fluctuation -> no panic
+
+
+def test_emr_08_minimal_liquidation_sells_lowest_margin(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-08: Wage rescue liquidates WHEAT before MELON to preserve high-margin stock."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 71  # Hour 23
+    obs["farms"][0]["money"] = 50.0  # $50 deficit
+    obs["private"]["shed"] = {"MELON": 5, "WHEAT": 10}
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ, baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []})
+    assert len(opps) == 1
+    assert opps[0].dependency_info["chosen_item"] == "WHEAT"  # Lowest margin prioritized
+
+
+def test_emr_09_minimal_liquidation_bounds_quantity_to_deficit(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-09: Deficit is $50, wheat is $25; sells exactly 2 wheat, preserving remaining 18."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 71
+    obs["farms"][0]["money"] = 50.0  # $50 deficit
+    obs["private"]["shed"] = {"WHEAT": 20}
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ, baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []})
+    assert len(opps) == 1
+    opp = opps[0]
+    assert opp.dependency_info["qty_to_sell"] == 2
+
+    gen = PatchGenerator(enabled_mechanisms={"EMERGENCY_RECOVERY"})
+    patches = gen.generate_patches([opp], econ, baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []})
+    assert len(patches) == 1
+    # Check that market order is exactly SELL WHEAT 2, NOT 20
+    assert patches[0].market_mutations == [["SELL", "WHEAT", 2]]
+
+
+def test_emr_10_terminal_failure_to_liquidate_triggers(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-10: Step 717 with shed stock and no sell orders triggers terminal rescue."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 717
+    obs["private"]["shed"] = {"MELON": 3, "STRAWBERRY": 2}
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    opps = detector.detect(econ, baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []})
+    assert len(opps) == 1
+    assert opps[0].threat_type == EmergencyThreatType.TERMINAL_FAILURE_TO_LIQUIDATE
+
+
+def test_emr_11_terminal_failure_when_baseline_already_selling_abstains(group2_base_obs: Dict[str, Any]) -> None:
+    """EMR-11: Step 717 where baseline already has a sell order abstains cleanly."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 717
+    obs["private"]["shed"] = {"MELON": 3}
+    econ = build_economic_state(obs)
+    detector = EmergencyRecoveryDetector()
+    baseline_action = {"farmer": ["PASS"], "hands": [["PASS"]], "market": [["SELL", "MELON", 3]]}
+    opps = detector.detect(econ, baseline_action)
+    assert len(opps) == 0  # Already liquidating -> no duplicate intervention
+
+
+def test_emr_12_irreversibility_classification_integrity() -> None:
+    """EMR-12: IrreversibilityClass enum values match governance specification."""
+    classes = [c.value for c in IrreversibilityClass]
+    assert "REVERSIBLE_DEGRADATION" in classes
+    assert "RECOVERABLE_DEGRADATION" in classes
+    assert "EMERGING_IRREVERSIBLE_LOSS" in classes
+    assert "CURRENT_HARD_FAILURE" in classes
+

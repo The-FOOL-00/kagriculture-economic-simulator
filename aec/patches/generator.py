@@ -624,18 +624,30 @@ class PatchGenerator:
                 patches.append(patch)
 
             # 13. Emergency Recovery (§20)
+            # 13. Emergency Recovery as Damage Avoidance (§11–§15)
             elif fam == "EMERGENCY_RECOVERY":
                 orders = copy.deepcopy(baseline_action.get("market", []))
-                threat = getattr(opp, "threat_type", None)
-                if str(threat).endswith("STARVATION"):
-                    orders.insert(0, ["BUY_PRODUCT", "WHEAT", 1])
-                elif str(threat).endswith("INSOLVENCY"):
-                    # Emergency liquidation of top item
+                dep = opp.dependency_info or {}
+                threat = dep.get("threat", "")
+                if not threat:
+                    threat_enum = getattr(opp, "threat_type", None)
+                    threat = str(threat_enum.value) if hasattr(threat_enum, "value") else str(threat_enum or "")
+
+                if "STARVATION" in threat:
+                    wheat_in_shed = dep.get("wheat_in_shed", econ_state.farm.get_shed_qty("WHEAT"))
+                    if wheat_in_shed <= 0 and len(orders) < 10:
+                        orders.insert(0, ["BUY_PRODUCT", "WHEAT", 1])
+                elif "INSOLVENCY" in threat:
+                    chosen_item = dep.get("chosen_item")
+                    qty_to_sell = int(dep.get("qty_to_sell", 1))
+                    if chosen_item and qty_to_sell > 0 and len(orders) < 10:
+                        orders.insert(0, ["SELL", chosen_item, qty_to_sell])
+                elif "TERMINAL" in threat:
                     shed = econ_state.farm.shed_inventory
-                    for p in ("STRAWBERRY", "MELON", "TOMATO", "CARROT", "WHEAT"):
-                        if shed.get(p, 0) > 0:
-                            orders.insert(0, ["SELL", p, shed[p]])
-                            break
+                    for p in ("STRAWBERRY", "MELON", "TOMATO", "CARROT", "WHEAT", "WOOL", "MILK", "EGG"):
+                        if shed.get(p, 0) > 0 and len(orders) < 10:
+                            orders.append(["SELL", p, shed[p]])
+
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
                     source_opportunity_id=opp.opportunity_id,
