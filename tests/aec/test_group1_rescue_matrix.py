@@ -358,3 +358,302 @@ def test_dh_10_adversarial_two_workers_targeting_same_tile(matrix_base_obs: Dict
     assert table.reserve_vertex(step=52, pos=crop_pos, worker_id=0) is True
     # Worker 1 trying to step into same cell at step 52 is blocked
     assert table.reserve_vertex(step=52, pos=crop_pos, worker_id=1) is False
+
+
+# =============================================================================
+# 2. TERMINAL HARVEST SWEEP: 10+ ACTIVATION & ADVERSARIAL PATTERNS (§5, §12)
+# =============================================================================
+
+def test_th_01_feasible_sweep_near_terminal(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-01: At step 700, mature crop within 5 turns of shed is successfully swept."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 700
+    obs["day"] = 29
+    obs["hour"] = 4
+    # Hand at (2, 2). Crop at (2, 3) -> tiles[3][2]
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 20,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_TH_01",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[1],
+        start_step=700,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.status == "ACCEPTED"
+    assert res.patch is not None
+    assert res.exact_delta > 0.0
+
+
+def test_th_02_stranded_cargo_salvage(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-02: At step 710, worker carries stranded cargo -> direct DELIVER->SELL patch created."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 710
+    obs["day"] = 29
+    obs["hour"] = 14
+    # Hand at (2, 2) carries 5 CARROT in cargo
+    obs["private"]["inventories"][1] = {"CARROT": 5}
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_TH_02",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[1],
+        start_step=710,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(8)],
+        target_location=(2, 2),  # worker's own location
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    all_cmds = [a["hands"][0][0] for a in res.patch.actions]
+    assert "DROP" in all_cmds
+    assert "HARVEST" not in all_cmds  # purely salvage cargo!
+
+
+def test_th_03_runway_exceeded_hard_rejection(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-03: At step 715 (runway=3), crop requires 8 turns -> hard TERMINAL_RISK rejection."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 715
+    obs["day"] = 29
+    obs["hour"] = 19
+    # Hand at (0, 0), crop at (9, 9) -> distance 18 > 3 turns remaining
+    obs["farms"][0]["hands"] = [[0, 0]]
+    obs["farms"][0]["tiles"][9][9] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 20,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_TH_03",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[1],
+        start_step=715,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(3)],
+        target_location=(9, 9),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.status in (CoupledPatchState.TERMINAL_RISK.value, CoupledPatchState.ROUTE_FAILURE.value)
+
+
+def test_th_04_terminal_cluster_sweep(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-04: At step 698, adjacent mature crops swept together before single deposit."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 698
+    obs["day"] = 29
+    obs["hour"] = 2
+    # Hand at (2, 2). Mature crops at (2, 3) and (2, 4)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 2,
+        "planted_day": 20,
+        "watered_today": True,
+    }
+    obs["farms"][0]["tiles"][4][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 2,
+        "planted_day": 20,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_TH_04",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[1],
+        start_step=698,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(20)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    cmds = [a["hands"][0][0] for a in res.patch.actions]
+    assert cmds.count("HARVEST") >= 1
+    assert "DROP" in cmds
+
+
+def test_th_05_terminal_opportunity_analyzer_detection(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-05: TerminalOpportunityAnalyzer detects both stranded cargo and feasible crops."""
+    from aec.opportunities.terminal import TerminalOpportunityAnalyzer
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 700
+    obs["day"] = 29
+    obs["hour"] = 4
+    # Worker 1 has cargo
+    obs["private"]["inventories"][1] = {"CARROT": 4}
+    # Crop at (2, 3)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 20,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    analyzer = TerminalOpportunityAnalyzer()
+    opps = analyzer.analyze(econ, [])
+    sweep_opps = [o for o in opps if o.candidate_transformation_family == "TERMINAL_HARVEST_SWEEP"]
+    assert len(sweep_opps) >= 1
+    # Check that cargo salvage was detected
+    cargo_opps = [o for o in sweep_opps if o.dependency_info.get("is_cargo_deliver")]
+    assert len(cargo_opps) >= 1
+
+
+def test_th_06_negative_control_immature_crop_terminal(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-06: Negative Control: Immature crop at step 705 cannot be harvested -> rejects."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 705
+    obs["day"] = 29
+    obs["hour"] = 9
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 0,
+        "planted_day": 29,  # planted today, immature
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_TH_06",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[1],
+        start_step=705,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(13)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.status == CoupledPatchState.INFEASIBLE.value
+
+
+def test_th_07_negative_control_shed_full_terminal(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-07: Negative Control: Shed is at 100 capacity -> cannot sweep new crop."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 705
+    obs["private"]["shed"] = {"CARROT": 100}
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 20,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_TH_07",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[1],
+        start_step=705,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(13)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.status in (CoupledPatchState.CARGO_UNRESOLVED.value, CoupledPatchState.INFEASIBLE.value)
+
+
+def test_th_08_multiworker_terminal_no_collision(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-08: Two workers execute independent terminal routes without reservation collision."""
+    table = SpacetimeReservationTable()
+    # Farmer at (4, 4) reserves route to shed
+    farmer_route = [(700, (4, 4)), (701, (4, 3)), (702, (4, 2)), (703, (5, 2))]
+    assert table.reserve_trajectory(farmer_route, 0) is True
+    # Hand at (2, 2) reserves route to shed via (2, 2), (3, 2), (4, 2 at step 702) -> collides with farmer!
+    hand_route_colliding = [(700, (2, 2)), (701, (3, 2)), (702, (4, 2)), (703, (5, 2))]
+    # Step 702 at (4, 2) is already occupied by worker 0
+    assert table.reserve_trajectory(hand_route_colliding, 1) is False
+
+
+def test_th_09_immediate_sell_on_terminal_drop(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-09: Terminal harvest patch injects market SELL orders at the DROP turn."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 702
+    obs["day"] = 29
+    obs["hour"] = 6
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 20,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_TH_09",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[1],
+        start_step=702,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(16)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    drop_act = next((a for a in res.patch.actions if a["hands"][0][0] == "DROP"), None)
+    assert drop_act is not None
+    mkt = drop_act.get("market", [])
+    assert any(o[0] == "SELL" and o[1] == "CARROT" for o in mkt)
+
+
+def test_th_10_step_718_final_liquidation(matrix_base_obs: Dict[str, Any]) -> None:
+    """TH-10: At exact step 718, terminal liquidation opportunity fires to monetize shed."""
+    from aec.opportunities.terminal import TerminalOpportunityAnalyzer
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 718
+    obs["private"]["shed"] = {"CARROT": 25, "TOMATO": 10}
+    econ = build_economic_state(obs)
+    analyzer = TerminalOpportunityAnalyzer()
+    opps = analyzer.analyze(econ, [])
+    liq_opps = [o for o in opps if o.candidate_transformation_family == "TERMINAL_LIQUIDATION"]
+    assert len(liq_opps) == 1
+    assert liq_opps[0].affected_entities == ["SHED_LIQUIDATION"]
+

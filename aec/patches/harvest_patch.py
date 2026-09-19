@@ -115,30 +115,43 @@ class HarvestCoupledPatchGenerator:
                 rejection_reason=f"Target tile ({tx}, {ty}) does not exist"
             )
 
+        worker_pos = worker.position
         tile = tiles[ty][tx]
-        if not isinstance(tile, dict) or tile.get("kind") != "PLANT":
-            return CoupledPatchResult(
-                status=CoupledPatchState.INFEASIBLE.value,
-                rejection_reason=f"Tile ({tx}, {ty}) is not a plant (kind={tile.get('kind') if isinstance(tile, dict) else 'none'})"
-            )
+        is_near_terminal = (step >= 672 or request.is_terminal_sweep)
+        is_cargo_deliver = is_near_terminal and worker.total_cargo_units > 0 and (not isinstance(tile, dict) or tile.get("kind") != "PLANT")
 
-        crop = tile.get("crop")
-        yield_u = int(tile.get("yield_units", 0) or 0)
-        planted_day = int(tile.get("planted_day", 0) or 0)
-        current_day = econ.day
+        if is_cargo_deliver:
+            crop = max(worker.cargo.keys(), key=lambda k: worker.cargo[k]) if worker.cargo else "CARROT"
+            yield_u = 0
+            harvested_crops: List[Tuple[Tuple[int, int], str, int]] = []
+            cluster_patch_actions: List[str] = []
+            last_harvest_pos = worker.position
+            current_step_offset = 0
+            route_to_target: List[str] = []
+        else:
+            if not isinstance(tile, dict) or tile.get("kind") != "PLANT":
+                return CoupledPatchResult(
+                    status=CoupledPatchState.INFEASIBLE.value,
+                    rejection_reason=f"Tile ({tx}, {ty}) is not a plant (kind={tile.get('kind') if isinstance(tile, dict) else 'none'})"
+                )
 
-        # Verify biological maturity
-        first_yield_day = 0
-        if crop and crop in CROPS_META:
-            first_yield_day = CROPS_META[crop]["first_yield_day"]
-        elif crop and crop in CROP_GROWTH_DAYS:
-            first_yield_day = CROP_GROWTH_DAYS[crop]
+            crop = tile.get("crop")
+            yield_u = int(tile.get("yield_units", 0) or 0)
+            planted_day = int(tile.get("planted_day", 0) or 0)
+            current_day = econ.day
 
-        if yield_u <= 0 or (current_day - planted_day) < first_yield_day:
-            return CoupledPatchResult(
-                status=CoupledPatchState.INFEASIBLE.value,
-                rejection_reason=f"Crop {crop} at ({tx}, {ty}) not mature (yield={yield_u}, age={current_day - planted_day}, min={first_yield_day})"
-            )
+            # Verify biological maturity
+            first_yield_day = 0
+            if crop and crop in CROPS_META:
+                first_yield_day = CROPS_META[crop]["first_yield_day"]
+            elif crop and crop in CROP_GROWTH_DAYS:
+                first_yield_day = CROP_GROWTH_DAYS[crop]
+
+            if yield_u <= 0 or (current_day - planted_day) < first_yield_day:
+                return CoupledPatchResult(
+                    status=CoupledPatchState.INFEASIBLE.value,
+                    rejection_reason=f"Crop {crop} at ({tx}, {ty}) not mature (yield={yield_u}, age={current_day - planted_day}, min={first_yield_day})"
+                )
 
         # Worker capability check (Farmer and Hands have HARVEST capability)
         # Verify cargo room in shed
@@ -166,7 +179,7 @@ class HarvestCoupledPatchGenerator:
             worker_cargo={wid: dict(worker.cargo)},
             shed_inventory=dict(shed),
             shed_capacity_remaining=shed_capacity_remaining,
-            required_tiles={target_xy: {"kind": "PLANT", "crop": crop, "min_yield": yield_u}},
+            required_tiles={target_xy: {"kind": "PLANT", "crop": crop, "min_yield": yield_u}} if not is_cargo_deliver else {},
             earliest_start_step=step,
             latest_start_step=718,
             is_met=True
@@ -178,40 +191,41 @@ class HarvestCoupledPatchGenerator:
             request.co_worker_trajectories, wid, horizon
         )
 
-        # Reserve target tile task
-        if not reservations.reserve_task(step, f"HARVEST_{tx}_{ty}", wid):
-            return CoupledPatchResult(
-                status=CoupledPatchState.DEPENDENCY_FAILURE.value,
-                rejection_reason=f"Harvest task on ({tx}, {ty}) already reserved by peer worker"
-            )
-
-        # 3. PHASE 1: ROUTE TO TARGET (§9)
-        worker_pos = worker.position
-        route_to_target: List[str] = []
-        if worker_pos != target_xy:
-            path_to_crop = deterministic_find_path(
-                start=worker_pos,
-                target=target_xy,
-                start_step=step,
-                reservations=reservations,
-                worker_id=wid,
-                max_steps=min(12, request.horizon // 2),
-                board_size=self.board_size,
-                allow_pass=False
-            )
-            if path_to_crop is None:
+        if not is_cargo_deliver:
+            # Reserve target tile task
+            if not reservations.reserve_task(step, f"HARVEST_{tx}_{ty}", wid):
                 return CoupledPatchResult(
-                    status=CoupledPatchState.ROUTE_FAILURE.value,
-                    rejection_reason=f"Worker {wid} cannot find route to target {target_xy}"
+                    status=CoupledPatchState.DEPENDENCY_FAILURE.value,
+                    rejection_reason=f"Harvest task on ({tx}, {ty}) already reserved by peer worker"
                 )
-            route_to_target = path_to_crop
 
-        # 4. PHASE 2: HARVEST AT TARGET AND ADJACENT CLUSTERS (§9)
-        harvest_step_offset = len(route_to_target)
-        harvested_crops: List[Tuple[Tuple[int, int], str, int]] = [(target_xy, crop, yield_u)]
-        cluster_patch_actions: List[str] = list(route_to_target) + ["HARVEST"]
-        last_harvest_pos = target_xy
-        current_step_offset = len(cluster_patch_actions)
+            # 3. PHASE 1: ROUTE TO TARGET (§9)
+            worker_pos = worker.position
+            route_to_target = []
+            if worker_pos != target_xy:
+                path_to_crop = deterministic_find_path(
+                    start=worker_pos,
+                    target=target_xy,
+                    start_step=step,
+                    reservations=reservations,
+                    worker_id=wid,
+                    max_steps=min(12, request.horizon // 2),
+                    board_size=self.board_size,
+                    allow_pass=False
+                )
+                if path_to_crop is None:
+                    return CoupledPatchResult(
+                        status=CoupledPatchState.ROUTE_FAILURE.value,
+                        rejection_reason=f"Worker {wid} cannot find route to target {target_xy}"
+                    )
+                route_to_target = path_to_crop
+
+            # 4. PHASE 2: HARVEST AT TARGET AND ADJACENT CLUSTERS (§9)
+            harvest_step_offset = len(route_to_target)
+            harvested_crops = [(target_xy, crop, yield_u)]
+            cluster_patch_actions = list(route_to_target) + ["HARVEST"]
+            last_harvest_pos = target_xy
+            current_step_offset = len(cluster_patch_actions)
 
         # Worker capacity & cluster batching (workers have unbounded carry, bounded by shed capacity)
         worker_cap = min(shed_capacity_remaining, 20)
