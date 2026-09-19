@@ -5,6 +5,8 @@ __pycache__/
 
 # Large simulation replay artifacts
 *.json
+!PHASE014_HEADROOM_MANIFEST.json
+!results/PHASE014_*.json
 replays/
 .tempmediaStorage/
 

@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "014",
+  "phase_title": "AEC Economic Headroom Audit",
+  "audit_timestamp": "2026-09-19T19:45:00+05:30",
+  "governance": {
+    "git_branch": "main",
+    "v3_archive": "submission_Vj_kc_v3.tar.gz",
+    "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "hash_status": "VERIFIED_BIT_IDENTICAL",
+    "empirical_foundation": [
+      "DEPENDENCY_AWARE_MARKET_TIMING",
+      "TERMINAL_LIQUIDATION",
+      "PHASE_SHUTDOWN"
+    ],
+    "quarantined_mechanisms": [
+      "DYNAMIC_SHADOW_HARVEST",
+      "TERMINAL_HARVEST",
+      "ROUTE_COMPRESSION",
+      "CARGO_FERRY",
+      "TOWN_CYCLE",
+      "EMERGENCY_RECOVERY",
+      "OPPONENT_PREEMPT_SELL",
+      "RESOURCE_CONVERSION",
+      "SHOP_ARBITRAGE",
+      "PRODUCTION_ARBITRAGE",
+      "TERMINAL_CONVERSION",
+      "EMERGENCY_FEED_PURCHASE"
+    ],
+    "unit_tests_passing": 649,
+    "unit_test_suite": "tests/aec",
+    "cohort_isolation": {
+      "primary_locked_holdout": "340050..340199 (ZERO TOUCHES)",
+      "gate_0_3_virgin_final_holdout": "214200..214249 (ZERO TOUCHES)",
+      "prospective_tournament_cohort": "340300..340349 (ZERO TOUCHES)",
+      "retired_development_cohorts": [
+        "50000..50024",
+        "249000..249049",
+        "249050..249110",
+        "249111..249170",
+        "249171..249230",
+        "249231..249240"
+      ],
+      "active_audit_cohort": "249241..249275 (Fresh Development Partition)"
+    }
+  },
+  "cohort_partitions": {
+    "diagnostic_block_1": {
+      "seeds": "249241..249250",
+      "n_seeds": 10,
+      "n_matches": 20,
+      "turns": 14380,
+      "mean_paired_delta": 72.40,
+      "median_paired_delta": 28.00,
+      "std_delta": 88.83,
+      "seed_win_rate": 0.70,
+      "match_win_rate": 0.70,
+      "probed_states": 3640,
+      "positive_headroom_states": 2904,
+      "positive_rate": 0.7978,
+      "mean_oracle_headroom": 213.06,
+      "max_oracle_headroom": 17613.00
+    },
+    "expanded_audit_block": {
+      "seeds": "249251..249275",
+      "n_seeds": 25,
+      "n_matches": 50,
+      "turns": 35950,
+      "mean_paired_delta": 91.32,
+      "median_paired_delta": 74.00,
+      "std_delta": 161.40,
+      "seed_win_rate": 0.76,
+      "match_win_rate": 0.80,
+      "probed_states": 9102,
+      "positive_headroom_states": 7381,
+      "positive_rate": 0.8109,
+      "mean_oracle_headroom": 190.50,
+      "max_oracle_headroom": 17730.00
+    },
+    "combined_census": {
+      "seeds": "249241..249275",
+      "n_seeds": 35,
+      "n_matches": 70,
+      "total_turns": 50330,
+      "mean_paired_delta": 85.91,
+      "median_paired_delta": 58.00,
+      "seed_win_rate": 0.7429,
+      "seed_record": "26W - 8L - 1T",
+      "match_win_rate": 0.7714,
+      "match_record": "54W - 14L - 2T"
+    }
+  },
+  "oracle_headroom_census": {
+    "total_states_probed": 12742,
+    "positive_headroom_states": 10285,
+    "positive_rate": 0.8072,
+    "mean_headroom_usd": 196.87,
+    "median_headroom_usd": 27.00,
+    "p25_usd": 12.00,
+    "p75_usd": 90.40,
+    "p90_usd": 301.10,
+    "p95_usd": 654.20,
+    "p99_usd": 1840.00,
+    "max_headroom_usd": 17730.00,
+    "by_action_family": {
+      "MARKET": {
+        "count": 8836,
+        "share": 0.8591,
+        "mean_headroom": 198.73,
+        "max_headroom": 17730.00,
+        "primary_action": "Tranche liquidation of idle shed stock during favorable price regimes"
+      },
+      "TERMINAL": {
+        "count": 210,
+        "share": 0.0204,
+        "mean_headroom": 780.22,
+        "max_headroom": 2084.00,
+        "primary_action": "Complete raw liquidation dump at t>=710; abort unharvestable plantings"
+      },
+      "OPPONENT": {
+        "count": 373,
+        "share": 0.0363,
+        "mean_headroom": 156.71,
+        "max_headroom": 1427.00,
+        "primary_action": "Preemptive sell orders capturing shop liquidity depth ahead of rival"
+      },
+      "MULTI_WORKER": {
+        "count": 368,
+        "share": 0.0358,
+        "mean_headroom": 79.80,
+        "max_headroom": 203.00,
+        "primary_action": "Coordinated harvest: lead worker drops cargo, helper sweeps to shed"
+      },
+      "WORKER": {
+        "count": 498,
+        "share": 0.0484,
+        "mean_headroom": 34.50,
+        "max_headroom": 268.00,
+        "primary_action": "Immediate local harvest execution when adjacent to mature crops"
+      }
+    }
+  },
+  "causal_failure_attribution": {
+    "total_positive_states": 10285,
+    "breakdown": {
+      "NOT_DETECTED": {
+        "count": 8066,
+        "share": 0.7843,
+        "category": "C_DETECTOR_BLIND",
+        "description": "Event and Opportunity engines emitted zero opportunities due to rigid differential thresholds"
+      },
+      "NOT_REPRESENTED": {
+        "count": 2185,
+        "share": 0.2124,
+        "category": "D_REPRESENTATION_DEFECT",
+        "description": "Opportunity recognized but candidate generator cannot formulate autonomous order/action tranches"
+      },
+      "SAFETY_REJECTED": {
+        "count": 16,
+        "share": 0.0016,
+        "category": "E_SAFETY_REJECTED",
+        "description": "Intermediate solvency or shed overflow guard correctly rejected candidate"
+      },
+      "COUNTERFACTUAL_REJECTED": {
+        "count": 14,
+        "share": 0.0014,
+        "category": "E_SIMULATION_REJECTED",
+        "description": "Exact simulator evaluated candidate delta as <= baseline delta"
+      },
+      "FILTERED": {
+        "count": 2,
+        "share": 0.0002,
+        "category": "E_STATIC_FILTERED",
+        "description": "Static candidate screening dropped candidate before simulation"
+      },
+      "NONE_AEC_COMMITTED": {
+        "count": 2,
+        "share": 0.0002,
+        "category": "B_AEC_COMMITTED",
+        "description": "Live foundation mechanism already captured the opportunity"
+      }
+    }
+  },
+  "specialized_audits": {
+    "counterfactual_fidelity": {
+      "test_seeds": [249241, 249242, 249257],
+      "checkpoints": [24, 72, 144],
+      "exact_vs_sim_pass_rate": 1.00,
+      "max_discrepancy_usd": 1.00,
+      "verdict": "FIDELITY_CONFIRMED"
+    },
+    "horizon_sensitivity": {
+      "horizons_tested": [6, 12, 18, 24, 36],
+      "optimal_horizon": 18,
+      "mean_headroom_at_h18": 11.25,
+      "positive_rate_at_h18": 0.8333,
+      "degradation_at_h36": {
+        "mean_headroom": 8.83,
+        "positive_rate": 0.5000,
+        "cause": "Compounding uncertainty and counter-response noise over long horizons"
+      },
+      "verdict": "H18_CONFIRMED_OPTIMAL"
+    },
+    "composition_audit": {
+      "pairs_tested": [
+        "HARVEST + MARKET_TIMING",
+        "MARKET_TIMING + PRODUCTION",
+        "TERMINAL_HARVEST + LIQUIDATION",
+        "WORKER_SWAP + CARGO_DROP"
+      ],
+      "superadditive_rate": 0.5556,
+      "mean_individual_best": 25.11,
+      "mean_composed": 30.89,
+      "verdict": "COMPOSITION_SYNERGY_VERIFIED"
+    },
+    "opponent_preemption_audit": {
+      "scenarios_tested": 9,
+      "superior_rate": 1.00,
+      "mean_delta_usd": 22.00,
+      "verdict": "OPPONENT_HEADROOM_CONFIRMED_FOR_META_RESEARCH"
+    }
+  },
+  "objective_headroom_scorecard": [
+    {
+      "gap_class": "Detector",
+      "states": 8066,
+      "positive_headroom_usd": 1595000,
+      "mean_headroom_usd": 197.74,
+      "aec_coverage": 0.00,
+      "representability": 0.90,
+      "priority_score": 1435500,
+      "rank": 1
+    },
+    {
+      "gap_class": "Representation",
+      "states": 2185,
+      "positive_headroom_usd": 421705,
+      "mean_headroom_usd": 193.00,
+      "aec_coverage": 0.00,
+      "representability": 0.80,
+      "priority_score": 337360,
+      "rank": 2
+    },
+    {
+      "gap_class": "Opponent",
+      "states": 373,
+      "positive_headroom_usd": 58452,
+      "mean_headroom_usd": 156.71,
+      "aec_coverage": 0.00,
+      "representability": 0.50,
+      "priority_score": 29226,
+      "rank": 3
+    },
+    {
+      "gap_class": "Composition",
+      "states": 368,
+      "positive_headroom_usd": 29366,
+      "mean_headroom_usd": 79.80,
+      "aec_coverage": 0.00,
+      "representability": 0.60,
+      "priority_score": 17619,
+      "rank": 4
+    },
+    {
+      "gap_class": "Economic Evaluation",
+      "states": 14,
+      "positive_headroom_usd": 322,
+      "mean_headroom_usd": 23.00,
+      "aec_coverage": 0.00,
+      "representability": 0.85,
+      "priority_score": 274,
+      "rank": 5
+    },
+    {
+      "gap_class": "Horizon",
+      "states": 20,
+      "positive_headroom_usd": 212,
+      "mean_headroom_usd": 10.60,
+      "aec_coverage": 0.00,
+      "representability": 0.65,
+      "priority_score": 138,
+      "rank": 6
+    },
+    {
+      "gap_class": "Patch",
+      "states": 2,
+      "positive_headroom_usd": 70,
+      "mean_headroom_usd": 35.00,
+      "aec_coverage": 0.00,
+      "representability": 0.75,
+      "priority_score": 53,
+      "rank": 7
+    },
+    {
+      "gap_class": "Reconnect",
+      "states": 0,
+      "positive_headroom_usd": 0,
+      "mean_headroom_usd": 0.00,
+      "aec_coverage": 1.00,
+      "representability": 0.70,
+      "priority_score": 0,
+      "rank": 8
+    },
+    {
+      "gap_class": "Macro",
+      "states": 0,
+      "positive_headroom_usd": 0,
+      "mean_headroom_usd": 0.00,
+      "aec_coverage": 1.00,
+      "representability": 0.20,
+      "priority_score": 0,
+      "rank": 9
+    }
+  ],
+  "conclusions": {
+    "primary_case_classifications": [
+      "CASE B — HEADROOM EXISTS, BUT DETECTION IS WEAK",
+      "CASE C — HEADROOM EXISTS, BUT TRANSFORMATIONS ARE MISSING"
+    ],
+    "secondary_discoveries": [
+      "CASE E — HEADROOM IS PARTIALLY COMPOSITIONAL (55.6% superadditive rate)",
+      "CASE F — HEADROOM IS OPPONENT-CONTINGENT UNDER RIVAL PRESSURE"
+    ],
+    "rejected_hypotheses": [
+      "CASE A — LOW HEADROOM: REJECTED (80.7% positive states, mean +$196.87)",
+      "CASE D — COMPILER INFRASTRUCTURE BOTTLENECK: REJECTED (99.9% patch/reconnect success)",
+      "CASE G — MACRO POLICY BOTTLENECK: REJECTED (Tactical inventory liquidation dominates; V3 macro crop plan is optimal)"
+    ],
+    "architecture_fit_verdict": "MOSTLY",
+    "architecture_missing_abstractions": [
+      "Active inventory asset valuation trigger in Event/Opportunity Engine (detecting idle stored wealth)",
+      "Autonomous generative market tranche order synthesis in Candidate Funnel"
+    ],
+    "governance_directive": "PHASE 014 COMPLETE. ZERO AUTOMATIC GROUP 4 MECHANISMS IMPLEMENTED. LIVE BUILD UNTOUCHED."
+  }
+}

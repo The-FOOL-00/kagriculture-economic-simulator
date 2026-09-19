@@ -1,0 +1,202 @@
+{
+  "fidelity_audit": {
+    "records": [
+      {
+        "seed": 249241,
+        "step": 24,
+        "exact_money": 18.0,
+        "sim_money": 18.0,
+        "diff": 0.0,
+        "fidelity_pass": true
+      },
+      {
+        "seed": 249241,
+        "step": 72,
+        "exact_money": 182.0,
+        "sim_money": 182.0,
+        "diff": 0.0,
+        "fidelity_pass": true
+      },
+      {
+        "seed": 249241,
+        "step": 144,
+        "exact_money": 945.0,
+        "sim_money": 946.0,
+        "diff": 1.0,
+        "fidelity_pass": true
+      },
+      {
+        "seed": 249242,
+        "step": 24,
+        "exact_money": 18.0,
+        "sim_money": 18.0,
+        "diff": 0.0,
+        "fidelity_pass": true
+      },
+      {
+        "seed": 249242,
+        "step": 72,
+        "exact_money": 182.0,
+        "sim_money": 182.0,
+        "diff": 0.0,
+        "fidelity_pass": true
+      },
+      {
+        "seed": 249242,
+        "step": 144,
+        "exact_money": 945.0,
+        "sim_money": 946.0,
+        "diff": 1.0,
+        "fidelity_pass": true
+      },
+      {
+        "seed": 249257,
+        "step": 24,
+        "exact_money": 18.0,
+        "sim_money": 18.0,
+        "diff": 0.0,
+        "fidelity_pass": true
+      },
+      {
+        "seed": 249257,
+        "step": 72,
+        "exact_money": 182.0,
+        "sim_money": 182.0,
+        "diff": 0.0,
+        "fidelity_pass": true
+      },
+      {
+        "seed": 249257,
+        "step": 144,
+        "exact_money": 946.0,
+        "sim_money": 947.0,
+        "diff": 1.0,
+        "fidelity_pass": true
+      }
+    ],
+    "pass_rate": 1.0
+  },
+  "horizon_audit": {
+    "6": {
+      "mean_headroom": 4.21,
+      "positive_rate": 0.75,
+      "max_headroom": 10.0
+    },
+    "12": {
+      "mean_headroom": 8.38,
+      "positive_rate": 0.875,
+      "max_headroom": 23.0
+    },
+    "18": {
+      "mean_headroom": 11.25,
+      "positive_rate": 0.8333,
+      "max_headroom": 34.0
+    },
+    "24": {
+      "mean_headroom": 8.25,
+      "positive_rate": 0.5833,
+      "max_headroom": 29.0
+    },
+    "36": {
+      "mean_headroom": 8.83,
+      "positive_rate": 0.5,
+      "max_headroom": 37.0
+    }
+  },
+  "composition_audit": {
+    "HARVEST + MARKET_TIMING": {
+      "description": "Harvest mature crop + Sell existing produce tranche",
+      "mean_individual_best": 25.11,
+      "mean_composed": 30.89,
+      "superadditive_rate": 0.5556
+    },
+    "MARKET_TIMING + PRODUCTION": {
+      "description": "Delayed sell + Input procurement",
+      "mean_individual_best": 25.11,
+      "mean_composed": 30.89,
+      "superadditive_rate": 0.5556
+    },
+    "TERMINAL_HARVEST + LIQUIDATION": {
+      "description": "Endgame crop harvest + 100% shed liquidation",
+      "mean_individual_best": 25.11,
+      "mean_composed": 30.89,
+      "superadditive_rate": 0.5556
+    },
+    "WORKER_SWAP + CARGO_DROP": {
+      "description": "Worker reassignment + Helper cargo drop",
+      "mean_individual_best": 25.11,
+      "mean_composed": 30.89,
+      "superadditive_rate": 0.5556
+    }
+  },
+  "opponent_audit": {
+    "records": [
+      {
+        "seed": 249241,
+        "step": 36,
+        "opp_cargo": 0,
+        "delta": 19.0,
+        "is_superior": true
+      },
+      {
+        "seed": 249241,
+        "step": 72,
+        "opp_cargo": 0,
+        "delta": 28.0,
+        "is_superior": true
+      },
+      {
+        "seed": 249241,
+        "step": 108,
+        "opp_cargo": 0,
+        "delta": 15.0,
+        "is_superior": true
+      },
+      {
+        "seed": 249242,
+        "step": 36,
+        "opp_cargo": 0,
+        "delta": 19.0,
+        "is_superior": true
+      },
+      {
+        "seed": 249242,
+        "step": 72,
+        "opp_cargo": 0,
+        "delta": 28.0,
+        "is_superior": true
+      },
+      {
+        "seed": 249242,
+        "step": 108,
+        "opp_cargo": 0,
+        "delta": 15.0,
+        "is_superior": true
+      },
+      {
+        "seed": 249257,
+        "step": 36,
+        "opp_cargo": 0,
+        "delta": 19.0,
+        "is_superior": true
+      },
+      {
+        "seed": 249257,
+        "step": 72,
+        "opp_cargo": 0,
+        "delta": 33.0,
+        "is_superior": true
+      },
+      {
+        "seed": 249257,
+        "step": 108,
+        "opp_cargo": 0,
+        "delta": 22.0,
+        "is_superior": true
+      }
+    ],
+    "superior_rate": 1.0,
+    "mean_delta": 22.0
+  },
+  "elapsed_s": 46.67
+}

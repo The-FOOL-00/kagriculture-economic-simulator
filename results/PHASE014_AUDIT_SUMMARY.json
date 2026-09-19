@@ -1,0 +1,112 @@
+{
+  "cohort_name": "expanded_audit_block",
+  "n_seeds": 25,
+  "n_matches": 50,
+  "total_turns": 35950,
+  "total_elapsed_s": 919.87,
+  "foundation_performance": {
+    "mean_paired_delta": 91.32,
+    "median_delta": 74.0,
+    "std_delta": 161.4
+  },
+  "state_frequencies": {
+    "worker_state": {
+      "idle": 0.3995,
+      "productive": 0.3869,
+      "carrying": 0.2136
+    },
+    "farm_state": {
+      "normal": 0.2719,
+      "cash-constrained": 0.0763,
+      "cash-rich": 0.591,
+      "shed-constrained": 0.022,
+      "terminal-constrained": 0.0388
+    },
+    "market_state": {
+      "normal": 0.0215,
+      "liquidity-sensitive": 0.0944,
+      "opportunity_window": 0.0821,
+      "favorable": 0.799,
+      "unfavorable": 0.0031
+    },
+    "production_state": {
+      "normal": 0.9458,
+      "terminal-focused": 0.0542
+    },
+    "terminal_state": {
+      "far_from_terminal": 0.8345,
+      "terminal_runway_sufficient": 0.1113,
+      "terminal_runway_tight": 0.0417,
+      "liquidation_phase": 0.0111,
+      "shutdown_phase": 0.0014
+    },
+    "opponent_state": {
+      "low_pressure": 1.0
+    },
+    "interesting_state_rate": 0.9563,
+    "indicator_counts": {
+      "ROUTE_CONGESTION": 120100,
+      "CASH_SHORTAGE_WAGE_RISK": 2744,
+      "MARKET_PRICE_SPIKE": 24473,
+      "LARGE_UNCOMMITTED_INVENTORY": 749,
+      "CASH_TEMPORARILY_IDLE": 416,
+      "PRODUCTION_INPUT_MISMATCH": 1519,
+      "TERMINAL_RUNWAY_ASYMMETRY": 512,
+      "MARKET_PRICE_COLLAPSE": 30
+    }
+  },
+  "oracle_headroom": {
+    "total_states_probed": 9102,
+    "positive_headroom_states": 7381,
+    "positive_rate": 0.8109,
+    "mean_headroom": 190.5,
+    "median_headroom": 27.0,
+    "p75": 87.0,
+    "p90": 296.0,
+    "p95": 643.0,
+    "max_headroom": 17730.0,
+    "category_distribution": {
+      "A_NO_HEADROOM": 1721,
+      "C_DETECTOR_BLIND": 5766,
+      "D_REPRESENTATION_DEFECT": 1605,
+      "F_HORIZON_INSUFFICIENT": 10
+    },
+    "headroom_by_family": {
+      "MARKET": {
+        "count": 6356,
+        "mean": 190.92,
+        "max": 17730.0
+      },
+      "WORKER": {
+        "count": 344,
+        "mean": 32.52,
+        "max": 95.0
+      },
+      "OPPONENT": {
+        "count": 267,
+        "mean": 152.43,
+        "max": 1427.0
+      },
+      "MULTI_WORKER": {
+        "count": 258,
+        "mean": 81.17,
+        "max": 190.0
+      },
+      "TERMINAL": {
+        "count": 156,
+        "mean": 767.63,
+        "max": 2065.0
+      }
+    }
+  },
+  "causal_gaps": {
+    "total_gaps_recorded": 7381,
+    "counts_by_layer": {
+      "NOT_DETECTED": 5776,
+      "NOT_REPRESENTED": 1581,
+      "COUNTERFACTUAL_REJECTED": 10,
+      "SAFETY_REJECTED": 12,
+      "FILTERED": 2
+    }
+  }
+}
