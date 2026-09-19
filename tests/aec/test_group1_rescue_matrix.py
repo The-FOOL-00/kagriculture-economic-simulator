@@ -898,3 +898,248 @@ def test_rc_10_market_liquidation_bundle(matrix_base_obs: Dict[str, Any]) -> Non
     assert any(o[0] == "SELL" and o[1] == "CARROT" for o in drop_act.get("market", []))
 
 
+# =============================================================================
+# 4. CARGO FERRY: 10+ ACTIVATION & ADVERSARIAL PATTERNS (§7, §12)
+# =============================================================================
+
+def test_cf_01_cargo_ferry_detector_identifies_opportunity(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-01: CargoFerryDetector identifies auxiliary hand to ferry nearby mature crop."""
+    from aec.opportunities.cargo_ferry import CargoFerryDetector
+    obs = copy.deepcopy(matrix_base_obs)
+    # Hand at (2, 2). Mature crop at (2, 3) -> tiles[3][2]. Farmer at (4, 4)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    detector = CargoFerryDetector()
+    opps = detector.detect(econ)
+    cf_opps = [o for o in opps if o.candidate_transformation_family == "CARGO_FERRY"]
+    assert len(cf_opps) >= 1
+    assert cf_opps[0].ferry_worker_id == 1
+    assert cf_opps[0].source_worker_id == 0
+
+
+def test_cf_02_patch_generation_for_ferry_hand(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-02: PatchGenerator produces CoupledPatch targeting ferry worker without mutating Farmer."""
+    from aec.opportunities.cargo_ferry import CargoFerryDetector
+    from aec.patches.generator import PatchGenerator
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    detector = CargoFerryDetector()
+    opps = detector.detect(econ)
+    gen = PatchGenerator(enabled_mechanisms={"CARGO_FERRY"})
+    base_act = {"farmer": ["PASS"], "hands": [["PASS"]], "market": []}
+    base_cont = [{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(20)]
+    patches = gen.generate_patches(
+        opportunities=opps,
+        econ_state=econ,
+        baseline_action=base_act,
+        baseline_continuation=base_cont,
+    )
+    cf_patches = [p for p in patches if p.mechanism_family == "CARGO_FERRY"]
+    assert len(cf_patches) >= 1
+    # Check that Hand 1 is mutated
+    assert 1 in cf_patches[0].worker_mutations
+    # Farmer (0) is unmutated
+    assert 0 not in cf_patches[0].worker_mutations
+
+
+def test_cf_03_multiworker_reservation_avoids_collision(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-03: Spacetime reservation guarantees ferry worker and farmer don't collide."""
+    table = SpacetimeReservationTable()
+    # Farmer reserves step 51 at (2, 3)
+    table.reserve_vertex(step=51, pos=(2, 3), worker_id=0)
+    # Ferry worker trying to reserve step 51 at (2, 3) fails
+    assert table.reserve_vertex(step=51, pos=(2, 3), worker_id=1) is False
+    # But step 52 at (2, 3) is free for ferry worker
+    assert table.reserve_vertex(step=52, pos=(2, 3), worker_id=1) is True
+
+
+def test_cf_04_negative_control_single_worker(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-04: Negative Control: Solo farmer (0 hands) -> CargoFerryDetector abstains."""
+    from aec.opportunities.cargo_ferry import CargoFerryDetector
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["hands"] = []
+    obs["private"]["inventories"] = [{}]
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    detector = CargoFerryDetector()
+    opps = detector.detect(econ)
+    assert len(opps) == 0
+
+
+def test_cf_05_negative_control_frozen_hand(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-05: Negative Control: Auxiliary hand is frozen -> detector abstains."""
+    from aec.opportunities.cargo_ferry import CargoFerryDetector
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    # Mark hand as frozen
+    econ.workers.workers[1].is_frozen = True
+    detector = CargoFerryDetector()
+    opps = detector.detect(econ)
+    assert len(opps) == 0
+
+
+def test_cf_06_negative_control_shed_full(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-06: Negative Control: Shed is full (100 capacity) -> detector abstains."""
+    from aec.opportunities.cargo_ferry import CargoFerryDetector
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["private"]["shed"] = {"CARROT": 100}
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    detector = CargoFerryDetector()
+    opps = detector.detect(econ)
+    assert len(opps) == 0
+
+
+def test_cf_07_idle_helper_low_opportunity_cost(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-07: Idle helper executes ferry while baseline continues for Farmer."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 2,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_CF_07",
+        mechanism_family="CARGO_FERRY",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(16)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    assert res.labor_opportunity_cost == 0.0
+
+
+def test_cf_08_exact_counterfactual_simulation_advantage(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-08: Exact forward simulation confirms positive delta_terminal_margin for ferry operation."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_CF_08",
+        mechanism_family="CARGO_FERRY",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    assert res.exact_delta > 0.0
+    assert res.status == "ACCEPTED"
+
+
+def test_cf_09_reconnect_fidelity_for_ferry_hand(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-09: Ferry hand patch includes clean rendezvous reconnection to baseline continuation."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 2,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_CF_09",
+        mechanism_family="CARGO_FERRY",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    assert res.patch.reconnect_result is not None
+    assert res.patch.reconnect_result.safety is True
+
+
+def test_cf_10_immediate_liquidity_realization_on_ferry_drop(matrix_base_obs: Dict[str, Any]) -> None:
+    """CF-10: Ferry patch bundles SELL orders into market actions at DROP step."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_CF_10",
+        mechanism_family="CARGO_FERRY",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    drop_act = next((a for a in res.patch.actions if a["hands"][0][0] == "DROP"), None)
+    assert drop_act is not None
+    assert any(o[0] == "SELL" and o[1] == "CARROT" for o in drop_act.get("market", []))
+
+
+

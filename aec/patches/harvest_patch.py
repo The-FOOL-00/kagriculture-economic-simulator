@@ -134,8 +134,9 @@ class HarvestCoupledPatchGenerator:
                 crop_mock_match = next((c for c in econ.farm.crops if getattr(c, "position", None) == (tx, ty)), None)
 
             if crop_mock_match is not None:
-                crop = getattr(crop_mock_match, "crop_type", "MELON")
-                yield_u = getattr(crop_mock_match, "yield_units", 2)
+                crop = str(getattr(crop_mock_match, "crop_type", "MELON"))
+                yield_raw = getattr(crop_mock_match, "yield_units", None)
+                yield_u = int(yield_raw) if isinstance(yield_raw, (int, float)) else 2
                 planted_day = 0
                 current_day = 10
             elif not isinstance(tile, dict) or tile.get("kind") != "PLANT":

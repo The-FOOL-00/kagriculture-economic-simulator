@@ -122,6 +122,23 @@ class TerminalOpportunityAnalyzer:
                             ))
                             break  # best worker found for this crop
 
+            # 3. Fallback when expected_harvests indicates uncollected crops
+            if not opportunities and sum(econ_state.farm.expected_harvests.values()) > 0:
+                mature_crops = sum(econ_state.farm.expected_harvests.values())
+                opportunities.append(Opportunity(
+                    opportunity_id=f"TERMINAL_SWEEP_STEP_{step}",
+                    category="TERMINAL",
+                    event_trigger=EventType.E8_TERMINAL_TRANSITION,
+                    affected_entities=["HARVEST_SWEEP"],
+                    estimated_economic_relevance=float(mature_crops * 80),
+                    candidate_transformation_family="TERMINAL_HARVEST_SWEEP",
+                    dependency_info={"mature_crops": mature_crops, "worker_id": 0},
+                    required_horizon=max(1, FINAL_STEP - step),
+                    rationale=f"Terminal harvest sweep: {mature_crops} mature units awaiting collection",
+                    confidence=0.9,
+                    scientific_status=ScientificStatus.REUSED_SAFETY
+                ))
+
             # Sort opportunities by estimated realizable economic relevance
             opportunities.sort(key=lambda o: o.estimated_economic_relevance, reverse=True)
             opportunities = opportunities[:8]

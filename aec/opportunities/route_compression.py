@@ -62,93 +62,96 @@ class RouteCompressionDetector:
             )
 
             # 1. Detour Task Compaction: Harvest mature crop in detour radius (1-3 steps)
-            if hasattr(econ_state.farm, "crops") and econ_state.farm.crops:
-                for c in econ_state.farm.crops:
-                    cpos = getattr(c, "position", (0, 0))
-                    dist = abs(w.position[0] - cpos[0]) + abs(w.position[1] - cpos[1])
-                    if 1 <= dist <= 3:
-                        ctype = getattr(c, "crop_type", "MELON")
-                        price = float(current_prices.get(ctype, 35.0))
-                        dist_to_shed = abs(cpos[0] - best_shed[0]) + abs(cpos[1] - best_shed[1])
-                        orig_steps = dist + dist_to_shed + 6
-                        comp_steps = dist + 1 + dist_to_shed + 1
-                        saved = max(1, orig_steps - comp_steps)
-                        opportunities.append(RouteCompressionOpportunity(
-                            opportunity_id=f"RCOMP_{econ_state.step}_W{wid}_{cpos[0]}_{cpos[1]}",
-                            category="ROUTE",
-                            event_trigger=None,
-                            affected_entities=[wid, cpos],
-                            estimated_economic_relevance=price * 2,
-                            candidate_transformation_family="ROUTE_COMPRESSION",
-                            dependency_info={
-                                "worker_id": wid,
-                                "target_pos": cpos,
-                                "crop": ctype,
-                                "yield_units": 2,
-                                "target_tasks": ["HARVEST", "DROP"],
-                                "saved_steps": saved,
-                                "original_route_steps": orig_steps,
-                                "compressed_route_steps": comp_steps,
-                            },
-                            required_horizon=max(12, comp_steps + 6),
-                            rationale=f"Worker {wid} compresses route ({saved} turns saved): compacts {ctype} at {cpos}.",
-                            scientific_status=ScientificStatus.PLAUSIBLE_UNPROVEN,
-                            original_route_steps=orig_steps,
-                            compressed_route_steps=comp_steps,
-                            saved_steps=saved,
-                            target_tasks=["HARVEST", "DROP"],
-                            worker_id=wid,
-                            target_pos=cpos,
-                            crop_type=ctype,
-                        ))
+            w_cap = getattr(w, "capacity", 3)
+            if w.total_cargo_units < w_cap:
+                if hasattr(econ_state.farm, "crops") and econ_state.farm.crops:
+                    for c in econ_state.farm.crops:
+                        cpos = getattr(c, "position", (0, 0))
+                        dist = abs(w.position[0] - cpos[0]) + abs(w.position[1] - cpos[1])
+                        if 1 <= dist <= 3:
+                            ctype = getattr(c, "crop_type", "MELON")
+                            price = float(current_prices.get(ctype, 35.0))
+                            dist_to_shed = abs(cpos[0] - best_shed[0]) + abs(cpos[1] - best_shed[1])
+                            orig_steps = dist + dist_to_shed + 6
+                            comp_steps = dist + 1 + dist_to_shed + 1
+                            saved = max(1, orig_steps - comp_steps)
+                            opportunities.append(RouteCompressionOpportunity(
+                                opportunity_id=f"RCOMP_{econ_state.step}_W{wid}_{cpos[0]}_{cpos[1]}",
+                                category="ROUTE",
+                                event_trigger=None,
+                                affected_entities=[wid, cpos],
+                                estimated_economic_relevance=price * 2,
+                                candidate_transformation_family="ROUTE_COMPRESSION",
+                                dependency_info={
+                                    "worker_id": wid,
+                                    "target_pos": cpos,
+                                    "crop": ctype,
+                                    "yield_units": 2,
+                                    "target_tasks": ["HARVEST", "DROP"],
+                                    "saved_steps": saved,
+                                    "original_route_steps": orig_steps,
+                                    "compressed_route_steps": comp_steps,
+                                    "saved_steps": saved,
+                                },
+                                required_horizon=max(12, comp_steps + 6),
+                                rationale=f"Worker {wid} compresses route ({saved} turns saved): compacts {ctype} at {cpos}.",
+                                scientific_status=ScientificStatus.PLAUSIBLE_UNPROVEN,
+                                original_route_steps=orig_steps,
+                                compressed_route_steps=comp_steps,
+                                saved_steps=saved,
+                                target_tasks=["HARVEST", "DROP"],
+                                worker_id=wid,
+                                target_pos=cpos,
+                                crop_type=ctype,
+                            ))
 
-            if tiles:
-                for y, row in enumerate(tiles):
-                    for x, tile in enumerate(row):
-                        if isinstance(tile, dict) and tile.get("kind") == "PLANT":
-                            yield_u = int(tile.get("yield_units", 0) or 0)
-                            crop = tile.get("crop")
-                            if yield_u > 0 and crop:
-                                crop_pos = (x, y)
-                                dist = abs(w.position[0] - x) + abs(w.position[1] - y)
-                                if 1 <= dist <= 3:
-                                    price = float(current_prices.get(crop, 35.0))
-                                    dist_to_shed = abs(x - best_shed[0]) + abs(y - best_shed[1])
-                                    orig_steps = dist + dist_to_shed + 6
-                                    comp_steps = dist + 1 + dist_to_shed + 1
-                                    saved = max(1, orig_steps - comp_steps)
+                if tiles:
+                    for y, row in enumerate(tiles):
+                        for x, tile in enumerate(row):
+                            if isinstance(tile, dict) and tile.get("kind") == "PLANT":
+                                yield_u = int(tile.get("yield_units", 0) or 0)
+                                crop = tile.get("crop")
+                                if yield_u > 0 and crop:
+                                    crop_pos = (x, y)
+                                    dist = abs(w.position[0] - x) + abs(w.position[1] - y)
+                                    if 1 <= dist <= 3:
+                                        price = float(current_prices.get(crop, 35.0))
+                                        dist_to_shed = abs(x - best_shed[0]) + abs(y - best_shed[1])
+                                        orig_steps = dist + dist_to_shed + 6
+                                        comp_steps = dist + 1 + dist_to_shed + 1
+                                        saved = max(1, orig_steps - comp_steps)
 
-                                    opportunities.append(RouteCompressionOpportunity(
-                                        opportunity_id=f"RCOMP_{econ_state.step}_W{wid}_{x}_{y}",
-                                        category="ROUTE",
-                                        event_trigger=None,
-                                        affected_entities=[wid, crop_pos],
-                                        estimated_economic_relevance=price * yield_u,
-                                        candidate_transformation_family="ROUTE_COMPRESSION",
-                                        dependency_info={
-                                            "worker_id": wid,
-                                            "target_pos": crop_pos,
-                                            "crop": crop,
-                                            "yield_units": yield_u,
-                                            "target_tasks": ["HARVEST", "DROP"],
-                                            "saved_steps": saved,
-                                            "original_route_steps": orig_steps,
-                                            "compressed_route_steps": comp_steps,
-                                        },
-                                        required_horizon=max(12, comp_steps + 6),
-                                        rationale=(
-                                            f"Worker {wid} economic route compression ({saved} turns saved): "
-                                            f"compacts {crop} harvest at {crop_pos} with transit to shed."
-                                        ),
-                                        scientific_status=ScientificStatus.PLAUSIBLE_UNPROVEN,
-                                        original_route_steps=orig_steps,
-                                        compressed_route_steps=comp_steps,
-                                        saved_steps=saved,
-                                        target_tasks=["HARVEST", "DROP"],
-                                        worker_id=wid,
-                                        target_pos=crop_pos,
-                                        crop_type=crop,
-                                    ))
+                                        opportunities.append(RouteCompressionOpportunity(
+                                            opportunity_id=f"RCOMP_{econ_state.step}_W{wid}_{x}_{y}",
+                                            category="ROUTE",
+                                            event_trigger=None,
+                                            affected_entities=[wid, crop_pos],
+                                            estimated_economic_relevance=price * yield_u,
+                                            candidate_transformation_family="ROUTE_COMPRESSION",
+                                            dependency_info={
+                                                "worker_id": wid,
+                                                "target_pos": crop_pos,
+                                                "crop": crop,
+                                                "yield_units": yield_u,
+                                                "target_tasks": ["HARVEST", "DROP"],
+                                                "saved_steps": saved,
+                                                "original_route_steps": orig_steps,
+                                                "compressed_route_steps": comp_steps,
+                                            },
+                                            required_horizon=max(12, comp_steps + 6),
+                                            rationale=(
+                                                f"Worker {wid} economic route compression ({saved} turns saved): "
+                                                f"compacts {crop} harvest at {crop_pos} with transit to shed."
+                                            ),
+                                            scientific_status=ScientificStatus.PLAUSIBLE_UNPROVEN,
+                                            original_route_steps=orig_steps,
+                                            compressed_route_steps=comp_steps,
+                                            saved_steps=saved,
+                                            target_tasks=["HARVEST", "DROP"],
+                                            worker_id=wid,
+                                            target_pos=crop_pos,
+                                            crop_type=crop,
+                                        ))
 
             # 2. Direct Cargo Transit Compaction: Eliminate wandering/delays to shed
             if w.total_cargo_units > 0:

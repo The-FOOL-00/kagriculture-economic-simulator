@@ -266,6 +266,14 @@ class WinModel:
                 is_superior = False
                 rationale = f"Terminal sweep produces non-positive economic return: margin delta ${delta_margin:.1f}, cash delta ${delta_money:.1f}"
 
+        elif fam == "CARGO_FERRY" or "FERRY" in patch_id:
+            if delta_margin > 0.0 or (delta_money > 0.0 and delta_margin >= 0.0):
+                is_superior = True
+                rationale = f"Certified cargo ferry yields positive return: margin +${delta_margin:.1f}, cash +${delta_money:.1f}"
+            else:
+                is_superior = False
+                rationale = f"Cargo ferry produces non-positive economic return: margin delta ${delta_margin:.1f}, cash delta ${delta_money:.1f}"
+
         elif fam == "ROUTE_COMPRESSION" or "RCOMP" in patch_id:
             if delta_margin > 0.0 or (delta_money > 0.0 and delta_margin >= 0.0):
                 is_superior = True
