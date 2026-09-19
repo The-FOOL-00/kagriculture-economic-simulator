@@ -1,0 +1,38 @@
+{
+  "cohort": "phase015_fresh_pilot",
+  "seeds": [
+    249276,
+    249277,
+    249278,
+    249279,
+    249280,
+    249281,
+    249282,
+    249283,
+    249284,
+    249285
+  ],
+  "n_seeds": 10,
+  "mean_paired_delta": -58569.8,
+  "median_paired_delta": -59209.5,
+  "std_delta": 22919.21,
+  "se_delta": 7247.69,
+  "ci95": [
+    -72775.27,
+    -44364.33
+  ],
+  "p_value": 0.0,
+  "t_stat": -8.081,
+  "record": "0W / 10L / 0T",
+  "worst_seed": 249278,
+  "worst_delta": -87323.0,
+  "total_triggers": 9844,
+  "total_candidates": 2118,
+  "total_simulations": 2118,
+  "total_commits": 173,
+  "committed_mechanisms": {
+    "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 166,
+    "DEPENDENCY_AWARE_MARKET_TIMING": 7
+  },
+  "elapsed_seconds": 653.65
+}

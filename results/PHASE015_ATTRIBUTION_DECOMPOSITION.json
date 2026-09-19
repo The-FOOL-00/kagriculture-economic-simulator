@@ -1,0 +1,25 @@
+{
+  "sample_seeds": [
+    249276,
+    249277,
+    249278,
+    249279,
+    249280
+  ],
+  "trigger_only_mean_delta": 0.0,
+  "synthesizer_only_mean_delta": 0.0,
+  "trigger_only_deltas": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "synthesizer_only_deltas": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}
