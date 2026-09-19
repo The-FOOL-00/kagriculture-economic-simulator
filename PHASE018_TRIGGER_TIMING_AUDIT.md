@@ -89,6 +89,7 @@ trigger semantics change; deduplication (`record_counterfactual_outcome`) stays.
 
 ## 6. Arm C results
 
-PENDING — appended after the fresh-cohort Arm C pilot executes. The matrix above
-is frozen and must not be edited after results land; any follow-up variant gets a
-new identifier (C4+) with its own preregistration note.
+See `PHASE018_ARM_C_RESULTS.md` (full report). Summary: C1 +$5.8 null (978 noise
+firings removed, no effect); C2 exactly $0.0 (floor never bound — vacuous); C3
+−$68.1 (suppression reshuffles the collapsed-funnel order-lottery). No variant
+adoptable. The matrix above was frozen before execution and is unchanged.
