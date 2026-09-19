@@ -1,0 +1,338 @@
+[
+  {
+    "seed": 249323,
+    "seat": 0,
+    "step": 290,
+    "commodity": "WHEAT",
+    "qty": 13,
+    "lump": {
+      "margin": 16.0,
+      "money": 496.0,
+      "horizon": 36,
+      "escalated": true,
+      "regime": "LIVESTOCK_FEED_RISK"
+    },
+    "staged": [
+      {
+        "q1": 6,
+        "q2": 7,
+        "k": 6,
+        "margin": 13.0,
+        "money": 232.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 6,
+        "q2": 7,
+        "k": 12,
+        "margin": 13.0,
+        "money": 232.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 4,
+        "q2": 9,
+        "k": 6,
+        "margin": 11.0,
+        "money": 156.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 4,
+        "q2": 9,
+        "k": 12,
+        "margin": 11.0,
+        "money": 156.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      }
+    ]
+  },
+  {
+    "seed": 249323,
+    "seat": 0,
+    "step": 290,
+    "commodity": "WHEAT",
+    "qty": 5,
+    "lump": {
+      "margin": 12.0,
+      "money": 194.0,
+      "horizon": 36,
+      "escalated": true,
+      "regime": "LIVESTOCK_FEED_RISK"
+    },
+    "staged": [
+      {
+        "q1": 2,
+        "q2": 3,
+        "k": 6,
+        "margin": 6.0,
+        "money": 78.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      },
+      {
+        "q1": 2,
+        "q2": 3,
+        "k": 12,
+        "margin": 6.0,
+        "money": 78.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      },
+      {
+        "q1": 2,
+        "q2": 3,
+        "k": 6,
+        "margin": 6.0,
+        "money": 78.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      },
+      {
+        "q1": 2,
+        "q2": 3,
+        "k": 12,
+        "margin": 6.0,
+        "money": 78.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      }
+    ]
+  },
+  {
+    "seed": 249322,
+    "seat": 1,
+    "step": 251,
+    "commodity": "WHEAT",
+    "qty": 12,
+    "lump": {
+      "margin": -52.0,
+      "money": 232.0,
+      "horizon": 36,
+      "escalated": true,
+      "regime": "LIVESTOCK_FEED_RISK"
+    },
+    "staged": [
+      {
+        "q1": 6,
+        "q2": 6,
+        "k": 6,
+        "margin": -29.0,
+        "money": 23.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 6,
+        "q2": 6,
+        "k": 12,
+        "margin": -29.0,
+        "money": 23.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 4,
+        "q2": 8,
+        "k": 6,
+        "margin": -31.0,
+        "money": -15.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 4,
+        "q2": 8,
+        "k": 12,
+        "margin": -31.0,
+        "money": -15.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      }
+    ]
+  },
+  {
+    "seed": 249322,
+    "seat": 1,
+    "step": 251,
+    "commodity": "WHEAT",
+    "qty": 10,
+    "lump": {
+      "margin": -30.0,
+      "money": 170.0,
+      "horizon": 36,
+      "escalated": true,
+      "regime": "LIVESTOCK_FEED_RISK"
+    },
+    "staged": [
+      {
+        "q1": 5,
+        "q2": 5,
+        "k": 6,
+        "margin": -29.0,
+        "money": -14.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 5,
+        "q2": 5,
+        "k": 12,
+        "margin": -29.0,
+        "money": -14.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 3,
+        "q2": 7,
+        "k": 6,
+        "margin": -33.0,
+        "money": -16.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      },
+      {
+        "q1": 3,
+        "q2": 7,
+        "k": 12,
+        "margin": -33.0,
+        "money": -16.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      }
+    ]
+  },
+  {
+    "seed": 249322,
+    "seat": 1,
+    "step": 291,
+    "commodity": "WHEAT",
+    "qty": 8,
+    "lump": {
+      "margin": -3.0,
+      "money": 310.0,
+      "horizon": 36,
+      "escalated": true,
+      "regime": "LIVESTOCK_FEED_RISK"
+    },
+    "staged": [
+      {
+        "q1": 4,
+        "q2": 4,
+        "k": 6,
+        "margin": -5.0,
+        "money": 154.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 4,
+        "q2": 4,
+        "k": 12,
+        "margin": -5.0,
+        "money": 154.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "LIVESTOCK_FEED_RISK"
+      },
+      {
+        "q1": 3,
+        "q2": 5,
+        "k": 6,
+        "margin": -5.0,
+        "money": 115.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      },
+      {
+        "q1": 3,
+        "q2": 5,
+        "k": 12,
+        "margin": -5.0,
+        "money": 115.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      }
+    ]
+  },
+  {
+    "seed": 249322,
+    "seat": 1,
+    "step": 291,
+    "commodity": "WHEAT",
+    "qty": 5,
+    "lump": {
+      "margin": -4.0,
+      "money": 193.0,
+      "horizon": 36,
+      "escalated": true,
+      "regime": "LIVESTOCK_FEED_RISK"
+    },
+    "staged": [
+      {
+        "q1": 2,
+        "q2": 3,
+        "k": 6,
+        "margin": -5.0,
+        "money": 76.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      },
+      {
+        "q1": 2,
+        "q2": 3,
+        "k": 12,
+        "margin": -5.0,
+        "money": 76.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      },
+      {
+        "q1": 2,
+        "q2": 3,
+        "k": 6,
+        "margin": -5.0,
+        "money": 76.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      },
+      {
+        "q1": 2,
+        "q2": 3,
+        "k": 12,
+        "margin": -5.0,
+        "money": 76.0,
+        "horizon": 36,
+        "escalated": true,
+        "regime": "CASH_CAPEX_GATE"
+      }
+    ]
+  }
+]

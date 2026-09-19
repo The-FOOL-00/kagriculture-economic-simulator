@@ -1,0 +1,50 @@
+{
+  "phase": "PHASE018",
+  "title": "Targeted Candidate-Funnel Repair & Boundary-Safe Tranche Construction",
+  "date": "2026-09-19",
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "v3_verified_pre": true,
+  "v3_verified_post": true,
+  "git_baseline": "4361700dc064d7027072530864872fc2c0b1d0b3",
+  "tests": {"baseline": 714, "final": 765, "failures": 0},
+  "phase016_evaluator": {"modified": false, "counterfactual_diff": []},
+  "live_foundation": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN (unchanged)",
+  "phase015_status": "QUARANTINED (no qualification event)",
+  "cohorts": {
+    "repro": [249286, 249295],
+    "arm_a": [249296, 249305],
+    "arm_b": [249306, 249315],
+    "arm_b2": [249316, 249325],
+    "arm_c": [249326, 249335],
+    "reserve_untouched_from": 249336
+  },
+  "matches_total": 260,
+  "arms": {
+    "A_reservation": {"effect_mean": 49.3, "ci95": [-0.9, 99.5], "wlt": [4, 2, 4], "status": "ADOPTED_GATED_INFRA"},
+    "A2_discrimination": {"effect_mean": 292.2, "effect_median": -81.5, "ci95": [-539.8, 1124.3], "wlt": [3, 7, 0], "status": "RESEARCH_INFRA_ONLY"},
+    "B_menu": {"effect_mean": -279.9, "effect_median": 81.5, "ci95": [-1018.2, 458.4], "wlt": [8, 2, 0], "status": "FALSIFIED"},
+    "C1_persistence": {"effect_mean": 5.8, "ci95": [-70.9, 82.5], "wlt": [3, 4, 3], "status": "REJECTED_NULL"},
+    "C2_premium_floor": {"effect_mean": 0.0, "ci95": [0.0, 0.0], "wlt": [0, 0, 10], "status": "REJECTED_VACUOUS"},
+    "C3_tape_separation": {"effect_mean": -68.1, "ci95": [-146.4, 10.2], "wlt": [1, 4, 5], "status": "REJECTED"},
+    "staged_diagnostic": {"rescued": 0, "tested": 6, "status": "REJECTED_UNBUILT"},
+    "combination": {"status": "NOT_RUN_SECTION26_BAR_UNMET"}
+  },
+  "primary_question": "Can Phase015 be made viable by funnel/construction repair under frozen Phase016?",
+  "primary_answer": "NO",
+  "outcome": "A+E",
+  "safety_violations": 0,
+  "artifacts": [
+    "PHASE018_BASELINE_FREEZE.md",
+    "PHASE018_FUNNEL_RESERVATION_SPEC.md",
+    "PHASE018_QUANTITY_CONSTRUCTION_SPEC.md",
+    "PHASE018_S7_DISCRIMINATION_SPEC.md",
+    "PHASE018_TRIGGER_TIMING_AUDIT.md",
+    "PHASE018_REPRESENTATION_AUDIT.md",
+    "PHASE018_ARM_A_RESULTS.md",
+    "PHASE018_ARM_B_RESULTS.md",
+    "PHASE018_ARM_C_RESULTS.md",
+    "PHASE018_COMBINATION_RESULTS.md",
+    "PHASE018_FINAL_REPORT.md",
+    "PHASE018_QUAL_MANIFEST.json"
+  ]
+}
