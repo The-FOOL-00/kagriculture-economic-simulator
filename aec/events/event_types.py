@@ -18,6 +18,10 @@ class EventType(str, Enum):
     E6_SHOP_INFORMATION_REVEAL = "E6_SHOP_INFORMATION_REVEAL" # New town shop unlocked
     E7_PRODUCTION_DEADLINE = "E7_PRODUCTION_DEADLINE"       # Biological cutoff point of no return
     E8_TERMINAL_TRANSITION = "E8_TERMINAL_TRANSITION"       # Entering terminal endgame phase
+    E9_LIVESTOCK_STARVATION_RISK = "E9_LIVESTOCK_STARVATION_RISK" # Animal starvation imminent
+    E10_TOWN_CYCLE_PHASE = "E10_TOWN_CYCLE_PHASE"           # Town shop refresh / absorption cycle
+    E11_OPPONENT_PRESSURE_SHIFT = "E11_OPPONENT_PRESSURE_SHIFT" # Material change in rival pressure
+    E12_RESOURCE_BOTTLENECK = "E12_RESOURCE_BOTTLENECK"     # Feed or input deficit for active assets
 
 
 @dataclass

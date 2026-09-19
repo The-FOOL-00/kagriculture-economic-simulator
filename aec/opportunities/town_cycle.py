@@ -1,25 +1,32 @@
 # SPDX-License-Identifier: MIT
-"""Town Shop Demand and Economic Cycle Signal Architecture (§22)."""
+"""AEC-CYCLE: Economic Cycle Timing Architecture (§5–§10).
+
+Second-generation rescue of Town/Cycle Intelligence:
+- Replaces unconstrained DELAY_SALE with obligation-aware liquidity preservation.
+- Models mandatory future purchases (seeds, nightly wages, feed security, terminal obligations).
+- Enforces shed headroom invariants (<=80 units) to prevent field worker gridlock.
+- Supports staged partial liquidation (PARTIAL_SALE) to satisfy working capital while preserving inventory optionality.
+- Bounds market parcel sizes to avoid intra-basket price elasticity collapse.
+"""
 
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
 
-from aec.config import FINAL_STEP, PRODUCTS, SHOP_UNLOCK_INTERVAL, ScientificStatus
+from aec.config import FINAL_STEP, PRODUCTS, SHOP_UNLOCK_INTERVAL, TURNS_PER_DAY, ScientificStatus
 from aec.ir.economic_state import EconomicState
 from aec.opportunities.base import Opportunity
 
 
 @dataclass
 class TownCycleSignal:
-    """Probabilistic signal representing town economic cycle phase (§22).
-    
-    Treated as a prior / signal, never a guaranteed deterministic event.
-    """
+    """Probabilistic and deterministic signals representing town economic cycle phase."""
     step: int
     cycle_phase: float              # 0.0 to 1.0 within 72-step shop interval
     steps_to_next_unlock: int
+    steps_to_town_tick: int
     prior_price_bump_probability: float = 0.5
     recommended_timing_bias: str = "NEUTRAL"   # "HOLD_FOR_BUMP", "SELL_NOW", "NEUTRAL"
 
@@ -28,16 +35,63 @@ class TownCycleSignal:
             "step": self.step,
             "cycle_phase": round(self.cycle_phase, 3),
             "steps_to_unlock": self.steps_to_next_unlock,
+            "steps_to_tick": self.steps_to_town_tick,
             "bump_prob": round(self.prior_price_bump_probability, 2),
             "timing_bias": self.recommended_timing_bias,
         }
 
 
-class TownCycleSignalDetector:
-    """Analyzes town shop unlock intervals and 4-step town consumption cycles.
+def compute_required_liquidity(econ_state: EconomicState, horizon_steps: int = 6) -> float:
+    """Derive structural required liquidity from actual upcoming obligations (§8).
     
-    Constructs contextual timing opportunities (delay sale or accelerate sale)
-    conditioned on town absorption, shed capacity, liquidity, and opponent pressure.
+    RequiredLiquidity = mandatory future purchases + mandatory feed requirements
+                        + required production inputs + terminal obligations + nightly wages.
+    No arbitrary fixed safety buffers.
+    """
+    step = econ_state.step
+    horizon_steps = max(1, horizon_steps)
+    required = 0.0
+
+    # 1. Mandatory Nightly Wages
+    # Wages are deducted at hour 23 (step % 24 == 23)
+    num_hands = max(0, len(econ_state.workers.workers) - 1)
+    if num_hands > 0:
+        steps_to_night = 23 - (step % TURNS_PER_DAY)
+        if 0 <= steps_to_night <= horizon_steps:
+            required += num_hands * 100.0
+
+    # 2. Mandatory Livestock Feed Requirements
+    # If animals are in danger of starving within horizon and no wheat is available
+    animals = getattr(econ_state.farm, "animals", [])
+    if animals:
+        wheat_shed = econ_state.farm.get_shed_qty("WHEAT")
+        wheat_hands = econ_state.farm.carried_inventory.get("WHEAT", 0)
+        total_wheat = wheat_shed + wheat_hands
+        feed_needed = 0
+        for a in animals:
+            turns_to_starve = getattr(a, "turns_to_starve", 999)
+            if turns_to_starve <= (horizon_steps + 4):
+                feed_needed += 1
+        uncovered_feed = max(0, feed_needed - total_wheat)
+        if uncovered_feed > 0:
+            wheat_price = float(econ_state.market.get_price("WHEAT") or 25.0)
+            required += uncovered_feed * wheat_price
+
+    # 3. Mandatory Seed Purchases at Day Boundary (t % 24 == 0)
+    steps_to_day_start = (TURNS_PER_DAY - (step % TURNS_PER_DAY)) % TURNS_PER_DAY
+    if 0 <= steps_to_day_start <= horizon_steps and step <= 648:
+        # Minimum working capital to keep fields planted with high-margin seeds (e.g. 2-4 seeds)
+        required += 150.0
+
+    return required
+
+
+class TownCycleSignalDetector:
+    """Economic Cycle Timing Analyzer (§5–§10).
+    
+    Identifies timing transformations where changing the sequence of town/market
+    interactions improves the complete downstream trajectory without destroying
+    working capital or shed headroom.
     """
 
     def extract_signal(self, econ_state: EconomicState) -> TownCycleSignal:
@@ -46,12 +100,12 @@ class TownCycleSignalDetector:
         next_unlock = ((step // interval) + 1) * interval
         steps_left = next_unlock - step
         phase = (step % interval) / float(interval)
+        steps_to_tick = econ_state.market.steps_to_town_tick
 
-        # In steps 60-71 of cycle, town demand refresh is imminent (higher bump likelihood)
-        if steps_left <= 8:
+        if steps_left <= 8 or (1 <= steps_to_tick <= 2):
             bias = "HOLD_FOR_BUMP"
             prob = 0.70
-        elif phase <= 0.20:
+        elif phase <= 0.20 or steps_to_tick == 4:
             bias = "SELL_NOW"
             prob = 0.30
         else:
@@ -62,6 +116,7 @@ class TownCycleSignalDetector:
             step=step,
             cycle_phase=phase,
             steps_to_next_unlock=steps_left,
+            steps_to_town_tick=steps_to_tick,
             prior_price_bump_probability=prob,
             recommended_timing_bias=bias,
         )
@@ -71,37 +126,37 @@ class TownCycleSignalDetector:
         econ_state: EconomicState,
         baseline_action: Optional[Dict[str, Any]] = None
     ) -> List[Opportunity]:
-        """Detect cycle-relevant market timing opportunities.
-        
-        Evaluates both:
-        1. DELAY_SALE: Postpone an existing baseline SELL order when town shop
-           absorption tick is imminent (1-3 turns) and expected to lift price.
-        2. ADVANCE_SALE: Execute a sale of shed inventory when town demand has
-           just absorbed stock or peak cyclical price is active.
-        """
         opportunities: List[Opportunity] = []
         step = econ_state.step
         market = econ_state.market
         farm = econ_state.farm
+        cash = farm.cash
         steps_to_tick = market.steps_to_town_tick
         absorption = getattr(market, "expected_absorption", {})
         prices = getattr(market, "current_prices", {})
         baseline_action = baseline_action or {}
         baseline_orders = baseline_action.get("market", [])
 
-        # Constraint Checks:
-        # Near-terminal: do not delay sales past terminal safety horizon (step >= 714)
-        is_near_terminal = step >= (FINAL_STEP - 4)
-        # Shed capacity constraint: if shed >= 95 items, cannot safely hoard/delay
-        shed_full = farm.shed_inventory_count >= 95
-        # Opponent supply pressure: if opponent has massive supply ready to dump, override delay
+        # Hard Operational Invariants:
+        # 1. Terminal Runway: near terminal (step >= 705), do not delay sales!
+        if step >= 705:
+            return []
+
+        # 2. Shed Headroom: if shed stock > 80, cannot safely defer sales (shed gridlock risk)
+        shed_count = farm.shed_inventory_count
+        shed_headroom_critical = shed_count > 80
+
+        # 3. Structural Required Liquidity
+        required_liquidity = compute_required_liquidity(econ_state, horizon_steps=max(6, steps_to_tick + 2))
+        liquidity_surplus = cash - required_liquidity
+
+        # 4. Opponent Pressure State
         opp_forecast = getattr(econ_state.opponent, "supply_forecast", {}) if econ_state.opponent else {}
 
         # ---------------------------------------------------------------------
-        # Strategy 1: DELAY_SALE
+        # Strategy 1: DELAY_SALE (with strict liquidity & shed headroom checks)
         # ---------------------------------------------------------------------
-        if not is_near_terminal and not shed_full:
-            # Inspect baseline SELL orders
+        if not shed_headroom_critical and liquidity_surplus >= 0:
             for o in baseline_orders:
                 if isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "SELL":
                     item = o[1]
@@ -109,14 +164,16 @@ class TownCycleSignalDetector:
                     item_absorp = absorption.get(item, 0)
                     opp_dump = opp_forecast.get(item, 0)
 
-                    # Condition: Town absorption tick imminent (1-3 steps), positive shop absorption,
-                    # and no overwhelming opponent supply threat that would collapse price first
+                    # Only delay if:
+                    # - Town consumption tick is imminent (1 to 3 steps)
+                    # - Positive shop absorption exists
+                    # - Opponent is not threatening an immediate flood
                     if 1 <= steps_to_tick <= 3 and item_absorp > 0 and opp_dump < 4:
-                        projected_bump = min(20.0, float(item_absorp * 3.0))
+                        projected_bump = min(15.0, float(item_absorp * 2.5))
                         est_relevance = float(qty * projected_bump)
                         opportunities.append(Opportunity(
                             opportunity_id=f"TOWN_CYCLE_DELAY_{step}_{item}",
-                            category="MARKET",
+                            category="TIMING",
                             event_trigger=None,
                             affected_entities=[item],
                             estimated_economic_relevance=est_relevance,
@@ -128,26 +185,72 @@ class TownCycleSignalDetector:
                                 "steps_to_tick": steps_to_tick,
                                 "absorption": item_absorp,
                                 "projected_bump": projected_bump,
+                                "liquidity_surplus": liquidity_surplus,
+                                "required_liquidity": required_liquidity,
                             },
                             required_horizon=max(6, steps_to_tick + 2),
                             rationale=(
-                                f"Town cycle: Defer sale of {qty} {item} for {steps_to_tick} steps "
-                                f"to capture projected +${projected_bump:.1f}/unit town shop absorption bump."
+                                f"Economic Cycle Timing: Defer sale of {qty} {item} for {steps_to_tick} steps "
+                                f"to capture +${projected_bump:.1f}/u bump (liquidity surplus: ${liquidity_surplus:.1f})."
                             ),
-                            confidence=0.80,
+                            confidence=0.85,
                             scientific_status=ScientificStatus.PLAUSIBLE_UNPROVEN,
                         ))
 
         # ---------------------------------------------------------------------
-        # Strategy 2: ADVANCE_SALE
+        # Strategy 2: PARTIAL_SALE (Staged liquidation under tight liquidity)
         # ---------------------------------------------------------------------
-        # When town tick just fired (steps_to_tick == 4 or 0), demand is fresh and shed holds stock
-        if market.is_town_tick_turn and len(baseline_orders) < 10:
+        # If liquidity is tight (liquidity_surplus < 0), sell only the minimal parcel
+        # needed to cover obligations, holding the remainder for the absorption tick.
+        if not shed_headroom_critical and liquidity_surplus < 0:
+            for o in baseline_orders:
+                if isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "SELL":
+                    item = o[1]
+                    qty = int(o[2])
+                    cur_p = prices.get(item, 20)
+                    item_absorp = absorption.get(item, 0)
+                    if 1 <= steps_to_tick <= 3 and item_absorp > 0 and cur_p > 0:
+                        deficit = abs(liquidity_surplus)
+                        qty_needed = min(qty, max(1, math.ceil(deficit / float(cur_p))))
+                        qty_held = qty - qty_needed
+                        if qty_held > 0:
+                            projected_bump = min(15.0, float(item_absorp * 2.5))
+                            est_relevance = float(qty_held * projected_bump)
+                            opportunities.append(Opportunity(
+                                opportunity_id=f"TOWN_CYCLE_PARTIAL_{step}_{item}",
+                                category="TIMING",
+                                event_trigger=None,
+                                affected_entities=[item],
+                                estimated_economic_relevance=est_relevance,
+                                candidate_transformation_family="TOWN_CYCLE",
+                                dependency_info={
+                                    "timing_action": "PARTIAL_SALE",
+                                    "item": item,
+                                    "qty_sell": qty_needed,
+                                    "qty_hold": qty_held,
+                                    "steps_to_tick": steps_to_tick,
+                                    "cur_price": cur_p,
+                                    "projected_bump": projected_bump,
+                                    "required_liquidity": required_liquidity,
+                                },
+                                required_horizon=max(6, steps_to_tick + 2),
+                                rationale=(
+                                    f"Economic Cycle Timing: Partial sale of {qty_needed} {item} to meet "
+                                    f"obligations (${required_liquidity:.1f}), holding {qty_held} {item} for tick bump."
+                                ),
+                                confidence=0.85,
+                                scientific_status=ScientificStatus.PLAUSIBLE_UNPROVEN,
+                            ))
+
+        # ---------------------------------------------------------------------
+        # Strategy 3: ADVANCE_SALE (Monetize fresh demand post-tick)
+        # ---------------------------------------------------------------------
+        # When town tick fired recently (steps_to_tick == 4 or 0), demand is fresh and prices are at cycle peak
+        if (market.is_town_tick_turn or steps_to_tick == 4) and len(baseline_orders) < 10:
             shed = farm.shed_inventory
             for item in PRODUCTS:
                 units = shed.get(item, 0)
                 if units > 0:
-                    # Check if baseline is already selling this item
                     already_selling = any(
                         isinstance(o, (list, tuple)) and len(o) >= 2 and o[0] == "SELL" and o[1] == item
                         for o in baseline_orders
@@ -155,29 +258,31 @@ class TownCycleSignalDetector:
                     if not already_selling:
                         cur_p = prices.get(item, 10)
                         item_absorp = absorption.get(item, 0)
-                        # More attractive if town shops actively consume it
-                        if item_absorp > 0 or cur_p >= 35:
-                            est_val = float(units * cur_p)
+                        # High-value commodities or actively absorbed goods
+                        if item_absorp > 0 or cur_p >= 35 or shed_headroom_critical:
+                            # Bound parcel size to 10 to avoid market elasticity crash
+                            parcel_size = min(units, 10)
+                            est_val = float(parcel_size * cur_p)
                             opportunities.append(Opportunity(
                                 opportunity_id=f"TOWN_CYCLE_ADVANCE_{step}_{item}",
-                                category="MARKET",
+                                category="TIMING",
                                 event_trigger=None,
                                 affected_entities=[item],
-                                estimated_economic_relevance=est_val * 0.2,  # Liquidity / timing value
+                                estimated_economic_relevance=est_val * 0.15,
                                 candidate_transformation_family="TOWN_CYCLE",
                                 dependency_info={
                                     "timing_action": "ADVANCE_SALE",
                                     "item": item,
-                                    "qty": min(units, 10),
+                                    "qty": parcel_size,
                                     "cur_price": cur_p,
                                     "steps_to_tick": steps_to_tick,
                                 },
                                 required_horizon=6,
                                 rationale=(
-                                    f"Town cycle: Advance sale of {units} {item} at post-absorption peak "
-                                    f"(${cur_p}/unit) to monetize refreshed town demand."
+                                    f"Economic Cycle Timing: Advance sale of parcel ({parcel_size} {item}) "
+                                    f"at peak town demand (${cur_p}/u, headroom-safe)."
                                 ),
-                                confidence=0.75,
+                                confidence=0.80,
                                 scientific_status=ScientificStatus.PLAUSIBLE_UNPROVEN,
                             ))
 

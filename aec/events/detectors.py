@@ -156,4 +156,74 @@ def detect_events(
             confidence=1.0
         ))
 
+    # -------------------------------------------------------------------------
+    # E9: Livestock Starvation Risk Detector (§20, §29)
+    # -------------------------------------------------------------------------
+    for animal in getattr(econ_state.farm, "animals", []):
+        turns_to_starve = getattr(animal, "turns_to_starve", 999)
+        if turns_to_starve <= 8:
+            atype = getattr(animal, "animal_type", "ANIMAL")
+            events.append(Event(
+                event_type=EventType.E9_LIVESTOCK_STARVATION_RISK,
+                step=step,
+                severity=0.95 if turns_to_starve <= 3 else 0.75,
+                rationale=f"Livestock {atype} starvation risk in {turns_to_starve} turns",
+                payload={"animal_type": atype, "turns_to_starve": turns_to_starve},
+                confidence=1.0
+            ))
+            break
+
+    # -------------------------------------------------------------------------
+    # E10: Town Cycle Phase Detector (§22, §29)
+    # -------------------------------------------------------------------------
+    cycle_rem = step % SHOP_UNLOCK_INTERVAL
+    is_anticipation = cycle_rem >= (SHOP_UNLOCK_INTERVAL - 8)
+    is_consumption_tick = (step > 0 and step % 4 == 0)
+    has_shed_goods = econ_state.farm.shed_total_units > 0
+    if (is_anticipation or is_consumption_tick) and has_shed_goods and step <= 714:
+        events.append(Event(
+            event_type=EventType.E10_TOWN_CYCLE_PHASE,
+            step=step,
+            severity=0.7 if is_anticipation else 0.5,
+            rationale=f"Town cycle active: anticipation={is_anticipation}, tick={is_consumption_tick}",
+            payload={"cycle_rem": cycle_rem, "is_anticipation": is_anticipation, "is_tick": is_consumption_tick},
+            confidence=0.9
+        ))
+
+    # -------------------------------------------------------------------------
+    # E11: Opponent Pressure Shift Detector (§19, §29)
+    # -------------------------------------------------------------------------
+    if econ_state.opponent is not None:
+        high_pressure_items = [
+            p for p, pr in getattr(econ_state.opponent, "sale_pressure", {}).items() if pr >= 0.4
+        ]
+        if high_pressure_items:
+            events.append(Event(
+                event_type=EventType.E11_OPPONENT_PRESSURE_SHIFT,
+                step=step,
+                severity=0.6,
+                rationale=f"Rival sell pressure elevated on: {high_pressure_items}",
+                payload={"products": high_pressure_items},
+                confidence=0.8
+            ))
+
+    # -------------------------------------------------------------------------
+    # E12: Resource Bottleneck Detector (§8, §29)
+    # -------------------------------------------------------------------------
+    herd_size = len(getattr(econ_state.farm, "animals", []))
+    if herd_size > 0:
+        wheat_shed = econ_state.farm.get_shed_qty("WHEAT")
+        wheat_hands = econ_state.farm.carried_inventory.get("WHEAT", 0)
+        total_wheat = wheat_shed + wheat_hands
+        if total_wheat < herd_size:
+            events.append(Event(
+                event_type=EventType.E12_RESOURCE_BOTTLENECK,
+                step=step,
+                severity=0.8,
+                rationale=f"Feed bottleneck: total wheat {total_wheat} < herd size {herd_size}",
+                payload={"total_wheat": total_wheat, "herd_size": herd_size},
+                confidence=1.0
+            ))
+
     return events
+

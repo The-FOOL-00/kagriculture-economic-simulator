@@ -662,10 +662,25 @@ class PatchGenerator:
                     ]
                     if filtered != current_orders:
                         mutated_orders = filtered
+                elif timing_action == "PARTIAL_SALE" and item:
+                    # Partial staged sale: sell qty_sell now, holding remainder
+                    qty_sell = opp.dependency_info.get("qty_sell", 1)
+                    mutated = []
+                    replaced = False
+                    for o in current_orders:
+                        if isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "SELL" and o[1] == item:
+                            if not replaced and qty_sell > 0:
+                                mutated.append(["SELL", item, int(qty_sell)])
+                                replaced = True
+                        else:
+                            mutated.append(o)
+                    if replaced:
+                        mutated_orders = mutated
                 elif timing_action == "ADVANCE_SALE" and item:
-                    # Accelerate sale by inserting SELL of shed inventory
+                    # Accelerate sale by inserting bounded parcel SELL of shed inventory
+                    parcel_qty = min(10, int(qty))
                     if len(current_orders) < 10:
-                        mutated_orders = [["SELL", item, qty]] + [
+                        mutated_orders = [["SELL", item, parcel_qty]] + [
                             o for o in current_orders
                             if not (isinstance(o, (list, tuple)) and len(o) >= 2 and o[0] == "SELL" and o[1] == item)
                         ][:9]
