@@ -54,3 +54,20 @@ def test_interesting_state_indicators_detection():
     sc = profiler.classify_turn(econ_state, baseline_action)
     assert sc.is_interesting is True
     assert "IDLE_WORKER_MATURE_CROP" in sc.triggered_indicators
+
+
+def test_attribution_engine_pipeline():
+    from aec.audit.attribution_engine import AttributionEngine, CausalFailureLayer
+    attributor = AttributionEngine()
+    probe = BoundedOracleProbe()
+    game = kagsim.Game(249241)
+    obs = game.observe(0)
+    econ_state = build_economic_state(obs)
+    baseline_action = {"farmer": ["PASS"], "hands": [], "market": []}
+    probe_res = probe.probe_state(econ_state, baseline_action, horizon=6)
+
+    layer, reason, gap_rec = attributor.attribute_state(probe_res, None, seed=249241)
+    assert isinstance(layer, CausalFailureLayer)
+    scorecard = attributor.compute_scorecard([probe_res], [(layer, reason, gap_rec)])
+    assert len(scorecard) == 9
+
