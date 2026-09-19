@@ -307,7 +307,12 @@ class PatchGenerator:
                 if target == "CARROT" or opp.dependency_info.get("opportunity_family") == "RESOURCE_ACQUISITION":
                     continue
 
-                # 1. Working-Capital Liquidity Precondition (§3, §4, §5, §6, §7)
+                # Comparative Margin-First Precondition (§21, §22, §24)
+                comp_val = opp.dependency_info.get("comparative_valuation", {})
+                if comp_val and not comp_val.get("is_economically_superior", True):
+                    continue
+
+                # 1. Working-Capital Liquidity Precondition (§3, §4, §5, §6, §7, §23)
                 liq_dict = opp.dependency_info.get("liquidity_profile", {})
                 if liq_dict and liq_dict.get("is_solvent_trajectory") is False:
                     # Insolvent working-capital trajectory: fail closed and abstain
@@ -415,9 +420,17 @@ class PatchGenerator:
                 elif opp.dependency_info.get("target"):
                     # Fallback physical synthesis for symbolic fixtures
                     target = opp.dependency_info["target"]
-                    if target in ("MILK", "EGG", "WOOL"):
+                    fam_type = opp.dependency_info.get("family")
+                    if target in ("MILK", "EGG", "WOOL") or fam_type == "FEED_CONVERSION":
                         orders = copy.deepcopy(baseline_action.get("market", []))
                         orders.insert(0, ["BUY_PRODUCT", "WHEAT", 1])
+                        market_mutations = orders[:10]
+                    elif fam_type == "SEED_CONVERSION" or opp.dependency_info.get("is_seed"):
+                        orders = copy.deepcopy(baseline_action.get("market", []))
+                        orders.insert(0, ["BUY_SEED", target, 1])
+                        market_mutations = orders[:10]
+                    elif fam_type == "TERMINAL_CONVERSION":
+                        orders = copy.deepcopy(baseline_action.get("market", []))
                         market_mutations = orders[:10]
                     else:
                         # Non-conversion targets abstain

@@ -31,6 +31,13 @@ from aec.opportunities.preemption import (
     OpponentPreemptionOpportunity,
     PreemptionFamily,
 )
+from aec.opportunities.resource import (
+    ComparativeValuation,
+    ConversionFamily,
+    ResourceOpportunityAnalyzer,
+    compute_structural_liquidity_requirement,
+    evaluate_comparative_margin,
+)
 from aec.counterfactual.opponent_pressure import OpponentPressureState
 from aec.patches.generator import PatchGenerator
 
@@ -573,5 +580,287 @@ def test_opp_12_preemption_family_enum_integrity() -> None:
     assert "PURCHASE_PREEMPTION" in fams
     assert "CAPACITY_PREEMPTION" in fams
     assert "TIMING_PREEMPTION" in fams
+
+
+# =============================================================================
+# 4. RESOURCE CONVERSION (12 conversion / alternative-use scenarios §20-§26)
+# =============================================================================
+
+def test_rc_01_low_margin_conversion_rejected_after_labor_cost(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-01: Gross output positive, but net margin <= 0 after labor opportunity cost -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    econ = build_economic_state(obs)
+    # Gross = 30, keep source = 20, cash cost = 5, labor steps = 4 (cost 12) -> net = 30 - 20 - 5 - 12 = -7
+    comp = evaluate_comparative_margin(
+        source_commodity="WHEAT",
+        target_commodity="CARROT",
+        source_qty=1,
+        target_qty=1,
+        upfront_cash_cost=5.0,
+        duration_steps=48,
+        econ_state=econ,
+        family=ConversionFamily.PRODUCT_CONVERSION,
+        worker_labor_steps=4,
+    )
+    assert not comp.is_economically_superior
+    assert "Negative incremental net margin" in comp.rejection_reason
+
+
+def test_rc_02_keep_source_dominates_when_target_value_low(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-02: Keeping source resource has higher value than converting -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["market"]["prices"]["WHEAT"] = 50  # High wheat price
+    obs["market"]["prices"]["MILK"] = 60   # Low milk price
+    econ = build_economic_state(obs)
+    comp = evaluate_comparative_margin(
+        source_commodity="WHEAT",
+        target_commodity="MILK",
+        source_qty=1,
+        target_qty=1,
+        upfront_cash_cost=10.0,
+        duration_steps=48,
+        econ_state=econ,
+        family=ConversionFamily.FEED_CONVERSION,
+        worker_labor_steps=2,
+    )
+    # convert net = 60 - 50 - 10 - 6 = -6
+    assert not comp.is_economically_superior
+    assert "Negative incremental net margin" in comp.rejection_reason
+
+
+def test_rc_03_dominated_by_direct_target_purchase(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-03: Direct target market purchase is cheaper than converting -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["market"]["prices"]["CARROT"] = 35  # Market price gives positive gross
+    obs["market"]["prices"]["WHEAT"] = 20
+    econ = build_economic_state(obs)
+    # Target qty 2 gives gross 70. Convert costs: cash 10 + keep wheat 20 + labor 6 = 36 (net +34)
+    # But direct purchase from alternative market is only 25 -> buying directly dominates converting
+    comp = evaluate_comparative_margin(
+        source_commodity="WHEAT",
+        target_commodity="CARROT",
+        source_qty=1,
+        target_qty=2,
+        upfront_cash_cost=10.0,
+        duration_steps=48,
+        econ_state=econ,
+        family=ConversionFamily.PRODUCT_CONVERSION,
+        worker_labor_steps=2,
+        market_buy_price=15.0,
+    )
+    assert not comp.is_economically_superior
+    assert "Dominated by direct target purchase" in comp.rejection_reason
+
+
+def test_rc_04_feed_conversion_unlocks_milk_with_valid_runway_and_margin(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-04: High milk price, cow on farm, valid runway -> DETECTED & PATCHED."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 100
+    obs["farms"][0]["tiles"][2][2] = {"animal": "COW"}
+    obs["farms"][0]["money"] = 1000.0
+    obs["private"]["shed"]["WHEAT"] = 5
+    obs["market"]["prices"]["MILK"] = 180
+    obs["market"]["prices"]["WHEAT"] = 25
+    econ = build_economic_state(obs)
+
+    analyzer = ResourceOpportunityAnalyzer()
+    opps = analyzer.analyze(econ, [])
+    conv_opps = [o for o in opps if o.candidate_transformation_family == "RESOURCE_CONVERSION" and o.dependency_info.get("target") == "MILK"]
+    assert len(conv_opps) > 0
+    opp = conv_opps[0]
+    assert opp.dependency_info["comparative_valuation"]["is_economically_superior"]
+    assert opp.dependency_info["comparative_valuation"]["convert_net_value"] > 50.0
+
+    gen = PatchGenerator(enabled_mechanisms={"RESOURCE_CONVERSION"})
+    patches = gen.generate_patches([opp], econ, {"farmer": ["PASS"], "market": []})
+    assert len(patches) == 1
+    assert "MILK" in patches[0].patch_id
+
+
+def test_rc_05_feed_conversion_rejected_when_runway_insufficient(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-05: Cow on pasture, but remaining horizon is too short to collect yield -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 680  # Remaining horizon = 40 steps (< 48 cow incubation + 4 buffer = 52)
+    obs["farms"][0]["tiles"][2][2] = {"animal": "COW"}
+    econ = build_economic_state(obs)
+
+    comp = evaluate_comparative_margin(
+        source_commodity="WHEAT",
+        target_commodity="MILK",
+        source_qty=1,
+        target_qty=1,
+        upfront_cash_cost=25.0,
+        duration_steps=48,
+        econ_state=econ,
+        family=ConversionFamily.FEED_CONVERSION,
+        pickup_buffer_steps=4,
+        worker_labor_steps=2,
+    )
+    assert not comp.is_economically_superior
+    assert "Insufficient terminal runway" in comp.rejection_reason
+
+
+def test_rc_06_seed_conversion_rejected_when_planting_runway_insufficient(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-06: Carrot seed takes 48 steps to grow, but only 35 steps remain -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 685  # Remaining horizon = 35 steps
+    econ = build_economic_state(obs)
+
+    comp = evaluate_comparative_margin(
+        source_commodity="CASH",
+        target_commodity="CARROT",
+        source_qty=0,
+        target_qty=4,
+        upfront_cash_cost=20.0,
+        duration_steps=48,
+        econ_state=econ,
+        family=ConversionFamily.SEED_CONVERSION,
+        pickup_buffer_steps=4,
+        worker_labor_steps=2,
+    )
+    assert not comp.is_economically_superior
+    assert "Insufficient terminal runway" in comp.rejection_reason
+
+
+def test_rc_07_seed_conversion_unlocks_productive_yield_with_valid_runway(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-07: Carrot seed planted with remaining horizon = 200 -> positive margin."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 100
+    obs["farms"][0]["money"] = 500.0
+    econ = build_economic_state(obs)
+
+    comp = evaluate_comparative_margin(
+        source_commodity="CASH",
+        target_commodity="CARROT",
+        source_qty=0,
+        target_qty=4,
+        upfront_cash_cost=20.0,
+        duration_steps=48,
+        econ_state=econ,
+        family=ConversionFamily.SEED_CONVERSION,
+        pickup_buffer_steps=4,
+        worker_labor_steps=2,
+    )
+    assert comp.is_economically_superior
+    # 4 carrots * 35 = 140. Upfront = 20, labor = 6. Net = 140 - 20 - 6 = 114
+    assert comp.convert_net_value > 100.0
+
+
+def test_rc_08_liquidity_risk_conversion_breaches_structural_feed_reserve(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-08: Conversion cash cost depletes cash below required structural herd feed reserve -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["farms"][0]["tiles"][1][1] = {"animal": "COW"}
+    obs["farms"][0]["tiles"][1][2] = {"animal": "COW"}
+    obs["farms"][0]["money"] = 60.0  # Cash is 60, 2 cows need 50 feed reserve
+    obs["market"]["prices"]["WHEAT"] = 25
+    econ = build_economic_state(obs)
+
+    # Conversion upfront cost is 25 -> post-cash is 35, which is < 50 required liquidity
+    comp = evaluate_comparative_margin(
+        source_commodity="WHEAT",
+        target_commodity="WOOL",
+        source_qty=1,
+        target_qty=1,
+        upfront_cash_cost=25.0,
+        duration_steps=72,
+        econ_state=econ,
+        family=ConversionFamily.FEED_CONVERSION,
+        worker_labor_steps=2,
+    )
+    assert not comp.is_economically_superior
+    assert "Capital depletion" in comp.rejection_reason
+
+
+def test_rc_09_high_worker_opportunity_cost_exceeds_gain(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-09: Heavy worker diversion (30 steps = 90 cost) exceeds gross gain (50) -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    econ = build_economic_state(obs)
+
+    comp = evaluate_comparative_margin(
+        source_commodity="WHEAT",
+        target_commodity="CARROT",
+        source_qty=1,
+        target_qty=2,
+        upfront_cash_cost=10.0,
+        duration_steps=48,
+        econ_state=econ,
+        family=ConversionFamily.PRODUCT_CONVERSION,
+        worker_labor_steps=30,  # 30 * 3 = 90 coins labor diversion
+    )
+    assert not comp.is_economically_superior
+    assert "Negative incremental net margin" in comp.rejection_reason
+
+
+def test_rc_10_terminal_conversion_beaten_by_direct_shed_liquidation(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-10: Near terminal, raw inventory liquidation beats conversion after labor cost -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 700
+    obs["market"]["prices"]["WOOL"] = 200
+    obs["market"]["prices"]["CLOTH"] = 205  # Slight markup
+    econ = build_economic_state(obs)
+
+    # Raw wool in shed liquidates for 200 without labor. Cloth is 205, but conversion labor is 4 steps (12 coins).
+    # Net = 205 - 200 - 12 = -7 -> direct liquidation dominates!
+    comp = evaluate_comparative_margin(
+        source_commodity="WOOL",
+        target_commodity="CLOTH",
+        source_qty=1,
+        target_qty=1,
+        upfront_cash_cost=0.0,
+        duration_steps=8,
+        econ_state=econ,
+        family=ConversionFamily.TERMINAL_CONVERSION,
+        worker_labor_steps=4,
+    )
+    assert not comp.is_economically_superior
+    assert "Negative incremental net margin" in comp.rejection_reason
+
+
+def test_rc_11_terminal_conversion_superior_to_raw_liquidation(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-11: Near terminal, conversion value materially exceeds raw liquidation even after labor -> SUPERIOR."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["step"] = 690
+    obs["market"]["prices"]["WHEAT"] = 25
+    obs["market"]["prices"]["EGG"] = 60
+    econ = build_economic_state(obs)
+
+    # 1 wheat (25) -> 1 egg (60), labor 2 steps (6). Net = 60 - 25 - 6 = +29
+    comp = evaluate_comparative_margin(
+        source_commodity="WHEAT",
+        target_commodity="EGG",
+        source_qty=1,
+        target_qty=1,
+        upfront_cash_cost=0.0,
+        duration_steps=24,
+        econ_state=econ,
+        family=ConversionFamily.TERMINAL_CONVERSION,
+        worker_labor_steps=2,
+    )
+    assert comp.is_economically_superior
+    assert comp.convert_net_value > 20.0
+
+
+def test_rc_12_shed_capacity_overflow_prunes_conversion(group2_base_obs: Dict[str, Any]) -> None:
+    """RC-12: Conversion producing net positive items when shed is full -> PRUNED."""
+    obs = copy.deepcopy(group2_base_obs)
+    # Fill shed to capacity 100
+    obs["private"]["shed"]["WHEAT"] = 100
+    econ = build_economic_state(obs)
+
+    # Conversion from 0 input to 4 target carrots
+    comp = evaluate_comparative_margin(
+        source_commodity="CASH",
+        target_commodity="CARROT",
+        source_qty=0,
+        target_qty=4,
+        upfront_cash_cost=20.0,
+        duration_steps=48,
+        econ_state=econ,
+        family=ConversionFamily.SEED_CONVERSION,
+        worker_labor_steps=2,
+    )
+    assert not comp.is_economically_superior
+    assert "Shed capacity overflow" in comp.rejection_reason
+
 
 
