@@ -18,6 +18,7 @@ from aec.resource.conversions import ConversionExecutionPlan, decompose_conversi
 from aec.resource.feed_security import decompose_feed_rescue_to_tasks
 from aec.resource.labor import ConversionLaborClass, ConversionLaborPreconditionValidator
 from aec.resource.liquidity import ConversionLiquidityAnalyzer
+from aec.market.tranche_synthesizer import AutonomousTrancheOrderSynthesizer
 
 
 def reorder_frontload(market_orders: List[List[Any]]) -> List[List[Any]]:
@@ -56,6 +57,7 @@ class PatchGenerator:
         self.labor_validator = ConversionLaborPreconditionValidator(self.multiworker_coordinator)
         self.liquidity_analyzer = ConversionLiquidityAnalyzer()
         self.harvest_generator = HarvestCoupledPatchGenerator(board_size=self.multiworker_coordinator.board_size)
+        self.tranche_synthesizer = AutonomousTrancheOrderSynthesizer()
         self.last_quarantined_count: int = 0
         self.last_quarantined_by_mechanism: Dict[str, int] = {}
 
@@ -112,6 +114,15 @@ class PatchGenerator:
                         rationale=opp.rationale
                     )
                     patches.append(patch)
+
+            # 2B. Autonomous Tranche Order Synthesizer (Phase 015 Capability B)
+            elif fam == "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER":
+                synth_patches = self.tranche_synthesizer.synthesize_candidates(
+                    opportunity=opp,
+                    econ_state=econ_state,
+                    baseline_action=baseline_action,
+                )
+                patches.extend(synth_patches)
 
             # Legacy Market Front-Loading (RETIRED / FALSIFIED)
             elif fam == "FRONTLOAD_ORDERS":

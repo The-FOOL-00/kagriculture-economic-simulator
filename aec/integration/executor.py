@@ -61,6 +61,9 @@ class CandidateTelemetry:
     baseline_action: Optional[Dict[str, Any]] = None
     candidate_action: Optional[Dict[str, Any]] = None
     terminal_telemetry: Optional[Dict[str, Any]] = None
+    why_v3_did_not_do_this: Optional[str] = None
+    candidate_quantity: int = 0
+    candidate_reason: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
         d = {
@@ -88,6 +91,9 @@ class CandidateTelemetry:
             "commit_decision": self.commit_decision,
             "baseline_action": self.baseline_action,
             "candidate_action": self.candidate_action,
+            "why_v3_did_not_do_this": self.why_v3_did_not_do_this,
+            "candidate_quantity": self.candidate_quantity,
+            "candidate_reason": self.candidate_reason,
         }
         if self.terminal_telemetry is not None:
             d["terminal_telemetry"] = self.terminal_telemetry
@@ -579,8 +585,18 @@ class AECExecutor:
                     baseline_action=copy.deepcopy(baseline_action),
                     candidate_action=copy.deepcopy(cand_action),
                     terminal_telemetry=term_telem,
+                    why_v3_did_not_do_this=getattr(patch, "dependency_info", {}).get("why_v3_did_not_do_this"),
+                    candidate_quantity=int(getattr(patch, "dependency_info", {}).get("quantity", 0) or 0),
+                    candidate_reason=getattr(patch, "dependency_info", {}).get("reason"),
                 )
                 telemetry.candidates.append(cand_telem)
+
+                # Feedback exact outcome to asset-holding lifecycle deduplicator (§9, §40)
+                fp_str = getattr(patch, "dependency_info", {}).get("structural_fingerprint")
+                if fp_str and hasattr(self.opp_engine, "asset_holding_analyzer"):
+                    self.opp_engine.asset_holding_analyzer.trigger.record_counterfactual_outcome(
+                        fp_str, was_accepted=bool(candidate_otherwise_attractive and not is_quarantined)
+                    )
 
                 # Generate machine-readable SafetyCertificate (§15)
                 cert = SafetyCertificate(
