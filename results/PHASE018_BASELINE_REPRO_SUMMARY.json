@@ -1,0 +1,317 @@
+{
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "v3_sha_verified": true,
+  "seeds": [
+    249286,
+    249287,
+    249288,
+    249289,
+    249290,
+    249291,
+    249292,
+    249293,
+    249294,
+    249295
+  ],
+  "total_matches": 20,
+  "total_candidates": 6508,
+  "simulated_candidates": 2082,
+  "escalated_candidates": 736,
+  "committed_candidates": 54,
+  "overblocking": {
+    "o1_escalated_and_favorable": 410,
+    "o2_escalated_rejected_but_positive": 394,
+    "o3_rejected_solely_on_macro_boundary": 124,
+    "o4_locally_positive_rejected_by_continuation": 400
+  },
+  "macro_probe_precision": {
+    "escalated_count": 736,
+    "true_divergence_count": 722,
+    "precision": 0.981
+  },
+  "taxonomy": {
+    "CASH_CAPEX_GATE": {
+      "count": 123,
+      "pct": 16.7,
+      "mean_local_delta": -1.4471544715447155,
+      "mean_macro_effect": -3.292682926829268,
+      "mean_final_delta": -4.739837398373984,
+      "commit_rate": 0.0,
+      "reject_rate": 1.0,
+      "mean_divergence_turn_offset": 0.0,
+      "mean_horizon": 36.0
+    },
+    "LIVESTOCK_FEED_RISK": {
+      "count": 303,
+      "pct": 41.2,
+      "mean_local_delta": 2.8085808580858087,
+      "mean_macro_effect": -9.432343234323433,
+      "mean_final_delta": -6.623762376237623,
+      "commit_rate": 0.007,
+      "reject_rate": 0.993,
+      "mean_divergence_turn_offset": 0.0,
+      "mean_horizon": 31.92079207920792
+    },
+    "BUDGET_GUARD_BLOCK": {
+      "count": 132,
+      "pct": 17.9,
+      "mean_local_delta": 24.727272727272727,
+      "mean_macro_effect": -17.318181818181817,
+      "mean_final_delta": 7.409090909090909,
+      "commit_rate": 0.076,
+      "reject_rate": 0.924,
+      "mean_divergence_turn_offset": 0.0,
+      "mean_horizon": 16.893939393939394
+    },
+    "ORDER_QUEUE_ALTERATION": {
+      "count": 178,
+      "pct": 24.2,
+      "mean_local_delta": 11494.08988764045,
+      "mean_macro_effect": -9.404494382022472,
+      "mean_final_delta": 11484.685393258427,
+      "commit_rate": 0.022,
+      "reject_rate": 0.978,
+      "mean_divergence_turn_offset": 0.0,
+      "mean_horizon": 47.258426966292134
+    }
+  },
+  "mechanisms": {
+    "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": {
+      "candidates": 6206,
+      "commits": 52,
+      "rejections": 6154,
+      "escalations": 702,
+      "mean_local_delta": 336.13261359974217,
+      "mean_macro_effect": -7.635675153077667,
+      "mean_final_delta": 328.4969384466645,
+      "min_final_delta": -6505.0,
+      "max_final_delta": 17842.0
+    },
+    "DEPENDENCY_AWARE_MARKET_TIMING": {
+      "candidates": 44,
+      "commits": 2,
+      "rejections": 42,
+      "escalations": 12,
+      "mean_local_delta": 1.5909090909090908,
+      "mean_macro_effect": 1.5909090909090908,
+      "mean_final_delta": 3.1818181818181817,
+      "min_final_delta": 0.0,
+      "max_final_delta": 35.0
+    },
+    "LOCAL_WEED_DIG": {
+      "candidates": 258,
+      "commits": 0,
+      "rejections": 258,
+      "escalations": 22,
+      "mean_local_delta": 0.0,
+      "mean_macro_effect": -8.015503875968992,
+      "mean_final_delta": -8.015503875968992,
+      "min_final_delta": -230.0,
+      "max_final_delta": 63.0
+    }
+  },
+  "outcome_matrix": [
+    {
+      "local_cf": "+",
+      "macro_escalated": "No",
+      "long_horizon": "+",
+      "decision": "Commit",
+      "count": 38
+    },
+    {
+      "local_cf": "+",
+      "macro_escalated": "No",
+      "long_horizon": "+",
+      "decision": "Reject",
+      "count": 52
+    },
+    {
+      "local_cf": "+",
+      "macro_escalated": "No",
+      "long_horizon": "-",
+      "decision": "Reject",
+      "count": 20
+    },
+    {
+      "local_cf": "+",
+      "macro_escalated": "Yes",
+      "long_horizon": "+",
+      "decision": "Commit",
+      "count": 16
+    },
+    {
+      "local_cf": "+",
+      "macro_escalated": "Yes",
+      "long_horizon": "+",
+      "decision": "Reject",
+      "count": 380
+    },
+    {
+      "local_cf": "+",
+      "macro_escalated": "Yes",
+      "long_horizon": "-",
+      "decision": "Reject",
+      "count": 20
+    },
+    {
+      "local_cf": "-",
+      "macro_escalated": "No",
+      "long_horizon": "+",
+      "decision": "Reject",
+      "count": 24
+    },
+    {
+      "local_cf": "-",
+      "macro_escalated": "No",
+      "long_horizon": "-",
+      "decision": "Reject",
+      "count": 1212
+    },
+    {
+      "local_cf": "-",
+      "macro_escalated": "Yes",
+      "long_horizon": "+",
+      "decision": "Reject",
+      "count": 14
+    },
+    {
+      "local_cf": "-",
+      "macro_escalated": "Yes",
+      "long_horizon": "-",
+      "decision": "Reject",
+      "count": 306
+    }
+  ],
+  "funnel": {
+    "1_proposed": 6508,
+    "2_simulated": 2082,
+    "3_locally_positive": 526,
+    "4_macro_safe": 1842,
+    "5_safety_passed": 674,
+    "6_committed": 54,
+    "7_positive_terminal": 54
+  },
+  "seed_summaries": [
+    {
+      "seed": 249286,
+      "s0_margin": -727.0,
+      "s1_margin": -859.0,
+      "paired_margin": -793.0,
+      "s0_trt_commits": 3,
+      "s1_trt_commits": 3,
+      "s0_ctrl_commits": 0,
+      "s1_ctrl_commits": 0,
+      "s0_escalations": 39,
+      "s1_escalations": 39
+    },
+    {
+      "seed": 249287,
+      "s0_margin": -357.0,
+      "s1_margin": -357.0,
+      "paired_margin": -357.0,
+      "s0_trt_commits": 5,
+      "s1_trt_commits": 5,
+      "s0_ctrl_commits": 1,
+      "s1_ctrl_commits": 1,
+      "s0_escalations": 40,
+      "s1_escalations": 40
+    },
+    {
+      "seed": 249288,
+      "s0_margin": -1485.0,
+      "s1_margin": -1637.0,
+      "paired_margin": -1561.0,
+      "s0_trt_commits": 0,
+      "s1_trt_commits": 0,
+      "s0_ctrl_commits": 1,
+      "s1_ctrl_commits": 1,
+      "s0_escalations": 33,
+      "s1_escalations": 33
+    },
+    {
+      "seed": 249289,
+      "s0_margin": -52.0,
+      "s1_margin": -52.0,
+      "paired_margin": -52.0,
+      "s0_trt_commits": 5,
+      "s1_trt_commits": 5,
+      "s0_ctrl_commits": 0,
+      "s1_ctrl_commits": 0,
+      "s0_escalations": 35,
+      "s1_escalations": 35
+    },
+    {
+      "seed": 249290,
+      "s0_margin": -1653.0,
+      "s1_margin": -1653.0,
+      "paired_margin": -1653.0,
+      "s0_trt_commits": 1,
+      "s1_trt_commits": 1,
+      "s0_ctrl_commits": 1,
+      "s1_ctrl_commits": 1,
+      "s0_escalations": 43,
+      "s1_escalations": 43
+    },
+    {
+      "seed": 249291,
+      "s0_margin": 54.0,
+      "s1_margin": 54.0,
+      "paired_margin": 54.0,
+      "s0_trt_commits": 1,
+      "s1_trt_commits": 1,
+      "s0_ctrl_commits": 0,
+      "s1_ctrl_commits": 0,
+      "s0_escalations": 33,
+      "s1_escalations": 33
+    },
+    {
+      "seed": 249292,
+      "s0_margin": -2159.0,
+      "s1_margin": -2159.0,
+      "paired_margin": -2159.0,
+      "s0_trt_commits": 2,
+      "s1_trt_commits": 2,
+      "s0_ctrl_commits": 0,
+      "s1_ctrl_commits": 0,
+      "s0_escalations": 34,
+      "s1_escalations": 34
+    },
+    {
+      "seed": 249293,
+      "s0_margin": -337.0,
+      "s1_margin": -337.0,
+      "paired_margin": -337.0,
+      "s0_trt_commits": 1,
+      "s1_trt_commits": 1,
+      "s0_ctrl_commits": 1,
+      "s1_ctrl_commits": 1,
+      "s0_escalations": 45,
+      "s1_escalations": 45
+    },
+    {
+      "seed": 249294,
+      "s0_margin": -1908.0,
+      "s1_margin": -1908.0,
+      "paired_margin": -1908.0,
+      "s0_trt_commits": 4,
+      "s1_trt_commits": 4,
+      "s0_ctrl_commits": 0,
+      "s1_ctrl_commits": 0,
+      "s0_escalations": 29,
+      "s1_escalations": 29
+    },
+    {
+      "seed": 249295,
+      "s0_margin": -76.0,
+      "s1_margin": -76.0,
+      "paired_margin": -76.0,
+      "s0_trt_commits": 5,
+      "s1_trt_commits": 5,
+      "s0_ctrl_commits": 0,
+      "s1_ctrl_commits": 0,
+      "s0_escalations": 37,
+      "s1_escalations": 37
+    }
+  ],
+  "total_control_commits": 8
+}

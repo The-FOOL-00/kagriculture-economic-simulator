@@ -117,8 +117,18 @@ Source artifacts (read-only, not regenerated):
 | Mean / p95 / max latency | 75.17 / 205.63 / 377.18 ms |
 
 A live re-execution reproducibility check (`scripts/run_phase018_baseline_repro.py` →
-`results/PHASE018_BASELINE_REPRO_*`) is launched from this frozen state; its outcome is
-recorded in `PHASE018_ARM_A_RESULTS.md` §0 before any treatment claim is admitted.
+`results/PHASE018_BASELINE_REPRO_*`) was executed from this frozen state:
+
+| Check | Phase017 record | Re-execution | Verdict |
+|---|---|---|---|
+| Candidates / sims / esc / commits | 6508 / 2082 / 736 / 54 | 6508 / 2082 / 736 / 54 | **exact** |
+| O1 / O2 / O3 / O4 | 410 / 394 / 124 / 400 | 410 / 394 / 124 / 400 | **exact** |
+| Precision (722/736) | 98.10% | 98.10% | **exact** |
+| All 10 paired seed margins | — | identical incl. 249288 (-$1,561), 249292 (-$2,159) | **exact** |
+
+**Baseline REPRODUCIBLE.** The re-execution ran with Repair A code present but
+default-off, additionally proving Repair A does not perturb legacy behavior at
+full-match fidelity. Treatment experiments are unblocked.
 
 ## 9. Seed Governance for Phase018
 
