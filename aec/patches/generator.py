@@ -129,21 +129,29 @@ class PatchGenerator:
                     patches.append(patch)
 
             # 3. Opponent Preempt Sell
+            # 3. Opponent Preempt Sell & Purchase Preemption (§16–§19)
             elif fam == "OPPONENT_PREEMPT_SELL":
-                item = opp.dependency_info.get("item")
-                qty = opp.dependency_info.get("qty", 1)
+                dep = opp.dependency_info or {}
+                action = dep.get("action", "SELL")
+                item = dep.get("item", getattr(opp, "target_product", ""))
+                qty = int(dep.get("qty", getattr(opp, "quantity", 1)))
                 orders = copy.deepcopy(baseline_action.get("market", []))
-                
-                # Check if item already being sold
-                merged = False
-                for o in orders:
-                    if len(o) >= 3 and o[0] == "SELL" and o[1] == item:
-                        o[2] = int(o[2]) + qty
-                        merged = True
-                        break
-                if not merged and len(orders) < 10:
-                    orders.insert(0, ["SELL", item, qty])
-                    
+
+                if action == "BUY_SEED" and item:
+                    if len(orders) < 10:
+                        orders.insert(0, ["BUY_SEED", item, qty])
+                elif item:
+                    # Defensive inventory preemption: bound parcel to max 10
+                    parcel = min(10, qty)
+                    merged = False
+                    for o in orders:
+                        if len(o) >= 3 and o[0] == "SELL" and o[1] == item:
+                            o[2] = min(10, int(o[2]) + parcel)
+                            merged = True
+                            break
+                    if not merged and len(orders) < 10:
+                        orders.insert(0, ["SELL", item, parcel])
+
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
                     source_opportunity_id=opp.opportunity_id,

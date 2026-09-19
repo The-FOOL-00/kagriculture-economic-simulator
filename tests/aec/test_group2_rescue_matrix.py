@@ -26,6 +26,12 @@ from aec.opportunities.emergency import (
     EmergencyThreatType,
     IrreversibilityClass,
 )
+from aec.opportunities.preemption import (
+    OpponentPreemptionDetector,
+    OpponentPreemptionOpportunity,
+    PreemptionFamily,
+)
+from aec.counterfactual.opponent_pressure import OpponentPressureState
 from aec.patches.generator import PatchGenerator
 
 
@@ -406,4 +412,166 @@ def test_emr_12_irreversibility_classification_integrity() -> None:
     assert "RECOVERABLE_DEGRADATION" in classes
     assert "EMERGING_IRREVERSIBLE_LOSS" in classes
     assert "CURRENT_HARD_FAILURE" in classes
+
+
+# =============================================================================
+# 3. OPPONENT_PREEMPT_SELL / ROBUST UNCERTAINTY (12 ADVERSARIAL SCENARIOS - §19, §31)
+# =============================================================================
+
+def test_opp_01_high_sale_pressure_triggers_defensive_preemption(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-01: Rival sale pressure 0.6 on melon with high price triggers defensive preemption."""
+    obs = copy.deepcopy(group2_base_obs)
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"MELON": 0.60})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    assert len(opps) >= 1
+    melon_opp = next((o for o in opps if o.target_product == "MELON"), None)
+    assert melon_opp is not None
+    assert melon_opp.preemption_family == PreemptionFamily.DEFENSIVE_INVENTORY
+    assert melon_opp.observed_pressure == 0.60
+
+
+def test_opp_02_bounded_uncertainty_worst_case_evaluation(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-02: Preemption records positive worst-case delta under uncertainty."""
+    obs = copy.deepcopy(group2_base_obs)
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"MELON": 0.55})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    melon_opp = next((o for o in opps if o.target_product == "MELON"), None)
+    assert melon_opp is not None
+    assert melon_opp.worst_case_delta > 0.0
+
+
+def test_opp_03_rival_dump_scenario(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-03: Under rival dump scenario, preemption avoids projected price decay."""
+    obs = copy.deepcopy(group2_base_obs)
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"STRAWBERRY": 0.50})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    berry_opp = next((o for o in opps if o.target_product == "STRAWBERRY"), None)
+    assert berry_opp is not None
+    assert berry_opp.projected_rival_depression_impact > 0.0
+
+
+def test_opp_04_rival_hold_scenario_self_value_dominance(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-04: Selling at high price ($250 melon) guarantees non-negative utility if rival holds."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["market"]["prices"]["MELON"] = 260  # Above base price
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"MELON": 0.50})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    melon_opp = next((o for o in opps if o.target_product == "MELON"), None)
+    assert melon_opp is not None
+    assert melon_opp.expected_our_revenue >= 10 * 250
+
+
+def test_opp_05_depressed_market_prevents_preemptive_dump(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-05: If current price is severely depressed ($150 for melon vs base $250), abstains."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["market"]["prices"]["MELON"] = 150  # 60% of base price
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"MELON": 0.80})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    # Fire sale into already-collapsed market is rejected by self-value dominance
+    melon_opps = [o for o in opps if o.target_product == "MELON"]
+    assert len(melon_opps) == 0
+
+
+def test_opp_06_unverified_rumors_abstains(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-06: Low pressure (0.1) without observable rival stock produces 0 opportunities."""
+    obs = copy.deepcopy(group2_base_obs)
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"MELON": 0.10, "STRAWBERRY": 0.10})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    assert len(opps) == 0
+
+
+def test_opp_07_purchase_preemption_acquires_scarce_seeds(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-07: Rival buy pressure 0.7 on melon seed triggers purchase preemption."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["farms"][0]["money"] = 600.0
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(buy_pressure={"MELON": 0.70})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    buy_opp = next((o for o in opps if o.preemption_family == PreemptionFamily.PURCHASE_PREEMPTION), None)
+    assert buy_opp is not None
+    assert buy_opp.target_product == "MELON"
+    assert buy_opp.quantity == 2
+
+
+def test_opp_08_purchase_preemption_abstains_if_poor(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-08: If cash is low ($50), purchase preemption is suppressed to protect solvency."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["farms"][0]["money"] = 50.0  # Cannot afford melon seeds
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(buy_pressure={"MELON": 0.80})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    buy_opps = [o for o in opps if o.preemption_family == PreemptionFamily.PURCHASE_PREEMPTION]
+    assert len(buy_opps) == 0
+
+
+def test_opp_09_defensive_sell_bounds_parcel_to_ten(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-09: Shed has 30 strawberry; preemption bounds parcel to max 10 to protect elasticity."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["private"]["shed"]["STRAWBERRY"] = 30
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"STRAWBERRY": 0.60})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    berry_opp = next((o for o in opps if o.target_product == "STRAWBERRY"), None)
+    assert berry_opp is not None
+    assert berry_opp.quantity == 10  # Capped at 10
+
+
+def test_opp_10_patch_preserves_existing_baseline_orders(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-10: Patch generator inserts preemption order without overwriting existing BUY orders."""
+    obs = copy.deepcopy(group2_base_obs)
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"MELON": 0.60})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    melon_opp = next((o for o in opps if o.target_product == "MELON"), None)
+    assert melon_opp is not None
+
+    baseline_action = {
+        "farmer": ["PASS"],
+        "hands": [["PASS"]],
+        "market": [["BUY_SEED", "CARROT", 2]]
+    }
+    gen = PatchGenerator(enabled_mechanisms={"OPPONENT_PREEMPT_SELL"})
+    patches = gen.generate_patches([melon_opp], econ, baseline_action)
+    assert len(patches) == 1
+    mutations = patches[0].market_mutations
+    assert any(o[0] == "SELL" and o[1] == "MELON" for o in mutations)
+    assert any(o[0] == "BUY_SEED" and o[1] == "CARROT" for o in mutations)
+
+
+def test_opp_11_zero_shed_inventory_abstains(group2_base_obs: Dict[str, Any]) -> None:
+    """OPP-11: If shed has 0 units of the threatened commodity, defensive sell abstains."""
+    obs = copy.deepcopy(group2_base_obs)
+    obs["private"]["shed"]["MELON"] = 0  # No melon in shed
+    econ = build_economic_state(obs)
+    pressure = OpponentPressureState(sale_pressure={"MELON": 0.90})
+    detector = OpponentPreemptionDetector()
+    opps = detector.detect(econ, pressure)
+    melon_opps = [o for o in opps if o.target_product == "MELON" and o.preemption_family == PreemptionFamily.DEFENSIVE_INVENTORY]
+    assert len(melon_opps) == 0
+
+
+def test_opp_12_preemption_family_enum_integrity() -> None:
+    """OPP-12: PreemptionFamily enum contains all 4 expected families."""
+    fams = [f.value for f in PreemptionFamily]
+    assert "DEFENSIVE_INVENTORY" in fams
+    assert "PURCHASE_PREEMPTION" in fams
+    assert "CAPACITY_PREEMPTION" in fams
+    assert "TIMING_PREEMPTION" in fams
+
 
