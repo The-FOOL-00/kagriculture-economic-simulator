@@ -157,8 +157,16 @@ class AssetHoldingValuationTrigger:
         # Reserve wheat needed for livestock feed security
         reserved_qty = 0
         if commodity == "WHEAT":
-            animals = getattr(econ_state.farm, "animals", [])
-            herd_size = len(animals)
+            herd_size = 0
+            if getattr(econ_state.farm, "animals", None):
+                herd_size = len(econ_state.farm.animals)
+            elif getattr(econ_state.farm, "production_pipeline", None):
+                herd_size = sum(1 for p in econ_state.farm.production_pipeline if getattr(p, "item_type", "") == "ANIMAL")
+            if herd_size == 0 and getattr(econ_state.farm, "tiles", None):
+                for row in econ_state.farm.tiles:
+                    for cell in row:
+                        if isinstance(cell, dict) and ("animal" in cell or cell.get("kind") in ("COW", "SHEEP", "GOOSE")):
+                            herd_size += 1
             if herd_size > 0:
                 # 3 days of feed security buffer
                 reserved_qty = herd_size * 3

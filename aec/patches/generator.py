@@ -18,7 +18,6 @@ from aec.resource.conversions import ConversionExecutionPlan, decompose_conversi
 from aec.resource.feed_security import decompose_feed_rescue_to_tasks
 from aec.resource.labor import ConversionLaborClass, ConversionLaborPreconditionValidator
 from aec.resource.liquidity import ConversionLiquidityAnalyzer
-from aec.market.tranche_synthesizer import AutonomousTrancheOrderSynthesizer
 
 
 def reorder_frontload(market_orders: List[List[Any]]) -> List[List[Any]]:
@@ -57,6 +56,7 @@ class PatchGenerator:
         self.labor_validator = ConversionLaborPreconditionValidator(self.multiworker_coordinator)
         self.liquidity_analyzer = ConversionLiquidityAnalyzer()
         self.harvest_generator = HarvestCoupledPatchGenerator(board_size=self.multiworker_coordinator.board_size)
+        from aec.market.tranche_synthesizer import AutonomousTrancheOrderSynthesizer
         self.tranche_synthesizer = AutonomousTrancheOrderSynthesizer()
         self.last_quarantined_count: int = 0
         self.last_quarantined_by_mechanism: Dict[str, int] = {}

@@ -11,7 +11,6 @@ from typing import Any, Dict, List, Optional, Set, Tuple
 from aec.config import BOARD_SIZE, FINAL_STEP, PRODUCTS, ScientificStatus, SHED_CAPACITY
 from aec.ir.economic_state import EconomicState
 from aec.ir.market_state import BASE_PRICES
-from aec.opportunities.base import Opportunity
 from aec.patches.patch import CoupledPatch
 
 
@@ -78,8 +77,16 @@ class AutonomousTrancheOrderSynthesizer:
         # Never sell wheat needed to prevent livestock starvation
         reserved_qty = 0
         if commodity == "WHEAT":
-            animals = getattr(econ_state.farm, "animals", [])
-            herd_size = len(animals)
+            herd_size = 0
+            if getattr(econ_state.farm, "animals", None):
+                herd_size = len(econ_state.farm.animals)
+            elif getattr(econ_state.farm, "production_pipeline", None):
+                herd_size = sum(1 for p in econ_state.farm.production_pipeline if getattr(p, "item_type", "") == "ANIMAL")
+            if herd_size == 0 and getattr(econ_state.farm, "tiles", None):
+                for row in econ_state.farm.tiles:
+                    for cell in row:
+                        if isinstance(cell, dict) and ("animal" in cell or cell.get("kind") in ("COW", "SHEEP", "GOOSE")):
+                            herd_size += 1
             if herd_size > 0:
                 # 3 days of feed reserve (1 wheat/animal/day)
                 reserved_qty = herd_size * 3
@@ -225,7 +232,7 @@ class AutonomousTrancheOrderSynthesizer:
 
     def synthesize_candidates(
         self,
-        opportunity: Opportunity,
+        opportunity: Any,
         econ_state: EconomicState,
         baseline_action: Dict[str, Any],
     ) -> List[CoupledPatch]:
