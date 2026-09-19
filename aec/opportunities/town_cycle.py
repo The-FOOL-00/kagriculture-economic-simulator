@@ -62,14 +62,27 @@ def compute_required_liquidity(econ_state: EconomicState, horizon_steps: int = 6
 
     # 2. Mandatory Livestock Feed Requirements
     # If animals are in danger of starving within horizon and no wheat is available
+    from aec.resource.feed_security import FeedSecurityEngine
     animals = getattr(econ_state.farm, "animals", [])
+    if not animals:
+        animals = FeedSecurityEngine().extract_livestock(econ_state)
+    if not animals and hasattr(econ_state.farm, "tiles"):
+        for row in econ_state.farm.tiles:
+            for tile in row:
+                if isinstance(tile, dict) and ("animal" in tile or "subtype" in tile or tile.get("kind") in ("PASTURE", "BARN", "COOP")):
+                    animals.append(tile)
+
     if animals:
         wheat_shed = econ_state.farm.get_shed_qty("WHEAT")
         wheat_hands = econ_state.farm.carried_inventory.get("WHEAT", 0)
         total_wheat = wheat_shed + wheat_hands
         feed_needed = 0
         for a in animals:
-            turns_to_starve = getattr(a, "turns_to_starve", 999)
+            turns_to_starve = getattr(a, "turns_to_starve", None)
+            if turns_to_starve is None and isinstance(a, dict):
+                turns_to_starve = a.get("turns_to_starve", 2 if a.get("consecutive_unfed", 0) >= 1 else 999)
+            if turns_to_starve is None:
+                turns_to_starve = 2 if getattr(a, "consecutive_unfed", 0) >= 1 else 999
             if turns_to_starve <= (horizon_steps + 4):
                 feed_needed += 1
         uncovered_feed = max(0, feed_needed - total_wheat)
@@ -146,6 +159,17 @@ class TownCycleSignalDetector:
         shed_count = farm.shed_inventory_count
         shed_headroom_critical = shed_count > 80
 
+        # Extract active livestock for feed security guard
+        from aec.resource.feed_security import FeedSecurityEngine
+        active_animals = getattr(econ_state.farm, "animals", [])
+        if not active_animals:
+            active_animals = FeedSecurityEngine().extract_livestock(econ_state)
+        if not active_animals and hasattr(econ_state.farm, "tiles"):
+            for row in econ_state.farm.tiles:
+                for tile in row:
+                    if isinstance(tile, dict) and ("animal" in tile or tile.get("kind") in ("PASTURE", "BARN", "COOP")):
+                        active_animals.append(tile)
+
         # 3. Structural Required Liquidity
         required_liquidity = compute_required_liquidity(econ_state, horizon_steps=max(6, steps_to_tick + 2))
         liquidity_surplus = cash - required_liquidity
@@ -161,6 +185,9 @@ class TownCycleSignalDetector:
                 if isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "SELL":
                     item = o[1]
                     qty = int(o[2])
+                    # Physical Inventory Invariant: Only delay sales if item is in shed with sufficient quantity
+                    if item in farm.shed_inventory and farm.get_shed_qty(item) < qty:
+                        continue
                     item_absorp = absorption.get(item, 0)
                     opp_dump = opp_forecast.get(item, 0)
 
@@ -207,6 +234,8 @@ class TownCycleSignalDetector:
                 if isinstance(o, (list, tuple)) and len(o) >= 3 and o[0] == "SELL":
                     item = o[1]
                     qty = int(o[2])
+                    if item in farm.shed_inventory and farm.get_shed_qty(item) < qty:
+                        continue
                     cur_p = prices.get(item, 20)
                     item_absorp = absorption.get(item, 0)
                     if 1 <= steps_to_tick <= 3 and item_absorp > 0 and cur_p > 0:
@@ -249,6 +278,9 @@ class TownCycleSignalDetector:
         if (market.is_town_tick_turn or steps_to_tick == 4) and len(baseline_orders) < 10:
             shed = farm.shed_inventory
             for item in PRODUCTS:
+                # WHEAT feed protection: never advance-sell wheat if farm owns livestock!
+                if item == "WHEAT" and len(active_animals) > 0:
+                    continue
                 units = shed.get(item, 0)
                 if units > 0:
                     already_selling = any(

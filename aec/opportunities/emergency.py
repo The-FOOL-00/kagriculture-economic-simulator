@@ -221,7 +221,9 @@ class EmergencyRecoveryDetector:
             wages_due_tonight = num_hands * 100.0
             steps_to_night = 23 - (step % TURNS_PER_DAY)
 
-            if 0 <= steps_to_night <= 6 and cash < wages_due_tonight:
+            # Wage default is an emergency only when imminent (steps_to_night <= 3, hours 20-23);
+            # earlier in the day baseline operations are naturally harvesting and generating cash.
+            if 0 <= steps_to_night <= 3 and cash < wages_due_tonight:
                 # Calculate expected revenue from existing baseline market sales
                 existing_revenue = 0.0
                 prices = econ_state.market.prices
@@ -235,16 +237,25 @@ class EmergencyRecoveryDetector:
                 # If baseline sales cover wages, baseline is naturally resolving -> ABSTAIN
                 if net_projected_cash < wages_due_tonight:
                     deficit = wages_due_tonight - net_projected_cash
-                    if steps_to_night <= 1:
-                        irrev = IrreversibilityClass.CURRENT_HARD_FAILURE
-                    elif steps_to_night <= 3:
-                        irrev = IrreversibilityClass.EMERGING_IRREVERSIBLE_LOSS
-                    else:
-                        irrev = IrreversibilityClass.RECOVERABLE_DEGRADATION
+                    irrev = (
+                        IrreversibilityClass.CURRENT_HARD_FAILURE
+                        if steps_to_night <= 1
+                        else IrreversibilityClass.EMERGING_IRREVERSIBLE_LOSS
+                    )
 
-                    # Find lowest-margin commodity in shed to liquidate minimally
+                    # Extract livestock to protect herd feed supply
+                    animals = getattr(econ_state.farm, "animals", [])
+                    if not animals:
+                        animals = self.feed_engine.extract_livestock(econ_state)
+
+                    # Find commodity in shed to liquidate minimally
+                    # Feed Security Invariant: NEVER liquidate WHEAT for wages if livestock exists!
                     shed = farm.shed_inventory
-                    priority_order = ("WHEAT", "CARROT", "TOMATO", "EGG", "WOOL", "MILK", "STRAWBERRY", "MELON")
+                    if animals:
+                        priority_order = ("CARROT", "TOMATO", "EGG", "WOOL", "MILK", "STRAWBERRY", "MELON")
+                    else:
+                        priority_order = ("WHEAT", "CARROT", "TOMATO", "EGG", "WOOL", "MILK", "STRAWBERRY", "MELON")
+
                     chosen_item = None
                     qty_to_sell = 0
                     for p in priority_order:

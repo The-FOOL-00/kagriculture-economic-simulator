@@ -74,6 +74,8 @@ class OpponentPreemptionDetector:
 
     def __init__(self) -> None:
         self.pressure_analyzer = ContinuousOpponentPressureAnalyzer()
+        from aec.resource.feed_security import FeedSecurityEngine
+        self.feed_engine = FeedSecurityEngine()
 
     def detect(
         self,
@@ -92,11 +94,20 @@ class OpponentPreemptionDetector:
         prices = market.prices
         opp = econ_state.opponent
 
+        # Extract active livestock for feed security guard
+        animals = getattr(econ_state.farm, "animals", [])
+        if not animals:
+            animals = self.feed_engine.extract_livestock(econ_state)
+
         # ---------------------------------------------------------------------
         # 1. DEFENSIVE INVENTORY PREEMPTION
         # ---------------------------------------------------------------------
         for product, count in shed.items():
             if count <= 0:
+                continue
+
+            # Feed Security Invariant: NEVER preemptively sell WHEAT if farm owns livestock!
+            if product == "WHEAT" and len(animals) > 0:
                 continue
 
             sale_pressure = pressure_state.sale_pressure.get(product, 0.0)

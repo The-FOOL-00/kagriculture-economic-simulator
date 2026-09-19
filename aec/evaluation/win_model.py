@@ -290,12 +290,56 @@ class WinModel:
                 is_superior = False
                 rationale = f"Dynamic harvest produces non-positive economic margin: delta margin ${delta_margin:.1f}, delta cash ${delta_money:.1f}"
 
+        elif fam == "TOWN_CYCLE" or "TOWN_CYCLE" in patch_id:
+            # Economic Cycle Timing (§5–§10):
+            # Must NOT starve working capital! Reject any transformation where cash is sacrificed (delta_money < -$20.0)
+            # Paper inventory gains cannot compensate for lost working capital.
+            if delta_margin >= 15.0 and delta_money >= -20.0:
+                is_superior = True
+                rationale = f"Certified town cycle timing yields substantial return: margin +${delta_margin:.1f}, cash +${delta_money:.1f}"
+            elif delta_money >= 50.0 and delta_margin >= 0.0:
+                is_superior = True
+                rationale = f"Certified town cycle advance liquidation: cash +${delta_money:.1f}, margin +${delta_margin:.1f}"
+            else:
+                is_superior = False
+                rationale = f"Town cycle timing rejected: margin delta ${delta_margin:.1f}, cash delta ${delta_money:.1f} (working capital risk)"
+
+        elif fam == "EMERGENCY_RECOVERY" or "EMERGENCY" in patch_id:
+            # Emergency Recovery as Damage Avoidance (§11–§15):
+            # Evaluated by damage avoidance: feed security must be satisfied and margin must not regress significantly (delta_margin >= -$15.0)
+            if outcome.feed_security_ok and delta_margin >= -15.0 and (delta_margin >= 0.0 or delta_money >= 0.0):
+                is_superior = True
+                rationale = f"Certified emergency recovery avoids damage (margin delta ${delta_margin:.1f}, cash +${delta_money:.1f})"
+            else:
+                is_superior = False
+                rationale = f"Emergency recovery rejected: excessive collateral margin loss ${delta_margin:.1f}"
+
+        elif fam == "OPPONENT_PREEMPT_SELL" or "PREEMPT" in patch_id:
+            # Robust Preemption under Opponent Uncertainty (§16–§19):
+            # User's own terminal value must improve; opponent damage alone is insufficient.
+            if delta_margin >= 10.0 or (delta_money >= 15.0 and delta_margin >= 0.0):
+                is_superior = True
+                rationale = f"Certified opponent preemption secures self-advantage: margin +${delta_margin:.1f}, cash +${delta_money:.1f}"
+            else:
+                is_superior = False
+                rationale = f"Opponent preemption yields insufficient self-gain: margin delta ${delta_margin:.1f}, cash delta ${delta_money:.1f} (hurdle: margin >= $10 or cash >= $15)"
+
+        elif fam in ("RESOURCE_CONVERSION", "TERMINAL_CONVERSION", "SHOP_ARBITRAGE", "PRODUCTION_ARBITRAGE") or "CONV" in patch_id:
+            # Margin-First Resource Conversion (§20–§25):
+            # Incremental economic value must be strictly positive after all labor/liquidity costs
+            if delta_margin >= 15.0 or (delta_money >= 20.0 and delta_margin >= 0.0):
+                is_superior = True
+                rationale = f"Certified resource conversion yields net economic surplus: margin +${delta_margin:.1f}, cash +${delta_money:.1f}"
+            else:
+                is_superior = False
+                rationale = f"Resource conversion surplus insufficient: margin delta ${delta_margin:.1f}, cash delta ${delta_money:.1f} (hurdle: margin >= $15)"
+
         else:
             # Standard Lexicographic Hierarchy
             p_win_gain = cand_p_win - base_p_win
             temp_sacrifice = outcome.delta_our_money < 0.0 and outcome.delta_terminal_margin > 0.0
 
-            if p_win_gain > 0.005:
+            if delta_margin > 0.0 and p_win_gain > 0.005:
                 is_superior = True
                 rationale = f"Improves heuristic score by +{p_win_gain*100:.2f}% (margin delta +${outcome.delta_terminal_margin:.1f})"
             elif outcome.delta_terminal_margin > 15.0:
