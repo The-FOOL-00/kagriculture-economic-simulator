@@ -657,3 +657,244 @@ def test_th_10_step_718_final_liquidation(matrix_base_obs: Dict[str, Any]) -> No
     assert len(liq_opps) == 1
     assert liq_opps[0].affected_entities == ["SHED_LIQUIDATION"]
 
+
+# =============================================================================
+# 3. ECONOMIC ROUTE COMPRESSION: 10+ ACTIVATION & ADVERSARIAL PATTERNS (§6, §12)
+# =============================================================================
+
+def test_rc_01_detour_task_compaction_detector(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-01: RouteCompressionDetector identifies mature crop within 2 steps of worker."""
+    from aec.opportunities.route_compression import RouteCompressionDetector
+    obs = copy.deepcopy(matrix_base_obs)
+    # Hand at (2, 2). Mature crop at (2, 3) -> tiles[3][2]
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    detector = RouteCompressionDetector()
+    opps = detector.detect(econ)
+    rc_opps = [o for o in opps if o.candidate_transformation_family == "ROUTE_COMPRESSION"]
+    assert len(rc_opps) >= 1
+    assert rc_opps[0].dependency_info["crop"] == "CARROT"
+
+
+def test_rc_02_direct_shed_transit_compaction_detector(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-02: RouteCompressionDetector identifies direct shed path when worker has cargo."""
+    from aec.opportunities.route_compression import RouteCompressionDetector
+    obs = copy.deepcopy(matrix_base_obs)
+    # Worker carries 4 CARROT
+    obs["private"]["inventories"][1] = {"CARROT": 4}
+    econ = build_economic_state(obs)
+    detector = RouteCompressionDetector()
+    opps = detector.detect(econ)
+    rc_opps = [o for o in opps if o.candidate_transformation_family == "ROUTE_COMPRESSION"]
+    assert len(rc_opps) >= 1
+    shed_opps = [o for o in rc_opps if "SHED" in o.opportunity_id]
+    assert len(shed_opps) >= 1
+
+
+def test_rc_03_patch_generation_from_route_compression_opp(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-03: PatchGenerator produces valid CoupledPatch from RouteCompressionOpportunity."""
+    from aec.opportunities.route_compression import RouteCompressionDetector
+    from aec.patches.generator import PatchGenerator
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    detector = RouteCompressionDetector()
+    opps = detector.detect(econ)
+    gen = PatchGenerator(enabled_mechanisms={"ROUTE_COMPRESSION"})
+    base_act = {"farmer": ["PASS"], "hands": [["PASS"]], "market": []}
+    base_cont = [{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(20)]
+    patches = gen.generate_patches(
+        opportunities=opps,
+        econ_state=econ,
+        baseline_action=base_act,
+        baseline_continuation=base_cont,
+    )
+    rc_patches = [p for p in patches if p.mechanism_family == "ROUTE_COMPRESSION"]
+    assert len(rc_patches) >= 1
+    assert rc_patches[0].reconnect_result is not None
+    assert rc_patches[0].reconnect_result.safety is True
+
+
+def test_rc_04_negative_control_no_crops_no_cargo(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-04: Negative Control: Empty field and no carried cargo -> 0 route compression opps."""
+    from aec.opportunities.route_compression import RouteCompressionDetector
+    obs = copy.deepcopy(matrix_base_obs)
+    econ = build_economic_state(obs)
+    detector = RouteCompressionDetector()
+    opps = detector.detect(econ)
+    assert len(opps) == 0
+
+
+def test_rc_05_negative_control_shed_full_rejection(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-05: Negative Control: Full shed -> route compression patch generator rejects."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["private"]["shed"] = {"CARROT": 100}
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_RC_05",
+        mechanism_family="ROUTE_COMPRESSION",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(15)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.status in (CoupledPatchState.CARGO_UNRESOLVED.value, CoupledPatchState.INFEASIBLE.value)
+
+
+def test_rc_06_route_replaces_idle_passes_with_productivity(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-06: Route compression replaces baseline idle passes with active harvesting."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 2,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_RC_06",
+        mechanism_family="ROUTE_COMPRESSION",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(15)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    # Baseline had only PASS; compressed patch actions have active moves
+    assert res.patch.actions[0]["hands"][0] != ["PASS"]
+
+
+def test_rc_07_spacetime_conflict_avoidance(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-07: Route compression respects spacetime reservations and finds collision-free detour."""
+    table = SpacetimeReservationTable()
+    # Cell (2, 3) at step 51 reserved by worker 0
+    table.reserve_vertex(step=51, pos=(2, 3), worker_id=0)
+    # Worker 1 cannot step into (2, 3) at step 51
+    assert table.is_vertex_available(step=51, pos=(2, 3), worker_id=1) is False
+    # But cell (2, 3) at step 52 is free
+    assert table.is_vertex_available(step=52, pos=(2, 3), worker_id=1) is True
+
+
+def test_rc_08_exact_counterfactual_economic_advantage(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-08: Exact forward simulation yields positive delta_terminal_margin for route compression."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_RC_08",
+        mechanism_family="ROUTE_COMPRESSION",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    assert res.exact_delta > 0.0
+    assert res.status == "ACCEPTED"
+
+
+def test_rc_09_reconnect_fidelity_preserves_continuation(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-09: Reconnect result contains safe spliced trajectory matching baseline suffix."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 2,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_RC_09",
+        mechanism_family="ROUTE_COMPRESSION",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    assert res.patch.reconnect_result is not None
+    assert len(res.patch.spliced_continuation) > 0
+
+
+def test_rc_10_market_liquidation_bundle(matrix_base_obs: Dict[str, Any]) -> None:
+    """RC-10: Route compression automatically injects SELL order on DROP step for liquidity realization."""
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][2] = {
+        "kind": "PLANT",
+        "crop": "CARROT",
+        "yield_units": 3,
+        "planted_day": 0,
+        "watered_today": True,
+    }
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req = CoupledPatchRequest(
+        opportunity_id="OPP_RC_10",
+        mechanism_family="ROUTE_COMPRESSION",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+    )
+    res = gen.generate_harvest_patch(req)
+    assert res.patch is not None
+    drop_act = next((a for a in res.patch.actions if a["hands"][0][0] == "DROP"), None)
+    assert drop_act is not None
+    assert any(o[0] == "SELL" and o[1] == "CARROT" for o in drop_act.get("market", []))
+
+

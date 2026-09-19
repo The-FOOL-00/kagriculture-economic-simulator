@@ -433,7 +433,7 @@ class PatchGenerator:
                 )
                 patches.append(patch)
 
-            # 9. Route Compression (§14)
+            # 9. Economic Route Compression (§14)
             elif fam == "ROUTE_COMPRESSION":
                 wid = getattr(opp, "worker_id", 0)
                 if hasattr(opp, "dependency_info") and "worker_id" in opp.dependency_info:
@@ -446,76 +446,33 @@ class PatchGenerator:
                 target_pos = getattr(opp, "target_pos", None)
                 if target_pos is None and hasattr(opp, "dependency_info"):
                     target_pos = opp.dependency_info.get("target_pos")
-                if target_pos is None:
-                    if worker.total_cargo_units > 0:
-                        target_pos = (0, 0)
-                    elif opp.dependency_info.get("target_xy"):
-                        target_pos = tuple(opp.dependency_info["target_xy"])
+                crop = opp.dependency_info.get("crop") if hasattr(opp, "dependency_info") else getattr(opp, "crop_type", None)
 
-                if target_pos is None:
-                    continue
-
-                target_tasks = getattr(opp, "target_tasks", None)
-                if not target_tasks and hasattr(opp, "dependency_info"):
-                    target_tasks = opp.dependency_info.get("target_tasks", [])
-                if not target_tasks:
-                    target_tasks = ["DROP"] if target_pos == (0, 0) else ["HARVEST"]
-
-                # Build reservations to prevent peer collision
-                res_table = self.reconnect_engine.build_reservation_table(
-                    co_worker_trajectories, wid, opp.required_horizon
-                )
-
-                # Direct compressed pathfinding
-                move_path = deterministic_find_path(
-                    start=worker.position,
-                    target=target_pos,
-                    start_step=0,
-                    reservations=res_table,
-                    worker_id=wid,
-                    board_size=self.multiworker_coordinator.board_size,
-                    max_steps=opp.required_horizon
-                )
-
-                if move_path is None and worker.position != target_pos:
-                    continue
-
-                move_actions = move_path if move_path is not None else []
-                patched_actions = move_actions + target_tasks
-                if not patched_actions:
-                    continue
-
+                # Default baseline continuation if not passed
                 cont = baseline_continuation if baseline_continuation is not None else [
                     copy.deepcopy(baseline_action) for _ in range(max(12, opp.required_horizon))
                 ]
 
-                reconnect_req = ReconnectRequest(
-                    worker=wid,
-                    divergence_point=econ_state.step,
-                    patched_action=patched_actions,
-                    intended_target_state=target_pos,
-                    baseline_continuation=cont,
-                    remaining_steps=econ_state.remaining_horizon,
-                    econ_state=econ_state,
-                    co_worker_trajectories=co_worker_trajectories
-                )
-                reconnect_res = self.reconnect_engine.reconnect(reconnect_req)
-                if not reconnect_res.safety:
-                    continue
-
-                spliced_cont = getattr(reconnect_res, "spliced_trajectory", None)
-
-                patch = CoupledPatch(
-                    patch_id=f"PATCH_{opp.opportunity_id}",
-                    source_opportunity_id=opp.opportunity_id,
+                req = CoupledPatchRequest(
+                    opportunity_id=opp.opportunity_id,
                     mechanism_family=fam,
-                    worker_mutations={wid: [patched_actions[0]]},
-                    spliced_continuation=spliced_cont,
-                    reconnect_result=reconnect_res,
-                    expected_horizon=opp.required_horizon,
-                    rationale=opp.rationale
+                    worker_ids=[wid],
+                    start_step=econ_state.step,
+                    econ_state=econ_state,
+                    baseline_action=baseline_action,
+                    baseline_continuation=cont,
+                    target_location=target_pos,
+                    target_commodity=crop,
+                    co_worker_trajectories=co_worker_trajectories,
+                    horizon=opp.required_horizon,
+                    is_terminal_sweep=False,
                 )
-                patches.append(patch)
+
+                res = self.harvest_generator.generate_harvest_patch(req)
+                if res.patch is not None and res.status in ("ACCEPTED", "VERIFIED", "COMMITTED"):
+                    patches.append(res.patch)
+                elif res.patch is not None and res.trajectory_certificate and res.trajectory_certificate.is_valid:
+                    patches.append(res.patch)
 
             # 10. Cargo Ferry (§15)
             elif fam == "CARGO_FERRY":
