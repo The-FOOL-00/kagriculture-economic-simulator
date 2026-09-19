@@ -31,6 +31,10 @@ from aec.opportunities.arbitrage import (
     ProductionArbitrageDetector,
     ProductionArbitrageOpportunity,
 )
+from aec.opportunities.terminal_conversion import (
+    TerminalConversionDetector,
+    TerminalConversionOpportunity,
+)
 from aec.patches.generator import PatchGenerator
 
 
@@ -499,3 +503,234 @@ def test_pa_12_false_production_spread(group3_base_obs: Dict[str, Any]) -> None:
     assert wheat_opp is not None
     assert wheat_opp.is_realizable is False
     assert "minimum threshold" in (wheat_opp.rejection_reason or "")
+
+
+# =============================================================================
+# 3. TERMINAL_CONVERSION (12 ADVERSARIAL SCENARIOS - §23)
+# =============================================================================
+
+def test_tc_01_conversion_clearly_profitable(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-01: Wheat -> Wool conversion is clearly profitable (+ $175 net margin, runway clear)."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 680
+    obs["farms"][0]["hands"] = [[2, 2]]
+    obs["private"]["shed"] = {"WHEAT": 5}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is True
+    assert wool_opp.is_runway_proven is True
+    assert wool_opp.is_liquidation_dominant is False
+    assert wool_opp.net_incremental_value > 0
+
+    # Generator creates coupled patch
+    cfg = AECConfig(enabled_mechanisms=("TERMINAL_CONVERSION",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([wool_opp], econ, {"market": []}, config=cfg)
+    assert len(patches) == 1
+    p = patches[0]
+    assert p.mechanism_family == "TERMINAL_CONVERSION"
+    assert any(o[0] == "SELL" and o[1] == "WOOL" for o in p.market_mutations)
+
+
+def test_tc_02_conversion_barely_profitable(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-02: Wheat -> Egg conversion with positive but small margin (net +$25) passes."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 690
+    obs["farms"][0]["hands"] = [[4, 2]]
+    obs["private"]["shed"] = {"WHEAT": 2}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"EGG": 50.0, "WHEAT": 25.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    egg_opp = next((o for o in opps if o.output_item == "EGG"), None)
+    assert egg_opp is not None
+    assert egg_opp.is_realizable is True
+    assert egg_opp.net_incremental_value == 25.0
+
+
+def test_tc_03_conversion_too_slow(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-03: Runway needed (16 turns) exceeds available runway (4 turns); rejected."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 714  # Available runway = 718 - 714 = 4
+    obs["farms"][0]["hands"] = [[8, 8]]  # Dist to Wool (2, 2) is 12 -> runway needed = 12+1+1+2 = 16
+    obs["private"]["shed"] = {"WHEAT": 5}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is False
+    assert wool_opp.is_runway_proven is False
+    assert "Insufficient terminal runway" in (wool_opp.rejection_reason or "")
+
+    # Generator must abstain
+    cfg = AECConfig(enabled_mechanisms=("TERMINAL_CONVERSION",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([wool_opp], econ, {"market": []}, config=cfg)
+    assert len(patches) == 0
+
+
+def test_tc_04_conversion_blocks_liquidation(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-04: At step 715 (runway = 3), conversion process/deposit/liquidation exceeds remaining turns."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 715  # Runway = 3 turns. Runway needed = 0 (transit) + 1 + 1 + 2 = 4 turns
+    obs["farms"][0]["hands"] = [[2, 2]]
+    obs["private"]["shed"] = {"WHEAT": 2}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is False
+    assert wool_opp.is_runway_proven is False
+
+
+def test_tc_05_output_cannot_be_sold(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-05: Converted output price is 0 / market closed; candidate rejected."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 680
+    obs["farms"][0]["hands"] = [[2, 2]]
+    obs["private"]["shed"] = {"WHEAT": 2}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WOOL": 0.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is False
+    assert "Output cannot be sold" in (wool_opp.rejection_reason or "")
+
+
+def test_tc_06_worker_too_far_away(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-06: Worker distance > 6 tiles from conversion station rejected due to excessive transit."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 680
+    obs["farms"][0]["hands"] = [[9, 9]]  # Distance to (2, 2) is 14 > 6
+    obs["private"]["shed"] = {"WHEAT": 2}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is False
+    assert "Worker too far away" in (wool_opp.rejection_reason or "")
+
+
+def test_tc_07_shed_capacity_insufficient(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-07: Shed capacity is at max (100 units); conversion output cannot be deposited."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 680
+    obs["farms"][0]["hands"] = [[2, 2]]
+    obs["private"]["shed"] = {"WHEAT": 5, "CARROT": 95}  # Total 100 units == SHED_CAPACITY
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is False
+    assert "Shed capacity insufficient" in (wool_opp.rejection_reason or "")
+
+
+def test_tc_08_conversion_consumes_scarce_resource(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-08: Input wheat is scarce and required to prevent animal starvation; conversion rejected."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 680
+    obs["farms"][0]["hands"] = [[2, 2]]
+    obs["private"]["shed"] = {"WHEAT": 2}
+    econ = build_economic_state(obs)
+    setattr(econ, "is_input_scarce", True)
+    econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is False
+    assert "scarce resource" in (wool_opp.rejection_reason or "")
+
+
+def test_tc_09_conversion_creates_valuable_dependency_completion(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-09: Conversion produces wool and queues terminal liquidation order in market sequence."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 685
+    obs["farms"][0]["hands"] = [[2, 2]]
+    obs["private"]["shed"] = {"WHEAT": 5}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WOOL": 220.0, "WHEAT": 20.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is True
+    assert wool_opp.market_sequence == [["SELL", "WOOL", 1]]
+    assert wool_opp.dependency_info["is_realizable"] is True
+
+
+def test_tc_10_terminal_runway_nearly_exhausted(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-10: Step 717 is beyond the maximum conversion window (step 716); detector returns empty."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 717
+    econ = build_economic_state(obs)
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    assert len(opps) == 0
+
+
+def test_tc_11_raw_liquidation_clearly_superior(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-11: Raw Melon ($250) dominates processed Melon Juice ($200); candidate rejected."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 680
+    obs["farms"][0]["hands"] = [[5, 5]]
+    obs["private"]["shed"] = {"MELON": 2}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"MELON_JUICE": 200.0, "MELON": 250.0}
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    juice_opp = next((o for o in opps if o.output_item == "MELON_JUICE"), None)
+    assert juice_opp is not None
+    assert juice_opp.is_liquidation_dominant is True
+    assert juice_opp.is_realizable is False
+    assert "Dominated by direct raw liquidation" in (juice_opp.rejection_reason or "")
+
+    # Generator abstains
+    cfg = AECConfig(enabled_mechanisms=("TERMINAL_CONVERSION",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([juice_opp], econ, {"market": []}, config=cfg)
+    assert len(patches) == 0
+
+
+def test_tc_12_false_book_value_advantage(group3_base_obs: Dict[str, Any]) -> None:
+    """TC-12: Worker displaced from mature melon harvest turns positive conversion margin negative."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 680
+    obs["farms"][0]["hands"] = [[2, 2]]
+    obs["private"]["shed"] = {"WHEAT": 2}
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}  # Gross margin +$175
+    setattr(econ, "workers_busy_with_harvest", True)  # Opportunity cost $250 -> net = -$75
+    detector = TerminalConversionDetector()
+
+    opps = detector.detect(econ)
+    wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
+    assert wool_opp is not None
+    assert wool_opp.is_realizable is False
+    assert wool_opp.is_liquidation_dominant is True
+    assert "Displaced worker value exceeds conversion margin" in (wool_opp.rejection_reason or "")
