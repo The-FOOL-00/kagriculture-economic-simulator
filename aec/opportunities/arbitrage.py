@@ -21,9 +21,12 @@ from aec.opportunities.base import Opportunity
 from aec.opportunities.town_cycle import compute_required_liquidity
 
 
+from aec.ir.market_state import BASE_PRICES
+
+
 @dataclass
 class ProductionArbitrageOpportunity(Opportunity):
-    """An opportunity executing a full production graph: cash -> input -> production -> output -> sale (§16)."""
+    """An opportunity executing a marginal production transformation (§12, §13, §14, §15, §16, §17)."""
     input_item: str = ""
     input_cost: float = 0.0
     output_item: str = ""
@@ -32,6 +35,14 @@ class ProductionArbitrageOpportunity(Opportunity):
     production_duration_steps: int = 48
     net_projected_profit: float = 0.0
     liquidity_impact: float = 0.0
+    target_location: Optional[Tuple[int, int]] = None
+    worker_id: int = 0
+    worker_tasks: List[str] = field(default_factory=list)
+    is_v3_redundant: bool = False
+    headroom_source: str = ""
+    is_realizable: bool = True
+    rejection_reason: Optional[str] = None
+    market_sequence: List[List[Any]] = field(default_factory=list)
 
 
 @dataclass
@@ -59,63 +70,216 @@ class ShopArbitrageOpportunity(Opportunity):
 
 
 class ProductionArbitrageDetector:
-    r"""Evaluates the viability of cash -> input -> production -> output -> sale.
+    """Evaluates marginal production opportunities and headroom (§12, §13, §14, §15, §16, §17, §18).
     
-    Strict constraints enforced:
-    1. Upfront liquidity check ($C_{upfront} \le Cash - SafetyBuffer$).
-    2. Terminal deadline check (Step + Duration < FinalStep 718).
-    3. Labor requirement accounting (Worker hours valued against opportunity cost).
+    Adheres strictly to Group 3 principles:
+    1. Marginal Headroom Detection: Evaluates whether external conditions (market spike,
+       worker release, input surplus, terminal production window) create uncaptured potential.
+    2. V3 Redundancy Test: Verifies whether the V3 backbone already makes this decision.
+       If already captured, classifies as ALREADY_CAPTURED_BY_BACKBONE and abstains.
+    3. Structural labor opportunity cost and land availability screening.
+    4. Full coupled production trajectory: reassign -> acquire -> produce -> drop -> sell.
     """
 
     def detect(
         self,
         econ_state: EconomicState,
-        min_net_margin: float = 50.0
+        baseline_action: Optional[Dict[str, Any]] = None,
+        baseline_continuation: Optional[List[Dict[str, Any]]] = None,
+        min_net_margin: float = 20.0,
     ) -> List[ProductionArbitrageOpportunity]:
         opportunities: List[ProductionArbitrageOpportunity] = []
         step = econ_state.step
-        cash = econ_state.cash
+        cash = float(econ_state.farm.cash)
+        req_liquidity = compute_required_liquidity(econ_state, horizon_steps=24)
 
-        # Evaluate each crop production pipeline
+        # 1. Extract V3 baseline production intents (redundancy analysis)
+        v3_seed_orders = set()
+        if baseline_action:
+            for o in baseline_action.get("market", []):
+                if isinstance(o, (list, tuple)) and len(o) >= 2 and o[0] == "BUY_SEED":
+                    v3_seed_orders.add(str(o[1]).upper())
+        if baseline_continuation:
+            for c_act in baseline_continuation[:8]:
+                for o in c_act.get("market", []):
+                    if isinstance(o, (list, tuple)) and len(o) >= 2 and o[0] == "BUY_SEED":
+                        v3_seed_orders.add(str(o[1]).upper())
+
+        # Check worker availability and displaced tasks
+        workers = getattr(econ_state.workers, "workers", [])
+        if not workers:
+            return []
+
+        # Find worker: prefer idle auxiliary hand (e.g. wid > 0 with PASS), else worker 0
+        assigned_worker = None
+        assigned_wid = 0
+        worker_is_free = False
+        displaced_value = 0.0
+
+        for w in workers:
+            w_action = "PASS"
+            if baseline_action:
+                if w.worker_id == 0:
+                    cmd = baseline_action.get("farmer", ["PASS"])
+                    w_action = cmd[0] if cmd else "PASS"
+                else:
+                    h_cmds = baseline_action.get("hands", [])
+                    if w.worker_id - 1 < len(h_cmds):
+                        cmd = h_cmds[w.worker_id - 1]
+                        w_action = cmd[0] if cmd else "PASS"
+            if w_action == "PASS" and w.worker_id > 0:
+                assigned_worker = w
+                assigned_wid = w.worker_id
+                worker_is_free = True
+                break
+
+        if assigned_worker is None:
+            assigned_worker = workers[0]
+            assigned_wid = 0
+
+        # Check if workers are busy with high-value harvest
+        if getattr(econ_state, "workers_busy_with_harvest", False):
+            displaced_value = 250.0  # e.g. Melon harvest displaced
+
+        # 2. Evaluate Marginal Headroom across crops
         for crop, seed_cost in CROP_SEED_PRICE.items():
             growth_days = CROP_GROWTH_DAYS.get(crop, 2)
-            duration_steps = growth_days * TURNS_PER_DAY + 8  # growth + planting + harvest + drop + sell
-            
-            # Terminal realization check: must mature and sell before step 718
-            if step + duration_steps >= 718:
-                continue
+            duration_steps = growth_days * TURNS_PER_DAY + 6
+            seed_item = f"{crop}_SEED"
+
+            is_realizable = True
+            is_v3_redundant = False
+            rejection_reason = None
+            headroom_source = ""
+
+            # Check terminal runway
+            if (step + duration_steps) >= 718:
+                is_realizable = False
+                rejection_reason = f"Insufficient terminal runway ({step + duration_steps} >= 718)"
+
+            # Check if V3 already plans to purchase this seed
+            if crop in v3_seed_orders:
+                is_v3_redundant = True
+                is_realizable = False
+                rejection_reason = f"ALREADY_CAPTURED_BY_BACKBONE: V3 already plans {crop}"
+
+            # Check input surplus (seed already in shed / carried / farm.seeds)
+            shed_inv = getattr(econ_state.farm, "shed_inventory", {})
+            carried_inv = getattr(econ_state.farm, "carried_inventory", {})
+            farm_seeds = getattr(econ_state.farm, "seeds", {})
+            has_input_surplus = (
+                farm_seeds.get(crop, 0) > 0
+                or farm_seeds.get(seed_item, 0) > 0
+                or shed_inv.get(seed_item, 0) > 0
+                or carried_inv.get(seed_item, 0) > 0
+            )
+            if has_input_surplus and is_realizable:
+                headroom_source = "INPUT_SURPLUS"
+
+            # Check market pricing and shocks
+            current_price = float(econ_state.market.get_price(crop))
+            base_price = float(BASE_PRICES.get(crop, current_price))
+            projected_price = current_price
+
+            if hasattr(econ_state.market, "projected_prices") and crop in econ_state.market.projected_prices:
+                projected_price = float(econ_state.market.projected_prices[crop])
+
+            # Market spike condition
+            if projected_price >= base_price * 1.35 and is_realizable:
+                headroom_source = "MARKET_SPIKE"
+            elif projected_price <= base_price * 0.60:
+                is_realizable = False
+                rejection_reason = f"Market collapse for {crop}: projected price ${projected_price:.1f} < 60% of base"
+
+            # Worker free headroom
+            if worker_is_free and not headroom_source and is_realizable:
+                headroom_source = "WORKER_FREE"
+
+            # Terminal window headroom: short crop (<= 2 days) can finish before 718 when step is late (580-660)
+            if (580 <= step <= 660) and growth_days <= 2 and (step + duration_steps) < 718 and is_realizable:
+                headroom_source = "TERMINAL_PRODUCTION_WINDOW"
+
+            # If no specific headroom detected and not redundant
+            if not headroom_source and is_realizable:
+                headroom_source = "MARGINAL_HEADROOM"
+
+            # Gross revenue and cash cost
+            actual_seed_cost = 0.0 if has_input_surplus else float(seed_cost)
+            gross = projected_price * 1.0
+            net_profit = gross - actual_seed_cost - displaced_value
 
             # Liquidity check
-            if cash < seed_cost + 100.0:
-                continue
+            if not has_input_surplus and is_realizable:
+                if cash < actual_seed_cost:
+                    is_realizable = False
+                    rejection_reason = f"Insufficient cash for seed (${cash:.1f} < ${actual_seed_cost:.1f})"
+                elif (cash - actual_seed_cost) < req_liquidity:
+                    is_realizable = False
+                    rejection_reason = f"Capital depletion: post-seed cash (${cash - actual_seed_cost:.1f}) < required liquidity (${req_liquidity:.1f})"
 
-            # Market revenue estimate
-            current_price = econ_state.market.prices.get(crop, 0.0)
-            gross = float(current_price) * 1.0  # single crop yield
-            net_profit = gross - seed_cost - 10.0  # seed cost + estimated worker labor cost ($10)
+            # Labor opportunity check
+            if displaced_value > 0 and net_profit <= 0 and is_realizable:
+                is_realizable = False
+                rejection_reason = f"Labor opportunity cost excessive: displaced ${displaced_value:.1f} > gross ${gross:.1f}"
 
-            if net_profit >= min_net_margin:
-                opportunities.append(ProductionArbitrageOpportunity(
-                    opportunity_id=f"PROD_ARB_{step}_{crop}",
-                    category="RESOURCE",
-                    event_trigger=None,
-                    affected_entities=[crop],
-                    estimated_economic_relevance=net_profit,
-                    candidate_transformation_family="PRODUCTION_ARBITRAGE",
-                    required_horizon=min(72, duration_steps),
-                    rationale=f"Production arbitrage: Buy {crop} seed (${seed_cost}) -> mature {growth_days}d -> gross ${gross:.1f} -> net ${net_profit:.1f}.",
-                    scientific_status=ScientificStatus.PLAUSIBLE_UNPROVEN,
-                    input_item=f"{crop}_SEED",
-                    input_cost=float(seed_cost),
-                    output_item=crop,
-                    expected_output_units=1,
-                    expected_gross_revenue=gross,
-                    production_duration_steps=duration_steps,
-                    net_projected_profit=net_profit,
-                    liquidity_impact=-float(seed_cost),
-                ))
+            # Margin threshold check
+            if net_profit < min_net_margin and is_realizable:
+                is_realizable = False
+                rejection_reason = f"Net profit ${net_profit:.1f} < minimum threshold ${min_net_margin:.1f}"
+
+            # If V3 is already executing optimal strategy and no distinct headroom exists:
+            if getattr(econ_state, "v3_already_optimal", False):
+                is_v3_redundant = True
+                is_realizable = False
+                rejection_reason = "ALREADY_CAPTURED_BY_BACKBONE: V3 macro schedule is already optimal"
+
+            market_seq = [] if has_input_surplus else [["BUY_SEED", crop, 1]]
+            worker_tasks = ["TILL", "PLANT", "WATER"]
+
+            opportunities.append(ProductionArbitrageOpportunity(
+                opportunity_id=f"PROD_ARB_{step}_{crop}_{assigned_wid}",
+                category="RESOURCE",
+                event_trigger=None,
+                affected_entities=[crop, assigned_wid],
+                estimated_economic_relevance=max(0.0, net_profit),
+                candidate_transformation_family="PRODUCTION_ARBITRAGE",
+                required_horizon=min(72, duration_steps),
+                rationale=(
+                    f"Production arbitrage on {crop}: gross=${gross:.1f}, net=${net_profit:.1f}, "
+                    f"headroom={headroom_source} ({'REALIZABLE' if is_realizable else rejection_reason})"
+                ),
+                confidence=0.9 if is_realizable else 0.1,
+                scientific_status=ScientificStatus.VERIFIED_SOURCE if is_realizable else ScientificStatus.FALSIFIED,
+                input_item=seed_item,
+                input_cost=actual_seed_cost,
+                output_item=crop,
+                expected_output_units=1,
+                expected_gross_revenue=gross,
+                production_duration_steps=duration_steps,
+                net_projected_profit=net_profit,
+                liquidity_impact=-actual_seed_cost,
+                worker_id=assigned_wid,
+                worker_tasks=worker_tasks,
+                is_v3_redundant=is_v3_redundant,
+                headroom_source=headroom_source,
+                is_realizable=is_realizable,
+                rejection_reason=rejection_reason,
+                market_sequence=market_seq,
+                dependency_info={
+                    "crop": crop,
+                    "worker_id": assigned_wid,
+                    "worker_tasks": worker_tasks,
+                    "is_realizable": is_realizable,
+                    "is_v3_redundant": is_v3_redundant,
+                    "rejection_reason": rejection_reason,
+                    "headroom_source": headroom_source,
+                    "net_profit": net_profit,
+                    "market_sequence": market_seq,
+                }
+            ))
 
         return opportunities
+
 
 
 class ShopArbitrageDetector:

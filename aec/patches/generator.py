@@ -644,16 +644,44 @@ class PatchGenerator:
                 )
                 patches.append(patch)
 
-            # 11B. Production Arbitrage (§16)
+            # 11B. Marginal Production Arbitrage (§12–§18)
             elif fam == "PRODUCTION_ARBITRAGE":
+                # Strict feasibility and redundancy gate: abstain if not realizable or redundant
+                if hasattr(opp, "is_realizable") and not opp.is_realizable:
+                    continue
+                if hasattr(opp, "is_v3_redundant") and opp.is_v3_redundant:
+                    continue
+                if hasattr(opp, "dependency_info"):
+                    if opp.dependency_info.get("is_realizable") is False or opp.dependency_info.get("is_v3_redundant") is True:
+                        continue
+
                 orders = copy.deepcopy(baseline_action.get("market", []))
-                input_item = getattr(opp, "input_item", "") or getattr(opp, "item", "")
-                if input_item and len(orders) < 10:
-                    orders.append(["BUY_SEED", input_item.replace("_SEED", ""), 1])
+                seq = getattr(opp, "market_sequence", [])
+                if not seq and hasattr(opp, "dependency_info"):
+                    seq = opp.dependency_info.get("market_sequence", [])
+
+                if seq:
+                    for o in reversed(seq):
+                        orders.insert(0, copy.deepcopy(o))
+                else:
+                    crop = getattr(opp, "output_item", "")
+                    if crop:
+                        orders.insert(0, ["BUY_SEED", crop, 1])
+
+                wid = getattr(opp, "worker_id", 0)
+                tasks = getattr(opp, "worker_tasks", [])
+                if not tasks and hasattr(opp, "dependency_info"):
+                    tasks = opp.dependency_info.get("worker_tasks", [])
+
+                worker_mutations = {}
+                if tasks:
+                    worker_mutations[wid] = [tasks[0]]
+
                 patch = CoupledPatch(
                     patch_id=f"PATCH_{opp.opportunity_id}",
                     source_opportunity_id=opp.opportunity_id,
                     mechanism_family=fam,
+                    worker_mutations=worker_mutations,
                     market_mutations=orders[:10],
                     expected_horizon=opp.required_horizon,
                     rationale=opp.rationale

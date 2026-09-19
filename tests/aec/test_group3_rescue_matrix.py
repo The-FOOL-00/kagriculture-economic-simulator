@@ -294,3 +294,208 @@ def test_sa_12_no_real_arbitrage_negative_control(group3_base_obs: Dict[str, Any
 
     opps = detector.detect(econ)
     assert len(opps) == 0
+
+
+# =============================================================================
+# 2. PRODUCTION_ARBITRAGE (12 ADVERSARIAL SCENARIOS - §18)
+# =============================================================================
+
+def test_pa_01_v3_already_optimal_abstain(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-01: Redundancy test: V3 already plans optimal crop (Melon); candidate abstains."""
+    obs = copy.deepcopy(group3_base_obs)
+    econ = build_economic_state(obs)
+    baseline_action = {"farmer": ["PASS"], "market": [["BUY_SEED", "MELON", 1]]}
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ, baseline_action=baseline_action)
+    melon_opp = next((o for o in opps if o.output_item == "MELON"), None)
+    assert melon_opp is not None
+    assert melon_opp.is_v3_redundant is True
+    assert melon_opp.is_realizable is False
+    assert "ALREADY_CAPTURED_BY_BACKBONE" in (melon_opp.rejection_reason or "")
+
+    # Generator must abstain
+    cfg = AECConfig(enabled_mechanisms=("PRODUCTION_ARBITRAGE",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([melon_opp], econ, baseline_action, config=cfg)
+    assert len(patches) == 0
+
+
+def test_pa_02_marginal_crop_change(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-02: V3 plans wheat, but carrot price spiked unexpectedly; marginal change creates positive headroom."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["farms"][0]["money"] = 2000.0
+    econ = build_economic_state(obs)
+    baseline_action = {"farmer": ["PASS"], "market": [["BUY_SEED", "WHEAT", 1]]}
+    # Carrot price spiked to $80 (base $35)
+    econ.market.projected_prices = {"CARROT": 80.0}
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ, baseline_action=baseline_action)
+    carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
+    assert carrot_opp is not None
+    assert carrot_opp.is_v3_redundant is False
+    assert carrot_opp.is_realizable is True
+    assert carrot_opp.headroom_source == "MARKET_SPIKE"
+    assert carrot_opp.net_projected_profit > 0
+
+    # Generator compiles patch
+    cfg = AECConfig(enabled_mechanisms=("PRODUCTION_ARBITRAGE",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([carrot_opp], econ, baseline_action, config=cfg)
+    assert len(patches) == 1
+    assert patches[0].mechanism_family == "PRODUCTION_ARBITRAGE"
+    assert any(o[0] == "BUY_SEED" and o[1] == "CARROT" for o in patches[0].market_mutations)
+
+
+def test_pa_03_input_shortage(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-03: Cash is insufficient to purchase the candidate crop seed ($10 cash, $30 seed)."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["farms"][0]["money"] = 10.0
+    econ = build_economic_state(obs)
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ)
+    carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
+    assert carrot_opp is not None
+    assert carrot_opp.is_realizable is False
+    assert "Insufficient cash" in (carrot_opp.rejection_reason or "")
+
+
+def test_pa_04_input_surplus(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-04: Existing seed in shed surplus enables zero-cost acquisition headroom."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["private"]["seeds"] = {"CARROT": 2}
+    econ = build_economic_state(obs)
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ)
+    carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
+    assert carrot_opp is not None
+    assert carrot_opp.input_cost == 0.0
+    assert carrot_opp.headroom_source == "INPUT_SURPLUS"
+    assert carrot_opp.market_sequence == []  # No seed purchase required!
+
+
+def test_pa_05_market_spike(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-05: Sudden tomato market price spike (+50%) detected as MARKET_SPIKE headroom."""
+    obs = copy.deepcopy(group3_base_obs)
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"TOMATO": 95.0}  # Base $60 -> +58%
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ)
+    tom_opp = next((o for o in opps if o.output_item == "TOMATO"), None)
+    assert tom_opp is not None
+    assert tom_opp.headroom_source == "MARKET_SPIKE"
+    assert tom_opp.is_realizable is True
+
+
+def test_pa_06_market_collapse(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-06: Severe market collapse (< 60% base) causes candidate rejection."""
+    obs = copy.deepcopy(group3_base_obs)
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"CARROT": 15.0}  # Base $35 -> $15 < 60%
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ)
+    carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
+    assert carrot_opp is not None
+    assert carrot_opp.is_realizable is False
+    assert "Market collapse" in (carrot_opp.rejection_reason or "")
+
+
+def test_pa_07_terminal_production_window(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-07: At step 630, 4-day melon crosses step 718, while 2-day carrot fits inside window."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 630  # 630 + 96 + 6 = 732 >= 718; 630 + 48 + 6 = 684 < 718
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"CARROT": 50.0, "MELON": 250.0}
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ)
+    melon_opp = next((o for o in opps if o.output_item == "MELON"), None)
+    carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
+
+    assert melon_opp is not None
+    assert melon_opp.is_realizable is False
+    assert "Insufficient terminal runway" in (melon_opp.rejection_reason or "")
+
+    assert carrot_opp is not None
+    assert carrot_opp.is_realizable is True
+    assert carrot_opp.headroom_source == "TERMINAL_PRODUCTION_WINDOW"
+
+
+def test_pa_08_worker_suddenly_free(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-08: Auxiliary hand 1 is passing in baseline; exploited with WORKER_FREE headroom."""
+    obs = copy.deepcopy(group3_base_obs)
+    econ = build_economic_state(obs)
+    baseline_action = {"farmer": ["MOVE_UP"], "hands": [["PASS"]]}
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ, baseline_action=baseline_action)
+    assert len(opps) >= 1
+    free_opp = next((o for o in opps if o.worker_id == 1 and o.is_realizable), None)
+    assert free_opp is not None
+    assert free_opp.headroom_source == "WORKER_FREE"
+
+
+def test_pa_09_worker_opportunity_cost_high(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-09: Workers busy with high-value melon harvests; labor opportunity cost exceeds crop margin."""
+    obs = copy.deepcopy(group3_base_obs)
+    econ = build_economic_state(obs)
+    setattr(econ, "workers_busy_with_harvest", True)  # Displaces $250 melon
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ)
+    carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
+    assert carrot_opp is not None
+    assert carrot_opp.is_realizable is False
+    assert "Labor opportunity cost excessive" in (carrot_opp.rejection_reason or "")
+
+
+def test_pa_10_production_unlocks_dependent_task(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-10: Coupled patch emits coordinated market order and worker field task."""
+    obs = copy.deepcopy(group3_base_obs)
+    econ = build_economic_state(obs)
+    baseline_action = {"farmer": ["PASS"], "hands": [["PASS"]], "market": []}
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ, baseline_action=baseline_action)
+    valid_opp = next((o for o in opps if o.is_realizable), None)
+    assert valid_opp is not None
+
+    cfg = AECConfig(enabled_mechanisms=("PRODUCTION_ARBITRAGE",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([valid_opp], econ, baseline_action, config=cfg)
+    assert len(patches) == 1
+    p = patches[0]
+    assert p.mechanism_family == "PRODUCTION_ARBITRAGE"
+    assert len(p.worker_mutations) >= 1
+    assert len(p.market_mutations) >= 1
+
+
+def test_pa_11_production_delays_higher_value_task(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-11: Displacing a high-value task yields negative net margin, correctly rejected."""
+    obs = copy.deepcopy(group3_base_obs)
+    econ = build_economic_state(obs)
+    setattr(econ, "workers_busy_with_harvest", True)
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ)
+    for o in opps:
+        assert o.is_realizable is False
+
+
+def test_pa_12_false_production_spread(group3_base_obs: Dict[str, Any]) -> None:
+    """PA-12: Small gross revenue over seed cost ($10) fails the minimum net margin threshold."""
+    obs = copy.deepcopy(group3_base_obs)
+    econ = build_economic_state(obs)
+    econ.market.projected_prices = {"WHEAT": 18.0}  # Seed is $10 -> margin $8 < $20
+    detector = ProductionArbitrageDetector()
+
+    opps = detector.detect(econ, min_net_margin=20.0)
+    wheat_opp = next((o for o in opps if o.output_item == "WHEAT"), None)
+    assert wheat_opp is not None
+    assert wheat_opp.is_realizable is False
+    assert "minimum threshold" in (wheat_opp.rejection_reason or "")
