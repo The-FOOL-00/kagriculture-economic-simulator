@@ -1142,4 +1142,240 @@ def test_cf_10_immediate_liquidity_realization_on_ferry_drop(matrix_base_obs: Di
     assert any(o[0] == "SELL" and o[1] == "CARROT" for o in drop_act.get("market", []))
 
 
+# =============================================================================
+# 5. CROSS-MECHANISM COUPLING & COMPOSITION TESTS (§8)
+# =============================================================================
+
+def test_comp_01_dynamic_harvest_and_route_compression_composition(matrix_base_obs: Dict[str, Any]) -> None:
+    """COMP-01: Compose Dynamic Harvest (Farmer) + Route Compression (Hand 1)."""
+    from aec.patches.composition import PatchCompositionEngine, CompositionRelation
+    obs = copy.deepcopy(matrix_base_obs)
+    # Plant at (5, 4) for Farmer (4, 4), Plant at (1, 2) for Hand (2, 2)
+    obs["farms"][0]["tiles"][4][5] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 2, "planted_day": 0, "watered_today": True}
+    obs["farms"][0]["tiles"][2][1] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 2, "planted_day": 0, "watered_today": True}
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    # Patch A: Farmer (0) dynamic harvest
+    req_a = CoupledPatchRequest(
+        opportunity_id="OPP_DH",
+        mechanism_family="DYNAMIC_SHADOW_HARVEST",
+        worker_ids=[0],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(16)],
+        target_location=(5, 4),
+        target_commodity="CARROT",
+    )
+    res_a = gen.generate_harvest_patch(req_a)
+    assert res_a.patch is not None
+
+    # Patch B: Hand (1) route compression
+    req_b = CoupledPatchRequest(
+        opportunity_id="OPP_RC",
+        mechanism_family="ROUTE_COMPRESSION",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(16)],
+        target_location=(1, 2),
+        target_commodity="CARROT",
+    )
+    res_b = gen.generate_harvest_patch(req_b)
+    assert res_b.patch is not None
+
+    engine = PatchCompositionEngine()
+    report = engine.analyze_pair(res_a.patch, res_b.patch)
+    assert report.relation == CompositionRelation.PARALLEL
+    assert report.compatible is True
+
+    composite = engine.compose(res_a.patch, res_b.patch)
+    assert composite is not None
+    assert composite.worker_ids == [0, 1]
+    assert 0 in composite.worker_mutations
+    assert 1 in composite.worker_mutations
+    assert composite.economic_effect == res_a.patch.economic_effect + res_b.patch.economic_effect
+
+
+def test_comp_02_dynamic_harvest_and_cargo_ferry_composition(matrix_base_obs: Dict[str, Any]) -> None:
+    """COMP-02: Compose Dynamic Harvest (Farmer) + Cargo Ferry (Hand 1)."""
+    from aec.patches.composition import PatchCompositionEngine, CompositionRelation
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][4][5] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 2, "planted_day": 0, "watered_today": True}
+    obs["farms"][0]["tiles"][2][1] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 3, "planted_day": 0, "watered_today": True}
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req_a = CoupledPatchRequest(
+        opportunity_id="OPP_DH",
+        mechanism_family="DYNAMIC_SHADOW_HARVEST",
+        worker_ids=[0],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(16)],
+        target_location=(5, 4),
+        target_commodity="CARROT",
+    )
+    res_a = gen.generate_harvest_patch(req_a)
+    assert res_a.patch is not None
+
+    req_b = CoupledPatchRequest(
+        opportunity_id="OPP_CF",
+        mechanism_family="CARGO_FERRY",
+        worker_ids=[1],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(16)],
+        target_location=(1, 2),
+        target_commodity="CARROT",
+    )
+    res_b = gen.generate_harvest_patch(req_b)
+    assert res_b.patch is not None
+
+    engine = PatchCompositionEngine()
+    composite = engine.compose(res_a.patch, res_b.patch)
+    assert composite is not None
+    assert composite.worker_ids == [0, 1]
+    assert composite.economic_effect > 0
+
+
+def test_comp_03_terminal_harvest_and_cargo_ferry_composition(matrix_base_obs: Dict[str, Any]) -> None:
+    """COMP-03: Compose Terminal Harvest (Farmer) + Cargo Ferry (Hand 1)."""
+    from aec.patches.composition import PatchCompositionEngine, CompositionRelation
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 700
+    obs["farms"][0]["tiles"][3][4] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 2, "planted_day": 0, "watered_today": True}
+    obs["farms"][0]["tiles"][3][2] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 2, "planted_day": 0, "watered_today": True}
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req_a = CoupledPatchRequest(
+        opportunity_id="OPP_TH",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[0],
+        start_step=700,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(4, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res_a = gen.generate_harvest_patch(req_a)
+    assert res_a.patch is not None
+
+    req_b = CoupledPatchRequest(
+        opportunity_id="OPP_CF",
+        mechanism_family="CARGO_FERRY",
+        worker_ids=[1],
+        start_step=700,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res_b = gen.generate_harvest_patch(req_b)
+    assert res_b.patch is not None
+
+    engine = PatchCompositionEngine()
+    composite = engine.compose(res_a.patch, res_b.patch)
+    assert composite is not None
+    assert composite.worker_ids == [0, 1]
+
+
+def test_comp_04_terminal_harvest_and_route_compression_composition(matrix_base_obs: Dict[str, Any]) -> None:
+    """COMP-04: Compose Terminal Harvest (Farmer) + Route Compression (Hand 1)."""
+    from aec.patches.composition import PatchCompositionEngine, CompositionRelation
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["step"] = 700
+    obs["farms"][0]["tiles"][3][4] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 2, "planted_day": 0, "watered_today": True}
+    obs["farms"][0]["tiles"][3][2] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 2, "planted_day": 0, "watered_today": True}
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req_a = CoupledPatchRequest(
+        opportunity_id="OPP_TH",
+        mechanism_family="TERMINAL_HARVEST_SWEEP",
+        worker_ids=[0],
+        start_step=700,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(4, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res_a = gen.generate_harvest_patch(req_a)
+    assert res_a.patch is not None
+
+    req_b = CoupledPatchRequest(
+        opportunity_id="OPP_RC",
+        mechanism_family="ROUTE_COMPRESSION",
+        worker_ids=[1],
+        start_step=700,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(18)],
+        target_location=(2, 3),
+        target_commodity="CARROT",
+        is_terminal_sweep=True,
+    )
+    res_b = gen.generate_harvest_patch(req_b)
+    assert res_b.patch is not None
+
+    engine = PatchCompositionEngine()
+    composite = engine.compose(res_a.patch, res_b.patch)
+    assert composite is not None
+    assert composite.worker_ids == [0, 1]
+
+
+def test_comp_05_same_worker_mutual_exclusion_rejection(matrix_base_obs: Dict[str, Any]) -> None:
+    """COMP-05: Negative Control: Two patches competing for same worker (Farmer 0) cannot compose."""
+    from aec.patches.composition import PatchCompositionEngine, CompositionRelation
+    obs = copy.deepcopy(matrix_base_obs)
+    obs["farms"][0]["tiles"][3][4] = {"kind": "PLANT", "crop": "CARROT", "yield_units": 2, "planted_day": 0, "watered_today": True}
+    econ = build_economic_state(obs)
+    gen = HarvestCoupledPatchGenerator()
+
+    req_a = CoupledPatchRequest(
+        opportunity_id="OPP_A",
+        mechanism_family="DYNAMIC_SHADOW_HARVEST",
+        worker_ids=[0],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(16)],
+        target_location=(4, 3),
+        target_commodity="CARROT",
+    )
+    res_a = gen.generate_harvest_patch(req_a)
+
+    req_b = CoupledPatchRequest(
+        opportunity_id="OPP_B",
+        mechanism_family="ROUTE_COMPRESSION",
+        worker_ids=[0],
+        start_step=50,
+        econ_state=econ,
+        baseline_action={"farmer": ["PASS"], "hands": [["PASS"]], "market": []},
+        baseline_continuation=[{"farmer": ["PASS"], "hands": [["PASS"]], "market": []} for _ in range(16)],
+        target_location=(4, 3),
+        target_commodity="CARROT",
+    )
+    res_b = gen.generate_harvest_patch(req_b)
+
+    engine = PatchCompositionEngine()
+    report = engine.analyze_pair(res_a.patch, res_b.patch)
+    assert report.compatible is False
+    assert report.relation in (CompositionRelation.DOMINATES, CompositionRelation.MUTUALLY_EXCLUSIVE)
+    # compose must return None
+    assert engine.compose(res_a.patch, res_b.patch) is None
+
+
+
 
