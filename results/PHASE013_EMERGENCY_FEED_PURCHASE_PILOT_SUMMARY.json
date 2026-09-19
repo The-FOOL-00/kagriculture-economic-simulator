@@ -1,0 +1,48 @@
+{
+  "mechanism": "EMERGENCY_FEED_PURCHASE",
+  "stage": "pilot",
+  "control_type": "foundation",
+  "n_seeds": 10,
+  "n_matches": 20,
+  "seed_range": [
+    249231,
+    249240
+  ],
+  "mean_paired_delta": 0.0,
+  "median_delta": 0.0,
+  "std_delta": 0.0,
+  "se_delta": 0.0,
+  "ci_95": [
+    0.0,
+    0.0
+  ],
+  "t_statistic": 0.0,
+  "matches_wlt": {
+    "wins": 0,
+    "losses": 0,
+    "ties": 20
+  },
+  "seeds_wlt": {
+    "wins": 0,
+    "losses": 0,
+    "ties": 10
+  },
+  "target_candidates": 416,
+  "target_commits": 0,
+  "commit_rate": 0.0,
+  "active_seeds": 0,
+  "activation_rate": 0.0,
+  "foundation_commits": 34,
+  "total_commits": 34,
+  "fallbacks": 853,
+  "downside_tail": {
+    "min_delta": 0.0,
+    "worst_10pct": 0.0
+  },
+  "mean_latency_ms": 108.42,
+  "max_latency_ms": 697.89,
+  "safety_violations": 0,
+  "counterfactual_fidelity": "VERIFIED",
+  "deterministic_replay": "VERIFIED",
+  "elapsed_seconds": 898.32
+}

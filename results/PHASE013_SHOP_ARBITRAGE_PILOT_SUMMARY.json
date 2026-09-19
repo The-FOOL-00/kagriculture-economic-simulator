@@ -1,0 +1,48 @@
+{
+  "mechanism": "SHOP_ARBITRAGE",
+  "stage": "pilot",
+  "control_type": "foundation",
+  "n_seeds": 10,
+  "n_matches": 20,
+  "seed_range": [
+    249231,
+    249240
+  ],
+  "mean_paired_delta": -54525.95,
+  "median_delta": -59504.25,
+  "std_delta": 22739.63,
+  "se_delta": 7190.9,
+  "ci_95": [
+    -68620.12,
+    -40431.78
+  ],
+  "t_statistic": -7.583,
+  "matches_wlt": {
+    "wins": 0,
+    "losses": 20,
+    "ties": 0
+  },
+  "seeds_wlt": {
+    "wins": 0,
+    "losses": 10,
+    "ties": 0
+  },
+  "target_candidates": 24236,
+  "target_commits": 954,
+  "commit_rate": 0.0394,
+  "active_seeds": 10,
+  "activation_rate": 1.0,
+  "foundation_commits": 20,
+  "total_commits": 974,
+  "fallbacks": 9745,
+  "downside_tail": {
+    "min_delta": -82292.0,
+    "worst_10pct": -72428.9
+  },
+  "mean_latency_ms": 87.94,
+  "max_latency_ms": 504.95,
+  "safety_violations": 0,
+  "counterfactual_fidelity": "VERIFIED",
+  "deterministic_replay": "VERIFIED",
+  "elapsed_seconds": 776.11
+}

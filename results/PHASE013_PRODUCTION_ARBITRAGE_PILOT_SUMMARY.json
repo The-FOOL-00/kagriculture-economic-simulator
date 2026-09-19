@@ -1,0 +1,48 @@
+{
+  "mechanism": "PRODUCTION_ARBITRAGE",
+  "stage": "pilot",
+  "control_type": "foundation",
+  "n_seeds": 10,
+  "n_matches": 20,
+  "seed_range": [
+    249231,
+    249240
+  ],
+  "mean_paired_delta": 4.9,
+  "median_delta": 0.0,
+  "std_delta": 6.37,
+  "se_delta": 2.01,
+  "ci_95": [
+    0.95,
+    8.85
+  ],
+  "t_statistic": 2.433,
+  "matches_wlt": {
+    "wins": 8,
+    "losses": 0,
+    "ties": 12
+  },
+  "seeds_wlt": {
+    "wins": 4,
+    "losses": 0,
+    "ties": 6
+  },
+  "target_candidates": 25870,
+  "target_commits": 0,
+  "commit_rate": 0.0,
+  "active_seeds": 0,
+  "activation_rate": 0.0,
+  "foundation_commits": 26,
+  "total_commits": 26,
+  "fallbacks": 11063,
+  "downside_tail": {
+    "min_delta": 0.0,
+    "worst_10pct": 0.0
+  },
+  "mean_latency_ms": 120.08,
+  "max_latency_ms": 645.0,
+  "safety_violations": 0,
+  "counterfactual_fidelity": "VERIFIED",
+  "deterministic_replay": "VERIFIED",
+  "elapsed_seconds": 967.26
+}
