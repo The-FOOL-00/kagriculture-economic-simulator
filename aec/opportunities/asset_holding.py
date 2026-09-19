@@ -119,11 +119,14 @@ class AssetHoldingValuationTrigger:
         # History of evaluated fingerprints and their lifecycle
         self._evaluated_fingerprints: Dict[str, OpportunityLifecycle] = {}
         self._rejected_fingerprints: Set[str] = set()
+        # Phase 018 C1: last favorable step per persistence key
+        self._persist_last_step: Dict[Any, int] = {}
 
     def reset_step_cache(self) -> None:
         """Clear transient state if needed at episode boundaries."""
         self._evaluated_fingerprints.clear()
         self._rejected_fingerprints.clear()
+        self._persist_last_step.clear()
 
     def record_counterfactual_outcome(self, fingerprint_str: str, was_accepted: bool) -> None:
         """Record exact simulation result for fingerprint deduplication (§9, §40)."""
@@ -264,18 +267,47 @@ class AssetHoldingValuationTrigger:
             fingerprint=fp,
         )
 
+    def _check_persistence(self, features: StructuralHoldingFeatures, step: int) -> bool:
+        """Phase 018 C1: true iff favorably evaluated on this and the prior turn.
+
+        Persistence key (preregistered): commodity + price_band + terminal_phase.
+        Records the current observation in both outcomes so runs continue.
+        """
+        fp = features.fingerprint
+        key = (
+            features.commodity,
+            fp.price_band if fp is not None else -1,
+            fp.terminal_phase if fp is not None else "?",
+        )
+        last = self._persist_last_step.get(key)
+        self._persist_last_step[key] = step
+        return last is not None and last == step - 1
+
     def evaluate_opportunity(
         self,
         features: StructuralHoldingFeatures,
         baseline_has_sell: bool = False,
+        step: int = 0,
+        persistence_required: bool = False,
+        min_premium_class_a: Optional[float] = None,
+        tape_sells: Optional[Set[str]] = None,
+        audit: Optional[Dict[str, Any]] = None,
     ) -> Optional[Tuple[HoldingOpportunityType, str, float]]:
         """Evaluates whether structural holding features warrant candidate generation (§7).
-        
+
         Returns (OpportunityType, rationale, estimated_relevance) or None.
         Does NOT rely on delta(cash) or delta(shed).
+
+        Phase 018 C-gates (all default-off; Class A only when enabled):
+        - C3 tape_sells: suppress Class A when V3's own tape sells the commodity.
+        - C2 min_premium_class_a: Class A premium floor (on raw premium).
+        - C1 persistence_required: Class A needs 2 consecutive favorable turns.
+        audit (optional): receives emitted/suppressed_by codes; never alters behavior.
         """
         if features.uncommitted_quantity <= 0:
             # All inventory is reserved for feed or dependencies
+            if audit is not None:
+                audit["suppressed_by"] = "NO_UNCOMMITTED"
             return None
 
         # Anti-spam check: if this identical structural state was evaluated and rejected
@@ -283,6 +315,8 @@ class AssetHoldingValuationTrigger:
         if features.fingerprint:
             fp_str = features.fingerprint.fingerprint_string()
             if fp_str in self._rejected_fingerprints:
+                if audit is not None:
+                    audit["suppressed_by"] = "DEDUP"
                 return None
 
         qty = features.uncommitted_quantity
@@ -294,6 +328,8 @@ class AssetHoldingValuationTrigger:
         # Near terminal horizon with unliquidated inventory
         if step_rem <= 68 and qty > 0:
             relevance = qty * price
+            if audit is not None:
+                audit["emitted"] = HoldingOpportunityType.TERMINAL_HOLDING_RISK.value
             return (
                 HoldingOpportunityType.TERMINAL_HOLDING_RISK,
                 f"Terminal runway {step_rem} steps remaining with {qty} {features.commodity} held; liquidation window closing",
@@ -304,6 +340,8 @@ class AssetHoldingValuationTrigger:
         # Cash deficit for upcoming wages or urgent capital while inventory sits in shed
         if features.liquidity_deficit > 0 and qty > 0 and ratio >= 0.85:
             relevance = min(features.liquidity_deficit * 1.5, qty * price)
+            if audit is not None:
+                audit["emitted"] = HoldingOpportunityType.LIQUIDITY_HOLDING_CONFLICT.value
             return (
                 HoldingOpportunityType.LIQUIDITY_HOLDING_CONFLICT,
                 f"Working capital deficit ${features.liquidity_deficit:.1f} with {qty} {features.commodity} available to realize",
@@ -314,6 +352,8 @@ class AssetHoldingValuationTrigger:
         # Rival approaching market with cargo or collision risk
         if features.rival_proximity <= 3 and qty > 0 and ratio >= 0.95:
             relevance = qty * price * 0.25
+            if audit is not None:
+                audit["emitted"] = HoldingOpportunityType.OPPONENT_PRESSURE.value
             return (
                 HoldingOpportunityType.OPPONENT_PRESSURE,
                 f"Rival approaching market (dist={features.rival_proximity}); preemption preserves depth for {qty} {features.commodity}",
@@ -324,6 +364,8 @@ class AssetHoldingValuationTrigger:
         # High inventory held while market price is beginning to deteriorate
         if features.storage_utilization >= 0.70 and features.price_trajectory == "FALLING" and qty >= 5:
             relevance = qty * (price - features.base_price * 0.8)
+            if audit is not None:
+                audit["emitted"] = HoldingOpportunityType.MARKET_SATURATION_RISK.value
             return (
                 HoldingOpportunityType.MARKET_SATURATION_RISK,
                 f"Shed utilization {features.storage_utilization*100:.0f}% with falling price on {features.commodity}; frontload before saturation",
@@ -336,10 +378,35 @@ class AssetHoldingValuationTrigger:
         if is_favorable:
             # If baseline already emitted an optimal sell order for this commodity, defer
             if baseline_has_sell:
+                if audit is not None:
+                    audit["suppressed_by"] = "BASELINE_SELLING"
+                return None
+
+            # Phase 018 C3: V3-schedule separation (Class A only).
+            if tape_sells is not None and features.commodity in tape_sells:
+                if audit is not None:
+                    audit["suppressed_by"] = "C3_TAPE_SEPARATION"
                 return None
 
             premium = (price - features.base_price) * qty
             relevance = max(20.0, premium)
+
+            # Phase 018 C2: economic-significance floor on the premium (Class A
+            # only). Gated on premium, not padded relevance: relevance is
+            # max(20, premium), so a relevance floor <= 20 would be vacuous.
+            if min_premium_class_a is not None and premium < min_premium_class_a:
+                if audit is not None:
+                    audit["suppressed_by"] = "C2_MIN_PREMIUM"
+                return None
+
+            # Phase 018 C1: persistence (Class A only).
+            if persistence_required and not self._check_persistence(features, step):
+                if audit is not None:
+                    audit["suppressed_by"] = "C1_NONPERSISTENT"
+                return None
+
+            if audit is not None:
+                audit["emitted"] = HoldingOpportunityType.FAVOURABLE_MARKET_HOLDING.value
             return (
                 HoldingOpportunityType.FAVOURABLE_MARKET_HOLDING,
                 f"Favorable price ${price:.1f} (+{(ratio-1.0)*100:.1f}%) on {qty} uncommitted {features.commodity} in storage",
@@ -350,12 +417,16 @@ class AssetHoldingValuationTrigger:
         # Storage clearing when shed is congested (>80 units) even at baseline price
         if features.storage_utilization >= 0.80 and qty >= 10 and ratio >= 0.95:
             relevance = qty * 5.0
+            if audit is not None:
+                audit["emitted"] = HoldingOpportunityType.DEPENDENCY_COUPLED_HOLDING.value
             return (
                 HoldingOpportunityType.DEPENDENCY_COUPLED_HOLDING,
                 f"Shed congestion ({features.storage_utilization*100:.0f}%) risks incoming harvest discard; relieve {qty} {features.commodity}",
                 relevance,
             )
 
+        if audit is not None:
+            audit["suppressed_by"] = "NO_CLASS"
         return None
 
 
@@ -364,6 +435,23 @@ class AssetHoldingOpportunityAnalyzer:
 
     def __init__(self) -> None:
         self.trigger = AssetHoldingValuationTrigger()
+        self.last_firing_log: List[Dict[str, Any]] = []
+
+    @staticmethod
+    def extract_tape_sells(
+        v3_tape: Optional[List[Dict[str, Any]]], window: int = 2
+    ) -> Set[str]:
+        """Commodities V3's own tape sells within the next `window` turns (C3)."""
+        sells: Set[str] = set()
+        if not v3_tape:
+            return sells
+        for act in list(v3_tape)[: max(0, window)]:
+            if not isinstance(act, dict):
+                continue
+            for o in act.get("market", []) or []:
+                if isinstance(o, (list, tuple)) and len(o) >= 2 and o[0] == "SELL":
+                    sells.add(str(o[1]))
+        return sells
 
     def analyze(
         self,
@@ -371,9 +459,21 @@ class AssetHoldingOpportunityAnalyzer:
         events: List[Any],
         baseline_action: Optional[Dict[str, Any]] = None,
         pressure_state: Any = None,
+        trigger_options: Optional[Dict[str, Any]] = None,
+        v3_tape: Optional[List[Dict[str, Any]]] = None,
     ) -> List[Opportunity]:
         opportunities: List[Opportunity] = []
         step = econ_state.step
+        opts = trigger_options or {}
+        persistence_required = bool(opts.get("persistence", False))
+        min_premium = opts.get("min_premium", None)
+        separation = bool(opts.get("separation", False))
+        tape_sells = (
+            self.extract_tape_sells(v3_tape)
+            if (separation and v3_tape)
+            else None
+        )
+        firing_log: List[Dict[str, Any]] = []
 
         # Identify which commodities baseline is currently selling
         baseline_sells: Set[str] = set()
@@ -396,7 +496,27 @@ class AssetHoldingOpportunityAnalyzer:
                 continue
 
             baseline_selling_item = (commodity in baseline_sells)
-            eval_res = self.trigger.evaluate_opportunity(features, baseline_has_sell=baseline_selling_item)
+            audit: Dict[str, Any] = {}
+            eval_res = self.trigger.evaluate_opportunity(
+                features,
+                baseline_has_sell=baseline_selling_item,
+                step=step,
+                persistence_required=persistence_required,
+                min_premium_class_a=min_premium,
+                tape_sells=tape_sells,
+                audit=audit,
+            )
+            firing_log.append({
+                "step": step,
+                "commodity": commodity,
+                "quantity_held": features.quantity_held,
+                "uncommitted_quantity": features.uncommitted_quantity,
+                "current_price": round(features.current_price, 2),
+                "price_ratio": round(features.price_ratio, 3),
+                "price_trajectory": features.price_trajectory,
+                "emitted": audit.get("emitted"),
+                "suppressed_by": audit.get("suppressed_by"),
+            })
             if eval_res is None:
                 continue
 
@@ -432,6 +552,7 @@ class AssetHoldingOpportunityAnalyzer:
             )
             opportunities.append(opp)
 
+        self.last_firing_log = firing_log
         return opportunities
 
 

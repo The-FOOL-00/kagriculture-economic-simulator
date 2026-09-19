@@ -68,6 +68,7 @@ class OpportunityEngine:
         # Telemetry / quarantine tracking per step
         self.last_quarantined_opportunities: List[Opportunity] = []
         self.last_reservation_telemetry: Optional[Any] = None
+        self.last_firing_log: List[Dict[str, Any]] = []
 
     def detect_opportunities(
         self,
@@ -77,6 +78,7 @@ class OpportunityEngine:
         max_opportunities: int = 16,
         config: Optional[AECConfig] = None,
         pressure_state: Optional[OpponentPressureState] = None,
+        v3_tape: Optional[List[Dict[str, Any]]] = None,
     ) -> List[Opportunity]:
         enabled = set(config.enabled_mechanisms) if config is not None else self.enabled_mechanisms
         is_frozen = config.frozen_mode if config is not None else (self.mode == "frozen")
@@ -108,9 +110,29 @@ class OpportunityEngine:
             or not is_frozen
         )
         if trigger_active:
+            trigger_options = {
+                "persistence": bool(
+                    config is not None
+                    and getattr(config, "enable_trigger_persistence", False)
+                ),
+                "min_premium": (
+                    getattr(config, "trigger_min_premium_class_a", None)
+                    if config is not None else None
+                ),
+                "separation": bool(
+                    config is not None
+                    and getattr(config, "enable_tape_separation", False)
+                ),
+            }
             raw_opportunities.extend(
-                self.asset_holding_analyzer.analyze(econ_state, events, baseline_action, pressure_state)
+                self.asset_holding_analyzer.analyze(
+                    econ_state, events, baseline_action, pressure_state,
+                    trigger_options=trigger_options, v3_tape=v3_tape,
+                )
             )
+        self.last_firing_log = list(
+            getattr(self.asset_holding_analyzer, "last_firing_log", []) or []
+        )
 
         # Layer 1 Mechanism Filtering (§9, §34)
         actionable: List[Opportunity] = []

@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 # -----------------------------------------------------------------------------
 # 1. SCIENTIFIC EVIDENCE TAXONOMY (§37)
@@ -244,6 +244,11 @@ class AECConfig:
     # Phase 018 Repair A2: S7/S9 market-patch discrimination (default OFF; isolated arm only)
     enable_market_patch_discrimination: bool = False
 
+    # Phase 018 Repair C: trigger timing variants (all default OFF; isolated arms only)
+    enable_trigger_persistence: bool = False
+    trigger_min_premium_class_a: Optional[float] = None
+    enable_tape_separation: bool = False
+
     # Performance & Safety
     per_step_latency_limit_ms: float = 100.0
     fail_closed: bool = True
@@ -357,5 +362,26 @@ def build_phase018_arm_b2_control_config() -> AECConfig:
     """Phase 018 Arm B2 control: foundation + discrimination (no tranche)."""
     cfg = build_robust_qualified_config()
     cfg.enable_market_patch_discrimination = True
+    return cfg
+
+
+def build_phase018_arm_c1_config() -> AECConfig:
+    """Phase 018 Arm C leg C1: treatment + Class-A persistence ONLY."""
+    cfg = build_phase015_treatment_config()
+    cfg.enable_trigger_persistence = True
+    return cfg
+
+
+def build_phase018_arm_c2_config() -> AECConfig:
+    """Phase 018 Arm C leg C2: treatment + Class-A $15 relevance floor ONLY."""
+    cfg = build_phase015_treatment_config()
+    cfg.trigger_min_premium_class_a = 15.0
+    return cfg
+
+
+def build_phase018_arm_c3_config() -> AECConfig:
+    """Phase 018 Arm C leg C3: treatment + Class-A tape separation ONLY."""
+    cfg = build_phase015_treatment_config()
+    cfg.enable_tape_separation = True
     return cfg
 

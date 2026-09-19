@@ -141,6 +141,9 @@ class AECTelemetry:
     # Funnel reservation telemetry (Phase 018 Repair A): per-site records
     funnel_reservation: Dict[str, Any] = field(default_factory=dict)
 
+    # Asset-holding firing log (Phase 018 Repair C): per-commodity trigger records
+    trigger_firings: List[Dict[str, Any]] = field(default_factory=list)
+
     # Detailed per-candidate audit trace (§14)
     candidates: List[CandidateTelemetry] = field(default_factory=list)
 
@@ -173,6 +176,7 @@ class AECTelemetry:
                 k: (v.to_dict() if hasattr(v, "to_dict") else v)
                 for k, v in self.funnel_reservation.items()
             },
+            "trigger_firings": [dict(r) for r in self.trigger_firings],
             "patch_id": self.committed_patch_id,
             "committed_mechanism": self.committed_mechanism,
             "abstain_reason": self.abstain_reason,
@@ -370,6 +374,16 @@ class AECExecutor:
             # -----------------------------------------------------------------
             # 4. OPPORTUNITY ENGINE (Layer 1 Defense & §23)
             # -----------------------------------------------------------------
+            # Read-only future backbone continuation trajectory (zero live calls).
+            # Extracted here (moved up from §5, behavior-neutral) so Phase 018 C3
+            # tape separation can consult V3's native sale schedule at detection.
+            n_hands = max(0, len(econ_state.workers.workers) - 1)
+            future_trajectory = self.backbone.get_future_trajectory(
+                step=step,
+                horizon=self.config.extended_horizon,
+                player=econ_state.player,
+                n_hands=n_hands
+            )
             t_opp0 = time.perf_counter()
             opportunities = self.opp_engine.detect_opportunities(
                 econ_state,
@@ -378,6 +392,10 @@ class AECExecutor:
                 max_opportunities=self.config.max_opportunities,
                 config=self.config,
                 pressure_state=pressure_state,
+                v3_tape=future_trajectory,
+            )
+            telemetry.trigger_firings = list(
+                getattr(self.opp_engine, "last_firing_log", []) or []
             )
             telemetry.opportunities_count = len(opportunities)
             telemetry.opp_time_ms = (time.perf_counter() - t_opp0) * 1000.0
@@ -405,14 +423,7 @@ class AECExecutor:
             # -----------------------------------------------------------------
             # 5. COUPLED PATCH GENERATION, FUNNEL, & MACRO/META SCREENING (Layer 2 Defense & §7, §10, §12)
             # -----------------------------------------------------------------
-            # Extract read-only future backbone continuation trajectory (zero live calls)
-            n_hands = max(0, len(econ_state.workers.workers) - 1)
-            future_trajectory = self.backbone.get_future_trajectory(
-                step=step,
-                horizon=self.config.extended_horizon,
-                player=econ_state.player,
-                n_hands=n_hands
-            )
+            # (future_trajectory extracted once above §4 and reused here.)
             from aec.replanning.reconnect import extract_all_worker_trajectories
             co_worker_trajectories = extract_all_worker_trajectories(econ_state, future_trajectory)
 
@@ -442,6 +453,9 @@ class AECExecutor:
                 econ_state,
                 budget=funnel_budget,
                 reservation_policy=self._reservation_policy,
+                market_discrimination=bool(
+                    getattr(self.config, "enable_market_patch_discrimination", False)
+                ),
             )
             if getattr(self.funnel, "last_reservation_telemetry", None) is not None:
                 telemetry.funnel_reservation["s9_top_k"] = (
