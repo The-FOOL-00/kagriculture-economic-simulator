@@ -22,6 +22,7 @@ class EventType(str, Enum):
     E10_TOWN_CYCLE_PHASE = "E10_TOWN_CYCLE_PHASE"           # Town shop refresh / absorption cycle
     E11_OPPONENT_PRESSURE_SHIFT = "E11_OPPONENT_PRESSURE_SHIFT" # Material change in rival pressure
     E12_RESOURCE_BOTTLENECK = "E12_RESOURCE_BOTTLENECK"     # Feed or input deficit for active assets
+    E13_ASSET_HOLDING_STATE = "E13_ASSET_HOLDING_STATE"     # Persistent asset holding economic opportunity (Phase 015)
 
 
 @dataclass

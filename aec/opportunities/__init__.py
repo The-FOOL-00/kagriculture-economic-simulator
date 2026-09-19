@@ -22,6 +22,7 @@ from aec.opportunities.terminal import TerminalOpportunityAnalyzer
 from aec.opportunities.timing import TimingOpportunityAnalyzer
 from aec.opportunities.town_cycle import TownCycleSignalDetector
 from aec.opportunities.terminal_conversion import TerminalConversionDetector
+from aec.opportunities.asset_holding import AssetHoldingOpportunityAnalyzer
 
 
 class OpportunityEngine:
@@ -61,6 +62,9 @@ class OpportunityEngine:
         self.emergency_recovery_detector = EmergencyRecoveryDetector()
         self.town_cycle_detector = TownCycleSignalDetector()
 
+        # Phase 015 persistent asset holding analyzer
+        self.asset_holding_analyzer = AssetHoldingOpportunityAnalyzer()
+
         # Telemetry / quarantine tracking per step
         self.last_quarantined_opportunities: List[Opportunity] = []
 
@@ -95,6 +99,17 @@ class OpportunityEngine:
         raw_opportunities.extend(self.opponent_preemption_detector.detect(econ_state, pressure_state))
         raw_opportunities.extend(self.emergency_recovery_detector.detect(econ_state, baseline_action))
         raw_opportunities.extend(self.town_cycle_detector.detect(econ_state, baseline_action))
+
+        # 3. Phase 015 Capability A: Asset-Holding Valuation Trigger
+        trigger_active = (
+            "ASSET_HOLDING_VALUATION_TRIGGER" in enabled
+            or getattr(config, "enable_asset_holding_trigger", False)
+            or not is_frozen
+        )
+        if trigger_active:
+            raw_opportunities.extend(
+                self.asset_holding_analyzer.analyze(econ_state, events, baseline_action, pressure_state)
+            )
 
         # Layer 1 Mechanism Filtering (§9, §34)
         actionable: List[Opportunity] = []
@@ -141,4 +156,5 @@ __all__ = [
     "OpponentPreemptionDetector",
     "EmergencyRecoveryDetector",
     "TownCycleSignalDetector",
+    "AssetHoldingOpportunityAnalyzer",
 ]

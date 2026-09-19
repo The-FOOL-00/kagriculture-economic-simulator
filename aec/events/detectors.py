@@ -225,5 +225,36 @@ def detect_events(
                 confidence=1.0
             ))
 
+    # -------------------------------------------------------------------------
+    # E13: Asset-Holding Opportunity State Detector (Phase 015 Capability A)
+    # -------------------------------------------------------------------------
+    if getattr(cfg, "enable_asset_holding_trigger", False) or "ASSET_HOLDING_VALUATION_TRIGGER" in getattr(cfg, "enabled_mechanisms", ()):
+        shed_inv = econ_state.farm.shed_inventory
+        total_shed = econ_state.farm.shed_total_units
+        if total_shed > 0:
+            from aec.ir.market_state import BASE_PRICES
+            prices = econ_state.market.current_prices
+            holding_items = []
+            for item, qty in shed_inv.items():
+                if qty > 0 and item in PRODUCTS:
+                    base = float(BASE_PRICES.get(item, 100))
+                    cur = float(prices.get(item, base))
+                    ratio = cur / max(1.0, base)
+                    is_favorable = (ratio >= 1.15 and qty >= 3) or (ratio >= 1.10 and qty >= 10)
+                    is_terminal = (step >= 650)
+                    is_congested = (total_shed >= 80)
+                    is_liquidity = (float(econ_state.farm.cash) < 300.0)
+                    if is_favorable or is_terminal or is_congested or is_liquidity:
+                        holding_items.append(item)
+            if holding_items:
+                events.append(Event(
+                    event_type=EventType.E13_ASSET_HOLDING_STATE,
+                    step=step,
+                    severity=0.75,
+                    rationale=f"Persistent asset holding opportunity in: {holding_items}",
+                    payload={"commodities": holding_items, "shed_total": total_shed},
+                    confidence=0.95
+                ))
+
     return events
 

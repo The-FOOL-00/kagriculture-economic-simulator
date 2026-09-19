@@ -159,6 +159,18 @@ MECHANISM_REGISTRY: Dict[str, Dict[str, Any]] = {
         "role": "DEVELOPMENT",
         "rationale": "Probabilistic signal tracking 72-step town demand refresh.",
     },
+    "ASSET_HOLDING_VALUATION_TRIGGER": {
+        "status": ScientificStatus.EXPERIMENTAL,
+        "category": "MARKET",
+        "role": "DEVELOPMENT",
+        "rationale": "Phase 015 persistent asset-holding valuation trigger detecting uncommitted inventory windows without differential deltas",
+    },
+    "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": {
+        "status": ScientificStatus.EXPERIMENTAL,
+        "category": "MARKET",
+        "role": "DEVELOPMENT",
+        "rationale": "Phase 015 Autonomous Tranche Order Synthesizer with structural quantity anchors and exact counterfactual validation",
+    },
 }
 
 ENABLED_FOUNDATION_MECHANISMS: Tuple[str, ...] = (
@@ -218,6 +230,10 @@ class AECConfig:
     price_shock_relative: float = 0.25       # Trigger E4 when price shifts > 25%
     opponent_supply_shock_qty: int = 4       # Trigger E5 on sudden supply increase
     
+    # Phase 015 Capabilities (§4, §11)
+    enable_asset_holding_trigger: bool = False
+    enable_tranche_synthesizer: bool = False
+
     # Performance & Safety
     per_step_latency_limit_ms: float = 100.0
     fail_closed: bool = True
@@ -242,7 +258,7 @@ class AECConfig:
 
 
 # -----------------------------------------------------------------------------
-# 5. INTEGRATED BUILDS (Phase 010 Part XXIII & XXIV)
+# 5. INTEGRATED BUILDS (Phase 010 Part XXIII & XXIV, Phase 015)
 # -----------------------------------------------------------------------------
 def build_robust_qualified_config() -> AECConfig:
     """Canonical AEC_ROBUST_QUALIFIED build containing only verified qualified mechanisms."""
@@ -251,6 +267,8 @@ def build_robust_qualified_config() -> AECConfig:
         enabled_mechanisms=ENABLED_FOUNDATION_MECHANISMS,
         quarantined_mechanisms=QUARANTINED_MECHANISMS,
         frozen_mode=True,
+        enable_asset_holding_trigger=False,
+        enable_tranche_synthesizer=False,
     )
 
 
@@ -261,5 +279,27 @@ def build_research_full_config() -> AECConfig:
         enabled_mechanisms=ENABLED_FOUNDATION_MECHANISMS,
         quarantined_mechanisms=QUARANTINED_MECHANISMS,
         frozen_mode=False,
+        enable_asset_holding_trigger=False,
+        enable_tranche_synthesizer=False,
+    )
+
+
+def build_phase015_treatment_config(
+    enable_trigger: bool = True,
+    enable_synthesizer: bool = True,
+) -> AECConfig:
+    """Canonical Phase 015 treatment configuration with isolated capability switches."""
+    enabled = list(ENABLED_FOUNDATION_MECHANISMS)
+    if enable_trigger:
+        enabled.append("ASSET_HOLDING_VALUATION_TRIGGER")
+    if enable_synthesizer:
+        enabled.append("AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER")
+    return AECConfig(
+        operational_mode="RESEARCH_MODE",
+        enabled_mechanisms=tuple(enabled),
+        quarantined_mechanisms=QUARANTINED_MECHANISMS,
+        frozen_mode=False,
+        enable_asset_holding_trigger=enable_trigger,
+        enable_tranche_synthesizer=enable_synthesizer,
     )
 
