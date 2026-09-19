@@ -170,15 +170,27 @@ class PatchCompositionEngine:
             act_a = acts_a[t] if t < len(acts_a) else {}
             act_b = acts_b[t] if t < len(acts_b) else {}
 
-            farmer_act = act_a.get("farmer") or act_b.get("farmer") or ["PASS"]
+            if 0 in workers_a and act_a.get("farmer") and act_a["farmer"] != ["PASS"]:
+                farmer_act = act_a["farmer"]
+            elif 0 in workers_b and act_b.get("farmer") and act_b["farmer"] != ["PASS"]:
+                farmer_act = act_b["farmer"]
+            else:
+                farmer_act = (act_a.get("farmer") if 0 in workers_a else None) or (act_b.get("farmer") if 0 in workers_b else None) or ["PASS"]
+
             hands_a = act_a.get("hands", [])
             hands_b = act_b.get("hands", [])
             num_hands = max(len(hands_a), len(hands_b))
             hands_act = []
             for h in range(num_hands):
-                ha = hands_a[h] if h < len(hands_a) and hands_a[h] != ["PASS"] else None
-                hb = hands_b[h] if h < len(hands_b) and hands_b[h] != ["PASS"] else None
-                hands_act.append(ha or hb or ["PASS"])
+                w_id = 1 + h
+                if w_id in workers_a and h < len(hands_a) and hands_a[h] != ["PASS"]:
+                    hands_act.append(hands_a[h])
+                elif w_id in workers_b and h < len(hands_b) and hands_b[h] != ["PASS"]:
+                    hands_act.append(hands_b[h])
+                else:
+                    ha = hands_a[h] if h < len(hands_a) and w_id in workers_a else None
+                    hb = hands_b[h] if h < len(hands_b) and w_id in workers_b else None
+                    hands_act.append(ha or hb or ["PASS"])
 
             mkt_a = act_a.get("market", [])
             mkt_b = act_b.get("market", [])
