@@ -611,8 +611,41 @@ class PatchGenerator:
                 elif res.patch is not None and res.trajectory_certificate and res.trajectory_certificate.is_valid:
                     patches.append(res.patch)
 
-            # 11. Shop & Production Arbitrage (§16)
-            elif fam in ("SHOP_ARBITRAGE", "PRODUCTION_ARBITRAGE"):
+            # 11. Realizable Shop Arbitrage (§6, §7, §8, §9, §10)
+            elif fam == "SHOP_ARBITRAGE":
+                # Strict feasibility gate: reject non-realizable candidates
+                if hasattr(opp, "is_realizable") and not opp.is_realizable:
+                    continue
+                if hasattr(opp, "dependency_info") and opp.dependency_info.get("is_realizable") is False:
+                    continue
+
+                seq = getattr(opp, "market_sequence", [])
+                if not seq and hasattr(opp, "dependency_info"):
+                    seq = opp.dependency_info.get("market_sequence", [])
+
+                orders = copy.deepcopy(baseline_action.get("market", []))
+                if seq:
+                    # Non-commutative sequential insertion:
+                    # Maintain strict sequence by inserting at front in reverse
+                    for o in reversed(seq):
+                        orders.insert(0, copy.deepcopy(o))
+                else:
+                    item = getattr(opp, "item", "") or getattr(opp, "input_item", "")
+                    if item:
+                        orders.insert(0, ["BUY_PRODUCT", item, 1])
+
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    market_mutations=orders[:10],
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale
+                )
+                patches.append(patch)
+
+            # 11B. Production Arbitrage (§16)
+            elif fam == "PRODUCTION_ARBITRAGE":
                 orders = copy.deepcopy(baseline_action.get("market", []))
                 input_item = getattr(opp, "input_item", "") or getattr(opp, "item", "")
                 if input_item and len(orders) < 10:
