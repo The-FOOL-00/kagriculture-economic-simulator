@@ -1,0 +1,102 @@
+{
+  "phase": "015",
+  "name": "AEC Opportunity Engine + Candidate Synthesis Rescue",
+  "date": "2026-09-19",
+  "status": "FUNCTIONALLY COMPLETE / QUARANTINED",
+  "qualification_decision": "REJECTED",
+  "governance": {
+    "v3_tarball_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "v3_code_modified": false,
+    "protected_holdouts_intact": true,
+    "quarantined_mechanisms_active": 0,
+    "quarantined_mechanisms_count": 12,
+    "control_foundation": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN"
+  },
+  "capabilities": {
+    "asset_holding_valuation_trigger": {
+      "status": "FUNCTIONALLY COMPLETE / QUARANTINED",
+      "functional_tests_passed": 20,
+      "functional_tests_total": 20,
+      "oracle_timing_coverage_pct": 43.6,
+      "oracle_terminal_coverage_pct": 100.0,
+      "attribution_isolated_delta": 0.0
+    },
+    "autonomous_tranche_order_synthesizer": {
+      "status": "FUNCTIONALLY COMPLETE / QUARANTINED",
+      "functional_tests_passed": 20,
+      "functional_tests_total": 20,
+      "oracle_representation_conversion_pct": 100.0,
+      "attribution_isolated_delta": 0.0
+    }
+  },
+  "stage_a_synthetic": {
+    "functional_matrix_tests_passed": 40,
+    "functional_matrix_tests_total": 40,
+    "counterfactual_tests_passed": 5,
+    "counterfactual_tests_total": 5,
+    "pass_rate_pct": 100.0
+  },
+  "stage_b_oracle_replay": {
+    "oracle_states_evaluated": 650,
+    "market_timing_triggers_pct": 43.6,
+    "terminal_liquidation_triggers_pct": 100.0,
+    "candidate_synthesis_rate_pct": 100.0,
+    "exact_simulation_rate_pct": 100.0,
+    "market_timing_commit_pct": 15.2,
+    "terminal_liquidation_commit_pct": 46.9
+  },
+  "stage_c_natural_pilot": {
+    "cohort_seeds": [
+      249276,
+      249277,
+      249278,
+      249279,
+      249280,
+      249281,
+      249282,
+      249283,
+      249284,
+      249285
+    ],
+    "n_seeds": 10,
+    "mirror_matches": 20,
+    "mean_paired_delta": -58569.8,
+    "median_paired_delta": -59209.5,
+    "std_delta": 22919.21,
+    "se_delta": 7247.69,
+    "ci95": [
+      -72775.27,
+      -44364.33
+    ],
+    "p_value": 0.0,
+    "t_stat": -8.081,
+    "record": "0W / 10L / 0T",
+    "win_rate_pct": 0.0,
+    "worst_seed": 249278,
+    "worst_delta": -87323.0,
+    "total_triggers": 9844,
+    "total_candidates": 2118,
+    "total_simulations": 2118,
+    "total_commits": 173,
+    "committed_mechanisms": {
+      "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 166,
+      "DEPENDENCY_AWARE_MARKET_TIMING": 7
+    },
+    "avg_turn_latency_ms": 104.14,
+    "safety_violations": 0
+  },
+  "causal_attribution": {
+    "sample_seeds": [
+      249276,
+      249277,
+      249278,
+      249279,
+      249280
+    ],
+    "trigger_only_mean_delta": 0.0,
+    "synthesizer_only_mean_delta": 0.0,
+    "combined_mean_delta": -58569.8,
+    "primary_failure_mechanism": "Macro policy perturbation: early liquidity injection crosses V3 hardcoded cash thresholds for livestock acquisition, diverting worker labor away from high-margin crop harvesting."
+  },
+  "final_action": "RETAIN_QUARANTINE_DO_NOT_DEPLOY_LIVE"
+}
