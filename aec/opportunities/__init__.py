@@ -67,6 +67,7 @@ class OpportunityEngine:
 
         # Telemetry / quarantine tracking per step
         self.last_quarantined_opportunities: List[Opportunity] = []
+        self.last_reservation_telemetry: Optional[Any] = None
 
     def detect_opportunities(
         self,
@@ -129,6 +130,23 @@ class OpportunityEngine:
 
         # Sort by economic relevance descending, bounded by max_opportunities
         actionable.sort(key=lambda o: -o.estimated_economic_relevance)
+
+        # Phase 018 Repair A: funnel reservation at the opportunity truncation.
+        # Gated; legacy path executes verbatim when disabled.
+        self.last_reservation_telemetry = None
+        if config is not None and getattr(config, "enable_funnel_reservation", False):
+            from aec.funnel.reservation import FunnelReservationPolicy, apply_reservation
+            policy = FunnelReservationPolicy(
+                enabled=True,
+                reserved_fraction=float(
+                    getattr(config, "funnel_reserved_fraction", 0.25) or 0.25
+                ),
+            )
+            selected, res_telem = apply_reservation(
+                actionable, max_opportunities, policy, site="OPPORTUNITY_TRUNCATION"
+            )
+            self.last_reservation_telemetry = res_telem
+            return selected
         return actionable[:max_opportunities]
 
     def get_quarantined_proposals_by_mechanism(self) -> Dict[str, int]:

@@ -234,6 +234,10 @@ class AECConfig:
     enable_asset_holding_trigger: bool = False
     enable_tranche_synthesizer: bool = False
 
+    # Phase 018 Repair A: candidate-funnel reservation (default OFF; isolated arm only)
+    enable_funnel_reservation: bool = False
+    funnel_reserved_fraction: float = 0.25
+
     # Performance & Safety
     per_step_latency_limit_ms: float = 100.0
     fail_closed: bool = True
@@ -302,4 +306,16 @@ def build_phase015_treatment_config(
         enable_asset_holding_trigger=enable_trigger,
         enable_tranche_synthesizer=enable_synthesizer,
     )
+
+
+def build_phase018_arm_a2_config() -> AECConfig:
+    """Phase 018 Arm A2: Phase 015 treatment + funnel reservation ONLY.
+
+    Isolation: differs from build_phase015_treatment_config() solely by
+    enable_funnel_reservation=True. No quantity, trigger, representation, or
+    evaluator change.
+    """
+    cfg = build_phase015_treatment_config()
+    cfg.enable_funnel_reservation = True
+    return cfg
 

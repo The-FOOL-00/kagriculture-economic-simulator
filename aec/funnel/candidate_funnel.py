@@ -91,10 +91,13 @@ class OpportunityCandidateFunnel:
     def __init__(
         self,
         budget: Optional[InferenceBudget] = None,
-        macro_controller: Optional[Any] = None
+        macro_controller: Optional[Any] = None,
+        reservation_policy: Optional[Any] = None
     ) -> None:
         self.budget = budget or InferenceBudget()
         self.macro_controller = macro_controller
+        self.reservation_policy = reservation_policy
+        self.last_reservation_telemetry: Optional[Any] = None
 
     def filter_candidates(
         self,
@@ -103,6 +106,7 @@ class OpportunityCandidateFunnel:
         budget: Optional[InferenceBudget] = None,
         labor_engine: Optional[Any] = None,
         macro_controller: Optional[Any] = None,
+        reservation_policy: Optional[Any] = None,
     ) -> Tuple[List[Any], FunnelTelemetry]:
         """Execute the 10-stage tiered pruning pipeline (§7)."""
         t_start = time.perf_counter()
@@ -148,7 +152,12 @@ class OpportunityCandidateFunnel:
         telemetry.stage_records.append(rec8)
 
         # Stage 9: Deterministic Top-K Selection (§31)
-        current, rec9 = self._stage_deterministic_top_k(current, econ_state, budget.max_exact_simulations)
+        # Phase 018 Repair A: optional reservation policy (constructor or per-call).
+        policy = reservation_policy if reservation_policy is not None else self.reservation_policy
+        self.last_reservation_telemetry = None
+        current, rec9 = self._stage_deterministic_top_k(
+            current, econ_state, budget.max_exact_simulations, reservation_policy=policy
+        )
         telemetry.stage_records.append(rec9)
 
         telemetry.final_candidates = len(current)
@@ -369,7 +378,8 @@ class OpportunityCandidateFunnel:
         self,
         candidates: List[Any],
         econ_state: EconomicState,
-        max_k: int
+        max_k: int,
+        reservation_policy: Optional[Any] = None,
     ) -> Tuple[List[Any], FunnelStageRecord]:
         """Strict deterministic top-K ordering (§31).
         
@@ -394,9 +404,23 @@ class OpportunityCandidateFunnel:
             return (val, fam, wid, pos_x, pos_y, step, cid)
 
         candidates.sort(key=tie_break_key)
-        top_k = candidates[:max_k]
-        eliminated = max(0, len(candidates) - len(top_k))
-        reasons = {"EXCEEDED_MAX_K_BUDGET": eliminated} if eliminated > 0 else {}
+
+        # Phase 018 Repair A: class-floor enforcement on the ranked list.
+        # Legacy path executes verbatim when no enabled policy is supplied.
+        if reservation_policy is not None and getattr(reservation_policy, "enabled", False):
+            from aec.funnel.reservation import apply_reservation
+            top_k, res_telem = apply_reservation(
+                candidates, max_k, reservation_policy, site="S9_DETERMINISTIC_TOP_K"
+            )
+            self.last_reservation_telemetry = res_telem
+            eliminated = max(0, len(candidates) - len(top_k))
+            reasons = {"EXCEEDED_MAX_K_BUDGET": eliminated} if eliminated > 0 else {}
+            if res_telem.saved_by_reservation:
+                reasons["RESERVED_SEAT_REALLOCATION"] = len(res_telem.saved_by_reservation)
+        else:
+            top_k = candidates[:max_k]
+            eliminated = max(0, len(candidates) - len(top_k))
+            reasons = {"EXCEEDED_MAX_K_BUDGET": eliminated} if eliminated > 0 else {}
 
         rec = FunnelStageRecord(
             stage=FunnelStage.S9_DETERMINISTIC_TOP_K,

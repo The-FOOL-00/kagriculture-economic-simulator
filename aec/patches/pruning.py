@@ -3,7 +3,7 @@
 
 from __future__ import annotations
 
-from typing import Dict, List
+from typing import Any, Dict, List, Optional
 
 from aec.config import BOARD_SIZE, MAX_MARKET_ORDERS, MOVES
 from aec.ir.economic_state import EconomicState
@@ -50,9 +50,15 @@ def is_patch_statically_feasible(
 def prune_patches(
     patches: List[CoupledPatch],
     econ_state: EconomicState,
-    max_candidates: int = 8
+    max_candidates: int = 8,
+    reservation_policy: Optional[Any] = None,
 ) -> List[CoupledPatch]:
-    """Prune patches down to statically feasible subset, capped at budget."""
+    """Prune patches down to statically feasible subset, capped at budget.
+
+    Phase 018 Repair A: when an enabled reservation policy is supplied, the
+    final cap enforces class floors (minimal displacement) instead of a plain
+    head-truncation, so META re-sorting cannot reintroduce crowding after S9.
+    """
     feasible: List[CoupledPatch] = []
     seen_ids = set()
 
@@ -62,7 +68,16 @@ def prune_patches(
         if is_patch_statically_feasible(p, econ_state):
             feasible.append(p)
             seen_ids.add(p.patch_id)
-            if len(feasible) >= max_candidates:
-                break
 
-    return feasible
+    if reservation_policy is not None and getattr(reservation_policy, "enabled", False):
+        from aec.funnel.reservation import apply_reservation
+        selected, res_telem = apply_reservation(
+            feasible, max_candidates, reservation_policy, site="PRUNE_PATCHES_CAP"
+        )
+        try:
+            reservation_policy.last_telemetry = res_telem
+        except Exception:
+            pass
+        return selected
+
+    return feasible[:max_candidates]

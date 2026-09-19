@@ -8,6 +8,15 @@ from aec.funnel.candidate_funnel import (
     InferenceBudget,
     OpportunityCandidateFunnel,
 )
+from aec.funnel.reservation import (
+    DEFAULT_RESERVED_FRACTION,
+    FunnelReservationPolicy,
+    ReservationTelemetry,
+    SlotClass,
+    apply_reservation,
+    default_slot_classifier,
+    reserved_seats_for_k,
+)
 
 __all__ = [
     "FunnelStage",
@@ -15,4 +24,11 @@ __all__ = [
     "FunnelTelemetry",
     "InferenceBudget",
     "OpportunityCandidateFunnel",
+    "SlotClass",
+    "DEFAULT_RESERVED_FRACTION",
+    "FunnelReservationPolicy",
+    "ReservationTelemetry",
+    "apply_reservation",
+    "default_slot_classifier",
+    "reserved_seats_for_k",
 ]

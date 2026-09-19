@@ -10,6 +10,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from aec.config import AECConfig, MECHANISM_REGISTRY, ScientificStatus
 from aec.counterfactual.horizon import select_adaptive_horizon
+from aec.counterfactual.macro_detector import MacroRegimeTransitionDetector
 from aec.counterfactual.simulator import CounterfactualSimulator
 from aec.evaluation.win_model import WinModel
 from aec.events.detectors import detect_events
@@ -18,6 +19,7 @@ from aec.integration.backbone_adapter import BackboneAdapter, BaselineResult
 from aec.ir.economic_state import EconomicState, build_economic_state
 from aec.counterfactual.opponent_pressure import ContinuousOpponentPressureAnalyzer, OpponentPressureState
 from aec.funnel.candidate_funnel import FunnelTelemetry, InferenceBudget, OpportunityCandidateFunnel
+from aec.funnel.reservation import FunnelReservationPolicy
 from aec.integration.fallback import FallbackReason, FallbackRecord, RobustFallbackPolicy
 from aec.macro.macro_controller import MacroController, MacroStrategy
 from aec.meta.meta_policy import AECMode, MetaOrchestrator, MetaPolicyDecision
@@ -64,6 +66,10 @@ class CandidateTelemetry:
     why_v3_did_not_do_this: Optional[str] = None
     candidate_quantity: int = 0
     candidate_reason: Optional[str] = None
+    macro_escalated: bool = False
+    macro_regime_type: str = "NONE"
+    macro_escalation_reason: Optional[str] = None
+    first_divergence_turn: Optional[int] = None
 
     def to_dict(self) -> Dict[str, Any]:
         d = {
@@ -94,6 +100,10 @@ class CandidateTelemetry:
             "why_v3_did_not_do_this": self.why_v3_did_not_do_this,
             "candidate_quantity": self.candidate_quantity,
             "candidate_reason": self.candidate_reason,
+            "macro_escalated": self.macro_escalated,
+            "macro_regime_type": self.macro_regime_type,
+            "macro_escalation_reason": self.macro_escalation_reason,
+            "first_divergence_turn": self.first_divergence_turn,
         }
         if self.terminal_telemetry is not None:
             d["terminal_telemetry"] = self.terminal_telemetry
@@ -124,6 +134,13 @@ class AECTelemetry:
     patches_safety_rejected_count: int = 0
     patches_economically_rejected_count: int = 0
 
+    # Macro-Aware Escalation telemetry (Phase 016)
+    macro_escalations_count: int = 0
+    macro_escalated_by_regime: Dict[str, int] = field(default_factory=dict)
+
+    # Funnel reservation telemetry (Phase 018 Repair A): per-site records
+    funnel_reservation: Dict[str, Any] = field(default_factory=dict)
+
     # Detailed per-candidate audit trace (§14)
     candidates: List[CandidateTelemetry] = field(default_factory=list)
 
@@ -150,6 +167,12 @@ class AECTelemetry:
             "quarantined_by_mechanism": dict(self.quarantined_by_mechanism),
             "cand_count": self.candidates_count,
             "sim_count": self.simulations_run,
+            "macro_escalations_count": self.macro_escalations_count,
+            "macro_escalated_by_regime": dict(self.macro_escalated_by_regime),
+            "funnel_reservation": {
+                k: (v.to_dict() if hasattr(v, "to_dict") else v)
+                for k, v in self.funnel_reservation.items()
+            },
             "patch_id": self.committed_patch_id,
             "committed_mechanism": self.committed_mechanism,
             "abstain_reason": self.abstain_reason,
@@ -197,6 +220,7 @@ class AECExecutor:
         self.simulator = CounterfactualSimulator()
         self.win_model = WinModel()
         self.safety_checker = SafetyChecker()
+        self.macro_detector = MacroRegimeTransitionDetector()
 
         # Phase 007 Architectural Subsystems (§5, §8, §10, §11, §12, §30)
         self.replanner = EventTriggeredReplanner()
@@ -208,6 +232,15 @@ class AECExecutor:
         self.meta_orchestrator = MetaOrchestrator(mode=mode_enum)
         self.funnel = OpportunityCandidateFunnel()
         self.fallback_policy = RobustFallbackPolicy()
+
+        # Phase 018 Repair A: funnel reservation policy derived from config
+        # (single mechanism shared by all truncation sites; OFF unless enabled).
+        self._reservation_policy = FunnelReservationPolicy(
+            enabled=bool(getattr(self.config, "enable_funnel_reservation", False)),
+            reserved_fraction=float(
+                getattr(self.config, "funnel_reserved_fraction", 0.25) or 0.25
+            ),
+        )
 
         # State tracking across steps
         self._prev_econ_state: Optional[EconomicState] = None
@@ -349,6 +382,11 @@ class AECExecutor:
             telemetry.opportunities_count = len(opportunities)
             telemetry.opp_time_ms = (time.perf_counter() - t_opp0) * 1000.0
 
+            if getattr(self.opp_engine, "last_reservation_telemetry", None) is not None:
+                telemetry.funnel_reservation["opportunities"] = (
+                    self.opp_engine.last_reservation_telemetry
+                )
+
             quarantined_opps = self.opp_engine.last_quarantined_opportunities
             telemetry.opportunities_quarantined_count = len(quarantined_opps)
             for q in quarantined_opps:
@@ -400,8 +438,15 @@ class AECExecutor:
                 max_candidates_screened=self.config.max_candidates,
             )
             screened_patches, funnel_telem = self.funnel.filter_candidates(
-                raw_patches, econ_state, budget=funnel_budget
+                raw_patches,
+                econ_state,
+                budget=funnel_budget,
+                reservation_policy=self._reservation_policy,
             )
+            if getattr(self.funnel, "last_reservation_telemetry", None) is not None:
+                telemetry.funnel_reservation["s9_top_k"] = (
+                    self.funnel.last_reservation_telemetry
+                )
 
             # 5B. Macro Compatibility Validation (§10)
             macro_approved_patches = []
@@ -427,8 +472,15 @@ class AECExecutor:
             )
 
             candidate_patches = prune_patches(
-                prioritized_patches, econ_state, max_candidates=self.config.max_candidates
+                prioritized_patches,
+                econ_state,
+                max_candidates=self.config.max_candidates,
+                reservation_policy=self._reservation_policy,
             )
+            if getattr(self._reservation_policy, "last_telemetry", None) is not None:
+                telemetry.funnel_reservation["prune_cap"] = (
+                    self._reservation_policy.last_telemetry
+                )
             telemetry.patches_pruned_count = max(0, len(raw_patches) - len(candidate_patches))
             telemetry.candidates_count = len(candidate_patches)
 
@@ -466,16 +518,43 @@ class AECExecutor:
             active_patches = candidate_patches[:self.config.max_simulations]
 
             for patch in active_patches:
-                horizon = select_adaptive_horizon(patch, econ_state, self.config, future_trajectory)
+                cand_action = patch.apply(baseline_action)
+
+                # Macro-Regime Boundary Detection (Phase 016)
+                probe_res = self.macro_detector.probe_candidate(
+                    patch=patch,
+                    baseline_action=baseline_action,
+                    econ_state=econ_state,
+                )
+
+                horizon = select_adaptive_horizon(
+                    patch,
+                    econ_state,
+                    self.config,
+                    future_trajectory,
+                    macro_probe_result=probe_res,
+                )
                 patch_continuation = future_trajectory[:max(0, horizon - 1)] if future_trajectory else None
 
-                # Run isolated forward simulation under opponent pressure
+                if probe_res.requires_escalation:
+                    telemetry.macro_escalations_count += 1
+                    reg_val = probe_res.regime_type.value
+                    telemetry.macro_escalated_by_regime[reg_val] = (
+                        telemetry.macro_escalated_by_regime.get(reg_val, 0) + 1
+                    )
+
+                # Run isolated forward simulation with frozen V3 continuation if escalated
+                v3_callable = getattr(self.backbone, "_agent_fn", None)
                 sim_outcome = self.simulator.evaluate(
                     candidate_patch=patch,
                     baseline_action=baseline_action,
                     econ_state=econ_state,
                     horizon=horizon,
-                    continuation_trajectory=patch_continuation
+                    continuation_trajectory=patch_continuation,
+                    v3_agent_callable=v3_callable,
+                    macro_escalated=probe_res.requires_escalation,
+                    macro_escalation_reason=probe_res.reason if probe_res.requires_escalation else "",
+                    macro_regime_type=probe_res.regime_type.value,
                 )
                 telemetry.simulations_run += 1
                 telemetry.patches_simulated_count += 1
@@ -518,8 +597,6 @@ class AECExecutor:
                 elif not eval_res.is_superior:
                     telemetry.patches_economically_rejected_count += 1
 
-                cand_action = patch.apply(baseline_action)
-
                 # Terminal Telemetry for emergency feed purchases (§21)
                 term_telem = None
                 if mech_fam == "EMERGENCY_FEED_PURCHASE":
@@ -555,7 +632,7 @@ class AECExecutor:
                         "abstain_commit_reason": abstain_reason if not passed_safety else ("COMMIT" if candidate_otherwise_attractive and not is_quarantined else "ABSTAIN"),
                     }
 
-                # Record per-candidate telemetry (§14)
+                # Record per-candidate telemetry (§14, Phase 016)
                 cand_telem = CandidateTelemetry(
                     patch_id=patch.patch_id,
                     mechanism_family=patch.mechanism_family,
@@ -588,6 +665,10 @@ class AECExecutor:
                     why_v3_did_not_do_this=getattr(patch, "dependency_info", {}).get("why_v3_did_not_do_this"),
                     candidate_quantity=int(getattr(patch, "dependency_info", {}).get("quantity", 0) or 0),
                     candidate_reason=getattr(patch, "dependency_info", {}).get("reason"),
+                    macro_escalated=probe_res.requires_escalation,
+                    macro_regime_type=probe_res.regime_type.value,
+                    macro_escalation_reason=probe_res.reason if probe_res.requires_escalation else None,
+                    first_divergence_turn=sim_outcome.first_divergence_turn,
                 )
                 telemetry.candidates.append(cand_telem)
 
