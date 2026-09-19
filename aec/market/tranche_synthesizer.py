@@ -348,15 +348,26 @@ class AutonomousTrancheOrderSynthesizer:
         uncommitted_qty: int,
         baseline_market_orders: List[Any],
     ) -> List[Tuple[int, str]]:
-        """Phase 018 B1 menu: {q_small, q_current} + boundary alternatives (≤4)."""
-        menu: List[Tuple[int, str]] = [(1, "Q_SMALL")]
-        q_current = min(5, uncommitted_qty)
-        if q_current != 1:
-            menu.append((q_current, "Q_CURRENT"))
-        for q, reason in self.compute_boundary_safe_quantities(
+        """Phase 018 B1 menu (≤4), most-committable-first emission order.
+
+        Binds: [BOUNDARY_SAFE, Q_CURRENT, BOUNDARY_MINUS, Q_SMALL].
+        No bind: [Q_CURRENT, Q_SMALL] (legacy value order).
+        Order rationale: PHASE018_S7_DISCRIMINATION_SPEC.md §2.4.
+        """
+        boundary = self.compute_boundary_safe_quantities(
             econ_state, commodity, uncommitted_qty, baseline_market_orders
-        ):
-            menu.append((q, reason))
+        )
+        safe = [(q, r) for q, r in boundary if r == "BOUNDARY_SAFE"]
+        minus = [(q, r) for q, r in boundary if r == "BOUNDARY_MINUS"]
+        q_current = min(5, uncommitted_qty)
+        if q_current == 1 and not boundary:
+            menu: List[Tuple[int, str]] = [(1, "Q_SMALL")]
+        elif boundary:
+            menu = safe + [(q_current, "Q_CURRENT")] + minus + [(1, "Q_SMALL")]
+        else:
+            menu = [(q_current, "Q_CURRENT")]
+            if q_current != 1:
+                menu.append((1, "Q_SMALL"))
         seen: Set[int] = set()
         deduped: List[Tuple[int, str]] = []
         for q, reason in menu:

@@ -12,6 +12,16 @@ from aec.config import BOARD_SIZE, EPISODE_STEPS, PRODUCTS, SHED_TILES
 from aec.ir.economic_state import EconomicState
 
 
+def _is_market_patch(candidate: Any) -> bool:
+    """Phase 018 A2: pure market patch (market queue mutation, no worker task)."""
+    try:
+        if getattr(candidate, "market_mutations", None) is None:
+            return False
+        return not getattr(candidate, "worker_mutations", None)
+    except Exception:
+        return False
+
+
 class FunnelStage(str, Enum):
     """The 10 formal stages of the candidate funnel (§7)."""
     S1_CHEAP_LEGALITY = "S1_CHEAP_LEGALITY"
@@ -92,11 +102,13 @@ class OpportunityCandidateFunnel:
         self,
         budget: Optional[InferenceBudget] = None,
         macro_controller: Optional[Any] = None,
-        reservation_policy: Optional[Any] = None
+        reservation_policy: Optional[Any] = None,
+        market_discrimination: bool = False
     ) -> None:
         self.budget = budget or InferenceBudget()
         self.macro_controller = macro_controller
         self.reservation_policy = reservation_policy
+        self.market_discrimination = market_discrimination
         self.last_reservation_telemetry: Optional[Any] = None
 
     def filter_candidates(
@@ -107,6 +119,7 @@ class OpportunityCandidateFunnel:
         labor_engine: Optional[Any] = None,
         macro_controller: Optional[Any] = None,
         reservation_policy: Optional[Any] = None,
+        market_discrimination: Optional[bool] = None,
     ) -> Tuple[List[Any], FunnelTelemetry]:
         """Execute the 10-stage tiered pruning pipeline (§7)."""
         t_start = time.perf_counter()
@@ -143,8 +156,13 @@ class OpportunityCandidateFunnel:
         current, rec6 = self._stage_dependency_closure(current, econ_state)
         telemetry.stage_records.append(rec6)
 
+        # Phase 018 A2: market-patch discrimination (constructor or per-call).
+        discrim = self.market_discrimination if market_discrimination is None else market_discrimination
+
         # Stage 7: Dominance Pruning
-        current, rec7 = self._stage_dominance_pruning(current, econ_state)
+        current, rec7 = self._stage_dominance_pruning(
+            current, econ_state, market_discrimination=discrim
+        )
         telemetry.stage_records.append(rec7)
 
         # Stage 8: Route-Cost Screen
@@ -156,7 +174,8 @@ class OpportunityCandidateFunnel:
         policy = reservation_policy if reservation_policy is not None else self.reservation_policy
         self.last_reservation_telemetry = None
         current, rec9 = self._stage_deterministic_top_k(
-            current, econ_state, budget.max_exact_simulations, reservation_policy=policy
+            current, econ_state, budget.max_exact_simulations,
+            reservation_policy=policy, market_discrimination=discrim,
         )
         telemetry.stage_records.append(rec9)
 
@@ -315,18 +334,30 @@ class OpportunityCandidateFunnel:
         )
         return survived, rec
 
-    def _stage_dominance_pruning(self, candidates: List[Any], econ_state: EconomicState) -> Tuple[List[Any], FunnelStageRecord]:
+    def _stage_dominance_pruning(
+        self,
+        candidates: List[Any],
+        econ_state: EconomicState,
+        market_discrimination: bool = False,
+    ) -> Tuple[List[Any], FunnelStageRecord]:
         t0 = time.perf_counter()
         # Prune candidates dominated on (worker_id, target_pos) by shorter duration / higher value
         grouped: Dict[Tuple[int, Tuple[int, int]], List[Any]] = {}
+        exempt_market: List[Any] = []
         for c in candidates:
+            # Phase 018 A2: market patches bypass worker/target collapse (own groups).
+            if market_discrimination and _is_market_patch(c):
+                exempt_market.append(c)
+                continue
             wid = getattr(c, "worker_id", 0)
             target_pos = getattr(c, "target_pos", None) or getattr(c, "target_position", (0, 0))
             grouped.setdefault((wid, target_pos), []).append(c)
 
-        survived = []
+        survived = list(exempt_market)
         eliminated = 0
         reasons: Dict[str, int] = {}
+        if exempt_market:
+            reasons["S7_MARKET_EXEMPT_PASSTHROUGH"] = len(exempt_market)
         for group in grouped.values():
             if len(group) == 1:
                 survived.append(group[0])
@@ -380,9 +411,10 @@ class OpportunityCandidateFunnel:
         econ_state: EconomicState,
         max_k: int,
         reservation_policy: Optional[Any] = None,
+        market_discrimination: bool = False,
     ) -> Tuple[List[Any], FunnelStageRecord]:
         """Strict deterministic top-K ordering (§31).
-        
+
         Tie-break hierarchy:
         1. Estimated economic relevance / delta (descending)
         2. Mechanism family (alphabetical)
@@ -390,9 +422,19 @@ class OpportunityCandidateFunnel:
         4. Target position (row, col)
         5. Step (ascending)
         6. Candidate / Patch ID (string)
+
+        Phase 018 A2 (market_discrimination=True): patches rank by stamped
+        source_relevance, then anchor_index, then the legacy hierarchy.
         """
         t0 = time.perf_counter()
-        
+
+        def _rank_value(c: Any) -> float:
+            src = getattr(c, "source_relevance", None)
+            if src is None:
+                src = (getattr(c, "estimated_economic_value", 0.0)
+                       or getattr(c, "estimated_economic_relevance", 0.0))
+            return round(-float(src or 0.0), 4)
+
         def tie_break_key(c: Any) -> Tuple[float, str, int, int, int, int, str]:
             val = round(-float(getattr(c, "estimated_economic_value", 0.0) or getattr(c, "estimated_economic_relevance", 0.0)), 4)
             fam = str(getattr(c, "mechanism_family", "") or getattr(c, "candidate_transformation_family", ""))
@@ -403,7 +445,23 @@ class OpportunityCandidateFunnel:
             cid = str(getattr(c, "patch_id", "") or getattr(c, "opportunity_id", ""))
             return (val, fam, wid, pos_x, pos_y, step, cid)
 
-        candidates.sort(key=tie_break_key)
+        def tie_break_key_discriminating(c: Any) -> Tuple[float, int, str, int, int, int, int, str]:
+            val = _rank_value(c)
+            anchor = int(getattr(c, "anchor_index", 0) or 0)
+            fam = str(getattr(c, "mechanism_family", "") or getattr(c, "candidate_transformation_family", ""))
+            wid = int(getattr(c, "worker_id", 0) or 0)
+            pos = getattr(c, "target_pos", None) or getattr(c, "target_position", (0, 0))
+            pos_x, pos_y = pos[0], pos[1]
+            step = int(getattr(c, "step", econ_state.step) or 0)
+            cid = str(getattr(c, "patch_id", "") or getattr(c, "opportunity_id", ""))
+            return (val, anchor, fam, wid, pos_x, pos_y, step, cid)
+
+        # Phase 018 A2: discriminating key ranks stamped patches by relevance.
+        # Legacy key executes verbatim when discrimination is off.
+        if market_discrimination:
+            candidates.sort(key=tie_break_key_discriminating)
+        else:
+            candidates.sort(key=tie_break_key)
 
         # Phase 018 Repair A: class-floor enforcement on the ranked list.
         # Legacy path executes verbatim when no enabled policy is supplied.

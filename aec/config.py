@@ -241,6 +241,9 @@ class AECConfig:
     # Phase 018 Repair B: boundary-safe quantity construction (default OFF; isolated arm only)
     enable_boundary_safe_quantities: bool = False
 
+    # Phase 018 Repair A2: S7/S9 market-patch discrimination (default OFF; isolated arm only)
+    enable_market_patch_discrimination: bool = False
+
     # Performance & Safety
     per_step_latency_limit_ms: float = 100.0
     fail_closed: bool = True
@@ -332,5 +335,27 @@ def build_phase018_arm_b1_config() -> AECConfig:
     """
     cfg = build_phase015_treatment_config()
     cfg.enable_boundary_safe_quantities = True
+    return cfg
+
+
+def build_phase018_arm_b2_s1_config() -> AECConfig:
+    """Phase 018 Arm B2 leg S1: treatment + market-patch discrimination ONLY."""
+    cfg = build_phase015_treatment_config()
+    cfg.enable_market_patch_discrimination = True
+    return cfg
+
+
+def build_phase018_arm_b2_s1b_config() -> AECConfig:
+    """Phase 018 Arm B2 leg S1B: treatment + discrimination + boundary menu."""
+    cfg = build_phase015_treatment_config()
+    cfg.enable_market_patch_discrimination = True
+    cfg.enable_boundary_safe_quantities = True
+    return cfg
+
+
+def build_phase018_arm_b2_control_config() -> AECConfig:
+    """Phase 018 Arm B2 control: foundation + discrimination (no tranche)."""
+    cfg = build_robust_qualified_config()
+    cfg.enable_market_patch_discrimination = True
     return cfg
 

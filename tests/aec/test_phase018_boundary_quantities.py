@@ -49,7 +49,7 @@ def test_no_feed_safe_anchor_when_floor_unavoidable(normal_opening_obs):
         st, "WHEAT", 4, baseline_market_orders=[], boundary_safe=True)
     reasons = [r for _, r in menu]
     assert "BOUNDARY_SAFE" not in reasons  # any sale trips; evaluator decides
-    assert menu == [(1, "Q_SMALL"), (4, "Q_CURRENT")]
+    assert menu == [(4, "Q_CURRENT"), (1, "Q_SMALL")]
 
 
 # --- §38.6: liquidity / merged-queue accounting --------------------------------
@@ -77,7 +77,7 @@ def test_projection_accounts_for_baseline_queue(normal_opening_obs):
     # Baseline alone already crosses 10000 -> no avoidable-cross anchor exists.
     menu = s.compute_structural_quantities(
         st, "WHEAT", 40, baseline_market_orders=base, boundary_safe=True)
-    assert menu == [(1, "Q_SMALL"), (5, "Q_CURRENT")]
+    assert menu == [(5, "Q_CURRENT"), (1, "Q_SMALL")]
 
 
 # --- §38.7: boundary-minus correctness -----------------------------------------
@@ -88,8 +88,9 @@ def test_boundary_safe_and_minus_generated_correctly(normal_opening_obs):
     menu = _synth().compute_structural_quantities(
         st, "CARROT", 40, baseline_market_orders=[], boundary_safe=True)
     # q_current=5 -> 10100 crosses 10000; safe<=9999 -> 3; minus<=9850 -> 2.
-    assert menu == [(1, "Q_SMALL"), (5, "Q_CURRENT"),
-                    (3, "BOUNDARY_SAFE"), (2, "BOUNDARY_MINUS")]
+    # Most-committable-first emission order (§2.4).
+    assert menu == [(3, "BOUNDARY_SAFE"), (5, "Q_CURRENT"),
+                    (2, "BOUNDARY_MINUS"), (1, "Q_SMALL")]
 
 
 def test_unavoidable_crossing_yields_no_safe_anchor(normal_opening_obs):
@@ -97,7 +98,7 @@ def test_unavoidable_crossing_yields_no_safe_anchor(normal_opening_obs):
                 shed={"STRAWBERRY": 50}, prices={"STRAWBERRY": 120.0}, step=500)
     menu = _synth().compute_structural_quantities(
         st, "STRAWBERRY", 50, baseline_market_orders=[], boundary_safe=True)
-    assert menu == [(1, "Q_SMALL"), (5, "Q_CURRENT")]  # even q=1 crosses 10000
+    assert menu == [(5, "Q_CURRENT"), (1, "Q_SMALL")]  # even q=1 crosses 10000
 
 
 def test_non_boundary_window_collapses_to_legacy_pair(normal_opening_obs):
@@ -105,7 +106,7 @@ def test_non_boundary_window_collapses_to_legacy_pair(normal_opening_obs):
                 shed={"MELON": 30}, prices={"MELON": 250.0}, step=100)
     menu = _synth().compute_structural_quantities(
         st, "MELON", 30, baseline_market_orders=[], boundary_safe=True)
-    assert menu == [(1, "Q_SMALL"), (5, "Q_CURRENT")]
+    assert menu == [(5, "Q_CURRENT"), (1, "Q_SMALL")]
 
 
 # --- §38.8/§38.9: dedup + bounded menu ------------------------------------------

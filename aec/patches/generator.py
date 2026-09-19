@@ -85,7 +85,8 @@ class PatchGenerator:
                 self.last_quarantined_count += 1
                 self.last_quarantined_by_mechanism[fam] = self.last_quarantined_by_mechanism.get(fam, 0) + 1
                 continue
-            
+            _n_before = len(patches)
+
             # 1. Route / Weed Dig
             if fam == "LOCAL_WEED_DIG":
                 worker_id = opp.dependency_info.get("worker_id", 0)
@@ -847,5 +848,13 @@ class PatchGenerator:
                         rationale=opp.rationale
                     )
                     patches.append(patch)
+
+            # Phase 018 A2: priority stamping (inert metadata unless discrimination on).
+            for _anchor_idx, _p in enumerate(patches[_n_before:]):
+                try:
+                    _p.source_relevance = float(opp.estimated_economic_relevance)
+                    _p.anchor_index = _anchor_idx
+                except Exception:
+                    pass
 
         return patches
