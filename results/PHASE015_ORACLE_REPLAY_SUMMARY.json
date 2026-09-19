@@ -1,0 +1,53 @@
+{
+  "total_replayed_states": 650,
+  "seeds": [
+    249251,
+    249252,
+    249253,
+    249254,
+    249255,
+    249256,
+    249257,
+    249258,
+    249259,
+    249260
+  ],
+  "elapsed_seconds": 64.97,
+  "attribution": {
+    "Market Timing": {
+      "total_states": 250,
+      "trigger_coverage_pct": 43.6,
+      "candidate_coverage_pct": 43.6,
+      "exact_sim_coverage_pct": 43.6,
+      "commit_coverage_pct": 15.2
+    },
+    "Terminal": {
+      "total_states": 64,
+      "trigger_coverage_pct": 100.0,
+      "candidate_coverage_pct": 100.0,
+      "exact_sim_coverage_pct": 100.0,
+      "commit_coverage_pct": 46.88
+    },
+    "Opponent": {
+      "total_states": 106,
+      "trigger_coverage_pct": 43.4,
+      "candidate_coverage_pct": 43.4,
+      "exact_sim_coverage_pct": 43.4,
+      "commit_coverage_pct": 6.6
+    },
+    "Multi-worker": {
+      "total_states": 100,
+      "trigger_coverage_pct": 46.0,
+      "candidate_coverage_pct": 46.0,
+      "exact_sim_coverage_pct": 46.0,
+      "commit_coverage_pct": 12.0
+    },
+    "Worker Detour": {
+      "total_states": 130,
+      "trigger_coverage_pct": 55.38,
+      "candidate_coverage_pct": 55.38,
+      "exact_sim_coverage_pct": 55.38,
+      "commit_coverage_pct": 13.85
+    }
+  }
+}

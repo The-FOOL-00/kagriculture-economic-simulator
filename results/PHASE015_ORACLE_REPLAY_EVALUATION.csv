@@ -1,0 +1,651 @@
+seed,seat,step,gap_category,oracle_opportunity,oracle_delta,p14_layer,p14_detected,p14_represented,phase015_triggered,phase015_candidate_synthesized,phase015_exact_sim,phase015_sim_delta,phase015_superior,phase015_safe,phase015_committed,why_v3_did_not_do_this
+249259,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,44,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),145.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,52,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),5.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,0,104,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,124,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),33.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,160,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,172,Worker Detour,WORKER: Swap farmer and hand_0 assignments,29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,200,Market Timing,MARKET: Frontload buy 5 MELON seeds,210.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,220,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,240,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=9),92.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,268,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,148.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,0,292,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,190.0,NOT_DETECTED,False,False,True,True,True,5.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,316,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,101.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,340,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,160.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,356,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,41.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,0,368,Worker Detour,WORKER: Swap farmer and hand_0 assignments,49.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,372,Worker Detour,WORKER: Swap farmer and hand_0 assignments,49.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,0,380,Worker Detour,WORKER: Swap farmer and hand_0 assignments,41.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,388,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),10.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,416,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),21.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,428,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,41.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,436,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,129.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,456,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),108.0,NOT_DETECTED,False,False,True,True,True,93.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,0,464,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,34.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,468,Worker Detour,WORKER: Swap farmer and hand_0 assignments,39.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,0,488,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),20.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249259,0,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,0,520,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,0,536,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),24.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,0,556,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,154.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,0,600,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=7),86.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249259,0,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,19.0,NOT_REPRESENTED,True,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,0,668,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),35.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,0,688,Market Timing,MARKET: Immediate sale tranche of MILK (qty=8),7.0,NOT_REPRESENTED,True,False,True,True,True,-6.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,355.0,NOT_REPRESENTED,True,False,True,True,True,135.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,0,700,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=7),83.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249257,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,168,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),9.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,176,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=2),4.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,244,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),14.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,260,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,39.0,NOT_DETECTED,False,False,True,True,True,3.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,308,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,7.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,328,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),12.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,83.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,396,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),43.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249257,1,432,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),113.0,NOT_DETECTED,False,False,True,True,True,94.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,444,Market Timing,MARKET: Immediate sale tranche of EGG (qty=10),21.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249257,1,460,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=3),474.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,500,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,37.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,21.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,536,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),34.0,NOT_DETECTED,False,False,True,True,True,11.0,True,True,True,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249257,1,544,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),13.0,NOT_DETECTED,False,False,True,True,True,5.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,556,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,564,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,1,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,21.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249257,1,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,22.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249257,1,600,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),104.0,NOT_REPRESENTED,True,False,True,True,True,31.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,23.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249257,1,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,48.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249257,1,656,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),149.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249257,1,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,394.0,NOT_REPRESENTED,True,False,True,True,True,-1192.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,680,Terminal,TERMINAL: Terminal complete shed inventory dump,459.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,684,Terminal,TERMINAL: Terminal complete shed inventory dump,842.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249257,1,688,Terminal,TERMINAL: Terminal complete shed inventory dump,561.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,692,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=3),32.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,234.0,NOT_REPRESENTED,True,False,True,True,True,-1196.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,32,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),25.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,44,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),145.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,52,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),5.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,112,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=6),28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,164,Market Timing,MARKET: Delay sell order by 1 turn,222.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,180,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=3),4.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,216,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),8.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,264,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),17.0,NOT_DETECTED,False,False,True,True,True,7.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,40.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249255,1,284,Market Timing,MARKET: Delay sell order by 1 turn,3.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,332,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,10.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,368,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=3),13.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,372,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=3),3.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,392,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),9.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,1,472,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249255,1,500,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,41.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249255,1,504,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=6),381.0,NOT_DETECTED,False,False,True,True,True,188.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,4.0,NOT_DETECTED,False,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,17.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,1,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,44.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,1,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,53.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,1,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,54.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,1,644,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),90.0,NOT_REPRESENTED,True,False,True,True,True,8.0,True,False,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249255,1,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,21.0,NOT_REPRESENTED,True,False,True,True,True,-30.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,497.0,NOT_REPRESENTED,True,False,True,True,True,-207.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,680,Terminal,TERMINAL: Terminal complete shed inventory dump,514.0,NOT_REPRESENTED,True,False,True,True,True,144.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,684,Terminal,TERMINAL: Terminal complete shed inventory dump,1127.0,NOT_REPRESENTED,True,False,True,True,True,119.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249255,1,688,Terminal,TERMINAL: Terminal complete shed inventory dump,944.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,234.0,NOT_REPRESENTED,True,False,True,True,True,-178.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,216,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),7.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,244,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),17.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,260,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,14.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,292,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),3.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,328,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),12.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,340,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),171.0,NOT_DETECTED,False,False,True,True,True,7.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,356,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=3),22.0,NOT_DETECTED,False,False,True,True,True,0.0,True,False,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249252,1,360,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),67.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,90.0,NOT_DETECTED,False,False,True,True,True,-3.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249252,1,404,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=2),4.0,NOT_DETECTED,False,False,True,True,True,2.0,True,False,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249252,1,460,Worker Detour,WORKER: Swap farmer and hand_0 assignments,44.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249252,1,472,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,34.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249252,1,492,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=1),14.0,NOT_DETECTED,False,False,True,True,True,1.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249252,1,496,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,45.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,13.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,544,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,564,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),11.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,1,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,18.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,1,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,6.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,1,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,14.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,1,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,31.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,1,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,8.0,NOT_REPRESENTED,True,False,True,True,True,-10.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,668,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),19.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,680,Terminal,TERMINAL: Terminal complete shed inventory dump,191.0,NOT_REPRESENTED,True,False,True,True,True,59.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,1,684,Terminal,TERMINAL: Terminal complete shed inventory dump,544.0,NOT_REPRESENTED,True,False,True,True,True,26.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249252,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,240.0,NOT_REPRESENTED,True,False,True,True,True,58.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,132,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),61.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,172,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=2),2.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,256,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),11.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249256,0,260,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),15.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,40.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,292,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),10.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,328,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),8.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,348,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=3),42.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,87.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,456,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=8),254.0,NOT_DETECTED,False,False,True,True,True,135.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,460,Worker Detour,WORKER: Swap farmer and hand_0 assignments,39.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,468,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),11.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249256,0,472,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,31.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249256,0,496,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,39.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,39.0,NOT_DETECTED,False,False,True,True,True,-16.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,516,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),24.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249256,0,544,Worker Detour,WORKER: Swap farmer and hand_0 assignments,22.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,556,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),26.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,0,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,19.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,0,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,35.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,0,604,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),22.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,0,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,16.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,0,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,71.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,0,628,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),355.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,0,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,31.0,NOT_REPRESENTED,True,False,True,True,True,-30.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,664,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),39.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249256,0,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,394.0,NOT_REPRESENTED,True,False,True,True,True,-112.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,680,Terminal,TERMINAL: Terminal complete shed inventory dump,395.0,NOT_REPRESENTED,True,False,True,True,True,104.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,684,Terminal,TERMINAL: Terminal complete shed inventory dump,760.0,NOT_REPRESENTED,True,False,True,True,True,66.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249256,0,688,Terminal,TERMINAL: Terminal complete shed inventory dump,546.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,232.0,NOT_REPRESENTED,True,False,True,True,True,-116.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,0,700,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),9.0,NOT_REPRESENTED,True,False,True,True,True,-135.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249260,0,24,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=3),18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,228,Market Timing,MARKET: Frontload buy 5 MELON seeds,210.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,236,Market Timing,MARKET: Frontload buy 5 MELON seeds,210.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,260,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,14.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,264,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),13.0,NOT_DETECTED,False,False,True,True,True,12.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,292,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),3.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,296,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),7.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,312,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),39.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,90.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,384,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),107.0,NOT_DETECTED,False,False,True,True,True,89.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,392,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),16.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,408,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),99.0,NOT_DETECTED,False,False,True,True,True,88.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,448,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),10.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249260,0,460,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,44.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,0,472,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,34.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249260,0,496,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,45.0,NOT_DETECTED,False,False,True,True,True,2.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,15.0,NOT_DETECTED,False,False,True,True,True,-10.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,544,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,True,True,True,5.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,21.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249260,0,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,36.0,NOT_REPRESENTED,True,False,True,True,True,-6.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,608,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),9.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249260,0,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,14.0,NOT_REPRESENTED,True,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,35.0,NOT_REPRESENTED,True,False,True,True,True,-18.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,632,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,23.0,NOT_REPRESENTED,True,False,True,True,True,-34.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,664,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),14.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249260,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,290.0,NOT_REPRESENTED,True,False,True,True,True,90.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,0,700,Terminal,TERMINAL: Terminal complete shed inventory dump,20.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249259,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,60,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),6.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,1,132,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),61.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,160,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,172,Worker Detour,WORKER: Swap farmer and hand_0 assignments,29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,220,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,240,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=9),92.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,268,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,148.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,1,292,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,190.0,NOT_DETECTED,False,False,True,True,True,5.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,296,Market Timing,MARKET: Immediate sale tranche of MILK (qty=3),40.0,NOT_DETECTED,False,False,True,True,True,2.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,316,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,101.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,340,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,160.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,356,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,41.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,1,368,Worker Detour,WORKER: Swap farmer and hand_0 assignments,49.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,372,Worker Detour,WORKER: Swap farmer and hand_0 assignments,49.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,1,380,Worker Detour,WORKER: Swap farmer and hand_0 assignments,41.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,408,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=4),110.0,NOT_DETECTED,False,False,True,True,True,87.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,1,428,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,41.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,436,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,129.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,440,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),3.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,456,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),108.0,NOT_DETECTED,False,False,True,True,True,93.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,1,464,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,34.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,468,Worker Detour,WORKER: Swap farmer and hand_0 assignments,39.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,1,472,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),14.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,476,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),14.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,480,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),154.0,NOT_DETECTED,False,False,True,True,True,93.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,1,492,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),20.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,1,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,1,520,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249259,1,544,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),25.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249259,1,556,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,154.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249259,1,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,19.0,NOT_REPRESENTED,True,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249259,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,355.0,NOT_REPRESENTED,True,False,True,True,True,135.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,68,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),4.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,196,Opponent,OPPONENT: Opponent preemption frontload on MILK,114.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,260,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,5.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249251,1,300,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),8.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,312,Market Timing,MARKET: Immediate sale tranche of FERTILIZER (qty=10),34.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,324,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),19.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,336,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),10.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,348,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=3),42.0,NOT_DETECTED,False,False,True,True,True,8.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249251,1,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,90.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249251,1,396,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),14.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249251,1,420,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=2),310.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249251,1,428,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=2),40.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249251,1,460,Worker Detour,WORKER: Swap farmer and hand_0 assignments,43.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,472,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,34.0,NOT_DETECTED,False,False,True,True,True,9.0,True,True,True,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249251,1,496,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,43.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,500,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),21.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,504,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=6),299.0,NOT_DETECTED,False,False,True,True,True,54.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,508,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),6.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,33.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,536,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),13.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,1,544,Worker Detour,WORKER: Swap farmer and hand_0 assignments,25.0,NOT_DETECTED,False,False,True,True,True,-3.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,9.0,NOT_REPRESENTED,True,False,True,True,True,-32.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,29.0,NOT_REPRESENTED,True,False,True,True,True,-12.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,608,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),11.0,NOT_REPRESENTED,True,False,True,True,True,4.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249251,1,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,17.0,NOT_REPRESENTED,True,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,36.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249251,1,640,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),361.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249251,1,644,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,413.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249251,1,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,980.0,NOT_REPRESENTED,True,False,True,True,True,97.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,680,Terminal,TERMINAL: Terminal complete shed inventory dump,984.0,NOT_REPRESENTED,True,False,True,True,True,291.0,True,True,True,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249251,1,684,Terminal,TERMINAL: Terminal complete shed inventory dump,926.0,NOT_REPRESENTED,True,False,True,True,True,14.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249251,1,688,Terminal,TERMINAL: Terminal complete shed inventory dump,789.0,NOT_REPRESENTED,True,False,True,True,True,17.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,692,Market Timing,MARKET: Immediate sale tranche of MILK (qty=8),52.0,NOT_REPRESENTED,True,False,True,True,True,16.0,True,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,244.0,NOT_REPRESENTED,True,False,True,True,True,57.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,0,32,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),25.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,104,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,0,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,0,164,Market Timing,MARKET: Delay sell order by 1 turn,222.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,0,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,40.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249255,0,332,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,10.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,0,436,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),11.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,0,464,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),12.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249255,0,472,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249255,0,500,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,41.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249255,0,504,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=6),381.0,NOT_DETECTED,False,False,True,True,True,188.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,4.0,NOT_DETECTED,False,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,540,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),27.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249255,0,544,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),2.0,NOT_DETECTED,False,False,True,True,True,-9.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,580,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),25.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,0,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,17.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,0,592,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),23.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,0,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,44.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,0,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,53.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,0,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,54.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249255,0,652,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),21.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249255,0,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,21.0,NOT_REPRESENTED,True,False,True,True,True,-30.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,497.0,NOT_REPRESENTED,True,False,True,True,True,-207.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,680,Terminal,TERMINAL: Terminal complete shed inventory dump,514.0,NOT_REPRESENTED,True,False,True,True,True,144.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,684,Terminal,TERMINAL: Terminal complete shed inventory dump,1127.0,NOT_REPRESENTED,True,False,True,True,True,119.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249255,0,688,Terminal,TERMINAL: Terminal complete shed inventory dump,944.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249255,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,234.0,NOT_REPRESENTED,True,False,True,True,True,-178.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,0,24,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=3),18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,32,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),25.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,0,44,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),145.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,52,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),5.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,72,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),12.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,0,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,208,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),6.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,224,Market Timing,MARKET: Delay sell order by 1 turn,1548.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,240,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),162.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,252,Market Timing,MARKET: Delay sell order by 1 turn,6557.0,NOT_DETECTED,False,False,True,True,True,-14.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,0,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,-3.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249254,0,288,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),47.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,308,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,348,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),1.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,41.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,428,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249254,0,448,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),10.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,460,Worker Detour,WORKER: Swap farmer and hand_0 assignments,43.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,472,Worker Detour,WORKER: Swap farmer and hand_0 assignments,36.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249254,0,500,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,43.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249254,0,504,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=6),363.0,NOT_DETECTED,False,False,True,True,True,154.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,0,508,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),10.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,0,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249254,0,520,Worker Detour,WORKER: Swap farmer and hand_0 assignments,43.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249254,0,600,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),155.0,NOT_REPRESENTED,True,False,True,True,True,25.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,0,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,68.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249254,0,632,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),49.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249254,0,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,27.0,NOT_REPRESENTED,True,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,0,664,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),16.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249254,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,235.0,NOT_REPRESENTED,True,False,True,True,True,68.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,0,700,Terminal,TERMINAL: Terminal complete shed inventory dump,26.0,NOT_REPRESENTED,True,False,True,True,True,1.0,True,True,True,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249258,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,48,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),5.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,1,100,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=6),27.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,152,Market Timing,MARKET: Frontload buy 5 PUMPKIN seeds,277.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,172,Worker Detour,WORKER: Swap farmer and hand_0 assignments,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,188,Market Timing,MARKET: Delay sell order by 1 turn,235.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,196,Worker Detour,WORKER: Swap farmer and hand_0 assignments,67.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,224,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=2),36.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,280,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),1.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,288,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),12.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,316,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,86.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,340,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,142.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,356,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,38.0,NOT_DETECTED,False,False,True,True,True,-8.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,1,368,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,54.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,372,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,50.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249258,1,428,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,37.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249258,1,432,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),157.0,NOT_DETECTED,False,False,True,True,True,86.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,1,436,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,72.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,464,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,32.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249258,1,468,Worker Detour,WORKER: Swap farmer and hand_0 assignments,95.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249258,1,496,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),102.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,35.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,520,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,556,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,131.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,1,580,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),52.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249258,1,584,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),47.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249258,1,596,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),48.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249258,1,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,56.0,NOT_REPRESENTED,True,False,True,True,True,-76.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,1,624,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),849.0,NOT_REPRESENTED,True,False,True,True,True,43.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,1,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,1349.0,NOT_REPRESENTED,True,False,True,True,True,88.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,1,676,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),825.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249258,1,680,Terminal,TERMINAL: Terminal complete shed inventory dump,1337.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,1,684,Terminal,TERMINAL: Terminal complete shed inventory dump,1951.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249258,1,688,Terminal,TERMINAL: Terminal complete shed inventory dump,1851.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,171.0,NOT_REPRESENTED,True,False,True,True,True,-87.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,216,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),7.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,228,Market Timing,MARKET: Frontload buy 5 MELON seeds,210.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,256,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),3.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249260,1,260,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,14.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,264,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),13.0,NOT_DETECTED,False,False,True,True,True,12.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,312,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),39.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,90.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,388,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),15.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,408,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),99.0,NOT_DETECTED,False,False,True,True,True,88.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,460,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,44.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249260,1,472,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,34.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249260,1,488,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=1),20.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249260,1,496,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,45.0,NOT_DETECTED,False,False,True,True,True,2.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,504,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=4),234.0,NOT_DETECTED,False,False,True,True,True,74.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,15.0,NOT_DETECTED,False,False,True,True,True,-10.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,524,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),4.0,NOT_DETECTED,False,False,True,True,True,5.0,True,False,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249260,1,528,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),53.0,NOT_DETECTED,False,False,True,True,True,5.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,544,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,True,True,True,5.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,21.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249260,1,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,36.0,NOT_REPRESENTED,True,False,True,True,True,-6.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,14.0,NOT_REPRESENTED,True,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,35.0,NOT_REPRESENTED,True,False,True,True,True,-18.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,632,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,23.0,NOT_REPRESENTED,True,False,True,True,True,-34.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,672,Market Timing,MARKET: Immediate sale tranche of CARROT (qty=10),285.0,NOT_REPRESENTED,True,False,True,True,True,69.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,676,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),20.0,NOT_REPRESENTED,True,False,True,True,True,-7.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249260,1,688,Market Timing,MARKET: Immediate sale tranche of MILK (qty=8),345.0,NOT_REPRESENTED,True,False,True,True,True,-7.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,290.0,NOT_REPRESENTED,True,False,True,True,True,90.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249260,1,700,Terminal,TERMINAL: Terminal complete shed inventory dump,20.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249258,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,0,124,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),33.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,172,Worker Detour,WORKER: Swap farmer and hand_0 assignments,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,180,Market Timing,MARKET: Frontload buy 5 PUMPKIN seeds,135.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,196,Worker Detour,WORKER: Swap farmer and hand_0 assignments,67.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,216,Market Timing,MARKET: Immediate sale tranche of FERTILIZER (qty=2),34.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,240,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=9),13.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,292,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=9),92.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249258,0,316,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,86.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,340,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,142.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,356,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,38.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,364,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),16.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,368,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,54.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,372,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,50.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249258,0,428,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,37.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249258,0,436,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,72.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,448,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=3),48.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249258,0,452,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=3),47.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,0,464,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,32.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249258,0,468,Worker Detour,WORKER: Swap farmer and hand_0 assignments,95.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249258,0,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,35.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,556,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,131.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,564,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),23.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249258,0,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,56.0,NOT_REPRESENTED,True,False,True,True,True,-76.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,0,628,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),700.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249258,0,636,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),477.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249258,0,640,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),570.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249258,0,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,1349.0,NOT_REPRESENTED,True,False,True,True,True,88.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,0,680,Terminal,TERMINAL: Terminal complete shed inventory dump,1337.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,0,684,Terminal,TERMINAL: Terminal complete shed inventory dump,1951.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249258,0,688,Terminal,TERMINAL: Terminal complete shed inventory dump,1851.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249258,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,171.0,NOT_REPRESENTED,True,False,True,True,True,-87.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,36,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=6),17.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,1,100,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=6),27.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,148,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=3),6.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249253,1,160,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,168,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),15.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,172,Worker Detour,WORKER: Swap farmer and hand_0 assignments,29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,220,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,232,Worker Detour,WORKER: Swap farmer and hand_0 assignments,33.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,240,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=9),100.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,268,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,144.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,288,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),46.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,292,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,190.0,NOT_DETECTED,False,False,True,True,True,2.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,1,316,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,101.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,328,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),15.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,336,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),76.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,340,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,160.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,368,Worker Detour,WORKER: Swap farmer and hand_0 assignments,44.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,1,372,Worker Detour,WORKER: Swap farmer and hand_0 assignments,44.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249253,1,380,Worker Detour,WORKER: Swap farmer and hand_0 assignments,41.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,1,416,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),8.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,1,428,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,1,436,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,145.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,444,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),11.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249253,1,464,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,19.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,468,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,520,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,556,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,167.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,572,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,1,628,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),18.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249253,1,648,Market Timing,MARKET: Immediate sale tranche of MILK (qty=6),572.0,NOT_REPRESENTED,True,False,True,True,True,642.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249253,1,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,8.0,NOT_REPRESENTED,True,False,True,True,True,-14.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,1,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,1084.0,NOT_REPRESENTED,True,False,True,True,True,422.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,1,680,Terminal,TERMINAL: Terminal complete shed inventory dump,1182.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,1,684,Terminal,TERMINAL: Terminal complete shed inventory dump,1638.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,1,688,Terminal,TERMINAL: Terminal complete shed inventory dump,1550.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,173.0,NOT_REPRESENTED,True,False,True,True,True,-79.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,1,52,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),5.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249254,1,64,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),4.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,1,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,1,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,-3.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249254,1,308,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,1,312,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),118.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,1,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,41.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,1,428,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249254,1,460,Worker Detour,WORKER: Swap farmer and hand_0 assignments,43.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,1,472,Worker Detour,WORKER: Swap farmer and hand_0 assignments,36.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249254,1,500,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,43.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249254,1,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249254,1,520,Worker Detour,WORKER: Swap farmer and hand_0 assignments,43.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249254,1,556,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249254,1,564,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),43.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249254,1,568,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),25.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249254,1,600,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),155.0,NOT_REPRESENTED,True,False,True,True,True,25.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,1,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,68.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249254,1,652,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),24.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249254,1,656,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),16.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249254,1,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,27.0,NOT_REPRESENTED,True,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,1,680,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),47.0,NOT_REPRESENTED,True,False,True,True,True,-24.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,1,684,Market Timing,MARKET: Immediate sale tranche of MILK (qty=6),564.0,NOT_REPRESENTED,True,False,True,True,True,-14.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249254,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,235.0,NOT_REPRESENTED,True,False,True,True,True,68.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249254,1,700,Terminal,TERMINAL: Terminal complete shed inventory dump,26.0,NOT_REPRESENTED,True,False,True,True,True,1.0,True,True,True,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249251,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,0,196,Opponent,OPPONENT: Opponent preemption frontload on MILK,114.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,0,260,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,5.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249251,0,296,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),5.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249251,0,300,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),8.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,0,356,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=3),22.0,NOT_DETECTED,False,False,True,True,True,11.0,True,False,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249251,0,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,90.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,0,420,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=2),310.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249251,0,432,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=2),117.0,NOT_DETECTED,False,False,True,True,True,88.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,460,Worker Detour,WORKER: Swap farmer and hand_0 assignments,43.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,0,472,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,34.0,NOT_DETECTED,False,False,True,True,True,9.0,True,True,True,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249251,0,496,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,43.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,33.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249251,0,532,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=2),14.0,NOT_DETECTED,False,False,True,True,True,2.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,544,Worker Detour,WORKER: Swap farmer and hand_0 assignments,25.0,NOT_DETECTED,False,False,True,True,True,-3.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,9.0,NOT_REPRESENTED,True,False,True,True,True,-32.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,29.0,NOT_REPRESENTED,True,False,True,True,True,-12.0,False,False,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,17.0,NOT_REPRESENTED,True,False,True,True,True,-20.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,36.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249251,0,624,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),644.0,COUNTERFACTUAL_REJECTED,True,True,True,True,True,317.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,644,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,413.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249251,0,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,980.0,NOT_REPRESENTED,True,False,True,True,True,97.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,680,Terminal,TERMINAL: Terminal complete shed inventory dump,984.0,NOT_REPRESENTED,True,False,True,True,True,291.0,True,True,True,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249251,0,684,Terminal,TERMINAL: Terminal complete shed inventory dump,926.0,NOT_REPRESENTED,True,False,True,True,True,14.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249251,0,688,Terminal,TERMINAL: Terminal complete shed inventory dump,789.0,NOT_REPRESENTED,True,False,True,True,True,17.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249251,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,244.0,NOT_REPRESENTED,True,False,True,True,True,57.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,1,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,36,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=6),17.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,52,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),5.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249256,1,64,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),4.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,1,100,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=6),27.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,104,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=4),32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,140,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),50.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,40.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,1,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,87.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,388,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,460,Worker Detour,WORKER: Swap farmer and hand_0 assignments,39.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,472,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,31.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249256,1,496,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,39.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,39.0,NOT_DETECTED,False,False,True,True,True,-16.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,1,540,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),11.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,544,Worker Detour,WORKER: Swap farmer and hand_0 assignments,22.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249256,1,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,19.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,1,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,35.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,1,608,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),21.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,1,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,16.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,1,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,71.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249256,1,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,31.0,NOT_REPRESENTED,True,False,True,True,True,-30.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,1,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,394.0,NOT_REPRESENTED,True,False,True,True,True,218.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,1,676,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),262.0,NOT_REPRESENTED,True,False,True,True,True,136.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249256,1,680,Terminal,TERMINAL: Terminal complete shed inventory dump,395.0,NOT_REPRESENTED,True,False,True,True,True,104.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,1,684,Terminal,TERMINAL: Terminal complete shed inventory dump,760.0,NOT_REPRESENTED,True,False,True,True,True,66.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249256,1,688,Terminal,TERMINAL: Terminal complete shed inventory dump,546.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249256,1,696,Terminal,TERMINAL: Terminal complete shed inventory dump,232.0,NOT_REPRESENTED,True,False,True,True,True,-116.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,48,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),5.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,72,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),12.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,228,Market Timing,MARKET: Frontload buy 5 STRAWBERRY seeds,110.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,260,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,14.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,264,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),13.0,NOT_DETECTED,False,False,True,True,True,12.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,300,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),14.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,312,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),39.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,90.0,NOT_DETECTED,False,False,True,True,True,-3.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249252,0,420,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=2),310.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249252,0,432,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=2),117.0,NOT_DETECTED,False,False,True,True,True,85.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,460,Worker Detour,WORKER: Swap farmer and hand_0 assignments,44.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249252,0,472,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,34.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_FIELD_PRODUCTION: Backbone scheduled field production tasks with zero market order emission.
+249252,0,496,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,45.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,13.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249252,0,544,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,True,True,True,0.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,580,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),25.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,0,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,18.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,0,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,6.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,0,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,14.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,0,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,31.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249252,0,648,Market Timing,MARKET: Immediate sale tranche of MILK (qty=6),525.0,NOT_REPRESENTED,True,False,True,True,True,148.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249252,0,656,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),8.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249252,0,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,8.0,NOT_REPRESENTED,True,False,True,True,True,-10.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,680,Terminal,TERMINAL: Terminal complete shed inventory dump,191.0,NOT_REPRESENTED,True,False,True,True,True,59.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249252,0,684,Terminal,TERMINAL: Terminal complete shed inventory dump,544.0,NOT_REPRESENTED,True,False,True,True,True,26.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249252,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,240.0,NOT_REPRESENTED,True,False,True,True,True,58.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,40,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=7),119.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,0,116,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,160,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,168,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=8),15.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,172,Worker Detour,WORKER: Swap farmer and hand_0 assignments,29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,220,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,232,Worker Detour,WORKER: Swap farmer and hand_0 assignments,33.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,264,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),20.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,268,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,144.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,292,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,190.0,NOT_DETECTED,False,False,True,True,True,2.0,True,True,True,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,0,316,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,101.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,340,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,160.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,368,Worker Detour,WORKER: Swap farmer and hand_0 assignments,44.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,0,372,Worker Detour,WORKER: Swap farmer and hand_0 assignments,44.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249253,0,380,Worker Detour,WORKER: Swap farmer and hand_0 assignments,41.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,0,388,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),27.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,424,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),13.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,0,428,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,42.0,NOT_DETECTED,False,False,True,True,True,0.0,False,False,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,0,436,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,145.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,464,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,19.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,468,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,18.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,512,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,520,Worker Detour,WORKER: Swap farmer and hand_0 assignments,42.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,544,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),98.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,556,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,167.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,560,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),30.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,568,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),30.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249253,0,648,Market Timing,MARKET: Immediate sale tranche of MILK (qty=6),572.0,NOT_REPRESENTED,True,False,True,True,True,642.0,True,True,True,V3_BUY_ONLY_QUEUE: Backbone scheduled capital purchases without liquidating stored produce.
+249253,0,660,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,8.0,NOT_REPRESENTED,True,False,True,True,True,-14.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,0,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,1084.0,NOT_REPRESENTED,True,False,True,True,True,422.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,0,680,Terminal,TERMINAL: Terminal complete shed inventory dump,1182.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,0,684,Terminal,TERMINAL: Terminal complete shed inventory dump,1638.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249253,0,688,Terminal,TERMINAL: Terminal complete shed inventory dump,1550.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249253,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,173.0,NOT_REPRESENTED,True,False,True,True,True,-79.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,0,28,Worker Detour,WORKER: Swap farmer and hand_0 assignments,28.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,68,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=1),4.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,88,Worker Detour,WORKER: Swap farmer and hand_0 assignments,2.0,NOT_DETECTED,False,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,0,144,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),9.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,156,Worker Detour,WORKER: Swap farmer and hand_0 assignments,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,188,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=2),8.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,220,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),10.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,260,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,31.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,280,Worker Detour,WORKER: Swap farmer and hand_0 assignments,39.0,NOT_DETECTED,False,False,True,True,True,3.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,0,308,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,7.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,336,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),23.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,364,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,83.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,476,Market Timing,MARKET: Immediate sale tranche of WOOL (qty=3),32.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,484,Market Timing,MARKET: Immediate sale tranche of WHEAT (qty=10),29.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,500,Multi-worker,MULTI_WORKER: Coordinated Lead Harvest / Helper Drop,37.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,512,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,21.0,NOT_DETECTED,False,False,False,False,False,0.0,False,False,False,
+249257,0,528,Market Timing,MARKET: Immediate sale tranche of STRAWBERRY (qty=10),55.0,NOT_DETECTED,False,False,True,True,True,51.0,True,True,True,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,0,584,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,21.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249257,0,596,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,22.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249257,0,612,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,23.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249257,0,616,Opponent,OPPONENT: Opponent preemption frontload on WHEAT,48.0,NOT_REPRESENTED,True,False,False,False,False,0.0,False,False,False,
+249257,0,672,Opponent,OPPONENT: Opponent preemption frontload on STRAWBERRY,394.0,NOT_REPRESENTED,True,False,True,True,True,-1192.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,0,680,Terminal,TERMINAL: Terminal complete shed inventory dump,459.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,0,684,Terminal,TERMINAL: Terminal complete shed inventory dump,842.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_PASSIVE_MARKET_QUEUE: Backbone emitted empty market queue [].
+249257,0,688,Terminal,TERMINAL: Terminal complete shed inventory dump,561.0,NOT_REPRESENTED,True,False,True,True,True,0.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
+249257,0,696,Terminal,TERMINAL: Terminal complete shed inventory dump,234.0,NOT_REPRESENTED,True,False,True,True,True,-1196.0,False,True,False,V3_DIFFERENT_PORTFOLIO: Baseline sold different commodities or quantities.
