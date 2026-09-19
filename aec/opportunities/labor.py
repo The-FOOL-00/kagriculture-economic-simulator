@@ -75,13 +75,11 @@ class LaborOpportunityAnalyzer:
 
             # 1. Evaluate Dynamic Shadow Harvest reallocation
             if mature_harvest_tiles:
-                best_tile_opp: Optional[Tuple[Tuple[int, int], str, int, float, int, LaborOpportunityAssessment]] = None
-                best_net_val: float = 0.0
-
+                candidate_opps = []
                 for (xy, crop, yield_u, val) in mature_harvest_tiles:
                     dist = manhattan(w.position, xy)
-                    # Candidate must be reachable within local/tactical horizon
-                    if dist <= 4:
+                    # Candidate must be reachable within local/tactical horizon (dist <= 6)
+                    if dist <= 6:
                         # Construct formal labor opportunity query
                         req = LaborOpportunityRequest(
                             worker_id=w.worker_id,
@@ -91,20 +89,19 @@ class LaborOpportunityAnalyzer:
                             current_step=econ_state.step,
                             target_location=xy,
                             target_commodity=crop,
-                            horizon=max(6, dist * 2 + 2),
-                            allow_multiworker_expansion=False
+                            horizon=max(8, dist * 2 + 4),
+                            allow_multiworker_expansion=True
                         )
                         assessment = self.labor_engine.assess_opportunity(req)
 
                         # Check whether reallocation creates net positive economic value
-                        if assessment.safe_to_use and assessment.net_incremental_value > best_net_val:
-                            best_net_val = assessment.net_incremental_value
-                            best_tile_opp = (xy, crop, yield_u, val, dist, assessment)
+                        if assessment.safe_to_use and assessment.net_incremental_value > 0.0:
+                            candidate_opps.append((assessment.net_incremental_value, xy, crop, yield_u, val, dist, assessment))
 
-                if best_tile_opp is not None:
-                    xy, crop, yield_u, val, dist, assess = best_tile_opp
+                # Sort by net incremental value descending and emit top opportunities
+                candidate_opps.sort(key=lambda x: -x[0])
+                for net_val, xy, crop, yield_u, val, dist, assess in candidate_opps[:2]:
                     opp_cost = assess.opportunity_cost
-                    net_val = assess.net_incremental_value
                     opportunities.append(Opportunity(
                         opportunity_id=f"LABOR_HARVEST_W{w.worker_id}_{crop}_{xy[0]}_{xy[1]}",
                         category="LABOR",
@@ -122,7 +119,7 @@ class LaborOpportunityAnalyzer:
                             "net_incremental_value": net_val,
                             "baseline_is_idle": is_idle,
                         },
-                        required_horizon=max(6, dist * 2 + 2),
+                        required_horizon=max(12, dist * 2 + 6),
                         rationale=(
                             f"Worker {w.worker_id} marginal labor reallocation: harvest {crop} at {xy} "
                             f"(gross ${val:.1f}, opp cost ${opp_cost:.1f}, net ${net_val:.1f})."

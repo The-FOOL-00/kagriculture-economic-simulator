@@ -161,6 +161,21 @@ def extract_worker_trajectory(
     return trajectory
 
 
+def extract_all_worker_trajectories(
+    econ_state: Any,
+    action_sequence: List[Dict[str, Any]],
+    board_size: int = BOARD_SIZE
+) -> Dict[int, List[Tuple[int, int]]]:
+    """Trace positions for all workers across an action sequence, indexed by step offset."""
+    trajectories: Dict[int, List[Tuple[int, int]]] = {}
+    if econ_state is None or getattr(econ_state, "workers", None) is None:
+        return trajectories
+    for w in econ_state.workers.workers:
+        tr = extract_worker_trajectory(action_sequence, w.position, w.worker_id, board_size)
+        trajectories[w.worker_id] = [w.position] + [p for p, _ in tr]
+    return trajectories
+
+
 class SpacetimeReservationTable:
     """Reservation table enforcing collision-free multi-worker space-time coordination (§11)."""
 

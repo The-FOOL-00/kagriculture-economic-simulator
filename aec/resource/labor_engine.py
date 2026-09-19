@@ -39,13 +39,6 @@ from aec.coordination.scheduler import (
 )
 from aec.coordination.task_model import TaskActionFamily, TaskPriority, WorkerTask
 from aec.coordination.worker_model import WorkerCapability, WorkerState, extract_farm_workers
-from aec.counterfactual.opponent_pressure import OpponentPressureModel
-from aec.counterfactual.simulator import (
-    CounterfactualFidelityLevel,
-    CounterfactualSimulator,
-    SimulationOutcome,
-    simulate_rollout,
-)
 from aec.ir.dependency_graph import (
     ActionBasketDependencyGraph,
     ActionNode,
@@ -53,7 +46,6 @@ from aec.ir.dependency_graph import (
     build_basket_dependency_graph,
 )
 from aec.ir.economic_state import EconomicState
-from aec.patches.patch import CoupledPatch
 from aec.replanning.reconnect import (
     CANONICAL_DIRECTIONS,
     ReconnectRequest,
@@ -190,6 +182,7 @@ class LaborOpportunityCostEngine:
         self.board_size = board_size
         self.coordinator = MultiWorkerLogisticsCoordinator(board_size=board_size)
         self.reconnection_engine = ReconnectionEngine()
+        from aec.counterfactual.simulator import CounterfactualSimulator
         self.counterfactual_simulator = CounterfactualSimulator()
 
     def assess_opportunity(self, request: LaborOpportunityRequest) -> LaborOpportunityAssessment:
@@ -521,6 +514,8 @@ class LaborOpportunityCostEngine:
         wid = request.worker_id
 
         # 1. Simulate Baseline Forward
+        from aec.counterfactual.opponent_pressure import OpponentPressureModel
+        from aec.counterfactual.simulator import simulate_rollout
         opp_model = OpponentPressureModel(
             opponent_state=econ.opponent,
             mode="CALIBRATED_ESTIMATE"

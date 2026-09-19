@@ -302,8 +302,24 @@ class AECExecutor:
             # -----------------------------------------------------------------
             # 5. COUPLED PATCH GENERATION, FUNNEL, & MACRO/META SCREENING (Layer 2 Defense & §7, §10, §12)
             # -----------------------------------------------------------------
+            # Extract read-only future backbone continuation trajectory (zero live calls)
+            n_hands = max(0, len(econ_state.workers.workers) - 1)
+            future_trajectory = self.backbone.get_future_trajectory(
+                step=step,
+                horizon=self.config.extended_horizon,
+                player=econ_state.player,
+                n_hands=n_hands
+            )
+            from aec.replanning.reconnect import extract_all_worker_trajectories
+            co_worker_trajectories = extract_all_worker_trajectories(econ_state, future_trajectory)
+
             raw_patches = self.patch_generator.generate_patches(
-                opportunities, econ_state, baseline_action, config=self.config
+                opportunities,
+                econ_state,
+                baseline_action,
+                config=self.config,
+                baseline_continuation=future_trajectory,
+                co_worker_trajectories=co_worker_trajectories,
             )
             telemetry.patches_generated_count = len(raw_patches) + self.patch_generator.last_quarantined_count
             telemetry.patches_quarantined_count = self.patch_generator.last_quarantined_count
@@ -382,15 +398,7 @@ class AECExecutor:
             best_eval_result = None
             quarantined_superior_patch: Optional[CoupledPatch] = None
 
-            # Extract read-only future backbone continuation trajectory (zero live calls)
             active_patches = candidate_patches[:self.config.max_simulations]
-            n_hands = max(0, len(econ_state.workers.workers) - 1)
-            future_trajectory = self.backbone.get_future_trajectory(
-                step=step,
-                horizon=self.config.extended_horizon,
-                player=econ_state.player,
-                n_hands=n_hands
-            )
 
             for patch in active_patches:
                 horizon = select_adaptive_horizon(patch, econ_state, self.config, future_trajectory)

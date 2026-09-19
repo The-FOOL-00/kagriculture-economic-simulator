@@ -258,6 +258,14 @@ class WinModel:
                 is_superior = False
                 rationale = "No dead-crop seed expenditure detected in baseline"
 
+        elif fam == "DYNAMIC_SHADOW_HARVEST" or "HARVEST" in patch_id:
+            if delta_margin > 0.0 and delta_money >= 0.0:
+                is_superior = True
+                rationale = f"Certified dynamic harvest trajectory yields positive margin: margin +${delta_margin:.1f}, cash +${delta_money:.1f}"
+            else:
+                is_superior = False
+                rationale = f"Dynamic harvest produces non-positive economic margin: delta margin ${delta_margin:.1f}, delta cash ${delta_money:.1f}"
+
         else:
             # Standard Lexicographic Hierarchy
             p_win_gain = cand_p_win - base_p_win

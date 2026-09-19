@@ -240,3 +240,26 @@ class AECConfig:
         """Direct check enforcing that RESOURCE_CONVERSION remains strictly quarantined."""
         return self.is_family_live_eligible("RESOURCE_CONVERSION")
 
+
+# -----------------------------------------------------------------------------
+# 5. INTEGRATED BUILDS (Phase 010 Part XXIII & XXIV)
+# -----------------------------------------------------------------------------
+def build_robust_qualified_config() -> AECConfig:
+    """Canonical AEC_ROBUST_QUALIFIED build containing only verified qualified mechanisms."""
+    return AECConfig(
+        operational_mode="ROBUST_MODE",
+        enabled_mechanisms=ENABLED_FOUNDATION_MECHANISMS,
+        quarantined_mechanisms=QUARANTINED_MECHANISMS,
+        frozen_mode=True,
+    )
+
+
+def build_research_full_config() -> AECConfig:
+    """Diagnostic AEC_RESEARCH_FULL build containing completed mechanisms with active gates."""
+    return AECConfig(
+        operational_mode="RESEARCH_MODE",
+        enabled_mechanisms=ENABLED_FOUNDATION_MECHANISMS,
+        quarantined_mechanisms=QUARANTINED_MECHANISMS,
+        frozen_mode=False,
+    )
+
