@@ -1,151 +1,172 @@
 # AEC PHASE 012: GROUP 2 FINAL MECHANISM RESCUE REPORT
+## Canonical Evidence Reconciliation & Qualification Audit
 
 **Author**: Antigravity AI Research Agent (Phase 012 Lead)  
-**Date**: 2026-09-19  
+**Date**: 2026-09-19 (Corrected & Frozen)  
 **Chassis Freeze Hash**: `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943`  
 **Empirical Control**: Frozen Live Foundation (`V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN`)  
-**Scope**: Second-Generation Economic State Rescue for `TOWN_CYCLE`, `EMERGENCY_RECOVERY`, `OPPONENT_PREEMPT_SELL`, and `RESOURCE_CONVERSION` (§0–§43)
+**Evaluation Protocol**: Paired Common Random Numbers (CRN) Mirror-Seat Evaluation  
+**Seed Governance**: Certified Fresh Development Cohorts (`249171..249205`), zero overlap with protected cohorts (`340050..340199`, `214200..214249`, `340300..340349`) or retired development cohorts.
 
 ---
 
-## 1. Executive Summary
+## 1. Scope
 
-Phase 012 executed a comprehensive second-generation architectural and economic rescue of the four Group 2 mechanisms:
+Phase 012 executed a second-generation architectural and economic rescue for the four Group 2 mechanisms:
 1. **`TOWN_CYCLE`** (Economic Cycle Timing)
 2. **`EMERGENCY_RECOVERY`** (Selective Damage Avoidance)
 3. **`OPPONENT_PREEMPT_SELL`** (Robust Opponent Preemption under Uncertainty)
 4. **`RESOURCE_CONVERSION`** (Margin-First Comparative Valuation)
 
-All four mechanisms were completely redesigned from first principles, equipped with structural livestock feed protection invariants, dynamic working capital requirements, physical inventory guards, minimal damage-avoidance circuit breakers, and labor opportunity-cost models.
+The purpose of this report is to establish an internally consistent, forensic scientific record matching the Level 1 raw experiment artifacts (`results/phase012/*_matches.csv` and `*_summary.json`).
 
-Every mechanism was rigorously evaluated under paired Common Random Numbers (CRN) mirror-seat matches against the frozen live foundation using certified fresh development seeds (`249171..249205`). Total matches executed: **110 full 720-step games** (20 matches each for Town Cycle, Emergency Recovery, and Resource Conversion; 70 matches for Opponent Preemption).
-
-### Master Status & Outcome Summary
-
-| Mechanism | Final Scientific Status | Formal Cohort | Paired Mean $\Delta$ | Paired Median $\Delta$ | Win / Loss / Tie | Win Rate | Target Commits | Commit Rate | Live Recommendation |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **`TOWN_CYCLE`** | **FUNCTIONALLY COMPLETE / QUARANTINED** | Pilot (N=10) | **-423.60** | -74.00 | 3W / 7L / 0T | 30.0% | 118 | 8.79% | Quarantine. Do not deploy to live build. |
-| **`EMERGENCY_RECOVERY`** | **FUNCTIONALLY COMPLETE / QUARANTINED** | Pilot (N=10) | **+0.00** | +0.00 | 0W / 0L / 10T | 0.0% | 120 | 27.15% | Quarantine. Baseline already safe; zero incremental margin. |
-| **`OPPONENT_PREEMPT_SELL`** | **FUNCTIONALLY COMPLETE / QUARANTINED** | Formal Q1 (N=25) | **-58.76** | -49.00 | 8W / 16L / 1T | 32.0% | 375 | 3.51% | Quarantine. Positive in pilot (+112.4), but net negative across 25 fresh seeds. |
-| **`RESOURCE_CONVERSION`** | **FUNCTIONALLY COMPLETE / QUARANTINED** | Pilot (N=10) | **+0.00** | +0.00 | 0W / 0L / 10T | 0.0% | 0 | 0.00% | Quarantine. Margin-first valuation proves raw crop sales dominate conversion. |
+Under experiment governance, the protocol strictly distinguishes:
+* **Pilot Screenings (N=10 seeds, 20 mirror matches)**: Used for directional screening and failure-mode validation.
+* **Formal Qualification (N=25 seeds, 50 mirror matches)**: The required hurdle for prospective live deployment consideration.
 
 ---
 
-## 2. Mechanism-by-Mechanism Forensic & Qualification Dossier
+## 2. Frozen Architecture
 
-### 2.1 Mechanism A: `TOWN_CYCLE` (Economic Cycle Timing)
-
-- **Prior Formulation**: First-generation detector omitted baseline `SELL` orders whenever a 72-turn shop refresh was within 3 turns, expecting a static unit price bump.
-- **Prior Evidence**: Catastrophic failure in Phase 004/010: -$36,655.33 / seed ($t=-2.55, p=0.0108$).
-- **Suspected Failure Cause**: Omitting sell orders starved working capital, missing seed purchase deadlines at day boundaries ($t \equiv 0 \pmod{24}$); shed filled to capacity, blocking harvester drop-offs; delayed lump-sum market dumps depressed clearing prices.
-- **Rescued Formulation**:
-  - Derived dynamic `RequiredLiquidity` based on upcoming mandatory obligations (wages, feed, seeds).
-  - Implemented shed headroom buffer guard (delay only permitted if shed occupancy $\le 80\%$).
-  - Physical inventory invariant: strictly forbids delaying orders for goods not physically present in shed.
-  - Livestock feed invariant: strictly forbids withholding or dumping animal feed.
-- **Implementation Changes**:
-  - `compute_required_liquidity` in `aec/opportunities/town_cycle.py`.
-  - Win model hurdle in `aec/evaluation/win_model.py`: mandates $\Delta \text{Margin} \ge \$15.0$ and $\Delta \text{Money} \ge -\$20.0$.
-- **Functional Evidence**: Passed all adversarial micro-validation tests; passed 591/591 unit tests.
-- **Activation Exposure**: 1,342 candidates generated; 1,180 simulated; 118 committed across 10/10 seeds (8.79% commit rate).
-- **Exact Economic Evidence**:
-  - Pilot (N=10 seeds, 20 matches): Mean Paired $\Delta = -423.60$ pts (SE = 225.05, 95% CI `[-932.67, +85.47]`).
-  - Record: 3W / 7L / 0T (Win Rate: 30.0%).
-  - Causal Mechanism: Deferring sales in a macro-scheduled V3 backbone desynchronizes downstream cash flow without generating sufficient price appreciation to outpace the lost time-value of money.
-- **Safety & Latency**: 0 safety violations; P50 latency 84.2 ms, P95 latency 290.4 ms.
-- **Final Status**: **FUNCTIONALLY COMPLETE / QUARANTINED**.
-- **Live Recommendation**: Maintain in quarantine. Architectural idea has been given its strongest formulation; empirical counterfactuals demonstrate that sales deferral is net negative on the V3 operating model.
+All experiments in Phase 012 were executed against the frozen canonical V3 chassis:
+- **Tarball Path**: `submission_Vj_kc_v3.tar.gz`
+- **Chassis SHA-256**: `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943` (verified bit-identical).
+- **Protected Cohorts**: Primary Holdout (`340050..340199`), Gate 0.3 Holdout (`214200..214249`), and Prospective Tournament Cohort (`340300..340349`) remained strictly unvisited.
+- **Retired Development Cohorts**: No re-use of seeds `50000..50024`, `249000..249049`, `249050..249110`, or `249111..249170`.
 
 ---
 
-### 2.2 Mechanism B: `EMERGENCY_RECOVERY` (Selective Damage Avoidance)
+## 3. Empirical Control
 
-- **Prior Formulation**: First-generation panic threshold triggered wholesale dumping of shed commodities whenever cash dipped below wages due tonight, and attempted feed purchases that never physically reached animals.
-- **Prior Evidence**: Phase 004/010 loss: -$25,792.00 / seed ($t=-5.36, p=0.0000$).
-- **Suspected Failure Cause**: Panic wage liquidation dumped wheat from shed, starving the cow herd (causing -$42,435 downstream loss); false alarms fired during normal operational cash dips.
-- **Rescued Formulation**:
-  - 4-stage irreversibility classification: *Reversible*, *Recoverable*, *Emerging Irreversible*, *Current Hard Failure*.
-  - Minimal surgical intervention: liquidate only the minimal parcel required to cover tonight's wage deficit.
-  - Livestock feed security invariant: `WHEAT` is strictly excluded from wage liquidation when the farm owns active animals.
-  - Avoided damage valuation: evaluated by avoided asset loss, not gross market value.
-- **Implementation Changes**:
-  - `FeedSecurityEngine` integration in `aec/opportunities/emergency.py`.
-  - Priority commodity liquidation excluding wheat in `EmergencyRecoveryDetector`.
-  - Win model condition: mandates $\Delta \text{Margin} \ge -\$15.0$ and feed security verification.
-- **Functional Evidence**: Passed 12 failure/false-alarm tests; 591/591 unit tests pass.
-- **Activation Exposure**: 442 candidates generated; 442 simulated; 120 committed across 10/10 seeds (27.15% commit rate).
-- **Exact Economic Evidence**:
-  - Pilot (N=10 seeds, 20 matches): Mean Paired $\Delta = +0.00$ pts (SE = 0.00, 95% CI `[+0.00, +0.00]`).
-  - Record: 0W / 0L / 10T (100% Tie Rate).
-  - Causal Mechanism: First-generation failure completely cured (zero catastrophic losses). However, in every state where emergency recovery committed, the frozen foundation baseline was either already safe or already executing the liquidation via scheduled sales or `TERMINAL_LIQUIDATION`. Treatment produced move-for-move identical actions to baseline.
-- **Safety & Latency**: 0 safety violations; P50 latency 82.1 ms, P95 latency 285.3 ms.
-- **Final Status**: **FUNCTIONALLY COMPLETE / QUARANTINED**.
-- **Live Recommendation**: Maintain in quarantine. The mechanism is completely safe and non-destructive, but offers zero incremental economic margin over the existing foundation.
+The authoritative baseline control for all Phase 012 mirror matches was the exact frozen live foundation:
+$$\text{CONTROL} = \text{V3 Chassis} + \text{DEPENDENCY\_AWARE\_MARKET\_TIMING} + \text{TERMINAL\_LIQUIDATION} + \text{PHASE\_SHUTDOWN}$$
+
+* **Isolation Verification**: No Group 1 rescued mechanisms (`DYNAMIC_SHADOW_HARVEST`, `CARGO_FERRY`, `ROUTE_COMPRESSION`, `TERMINAL_HARVEST_SWEEP`) were active in the control.
+* **Quarantine Enforcement**: All 15 non-foundation mechanisms were actively quarantined in `ctrl_cfg.quarantined_mechanisms`.
+* **Feed Invariant Location**: Feed security predicates were applied exclusively within candidate proposal and gating for treatments; the shared foundation control logic was untouched.
 
 ---
 
-### 2.3 Mechanism C: `OPPONENT_PREEMPT_SELL` (Robust Opponent Preemption)
+## 4. Experimental Cohorts
 
-- **Prior Formulation**: First-generation detector attempted point prophecy of rival dumping, selling indiscriminately into thin markets.
-- **Prior Evidence**: Phase 004/010 loss: -$96.67 / seed (-$145.00 / commit).
-- **Suspected Failure Cause**: Dumped low-margin goods and wheat feed; self-inflicted price depression; failed self-value dominance.
-- **Rescued Formulation**:
-  - Continuous pressure tracking under bounded uncertainty.
-  - Self-gain dominance: preemption approved only if our own terminal wealth improves regardless of rival actions; rival damage is never credited.
-  - Feed security invariant: strictly forbids selling wheat feed if livestock is present.
-  - Commodity focus: restricted strictly to high-margin cash goods (`MILK`, `WOOL`, `EGG`, `STRAWBERRY`, `MELON`).
-- **Implementation Changes**:
-  - Preemption detector overhaul in `aec/opportunities/preemption.py`.
-  - Win model hurdle in `aec/evaluation/win_model.py`: mandates $\Delta \text{Margin} \ge \$10.0$ or ($\Delta \text{Money} \ge \$15.0$ with $\Delta \text{Margin} \ge 0$).
-- **Functional Evidence**: Passed all pressure/uncertainty scenarios; 591/591 unit tests pass.
-- **Activation Exposure**: 4,136 pilot candidates (142 commits, 3.43% rate); 10,674 formal candidates (375 commits, 3.51% rate).
-- **Exact Economic Evidence**:
-  - Pilot (N=10 seeds, 20 matches): Mean Paired $\Delta = \mathbf{+112.40}$ pts (SE = 105.81), 6W / 4L / 0T (60.0% Win Rate).
-  - Formal Qualification `formal_q1` (N=25 seeds, 50 matches): Mean Paired $\Delta = \mathbf{-58.76}$ pts (SE = 44.15, 95% CI `[-149.89, +32.37]`), 8W / 16L / 1T (32.0% Win Rate, $t=-1.331, p=0.1958$).
-  - Combined 35-Seed Dataset: Mean Paired $\Delta = \mathbf{-9.84}$ pts, 14W / 20L / 1T (40.0% Win Rate).
-  - Causal Mechanism: While defensive preemption occasionally captures peak shop depth on favorable seeds, on broader distributions it prematurely fragments batch market sales, forfeiting downstream volume consolidation and pulling forward price depreciation.
-- **Safety & Latency**: 0 safety violations; P50 latency 84.6 ms, P95 latency 295.1 ms.
-- **Final Status**: **FUNCTIONALLY COMPLETE / QUARANTINED**.
-- **Live Recommendation**: Maintain in quarantine. The mechanism cannot be scientifically qualified for the live build.
+Phase 012 utilized two distinct fresh development cohorts:
+1. **Pilot Cohort (`pilot`)**: Seeds `249171..249180` (N=10 seeds, 20 mirror matches per mechanism). Evaluated for all four mechanisms (80 total matches).
+2. **Formal Qualification Cohort (`formal_q1`)**: Seeds `249181..249205` (N=25 seeds, 50 mirror matches). Pursued exclusively for `OPPONENT_PREEMPT_SELL` following its positive pilot screen.
+
+### Reconstructed Qualification Match Ledger
+
+| Mechanism | Pilot Seeds | Pilot Matches | Formal Seeds | Formal Matches | Total Unique Seeds | Total Matches |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **`TOWN_CYCLE`** | 10 (`249171..80`) | 20 | 0 | 0 | 10 | 20 |
+| **`EMERGENCY_RECOVERY`** | 10 (`249171..80`) | 20 | 0 | 0 | 10 | 20 |
+| **`OPPONENT_PREEMPT_SELL`** | 10 (`249171..80`) | 20 | 25 (`249181..205`) | 50 | 35 | 70 |
+| **`RESOURCE_CONVERSION`** | 10 (`249171..80`) | 20 | 0 | 0 | 10 | 20 |
+| **TOTAL QUALIFICATION** | **40** (10 unique) | **80** | **25** (25 unique) | **50** | **35 unique** | **130** |
+
+*(Note: Two additional single-seed exploratory runs of 2 matches each exist in `results/phase012` for `TOWN_CYCLE_custom_1` and `EMERGENCY_RECOVERY_custom_1`, bringing the total matches recorded on disk to 134. The qualification experiment executed exactly 130 matches).*
 
 ---
 
-### 2.4 Mechanism D: `RESOURCE_CONVERSION` (Margin-First Valuation)
+## 5. Mechanism Results
 
-- **Prior Formulation**: Evaluated conversion statically on raw unit prices ($P_{\text{target}} > P_{\text{source}}$), ignoring worker diversion, processing delays, and working capital lockup.
-- **Prior Evidence**: Phase 004 loss: -$258.96 ITT delta, 0/50 wins.
-- **Suspected Failure Cause**: Diverted field labor from harvesting high-margin crops; capital depletion; outputs lagged planting windows.
-- **Rescued Formulation**:
-  - Margin-first comparative valuation: explicitly models `KEEP` vs `CONVERT` vs `BUY` vs `PRODUCE`.
-  - Marginal labor opportunity cost deduction ($>\$40/\text{turn}$ for active farm workers).
-  - Structural liquidity and feed security invariants: strictly forbids converting wheat feed when livestock is active.
-- **Implementation Changes**:
-  - `aec/opportunities/conversion.py` and `aec/evaluation/win_model.py`.
-- **Functional Evidence**: Passed all adversarial conversion scenarios; 591/591 unit tests pass.
-- **Activation Exposure**: 13,360 candidates generated across 10 pilot seeds; 13,360 simulated; **0 commits** (0.00% commit rate).
-- **Exact Economic Evidence**:
-  - Pilot (N=10 seeds, 20 matches): Mean Paired $\Delta = +0.00$ pts (SE = 0.00), 0W / 0L / 10T.
-  - Causal Mechanism: When labor opportunity costs are properly accounted for, direct field cultivation and raw commodity sales strictly dominate secondary processing across all states on the V3 farm scale. The compiler correctly abstained on 100% of conversion proposals.
-- **Safety & Latency**: 0 safety violations; P50 latency 85.1 ms, P95 latency 292.8 ms.
-- **Final Status**: **FUNCTIONALLY COMPLETE / QUARANTINED**.
-- **Live Recommendation**: Maintain in quarantine. 100% abstention proves that resource conversion is economically unviable in this game environment.
+The complete forensic results reconstructed directly from Level 1 raw CSVs and JSONs are summarized below:
+
+| Mechanism | Evidence Stage | Evaluated Seeds | Mirror Matches | Paired Mean $\Delta$ | Paired Median $\Delta$ | Std Dev | Std Error | 95% Conf. Interval | $t$-Stat ($p$-value) | Record (W / L / T) | Target Commits (Rate) |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **`TOWN_CYCLE`** | Pilot | 10 | 20 | -423.60 | -74.00 | 711.68 | 225.05 | `[-932.67, +85.47]` | -1.882 ($p=0.0925$) | 3W / 7L / 0T | 118 (8.79%) |
+| **`EMERGENCY_RECOVERY`** | Pilot | 10 | 20 | +0.00 | +0.00 | 0.00 | 0.00 | `[+0.00, +0.00]` | 0.000 ($p=1.000$) | 0W / 0L / 10T | 120 (27.15%) |
+| **`OPPONENT_PREEMPT_SELL`** | Pilot | 10 | 20 | +112.40 | +36.00 | 334.61 | 105.81 | `[-126.95, +351.75]` | +1.062 ($p=0.3158$) | 6W / 4L / 0T | 142 (3.43%) |
+| **`OPPONENT_PREEMPT_SELL`** | Formal Q1 | 25 | 50 | -58.76 | -49.00 | 220.75 | 44.15 | `[-149.89, +32.37]` | -1.331 ($p=0.1957$) | 8W / 16L / 1T | 375 (3.51%) |
+| **`RESOURCE_CONVERSION`** | Pilot | 10 | 20 | +0.00 | +0.00 | 0.00 | 0.00 | `[+0.00, +0.00]` | 0.000 ($p=1.000$) | 0W / 0L / 10T | 0 (0.00%) |
+
+All matches completed the full 719-step simulation horizon (0 early terminations, 0 safety violations, 100% simulator fidelity).
 
 ---
 
-## 3. Cross-Mechanism Composition Analysis (§27, §28)
+## 6. Formal Qualification Results
 
-Per Governance §27: *"Individual qualification first. Composition second. Do NOT use combined success to retroactively claim individual qualification."*
+Only one mechanism in Group 2 advanced to and completed a formal qualification cohort:
 
-Since none of the four individual mechanisms achieved positive statistical qualification over the frozen live foundation, cross-mechanism composition cannot be qualified for live deployment. Group 2 mechanisms will remain quarantined in the compiler configuration.
+### `OPPONENT_PREEMPT_SELL` (Formal Q1 Cohort)
+- **Cohort**: Fresh seeds `249181..249205` (N=25 seeds, 50 mirror matches).
+- **Outcome**: Mean Paired $\Delta = \mathbf{-58.76}$ pts, Median = $\mathbf{-49.00}$ pts, Record = **8W / 16L / 1T** (32.0% Win Rate).
+- **Statistical Significance**: $t = -1.331$, $p = 0.1957$, 95% CI `[-149.89, +32.37]`.
+- **Causal Assessment**: While preemption demonstrated positive screening in the 10-seed pilot (+112.40 pts) by capturing peak shop depth on favorable seeds, broader evaluation revealed that preemptive selling prematurely fragments batch market sales. Pulling sales forward forfeits volume consolidation and depresses prices prematurely.
+- **Formal Status**: The formal 25-seed result is the authoritative qualification evidence. Because the mechanism produced negative incremental delta and failed all qualification criteria, it is **quarantined from live deployment**.
 
 ---
 
-## 4. Final Scientific Conclusion & Live Foundation State
+## 7. Pilot-Only Results
 
-The frozen empirical control foundation remains the official, validated, high-performing championship configuration:
+The remaining three mechanisms were evaluated exclusively in 10-seed pilot cohorts and did not pursue formal qualification:
+
+### 1. `TOWN_CYCLE`
+- **Evidence**: 10-seed pilot (`249171..249180`), Mean Paired $\Delta = \mathbf{-423.60}$ pts, 3W / 7L / 0T.
+- **Finding**: Negative pilot evidence clearly demonstrates that deferring sales desynchronizes working capital needed for day-boundary seed purchases. The loss is severe enough to justify immediate quarantine without spending resources on a 25-seed formal cohort.
+- **Status**: `FUNCTIONALLY COMPLETE / QUARANTINED` — negative pilot evidence; formal qualification not pursued.
+
+### 2. `EMERGENCY_RECOVERY`
+- **Evidence**: 10-seed pilot (`249171..249180`), Mean Paired $\Delta = \mathbf{+0.00}$ pts, 0W / 0L / 10T (100% ties).
+- **Finding**: The second-generation redesign completely eliminated the catastrophic first-generation livestock starvation failure (-$42,435). However, in all states where recovery activated, the baseline foundation was already safe or executing identical liquidations. The mechanism produced zero incremental value over the foundation.
+- **Status**: `FUNCTIONALLY COMPLETE / DORMANT` — safe and functional, but produced zero incremental advantage in pilot.
+
+### 3. `RESOURCE_CONVERSION`
+- **Evidence**: 10-seed pilot (`249171..249180`), 13,360 opportunities evaluated, **0 commits** (0.00%), Mean Paired $\Delta = \mathbf{+0.00}$ pts, 0W / 0L / 10T.
+- **Finding**: The margin-first valuation correctly accounts for labor opportunity costs ($>\$40/\text{turn}$). Direct crop cultivation strictly dominates secondary processing; 0 commits reflects mathematically sound abstention rather than software failure.
+- **Status**: `FUNCTIONALLY COMPLETE / DORMANT` — functionally complete, 100% legitimate abstention in pilot.
+
+---
+
+## 8. Causal Findings
+
+1. **Working Capital Priority**: In a macro-scheduled agricultural simulation, cash timing dominates minor price-elasticity advantages. Deferring sales (`TOWN_CYCLE`) starves seed purchases, missing entire 24-turn crop cycles.
+2. **Defensive Baseline Sufficiency**: The frozen foundation (`DEPENDENCY_AWARE_MARKET_TIMING` + `TERMINAL_LIQUIDATION` + `PHASE_SHUTDOWN`) already manages terminal cash and liquidation near-optimally. Emergency recovery mechanisms duplicate existing protections rather than expanding margin.
+3. **Batch Consolidation vs. Preemption**: Pulling sales forward (`OPPONENT_PREEMPT_SELL`) disrupts bulk order batching. In 16 of 25 formal seeds, waiting for consolidated market orders yielded higher net revenue than preemption.
+4. **Labor Opportunity Costs**: Processing agricultural goods into secondary products absorbs critical worker turns. Because land productivity is high, worker opportunity costs render secondary conversion economically negative under baseline parameters.
+
+---
+
+## 9. Cross-Mechanism Findings
+
+Per governance rules, individual mechanism qualification is a mandatory prerequisite for cross-mechanism composition. Because none of the four individual mechanisms achieved positive statistical qualification over the frozen live foundation, composite multi-mechanism interactions cannot be authorized for live deployment. Group 2 mechanisms remain isolated and quarantined in live configurations.
+
+---
+
+## 10. Experimental Limitations
+
+1. **Pilot Sample Size**: Pilot cohorts of N=10 seeds provide directional screening only. Confidence intervals for pilot-only mechanisms (`TOWN_CYCLE`, `EMERGENCY_RECOVERY`, `RESOURCE_CONVERSION`) are wide and should not be cited as formal statistical proofs.
+2. **Opponent Dynamics**: Opponent preemption was evaluated against deterministic foundation agents under CRN mirror play. Performance against stochastic or adversarial policies in public competition may differ, though fundamental batching trade-offs remain.
+3. **Parameter Scope**: Valuation hurdles were tuned conservatively to guarantee safety. While looser hurdles might increase commit rates, they risk re-introducing catastrophic losses.
+
+---
+
+## 11. Final Mechanism Status
+
+The canonical governance taxonomy for Group 2 is finalized as follows:
+
+| Mechanism | Evidence Stage | Formal Q Completed? | Empirical Result | Final Taxonomy Status | Live Build Deployment |
+| :--- | :--- | :---: | :--- | :--- | :---: |
+| **`TOWN_CYCLE`** | Pilot Only (N=10) | NO | Negative pilot ($\Delta = -423.60$) | **FUNCTIONALLY COMPLETE / QUARANTINED** | **NO** |
+| **`EMERGENCY_RECOVERY`** | Pilot Only (N=10) | NO | Neutral pilot ($\Delta = +0.00$, 100% ties) | **FUNCTIONALLY COMPLETE / DORMANT** | **NO** |
+| **`OPPONENT_PREEMPT_SELL`** | Pilot + Formal Q1 (N=35) | **YES** | Negative formal Q1 ($\Delta = -58.76$) | **FUNCTIONALLY COMPLETE / QUARANTINED** | **NO** |
+| **`RESOURCE_CONVERSION`** | Pilot Only (N=10) | NO | 100% abstention ($\Delta = +0.00$) | **FUNCTIONALLY COMPLETE / DORMANT** | **NO** |
+
+---
+
+## 12. Live Build
+
+The live competition build remains strictly untouched and preserved at the proven foundation:
 $$\text{Live Build} = \text{V3 Chassis} + \text{DEPENDENCY\_AWARE\_MARKET\_TIMING} + \text{TERMINAL\_LIQUIDATION} + \text{PHASE\_SHUTDOWN}$$
 
-Group 2 research conclusively answers the three core research questions (§1):
-1. **Can these mechanisms exploit economic opportunities left on the table?** No. The V3 macro-scheduled foundation is already near-optimal with respect to market timing and liquidation; inter-temporal deviations (cycle timing, early preemption, secondary conversion) introduce frictions that exceed their theoretical gains.
-2. **Were previous failures caused by first-generation bugs or fundamental economics?** Both. First-generation implementations suffered from catastrophic bugs (e.g. liquidating livestock feed), which were completely cured. However, even with flawless second-generation execution, the fundamental economics of the game favor direct agricultural velocity over cycle deferral, preemption, or processing.
-3. **Is the AEC architecture intact?** Yes. The architecture successfully exposed, simulated, evaluated, and correctly rejected or abstained on thousands of candidate interventions with 100% safety, zero crashes, and 100% simulator fidelity.
+* **Chassis SHA-256**: `845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943`
+* **Enabled Mechanisms**: 3
+* **Quarantined Mechanisms**: 15 (including all Group 1 and Group 2 rescued mechanisms)
+
+---
+
+## 13. Next Phase
+
+With the forensic reconciliation of Phase 012 complete and the canonical record frozen:
+1. No Group 2 mechanisms will be submitted or deployed to the live build.
+2. All experimental artifacts are archived in `results/phase012/` with full provenance.
+3. Phase 013 (Group 3: Route, Movement, and Labor Allocation) may proceed only from this corrected baseline.
