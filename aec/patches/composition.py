@@ -68,8 +68,8 @@ class PatchCompositionEngine:
         # 2. Economic Dominance
         val_a = float(getattr(patch_a, "estimated_economic_value", 0.0) or getattr(patch_a, "economic_effect", 0.0) or 0.0)
         val_b = float(getattr(patch_b, "estimated_economic_value", 0.0) or getattr(patch_b, "economic_effect", 0.0) or 0.0)
-        dur_a = int(getattr(patch_a, "duration_steps", 1) or getattr(patch_a, "duration", 1) or 1)
-        dur_b = int(getattr(patch_b, "duration_steps", 1) or getattr(patch_b, "duration", 1) or 1)
+        dur_a = int(getattr(patch_a, "duration_steps", 0) or getattr(patch_a, "expected_horizon", 0) or getattr(patch_a, "duration", 0) or len(getattr(patch_a, "actions", [])) or 1)
+        dur_b = int(getattr(patch_b, "duration_steps", 0) or getattr(patch_b, "expected_horizon", 0) or getattr(patch_b, "duration", 0) or len(getattr(patch_b, "actions", [])) or 1)
 
         if same_worker:
             contested_w = sorted(list(shared_workers))[0]
