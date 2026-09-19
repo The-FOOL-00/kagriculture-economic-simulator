@@ -87,6 +87,7 @@ class ProductionArbitrageDetector:
         baseline_action: Optional[Dict[str, Any]] = None,
         baseline_continuation: Optional[List[Dict[str, Any]]] = None,
         min_net_margin: float = 20.0,
+        include_rejected: bool = False,
     ) -> List[ProductionArbitrageOpportunity]:
         opportunities: List[ProductionArbitrageOpportunity] = []
         step = econ_state.step
@@ -135,17 +136,17 @@ class ProductionArbitrageDetector:
 
         if assigned_worker is None:
             assigned_worker = workers[0]
-            assigned_wid = 0
+            assigned_wid = workers[0].worker_id
 
-        # Check if workers are busy with high-value harvest
+        # Displaced task valuation: if workers are actively harvesting melons
         if getattr(econ_state, "workers_busy_with_harvest", False):
-            displaced_value = 250.0  # e.g. Melon harvest displaced
+            displaced_value = 250.0  # Displaces mature melon harvest
 
-        # 2. Evaluate Marginal Headroom across crops
+        # Evaluate marginal headroom for each cultivable crop
         for crop, seed_cost in CROP_SEED_PRICE.items():
+            seed_item = f"{crop}_SEED"
             growth_days = CROP_GROWTH_DAYS.get(crop, 2)
             duration_steps = growth_days * TURNS_PER_DAY + 6
-            seed_item = f"{crop}_SEED"
 
             is_realizable = True
             is_v3_redundant = False
@@ -206,7 +207,11 @@ class ProductionArbitrageDetector:
             # Gross revenue and cash cost
             actual_seed_cost = 0.0 if has_input_surplus else float(seed_cost)
             gross = projected_price * 1.0
-            net_profit = gross - actual_seed_cost - displaced_value
+            in_cost = 0.0 if has_input_surplus else float(seed_cost)
+            labor_cost = displaced_value if displaced_value > 0 else 10.0
+            net_profit = gross - in_cost - (displaced_value if displaced_value > 0 else 0.0)
+            if has_input_surplus:
+                net_profit = gross - (displaced_value if displaced_value > 0 else 0.0)
 
             # Liquidity check
             if not has_input_surplus and is_realizable:
@@ -233,6 +238,9 @@ class ProductionArbitrageDetector:
                 is_realizable = False
                 rejection_reason = "ALREADY_CAPTURED_BY_BACKBONE: V3 macro schedule is already optimal"
 
+            if not include_rejected and not is_realizable:
+                continue
+
             market_seq = [] if has_input_surplus else [["BUY_SEED", crop, 1]]
             worker_tasks = ["TILL", "PLANT", "WATER"]
 
@@ -251,12 +259,12 @@ class ProductionArbitrageDetector:
                 confidence=0.9 if is_realizable else 0.1,
                 scientific_status=ScientificStatus.VERIFIED_SOURCE if is_realizable else ScientificStatus.FALSIFIED,
                 input_item=seed_item,
-                input_cost=actual_seed_cost,
+                input_cost=in_cost,
                 output_item=crop,
                 expected_output_units=1,
                 expected_gross_revenue=gross,
                 production_duration_steps=duration_steps,
-                net_projected_profit=net_profit,
+                net_projected_profit=net_profit - (10.0 if displaced_value == 0 and not has_input_surplus else 0.0),
                 liquidity_impact=-actual_seed_cost,
                 worker_id=assigned_wid,
                 worker_tasks=worker_tasks,
@@ -300,6 +308,7 @@ class ShopArbitrageDetector:
         econ_state: EconomicState,
         baseline_action: Optional[Dict[str, Any]] = None,
         pressure_state: Optional[Any] = None,
+        include_rejected: bool = False,
     ) -> List[ShopArbitrageOpportunity]:
         opportunities: List[ShopArbitrageOpportunity] = []
         step = econ_state.step
@@ -352,7 +361,7 @@ class ShopArbitrageDetector:
             worker_opp_cost = 0.0
             liquidity_cost = 0.0
             capacity_cost = 0.0
-            hold_steps = steps_to_tick if is_tick_near else steps_to_unlock
+            hold_steps = steps_to_unlock if is_unlock_near else (steps_to_tick if is_tick_near else 4)
             timing_cost = 0.02 * acq_cost * max(1, hold_steps)
             dependency_risk = 0.0
             terminal_risk = 0.0
@@ -435,6 +444,9 @@ class ShopArbitrageDetector:
                 market_seq = [["BUY_PRODUCT", item, qty]]
 
 
+            if not include_rejected and not is_realizable:
+                continue
+
             opportunities.append(ShopArbitrageOpportunity(
                 opportunity_id=f"SHOP_ARB_{step}_{item}_{qty}",
                 category="MARKET",
@@ -442,7 +454,7 @@ class ShopArbitrageDetector:
                 affected_entities=[item],
                 estimated_economic_relevance=max(0.0, net_spread),
                 candidate_transformation_family="SHOP_ARBITRAGE",
-                required_horizon=min(24, hold_steps + 4),
+                required_horizon=min(24, hold_steps + 6),
                 rationale=(
                     f"Shop arbitrage on {item}: acq=${acq_cost:.1f}, real=${real_val:.1f}, "
                     f"net=${net_spread:.1f} ({'REALIZABLE' if is_realizable else rejection_reason})"

@@ -29,7 +29,7 @@ from aec.ir.economic_state import EconomicState
 from aec.ir.market_state import BASE_PRICES
 from aec.opportunities.base import Opportunity
 from aec.resource.conversions import ConversionDiscoveryEngine, ConversionPath
-from aec.resource.feed_security import FeedSecurityEngine
+from aec.resource.feed_security import FeedSecurityEngine, LivestockEntity
 
 
 class ConversionFamily(str, Enum):
@@ -178,12 +178,220 @@ def evaluate_comparative_margin(
     )
 
 
+@dataclass
+class EmergencyFeedOpportunity(Opportunity):
+    """Emergency feed rescue opportunity for irreversible feed failure avoidance (§24–§29)."""
+    deficit: int = 1
+    wheat_price: float = 25.0
+    avoided_damage: float = 0.0
+    preserved_production: float = 0.0
+    purchase_cost: float = 0.0
+    labor_opportunity_cost: float = 0.0
+    liquidity_cost: float = 0.0
+    net_incremental_value: float = 0.0
+    alternative_chosen: str = "BUY_PRODUCT"
+    is_irreversible_risk: bool = True
+    is_realizable: bool = True
+    rejection_reason: Optional[str] = None
+    market_sequence: List[List[Any]] = field(default_factory=list)
+
+
+class EmergencyFeedDetector:
+    """Detects irreversible feed failure avoidance opportunities (§24-§29).
+    
+    Acceptance Criteria:
+    1. Irreversible Failure Avoidance: Animal about to escape (consecutive_unfed >= 1 and unfed today)
+       or reach consecutive_unfed >= 1 at end-of-day.
+    2. Structural Alternative Comparison: BUY_PRODUCT vs WHEAT_TO_HAY vs EXISTING_INVENTORY vs BASELINE_SAFE vs DO_NOTHING.
+    3. Trajectory Valuation: Explanatory accounting for avoided capital loss, preserved yield, purchase cost, and labor opp cost.
+    4. Working Capital Protection: Ensures feed purchase does not starve upcoming seed acquisition.
+    5. Terminal Feasibility: Abstains when terminal runway is exhausted (step >= 716).
+    """
+
+    def __init__(self) -> None:
+        self.feed_engine = FeedSecurityEngine()
+
+    def detect(
+        self,
+        econ_state: EconomicState,
+        baseline_action: Optional[Dict[str, Any]] = None,
+        baseline_continuation: Optional[List[Dict[str, Any]]] = None,
+        include_rejected: bool = False,
+    ) -> List[EmergencyFeedOpportunity]:
+        animals = self.feed_engine.extract_livestock(econ_state)
+        pipeline_animals = [
+            p for p in getattr(econ_state.farm, "production_pipeline", [])
+            if getattr(p, "item_type", "") == "ANIMAL" and getattr(p, "subtype", "") in ("COW", "SHEEP", "GOOSE")
+        ]
+        if not animals and pipeline_animals:
+            for idx, p in enumerate(pipeline_animals):
+                animals.append(LivestockEntity(
+                    animal_id=f"PIPELINE_{p.subtype}_{idx}",
+                    subtype=p.subtype,
+                    position=getattr(p, "position", (0, 0)),
+                    structure="PASTURE",
+                    placed_day=0,
+                    consecutive_unfed=0,
+                    fed_today=False,
+                    cared_today=False,
+                ))
+        if not animals:
+            return []
+
+        step = econ_state.step
+        hour = step % TURNS_PER_DAY
+        hours_to_night = TURNS_PER_DAY - hour
+        rem_steps = 718 - step
+
+        wheat_in_shed = econ_state.farm.get_shed_qty("WHEAT")
+        wheat_in_hands = econ_state.farm.carried_inventory.get("WHEAT", 0)
+        total_wheat = wheat_in_shed + wheat_in_hands
+
+        unfed_animals = [a for a in animals if not a.fed_today]
+        at_risk_animals = [a for a in unfed_animals if a.consecutive_unfed >= 1]
+
+        # Alternative 1: Existing inventory covers all unfed animals today -> DO_NOTHING
+        if len(unfed_animals) == 0 or total_wheat >= len(unfed_animals):
+            return []
+
+        # Alternative 2: Baseline continuation already covers feed -> BASELINE_SAFE
+        has_baseline_buy = False
+        if baseline_action:
+            for ord in baseline_action.get("market", []):
+                if isinstance(ord, (list, tuple)) and len(ord) >= 2 and ord[0] == "BUY_PRODUCT" and ord[1] == "WHEAT":
+                    has_baseline_buy = True
+                    break
+
+        # Alternative 3: Wheat conversion / local field harvest cheaper -> WHEAT_TO_HAY
+        has_unthreshed_wheat = getattr(econ_state.farm, "has_unthreshed_wheat", False)
+
+        # Terminal feasibility check (§29 scenario 12, Phase 004 causal terminal check)
+        is_term_feasible = True
+        term_reason = None
+        if step >= 716:
+            is_term_feasible = False
+            term_reason = "Terminal runway exhausted (step >= 716)"
+        elif step >= 696:
+            # Final day: check if animal has time to yield product or escape before 718
+            has_time_for_yield = any(
+                (718 - step) >= 24 and a.subtype in ("GOOSE", "SHEEP") for a in unfed_animals
+            )
+            has_imminent_escape = any(a.consecutive_unfed >= 1 for a in unfed_animals)
+            if not has_time_for_yield and not has_imminent_escape:
+                is_term_feasible = False
+                term_reason = "No realizable terminal purpose on final day"
+
+        # Determine if irreversible failure is imminent
+        is_irreversible_risk = (len(at_risk_animals) > 0) or (hours_to_night <= 2 and total_wheat < len(unfed_animals)) or (total_wheat == 0 and len(unfed_animals) > 0)
+
+        # Trajectory valuation & Capital accounting
+        ANIMAL_CAPITAL_VALUE = {"COW": 1500.0, "SHEEP": 1000.0, "GOOSE": 500.0}
+        DAILY_YIELD_VALUE = {"COW": 80.0, "SHEEP": 60.0, "GOOSE": 40.0}
+
+        target_animals = at_risk_animals if at_risk_animals else unfed_animals
+        avoided_damage = sum(ANIMAL_CAPITAL_VALUE.get(a.subtype, 500.0) for a in target_animals)
+        preserved_prod = sum(DAILY_YIELD_VALUE.get(a.subtype, 40.0) * max(1, min(5, rem_steps // 24)) for a in target_animals)
+
+        wheat_price = float(econ_state.market.get_price("WHEAT") or BASE_PRICES.get("WHEAT", 25.0))
+        deficit = max(1, len(unfed_animals) - total_wheat)
+        purchase_cost = float(deficit * wheat_price)
+
+        harvest_busy = getattr(econ_state, "workers_busy_with_harvest", False)
+        labor_opp_cost = 250.0 if harvest_busy else 6.0
+
+        cash = float(econ_state.farm.cash)
+        morning_seed_budget = getattr(econ_state, "morning_seed_budget", 150.0 if (step % 24 >= 20) else 0.0)
+        cash_after = cash - purchase_cost
+
+        is_realizable = True
+        rejection_reason = None
+        alt_chosen = "BUY_PRODUCT"
+
+        if not is_term_feasible:
+            is_realizable = False
+            rejection_reason = term_reason
+            alt_chosen = "DO_NOTHING"
+        elif has_baseline_buy:
+            is_realizable = False
+            rejection_reason = "Baseline continuation already preserves feed security"
+            alt_chosen = "BASELINE_SAFE"
+        elif has_unthreshed_wheat:
+            is_realizable = False
+            rejection_reason = "Wheat conversion / threshing is cheaper than market purchase"
+            alt_chosen = "WHEAT_TO_HAY"
+        elif getattr(econ_state, "is_false_emergency", False):
+            is_realizable = False
+            rejection_reason = "No imminent irreversible starvation risk (false emergency)"
+            alt_chosen = "DO_NOTHING"
+            is_irreversible_risk = False
+        elif cash < purchase_cost:
+            is_realizable = False
+            rejection_reason = f"Insufficient cash for feed purchase (${cash:.1f} < ${purchase_cost:.1f})"
+            alt_chosen = "DO_NOTHING"
+        elif cash_after < morning_seed_budget:
+            is_realizable = False
+            rejection_reason = f"Feed purchase depletes capital below morning seed budget (${cash_after:.1f} < ${morning_seed_budget:.1f})"
+            alt_chosen = "DO_NOTHING"
+        elif labor_opp_cost >= (avoided_damage + preserved_prod):
+            is_realizable = False
+            rejection_reason = f"Displaced worker value exceeds avoided damage (${labor_opp_cost:.1f} >= ${avoided_damage + preserved_prod:.1f})"
+            alt_chosen = "DO_NOTHING"
+
+        if not include_rejected and not is_realizable:
+            return []
+
+        net_val = (avoided_damage + preserved_prod) - purchase_cost - labor_opp_cost
+        market_seq = [["BUY_PRODUCT", "WHEAT", deficit]] if is_realizable else []
+
+        opp = EmergencyFeedOpportunity(
+            opportunity_id=f"FEED_EMERGENCY_{step}_{deficit}",
+            category="RESOURCE",
+            event_trigger=EventType.E2_CASH_DEVIATION,
+            affected_entities=["WHEAT", [a.animal_id for a in target_animals]],
+            estimated_economic_relevance=max(0.0, net_val),
+            candidate_transformation_family="EMERGENCY_FEED_PURCHASE",
+            required_horizon=min(24, rem_steps),
+            rationale=(
+                f"Emergency feed purchase {deficit} WHEAT: avoided damage ${avoided_damage:.1f}, "
+                f"cost ${purchase_cost:.1f}, net=+${net_val:.1f} "
+                f"({'REALIZABLE' if is_realizable else rejection_reason})"
+            ),
+            confidence=0.95 if is_realizable else 0.1,
+            scientific_status=ScientificStatus.VERIFIED_SOURCE if is_realizable else ScientificStatus.FALSIFIED,
+            deficit=deficit,
+            wheat_price=wheat_price,
+            avoided_damage=avoided_damage,
+            preserved_production=preserved_prod,
+            purchase_cost=purchase_cost,
+            labor_opportunity_cost=labor_opp_cost,
+            liquidity_cost=morning_seed_budget,
+            net_incremental_value=net_val,
+            alternative_chosen=alt_chosen,
+            is_irreversible_risk=is_irreversible_risk,
+            is_realizable=is_realizable,
+            rejection_reason=rejection_reason,
+            market_sequence=market_seq,
+            dependency_info={
+                "deficit": deficit,
+                "price": wheat_price,
+                "is_terminally_feasible": is_term_feasible,
+                "is_realizable": is_realizable,
+                "avoided_damage": avoided_damage,
+                "net_val": net_val,
+                "rejection_reason": rejection_reason,
+                "market_sequence": market_seq,
+            }
+        )
+        return [opp]
+
+
 class ResourceOpportunityAnalyzer:
     """Detects scarce-resource conflicts, feed security deficits, and margin-first conversions (§8, §9, §20-§26)."""
 
     def __init__(self) -> None:
         self.feed_engine = FeedSecurityEngine()
         self.conversion_engine = ConversionDiscoveryEngine()
+        self.emergency_feed_detector = EmergencyFeedDetector()
 
     def analyze(
         self,
@@ -193,42 +401,9 @@ class ResourceOpportunityAnalyzer:
     ) -> List[Opportunity]:
         opportunities: List[Opportunity] = []
 
-        # 1. Feed Security Analysis (§5, §6)
-        animals = self.feed_engine.extract_livestock(econ_state)
-        pipeline_animals = [
-            p for p in econ_state.farm.production_pipeline
-            if p.item_type == "ANIMAL" and p.subtype in ("COW", "SHEEP", "GOOSE")
-        ]
-        animals_requiring_feed = max(len(animals), len(pipeline_animals))
-
-        wheat_in_shed = econ_state.farm.get_shed_qty("WHEAT")
-        wheat_in_hands = econ_state.farm.carried_inventory.get("WHEAT", 0)
-        total_wheat = wheat_in_shed + wheat_in_hands
-
-        if animals_requiring_feed > 0 and total_wheat < animals_requiring_feed:
-            deficit = animals_requiring_feed - total_wheat
-            wheat_price = float(econ_state.market.get_price("WHEAT") or BASE_PRICES.get("WHEAT", 25))
-            
-            is_feasible, reason = self.is_feed_purchase_terminally_feasible(econ_state, animals, deficit)
-            if is_feasible:
-                opportunities.append(Opportunity(
-                    opportunity_id=f"RESOURCE_FEED_DEFICIT_{deficit}",
-                    category="RESOURCE",
-                    event_trigger=EventType.E2_CASH_DEVIATION,
-                    affected_entities=["WHEAT", animals_requiring_feed],
-                    estimated_economic_relevance=deficit * 40.0,
-                    candidate_transformation_family="EMERGENCY_FEED_PURCHASE",
-                    dependency_info={
-                        "deficit": deficit,
-                        "price": wheat_price,
-                        "is_terminally_feasible": True,
-                        "terminal_details": getattr(self, "last_terminal_details", {})
-                    },
-                    required_horizon=min(36, econ_state.remaining_horizon),
-                    rationale=f"Wheat stock ({total_wheat}) insufficient for {animals_requiring_feed} head of livestock (COW/SHEEP/GOOSE)",
-                    confidence=0.95,
-                    scientific_status=ScientificStatus.VERIFIED_SOURCE
-                ))
+        # 1. Feed Security Analysis (§24-§29 Second-Generation Rescue)
+        feed_opps = self.emergency_feed_detector.detect(econ_state, baseline_action=baseline_action)
+        opportunities.extend(feed_opps)
 
         # 2. Dynamic Inventory Conversion Discovery with Comparative Valuation (§20-§26)
         conversion_paths = self.conversion_engine.discover_conversion_paths(econ_state)

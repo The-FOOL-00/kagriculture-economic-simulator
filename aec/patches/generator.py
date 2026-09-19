@@ -253,10 +253,17 @@ class PatchGenerator:
                     # Provide patch for evaluation / diagnostic inspection
                     patches.append(res.patch)
 
-            # 7. Emergency Feed Purchase (§5, §6)
-            # 7. Emergency Feed Purchase (§5, §6, Phase 003/004)
+            # 7. Emergency Feed Purchase (§5, §6, Phase 013 Rescue §24-§29)
             elif fam == "EMERGENCY_FEED_PURCHASE":
-                deficit = opp.dependency_info.get("deficit", 1)
+                # Strict realizability and alternative gate
+                if hasattr(opp, "is_realizable") and not opp.is_realizable:
+                    continue
+                if hasattr(opp, "dependency_info") and opp.dependency_info.get("is_realizable") is False:
+                    continue
+                if getattr(opp, "alternative_chosen", "") in ("DO_NOTHING", "EXISTING_INVENTORY", "BASELINE_SAFE", "WHEAT_TO_HAY"):
+                    continue
+
+                deficit = getattr(opp, "deficit", opp.dependency_info.get("deficit", 1))
                 orders = copy.deepcopy(baseline_action.get("market", []))
                 orders.insert(0, ["BUY_PRODUCT", "WHEAT", deficit])
                 worker_mutations = {}

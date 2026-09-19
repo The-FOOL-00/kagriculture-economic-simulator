@@ -35,6 +35,10 @@ from aec.opportunities.terminal_conversion import (
     TerminalConversionDetector,
     TerminalConversionOpportunity,
 )
+from aec.opportunities.resource import (
+    EmergencyFeedDetector,
+    EmergencyFeedOpportunity,
+)
 from aec.patches.generator import PatchGenerator
 
 
@@ -98,7 +102,7 @@ def test_sa_02_false_spread_due_liquidity_cost(group3_base_obs: Dict[str, Any]) 
     econ.market.projected_prices = {"STRAWBERRY": 160.0}
     detector = ShopArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     straw_opp = next((o for o in opps if o.item == "STRAWBERRY"), None)
     assert straw_opp is not None
     # 2 units * $80 = $160 acquisition cost > $110 cash or leaves cash < wages
@@ -122,7 +126,7 @@ def test_sa_03_spread_requiring_too_much_worker_time(group3_base_obs: Dict[str, 
     setattr(econ, "workers_busy_with_harvest", True)
     detector = ShopArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     tom_opp = next((o for o in opps if o.item == "TOMATO"), None)
     assert tom_opp is not None
     assert tom_opp.is_realizable is False
@@ -139,7 +143,7 @@ def test_sa_04_spread_blocked_by_shed_capacity(group3_base_obs: Dict[str, Any]) 
     econ.market.projected_prices = {"MELON": 250.0}
     detector = ShopArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     melon_opp = next((o for o in opps if o.item == "MELON"), None)
     assert melon_opp is not None
     assert melon_opp.is_realizable is False
@@ -156,7 +160,7 @@ def test_sa_05_spread_requiring_too_much_cash(group3_base_obs: Dict[str, Any]) -
     econ.market.projected_prices = {"MELON": 300.0}
     detector = ShopArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     melon_opp = next((o for o in opps if o.item == "MELON"), None)
     assert melon_opp is not None
     assert melon_opp.is_realizable is False
@@ -173,7 +177,7 @@ def test_sa_06_spread_delays_morning_seed_purchase(group3_base_obs: Dict[str, An
     econ.market.projected_prices = {"CARROT": 60.0}
     detector = ShopArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     carrot_opp = next((o for o in opps if o.item == "CARROT"), None)
     assert carrot_opp is not None
     assert carrot_opp.is_realizable is False
@@ -214,7 +218,7 @@ def test_sa_08_spread_only_locally_profitable(group3_base_obs: Dict[str, Any]) -
     econ.market.projected_prices = {"CARROT": 36.0}  # $1 gross margin
     detector = ShopArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     carrot_opp = next((o for o in opps if o.item == "CARROT"), None)
     # Gross spread $2, timing cost 0.02 * 70 * 4 = $5.6 -> net spread < 0
     if carrot_opp:
@@ -280,7 +284,7 @@ def test_sa_11_opponent_pressure_affects_market_depth(group3_base_obs: Dict[str,
     setattr(econ.opponent, "sale_pressure", {"CARROT": 0.8})
     detector = ShopArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     carrot_opp = next((o for o in opps if o.item == "CARROT"), None)
     assert carrot_opp is not None
     assert carrot_opp.dependency_risk > 0
@@ -311,7 +315,7 @@ def test_pa_01_v3_already_optimal_abstain(group3_base_obs: Dict[str, Any]) -> No
     baseline_action = {"farmer": ["PASS"], "market": [["BUY_SEED", "MELON", 1]]}
     detector = ProductionArbitrageDetector()
 
-    opps = detector.detect(econ, baseline_action=baseline_action)
+    opps = detector.detect(econ, baseline_action=baseline_action, include_rejected=True)
     melon_opp = next((o for o in opps if o.output_item == "MELON"), None)
     assert melon_opp is not None
     assert melon_opp.is_v3_redundant is True
@@ -359,7 +363,7 @@ def test_pa_03_input_shortage(group3_base_obs: Dict[str, Any]) -> None:
     econ = build_economic_state(obs)
     detector = ProductionArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
     assert carrot_opp is not None
     assert carrot_opp.is_realizable is False
@@ -402,7 +406,7 @@ def test_pa_06_market_collapse(group3_base_obs: Dict[str, Any]) -> None:
     econ.market.projected_prices = {"CARROT": 15.0}  # Base $35 -> $15 < 60%
     detector = ProductionArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
     assert carrot_opp is not None
     assert carrot_opp.is_realizable is False
@@ -417,7 +421,7 @@ def test_pa_07_terminal_production_window(group3_base_obs: Dict[str, Any]) -> No
     econ.market.projected_prices = {"CARROT": 50.0, "MELON": 250.0}
     detector = ProductionArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     melon_opp = next((o for o in opps if o.output_item == "MELON"), None)
     carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
 
@@ -451,7 +455,7 @@ def test_pa_09_worker_opportunity_cost_high(group3_base_obs: Dict[str, Any]) -> 
     setattr(econ, "workers_busy_with_harvest", True)  # Displaces $250 melon
     detector = ProductionArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     carrot_opp = next((o for o in opps if o.output_item == "CARROT"), None)
     assert carrot_opp is not None
     assert carrot_opp.is_realizable is False
@@ -486,7 +490,7 @@ def test_pa_11_production_delays_higher_value_task(group3_base_obs: Dict[str, An
     setattr(econ, "workers_busy_with_harvest", True)
     detector = ProductionArbitrageDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     for o in opps:
         assert o.is_realizable is False
 
@@ -498,7 +502,7 @@ def test_pa_12_false_production_spread(group3_base_obs: Dict[str, Any]) -> None:
     econ.market.projected_prices = {"WHEAT": 18.0}  # Seed is $10 -> margin $8 < $20
     detector = ProductionArbitrageDetector()
 
-    opps = detector.detect(econ, min_net_margin=20.0)
+    opps = detector.detect(econ, min_net_margin=20.0, include_rejected=True)
     wheat_opp = next((o for o in opps if o.output_item == "WHEAT"), None)
     assert wheat_opp is not None
     assert wheat_opp.is_realizable is False
@@ -564,7 +568,7 @@ def test_tc_03_conversion_too_slow(group3_base_obs: Dict[str, Any]) -> None:
     econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
     detector = TerminalConversionDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
     assert wool_opp is not None
     assert wool_opp.is_realizable is False
@@ -588,7 +592,7 @@ def test_tc_04_conversion_blocks_liquidation(group3_base_obs: Dict[str, Any]) ->
     econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
     detector = TerminalConversionDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
     assert wool_opp is not None
     assert wool_opp.is_realizable is False
@@ -605,7 +609,7 @@ def test_tc_05_output_cannot_be_sold(group3_base_obs: Dict[str, Any]) -> None:
     econ.market.projected_prices = {"WOOL": 0.0}
     detector = TerminalConversionDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
     assert wool_opp is not None
     assert wool_opp.is_realizable is False
@@ -622,7 +626,7 @@ def test_tc_06_worker_too_far_away(group3_base_obs: Dict[str, Any]) -> None:
     econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
     detector = TerminalConversionDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
     assert wool_opp is not None
     assert wool_opp.is_realizable is False
@@ -639,7 +643,7 @@ def test_tc_07_shed_capacity_insufficient(group3_base_obs: Dict[str, Any]) -> No
     econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
     detector = TerminalConversionDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
     assert wool_opp is not None
     assert wool_opp.is_realizable is False
@@ -657,7 +661,7 @@ def test_tc_08_conversion_consumes_scarce_resource(group3_base_obs: Dict[str, An
     econ.market.projected_prices = {"WOOL": 200.0, "WHEAT": 25.0}
     detector = TerminalConversionDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
     assert wool_opp is not None
     assert wool_opp.is_realizable is False
@@ -703,7 +707,7 @@ def test_tc_11_raw_liquidation_clearly_superior(group3_base_obs: Dict[str, Any])
     econ.market.projected_prices = {"MELON_JUICE": 200.0, "MELON": 250.0}
     detector = TerminalConversionDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     juice_opp = next((o for o in opps if o.output_item == "MELON_JUICE"), None)
     assert juice_opp is not None
     assert juice_opp.is_liquidation_dominant is True
@@ -728,9 +732,248 @@ def test_tc_12_false_book_value_advantage(group3_base_obs: Dict[str, Any]) -> No
     setattr(econ, "workers_busy_with_harvest", True)  # Opportunity cost $250 -> net = -$75
     detector = TerminalConversionDetector()
 
-    opps = detector.detect(econ)
+    opps = detector.detect(econ, include_rejected=True)
     wool_opp = next((o for o in opps if o.output_item == "WOOL"), None)
     assert wool_opp is not None
     assert wool_opp.is_realizable is False
     assert wool_opp.is_liquidation_dominant is True
     assert "Displaced worker value exceeds conversion margin" in (wool_opp.rejection_reason or "")
+
+
+# =============================================================================
+# 4. EMERGENCY_FEED_PURCHASE (12 ADVERSARIAL SCENARIOS - §29)
+# =============================================================================
+
+def test_ef_01_one_turn_before_starvation(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-01: 1 turn before day end (hour 23), Cow has consecutive_unfed=1; imminent escape prevented."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 23  # Hour 23, 1 turn to midnight
+    obs["private"]["shed"] = {"MELON": 5}  # 0 wheat
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "COW", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ)
+    assert len(opps) == 1
+    opp = opps[0]
+    assert opp.is_irreversible_risk is True
+    assert opp.is_realizable is True
+    assert opp.avoided_damage >= 1500.0
+    assert opp.deficit == 1
+    assert opp.alternative_chosen == "BUY_PRODUCT"
+
+    # Generator produces patch with BUY_PRODUCT WHEAT
+    cfg = AECConfig(enabled_mechanisms=("EMERGENCY_FEED_PURCHASE",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([opp], econ, {"market": []}, config=cfg)
+    assert len(patches) == 1
+    p = patches[0]
+    assert p.mechanism_family == "EMERGENCY_FEED_PURCHASE"
+    assert any(o[0] == "BUY_PRODUCT" and o[1] == "WHEAT" for o in p.market_mutations)
+
+
+def test_ef_02_two_turns_before_starvation(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-02: 2 turns before day end (hour 22), Cow has consecutive_unfed=1; triggers emergency purchase."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 22  # Hour 22, 2 turns to midnight
+    obs["private"]["shed"] = {"MELON": 5}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "COW", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ)
+    assert len(opps) == 1
+    assert opps[0].is_irreversible_risk is True
+    assert opps[0].is_realizable is True
+
+
+def test_ef_03_current_feed_barely_sufficient(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-03: Current feed inventory matches unfed livestock exactly (2 wheat for 2 sheep); abstains."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 22
+    obs["private"]["shed"] = {"WHEAT": 2}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "SHEEP", "consecutive_unfed": 0, "fed_today": False}
+    obs["farms"][0]["tiles"][2][3] = {"kind": "PASTURE", "animal": "SHEEP", "consecutive_unfed": 0, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ)
+    # Feed is sufficient; detector returns empty list (abstain)
+    assert len(opps) == 0
+
+
+def test_ef_04_feed_shortage_already_active(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-04: Mid-day with consecutive_unfed=1 and 0 wheat; shortage active and triggers rescue."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 10  # Hour 10
+    obs["private"]["shed"] = {}  # 0 wheat
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "COW", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ)
+    assert len(opps) == 1
+    assert opps[0].is_irreversible_risk is True
+    assert opps[0].is_realizable is True
+
+
+def test_ef_05_purchase_clearly_saves_high_value_livestock(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-05: Cow ($1500 capital) saved with $25 wheat; net margin overwhelmingly positive."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 23
+    obs["private"]["shed"] = {}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "COW", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ)
+    assert len(opps) == 1
+    assert opps[0].avoided_damage == 1500.0
+    assert opps[0].net_incremental_value > 1400.0
+    assert opps[0].is_realizable is True
+
+
+def test_ef_06_purchase_saves_low_value_livestock(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-06: Goose ($500 capital) saved with $25 wheat; net margin positive (+$475)."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 23
+    obs["private"]["shed"] = {}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "GOOSE", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ)
+    assert len(opps) == 1
+    assert opps[0].avoided_damage == 500.0
+    assert opps[0].net_incremental_value > 450.0
+    assert opps[0].is_realizable is True
+
+
+def test_ef_07_wheat_conversion_cheaper(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-07: Unthreshed wheat available on farm; WHEAT_TO_HAY alternative preferred over buy."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 23
+    obs["private"]["shed"] = {}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "COW", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    setattr(econ.farm, "has_unthreshed_wheat", True)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ, include_rejected=True)
+    assert len(opps) == 1
+    opp = opps[0]
+    assert opp.alternative_chosen == "WHEAT_TO_HAY"
+    assert opp.is_realizable is False
+    assert "cheaper than market purchase" in (opp.rejection_reason or "")
+
+    # Generator abstains from buying
+    cfg = AECConfig(enabled_mechanisms=("EMERGENCY_FEED_PURCHASE",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([opp], econ, {"market": []}, config=cfg)
+    assert len(patches) == 0
+
+
+def test_ef_08_existing_hay_available(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-08: Carried inventory has wheat; total feed covers herd; detector abstains."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 22
+    obs["private"]["shed"] = {}
+    obs["private"]["inventories"] = [{"WHEAT": 1}, {}]
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "SHEEP", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ)
+    assert len(opps) == 0
+
+
+def test_ef_09_purchase_blocks_seed_acquisition(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-09: Cash is $30, morning seed budget is $150; feed purchase ($25) starves seed capital."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 22  # Hour 22
+    obs["farms"][0]["money"] = 30.0  # Cash $30 - $25 = $5 < $150
+    obs["private"]["shed"] = {}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "COW", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ, include_rejected=True)
+    assert len(opps) == 1
+    opp = opps[0]
+    assert opp.is_realizable is False
+    assert "morning seed budget" in (opp.rejection_reason or "")
+
+    # Generator must abstain
+    cfg = AECConfig(enabled_mechanisms=("EMERGENCY_FEED_PURCHASE",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([opp], econ, {"market": []}, config=cfg)
+    assert len(patches) == 0
+
+
+def test_ef_10_purchase_blocks_higher_value_production(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-10: Workers busy harvesting mature melon ($250 labor opp cost); displacement exceeds goose value."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 23
+    obs["private"]["shed"] = {}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "GOOSE", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    setattr(econ, "workers_busy_with_harvest", True)
+    # Set high labor cost: simulate goose value lower than harvest displacement
+    opp = EmergencyFeedOpportunity(
+        opportunity_id="FEED_OPP_COST",
+        category="RESOURCE",
+        event_trigger=None,
+        affected_entities=["WHEAT"],
+        estimated_economic_relevance=0.0,
+        candidate_transformation_family="EMERGENCY_FEED_PURCHASE",
+        avoided_damage=200.0,
+        preserved_production=0.0,
+        purchase_cost=25.0,
+        labor_opportunity_cost=300.0,
+        is_realizable=False,
+        rejection_reason="Displaced worker value exceeds avoided damage",
+    )
+    cfg = AECConfig(enabled_mechanisms=("EMERGENCY_FEED_PURCHASE",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([opp], econ, {"market": []}, config=cfg)
+    assert len(patches) == 0
+
+
+def test_ef_11_false_emergency(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-11: Early hour (hour 2), consecutive_unfed=0; false emergency rejected in favor of macro policy."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 50  # Day 2, Hour 2 (22 hours to night)
+    obs["private"]["shed"] = {}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "COW", "consecutive_unfed": 0, "fed_today": False}
+    econ = build_economic_state(obs)
+    setattr(econ, "is_false_emergency", True)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ, include_rejected=True)
+    assert len(opps) == 1
+    opp = opps[0]
+    assert opp.is_irreversible_risk is False
+    assert opp.is_realizable is False
+    assert "false emergency" in (opp.rejection_reason or "")
+
+
+def test_ef_12_terminal_emergency(group3_base_obs: Dict[str, Any]) -> None:
+    """EF-12: Step 716 is in the endgame; animal retention yields zero incremental terminal value; rejected."""
+    obs = copy.deepcopy(group3_base_obs)
+    obs["step"] = 716
+    obs["private"]["shed"] = {}
+    obs["farms"][0]["tiles"][2][2] = {"kind": "PASTURE", "animal": "COW", "consecutive_unfed": 1, "fed_today": False}
+    econ = build_economic_state(obs)
+    detector = EmergencyFeedDetector()
+
+    opps = detector.detect(econ, include_rejected=True)
+    assert len(opps) == 1
+    opp = opps[0]
+    assert opp.is_realizable is False
+    assert "Terminal runway exhausted" in (opp.rejection_reason or "")
+
+    # Generator abstains
+    cfg = AECConfig(enabled_mechanisms=("EMERGENCY_FEED_PURCHASE",))
+    gen = PatchGenerator(config=cfg)
+    patches = gen.generate_patches([opp], econ, {"market": []}, config=cfg)
+    assert len(patches) == 0

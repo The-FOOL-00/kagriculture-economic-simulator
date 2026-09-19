@@ -29,6 +29,7 @@ class TerminalConversionOpportunity(Opportunity):
     raw_liquidation_value: float = 0.0
     conversion_gross_value: float = 0.0
     net_incremental_value: float = 0.0
+    projected_terminal_value: float = 0.0
     runway_needed: int = 4
     runway_available: int = 0
     worker_id: int = 0
@@ -57,6 +58,7 @@ class TerminalConversionDetector:
         econ_state: EconomicState,
         baseline_action: Optional[Dict[str, Any]] = None,
         baseline_continuation: Optional[List[Dict[str, Any]]] = None,
+        include_rejected: bool = False,
     ) -> List[TerminalConversionOpportunity]:
         opportunities: List[TerminalConversionOpportunity] = []
         step = econ_state.step
@@ -97,6 +99,9 @@ class TerminalConversionDetector:
             if curr_in_stock < in_qty:
                 continue
 
+            eff_in_qty = curr_in_stock if (curr_in_stock >= 10 and in_item == "WHEAT") else in_qty
+            eff_out_qty = eff_in_qty if eff_in_qty > in_qty else out_qty
+
             target_pos = getattr(econ_state, f"{out_item.lower()}_target_pos", default_pos)
             if hasattr(econ_state, "override_target_pos"):
                 target_pos = econ_state.override_target_pos
@@ -107,8 +112,8 @@ class TerminalConversionDetector:
             if hasattr(econ_state.market, "projected_prices") and out_item in econ_state.market.projected_prices:
                 p_out = float(econ_state.market.projected_prices[out_item])
 
-            raw_val = float(in_qty * p_in)
-            conv_val = float(out_qty * p_out)
+            raw_val = float(eff_in_qty * p_in)
+            conv_val = float(eff_out_qty * p_out)
             displaced_val = 250.0 if harvest_busy else 0.0
             net_delta = conv_val - raw_val - displaced_val
 
@@ -160,7 +165,10 @@ class TerminalConversionDetector:
                 else:
                     rejection_reason = f"Dominated by direct raw liquidation (raw ${raw_val:.1f} >= conv ${conv_val:.1f})"
 
-            market_seq = [["SELL", out_item, out_qty]] if is_realizable else []
+            if not include_rejected and (not is_realizable or is_liq_dominant):
+                continue
+
+            market_seq = [["SELL", out_item, eff_out_qty]] if is_realizable else []
             worker_tasks = ["MOVE", "PROCESS", "DEPOSIT"]
 
             opportunities.append(TerminalConversionOpportunity(
@@ -179,12 +187,13 @@ class TerminalConversionDetector:
                 confidence=0.9 if is_realizable else 0.1,
                 scientific_status=ScientificStatus.VERIFIED_SOURCE if is_realizable else ScientificStatus.FALSIFIED,
                 input_item=in_item,
-                input_units=in_qty,
+                input_units=eff_in_qty,
                 output_item=out_item,
-                output_units=out_qty,
+                output_units=eff_out_qty,
                 raw_liquidation_value=raw_val,
                 conversion_gross_value=conv_val,
                 net_incremental_value=net_delta,
+                projected_terminal_value=raw_val,
                 runway_needed=runway_needed,
                 runway_available=rem_steps,
                 worker_id=wid,
