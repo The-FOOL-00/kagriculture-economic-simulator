@@ -1,0 +1,211 @@
+{
+  "phase": "PHASE_012",
+  "group": "GROUP_2_ECONOMIC_STATE_RESCUE",
+  "date": "2026-09-19",
+  "author": "Antigravity AI Research Agent (Phase 012 Lead)",
+  "chassis_freeze_hash": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "control_configuration": {
+    "name": "FROZEN_LIVE_FOUNDATION",
+    "enabled_mechanisms": [
+      "DEPENDENCY_AWARE_MARKET_TIMING",
+      "TERMINAL_LIQUIDATION",
+      "PHASE_SHUTDOWN"
+    ],
+    "chassis": "V3"
+  },
+  "mechanisms": [
+    {
+      "mechanism": "TOWN_CYCLE",
+      "implementation_commit": "d4a6eb7",
+      "current_status": "FUNCTIONALLY COMPLETE / QUARANTINED",
+      "final_eligibility": false,
+      "control_configuration": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN",
+      "treatment_configuration": "Control + TOWN_CYCLE",
+      "cohorts": [
+        {
+          "cohort_name": "pilot",
+          "seed_range": [249171, 249180],
+          "n_seeds": 10,
+          "n_matches": 20,
+          "candidate_count": 1342,
+          "exact_simulation_count": 1180,
+          "commit_count": 118,
+          "commit_rate": 0.0879,
+          "safety_violations": 0,
+          "paired_economics": {
+            "mean_paired_delta": -423.60,
+            "median_paired_delta": -74.00,
+            "std_paired_delta": 711.67,
+            "se_paired_delta": 225.05,
+            "ci_95": [-932.67, 85.47],
+            "t_statistic": -1.882,
+            "p_value": 0.0924,
+            "wins": 3,
+            "losses": 7,
+            "ties": 0,
+            "win_rate": 0.30
+          },
+          "latency": {
+            "mean_p50_ms": 84.2,
+            "mean_p95_ms": 290.4
+          }
+        }
+      ],
+      "causal_attribution": "Delaying market sales in a macro-scheduled V3 farm desynchronizes working capital needed for replanting seed purchases; shop price elasticity increases do not compensate for lost agricultural velocity."
+    },
+    {
+      "mechanism": "EMERGENCY_RECOVERY",
+      "implementation_commit": "0ec5e12",
+      "current_status": "FUNCTIONALLY COMPLETE / QUARANTINED",
+      "final_eligibility": false,
+      "control_configuration": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN",
+      "treatment_configuration": "Control + EMERGENCY_RECOVERY",
+      "cohorts": [
+        {
+          "cohort_name": "pilot",
+          "seed_range": [249171, 249180],
+          "n_seeds": 10,
+          "n_matches": 20,
+          "candidate_count": 442,
+          "exact_simulation_count": 442,
+          "commit_count": 120,
+          "commit_rate": 0.2715,
+          "safety_violations": 0,
+          "paired_economics": {
+            "mean_paired_delta": 0.00,
+            "median_paired_delta": 0.00,
+            "std_paired_delta": 0.00,
+            "se_paired_delta": 0.00,
+            "ci_95": [0.00, 0.00],
+            "t_statistic": 0.00,
+            "p_value": 1.00,
+            "wins": 0,
+            "losses": 0,
+            "ties": 10,
+            "win_rate": 0.00
+          },
+          "latency": {
+            "mean_p50_ms": 82.1,
+            "mean_p95_ms": 285.3
+          }
+        }
+      ],
+      "causal_attribution": "First-generation panic liquidation cured by strict feed security invariants; however, in all states where recovery committed, baseline foundation was already safe or executing identical liquidations, generating zero incremental economic delta."
+    },
+    {
+      "mechanism": "OPPONENT_PREEMPT_SELL",
+      "implementation_commit": "697547d",
+      "current_status": "FUNCTIONALLY COMPLETE / QUARANTINED",
+      "final_eligibility": false,
+      "control_configuration": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN",
+      "treatment_configuration": "Control + OPPONENT_PREEMPT_SELL",
+      "cohorts": [
+        {
+          "cohort_name": "pilot",
+          "seed_range": [249171, 249180],
+          "n_seeds": 10,
+          "n_matches": 20,
+          "candidate_count": 4136,
+          "exact_simulation_count": 1420,
+          "commit_count": 142,
+          "commit_rate": 0.0343,
+          "safety_violations": 0,
+          "paired_economics": {
+            "mean_paired_delta": 112.40,
+            "median_paired_delta": 36.00,
+            "std_paired_delta": 334.61,
+            "se_paired_delta": 105.81,
+            "ci_95": [-126.95, 351.75],
+            "t_statistic": 1.062,
+            "p_value": 0.3158,
+            "wins": 6,
+            "losses": 4,
+            "ties": 0,
+            "win_rate": 0.60
+          },
+          "latency": {
+            "mean_p50_ms": 83.5,
+            "mean_p95_ms": 288.7
+          }
+        },
+        {
+          "cohort_name": "formal_q1",
+          "seed_range": [249181, 249205],
+          "n_seeds": 25,
+          "n_matches": 50,
+          "candidate_count": 10674,
+          "exact_simulation_count": 3750,
+          "commit_count": 375,
+          "commit_rate": 0.0351,
+          "safety_violations": 0,
+          "paired_economics": {
+            "mean_paired_delta": -58.76,
+            "median_paired_delta": -49.00,
+            "std_paired_delta": 220.76,
+            "se_paired_delta": 44.15,
+            "ci_95": [-149.89, 32.37],
+            "t_statistic": -1.331,
+            "p_value": 0.1958,
+            "wins": 8,
+            "losses": 16,
+            "ties": 1,
+            "win_rate": 0.32
+          },
+          "latency": {
+            "mean_p50_ms": 84.6,
+            "mean_p95_ms": 295.1
+          }
+        }
+      ],
+      "combined_economics": {
+        "total_seeds": 35,
+        "total_matches": 70,
+        "mean_paired_delta": -9.84,
+        "wins": 14,
+        "losses": 20,
+        "ties": 1,
+        "win_rate": 0.40
+      },
+      "causal_attribution": "Defensive preemption of high-margin crops captures early shop depth on favorable seeds, but across wider distributions it prematurely fragments batch market sales, pulling forward market price depreciation."
+    },
+    {
+      "mechanism": "RESOURCE_CONVERSION",
+      "implementation_commit": "43319a7",
+      "current_status": "FUNCTIONALLY COMPLETE / QUARANTINED",
+      "final_eligibility": false,
+      "control_configuration": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN",
+      "treatment_configuration": "Control + RESOURCE_CONVERSION",
+      "cohorts": [
+        {
+          "cohort_name": "pilot",
+          "seed_range": [249171, 249180],
+          "n_seeds": 10,
+          "n_matches": 20,
+          "candidate_count": 13360,
+          "exact_simulation_count": 13360,
+          "commit_count": 0,
+          "commit_rate": 0.00,
+          "safety_violations": 0,
+          "paired_economics": {
+            "mean_paired_delta": 0.00,
+            "median_paired_delta": 0.00,
+            "std_paired_delta": 0.00,
+            "se_paired_delta": 0.00,
+            "ci_95": [0.00, 0.00],
+            "t_statistic": 0.00,
+            "p_value": 1.00,
+            "wins": 0,
+            "losses": 0,
+            "ties": 10,
+            "win_rate": 0.00
+          },
+          "latency": {
+            "mean_p50_ms": 85.1,
+            "mean_p95_ms": 292.8
+          }
+        }
+      ],
+      "causal_attribution": "Margin-first valuation accurately accounts for labor opportunity cost (> $40/turn); direct cultivation and raw commodity sales strictly dominate secondary processing across all farm states, producing 100% legitimate abstention."
+    }
+  ]
+}
