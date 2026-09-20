@@ -1,0 +1,10 @@
+[2026-09-16 12:43:02 UTC] ======================================================================
+[2026-09-16 12:43:02 UTC] STARTING EXP-ARCH-003_H1_TERMINAL_REPAIR AUTHORIZED PRODUCTION EXECUTION
+[2026-09-16 12:43:02 UTC] ======================================================================
+[2026-09-16 12:43:02 UTC] Authorized Cohort: [330000, 330499] (N=500 seeds)
+[2026-09-16 12:43:02 UTC] Total Games Scheduled: 1000
+[2026-09-16 12:43:02 UTC] Parallel Workers: 6
+[2026-09-16 12:43:02 UTC] Verifying pre-execution integrity hashes (G-HASH)...
+[2026-09-16 12:43:02 UTC] G-HASH passed: Baseline verified bit-identical.
+[2026-09-16 12:44:17 UTC] Progress: 25/500 seeds (50/1000 games) [0.33 seeds/s] - Latest seed 330024: delta_paired=0.00
+[2026-09-16 13:02:49 UTC] Progress: 50/500 seeds (100/1000 games) [0.04 seeds/s] - Latest seed 330049: delta_paired=0.00

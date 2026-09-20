@@ -1,0 +1,7 @@
+# Requirements for EXP-ARCH-002 Kaggle Execution
+# Note: Kaggle GPU T4 x 2 standard environment already includes Python 3.10+,
+# PyTorch, NumPy, SciPy, and Pandas.
+pytest>=7.0.0
+numpy>=1.22.0
+scipy>=1.9.0
+pandas>=1.4.0

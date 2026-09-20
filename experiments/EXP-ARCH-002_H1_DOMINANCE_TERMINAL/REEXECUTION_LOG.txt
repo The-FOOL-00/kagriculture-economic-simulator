@@ -1,0 +1,21 @@
+[2026-09-16 03:08:33 UTC] ======================================================================
+[2026-09-16 03:08:33 UTC] STARTING EXP-ARCH-002 H1 CORRECTED PRODUCTION RE-EXECUTION
+[2026-09-16 03:08:33 UTC] ======================================================================
+[2026-09-16 03:08:33 UTC] Authorized Cohort: [320000, 320499] (N=500 seeds)
+[2026-09-16 03:08:33 UTC] Total Games Scheduled: 1000
+[2026-09-16 03:08:33 UTC] Parallel Workers: 4
+[2026-09-16 03:08:33 UTC] Verifying pre-execution integrity hashes (G-HASH)...
+[2026-09-16 03:08:33 UTC] G-HASH passed: Baseline and Preregistration verified bit-identical.
+[2026-09-16 03:08:33 UTC] Seeds remaining to execute: 500
+[2026-09-16 03:09:08 UTC] Progress: 10/500 seeds (20/1000 games) [0.29 seeds/s] - Latest seed 320008: delta_paired=0.00
+[2026-09-16 03:09:34 UTC] Progress: 20/500 seeds (40/1000 games) [0.33 seeds/s] - Latest seed 320019: delta_paired=0.00
+[2026-09-16 03:10:30 UTC] Progress: 30/500 seeds (60/1000 games) [0.26 seeds/s] - Latest seed 320029: delta_paired=0.00
+[2026-09-16 03:10:57 UTC] Progress: 40/500 seeds (80/1000 games) [0.28 seeds/s] - Latest seed 320039: delta_paired=0.00
+[2026-09-16 03:13:27 UTC] Progress: 50/500 seeds (100/1000 games) [0.17 seeds/s] - Latest seed 320048: delta_paired=0.00
+[2026-09-16 03:13:59 UTC] Progress: 60/500 seeds (120/1000 games) [0.18 seeds/s] - Latest seed 320059: delta_paired=0.00
+[2026-09-16 03:14:34 UTC] Progress: 70/500 seeds (140/1000 games) [0.19 seeds/s] - Latest seed 320069: delta_paired=0.00
+[2026-09-16 03:15:03 UTC] Progress: 80/500 seeds (160/1000 games) [0.20 seeds/s] - Latest seed 320079: delta_paired=0.00
+[2026-09-16 03:16:45 UTC] Progress: 90/500 seeds (180/1000 games) [0.18 seeds/s] - Latest seed 320091: delta_paired=0.00
+[2026-09-16 03:17:36 UTC] Progress: 100/500 seeds (200/1000 games) [0.18 seeds/s] - Latest seed 320101: delta_paired=0.00
+[2026-09-16 03:29:04 UTC] Progress: 110/500 seeds (220/1000 games) [0.09 seeds/s] - Latest seed 320111: delta_paired=0.00
+[2026-09-16 03:29:24 UTC] FATAL ERROR on seed 320116: 

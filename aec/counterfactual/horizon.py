@@ -163,8 +163,13 @@ def select_adaptive_horizon(
     patch: CoupledPatch,
     econ_state: EconomicState,
     config: AECConfig,
-    future_trajectory: Optional[List[Dict[str, Any]]] = None
+    future_trajectory: Optional[List[Dict[str, Any]]] = None,
+    macro_probe_result: Optional[Any] = None,
 ) -> int:
-    """Wrapper function preserving backward compatibility with existing calls."""
+    """Wrapper function preserving backward compatibility with existing calls while supporting macro escalation."""
     policy = MechanismHorizonPolicy()
-    return policy.select_horizon(patch, econ_state, config, future_trajectory)
+    base_h = policy.select_horizon(patch, econ_state, config, future_trajectory)
+    if macro_probe_result is not None and getattr(macro_probe_result, "requires_escalation", False):
+        esc_h = getattr(macro_probe_result, "recommended_horizon", base_h)
+        return max(base_h, esc_h)
+    return base_h

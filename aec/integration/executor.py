@@ -147,6 +147,9 @@ class AECTelemetry:
     # Detailed per-candidate audit trace (§14)
     candidates: List[CandidateTelemetry] = field(default_factory=list)
 
+    # Shadow robustness audit records (Phase 019)
+    shadow_records: List[Dict[str, Any]] = field(default_factory=list)
+
     @property
     def mechanism(self) -> Optional[str]:
         """Alias for committed_mechanism or attempted mechanism for telemetry inspection."""
@@ -177,6 +180,7 @@ class AECTelemetry:
                 for k, v in self.funnel_reservation.items()
             },
             "trigger_firings": [dict(r) for r in self.trigger_firings],
+            "shadow_records": [dict(r) for r in self.shadow_records],
             "patch_id": self.committed_patch_id,
             "committed_mechanism": self.committed_mechanism,
             "abstain_reason": self.abstain_reason,
@@ -244,6 +248,15 @@ class AECExecutor:
             reserved_fraction=float(
                 getattr(self.config, "funnel_reserved_fraction", 0.25) or 0.25
             ),
+        )
+
+        # Phase 019: Shadow Robustness & Decision Audit engine (§11)
+        from aec.evaluation.shadow_robustness import ShadowRobustnessEvaluator
+        self.shadow_robustness = ShadowRobustnessEvaluator(
+            simulator=self.simulator,
+            macro_detector=self.macro_detector,
+            v3_agent_callable=getattr(self.backbone, "_agent_fn", None),
+            config=self.config,
         )
 
         # State tracking across steps
@@ -527,6 +540,8 @@ class AECExecutor:
             best_candidate: Optional[CoupledPatch] = None
             best_certificate: Optional[SafetyCertificate] = None
             best_eval_result = None
+            best_sim_outcome = None
+            simulated_outcomes: Dict[str, SimulationOutcome] = {}
             quarantined_superior_patch: Optional[CoupledPatch] = None
 
             active_patches = candidate_patches[:self.config.max_simulations]
@@ -572,6 +587,7 @@ class AECExecutor:
                 )
                 telemetry.simulations_run += 1
                 telemetry.patches_simulated_count += 1
+                simulated_outcomes[patch.patch_id] = sim_outcome
 
                 # Strategic Evaluation (WinModel)
                 eval_res = self.win_model.evaluate(
@@ -728,6 +744,7 @@ class AECExecutor:
                         best_candidate = patch
                         best_certificate = cert
                         best_eval_result = eval_res
+                        best_sim_outcome = sim_outcome
 
             telemetry.sim_time_ms = (time.perf_counter() - t_sim0) * 1000.0
 
@@ -765,19 +782,94 @@ class AECExecutor:
                             c.commit_decision = False
                             c.safety_rejection_reason = "MECHANISM_POLICY_VIOLATION"
                 else:
-                    telemetry.decision = "COMMIT"
-                    telemetry.committed_patch_id = best_candidate.patch_id
-                    telemetry.committed_mechanism = mech_fam
-                    self._latest_committed_patch = best_candidate
-                    if len(getattr(best_candidate, "actions", [])) > 1:
-                        self._in_flight_patch = best_candidate
-                        self._in_flight_start_step = step
+                    # Phase 019: Shadow Robustness & Decision Audit (§11)
+                    shadow_record = None
+                    if (
+                        getattr(self.config, "enable_shadow_robustness_audit", False)
+                        or getattr(self.config, "enable_robust_abstention_gate", False)
+                        or getattr(self.config, "enable_robust_relative_selection", False)
+                    ):
+                        self.shadow_robustness.v3_agent_callable = getattr(self.backbone, "_agent_fn", None)
+                        shadow_record = self.shadow_robustness.audit_commit(
+                            committed_patch=best_candidate,
+                            committed_outcome=best_sim_outcome,
+                            all_candidate_patches=candidate_patches,
+                            simulated_outcomes=simulated_outcomes,
+                            baseline_action=baseline_action,
+                            future_trajectory=future_trajectory,
+                            econ_state=econ_state,
+                        )
+                        telemetry.shadow_records.append(shadow_record.to_dict())
+
+                    # Phase 019 Arm U2: Robust Abstention Gate (§21)
+                    if (
+                        getattr(self.config, "enable_robust_abstention_gate", False)
+                        and shadow_record is not None
+                        and shadow_record.would_abstain
+                        and mech_fam == "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER"
+                    ):
+                        telemetry.decision = "ABSTAIN"
+                        telemetry.abstain_reason = (
+                            f"ROBUST_ABSTENTION_GATE: {shadow_record.robustness_category.value} ({shadow_record.audit_notes})"
+                        )
+                        telemetry.committed_patch_id = None
+                        telemetry.committed_mechanism = None
+                        best_candidate = None
+                        for c in telemetry.candidates:
+                            c.commit_decision = False
+                        final_action = baseline_action
+                    elif (
+                        getattr(self.config, "enable_robust_relative_selection", False)
+                        and shadow_record is not None
+                        and shadow_record.foundation_patch_id is not None
+                        and shadow_record.foundation_delta is not None
+                        and shadow_record.foundation_delta > 0
+                        and mech_fam == "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER"
+                        and not (
+                            shadow_record.robustness_category.value == "R0_ROBUST_POSITIVE"
+                            and (shadow_record.committed_delta - shadow_record.foundation_delta) >= 15.0
+                        )
+                    ):
+                        # Switch to foundation candidate
+                        fnd_patch = next((p for p in candidate_patches if p.patch_id == shadow_record.foundation_patch_id), None)
+                        if fnd_patch is not None:
+                            best_candidate = fnd_patch
+                            mech_fam = getattr(best_candidate, "mechanism_family", "")
+                            telemetry.decision = "COMMIT"
+                            telemetry.committed_patch_id = best_candidate.patch_id
+                            telemetry.committed_mechanism = mech_fam
+                            self._latest_committed_patch = best_candidate
+                            self._in_flight_patch = None
+                            for c in telemetry.candidates:
+                                c.commit_decision = (c.patch_id == best_candidate.patch_id)
+                            final_action = best_candidate.apply(baseline_result.canonical_action_copy())
+                        else:
+                            telemetry.decision = "COMMIT"
+                            telemetry.committed_patch_id = best_candidate.patch_id
+                            telemetry.committed_mechanism = mech_fam
+                            self._latest_committed_patch = best_candidate
+                            if len(getattr(best_candidate, "actions", [])) > 1:
+                                self._in_flight_patch = best_candidate
+                                self._in_flight_start_step = step
+                            else:
+                                self._in_flight_patch = None
+                            for c in telemetry.candidates:
+                                c.commit_decision = (c.patch_id == best_candidate.patch_id)
+                            final_action = best_candidate.apply(baseline_result.canonical_action_copy())
                     else:
-                        self._in_flight_patch = None
-                    for c in telemetry.candidates:
-                        c.commit_decision = (c.patch_id == best_candidate.patch_id)
-                    # Apply certified patch to a fresh canonical copy of baseline action
-                    final_action = best_candidate.apply(baseline_result.canonical_action_copy())
+                        telemetry.decision = "COMMIT"
+                        telemetry.committed_patch_id = best_candidate.patch_id
+                        telemetry.committed_mechanism = mech_fam
+                        self._latest_committed_patch = best_candidate
+                        if len(getattr(best_candidate, "actions", [])) > 1:
+                            self._in_flight_patch = best_candidate
+                            self._in_flight_start_step = step
+                        else:
+                            self._in_flight_patch = None
+                        for c in telemetry.candidates:
+                            c.commit_decision = (c.patch_id == best_candidate.patch_id)
+                        # Apply certified patch to a fresh canonical copy of baseline action
+                        final_action = best_candidate.apply(baseline_result.canonical_action_copy())
             else:
                 self._in_flight_patch = None
                 telemetry.decision = "ABSTAIN"

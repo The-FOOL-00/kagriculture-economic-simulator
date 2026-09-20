@@ -1,0 +1,377 @@
+[2026-09-17T09:07:18.890260+00:00] ================================================================================
+[2026-09-17T09:07:18.891017+00:00] EXP-AEC-001 PROSPECTIVE COHORT EXECUTION COMMENCING
+[2026-09-17T09:07:18.891466+00:00] ================================================================================
+[2026-09-17T09:07:18.891785+00:00] Running preflight verification...
+[2026-09-17T09:07:18.933919+00:00] Git HEAD Commit: 6fd787b38d7af24a322e18bc089ccb2ccbe5386a
+[2026-09-17T09:07:18.935527+00:00] Verified frozen artifact: submission_Vj_kc_v3.tar.gz -> 845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943
+[2026-09-17T09:07:18.936274+00:00] Verified frozen artifact: submission_Vj_kc_v2.tar.gz -> 45b9c54fd4946ff94a7a6de03be3e9d2da1c1662316be1129813b362b0bd22b2
+[2026-09-17T09:07:18.936639+00:00] Verified frozen artifact: candidates\compiled_v54_plus_residual.py -> 18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb
+[2026-09-17T09:07:18.936944+00:00] Verified frozen artifact: candidates\compiled_v54_plus_shop.py -> f651ccd220e701968bc33579812d8917da63f5b0582f2fd0d363fa6a16ffd8b8
+[2026-09-17T09:07:18.937247+00:00] Verified frozen artifact: DEVELOPMENT_HOLDOUT_REGISTRY.md -> 0b35f56c4c0a130f559fdd1a90999ed865c905c8e0854937c35e129a73771205
+[2026-09-17T09:07:18.939502+00:00] Wrote CONFIG.json: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-AEC-001\CONFIG.json
+[2026-09-17T09:07:18.942918+00:00] Pre-execution EXECUTION_MANIFEST written: status=IN_PROGRESS
+[2026-09-17T09:07:18.944591+00:00] 
+=== Executing Cohort Seed 340000 (1/50) ===
+[2026-09-17T09:07:18.944890+00:00] [1/100] Starting Seed=340000 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:20.670210+00:00]   Completed Seed=340000 Match_A: AEC Score=108460, V3 Score=108460, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.37ms, max=28.56ms)
+[2026-09-17T09:07:20.671029+00:00] [2/100] Starting Seed=340000 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:22.305788+00:00]   Completed Seed=340000 Match_B: AEC Score=108460, V3 Score=108460, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.29ms, max=28.48ms)
+[2026-09-17T09:07:22.338140+00:00] Seed 340000 atomically checkpointed. Cumulative completed: 1/50
+[2026-09-17T09:07:22.338535+00:00] 
+=== Executing Cohort Seed 340001 (2/50) ===
+[2026-09-17T09:07:22.338893+00:00] [3/100] Starting Seed=340001 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:24.092364+00:00]   Completed Seed=340001 Match_A: AEC Score=120737, V3 Score=120737, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.39ms, max=31.51ms)
+[2026-09-17T09:07:24.094338+00:00] [4/100] Starting Seed=340001 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:25.883050+00:00]   Completed Seed=340001 Match_B: AEC Score=120737, V3 Score=120737, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=37.40ms)
+[2026-09-17T09:07:25.896373+00:00] Seed 340001 atomically checkpointed. Cumulative completed: 2/50
+[2026-09-17T09:07:25.896696+00:00] 
+=== Executing Cohort Seed 340002 (3/50) ===
+[2026-09-17T09:07:25.896964+00:00] [5/100] Starting Seed=340002 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:27.683995+00:00]   Completed Seed=340002 Match_A: AEC Score=100561, V3 Score=100561, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=26.74ms)
+[2026-09-17T09:07:27.685391+00:00] [6/100] Starting Seed=340002 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:29.285194+00:00]   Completed Seed=340002 Match_B: AEC Score=100561, V3 Score=100561, Margin=+0, Commits=0, Elapsed=1.6s, Latency(mean=1.27ms, max=31.39ms)
+[2026-09-17T09:07:29.318633+00:00] Seed 340002 atomically checkpointed. Cumulative completed: 3/50
+[2026-09-17T09:07:29.318989+00:00] 
+=== Executing Cohort Seed 340003 (4/50) ===
+[2026-09-17T09:07:29.319313+00:00] [7/100] Starting Seed=340003 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:31.187763+00:00]   Completed Seed=340003 Match_A: AEC Score=97391, V3 Score=97391, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.50ms, max=18.74ms)
+[2026-09-17T09:07:31.189295+00:00] [8/100] Starting Seed=340003 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:32.992950+00:00]   Completed Seed=340003 Match_B: AEC Score=97391, V3 Score=97391, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.36ms, max=16.48ms)
+[2026-09-17T09:07:33.026752+00:00] Seed 340003 atomically checkpointed. Cumulative completed: 4/50
+[2026-09-17T09:07:33.027090+00:00] 
+=== Executing Cohort Seed 340004 (5/50) ===
+[2026-09-17T09:07:33.027393+00:00] [9/100] Starting Seed=340004 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:34.793110+00:00]   Completed Seed=340004 Match_A: AEC Score=111679, V3 Score=111679, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=29.98ms)
+[2026-09-17T09:07:34.794629+00:00] [10/100] Starting Seed=340004 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:36.612774+00:00]   Completed Seed=340004 Match_B: AEC Score=111679, V3 Score=111679, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=30.83ms)
+[2026-09-17T09:07:36.625591+00:00] Seed 340004 atomically checkpointed. Cumulative completed: 5/50
+[2026-09-17T09:07:36.625909+00:00] 
+=== Executing Cohort Seed 340005 (6/50) ===
+[2026-09-17T09:07:36.626163+00:00] [11/100] Starting Seed=340005 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:38.412248+00:00]   Completed Seed=340005 Match_A: AEC Score=137766, V3 Score=137766, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=30.64ms)
+[2026-09-17T09:07:38.413685+00:00] [12/100] Starting Seed=340005 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:40.196111+00:00]   Completed Seed=340005 Match_B: AEC Score=137766, V3 Score=137766, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.39ms, max=34.93ms)
+[2026-09-17T09:07:40.231827+00:00] Seed 340005 atomically checkpointed. Cumulative completed: 6/50
+[2026-09-17T09:07:40.232326+00:00] 
+=== Executing Cohort Seed 340006 (7/50) ===
+[2026-09-17T09:07:40.232824+00:00] [13/100] Starting Seed=340006 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:42.034841+00:00]   Completed Seed=340006 Match_A: AEC Score=108074, V3 Score=108074, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=29.45ms)
+[2026-09-17T09:07:42.036293+00:00] [14/100] Starting Seed=340006 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:43.746608+00:00]   Completed Seed=340006 Match_B: AEC Score=108074, V3 Score=108074, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.35ms, max=29.32ms)
+[2026-09-17T09:07:43.779940+00:00] Seed 340006 atomically checkpointed. Cumulative completed: 7/50
+[2026-09-17T09:07:43.780298+00:00] 
+=== Executing Cohort Seed 340007 (8/50) ===
+[2026-09-17T09:07:43.780591+00:00] [15/100] Starting Seed=340007 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:45.671768+00:00]   Completed Seed=340007 Match_A: AEC Score=124603, V3 Score=124603, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.51ms, max=8.44ms)
+[2026-09-17T09:07:45.673333+00:00] [16/100] Starting Seed=340007 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:47.586267+00:00]   Completed Seed=340007 Match_B: AEC Score=124603, V3 Score=124603, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.52ms, max=7.78ms)
+[2026-09-17T09:07:47.620868+00:00] Seed 340007 atomically checkpointed. Cumulative completed: 8/50
+[2026-09-17T09:07:47.621158+00:00] 
+=== Executing Cohort Seed 340008 (9/50) ===
+[2026-09-17T09:07:47.621431+00:00] [17/100] Starting Seed=340008 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:49.538319+00:00]   Completed Seed=340008 Match_A: AEC Score=105225, V3 Score=105225, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.52ms, max=20.55ms)
+[2026-09-17T09:07:49.540082+00:00] [18/100] Starting Seed=340008 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:51.413896+00:00]   Completed Seed=340008 Match_B: AEC Score=105225, V3 Score=105225, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.47ms, max=19.45ms)
+[2026-09-17T09:07:51.447909+00:00] Seed 340008 atomically checkpointed. Cumulative completed: 9/50
+[2026-09-17T09:07:51.448357+00:00] 
+=== Executing Cohort Seed 340009 (10/50) ===
+[2026-09-17T09:07:51.448983+00:00] [19/100] Starting Seed=340009 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:53.301601+00:00]   Completed Seed=340009 Match_A: AEC Score=132850, V3 Score=132850, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.46ms, max=31.37ms)
+[2026-09-17T09:07:53.303581+00:00] [20/100] Starting Seed=340009 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:55.092784+00:00]   Completed Seed=340009 Match_B: AEC Score=132850, V3 Score=132850, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.40ms, max=45.20ms)
+[2026-09-17T09:07:55.108026+00:00] Seed 340009 atomically checkpointed. Cumulative completed: 10/50
+[2026-09-17T09:07:55.108374+00:00] 
+=== Executing Cohort Seed 340010 (11/50) ===
+[2026-09-17T09:07:55.108646+00:00] [21/100] Starting Seed=340010 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:07:56.885083+00:00]   Completed Seed=340010 Match_A: AEC Score=66937, V3 Score=66937, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=29.42ms)
+[2026-09-17T09:07:56.886652+00:00] [22/100] Starting Seed=340010 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:07:58.708852+00:00]   Completed Seed=340010 Match_B: AEC Score=66937, V3 Score=66937, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.40ms, max=29.64ms)
+[2026-09-17T09:07:58.745566+00:00] Seed 340010 atomically checkpointed. Cumulative completed: 11/50
+[2026-09-17T09:07:58.746180+00:00] 
+=== Executing Cohort Seed 340011 (12/50) ===
+[2026-09-17T09:07:58.746711+00:00] [23/100] Starting Seed=340011 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:00.586852+00:00]   Completed Seed=340011 Match_A: AEC Score=102309, V3 Score=102309, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.47ms, max=20.90ms)
+[2026-09-17T09:08:00.588544+00:00] [24/100] Starting Seed=340011 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:02.448287+00:00]   Completed Seed=340011 Match_B: AEC Score=102309, V3 Score=102309, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.47ms, max=21.00ms)
+[2026-09-17T09:08:02.482853+00:00] Seed 340011 atomically checkpointed. Cumulative completed: 12/50
+[2026-09-17T09:08:02.483483+00:00] 
+=== Executing Cohort Seed 340012 (13/50) ===
+[2026-09-17T09:08:02.483827+00:00] [25/100] Starting Seed=340012 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:04.379745+00:00]   Completed Seed=340012 Match_A: AEC Score=111459, V3 Score=111459, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.53ms, max=19.66ms)
+[2026-09-17T09:08:04.381274+00:00] [26/100] Starting Seed=340012 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:06.414348+00:00]   Completed Seed=340012 Match_B: AEC Score=111459, V3 Score=111459, Margin=+0, Commits=0, Elapsed=2.0s, Latency(mean=1.63ms, max=18.50ms)
+[2026-09-17T09:08:06.453288+00:00] Seed 340012 atomically checkpointed. Cumulative completed: 13/50
+[2026-09-17T09:08:06.453637+00:00] 
+=== Executing Cohort Seed 340013 (14/50) ===
+[2026-09-17T09:08:06.454067+00:00] [27/100] Starting Seed=340013 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:08.322455+00:00]   Completed Seed=340013 Match_A: AEC Score=103873, V3 Score=103873, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.49ms, max=31.60ms)
+[2026-09-17T09:08:08.323965+00:00] [28/100] Starting Seed=340013 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:10.226972+00:00]   Completed Seed=340013 Match_B: AEC Score=103873, V3 Score=103873, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.50ms, max=39.29ms)
+[2026-09-17T09:08:10.263809+00:00] Seed 340013 atomically checkpointed. Cumulative completed: 14/50
+[2026-09-17T09:08:10.264220+00:00] 
+=== Executing Cohort Seed 340014 (15/50) ===
+[2026-09-17T09:08:10.264903+00:00] [29/100] Starting Seed=340014 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:12.176677+00:00]   Completed Seed=340014 Match_A: AEC Score=65646, V3 Score=65646, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.52ms, max=30.65ms)
+[2026-09-17T09:08:12.178314+00:00] [30/100] Starting Seed=340014 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:14.226082+00:00]   Completed Seed=340014 Match_B: AEC Score=65646, V3 Score=65646, Margin=+0, Commits=0, Elapsed=2.0s, Latency(mean=1.57ms, max=33.59ms)
+[2026-09-17T09:08:14.244151+00:00] Seed 340014 atomically checkpointed. Cumulative completed: 15/50
+[2026-09-17T09:08:14.244476+00:00] 
+=== Executing Cohort Seed 340015 (16/50) ===
+[2026-09-17T09:08:14.244797+00:00] [31/100] Starting Seed=340015 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:15.984052+00:00]   Completed Seed=340015 Match_A: AEC Score=85298, V3 Score=85298, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.36ms, max=32.01ms)
+[2026-09-17T09:08:15.985653+00:00] [32/100] Starting Seed=340015 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:17.783355+00:00]   Completed Seed=340015 Match_B: AEC Score=85298, V3 Score=85298, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=29.35ms)
+[2026-09-17T09:08:17.817640+00:00] Seed 340015 atomically checkpointed. Cumulative completed: 16/50
+[2026-09-17T09:08:17.817926+00:00] 
+=== Executing Cohort Seed 340016 (17/50) ===
+[2026-09-17T09:08:17.818239+00:00] [33/100] Starting Seed=340016 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:19.702164+00:00]   Completed Seed=340016 Match_A: AEC Score=117393, V3 Score=117393, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.51ms, max=36.73ms)
+[2026-09-17T09:08:19.703640+00:00] [34/100] Starting Seed=340016 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:21.461381+00:00]   Completed Seed=340016 Match_B: AEC Score=117393, V3 Score=117393, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.39ms, max=29.95ms)
+[2026-09-17T09:08:21.495720+00:00] Seed 340016 atomically checkpointed. Cumulative completed: 17/50
+[2026-09-17T09:08:21.496080+00:00] 
+=== Executing Cohort Seed 340017 (18/50) ===
+[2026-09-17T09:08:21.496367+00:00] [35/100] Starting Seed=340017 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:23.258930+00:00]   Completed Seed=340017 Match_A: AEC Score=107395, V3 Score=106269, Margin=+1126, Commits=0, Elapsed=1.8s, Latency(mean=1.40ms, max=34.62ms)
+[2026-09-17T09:08:23.260511+00:00] [36/100] Starting Seed=340017 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:25.052396+00:00]   Completed Seed=340017 Match_B: AEC Score=106269, V3 Score=107395, Margin=-1126, Commits=0, Elapsed=1.8s, Latency(mean=1.39ms, max=33.44ms)
+[2026-09-17T09:08:25.072220+00:00] Seed 340017 atomically checkpointed. Cumulative completed: 18/50
+[2026-09-17T09:08:25.072589+00:00] 
+=== Executing Cohort Seed 340018 (19/50) ===
+[2026-09-17T09:08:25.072885+00:00] [37/100] Starting Seed=340018 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:26.865958+00:00]   Completed Seed=340018 Match_A: AEC Score=84890, V3 Score=84890, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=29.74ms)
+[2026-09-17T09:08:26.867356+00:00] [38/100] Starting Seed=340018 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:28.699498+00:00]   Completed Seed=340018 Match_B: AEC Score=84890, V3 Score=84890, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.45ms, max=33.54ms)
+[2026-09-17T09:08:28.732499+00:00] Seed 340018 atomically checkpointed. Cumulative completed: 19/50
+[2026-09-17T09:08:28.732888+00:00] 
+=== Executing Cohort Seed 340019 (20/50) ===
+[2026-09-17T09:08:28.733307+00:00] [39/100] Starting Seed=340019 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:30.580565+00:00]   Completed Seed=340019 Match_A: AEC Score=119775, V3 Score=119775, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.47ms, max=21.68ms)
+[2026-09-17T09:08:30.582003+00:00] [40/100] Starting Seed=340019 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:32.448661+00:00]   Completed Seed=340019 Match_B: AEC Score=119775, V3 Score=119775, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.46ms, max=19.00ms)
+[2026-09-17T09:08:32.472691+00:00] Seed 340019 atomically checkpointed. Cumulative completed: 20/50
+[2026-09-17T09:08:32.472990+00:00] 
+=== Executing Cohort Seed 340020 (21/50) ===
+[2026-09-17T09:08:32.473382+00:00] [41/100] Starting Seed=340020 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:34.325697+00:00]   Completed Seed=340020 Match_A: AEC Score=143920, V3 Score=143920, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.46ms, max=29.45ms)
+[2026-09-17T09:08:34.327275+00:00] [42/100] Starting Seed=340020 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:36.157284+00:00]   Completed Seed=340020 Match_B: AEC Score=143920, V3 Score=143920, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=31.90ms)
+[2026-09-17T09:08:36.195572+00:00] Seed 340020 atomically checkpointed. Cumulative completed: 21/50
+[2026-09-17T09:08:36.196016+00:00] 
+=== Executing Cohort Seed 340021 (22/50) ===
+[2026-09-17T09:08:36.196357+00:00] [43/100] Starting Seed=340021 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:38.070208+00:00]   Completed Seed=340021 Match_A: AEC Score=79769, V3 Score=79769, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.49ms, max=23.94ms)
+[2026-09-17T09:08:38.071932+00:00] [44/100] Starting Seed=340021 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:39.975568+00:00]   Completed Seed=340021 Match_B: AEC Score=79769, V3 Score=79769, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.50ms, max=20.47ms)
+[2026-09-17T09:08:39.991978+00:00] Seed 340021 atomically checkpointed. Cumulative completed: 22/50
+[2026-09-17T09:08:39.992310+00:00] 
+=== Executing Cohort Seed 340022 (23/50) ===
+[2026-09-17T09:08:39.992655+00:00] [45/100] Starting Seed=340022 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:41.790253+00:00]   Completed Seed=340022 Match_A: AEC Score=75678, V3 Score=75678, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=47.09ms)
+[2026-09-17T09:08:41.791835+00:00] [46/100] Starting Seed=340022 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:43.615585+00:00]   Completed Seed=340022 Match_B: AEC Score=75678, V3 Score=75678, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=36.16ms)
+[2026-09-17T09:08:43.631678+00:00] Seed 340022 atomically checkpointed. Cumulative completed: 23/50
+[2026-09-17T09:08:43.632035+00:00] 
+=== Executing Cohort Seed 340023 (24/50) ===
+[2026-09-17T09:08:43.632412+00:00] [47/100] Starting Seed=340023 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:45.599863+00:00]   Completed Seed=340023 Match_A: AEC Score=64815, V3 Score=64895, Margin=-80, Commits=0, Elapsed=2.0s, Latency(mean=1.60ms, max=29.93ms)
+[2026-09-17T09:08:45.601339+00:00] [48/100] Starting Seed=340023 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:47.248516+00:00]   Completed Seed=340023 Match_B: AEC Score=64895, V3 Score=64815, Margin=+80, Commits=0, Elapsed=1.6s, Latency(mean=1.29ms, max=33.35ms)
+[2026-09-17T09:08:47.286379+00:00] Seed 340023 atomically checkpointed. Cumulative completed: 24/50
+[2026-09-17T09:08:47.286995+00:00] 
+=== Executing Cohort Seed 340024 (25/50) ===
+[2026-09-17T09:08:47.287604+00:00] [49/100] Starting Seed=340024 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:49.085494+00:00]   Completed Seed=340024 Match_A: AEC Score=90122, V3 Score=90122, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=30.70ms)
+[2026-09-17T09:08:49.087239+00:00] [50/100] Starting Seed=340024 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:50.911669+00:00]   Completed Seed=340024 Match_B: AEC Score=90122, V3 Score=90122, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=32.38ms)
+[2026-09-17T09:08:50.956123+00:00] Seed 340024 atomically checkpointed. Cumulative completed: 25/50
+[2026-09-17T09:08:50.956515+00:00] 
+=== Executing Cohort Seed 340025 (26/50) ===
+[2026-09-17T09:08:50.956792+00:00] [51/100] Starting Seed=340025 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:52.744242+00:00]   Completed Seed=340025 Match_A: AEC Score=105656, V3 Score=105656, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=29.83ms)
+[2026-09-17T09:08:52.745965+00:00] [52/100] Starting Seed=340025 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:54.522684+00:00]   Completed Seed=340025 Match_B: AEC Score=105656, V3 Score=105656, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=33.69ms)
+[2026-09-17T09:08:54.556969+00:00] Seed 340025 atomically checkpointed. Cumulative completed: 26/50
+[2026-09-17T09:08:54.557355+00:00] 
+=== Executing Cohort Seed 340026 (27/50) ===
+[2026-09-17T09:08:54.557695+00:00] [53/100] Starting Seed=340026 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:08:56.442100+00:00]   Completed Seed=340026 Match_A: AEC Score=86699, V3 Score=86699, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.48ms, max=32.37ms)
+[2026-09-17T09:08:56.443829+00:00] [54/100] Starting Seed=340026 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:08:58.244737+00:00]   Completed Seed=340026 Match_B: AEC Score=86699, V3 Score=86699, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=30.11ms)
+[2026-09-17T09:08:58.280745+00:00] Seed 340026 atomically checkpointed. Cumulative completed: 27/50
+[2026-09-17T09:08:58.281080+00:00] 
+=== Executing Cohort Seed 340027 (28/50) ===
+[2026-09-17T09:08:58.281468+00:00] [55/100] Starting Seed=340027 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:00.299935+00:00]   Completed Seed=340027 Match_A: AEC Score=79929, V3 Score=79929, Margin=+0, Commits=0, Elapsed=2.0s, Latency(mean=1.61ms, max=18.25ms)
+[2026-09-17T09:09:00.301774+00:00] [56/100] Starting Seed=340027 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:02.271715+00:00]   Completed Seed=340027 Match_B: AEC Score=79929, V3 Score=79929, Margin=+0, Commits=0, Elapsed=2.0s, Latency(mean=1.55ms, max=7.60ms)
+[2026-09-17T09:09:02.310079+00:00] Seed 340027 atomically checkpointed. Cumulative completed: 28/50
+[2026-09-17T09:09:02.310427+00:00] 
+=== Executing Cohort Seed 340028 (29/50) ===
+[2026-09-17T09:09:02.310773+00:00] [57/100] Starting Seed=340028 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:04.158981+00:00]   Completed Seed=340028 Match_A: AEC Score=121704, V3 Score=121704, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.48ms, max=18.60ms)
+[2026-09-17T09:09:04.161238+00:00] [58/100] Starting Seed=340028 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:06.022035+00:00]   Completed Seed=340028 Match_B: AEC Score=121704, V3 Score=121704, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.50ms, max=19.82ms)
+[2026-09-17T09:09:06.037173+00:00] Seed 340028 atomically checkpointed. Cumulative completed: 29/50
+[2026-09-17T09:09:06.037511+00:00] 
+=== Executing Cohort Seed 340029 (30/50) ===
+[2026-09-17T09:09:06.037818+00:00] [59/100] Starting Seed=340029 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:07.797274+00:00]   Completed Seed=340029 Match_A: AEC Score=134618, V3 Score=134618, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=29.87ms)
+[2026-09-17T09:09:07.798827+00:00] [60/100] Starting Seed=340029 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:09.561646+00:00]   Completed Seed=340029 Match_B: AEC Score=134618, V3 Score=134618, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.37ms, max=29.49ms)
+[2026-09-17T09:09:09.604523+00:00] Seed 340029 atomically checkpointed. Cumulative completed: 30/50
+[2026-09-17T09:09:09.604998+00:00] 
+=== Executing Cohort Seed 340030 (31/50) ===
+[2026-09-17T09:09:09.605406+00:00] [61/100] Starting Seed=340030 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:11.445325+00:00]   Completed Seed=340030 Match_A: AEC Score=112247, V3 Score=112247, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.48ms, max=25.26ms)
+[2026-09-17T09:09:11.446836+00:00] [62/100] Starting Seed=340030 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:13.279965+00:00]   Completed Seed=340030 Match_B: AEC Score=112247, V3 Score=112247, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.45ms, max=19.13ms)
+[2026-09-17T09:09:13.314924+00:00] Seed 340030 atomically checkpointed. Cumulative completed: 31/50
+[2026-09-17T09:09:13.315336+00:00] 
+=== Executing Cohort Seed 340031 (32/50) ===
+[2026-09-17T09:09:13.315721+00:00] [63/100] Starting Seed=340031 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:15.091616+00:00]   Completed Seed=340031 Match_A: AEC Score=80132, V3 Score=80132, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.40ms, max=29.24ms)
+[2026-09-17T09:09:15.093369+00:00] [64/100] Starting Seed=340031 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:16.914837+00:00]   Completed Seed=340031 Match_B: AEC Score=80132, V3 Score=80132, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=31.23ms)
+[2026-09-17T09:09:16.938864+00:00] Seed 340031 atomically checkpointed. Cumulative completed: 32/50
+[2026-09-17T09:09:16.939203+00:00] 
+=== Executing Cohort Seed 340032 (33/50) ===
+[2026-09-17T09:09:16.939510+00:00] [65/100] Starting Seed=340032 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:18.719860+00:00]   Completed Seed=340032 Match_A: AEC Score=62998, V3 Score=62998, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.40ms, max=29.49ms)
+[2026-09-17T09:09:18.721504+00:00] [66/100] Starting Seed=340032 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:20.526743+00:00]   Completed Seed=340032 Match_B: AEC Score=62998, V3 Score=62998, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=32.92ms)
+[2026-09-17T09:09:20.565936+00:00] Seed 340032 atomically checkpointed. Cumulative completed: 33/50
+[2026-09-17T09:09:20.566291+00:00] 
+=== Executing Cohort Seed 340033 (34/50) ===
+[2026-09-17T09:09:20.566563+00:00] [67/100] Starting Seed=340033 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:22.434850+00:00]   Completed Seed=340033 Match_A: AEC Score=123535, V3 Score=123535, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.46ms, max=30.51ms)
+[2026-09-17T09:09:22.436428+00:00] [68/100] Starting Seed=340033 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:24.239097+00:00]   Completed Seed=340033 Match_B: AEC Score=123535, V3 Score=123535, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=33.66ms)
+[2026-09-17T09:09:24.276504+00:00] Seed 340033 atomically checkpointed. Cumulative completed: 34/50
+[2026-09-17T09:09:24.276764+00:00] 
+=== Executing Cohort Seed 340034 (35/50) ===
+[2026-09-17T09:09:24.276952+00:00] [69/100] Starting Seed=340034 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:26.085871+00:00]   Completed Seed=340034 Match_A: AEC Score=101218, V3 Score=101218, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=30.50ms)
+[2026-09-17T09:09:26.087570+00:00] [70/100] Starting Seed=340034 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:27.919707+00:00]   Completed Seed=340034 Match_B: AEC Score=101218, V3 Score=101218, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=29.67ms)
+[2026-09-17T09:09:27.958168+00:00] Seed 340034 atomically checkpointed. Cumulative completed: 35/50
+[2026-09-17T09:09:27.958490+00:00] 
+=== Executing Cohort Seed 340035 (36/50) ===
+[2026-09-17T09:09:27.958784+00:00] [71/100] Starting Seed=340035 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:29.772841+00:00]   Completed Seed=340035 Match_A: AEC Score=77439, V3 Score=77439, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=31.77ms)
+[2026-09-17T09:09:29.774470+00:00] [72/100] Starting Seed=340035 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:31.571582+00:00]   Completed Seed=340035 Match_B: AEC Score=77439, V3 Score=77439, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=30.75ms)
+[2026-09-17T09:09:31.614072+00:00] Seed 340035 atomically checkpointed. Cumulative completed: 36/50
+[2026-09-17T09:09:31.614495+00:00] 
+=== Executing Cohort Seed 340036 (37/50) ===
+[2026-09-17T09:09:31.614800+00:00] [73/100] Starting Seed=340036 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:33.493194+00:00]   Completed Seed=340036 Match_A: AEC Score=102695, V3 Score=102695, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.47ms, max=19.01ms)
+[2026-09-17T09:09:33.495281+00:00] [74/100] Starting Seed=340036 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:35.234851+00:00]   Completed Seed=340036 Match_B: AEC Score=102695, V3 Score=102695, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.38ms, max=19.99ms)
+[2026-09-17T09:09:35.274639+00:00] Seed 340036 atomically checkpointed. Cumulative completed: 37/50
+[2026-09-17T09:09:35.274993+00:00] 
+=== Executing Cohort Seed 340037 (38/50) ===
+[2026-09-17T09:09:35.275281+00:00] [75/100] Starting Seed=340037 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:37.115289+00:00]   Completed Seed=340037 Match_A: AEC Score=141004, V3 Score=126261, Margin=+14743, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=32.06ms)
+[2026-09-17T09:09:37.116788+00:00] [76/100] Starting Seed=340037 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:38.836521+00:00]   Completed Seed=340037 Match_B: AEC Score=126261, V3 Score=141004, Margin=-14743, Commits=0, Elapsed=1.7s, Latency(mean=1.28ms, max=31.80ms)
+[2026-09-17T09:09:38.873024+00:00] Seed 340037 atomically checkpointed. Cumulative completed: 38/50
+[2026-09-17T09:09:38.873355+00:00] 
+=== Executing Cohort Seed 340038 (39/50) ===
+[2026-09-17T09:09:38.873623+00:00] [77/100] Starting Seed=340038 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:40.618399+00:00]   Completed Seed=340038 Match_A: AEC Score=70089, V3 Score=70089, Margin=+0, Commits=0, Elapsed=1.7s, Latency(mean=1.37ms, max=29.59ms)
+[2026-09-17T09:09:40.620720+00:00] [78/100] Starting Seed=340038 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:42.490147+00:00]   Completed Seed=340038 Match_B: AEC Score=70089, V3 Score=70089, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.46ms, max=30.22ms)
+[2026-09-17T09:09:42.532246+00:00] Seed 340038 atomically checkpointed. Cumulative completed: 39/50
+[2026-09-17T09:09:42.532716+00:00] 
+=== Executing Cohort Seed 340039 (40/50) ===
+[2026-09-17T09:09:42.533083+00:00] [79/100] Starting Seed=340039 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:44.377395+00:00]   Completed Seed=340039 Match_A: AEC Score=79827, V3 Score=80160, Margin=-333, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=30.59ms)
+[2026-09-17T09:09:44.379187+00:00] [80/100] Starting Seed=340039 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:46.222149+00:00]   Completed Seed=340039 Match_B: AEC Score=80160, V3 Score=79827, Margin=+333, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=30.92ms)
+[2026-09-17T09:09:46.262974+00:00] Seed 340039 atomically checkpointed. Cumulative completed: 40/50
+[2026-09-17T09:09:46.263241+00:00] 
+=== Executing Cohort Seed 340040 (41/50) ===
+[2026-09-17T09:09:46.263435+00:00] [81/100] Starting Seed=340040 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:48.112991+00:00]   Completed Seed=340040 Match_A: AEC Score=107666, V3 Score=107666, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.45ms, max=29.53ms)
+[2026-09-17T09:09:48.114564+00:00] [82/100] Starting Seed=340040 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:49.933763+00:00]   Completed Seed=340040 Match_B: AEC Score=107666, V3 Score=107666, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=30.24ms)
+[2026-09-17T09:09:49.972590+00:00] Seed 340040 atomically checkpointed. Cumulative completed: 41/50
+[2026-09-17T09:09:49.972917+00:00] 
+=== Executing Cohort Seed 340041 (42/50) ===
+[2026-09-17T09:09:49.973285+00:00] [83/100] Starting Seed=340041 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:51.766986+00:00]   Completed Seed=340041 Match_A: AEC Score=112190, V3 Score=112190, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.41ms, max=30.35ms)
+[2026-09-17T09:09:51.768737+00:00] [84/100] Starting Seed=340041 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:53.594880+00:00]   Completed Seed=340041 Match_B: AEC Score=112190, V3 Score=112190, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=30.05ms)
+[2026-09-17T09:09:53.634567+00:00] Seed 340041 atomically checkpointed. Cumulative completed: 42/50
+[2026-09-17T09:09:53.635086+00:00] 
+=== Executing Cohort Seed 340042 (43/50) ===
+[2026-09-17T09:09:53.635707+00:00] [85/100] Starting Seed=340042 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:55.479213+00:00]   Completed Seed=340042 Match_A: AEC Score=77982, V3 Score=77982, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.45ms, max=21.32ms)
+[2026-09-17T09:09:55.480544+00:00] [86/100] Starting Seed=340042 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:09:57.315591+00:00]   Completed Seed=340042 Match_B: AEC Score=77982, V3 Score=77982, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=19.03ms)
+[2026-09-17T09:09:57.357700+00:00] Seed 340042 atomically checkpointed. Cumulative completed: 43/50
+[2026-09-17T09:09:57.358167+00:00] 
+=== Executing Cohort Seed 340043 (44/50) ===
+[2026-09-17T09:09:57.358551+00:00] [87/100] Starting Seed=340043 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:09:59.234641+00:00]   Completed Seed=340043 Match_A: AEC Score=69381, V3 Score=72455, Margin=-3074, Commits=0, Elapsed=1.9s, Latency(mean=1.48ms, max=32.43ms)
+[2026-09-17T09:09:59.236319+00:00] [88/100] Starting Seed=340043 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:10:01.079114+00:00]   Completed Seed=340043 Match_B: AEC Score=72455, V3 Score=69381, Margin=+3074, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=34.94ms)
+[2026-09-17T09:10:01.122547+00:00] Seed 340043 atomically checkpointed. Cumulative completed: 44/50
+[2026-09-17T09:10:01.123045+00:00] 
+=== Executing Cohort Seed 340044 (45/50) ===
+[2026-09-17T09:10:01.123450+00:00] [89/100] Starting Seed=340044 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:10:02.917665+00:00]   Completed Seed=340044 Match_A: AEC Score=68059, V3 Score=68059, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=29.96ms)
+[2026-09-17T09:10:02.919302+00:00] [90/100] Starting Seed=340044 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:10:04.698196+00:00]   Completed Seed=340044 Match_B: AEC Score=68059, V3 Score=68059, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.42ms, max=30.09ms)
+[2026-09-17T09:10:04.716545+00:00] Seed 340044 atomically checkpointed. Cumulative completed: 45/50
+[2026-09-17T09:10:04.716813+00:00] 
+=== Executing Cohort Seed 340045 (46/50) ===
+[2026-09-17T09:10:04.717008+00:00] [91/100] Starting Seed=340045 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:10:06.541874+00:00]   Completed Seed=340045 Match_A: AEC Score=119946, V3 Score=119946, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=31.44ms)
+[2026-09-17T09:10:06.543464+00:00] [92/100] Starting Seed=340045 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:10:08.346523+00:00]   Completed Seed=340045 Match_B: AEC Score=119946, V3 Score=119946, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.43ms, max=31.48ms)
+[2026-09-17T09:10:08.377227+00:00] Seed 340045 atomically checkpointed. Cumulative completed: 46/50
+[2026-09-17T09:10:08.377526+00:00] 
+=== Executing Cohort Seed 340046 (47/50) ===
+[2026-09-17T09:10:08.377732+00:00] [93/100] Starting Seed=340046 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:10:10.223856+00:00]   Completed Seed=340046 Match_A: AEC Score=125257, V3 Score=125257, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=32.49ms)
+[2026-09-17T09:10:10.225418+00:00] [94/100] Starting Seed=340046 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:10:11.998154+00:00]   Completed Seed=340046 Match_B: AEC Score=125257, V3 Score=125257, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.40ms, max=30.67ms)
+[2026-09-17T09:10:12.041239+00:00] Seed 340046 atomically checkpointed. Cumulative completed: 47/50
+[2026-09-17T09:10:12.041612+00:00] 
+=== Executing Cohort Seed 340047 (48/50) ===
+[2026-09-17T09:10:12.041986+00:00] [95/100] Starting Seed=340047 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:10:13.896962+00:00]   Completed Seed=340047 Match_A: AEC Score=93109, V3 Score=93109, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.48ms, max=35.28ms)
+[2026-09-17T09:10:13.898688+00:00] [96/100] Starting Seed=340047 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:10:15.788820+00:00]   Completed Seed=340047 Match_B: AEC Score=93109, V3 Score=93109, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.47ms, max=32.74ms)
+[2026-09-17T09:10:15.830555+00:00] Seed 340047 atomically checkpointed. Cumulative completed: 48/50
+[2026-09-17T09:10:15.830906+00:00] 
+=== Executing Cohort Seed 340048 (49/50) ===
+[2026-09-17T09:10:15.831200+00:00] [97/100] Starting Seed=340048 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:10:17.679919+00:00]   Completed Seed=340048 Match_A: AEC Score=96909, V3 Score=96909, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=31.84ms)
+[2026-09-17T09:10:17.681579+00:00] [98/100] Starting Seed=340048 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:10:19.564288+00:00]   Completed Seed=340048 Match_B: AEC Score=96909, V3 Score=96909, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.47ms, max=30.64ms)
+[2026-09-17T09:10:19.609017+00:00] Seed 340048 atomically checkpointed. Cumulative completed: 49/50
+[2026-09-17T09:10:19.609450+00:00] 
+=== Executing Cohort Seed 340049 (50/50) ===
+[2026-09-17T09:10:19.609821+00:00] [99/100] Starting Seed=340049 Match_A: AEC Seat=0, V3 Seat=1
+[2026-09-17T09:10:21.465600+00:00]   Completed Seed=340049 Match_A: AEC Score=83006, V3 Score=83006, Margin=+0, Commits=0, Elapsed=1.9s, Latency(mean=1.44ms, max=30.91ms)
+[2026-09-17T09:10:21.467315+00:00] [100/100] Starting Seed=340049 Match_B: AEC Seat=1, V3 Seat=0
+[2026-09-17T09:10:23.315072+00:00]   Completed Seed=340049 Match_B: AEC Score=83006, V3 Score=83006, Margin=+0, Commits=0, Elapsed=1.8s, Latency(mean=1.44ms, max=37.30ms)
+[2026-09-17T09:10:23.356639+00:00] Seed 340049 atomically checkpointed. Cumulative completed: 50/50
+[2026-09-17T09:10:23.356934+00:00] 
+================================================================================
+[2026-09-17T09:10:23.357139+00:00] ALL 50 SEEDS COMPLETED. COMPUTING PREREGISTERED STATISTICAL SUMMARY...
+[2026-09-17T09:10:23.357316+00:00] ================================================================================
+[2026-09-17T09:10:23.500070+00:00] SUMMARY.json written: C:\Users\Sundareswaran\Kagriculture\experiments\EXP-AEC-001\SUMMARY.json
+[2026-09-17T09:10:23.502711+00:00] Final EXECUTION_MANIFEST.json written: status=COMPLETED
+[2026-09-17T09:10:23.503055+00:00] 
+================================================================================
+[2026-09-17T09:10:23.503400+00:00] EXP-AEC-001 RUN COMPLETE IN 184.4s
+[2026-09-17T09:10:23.503698+00:00] Mean Paired Margin Delta: +0.00
+[2026-09-17T09:10:23.504027+00:00] Median Paired Margin Delta: +0.00
+[2026-09-17T09:10:23.504353+00:00] Treatment Wins: 5, Control Wins: 5, Ties: 90
+[2026-09-17T09:10:23.504644+00:00] Win Rate Delta: +0.00%
+[2026-09-17T09:10:23.504992+00:00] Hypothesis Verdict: ACCEPTED
+[2026-09-17T09:10:23.505363+00:00] ================================================================================

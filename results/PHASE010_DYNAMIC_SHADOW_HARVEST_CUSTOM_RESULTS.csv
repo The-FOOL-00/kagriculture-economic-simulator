@@ -1,0 +1,3 @@
+seed,seat,treatment_reward,control_reward,margin,win,loss,tie,target_candidates,target_commits,committed,abstained,fallback_count,latency_p50,latency_p95
+249050,0,106366.0,106380.0,-14.0,False,True,False,323,0,1,157,157,119.58279999817023,593.0543100017534
+249050,1,106366.0,106380.0,-14.0,False,True,False,323,0,1,157,157,110.88459999882616,560.8997100025591

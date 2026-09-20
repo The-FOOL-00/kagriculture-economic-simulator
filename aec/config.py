@@ -249,6 +249,12 @@ class AECConfig:
     trigger_min_premium_class_a: Optional[float] = None
     enable_tape_separation: bool = False
 
+    # Phase 019: Uncertainty-Aware Commit Selection & Robust Decisions (all default OFF)
+    enable_shadow_robustness_audit: bool = False
+    enable_robust_abstention_gate: bool = False
+    enable_robust_relative_selection: bool = False
+    enable_adaptive_shadow_breadth: bool = False
+
     # Performance & Safety
     per_step_latency_limit_ms: float = 100.0
     fail_closed: bool = True
@@ -384,4 +390,41 @@ def build_phase018_arm_c3_config() -> AECConfig:
     cfg = build_phase015_treatment_config()
     cfg.enable_tape_separation = True
     return cfg
+
+
+def build_phase019_u0_config() -> AECConfig:
+    """Phase 019 Arm U0: Baseline decision policy (Phase018-approved infra + reservation)."""
+    cfg = build_phase015_treatment_config()
+    cfg.enable_funnel_reservation = True
+    cfg.enable_market_patch_discrimination = True
+    return cfg
+
+
+def build_phase019_u1_config() -> AECConfig:
+    """Phase 019 Arm U1: Shadow-only robustness audit (observes without altering decisions)."""
+    cfg = build_phase019_u0_config()
+    cfg.enable_shadow_robustness_audit = True
+    return cfg
+
+
+def build_phase019_u2_config() -> AECConfig:
+    """Phase 019 Arm U2: Robust abstention gate (abstains on unstable/fragile candidates)."""
+    cfg = build_phase019_u1_config()
+    cfg.enable_robust_abstention_gate = True
+    return cfg
+
+
+def build_phase019_u3_config() -> AECConfig:
+    """Phase 019 Arm U3: Robust relative selection (foundation primacy + runner-up check)."""
+    cfg = build_phase019_u1_config()
+    cfg.enable_robust_relative_selection = True
+    return cfg
+
+
+def build_phase019_u4_config() -> AECConfig:
+    """Phase 019 Arm U4: Adaptive evaluation breadth."""
+    cfg = build_phase019_u1_config()
+    cfg.enable_adaptive_shadow_breadth = True
+    return cfg
+
 

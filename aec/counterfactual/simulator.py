@@ -16,6 +16,11 @@ from aec.config import (
     TURNS_PER_DAY,
 )
 from aec.counterfactual.opponent_pressure import OpponentPressureModel
+from aec.counterfactual.v3_continuation import (
+    V3ContinuationPolicy,
+    restore_v3_state,
+    snapshot_v3_state,
+)
 from aec.ir.economic_state import EconomicState
 from aec.patches.patch import CoupledPatch
 
@@ -88,6 +93,16 @@ class SimulationOutcome:
     # Resource and Feed Security Invariants (§5, §6, §17)
     feed_security_ok: bool = True
     feed_deficit_units: int = 0
+
+    # Phase 016 Macro-Aware Continuation Invariants (§5, §15, §16)
+    macro_escalated: bool = False
+    macro_regime_type: str = "NONE"
+    macro_escalation_reason: str = ""
+    first_divergence_turn: Optional[int] = None
+    direct_intervention_effect: float = 0.0
+    macro_induced_continuation_delta: float = 0.0
+    executed_baseline_actions: Optional[List[Dict[str, Any]]] = None
+    executed_candidate_actions: Optional[List[Dict[str, Any]]] = None
 
 
 class ShadowRolloutState:
@@ -346,6 +361,9 @@ def simulate_rollout(
     baseline_positions: Optional[List[List[List[int]]]] = None,
     spliced_workers: Optional[Set[int]] = None,
     reconnect_result: Optional[Any] = None,
+    v3_policy: Optional[Any] = None,
+    executed_actions: Optional[List[Dict[str, Any]]] = None,
+    player: int = 0,
 ) -> ShadowRolloutState:
     """Run an isolated forward rollout starting with initial_action at step 0, followed by continuation."""
     rollout = ShadowRolloutState(econ_state)
@@ -362,14 +380,19 @@ def simulate_rollout(
         rollout.step = cur_step
         rollout.day = cur_step // TURNS_PER_DAY
         
-        # Step action: initial_action on offset 0; continuation thereafter
+        # Step action: initial_action on offset 0; dynamic V3 or continuation thereafter
         if offset == 0:
             action = copy.deepcopy(initial_action)
         else:
-            if continuation_actions and (offset - 1) < len(continuation_actions):
+            if v3_policy is not None:
+                action = v3_policy.step_action(rollout, player=player)
+            elif continuation_actions and (offset - 1) < len(continuation_actions):
                 action = copy.deepcopy(continuation_actions[offset - 1])
             else:
                 action = {"farmer": ["PASS"], "hands": [["PASS"] for _ in range(n_workers - 1)], "market": []}
+
+        if executed_actions is not None:
+            executed_actions.append(copy.deepcopy(action))
 
         # 1. Apply worker movements and tasks
         farm_dict = rollout.get_farm_dict()
@@ -510,27 +533,47 @@ class CounterfactualSimulator:
         horizon: int,
         continuation_trajectory: Optional[List[Dict[str, Any]]] = None,
         trace: bool = False,
-        opponent_mode: str = "CALIBRATED_ESTIMATE"
+        opponent_mode: str = "CALIBRATED_ESTIMATE",
+        v3_agent_callable: Optional[Any] = None,
+        macro_escalated: bool = False,
+        macro_escalation_reason: str = "",
+        macro_regime_type: str = "NONE",
+        macro_invariant: bool = False,
     ) -> SimulationOutcome:
         opp_model = OpponentPressureModel(
             opponent_state=econ_state.opponent,
             mode=opponent_mode
         )
 
+        use_dynamic_v3 = bool(macro_escalated and v3_agent_callable is not None)
+        v3_snap = snapshot_v3_state(v3_agent_callable) if use_dynamic_v3 else {}
+
         # 1. Simulate Baseline Future
         baseline_trace: Optional[List[Dict[str, Any]]] = [] if trace else None
+        base_executed_actions: List[Dict[str, Any]] = []
+
+        if use_dynamic_v3:
+            restore_v3_state(v3_agent_callable, v3_snap)
+            base_v3_policy = V3ContinuationPolicy(v3_agent_callable)
+        else:
+            base_v3_policy = None
+
         baseline_rollout = simulate_rollout(
             econ_state=econ_state,
             initial_action=baseline_action,
             horizon=horizon,
             opp_model=opp_model,
             continuation_actions=continuation_trajectory,
-            trace_log=baseline_trace
+            trace_log=baseline_trace,
+            v3_policy=base_v3_policy,
+            executed_actions=base_executed_actions,
+            player=econ_state.player,
         )
 
         # 2. Simulate Candidate Future
         cand_action = candidate_patch.apply(baseline_action)
         candidate_trace: Optional[List[Dict[str, Any]]] = [] if trace else None
+        cand_executed_actions: List[Dict[str, Any]] = []
         
         cand_continuation = (
             candidate_patch.spliced_continuation
@@ -544,6 +587,17 @@ class CounterfactualSimulator:
         elif getattr(candidate_patch, "spliced_continuation", None) is not None:
             spliced_workers = set(candidate_patch.worker_mutations.keys())
 
+        if use_dynamic_v3:
+            restore_v3_state(v3_agent_callable, v3_snap)
+            if macro_invariant:
+                # Diagnostic mode: hold out macro regime shift by replaying baseline actions
+                cand_v3_policy = None
+                cand_continuation = base_executed_actions[1:] if len(base_executed_actions) > 1 else []
+            else:
+                cand_v3_policy = V3ContinuationPolicy(v3_agent_callable)
+        else:
+            cand_v3_policy = None
+
         candidate_rollout = simulate_rollout(
             econ_state=econ_state,
             initial_action=cand_action,
@@ -554,9 +608,24 @@ class CounterfactualSimulator:
             baseline_positions=baseline_rollout.worker_positions_history,
             spliced_workers=spliced_workers,
             reconnect_result=reconnect_res,
+            v3_policy=cand_v3_policy,
+            executed_actions=cand_executed_actions,
+            player=econ_state.player,
         )
 
-        # 3. Compute Deltas & Margins (Total Economic Wealth Accounting)
+        # Restore V3 state to ensure 100% pure isolation from live game
+        if use_dynamic_v3:
+            restore_v3_state(v3_agent_callable, v3_snap)
+
+        # 3. Detect Action Divergence Turn
+        first_div_turn: Optional[int] = None
+        if base_executed_actions and cand_executed_actions:
+            for offset_idx in range(min(len(base_executed_actions), len(cand_executed_actions))):
+                if base_executed_actions[offset_idx] != cand_executed_actions[offset_idx]:
+                    first_div_turn = econ_state.step + offset_idx
+                    break
+
+        # 4. Compute Deltas & Margins (Total Economic Wealth Accounting)
         prices = econ_state.market.current_prices if hasattr(econ_state, "market") else {}
         
         cand_shed_val = sum(q * float(prices.get(p, 20.0)) for p, q in candidate_rollout.shed.items())
@@ -575,7 +644,13 @@ class CounterfactualSimulator:
         base_margin = base_total_wealth - baseline_rollout.opp_money
         delta_terminal_margin = cand_margin - base_margin
 
-        # 4. Intermediate Solvency Check
+        # Direct intervention effect vs macro continuation delta (§16)
+        cand_money_step0 = candidate_rollout.rows[0]["money"] if candidate_rollout.rows else candidate_rollout.money
+        base_money_step0 = baseline_rollout.rows[0]["money"] if baseline_rollout.rows else baseline_rollout.money
+        direct_effect = cand_money_step0 - base_money_step0
+        macro_continuation_delta = delta_terminal_margin - direct_effect
+
+        # 5. Intermediate Solvency Check
         intermediate_solvency_ok = True
         for offset in range(min(len(candidate_rollout.rows), len(baseline_rollout.rows))):
             cand_pre = candidate_rollout.rows[offset]["pre_market_shed"]
@@ -584,7 +659,7 @@ class CounterfactualSimulator:
                     intermediate_solvency_ok = False
                     break
 
-        # 5. Counterfactual Fidelity Certification (§14)
+        # 6. Counterfactual Fidelity Certification (§14)
         fidelity = CounterfactualFidelityLevel.VERIFIED.value
         fidelity_reasons: List[str] = []
 
@@ -624,4 +699,12 @@ class CounterfactualSimulator:
             fidelity_reasons=fidelity_reasons,
             feed_security_ok=candidate_rollout.feed_security_ok,
             feed_deficit_units=candidate_rollout.feed_deficit_units,
+            macro_escalated=macro_escalated,
+            macro_regime_type=macro_regime_type,
+            macro_escalation_reason=macro_escalation_reason,
+            first_divergence_turn=first_div_turn,
+            direct_intervention_effect=direct_effect,
+            macro_induced_continuation_delta=macro_continuation_delta,
+            executed_baseline_actions=base_executed_actions if use_dynamic_v3 else None,
+            executed_candidate_actions=cand_executed_actions if use_dynamic_v3 else None,
         )
