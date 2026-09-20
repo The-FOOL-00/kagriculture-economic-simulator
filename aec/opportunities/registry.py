@@ -212,3 +212,18 @@ def register_default_families() -> None:
 
 
 register_default_families()
+
+
+def register_phase020_families() -> None:
+    """Register Phase 020 opportunity families upon initialization."""
+    GLOBAL_OPPORTUNITY_REGISTRY.register(OpportunityFamilySpec(
+        name="MULTIWORKER_HARVEST_SYNCHRONIZATION",
+        category="LABOR",
+        detector_cls=None,
+        worker_requirements="AUXILIARY_ONLY",
+        counterfactual_required=True,
+        terminal_sensitive=False,
+        scientific_status=ScientificStatus.EXPERIMENTAL,
+        is_live_eligible=True,
+    ))
+

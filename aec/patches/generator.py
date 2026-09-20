@@ -218,6 +218,30 @@ class PatchGenerator:
                     )
                     patches.append(patch)
 
+            # 5B. Multi-Worker Harvest Synchronization (Phase 020)
+            elif fam == "MULTIWORKER_HARVEST_SYNCHRONIZATION":
+                hand_id = opp.dependency_info.get("hand_id", 1)
+                mut_action = copy.deepcopy(baseline_action)
+                hands = mut_action.setdefault("hands", [])
+                h_idx = hand_id - 1
+                while len(hands) <= h_idx:
+                    hands.append(["PASS"])
+                hands[h_idx] = ["HARVEST"]
+
+                patch = CoupledPatch(
+                    patch_id=f"PATCH_{opp.opportunity_id}",
+                    source_opportunity_id=opp.opportunity_id,
+                    mechanism_family=fam,
+                    worker_ids=[hand_id],
+                    start_step=econ_state.step,
+                    end_step=econ_state.step,
+                    actions=[mut_action],
+                    worker_mutations={hand_id: ["HARVEST"]},
+                    expected_horizon=opp.required_horizon,
+                    rationale=opp.rationale,
+                )
+                patches.append(patch)
+
             # 6. Dynamic Shadow Harvest & Terminal Harvest Sweep (§10, §13, §14)
             elif fam in ("DYNAMIC_SHADOW_HARVEST", "TERMINAL_HARVEST_SWEEP"):
                 worker_id = opp.dependency_info.get("worker_id", 0)

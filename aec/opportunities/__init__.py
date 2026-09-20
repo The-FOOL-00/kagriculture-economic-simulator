@@ -23,6 +23,7 @@ from aec.opportunities.timing import TimingOpportunityAnalyzer
 from aec.opportunities.town_cycle import TownCycleSignalDetector
 from aec.opportunities.terminal_conversion import TerminalConversionDetector
 from aec.opportunities.asset_holding import AssetHoldingOpportunityAnalyzer
+from aec.opportunities.multiworker_harvest import MultiworkerHarvestDetector
 
 
 class OpportunityEngine:
@@ -64,6 +65,9 @@ class OpportunityEngine:
 
         # Phase 015 persistent asset holding analyzer
         self.asset_holding_analyzer = AssetHoldingOpportunityAnalyzer()
+
+        # Phase 020 Multi-Worker Harvest Synchronization detector
+        self.multiworker_harvest_detector = MultiworkerHarvestDetector()
 
         # Telemetry / quarantine tracking per step
         self.last_quarantined_opportunities: List[Opportunity] = []
@@ -133,6 +137,14 @@ class OpportunityEngine:
         self.last_firing_log = list(
             getattr(self.asset_holding_analyzer, "last_firing_log", []) or []
         )
+
+        # 4. Phase 020: Multi-Worker Harvest Synchronization
+        if (
+            "MULTIWORKER_HARVEST_SYNCHRONIZATION" in enabled
+            or getattr(config, "enable_multiworker_harvest", False)
+            or not is_frozen
+        ):
+            raw_opportunities.extend(self.multiworker_harvest_detector.detect(econ_state, baseline_action))
 
         # Layer 1 Mechanism Filtering (§9, §34)
         actionable: List[Opportunity] = []
