@@ -1,0 +1,36 @@
+{
+  "phase": "PHASE020",
+  "cohort": [
+    249366,
+    249375
+  ],
+  "mean_paired_delta": -552.0,
+  "median_paired_delta": -650.0,
+  "sd_paired_delta": 341.58,
+  "se_paired_delta": 108.02,
+  "ci95": [
+    -763.72,
+    -340.28
+  ],
+  "win_loss_tie": [
+    0,
+    10,
+    0
+  ],
+  "total_commits": {
+    "MULTIWORKER_HARVEST_SYNCHRONIZATION": 134,
+    "DEPENDENCY_AWARE_MARKET_TIMING": 16
+  },
+  "seed_paired_margins": {
+    "249366": -929.0,
+    "249367": -216.0,
+    "249368": -845.0,
+    "249369": -811.0,
+    "249370": -240.0,
+    "249371": -929.0,
+    "249372": -123.0,
+    "249373": -127.0,
+    "249374": -747.0,
+    "249375": -553.0
+  }
+}

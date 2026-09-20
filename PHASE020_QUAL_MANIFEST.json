@@ -1,0 +1,69 @@
+{
+  "phase": "PHASE020",
+  "title": "Prospective Headroom Reorientation & New Opportunity Family Discovery",
+  "date": "2026-09-20",
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "v3_verified_pre": true,
+  "v3_verified_post": true,
+  "tests": {
+    "baseline": 769,
+    "current": 776,
+    "failures": 0
+  },
+  "phase016_evaluator": {
+    "modified": false,
+    "counterfactual_diff": []
+  },
+  "live_foundation": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN (unchanged)",
+  "tranche_status": "PERMANENTLY_QUARANTINED (78.8% of raw long-horizon positive simulation signals filtered)",
+  "cohorts": {
+    "phase019_consumed_through": 249355,
+    "phase020_discovery_cohort": [249356, 249365],
+    "phase020_pilot_cohort": [249366, 249375],
+    "reserve_untouched_from": 249376
+  },
+  "discovery_census": {
+    "matches_evaluated": 20,
+    "total_probes_evaluated": 41170,
+    "local_signals": 12840,
+    "macro_safe_probes": 5120,
+    "long_horizon_positive_raw": 4008,
+    "tranche_signals_quarantined": 3158,
+    "non_tranche_positive_survivors": 850,
+    "top_candidate_family": "MULTIWORKER_HARVEST_SYNCHRONIZATION (850 signals, +$44.97 mean delta in uncommitted probes)"
+  },
+  "pilot_results": {
+    "family": "MULTIWORKER_HARVEST_SYNCHRONIZATION",
+    "cohort": [249366, 249375],
+    "matches": 20,
+    "mean_paired_delta": -552.00,
+    "median_paired_delta": -650.00,
+    "sd_paired_delta": 341.58,
+    "se_paired_delta": 108.02,
+    "ci95": [-763.72, -340.28],
+    "win_loss_tie": [0, 10, 0],
+    "total_commits": {
+      "MULTIWORKER_HARVEST_SYNCHRONIZATION": 134,
+      "DEPENDENCY_AWARE_MARKET_TIMING": 16
+    },
+    "causal_root_cause": "Cargo-Trapping Trap: farmhand backpacks lack shed-deposit routines, locking harvested crops into mobile storage and permanently stalling farmhand autonomy while breaking downstream farmer operations"
+  },
+  "artifacts": [
+    "PHASE020_BASELINE_FREEZE.md",
+    "PHASE020_COHORT_MANIFEST.json",
+    "PHASE020_OPPORTUNITY_CENSUS.md",
+    "PHASE020_TRANSFORMATION_LIBRARY.md",
+    "PHASE020_HEADROOM_SURVIVAL_FUNNEL.md",
+    "PHASE020_OPPORTUNITY_FAMILY_MATRIX.md",
+    "PHASE020_STATE_SIGNATURES.md",
+    "PHASE020_BACKBONE_DIVERGENCE.md",
+    "PHASE020_REPRESENTATION_AUDIT.md",
+    "PHASE020_CANDIDATE_MECHANISM_SPEC.md",
+    "PHASE020_PILOT.md",
+    "PHASE020_FINAL_REPORT.md",
+    "PHASE020_QUAL_MANIFEST.json"
+  ],
+  "final_decision": "PILOT COMPLETE / NO QUALIFICATION",
+  "stop_condition_invoked": true,
+  "stop_condition_rationale": "In accordance with Section 51, no manufactured heuristics or artificial mechanisms were created to rescue the falsified family. The live foundation V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN captures the true actionable economic ceiling of the system."
+}
