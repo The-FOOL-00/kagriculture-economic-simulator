@@ -1,0 +1,54 @@
+{
+  "phase": "PHASE020",
+  "title": "Prospective Headroom Reorientation & New Opportunity Family Discovery",
+  "date": "2026-09-20",
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "v3_verified_pre": true,
+  "git_baseline": "d816d89363d887be79405886835f6ad8ce2059fd",
+  "tests": {
+    "baseline": 769,
+    "current": 769,
+    "failures": 0
+  },
+  "phase016_evaluator": {
+    "status": "FROZEN_CORE_INFRASTRUCTURE",
+    "macro_detector": "UNMODIFIED",
+    "v3_continuation": "UNMODIFIED",
+    "counterfactual_diff": []
+  },
+  "live_foundation": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN",
+  "permanent_quarantine": [
+    "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER",
+    "ASSET_HOLDING_VALUATION_TRIGGER",
+    "FRONTLOAD_ORDERS",
+    "LOCAL_WEED_DIG",
+    "RESOURCE_CONVERSION",
+    "EMERGENCY_FEED_PURCHASE"
+  ],
+  "cohorts": {
+    "phase017_consumed": [249286, 249295],
+    "phase018_consumed": [249296, 249335],
+    "phase019_consumed": [249336, 249355],
+    "phase020_discovery_cohort": [249356, 249365],
+    "reserve_untouched_from": 249366
+  },
+  "discovery_sample_size": {
+    "seeds": 10,
+    "seats_per_seed": 2,
+    "total_matches": 20,
+    "turns_per_match": 720
+  },
+  "artifacts": [
+    "PHASE020_BASELINE_FREEZE.md",
+    "PHASE020_COHORT_MANIFEST.json",
+    "PHASE020_TRANSFORMATION_LIBRARY.md",
+    "PHASE020_OPPORTUNITY_CENSUS.md",
+    "PHASE020_HEADROOM_SURVIVAL_FUNNEL.md",
+    "PHASE020_OPPORTUNITY_FAMILY_MATRIX.md",
+    "PHASE020_STATE_SIGNATURES.md",
+    "PHASE020_BACKBONE_DIVERGENCE.md",
+    "PHASE020_REPRESENTATION_AUDIT.md",
+    "PHASE020_FINAL_REPORT.md",
+    "PHASE020_QUAL_MANIFEST.json"
+  ]
+}
