@@ -171,6 +171,12 @@ MECHANISM_REGISTRY: Dict[str, Dict[str, Any]] = {
         "role": "DEVELOPMENT",
         "rationale": "Phase 015 Autonomous Tranche Order Synthesizer with structural quantity anchors and exact counterfactual validation",
     },
+    "MULTIWORKER_HARVEST_SYNCHRONIZATION": {
+        "status": ScientificStatus.FALSIFIED,
+        "category": "LABOR",
+        "role": "RETIRED",
+        "rationale": "Empirically falsified in Phase 020 10-seed pilot (-$552.00 paired delta, 0W/10L/0T) due to Cargo-Trapping Trap (farmhand backpacks lack shed-deposit routines, locking harvested crops into mobile storage and permanently stalling farmhands).",
+    },
 }
 
 ENABLED_FOUNDATION_MECHANISMS: Tuple[str, ...] = (
@@ -254,6 +260,9 @@ class AECConfig:
     enable_robust_abstention_gate: bool = False
     enable_robust_relative_selection: bool = False
     enable_adaptive_shadow_breadth: bool = False
+
+    # Phase 020: Multi-Worker Harvest Synchronization (default OFF; isolated arm only)
+    enable_multiworker_harvest: bool = False
 
     # Performance & Safety
     per_step_latency_limit_ms: float = 100.0
@@ -426,5 +435,20 @@ def build_phase019_u4_config() -> AECConfig:
     cfg = build_phase019_u1_config()
     cfg.enable_adaptive_shadow_breadth = True
     return cfg
+
+
+def build_phase020_treatment_config() -> AECConfig:
+    """Phase 020 Isolated Treatment: Foundation + Multi-Worker Harvest Synchronization (§33, §34)."""
+    cfg = build_robust_qualified_config()
+    enabled = list(cfg.enabled_mechanisms)
+    enabled.append("MULTIWORKER_HARVEST_SYNCHRONIZATION")
+    cfg.enabled_mechanisms = tuple(enabled)
+    cfg.enable_multiworker_harvest = True
+    cfg.enable_funnel_reservation = True  # Protect foundation candidate capacity
+    cfg.frozen_mode = False
+    cfg.enable_asset_holding_trigger = False  # Strict permanent quarantine
+    cfg.enable_tranche_synthesizer = False    # Strict permanent quarantine
+    return cfg
+
 
 

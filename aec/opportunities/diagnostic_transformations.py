@@ -267,13 +267,19 @@ class DiagnosticTransformationGenerator:
             f_pos = farmer_w.position if farmer_w else (5, 5)
             f_act = baseline_action.get("farmer", ["PASS"])
 
-            # If farmer is performing a field work action (TILL, WATER, HARVEST, PLANT)
-            if len(f_act) > 0 and f_act[0] in ("TILL", "WATER", "HARVEST", "PLANT"):
-                # Check if a farmhand is on or adjacent to the tile
+            # If farmer is performing a field work action or tile operation
+            is_field_work = (
+                len(f_act) > 0 and (
+                    f_act[0] in ("DIG", "TILL", "WATER", "HARVEST", "PLANT", "FEED", "CARE", "FERTILIZE")
+                    or f_act[0].startswith("PICKUP")
+                )
+            )
+            if is_field_work:
+                # Check if a farmhand is adjacent or co-located with farmer
                 for h_idx in range(n_workers - 1):
                     hand_w = workers.get_worker(h_idx + 1)
-                    if hand_w and hand_w.position == f_pos:
-                        # Hand can execute the task; farmer can move or pass
+                    if hand_w and manhattan(hand_w.position, f_pos) <= 1:
+                        # Hand can execute the task; farmer can pass
                         mut_action = copy.deepcopy(baseline_action)
                         mut_action["farmer"] = ["PASS"]
                         hands = mut_action.setdefault("hands", [])
@@ -296,7 +302,7 @@ class DiagnosticTransformationGenerator:
                             patch=patch,
                             is_tranche_related=False,
                             divergence_class=BackboneDivergenceClass.D3,
-                            rationale=f"Reassign {f_act[0]} on tile {f_pos} from farmer to co-located farmhand {h_idx+1}",
+                            rationale=f"Reassign {f_act[0]} on tile {f_pos} from farmer to adjacent/co-located hand {h_idx+1}",
                             target_worker_id=h_idx + 1,
                         ))
                         break
@@ -313,20 +319,20 @@ class DiagnosticTransformationGenerator:
                 act_list = baseline_action.get("farmer" if wid == 0 else "hands", [])
                 w_act = act_list if wid == 0 else (act_list[wid - 1] if wid - 1 < len(act_list) else ["PASS"])
 
-                if len(w_act) >= 2 and w_act[0] == "MOVE":
-                    d = w_act[1]
-                    # Try alternate orthogonal move if target tile is in bounds
+                # In Kagriculture, move commands are direct cardinal strings ["NORTH"], ["SOUTH"], etc.
+                if len(w_act) >= 1 and w_act[0] in ("NORTH", "EAST", "SOUTH", "WEST"):
+                    d = w_act[0]
                     alt_dirs = ["NORTH", "EAST", "SOUTH", "WEST"]
-                    alt_dirs.remove(d) if d in alt_dirs else None
+                    alt_dirs.remove(d)
                     for alt_d in alt_dirs:
                         dx, dy = MOVES.get(alt_d, (0, 0))
                         nx, ny = w_pos[0] + dx, w_pos[1] + dy
                         if is_in_bounds(nx, ny):
                             mut_action = copy.deepcopy(baseline_action)
                             if wid == 0:
-                                mut_action["farmer"] = ["MOVE", alt_d]
+                                mut_action["farmer"] = [alt_d]
                             else:
-                                mut_action.setdefault("hands", [])[wid - 1] = ["MOVE", alt_d]
+                                mut_action.setdefault("hands", [])[wid - 1] = [alt_d]
 
                             patch = CoupledPatch(
                                 patch_id=f"P020_ALT_ROUTE_W{wid}_{alt_d}_{step}",
@@ -351,14 +357,20 @@ class DiagnosticTransformationGenerator:
         # ---------------------------------------------------------------------
         # 6. MULTI-WORKER COORDINATION: Synchronized Harvest / Labor Alignment
         # ---------------------------------------------------------------------
-        if n_workers >= 2 and plots:
-            # Check for multiple ready-to-harvest crops
-            harvestable_plots = [pos for pos, p in plots.items() if getattr(p, "growth_stage", 0) >= getattr(p, "mature_stage", 999)]
-            if len(harvestable_plots) >= 2:
-                # If workers are adjacent to harvestable plots but passing or moving away
+        tiles = getattr(econ_state.farm, "tiles", [])
+        if n_workers >= 2 and workers and tiles:
+            # Check for harvestable plants across tiles
+            harvestable_positions = []
+            for y, row in enumerate(tiles):
+                for x, tile in enumerate(row):
+                    if isinstance(tile, dict) and (tile.get("kind") == "PLANT" or tile.get("crop")):
+                        if tile.get("growth_stage", 0) >= 2 or tile.get("yield_units", 0) > 0:
+                            harvestable_positions.append((x, y))
+
+            if len(harvestable_positions) >= 2:
                 for wid in range(min(n_workers, 2)):
                     w = workers.get_worker(wid)
-                    if w and w.position in harvestable_plots:
+                    if w and w.position in harvestable_positions:
                         w_act = baseline_action.get("farmer" if wid == 0 else "hands", [])
                         cur = w_act if wid == 0 else (w_act[wid - 1] if wid - 1 < len(w_act) else ["PASS"])
                         if cur != ["HARVEST"]:
@@ -390,68 +402,70 @@ class DiagnosticTransformationGenerator:
         # ---------------------------------------------------------------------
         # 7. PRODUCTION TIMING: Advance Planting / Soil Sync
         # ---------------------------------------------------------------------
-        if plots and workers:
+        if tiles and workers:
             w0 = workers.get_worker(0)
             if w0:
-                p_tile = plots.get(w0.position)
-                # If tile is tilled, unplanted, and inventory has seeds
-                if p_tile and getattr(p_tile, "is_tilled", False) and not getattr(p_tile, "crop", None):
-                    farmer_act = baseline_action.get("farmer", ["PASS"])
-                    if farmer_act != ["PLANT", "WHEAT"] and farmer_act != ["PLANT", "CARROT"]:
-                        # Check if shed or cargo has seeds
-                        seed_avail = any(shed.get(c, 0) > 0 for c in ("WHEAT", "CARROT", "TOMATO")) or (cash >= 50.0)
-                        if seed_avail:
+                wx, wy = w0.position
+                if 0 <= wy < len(tiles) and 0 <= wx < len(tiles[wy]):
+                    tile = tiles[wy][wx]
+                    if isinstance(tile, dict) and tile.get("is_tilled") and not tile.get("crop"):
+                        farmer_act = baseline_action.get("farmer", ["PASS"])
+                        if len(farmer_act) == 0 or farmer_act[0] != "PLANT":
+                            seed_avail = any(shed.get(c, 0) > 0 for c in ("WHEAT", "CARROT", "TOMATO")) or (cash >= 50.0)
+                            if seed_avail:
+                                mut_action = copy.deepcopy(baseline_action)
+                                mut_action["farmer"] = ["PLANT", "WHEAT"]
+                                patch = CoupledPatch(
+                                    patch_id=f"P020_ADV_PLANT_{step}",
+                                    source_opportunity_id="OPP_ADV_PLANT",
+                                    mechanism_family="PRODUCTION_TIMING",
+                                    start_step=step,
+                                    end_step=step,
+                                    actions=[mut_action],
+                                )
+                                candidates.append(DiagnosticCandidate(
+                                    candidate_id=patch.patch_id,
+                                    primitive=TransformationPrimitive.ALTER_PRODUCTION_TIMING,
+                                    family=OpportunityFamily.PRODUCTION_TIMING,
+                                    patch=patch,
+                                    is_tranche_related=False,
+                                    divergence_class=BackboneDivergenceClass.D5,
+                                    rationale=f"Advance planting on tilled tile {w0.position}",
+                                    target_worker_id=0,
+                                ))
+
+        # ---------------------------------------------------------------------
+        # 8. TERMINAL ENDGAME: Salvage Harvest before Step 718
+        # ---------------------------------------------------------------------
+        if step >= 672 and tiles and workers:
+            w0 = workers.get_worker(0)
+            if w0:
+                wx, wy = w0.position
+                if 0 <= wy < len(tiles) and 0 <= wx < len(tiles[wy]):
+                    tile = tiles[wy][wx]
+                    if isinstance(tile, dict) and (tile.get("kind") == "PLANT" or tile.get("crop")):
+                        farmer_act = baseline_action.get("farmer", ["PASS"])
+                        if farmer_act != ["HARVEST"]:
                             mut_action = copy.deepcopy(baseline_action)
-                            mut_action["farmer"] = ["PLANT", "WHEAT"]
+                            mut_action["farmer"] = ["HARVEST"]
                             patch = CoupledPatch(
-                                patch_id=f"P020_ADV_PLANT_{step}",
-                                source_opportunity_id="OPP_ADV_PLANT",
-                                mechanism_family="PRODUCTION_TIMING",
+                                patch_id=f"P020_TERM_HARVEST_{step}",
+                                source_opportunity_id="OPP_TERM_HARVEST",
+                                mechanism_family="TERMINAL_TIMING",
                                 start_step=step,
                                 end_step=step,
                                 actions=[mut_action],
                             )
                             candidates.append(DiagnosticCandidate(
                                 candidate_id=patch.patch_id,
-                                primitive=TransformationPrimitive.ALTER_PRODUCTION_TIMING,
-                                family=OpportunityFamily.PRODUCTION_TIMING,
+                                primitive=TransformationPrimitive.SHIFT_ACTION_EARLIER,
+                                family=OpportunityFamily.TERMINAL,
                                 patch=patch,
                                 is_tranche_related=False,
                                 divergence_class=BackboneDivergenceClass.D5,
-                                rationale=f"Advance planting on tilled tile {w0.position}",
+                                rationale=f"Terminal salvage harvest on tile {w0.position} at step {step}",
                                 target_worker_id=0,
                             ))
-
-        # ---------------------------------------------------------------------
-        # 8. TERMINAL ENDGAME: Salvage Harvest before Step 718
-        # ---------------------------------------------------------------------
-        if step >= 680 and plots and workers:
-            w0 = workers.get_worker(0)
-            if w0 and w0.position in plots:
-                p_tile = plots[w0.position]
-                if getattr(p_tile, "growth_stage", 0) >= 1:
-                    farmer_act = baseline_action.get("farmer", ["PASS"])
-                    if farmer_act != ["HARVEST"]:
-                        mut_action = copy.deepcopy(baseline_action)
-                        mut_action["farmer"] = ["HARVEST"]
-                        patch = CoupledPatch(
-                            patch_id=f"P020_TERM_HARVEST_{step}",
-                            source_opportunity_id="OPP_TERM_HARVEST",
-                            mechanism_family="TERMINAL_TIMING",
-                            start_step=step,
-                            end_step=step,
-                            actions=[mut_action],
-                        )
-                        candidates.append(DiagnosticCandidate(
-                            candidate_id=patch.patch_id,
-                            primitive=TransformationPrimitive.SHIFT_ACTION_EARLIER,
-                            family=OpportunityFamily.TERMINAL,
-                            patch=patch,
-                            is_tranche_related=False,
-                            divergence_class=BackboneDivergenceClass.D5,
-                            rationale=f"Terminal salvage harvest on tile {w0.position} at step {step}",
-                            target_worker_id=0,
-                        ))
 
         # ---------------------------------------------------------------------
         # 9. TRANCHE-RELATED PROBE (QUARANTINE ENFORCEMENT AUDIT, §11)
@@ -565,10 +579,10 @@ class DiagnosticEvaluator:
         candidate.macro_regime = rtype.value if hasattr(rtype, "value") else str(rtype)
 
         # 2. Run simulation
-        sim_res = self.simulator.simulate(
-            econ_state=econ_state,
-            baseline_action=baseline_action,
+        sim_res = self.simulator.evaluate(
             candidate_patch=candidate.patch,
+            baseline_action=baseline_action,
+            econ_state=econ_state,
             horizon=horizon,
             continuation_trajectory=continuation_trajectory,
             v3_agent_callable=v3_agent_callable,
