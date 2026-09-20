@@ -1,0 +1,433 @@
+{
+  "seed": 249366,
+  "target_step": 319,
+  "intervened_worker": "Hand 5 (unit 5)",
+  "tile_coords": [
+    4,
+    9
+  ],
+  "steps": [
+    {
+      "step": 319,
+      "hour": 7,
+      "day": 13,
+      "pre_tile": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": false,
+        "consecutive_unwatered": 0,
+        "yield_units": 1,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "baseline_h5_action": [
+        "WATER"
+      ],
+      "mutated_h5_action": [
+        "HARVEST"
+      ]
+    },
+    {
+      "step": 320,
+      "hour": 8,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 19,
+      "shed_m_wheat": 19,
+      "money_delta": 0.0
+    },
+    {
+      "step": 321,
+      "hour": 9,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 19,
+      "shed_m_wheat": 19,
+      "money_delta": 0.0
+    },
+    {
+      "step": 322,
+      "hour": 10,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 19,
+      "shed_m_wheat": 19,
+      "money_delta": 0.0
+    },
+    {
+      "step": 323,
+      "hour": 11,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 19,
+      "shed_m_wheat": 19,
+      "money_delta": 0.0
+    },
+    {
+      "step": 324,
+      "hour": 12,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 19,
+      "shed_m_wheat": 19,
+      "money_delta": 0.0
+    },
+    {
+      "step": 325,
+      "hour": 13,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 19,
+      "shed_m_wheat": 19,
+      "money_delta": 0.0
+    },
+    {
+      "step": 326,
+      "hour": 14,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 19,
+      "shed_m_wheat": 19,
+      "money_delta": 0.0
+    },
+    {
+      "step": 327,
+      "hour": 15,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 4,
+      "shed_m_wheat": 4,
+      "money_delta": 0.0
+    },
+    {
+      "step": 328,
+      "hour": 16,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 4,
+      "shed_m_wheat": 4,
+      "money_delta": 0.0
+    },
+    {
+      "step": 329,
+      "hour": 17,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {},
+      "h5_m_inv": {
+        "WHEAT": 1
+      },
+      "shed_b_wheat": 4,
+      "shed_m_wheat": 4,
+      "money_delta": 0.0
+    },
+    {
+      "step": 330,
+      "hour": 18,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {
+        "WHEAT": 2
+      },
+      "h5_m_inv": {
+        "WHEAT": 3
+      },
+      "shed_b_wheat": 4,
+      "shed_m_wheat": 4,
+      "money_delta": 0.0
+    },
+    {
+      "step": 331,
+      "hour": 19,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {
+        "WHEAT": 2
+      },
+      "h5_m_inv": {
+        "WHEAT": 3
+      },
+      "shed_b_wheat": 4,
+      "shed_m_wheat": 4,
+      "money_delta": 0.0
+    },
+    {
+      "step": 332,
+      "hour": 20,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {
+        "WHEAT": 2
+      },
+      "h5_m_inv": {
+        "WHEAT": 3
+      },
+      "shed_b_wheat": 4,
+      "shed_m_wheat": 4,
+      "money_delta": 0.0
+    },
+    {
+      "step": 333,
+      "hour": 21,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {
+        "WHEAT": 2
+      },
+      "h5_m_inv": {
+        "WHEAT": 3
+      },
+      "shed_b_wheat": 0,
+      "shed_m_wheat": 0,
+      "money_delta": 0.0
+    },
+    {
+      "step": 334,
+      "hour": 22,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {
+        "WHEAT": 2
+      },
+      "h5_m_inv": {
+        "WHEAT": 3
+      },
+      "shed_b_wheat": 0,
+      "shed_m_wheat": 0,
+      "money_delta": 0.0
+    },
+    {
+      "step": 335,
+      "hour": 23,
+      "day": 13,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": true,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": {
+        "WHEAT": 2
+      },
+      "h5_m_inv": {
+        "WHEAT": 3
+      },
+      "shed_b_wheat": 0,
+      "shed_m_wheat": 0,
+      "money_delta": 0.0
+    },
+    {
+      "step": 336,
+      "hour": 0,
+      "day": 14,
+      "tile_b": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 11,
+        "watered_today": false,
+        "consecutive_unwatered": 0,
+        "yield_units": 2,
+        "max_lifespan_step": 384,
+        "fertilized_until_day": -1
+      },
+      "tile_m": null,
+      "h5_b_inv": null,
+      "h5_m_inv": null,
+      "shed_b_wheat": 16,
+      "shed_m_wheat": 17,
+      "money_delta": 0.0
+    }
+  ]
+}
