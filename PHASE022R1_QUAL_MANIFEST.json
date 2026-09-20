@@ -1,0 +1,133 @@
+{
+  "phase": "PHASE022R1",
+  "title": "V22 Release Repair, Evidence Correction & Competition-Loader Reverification",
+  "date": "2026-09-20",
+  "mission_scope": "Loader repair + evidence correction + repackaging + reverification only. No new mechanisms, no new alpha, no score optimization, no economic-logic change.",
+  "v3_chassis_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "v3_verified_bit_identical": true,
+  "retired_artifact": {
+    "file": "submission_aec_v22.tar.gz",
+    "sha256": "2b23bc228366e7df5fbe4ecdd38bd3c26d3fd1c0da58e5b97f745c979075df23",
+    "status": "RETIRED - competition-loader failure (NameError: __file__; $3,000 all-PASS corpse). Kept on disk, never submitted.",
+    "failure_record": "PHASE022R1_LOADER_FAILURE_REPRO.md"
+  },
+  "submission_artifact": {
+    "file": "submission_aec_v22r1.tar.gz",
+    "size_bytes": 549911,
+    "sha256": "6b879b3e499d2cf43b76884f6ef433479468b5c316f92cf4a8cc5119586fb3f5",
+    "sha_record": "PHASE022R1_SUBMISSION_SHA256.txt",
+    "entry_point": "main.py:agent (loader-safe; no unconditional __file__)",
+    "member_count": 130,
+    "bundled_v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "packaged_diff_vs_v22": "main.py ONLY (loader-safe entrypoint + LF endings); aec/, config.py, extracted_agents/, V3 payload byte-identical",
+    "portability_scan": "PASS (0 absolute paths, 0 heavy deps, 0 network modules)",
+    "bare_exec_loader_sim": "PASS (load + step-0 action, no __file__, no exception)",
+    "full_game_vs_starter": "PASS (P0 DONE $185041.00, P1 DONE $3658.00, debug=True)",
+    "head_to_head_vs_v3": "PASS (AEC $101807.00 / V3 $101807.00, both DONE)",
+    "packaged_determinism": "PASS (rewards + full 720-entry P0 action sequences bit-identical)",
+    "qa_record": "PHASE022R1_QA_RESULTS.json"
+  },
+  "tests": {
+    "competition_loader_contract": "tests/aec/test_phase022r1_competition_loader.py: 3 passed (static scan, short game, full game)",
+    "safety_predicates": "tests/aec/test_phase022r1_safety_predicates.py: 7 passed (unsafe/safe/placeholder-1/placeholder-2/counter/fallback x2)",
+    "neighboring_existing": "test_safety_certificate.py + test_backbone_fallback.py: 6 passed (no collateral)"
+  },
+  "live_foundation": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN",
+  "semantic_equivalence_dev_vs_repaired": {
+    "cohort": "249376..249395 x seats 0/1 (consumed dev cohort; software comparison, not economics)",
+    "matches_exact": "40/40",
+    "step_records_compared": 28800,
+    "fields_per_record": 10,
+    "field_differences": 0,
+    "control_dev_vs_dev": "4/4 identical",
+    "ke_vs_kagsim_ledger": "40/40 exact (cross-engine corroboration)"
+  },
+  "loader_equivalence": {
+    "mode_a_bare_exec": "40 games DONE, V3-scale",
+    "mode_b_dev_import": "40 games DONE, V3-scale",
+    "mode_c_ke_file_path": "QA games DONE, V3-scale",
+    "a_vs_b_per_step": "0 diffs / 288000 comparisons",
+    "c_vs_a_per_step": "0 diffs / 1440 steps (2 games)",
+    "c_vs_c_sequences": "bit-identical"
+  },
+  "cohorts": {
+    "consumed_development_through": 249395,
+    "fresh_cohort_evaluated": [249376, 249395],
+    "holdout_340050_340199": "UNTOUCHED (retained; verified by boundaried re-search)",
+    "holdout_214200_214249": "UNTOUCHED (retained; verified by boundaried re-search)",
+    "tournament_cohort_340300_340349": "CONSUMED / RETIRED HOLDOUT (EXP-AEC-004; never reuse)",
+    "release_smoke_seeds": "249376 (consumed cohort) + fresh dev-smoke seeds 1, 7 (RELEASE_SMOKE_ONLY; no protected range touched)"
+  },
+  "fresh_cohort_economics_corrected": {
+    "n_matches": 40,
+    "mean_paired_delta": 33.35,
+    "median_paired_delta": 22.0,
+    "std_delta": 1152.01,
+    "se_delta": 182.15,
+    "ci_95": [-335.08, 401.78],
+    "match_t_two_sided_p": 0.855674,
+    "match_t_one_sided_p": 0.427837,
+    "match_wilcoxon_two_sided_p": 0.034086,
+    "seed_t_two_sided_p": 0.024356,
+    "seed_wilcoxon_p_method_band": [0.0498, 0.0545],
+    "cohens_d": 0.0289,
+    "record_win_loss_tie": [21, 7, 12],
+    "preregistration": "NONE EXISTS - preregistration language prohibited",
+    "conservative_wording": "On the fresh 40-match development cohort, the validated foundation produced a positive mean paired terminal-margin delta of approximately $33.35 relative to pure V3. The result is cohort-specific and accompanied by substantial uncertainty; the available evidence does not establish a universal or globally optimal effect."
+  },
+  "attribution_scoped": {
+    "enforcement": "3-layer (opportunity filter, patch generation, commit gate) re-verified; 7 genuinely distinct arms",
+    "headline": "Within this experimental design and fresh cohort, DEPENDENCY_AWARE_MARKET_TIMING was the mechanism associated with the observed incremental economic effect (+$35.50 marginal vs timing-off arms).",
+    "defense_mechanisms": "No evidence of regression in this cohort (neither triggered a committable candidate); live protective value unproven.",
+    "gap": "Per-arm match ledgers missing (summaries only)"
+  },
+  "counterfactual_fidelity": {
+    "empirical_claim": "WITHDRAWN as circular (realized copied from predicted; zero independent re-simulation)",
+    "corrected": "Counterfactual fidelity is supported by the exact simulator architecture, but an independent post hoc realized-vs-predicted audit was not established in Phase 022."
+  },
+  "determinism_audit": {
+    "scope": "per-turn replay: every action, V3 base action, decision, commit/abstain, mechanism, terminal reward",
+    "result": "IDENTICAL across all repeated executions (control 4/4, equiv 40/40, packaged repeats, Mode-C captures)",
+    "note": "719 decisions per 720-step game (KE terminal-entry convention, probed live)"
+  },
+  "latency_audit": {
+    "v22_stored_aggregates": {"n": 28760, "mean_ms": 75.76, "median_ms": 50.89, "p95_ms": 229.4, "p99_ms": 404.87, "max_ms": 2346.68, "within_limit_100ms": false, "distribution_verifiable": false},
+    "v22r1_clean_run": {"n": 719, "mean_ms": 72.13, "median_ms": 51.06, "p95_ms": 195.36, "p99_ms": 256.31, "max_ms": 340.15, "engine": "KE 1.32.7/Linux, driver-side"},
+    "corrected_wording": "Median decision latency was approximately 51 ms; tail latency was materially higher. The config's own 100 ms limit was breached (within_limit=false).",
+    "step_count": "719 decisions/match, 28,760 total (not 720/28,800)"
+  },
+  "safety_audit": {
+    "commit_gate": "UNCHANGED (frozen): ~20 evaluated predicates gate every commit; fail-closed verified",
+    "placeholder_predicates": "purchase_ok (absent from verify) and market_collision_ok (never flipped) documented as unevaluated; purchase affordability enforced via solvency; novel collisions unreachable under qualified config (pure-reorder transform)",
+    "counter_repair": "script-only instrumentation: safety_rejections + true safety_violations (unsafe COMMITs) from observable telemetry; V22 '0' retired as vacuous",
+    "observed_record": "0 illegal actions / solvency breaches / disqualifications / crashes across 40 fresh matches; all 34 committed traces safety_pass=True"
+  },
+  "release_status": "RELEASE READY (per PHASE022R1_RELEASE_GATE.md; commit/tag pending explicit user authorization)",
+  "residual_disclosures": [
+    "Live TERMINAL_LIQUIDATION / PHASE_SHUTDOWN behavior unproven (never fired in validation)",
+    "Per-arm match ledgers + per-step V22 telemetry/latency unexported (aggregates trusted via reviewed code)",
+    "V22 full-suite re-execution impossible on Linux (Windows-only kagsim); counts reconciled, runs not re-executed",
+    "V22 2,347 ms latency max unattributed to a step",
+    "Release commit/tag not performed (requires explicit user authorization)"
+  ],
+  "artifacts": [
+    "PHASE022R1_REPAIR_LOG.md",
+    "PHASE022R1_LOADER_FAILURE_REPRO.md",
+    "PHASE022R1_SEMANTIC_EQUIVALENCE.md",
+    "PHASE022R1_LOADER_EQUIVALENCE.md",
+    "PHASE022R1_COUNTERFACTUAL_FIDELITY.md",
+    "PHASE022R1_DETERMINISM_AUDIT.md",
+    "PHASE022R1_SAFETY_AUDIT.md",
+    "PHASE022R1_PERFORMANCE_AUDIT.md",
+    "PHASE022R1_HOLDOUT_INTEGRITY.md",
+    "PHASE022R1_SUBMISSION_INTEGRITY.md",
+    "PHASE022R1_FINAL_REPORT.md",
+    "PHASE022R1_RELEASE_GATE.md",
+    "PHASE022R1_QUAL_MANIFEST.json",
+    "PHASE022R1_SUBMISSION_SHA256.txt",
+    "PHASE022R1_QA_RESULTS.json",
+    "scripts/build_phase022r1_submission.py",
+    "tests/aec/test_phase022r1_competition_loader.py",
+    "tests/aec/test_phase022r1_safety_predicates.py"
+  ]
+}

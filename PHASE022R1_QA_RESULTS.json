@@ -1,0 +1,15 @@
+{
+  "tarball": "/mnt/c/Users/Sundareswaran/Kagriculture/submission_aec_v22r1.tar.gz",
+  "qa_vs_starter_p0": 185041.0,
+  "qa_vs_starter_p1": 3658.0,
+  "qa_runtime_sec": 38.5,
+  "qa_avg_step_ms": 53.5,
+  "qa_h2h_aec": 101807.0,
+  "qa_h2h_v3": 101807.0,
+  "packaged_determinism": true,
+  "sha256": "6b879b3e499d2cf43b76884f6ef433479468b5c316f92cf4a8cc5119586fb3f5",
+  "size_bytes": 549911,
+  "v3_payload_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "member_count": 130,
+  "portability_clean": true
+}

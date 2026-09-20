@@ -7,6 +7,8 @@ __pycache__/
 *.json
 !PHASE014_HEADROOM_MANIFEST.json
 !results/PHASE014_*.json
+!PHASE022R1_QUAL_MANIFEST.json
+!PHASE022R1_QA_RESULTS.json
 replays/
 .tempmediaStorage/
 

@@ -49,3 +49,20 @@ The following seed ranges are formally recorded as contaminated and must never b
 1. **Seeds 50150–50199**: Contaminated by `scratch/test_phase16_generalization.py` (Seeds 50155, 50161), live tournament match `107564294` (Seed 50186), and Phase 3 macro census (`results/phase3_shop_census_500seeds.json`).
 2. **Seeds 60000–60049**: Contaminated by `parameter_and_lookahead_sweeps.py` (Seeds 60000–60019) and `evaluate_batch8_predictive_challenger.py` (Seeds 60000–60049).
 3. **Seeds 50100–50149**: Retained as an **Audited Benchmark Partition** (evaluated in Audit 2/2.1/2.2); not virgin.
+
+---
+
+## 4. R1 Addendum — Consumed Tournament Cohort (2026-09-20)
+
+**Registry Version**: 1.1 (additive; §§1–3 above unchanged).
+**Status**: **CONSUMED / RETIRED HOLDOUT**
+
+4. **Seeds 340300–340349** (inclusive, 50 seeds): consumed by `EXP-AEC-004`
+   (Sept 18; 100 CRN mirror matches with real scores and commits;
+   `experiments/EXP-AEC-004/`, `results/EXP_AEC_004_MATCHES.csv`,
+   `results/EXP_AEC_004_SUMMARY.json`). Falsely re-certified "Virgin /
+   Untouched" in Phase 022 documents (`PHASE022_BASELINE_FREEZE.md` §4 and
+   dependents); that label is retracted in `PHASE022R1_HOLDOUT_INTEGRITY.md`.
+   Permanently retired: never reuse for exploration, tuning, debugging,
+   selection, or future qualification. History preserved — this entry corrects
+   by re-designation, not by editing the record of what happened.
