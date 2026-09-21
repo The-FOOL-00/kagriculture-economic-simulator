@@ -1,0 +1,53 @@
+{
+  "campaign": "V27_V25_ROBUSTNESS",
+  "classification": "OUTCOME_D_V25_FAILED_TO_GENERALIZE",
+  "date": "2026-09-21",
+  "frozen": {
+    "v22r1_tag_commit": "33763a8f58b17bc3a32735c2a322883b78ed3778",
+    "v22r1_archive_sha256": "6b879b3e499d2cf43b76884f6ef433479468b5c316f92cf4a8cc5119586fb3f5",
+    "v3_tarball_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "v25_p3_sha256": "13292582c8cc796bc11ccebff9684fbec45cfb97d936fb9e85e4e9bb4dbea179",
+    "engine_version": "1.32.7"
+  },
+  "v26_verdict_preserved": "TRANSFER_FAILED_MECHANISM",
+  "history_free_retrospective": {
+    "A_prime_seeds_249430_449": {"mean": -55.33, "wlt_exact": [24, 16, 0]},
+    "B_seeds_249450_469": {"mean": 453.77, "wlt_exact": [27, 13, 0]},
+    "C_seeds_249470_489": {"mean": -218.75, "wlt_exact": [18, 22, 0]},
+    "quarantined_stale_A": {"mean": 1300.70, "cause": "P2-residue worker-history artifact"},
+    "pooled_farm_purged_mean": 59.9,
+    "heterogeneity": "Kruskal seed p=0.57; mutually compatible null-ish"
+  },
+  "prospective": {
+    "discovery_249490_509": {"n": 40, "mean": -398.05, "median": -236.0, "wlt": [12, 28, 0]},
+    "confirmation_249510_529": {"n": 40, "mean": -469.85, "median": -100.0, "wlt": [18, 22, 0],
+      "seed_ci95": [-1030.0, -10.4], "gates_passed": 1, "gates_failed": 5},
+    "pooled_80_40seeds": {"mean": -433.9, "seed_ci95": [-747.0, -151.6], "seed_pos": "15/40"}
+  },
+  "ablations_exploratory_consumed_seeds": {
+    "sanity_V3S_vs_V3": "120/120 exact vs farm gaps",
+    "dispatch_A3_minus_P3": {"mean": -10.3, "ci95_seed": [-18.2, -3.8]},
+    "qty30_A7_minus_A1": {"mean": 1443.6},
+    "init_call_minus_bypass": {"at_50": 1550.2, "at_30": 1390.9},
+    "A7_vs_V3_discovery": {"mean": 1450.8, "wlt": [119, 1, 0], "ci95_seed": [1181.2, 1896.1]}
+  },
+  "counterfactuals": {
+    "CF1_threshold_249463": {"injection": 31.02, "sheep_qty": 6, "reproduced": true},
+    "CF2_control_249464": {"firing": null},
+    "fidelity": "restore-continue terminals exact; independent re-run identical"
+  },
+  "tests": {"v27": 26, "v26_regression": 19, "total": "45/45 green"},
+  "evidence_files": [
+    "results/v27_historical_matches.jsonl", "results/v27_historical_stats.json",
+    "results/v27_ledger.jsonl", "results/v27_farm_gaps.jsonl",
+    "results/v27_counterfactual_tip.json", "results/v27_ablation_matches.jsonl",
+    "results/v27_ablation_stats.json", "results/v27_ablation_deepdive.json",
+    "results/v27_discovery_matches.jsonl", "results/v27_confirmation_matches.jsonl",
+    "results/v27_f1_conf_replay.jsonl"
+  ],
+  "uncommitted_large_trajectories": [
+    "results/v27_trajectories.jsonl", "results/v27_fresh_trajectories.jsonl",
+    "results/v27_ledger_harness.jsonl"
+  ],
+  "next_experiment": "V28: confirm A7 (V3 + 30-wash, full step-0 processing) vs V3 on virgin seeds 249530+"
+}

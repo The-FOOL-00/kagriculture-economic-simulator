@@ -122,11 +122,13 @@ class ShadowRobustnessEvaluator:
         macro_detector: MacroRegimeTransitionDetector,
         v3_agent_callable: Optional[Callable] = None,
         config: Optional[Any] = None,
+        backbone: Optional[Any] = None,
     ) -> None:
         self.simulator = simulator
         self.macro_detector = macro_detector
         self.v3_agent_callable = v3_agent_callable
         self.config = config
+        self.backbone = backbone
 
     def audit_commit(
         self,
@@ -356,6 +358,7 @@ class ShadowRobustnessEvaluator:
                 macro_escalated=probe_res.requires_escalation,
                 macro_escalation_reason=probe_res.reason if probe_res.requires_escalation else "",
                 macro_regime_type=probe_res.regime_type.value,
+                backbone=self.backbone,
             )
             return sim_outcome
         except Exception:

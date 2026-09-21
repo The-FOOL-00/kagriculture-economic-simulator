@@ -1,0 +1,84 @@
+{
+  "protocol": "V26_BACKBONE_AWARE_AEC_TRANSFER",
+  "campaign": "V26A_FIRST_TRANSFER_STUDY",
+  "created_at": "2026-09-21",
+  "branch": "research/v26-backbone-aware-aec",
+  "base_tag": "v22r1",
+  "base_commit": "33763a8f58b17bc3a32735c2a322883b78ed3778",
+  "engine_version": "1.32.7",
+  "cohort_manifest": "V26_COHORT_MANIFEST.json",
+  "cohort": "249470..249489",
+  "seats": [0, 1],
+  "matches_per_arm": 40,
+  "total_matches": 160,
+  "completed_matches": 160,
+  "checkpoint": "results/v26_aec_transfer_matches.jsonl",
+  "max_workers": 9,
+  "preregistration": "V26_AEC_TRANSFER_PREREGISTRATION.md",
+  "backbone_hashes": {
+    "V25_P3_UNIFIED": "13292582c8cc796bc11ccebff9684fbec45cfb97d936fb9e85e4e9bb4dbea179",
+    "V3_STANDALONE": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943"
+  },
+  "frozen_artifacts_verified": {
+    "submission_aec_v22r1.tar.gz": "6b879b3e499d2cf43b76884f6ef433479468b5c316f92cf4a8cc5119586fb3f5",
+    "submission_Vj_kc_v3.tar.gz": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943"
+  },
+  "arm_results": {
+    "ARM1_V25_STANDALONE": {
+      "n": 40, "paired_mean": -218.75, "paired_median": -287.0,
+      "paired_min": -1970.0, "paired_max": 1185.0, "commits": 0
+    },
+    "ARM2_V25_AEC_INFRA_ONLY": {
+      "n": 40, "paired_mean": -218.75, "paired_median": -287.0,
+      "paired_min": -1970.0, "paired_max": 1185.0, "commits": 0
+    },
+    "ARM3_V25_MARKET_TIMING": {
+      "n": 40, "paired_mean": -189.65, "paired_median": -190.0,
+      "paired_min": -1970.0, "paired_max": 1208.0, "commits": 24
+    },
+    "ARM4_V3_MARKET_TIMING_REFERENCE": {
+      "n": 40, "paired_mean": 19.8, "paired_median": 0.0,
+      "paired_min": -179.0, "paired_max": 491.0, "commits": 36
+    }
+  },
+  "primary_endpoint_ARM3_minus_ARM1": {
+    "n": 40, "mean": 10.85, "median": 0.0, "min": -7.0, "max": 97.0,
+    "wins": 16, "losses": 6, "ties": 18,
+    "win_rate_all": 0.40,
+    "win_rate_decisive": 0.727,
+    "bootstrap95_ci": [3.80, 19.35],
+    "bootstrap_seed": 7,
+    "bootstrap_resamples": 10000
+  },
+  "secondary_endpoints": {
+    "H2_infrastructure_neutrality": {"pairs": 40, "mismatches": 0, "verdict": "PASS"},
+    "H3_v3_reference_non_negative": {"mean": 19.8, "verdict": "PASS"},
+    "H4_safety": {"worst_loss": -7.0, "tail_collapse": false, "verdict": "PASS"},
+    "H5_counterfactual_reproducibility": {"recomputed": 8, "exact_matches": 8, "verdict": "PASS"}
+  },
+  "promotion_rule_TRANSFERRED_requires": {
+    "delta_gt_0": true,
+    "ci_lower_gte_minus50": true,
+    "win_rate_gt_50pct": false,
+    "zero_safety_breaches": true
+  },
+  "decision_state": "V26 TRANSFER FAILED — MECHANISM",
+  "decision_note": "Preregistered TRANSFERRED bar 3/4: win rate 16/40 (40%) missed the >50% rule. A small positive directional effect (+$10.85, CI [+3.80, +19.35]) was observed with exact infrastructure neutrality and safety; economically negligible at ~0.01% of terminal rewards. No V26A confirmation recommended on this basis.",
+  "required_artifacts": {
+    "V26_BASELINE_FREEZE.md": "present",
+    "V26_BACKBONE_INTERFACE_SPEC.md": "present",
+    "V26_V3_ADAPTER_EQUIVALENCE.md": "present",
+    "V26_V25_ADAPTER_EQUIVALENCE.md": "present",
+    "V26_P3_CONTINUATION_STATE_AUDIT.md": "present",
+    "V26_CONTINUATION_FIDELITY.md": "present",
+    "V26_MARKET_TIMING_TRANSFER_SPEC.md": "present",
+    "V26_AEC_NULL_PARITY.md": "present",
+    "V26_AEC_TRANSFER_PREREGISTRATION.md": "present",
+    "V26_COHORT_MANIFEST.json": "present",
+    "V26_PARALLEL_AUDIT.md": "present",
+    "V26_COUNTERFACTUAL_FIDELITY.md": "present",
+    "V26_BACKBONE_GENERALITY_AUDIT.md": "present",
+    "V26_FINAL_REPORT.md": "present",
+    "V26_QUAL_MANIFEST.json": "present"
+  }
+}

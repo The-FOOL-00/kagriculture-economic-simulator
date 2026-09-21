@@ -257,6 +257,7 @@ class AECExecutor:
             macro_detector=self.macro_detector,
             v3_agent_callable=getattr(self.backbone, "_agent_fn", None),
             config=self.config,
+            backbone=self.backbone,
         )
 
         # State tracking across steps
@@ -572,7 +573,7 @@ class AECExecutor:
                         telemetry.macro_escalated_by_regime.get(reg_val, 0) + 1
                     )
 
-                # Run isolated forward simulation with frozen V3 continuation if escalated
+                # Run isolated forward simulation with active backbone continuation if escalated
                 v3_callable = getattr(self.backbone, "_agent_fn", None)
                 sim_outcome = self.simulator.evaluate(
                     candidate_patch=patch,
@@ -584,6 +585,7 @@ class AECExecutor:
                     macro_escalated=probe_res.requires_escalation,
                     macro_escalation_reason=probe_res.reason if probe_res.requires_escalation else "",
                     macro_regime_type=probe_res.regime_type.value,
+                    backbone=self.backbone,
                 )
                 telemetry.simulations_run += 1
                 telemetry.patches_simulated_count += 1
@@ -790,6 +792,7 @@ class AECExecutor:
                         or getattr(self.config, "enable_robust_relative_selection", False)
                     ):
                         self.shadow_robustness.v3_agent_callable = getattr(self.backbone, "_agent_fn", None)
+                        self.shadow_robustness.backbone = self.backbone
                         shadow_record = self.shadow_robustness.audit_commit(
                             committed_patch=best_candidate,
                             committed_outcome=best_sim_outcome,

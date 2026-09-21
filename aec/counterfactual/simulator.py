@@ -539,24 +539,38 @@ class CounterfactualSimulator:
         macro_escalation_reason: str = "",
         macro_regime_type: str = "NONE",
         macro_invariant: bool = False,
+        backbone: Optional[Any] = None,
     ) -> SimulationOutcome:
         opp_model = OpponentPressureModel(
             opponent_state=econ_state.opponent,
             mode=opponent_mode
         )
 
-        use_dynamic_v3 = bool(macro_escalated and v3_agent_callable is not None)
-        v3_snap = snapshot_v3_state(v3_agent_callable) if use_dynamic_v3 else {}
+        use_backbone = bool(macro_escalated and backbone is not None and hasattr(backbone, "create_continuation_policy"))
+        use_dynamic_v3 = bool(macro_escalated and v3_agent_callable is not None and not use_backbone)
+
+        if use_backbone:
+            backbone_snap = backbone.snapshot_state()
+            v3_snap = {}
+        elif use_dynamic_v3:
+            v3_snap = snapshot_v3_state(v3_agent_callable)
+            backbone_snap = {}
+        else:
+            backbone_snap = {}
+            v3_snap = {}
 
         # 1. Simulate Baseline Future
         baseline_trace: Optional[List[Dict[str, Any]]] = [] if trace else None
         base_executed_actions: List[Dict[str, Any]] = []
 
-        if use_dynamic_v3:
+        if use_backbone:
+            backbone.restore_state(backbone_snap)
+            base_policy = backbone.create_continuation_policy()
+        elif use_dynamic_v3:
             restore_v3_state(v3_agent_callable, v3_snap)
-            base_v3_policy = V3ContinuationPolicy(v3_agent_callable)
+            base_policy = V3ContinuationPolicy(v3_agent_callable)
         else:
-            base_v3_policy = None
+            base_policy = None
 
         baseline_rollout = simulate_rollout(
             econ_state=econ_state,
@@ -565,7 +579,7 @@ class CounterfactualSimulator:
             opp_model=opp_model,
             continuation_actions=continuation_trajectory,
             trace_log=baseline_trace,
-            v3_policy=base_v3_policy,
+            v3_policy=base_policy,
             executed_actions=base_executed_actions,
             player=econ_state.player,
         )
@@ -587,16 +601,23 @@ class CounterfactualSimulator:
         elif getattr(candidate_patch, "spliced_continuation", None) is not None:
             spliced_workers = set(candidate_patch.worker_mutations.keys())
 
-        if use_dynamic_v3:
+        if use_backbone:
+            backbone.restore_state(backbone_snap)
+            if macro_invariant:
+                cand_policy = None
+                cand_continuation = base_executed_actions[1:] if len(base_executed_actions) > 1 else []
+            else:
+                cand_policy = backbone.create_continuation_policy()
+        elif use_dynamic_v3:
             restore_v3_state(v3_agent_callable, v3_snap)
             if macro_invariant:
                 # Diagnostic mode: hold out macro regime shift by replaying baseline actions
-                cand_v3_policy = None
+                cand_policy = None
                 cand_continuation = base_executed_actions[1:] if len(base_executed_actions) > 1 else []
             else:
-                cand_v3_policy = V3ContinuationPolicy(v3_agent_callable)
+                cand_policy = V3ContinuationPolicy(v3_agent_callable)
         else:
-            cand_v3_policy = None
+            cand_policy = None
 
         candidate_rollout = simulate_rollout(
             econ_state=econ_state,
@@ -608,13 +629,15 @@ class CounterfactualSimulator:
             baseline_positions=baseline_rollout.worker_positions_history,
             spliced_workers=spliced_workers,
             reconnect_result=reconnect_res,
-            v3_policy=cand_v3_policy,
+            v3_policy=cand_policy,
             executed_actions=cand_executed_actions,
             player=econ_state.player,
         )
 
-        # Restore V3 state to ensure 100% pure isolation from live game
-        if use_dynamic_v3:
+        # Restore state to ensure 100% pure isolation from live game
+        if use_backbone:
+            backbone.restore_state(backbone_snap)
+        elif use_dynamic_v3:
             restore_v3_state(v3_agent_callable, v3_snap)
 
         # 3. Detect Action Divergence Turn
@@ -705,6 +728,6 @@ class CounterfactualSimulator:
             first_divergence_turn=first_div_turn,
             direct_intervention_effect=direct_effect,
             macro_induced_continuation_delta=macro_continuation_delta,
-            executed_baseline_actions=base_executed_actions if use_dynamic_v3 else None,
-            executed_candidate_actions=cand_executed_actions if use_dynamic_v3 else None,
+            executed_baseline_actions=base_executed_actions if (use_backbone or use_dynamic_v3) else None,
+            executed_candidate_actions=cand_executed_actions if (use_backbone or use_dynamic_v3) else None,
         )

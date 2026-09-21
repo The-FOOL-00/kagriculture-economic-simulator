@@ -87,25 +87,54 @@ class OpportunityEngine:
         enabled = set(config.enabled_mechanisms) if config is not None else self.enabled_mechanisms
         is_frozen = config.frozen_mode if config is not None else (self.mode == "frozen")
 
+        # V26 perf gate: in frozen mode with quarantine telemetry scan disabled,
+        # skip detectors that cannot emit an enabled family. The actionable list
+        # is provably identical (skipped detectors could only produce quarantined
+        # output); only quarantine telemetry counts change. Default True = legacy.
+        skip_quarantine_scan = bool(
+            is_frozen
+            and config is not None
+            and not getattr(config, "enable_quarantine_scan", True)
+        )
+
+        def _wanted(*families: str) -> bool:
+            if not skip_quarantine_scan:
+                return True
+            return any(f in enabled for f in families)
+
         raw_opportunities: List[Opportunity] = []
 
         # 1. Foundation Analyzers
-        raw_opportunities.extend(self.route_analyzer.analyze(econ_state, events, baseline_action))
-        raw_opportunities.extend(self.market_analyzer.analyze(econ_state, events, baseline_action))
-        raw_opportunities.extend(self.terminal_analyzer.analyze(econ_state, events, baseline_action))
-        raw_opportunities.extend(self.resource_analyzer.analyze(econ_state, events, baseline_action))
-        raw_opportunities.extend(self.labor_analyzer.analyze(econ_state, events, baseline_action))
-        raw_opportunities.extend(self.timing_analyzer.analyze(econ_state, events, baseline_action))
+        if _wanted("LOCAL_WEED_DIG"):
+            raw_opportunities.extend(self.route_analyzer.analyze(econ_state, events, baseline_action))
+        if _wanted("DEPENDENCY_AWARE_MARKET_TIMING"):
+            raw_opportunities.extend(self.market_analyzer.analyze(econ_state, events, baseline_action))
+        if _wanted("TERMINAL_LIQUIDATION", "TERMINAL_HARVEST_SWEEP", "PHASE_SHUTDOWN"):
+            raw_opportunities.extend(self.terminal_analyzer.analyze(econ_state, events, baseline_action))
+        if _wanted("EMERGENCY_FEED_PURCHASE", "RESOURCE_CONVERSION", "RESOURCE_ACQUISITION"):
+            raw_opportunities.extend(self.resource_analyzer.analyze(econ_state, events, baseline_action))
+        if _wanted("DYNAMIC_SHADOW_HARVEST", "CARGO_FERRY"):
+            raw_opportunities.extend(self.labor_analyzer.analyze(econ_state, events, baseline_action))
+        if _wanted("OPPONENT_PREEMPT_SELL"):
+            raw_opportunities.extend(self.timing_analyzer.analyze(econ_state, events, baseline_action))
 
         # 2. Phase 007 Analyzers
-        raw_opportunities.extend(self.route_compression_detector.detect(econ_state, worker_id=0))
-        raw_opportunities.extend(self.cargo_ferry_detector.detect(econ_state, baseline_action))
-        raw_opportunities.extend(self.production_arbitrage_detector.detect(econ_state))
-        raw_opportunities.extend(self.shop_arbitrage_detector.detect(econ_state))
-        raw_opportunities.extend(self.terminal_conversion_detector.detect(econ_state))
-        raw_opportunities.extend(self.opponent_preemption_detector.detect(econ_state, pressure_state))
-        raw_opportunities.extend(self.emergency_recovery_detector.detect(econ_state, baseline_action))
-        raw_opportunities.extend(self.town_cycle_detector.detect(econ_state, baseline_action))
+        if _wanted("ROUTE_COMPRESSION"):
+            raw_opportunities.extend(self.route_compression_detector.detect(econ_state, worker_id=0))
+        if _wanted("CARGO_FERRY"):
+            raw_opportunities.extend(self.cargo_ferry_detector.detect(econ_state, baseline_action))
+        if _wanted("PRODUCTION_ARBITRAGE"):
+            raw_opportunities.extend(self.production_arbitrage_detector.detect(econ_state))
+        if _wanted("SHOP_ARBITRAGE"):
+            raw_opportunities.extend(self.shop_arbitrage_detector.detect(econ_state))
+        if _wanted("TERMINAL_CONVERSION"):
+            raw_opportunities.extend(self.terminal_conversion_detector.detect(econ_state))
+        if _wanted("OPPONENT_PREEMPT_SELL"):
+            raw_opportunities.extend(self.opponent_preemption_detector.detect(econ_state, pressure_state))
+        if _wanted("EMERGENCY_RECOVERY"):
+            raw_opportunities.extend(self.emergency_recovery_detector.detect(econ_state, baseline_action))
+        if _wanted("TOWN_CYCLE"):
+            raw_opportunities.extend(self.town_cycle_detector.detect(econ_state, baseline_action))
 
         # 3. Phase 015 Capability A: Asset-Holding Valuation Trigger
         trigger_active = (
@@ -153,6 +182,10 @@ class OpportunityEngine:
         for opp in raw_opportunities:
             fam = opp.candidate_transformation_family
             if is_frozen:
+                # Legacy V22 carve-out: LOCAL_WEED_DIG stays actionable through
+                # Layers 1-2 (patch simulation) and is diverted at the commit
+                # governance gate. V26 arm isolation uses enable_quarantine_scan
+                # instead (skips the detector), leaving this contract intact.
                 if fam in enabled or fam == "LOCAL_WEED_DIG":
                     actionable.append(opp)
                 else:

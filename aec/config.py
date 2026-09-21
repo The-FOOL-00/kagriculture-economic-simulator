@@ -218,6 +218,7 @@ class AECConfig:
     enabled_mechanisms: Tuple[str, ...] = ENABLED_FOUNDATION_MECHANISMS
     quarantined_mechanisms: Tuple[str, ...] = QUARANTINED_MECHANISMS
     frozen_mode: bool = True         # EXP-AEC-001 frozen treatment isolation mode
+    enable_quarantine_scan: bool = True  # If False in frozen mode, skip running analyzers for quarantined mechanisms
 
     
     # Adaptive Horizons (§12, §22)

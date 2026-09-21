@@ -1,0 +1,39 @@
+{
+  "protocol": "V27_V25_ROBUSTNESS",
+  "created_at": "2026-09-21",
+  "preregistration": "V27_PREREGISTRATION.md",
+  "stages": [
+    {
+      "stage": "A_DISCOVERY",
+      "seeds": [249490, 249509],
+      "seed_list": [249490, 249491, 249492, 249493, 249494, 249495, 249496, 249497, 249498, 249499, 249500, 249501, 249502, 249503, 249504, 249505, 249506, 249507, 249508, 249509],
+      "seats": [0, 1],
+      "n_matches": 40,
+      "comparison": "V25_P3 vs V3 (frozen, hermetic adapters, no AEC)",
+      "status": "RESERVED_VIRGIN"
+    },
+    {
+      "stage": "B_CONFIRMATION",
+      "seeds": [249510, 249529],
+      "seed_list": [249510, 249511, 249512, 249513, 249514, 249515, 249516, 249517, 249518, 249519, 249520, 249521, 249522, 249523, 249524, 249525, 249526, 249527, 249528, 249529],
+      "seats": [0, 1],
+      "n_matches": 40,
+      "comparison": "V25_P3 vs V3 (frozen, hermetic adapters, no AEC)",
+      "status": "RESERVED_VIRGIN"
+    }
+  ],
+  "disjointness_audit": {
+    "max_consumed_seed_anywhere": 249489,
+    "audit_scope": ["results/", "experiments/", "scratch/", "root *.md", "V25 worktree"],
+    "audit_method": "bounded seed-literal scan + manifest review (see V27_BASELINE_FREEZE.md)",
+    "consumed_adjacent": "249470..249489 (V26)",
+    "overlap_count": 0,
+    "protected_untouched_holdouts": ["214200..214249", "340050..340199"],
+    "retired_consumed": ["340300..340349", "all 249xxx <= 249489 dev cohorts"],
+    "reserve_from": 249530,
+    "holdout_isolation_certified": true
+  },
+  "loader": "hermetic adapters (V25P3BackboneAdapter vs V3BackboneAdapter); file-loader pool banned",
+  "engine_version": "1.32.7",
+  "max_workers": 9
+}

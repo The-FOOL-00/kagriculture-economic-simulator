@@ -1,0 +1,482 @@
+{
+  "CF1_seat0_run1": {
+    "base_cash": 10407.0,
+    "below_threshold_silent": 30.34423828125,
+    "label": "tip-seed gate test",
+    "live_action_market": [
+      [
+        "SELL",
+        "FERTILIZER",
+        17
+      ],
+      [
+        "SELL",
+        "WOOL",
+        3
+      ]
+    ],
+    "live_sheep_qty": 0,
+    "n_probes": 11,
+    "p3_live_cash": 11288.0,
+    "p3_seat": 0,
+    "probe_step": 289,
+    "probes": [
+      {
+        "injection": 26.97265625,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 29.669921875,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 31.0185546875,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_LAND"
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "sheep_qty": 6
+      },
+      {
+        "injection": 30.34423828125,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      }
+    ],
+    "seed": 249463,
+    "terminal_after_restore": [
+      118543.0,
+      105490.0
+    ],
+    "threshold": {
+      "injection": 31.0185546875,
+      "market": [
+        [
+          "SELL",
+          "FERTILIZER",
+          17
+        ],
+        [
+          "SELL",
+          "WOOL",
+          3
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          6
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          6
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ],
+      "sheep_qty": 6
+    }
+  },
+  "CF1_seat0_run2": {
+    "base_cash": 10407.0,
+    "below_threshold_silent": 30.34423828125,
+    "label": "independent reproduction",
+    "live_action_market": [
+      [
+        "SELL",
+        "FERTILIZER",
+        17
+      ],
+      [
+        "SELL",
+        "WOOL",
+        3
+      ]
+    ],
+    "live_sheep_qty": 0,
+    "n_probes": 11,
+    "p3_live_cash": 11288.0,
+    "p3_seat": 0,
+    "probe_step": 289,
+    "probes": [
+      {
+        "injection": 26.97265625,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 29.669921875,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 31.0185546875,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_LAND"
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "sheep_qty": 6
+      },
+      {
+        "injection": 30.34423828125,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      }
+    ],
+    "seed": 249463,
+    "terminal_after_restore": [
+      118543.0,
+      105490.0
+    ],
+    "threshold": {
+      "injection": 31.0185546875,
+      "market": [
+        [
+          "SELL",
+          "FERTILIZER",
+          17
+        ],
+        [
+          "SELL",
+          "WOOL",
+          3
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          6
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          6
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ],
+      "sheep_qty": 6
+    }
+  },
+  "CF1_seat1_run1": {
+    "base_cash": 10407.0,
+    "below_threshold_silent": 30.34423828125,
+    "label": "tip-seed gate test",
+    "live_action_market": [
+      [
+        "SELL",
+        "FERTILIZER",
+        17
+      ],
+      [
+        "SELL",
+        "WOOL",
+        3
+      ]
+    ],
+    "live_sheep_qty": 0,
+    "n_probes": 11,
+    "p3_live_cash": 11288.0,
+    "p3_seat": 1,
+    "probe_step": 289,
+    "probes": [
+      {
+        "injection": 26.97265625,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 29.669921875,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 31.0185546875,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_LAND"
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "sheep_qty": 6
+      },
+      {
+        "injection": 30.34423828125,
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ]
+        ],
+        "sheep_qty": 0
+      }
+    ],
+    "seed": 249463,
+    "terminal_after_restore": [
+      106620.0,
+      119646.0
+    ],
+    "threshold": {
+      "injection": 31.0185546875,
+      "market": [
+        [
+          "SELL",
+          "FERTILIZER",
+          17
+        ],
+        [
+          "SELL",
+          "WOOL",
+          3
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          6
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "SHEEP",
+          6
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ],
+      "sheep_qty": 6
+    }
+  },
+  "CF2_control": {
+    "base_cash": 15935.0,
+    "below_threshold_silent": 2594.366455078125,
+    "label": "non-tip control",
+    "live_action_market": [],
+    "live_sheep_qty": 0,
+    "n_probes": 12,
+    "p3_live_cash": 16530.0,
+    "p3_seat": 0,
+    "probe_step": 289,
+    "probes": [
+      {
+        "injection": 2589.931640625,
+        "market": [],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 2592.4658203125,
+        "market": [],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 2593.73291015625,
+        "market": [],
+        "sheep_qty": 0
+      },
+      {
+        "injection": 2594.366455078125,
+        "market": [],
+        "sheep_qty": 0
+      }
+    ],
+    "seed": 249464,
+    "terminal_after_restore": [
+      158876.0,
+      158431.0
+    ],
+    "threshold": null
+  }
+}

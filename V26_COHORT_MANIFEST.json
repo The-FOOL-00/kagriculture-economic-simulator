@@ -1,0 +1,58 @@
+{
+  "protocol": "V26_BACKBONE_AWARE_AEC_TRANSFER",
+  "created_at": "2026-09-21T13:15:00+05:30",
+  "cohort_id": "V26_DEV_TRANSFER_COHORT_001",
+  "cohort_description": "Virgin 20-seed development cohort reserved strictly for V26 Backbone-Aware AEC transfer qualification",
+  "seed_range": {
+    "start": 249470,
+    "end": 249489,
+    "count": 20
+  },
+  "seeds": [
+    249470, 249471, 249472, 249473, 249474,
+    249475, 249476, 249477, 249478, 249479,
+    249480, 249481, 249482, 249483, 249484,
+    249485, 249486, 249487, 249488, 249489
+  ],
+  "seats": [0, 1],
+  "total_matches_per_arm": 40,
+  "arm_definitions": [
+    {
+      "arm_id": "ARM1_V25_STANDALONE",
+      "backbone": "V25_P3_UNIFIED",
+      "aec_enabled": false,
+      "enabled_mechanisms": []
+    },
+    {
+      "arm_id": "ARM2_V25_AEC_INFRA_ONLY",
+      "backbone": "V25_P3_UNIFIED",
+      "aec_enabled": true,
+      "enabled_mechanisms": []
+    },
+    {
+      "arm_id": "ARM3_V25_MARKET_TIMING",
+      "backbone": "V25_P3_UNIFIED",
+      "aec_enabled": true,
+      "enabled_mechanisms": ["DEPENDENCY_AWARE_MARKET_TIMING"]
+    },
+    {
+      "arm_id": "ARM4_V3_MARKET_TIMING_REFERENCE",
+      "backbone": "V3_STANDALONE",
+      "aec_enabled": true,
+      "enabled_mechanisms": ["DEPENDENCY_AWARE_MARKET_TIMING"]
+    }
+  ],
+  "disjointness_audit": {
+    "historical_consumed_max": 249469,
+    "v25_discovery_cohort": "249430..249449",
+    "v25_confirmation_cohort": "249450..249469",
+    "v26_cohort": "249470..249489",
+    "overlap_count": 0,
+    "sealed_holdouts": [
+      "214200..214249",
+      "340050..340199",
+      "340300..340349"
+    ],
+    "holdout_isolation_certified": true
+  }
+}
