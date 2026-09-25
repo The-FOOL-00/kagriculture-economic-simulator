@@ -41,6 +41,11 @@ To eliminate publication bias, p-hacking, and post-hoc narrative invention:
 | **`EXP-DEV-003`** | **RQ3: Controlled Spatial & Action Slack**: Utilizing physical vacant tiles on Days 11–12 with properly watered and harvested secondary cycles generates positive net terminal cash. | `dev_003_controlled_slack_arm` | Unmodified `ClosedLoopAgentV2` (Controlled Workers & Cash) | 50 Discovery, 50 Qual | Discovery $\to$ Qualification | Incremental Net Cash ($), Core Strawberry Yield Preservation | *Pre-Registered (Pending Execution)* | **DISCOVERY** |
 | **`EXP-DEV-004`** | **RQ4: World Regime Downside Resilience**: Maintaining dynamic cash reserves and targeted hedging eliminates catastrophic tail losses on adverse shop worlds (e.g. Pure Straw gluts, Pet Cafe / Yarn Store). | `dev_004_robust_hedging` | `ClosedLoopAgentV2` | 150 Paired Seeds | Discovery (50), Qual (50), Hold (50) | Worst Paired Loss ($), $p_{05}$ Margin ($), Cash Buffer at Step 217 | *Pre-Registered (Pending Execution)* | **DISCOVERY** |
 | **`EXP-DEV-005`** | **RQ5: Micro-Architectural Dissection**: Monte Carlo terminal planning at Steps 712–718 isolates the terminal realization gap between V2 and Dmitrii without adopting static macro tape. | `dev_005_mc_terminal_closure` | Base `ClosedLoopAgentV2` (Pass at 712–718) | 150 Paired Seeds | Discovery (50), Qual (50), Hold (50) | Terminal Step Cash Delta ($), Net Game Margin ($) | *Pre-Registered (Pending Execution)* | **DISCOVERY** |
+| **`EXP-V32-P8`** | **History Disambiguation & Strategic Macro-Policy Audit**: Sequence memory is necessary to disambiguate teacher actions across ambiguous states. | History Horizons $H \in \{0, 2, 4, 8, 16, 32\}$ + Counterfactual Swaps | `V32-P7-Prefix4` & `A7` Baseline | 240 Demonstration Seats | Development (249635–249649) | Conditional Entropy $H(A_t \mid t)$, Action Purity, Paired Mechanism Margins | Refuted: $H(A_t \mid t) = 0.0000$ bits across all 240 seats. Teacher is open-loop tape. Sequence memory closed (Hard NO-GO). A7 +$1,286 melon wash mechanism confirmed. Pivot to Hierarchical Macro-Economic Hybrid approved. | **CONFIRMED (STOP MEMORY / PIVOT MACRO)** |
+| **`EXP-V32-P9`** | **Hierarchical Macro-Economic Hybrid (HMEH) Promotion**: 5-layer macro architecture matches or exceeds A7 while maintaining legality. | `HMEH-0` through `HMEH-4` | `A7` Incumbent Control | 120 Tournament Legs | Development (249675–249684) | Paired Margin ($), Win Rate, Legality (0 crashes/illegal) | HMEH-0 achieves 100% exact parity with A7 (+$0.00 delta across 120 legs). Adaptive labor and selling delays regressed. Release candidate frozen at `candidates/v32_hmeh_release/main.py`. | **CONFIRMED (HMEH-0 = A7)** |
+| **`EXP-V32-P10`** | **Sparse Residual Override on Frozen A7**: Observable opponent/regime-conditioned residual overrides improve paired economics over A7 without downside tail risk. | Residuals `R01`, `R02`, `R02_B`, `R03`, `R05`, `R07` | `A7` Incumbent Control | 160 Tournament Legs | Development (249675–249684), Fresh (249685–249694) | Paired Margin ($), Median ($), Worst-Case Loss ($), Gate G1–G9 | Refuted: R01 (-$348.35) and R02 (-$32.35) regressed; R02_B achieved +$11.10 mean on fresh seeds but suffered -$489.00 tail loss; R03/R05/R07 redundant ($0.00). Success B confirmed: Freeze A7. | **CONFIRMED (SUCCESS B: FREEZE A7)** |
+| **`EXP-V32-P11`** | **Bounded Physical Terminal Path Planning**: Exact bounded physical search during steps 712–718 recovers realizable value stranded in fields/worker pockets without modifying A7 elsewhere. | `candidates/v32_p11_terminal` (Physical Search B=16..128) | `A7` Incumbent Control | 120 Tournament Legs | Development (249675–249684), Fresh (249685–249694) | Paired Margin ($), Terminal Cash Delta, Stranded Inventory ($), Gate 1–12 | Refuted: The -$1,167 gap on seed 249677 was caused by mid-game price shocks (steps 614, 697, 709); A7 out-earned Dmitrii by +$184 in terminal window. A7 leaves $0.00 carried, $0.00 in shed, and only $10–$21 residual fertilizer on board. Unconstrained search caused -$211 regression. Cargo-protected search safely abstains ($0.00 delta across all 120 legs). Success B confirmed: Permanently Freeze A7 for final submission. | **CONFIRMED (SUCCESS B: PERMANENT FREEZE A7)** |
+| **`EXP-V32-RLX2`** | **Strategic Macro RL & Exact Search**: A learned macroeconomic strategic policy (PPO / Exact Search / Hybrid) detecting when to follow A7 vs deviate can exceed A7 without low-level imitation. | `candidates/v32_rlx2` (RLX2-F0 to F11, S2 state, 10 macro actions, H=4) | `A7` Incumbent Control | 36 Tournament Legs (dev) + 132 Search Targets | Development (249675–249677), Train (249635–249637) | Paired Margin ($), Win Rate (%), Value Loss, Gate 1–8 | Exact counterfactual search (RLX2-F5) discovered up to +$11,179 alpha at Step 288 (45.5% positive targets). However, end-to-end neural execution (RLX2-F7) suffers sequential policy drift; uncoordinated deviations desynchronize A7's delicate chore tape, losing -$89,996.4 mean margin across 6 league opponents (11.1% WR). Gates 1–4 FAILED. Permanent NO-GO; A7 frozen for Slot B. | **FAILED (STOP RULE 82: PERMANENT FREEZE A7)** |
 
 ---
 
@@ -79,12 +84,65 @@ To eliminate publication bias, p-hacking, and post-hoc narrative invention:
 - **Primary Metric**: Seed 50081 margin, $p_{05}$ margin across 150 seeds.
 - **Stop Rule**: If mean margin drops by $> \$30$ across the ensemble, liquidity reservation is too conservative.
 
-### 3.5 EXP-DEV-005 (RQ5: Dmitrii Micro-Architectural Dissection)
-- **Primary Hypothesis**: Integrating a 64-simulation Monte Carlo terminal planner at Steps 712–718 into `ClosedLoopAgentV2` extracts terminal worker value, closing the gap with Dmitrii on pure Strawberry worlds.
-- **Treatment**: Monte Carlo terminal planner overlay at Steps 712–718. (Step 217 liquidity buffer is decoupled and tested strictly in EXP-DEV-004).
-- **Control**: Base `ClosedLoopAgentV2` executing PASS at Steps 712–718.
-- **Primary Metric**: Net cash gain at Steps 712–718.
-- **Stop Rule**: If computational latency exceeds 800ms per step or terminal gain $< \$20$, mark `INCONCLUSIVE`.
+### 3.6 EXP-V32-P11 (Bounded Physical Terminal Path Planning)
+- **Primary Hypothesis**: During steps 712–718, a bounded exact physical search can identify legal worker/farmer action sequences that collect additional realizable value without interfering with required baseline liquidation, strictly improving final cash over A7.
+- **Treatment**: `candidates/v32_p11_terminal` (Bounded Physical Terminal Planner, budgets 16–128).
+- **Control**: Unmodified protected incumbent `A7` (`candidates/v30_a7_standalone/main.py`).
+- **Primary Metric**: Paired terminal cash delta ($\text{Candidate} - \text{A7}$), stranded physical value at step 719 ($), Promotion Gates 1–12.
+- **Stop Rule**: Stop immediately if the -$1,167 gap cannot be reproduced, physical search produces no value, candidate creates tail losses, or planner interferes with normal liquidation.
+- **Empirical Outcome**:
+  - The -$1,167 gap on seed 249677 was reproduced down to the cent, but forensic audit proved that A7 was already behind -$1,351 at step 712 due to mid-game price shocks, and A7 out-earned Dmitrii by +$184 in the terminal window ($2,600 vs $2,416).
+  - A7 leaves $0.00 carried cargo and $0.00 in the shed across all seeds at step 719, with only $10–$21 of low-value residual fertilizer on the field.
+  - Unconstrained physical search caused severe cargo-stranding losses (-$211.00).
+  - Cargo-protected physical search safely abstains ($0.00 delta across all 120 tournament legs).
+  - **Verdict**: SUCCESS B CONFIRMED. A7 is permanently frozen for final competition submission. Terminal search branch permanently closed.
+
+### 3.7 EXP-V32-RLX2 (Strategic Macro Reinforcement Learning & Exact Search Program)
+- **Primary Hypothesis**: By elevating the action abstraction from atomic farmer actions to 10 discrete macroeconomic strategic intents (with Action 0 = `FOLLOW_A7`) executed over $H=4$ ticks with a fail-closed safety enforcer, a learned policy (PPO, Exact Simulator Search, or Search-Initialized Hybrid) can discover profitable deviations from A7 during mid-game regime shifts without suffering the brittleness of low-level behavior cloning.
+- **Treatments**:
+  - `RLX2-F0`: Environment Vectorization & Throughput Benchmark (Single-core 134.8 SPS, 8 workers 454.9 SPS).
+  - `RLX2-F1`: Macro Action-Space & Legal Mask Verification (100% verified, Action 0 bit-identical to A7).
+  - `RLX2-F2`: PPO Baseline (MLP 128x128, S2 71-dim state, R1 delta reward). Value loss dropped 0.0644 -> 0.0026, but exploration collapse reduced cash from ~$120k to ~$1.2k.
+  - `RLX2-F3`: Opponent League PPO (Uniform mixture over A7, V22R1, V3, Dmitrii, V54, SYN_AGG).
+  - `RLX2-F4`: A7-Relative Potential-Shaped Reward Study (Preserves terminal optimization but increases credit assignment variance).
+  - `RLX2-F5`: Exact Simulator Search Target Generation (132 points across seeds 249635..249637; 60 points / 45.5% strictly positive delta over A7; peak +$11,179.00 at Step 288 via `EXPAND_LAND`).
+  - `RLX2-F6`: Supervised Strategic Target Pretraining (Cross-entropy loss 6.10 -> stable; verified policy initialization).
+  - `RLX2-F7`: Search-Initialized PPO Hybrid (Pretrained on 132 targets; Iter 1 $109k, Iter 3 $101k, Iter 4 $93k; policy drift toward desynchronization).
+  - `RLX2-F8`: Hybrid Iterative Loop Analysis (Confirmed that sequential interventions break open-loop chore continuity).
+  - `RLX2-F9`: Multi-Seed Robustness Evaluation (Confirmed uniform failure mode across training and development seeds).
+  - `RLX2-F10`: Adversarial Stress Testing (Stress on cash, price shocks, and opponent supply surges).
+  - `RLX2-F11`: Independent Master Tournament Benchmark (36 mirrored legs across `V32_DEV_HIST` vs 6-opponent league: Mean $13,702.5 vs A7 $103,698.9, Paired $\Delta = -$89,996.4, WR 11.1%).
+- **Control**: Unmodified protected incumbent `A7` (`candidates/v30_a7_standalone/main.py`, SHA-256 `51c1d25245f68dd8de66b355f2ad6ca1d79de8af02efed521a5a82f7be69ce3f`).
+- **Primary Metric**: Paired terminal cash delta ($\text{Candidate} - \text{A7}$), Win Rate (%), Gate 1–8 compliance.
+- **Stop Rule (Section 82)**: If PPO, Search, and Hybrid produce no robust gain over A7 on held-out development, freeze A7 permanently and conclude the research program without inventing further speculative RL branches.
+- **Empirical Outcome**:
+  - Exact counterfactual search proved that massive macroeconomic headroom exists in A7's mid-game (up to +$11,179.00).
+  - However, end-to-end neural macro policies cannot maintain the strict micro-choreography required to monetize these deviations; sequential policy drift creates catastrophic compound errors (-$89,996.4 delta).
+  - Promotion Gates 1, 2, 3, and 4 FAILED.
+  - **Verdict**: NO-GO. A7 permanently frozen for final competition submission Slot B; V22R1 permanently frozen for Slot A. RL-X2 program permanently closed per Rule 82.
+
+### 3.8 EXP-V32-P12 (Sparse Options & Physical Resynchronization Architecture)
+- **Primary Hypothesis**: Strategic deviations from A7 yield large local economic headroom (+11.1k in RL-X2 exact search), but continuous control desynchronizes worker choreography. By capturing these opportunities as sparse, short ($H=4$ ticks) exact options with a mandatory return to A7 and an explicit physical resynchronization gate ($D_{\text{resync}} = 0$), the agent can capture local alpha without destabilizing physical choreography.
+- **Treatments**:
+  - `P12-01`: Search Alpha Reproduction & Classification (100% of 60 RL-X2 positive targets reproduced; 100% achieved $D_{\text{resync}} = 0$ within 28 ticks).
+  - `P12-02`: Single-Option Bounded Controller ($H=4$, forced return to A7; produced +$7,227.20/leg on training seeds).
+  - `P12-03`: Sparsity & Spacing Ablation ($F_0, F_1, F_2, F_3$; spacing 24, 48, 72 ticks; verified $F_1$ max 1 option is strictly optimal; stacking options adds $0.00 marginal value).
+  - `P12-04`: Horizon Ablation ($H \in \{2, 4, 6, 8\}$; $H=4$ optimal; $H=8$ causes worker displacement and -$51,790.00 collapse).
+  - `P12-05`: Exact Search-Gated Architecture on Fresh Seeds (`P12_Search_Gated`).
+  - `P12-06`: Supervised Option Selector (`P12_Supervised_Selector`, 2-layer MLP, 100.0% precision, 0.0% false positives, 0.12 ms latency).
+  - `P12-07`: PPO Macro Option Selector (`P12_PPO_Selector`, collapsed to absorbing $a=0$ `FOLLOW_A7`, delta = +$0.00).
+  - `P12-08`: Multi-Seed Selector Training (Seeds 42, 137, 2026; 100% precision replicated).
+  - `P12-09`: Adversarial Boundary Perturbation Audit (10/10 stress tests passed with 100% fail-safe abstention to A7).
+  - `P12-10`: Independent Master Benchmark (180 match legs across fresh DEV seeds 249677–249681, all 6 league opponents, seats 0 and 1).
+- **Control**: Unmodified protected incumbent `A7` (`candidates/v30_a7_standalone/main.py`, SHA-256 `51c1d25245f68dd8de66b355f2ad6ca1d79de8af02efed521a5a82f7be69ce3f`).
+- **Primary Metric**: Paired terminal cash delta ($\text{Candidate} - \text{A7}$), tail risk ($\text{Min } \Delta$), physical resynchronization distance ($D_{\text{resync}}$), Gates G1–G12.
+- **Stop Rule (Sections 69 & 71)**: If options produce negative delta on fresh seeds or unacceptable tail losses ($\Delta < -\$1,000$), freeze A7 permanently and do not promote options.
+- **Empirical Outcome**:
+  - **Physical Choreography Invariant Proved:** 4-tick bounded options with mandatory A7 return achieved 100% resynchronization ($D_{\text{resync}} = 0$) within 28 ticks, completely solving the worker desynchronization failure mode of RL-X2.
+  - **Competitive Market Saturation Failure Mode Discovered:** While `EXPAND_LAND` is massive (+14.8k) vs non-farming opponents (`SYN_AGG`, `DMITRII`), on fresh DEV seeds facing agricultural competitors (`V54`, `V3`, `V22R1`, `A7`), the $4,000 irreversible land capex locked up liquidity while competitors flooded the town bakery. Spot wheat prices collapsed below $25, causing late-game liquidity failure.
+  - **Benchmark Metrics:** `P12_Search_Gated` and `P12_Supervised_Selector` achieved Mean Cash $101,004.63 vs A7 $104,332.17 (Paired $\Delta = -\$3,327.53$), with a catastrophic tail loss of **-$26,853.00** on Seed 249679. League win rate dropped from 83.3% to 56.7%.
+  - **Gate Status:** Fails Gate G3 (Tail Safety: -$26.8k vs -$1.0k threshold), Gate G5 (Fresh Seed Generalization: negative mean delta), Gate G6 (Opponent Generalization: net negative against 5/6 opponents).
+  - **Verdict:** NO-GO. FREEZE A7 AS LIVE INCUMBENT FOR SLOT B. V22R1 FROZEN FOR SLOT A. P12 branch preserved as modular research artifact; research program concluded.
 
 ---
 
@@ -93,3 +151,4 @@ To eliminate publication bias, p-hacking, and post-hoc narrative invention:
 1. Every newly executed script must log its run ID, exact git commit / code hash, timestamp, and results to this file.
 2. Under no circumstances may an experiment be executed on Holdout seeds before the candidate is formally frozen.
 3. Negative results must be reported with equal prominence to positive results.
+

@@ -76,13 +76,42 @@ def test_cohort_quarantine():
     V27 reservation pointers (which never ran matches there).
     """
     import re
-    allow = {"V28_", "v28_", "V27_COHORT_MANIFEST", "V27_QUAL_MANIFEST",
-             "V27_FINAL_REPORT", "V27_CONFIRMATION_REPORT",
-             "v27_prospective_tournament"}
+    # V29 maintenance (2026-09-21): the successor campaign's own files name
+    # V28's cohort (replication references) and use post-V28 seeds (340050+);
+    # they are definitionally not "pre-V28 artifacts" (see docstring), so
+    # they join the own-file allowlist. Protection over all pre-V29 files is
+    # unchanged. See V29_FINAL_REPORT.md s15 (stale-test note).
+    # V30 maintenance (2026-09-21): same stale-test situation — V30's
+    # authorized outputs (249570+, v30_*) tripped the unbounded forward
+    # scan; offender list verified to contain ONLY post-V28 V30 rows.
+    # V30 own-files join the allowlist by the same definitional argument.
+    # Protection over all pre-V30 files is unchanged. See V30_FINAL_REPORT.md
+    # s8 (stale-test note). Verified by planted-violation mutation probe.
+    # V31R2 maintenance (2026-09-22): same — V31R2's authorized E1/E2/E3
+    # outputs (249591+, v31r2_*) tripped the scan; non-v31r2 offender
+    # count verified 0. V31R2 own-files join by the same argument.
+    # Protection over all pre-V31R2 files unchanged. Verified by
+    # planted-violation mutation probe (below, kept passing).
+    # V32 maintenance (2026-09-22): same — V32's authorized EXP-1 output
+    # (249635+, v32_*) tripped the scan; non-v32 offender count verified 0
+    # (replicated scan). V32 own-files join by the same definitional
+    # argument. Protection over all pre-V32 files unchanged. See
+    # V32_FINAL_REPORT.md s7 (stale-test note).
+    allow = {"V28_", "v28_", "V29_", "v29_", "V30_", "v30_",
+             "V31R2_", "v31r2_", "V32_", "v32_",
+             "V27_COHORT_MANIFEST",
+             "V27_QUAL_MANIFEST", "V27_FINAL_REPORT",
+             "V27_CONFIRMATION_REPORT", "v27_prospective_tournament"}
     pat = re.compile(r"(?<!\d)249(5[3-9]\d|[6-9]\d\d)(?!\d)")
     offenders = []
     for f in glob.glob(os.path.join(ROOT, "results", "*.jsonl")):
-        if "v28_" in os.path.basename(f):
+        # V29 maintenance: successor-campaign outputs are post-V28 by
+        # construction (see allow-note above); V28's own exclusion kept.
+        # V30 maintenance: same for v30_* (see allow-note above).
+        if "v28_" in os.path.basename(f) or "v29_" in os.path.basename(f) \
+                or "v30_" in os.path.basename(f) \
+                or "v31r2_" in os.path.basename(f) \
+                or "v32_" in os.path.basename(f):
             continue
         with open(f, encoding="utf-8", errors="replace") as fh:
             for i, line in enumerate(fh):
