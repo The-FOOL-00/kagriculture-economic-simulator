@@ -1,0 +1,174 @@
+{
+  "seeds": [
+    930001,
+    930500
+  ],
+  "num_seeds": 500,
+  "baseline_mean_reward": 87440.562,
+  "baseline_mean_margin": 1022.596,
+  "grid_results": {
+    "G1_Cand_2000_4_12": {
+      "params": {
+        "preempt_money_deficit": 2000.0,
+        "preempt_minimum_delta": 4.0,
+        "preempt_maximum_batch": 12
+      },
+      "mean_delta": 18.002,
+      "median_delta": 2.0,
+      "ci_95": [
+        13.764850000000003,
+        22.495199999999993
+      ],
+      "wins": 275,
+      "losses": 115,
+      "ties": 110,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 1.2
+    },
+    "G2_Deficit_1500": {
+      "params": {
+        "preempt_money_deficit": 1500.0,
+        "preempt_minimum_delta": 4.0,
+        "preempt_maximum_batch": 12
+      },
+      "mean_delta": 18.002,
+      "median_delta": 2.0,
+      "ci_95": [
+        13.764850000000003,
+        22.495199999999993
+      ],
+      "wins": 275,
+      "losses": 115,
+      "ties": 110,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 1.2
+    },
+    "G3_Deficit_2500": {
+      "params": {
+        "preempt_money_deficit": 2500.0,
+        "preempt_minimum_delta": 4.0,
+        "preempt_maximum_batch": 12
+      },
+      "mean_delta": 18.002,
+      "median_delta": 2.0,
+      "ci_95": [
+        13.764850000000003,
+        22.495199999999993
+      ],
+      "wins": 275,
+      "losses": 115,
+      "ties": 110,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 1.2
+    },
+    "G4_Delta_2": {
+      "params": {
+        "preempt_money_deficit": 2000.0,
+        "preempt_minimum_delta": 2.0,
+        "preempt_maximum_batch": 12
+      },
+      "mean_delta": 23.922,
+      "median_delta": 10.0,
+      "ci_95": [
+        19.444,
+        28.65205
+      ],
+      "wins": 314,
+      "losses": 108,
+      "ties": 78,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 1.2
+    },
+    "G5_Delta_6": {
+      "params": {
+        "preempt_money_deficit": 2000.0,
+        "preempt_minimum_delta": 6.0,
+        "preempt_maximum_batch": 12
+      },
+      "mean_delta": 13.15,
+      "median_delta": 0.0,
+      "ci_95": [
+        9.671550000000002,
+        16.87015
+      ],
+      "wins": 247,
+      "losses": 112,
+      "ties": 141,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 0.2
+    },
+    "G6_Batch_8": {
+      "params": {
+        "preempt_money_deficit": 2000.0,
+        "preempt_minimum_delta": 4.0,
+        "preempt_maximum_batch": 8
+      },
+      "mean_delta": 7.286,
+      "median_delta": 0.0,
+      "ci_95": [
+        4.3739,
+        10.581149999999994
+      ],
+      "wins": 174,
+      "losses": 104,
+      "ties": 222,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 0.6
+    },
+    "G7_Batch_16": {
+      "params": {
+        "preempt_money_deficit": 2000.0,
+        "preempt_minimum_delta": 4.0,
+        "preempt_maximum_batch": 16
+      },
+      "mean_delta": 19.424,
+      "median_delta": 2.0,
+      "ci_95": [
+        14.74395,
+        24.32605
+      ],
+      "wins": 279,
+      "losses": 112,
+      "ties": 109,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 2.0
+    },
+    "G8_Agg_Corner": {
+      "params": {
+        "preempt_money_deficit": 1500.0,
+        "preempt_minimum_delta": 2.0,
+        "preempt_maximum_batch": 16
+      },
+      "mean_delta": 25.344,
+      "median_delta": 10.5,
+      "ci_95": [
+        20.764,
+        30.3742
+      ],
+      "wins": 317,
+      "losses": 108,
+      "ties": 75,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 1.7999999999999998
+    },
+    "G9_Cons_Corner": {
+      "params": {
+        "preempt_money_deficit": 2500.0,
+        "preempt_minimum_delta": 6.0,
+        "preempt_maximum_batch": 8
+      },
+      "mean_delta": 1.1,
+      "median_delta": 0.0,
+      "ci_95": [
+        -0.5520999999999999,
+        2.844099999999999
+      ],
+      "wins": 89,
+      "losses": 75,
+      "ties": 336,
+      "p_loss_1000": 0.0,
+      "p_gain_200": 0.0
+    }
+  },
+  "winning_arm": "G8_Agg_Corner"
+}

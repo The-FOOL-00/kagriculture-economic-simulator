@@ -1,0 +1,360 @@
+{
+  "average_near_latch_step": 11.0,
+  "total_starvations": 0,
+  "mean_near_triggers": 701.56,
+  "mean_deficit_triggers": 3.14,
+  "v66_top_wins": [
+    {
+      "seed": 900036,
+      "r0": 113582.0,
+      "r1": 118227.0,
+      "margin": -4645.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 34,
+      "near_triggers": 663,
+      "starvation_events": 0,
+      "preempt_events": 15,
+      "terminal_assets": {
+        "money": 113539.0,
+        "shed": {
+          "WHEAT": 1,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 3,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 5,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        }
+      }
+    },
+    {
+      "seed": 900009,
+      "r0": 83847.0,
+      "r1": 88400.0,
+      "margin": -4553.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 39,
+      "near_triggers": 658,
+      "starvation_events": 0,
+      "preempt_events": 12,
+      "terminal_assets": {
+        "money": 83805.0,
+        "shed": {
+          "WHEAT": 1,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 3,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 5,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        }
+      }
+    },
+    {
+      "seed": 900030,
+      "r0": 83571.0,
+      "r1": 87149.0,
+      "margin": -3578.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 2,
+      "near_triggers": 695,
+      "starvation_events": 0,
+      "preempt_events": 18,
+      "terminal_assets": {
+        "money": 83211.0,
+        "shed": {
+          "WHEAT": 11,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 5,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        }
+      }
+    },
+    {
+      "seed": 900025,
+      "r0": 138002.0,
+      "r1": 141275.0,
+      "margin": -3273.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 65,
+      "near_triggers": 632,
+      "starvation_events": 0,
+      "preempt_events": 29,
+      "terminal_assets": {
+        "money": 137973.0,
+        "shed": {
+          "WHEAT": 1,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 3,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 5,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        }
+      }
+    },
+    {
+      "seed": 900026,
+      "r0": 106139.0,
+      "r1": 108818.0,
+      "margin": -2679.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 5,
+      "near_triggers": 692,
+      "starvation_events": 0,
+      "preempt_events": 2,
+      "terminal_assets": {
+        "money": 106113.0,
+        "shed": {
+          "WHEAT": 1,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 3,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 5,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        }
+      }
+    }
+  ],
+  "v54p_top_wins": [
+    {
+      "seed": 900045,
+      "r0": 48876.0,
+      "r1": 48286.0,
+      "margin": 590.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 0,
+      "near_triggers": 708,
+      "starvation_events": 0,
+      "preempt_events": 1,
+      "terminal_assets": {
+        "money": 48833.0,
+        "shed": {
+          "WHEAT": 1,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 3,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        }
+      }
+    },
+    {
+      "seed": 900034,
+      "r0": 95462.0,
+      "r1": 83755.0,
+      "margin": 11707.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 0,
+      "near_triggers": 697,
+      "starvation_events": 0,
+      "preempt_events": 8,
+      "terminal_assets": {
+        "money": 95453.0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 7,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        }
+      }
+    },
+    {
+      "seed": 900040,
+      "r0": 91730.0,
+      "r1": 76320.0,
+      "margin": 15410.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 0,
+      "near_triggers": 697,
+      "starvation_events": 0,
+      "preempt_events": 6,
+      "terminal_assets": {
+        "money": 91328.0,
+        "shed": {
+          "WHEAT": 10,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        }
+      }
+    },
+    {
+      "seed": 900024,
+      "r0": 89486.0,
+      "r1": 63961.0,
+      "margin": 25525.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 0,
+      "near_triggers": 697,
+      "starvation_events": 0,
+      "preempt_events": 6,
+      "terminal_assets": {
+        "money": 89144.0,
+        "shed": {
+          "WHEAT": 10,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        }
+      }
+    },
+    {
+      "seed": 900002,
+      "r0": 114412.0,
+      "r1": 87436.0,
+      "margin": 26976.0,
+      "near_latch_step": 11,
+      "deficit_triggers": 0,
+      "near_triggers": 697,
+      "starvation_events": 0,
+      "preempt_events": 2,
+      "terminal_assets": {
+        "money": 114403.0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 7,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "seeds": {
+          "WHEAT": 3,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 4,
+          "MELON": 0
+        }
+      }
+    }
+  ]
+}

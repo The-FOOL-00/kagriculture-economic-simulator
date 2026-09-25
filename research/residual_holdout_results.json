@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "seeds_holdout": [
+      910001,
+      910500
+    ],
+    "seeds_solo": [
+      920001,
+      920050
+    ],
+    "num_holdout_seeds": 500,
+    "total_matches_per_matchup": 1000
+  },
+  "h2h_candidate_vs_v54p": {
+    "agent_a": "V54_cand_agg_preempt",
+    "agent_b": "V54++",
+    "total_matches": 1000,
+    "mean_reward_a": 84100.666,
+    "mean_reward_b": 84001.902,
+    "mean_margin": 98.764,
+    "median_margin": 64.0,
+    "sd_margin": 423.33745913160107,
+    "ci_95": [
+      73.809,
+      125.35822499999998
+    ],
+    "ttest_p": 3.475463044815392e-13,
+    "wilcoxon_p": 4.4918040240833644e-110,
+    "wins": 782,
+    "losses": 106,
+    "ties": 112,
+    "win_rate": 78.2,
+    "tail_loss_5k": 0.0,
+    "tail_loss_10k": 0.0,
+    "tail_gain_5k": 0.0
+  },
+  "candidate_vs_v66": {
+    "agent_a": "V54_cand_agg_preempt",
+    "agent_b": "V66",
+    "total_matches": 1000,
+    "mean_reward_a": 85038.87,
+    "mean_reward_b": 84090.82,
+    "mean_margin": 948.05,
+    "median_margin": -215.0,
+    "sd_margin": 6313.684896278875,
+    "ci_95": [
+      564.7050500000001,
+      1375.7395999999999
+    ],
+    "ttest_p": 2.376752071583702e-06,
+    "wilcoxon_p": 1.143337800522083e-15,
+    "wins": 424,
+    "losses": 560,
+    "ties": 16,
+    "win_rate": 42.4,
+    "tail_loss_5k": 1.0,
+    "tail_loss_10k": 0.0,
+    "tail_gain_5k": 8.7
+  },
+  "v54p_vs_v66_control": {
+    "agent_a": "V54++",
+    "agent_b": "V66",
+    "total_matches": 1000,
+    "mean_reward_a": 85022.717,
+    "mean_reward_b": 84130.49,
+    "mean_margin": 892.227,
+    "median_margin": -252.0,
+    "sd_margin": 6324.489510424616,
+    "ci_95": [
+      509.00070000000005,
+      1316.784625
+    ],
+    "ttest_p": 9.169171696532822e-06,
+    "wilcoxon_p": 9.38611962697976e-25,
+    "wins": 208,
+    "losses": 652,
+    "ties": 140,
+    "win_rate": 20.8,
+    "tail_loss_5k": 0.8,
+    "tail_loss_10k": 0.0,
+    "tail_gain_5k": 8.7
+  },
+  "candidate_vs_v54": {
+    "agent_a": "V54_cand_agg_preempt",
+    "agent_b": "V54",
+    "total_matches": 1000,
+    "mean_reward_a": 86776.197,
+    "mean_reward_b": 80368.459,
+    "mean_margin": 6407.738,
+    "median_margin": 1698.5,
+    "sd_margin": 9971.531956994171,
+    "ci_95": [
+      5827.065575,
+      7021.977425
+    ],
+    "ttest_p": 4.802913608871755e-77,
+    "wilcoxon_p": 3.8382945463869015e-161,
+    "wins": 993,
+    "losses": 7,
+    "ties": 0,
+    "win_rate": 99.3,
+    "tail_loss_5k": 0.0,
+    "tail_loss_10k": 0.0,
+    "tail_gain_5k": 21.4
+  },
+  "solo_candidate": {
+    "agent_a": "V54_cand_agg_preempt",
+    "agent_b": "IDLE",
+    "total_matches": 50,
+    "mean_reward_a": 159835.56,
+    "mean_reward_b": 3000.0,
+    "mean_margin": 156835.56,
+    "median_margin": 170229.0,
+    "sd_margin": 29539.916326326995,
+    "ci_95": [
+      148623.9835,
+      164907.9235
+    ],
+    "ttest_p": 1.4596191179477288e-37,
+    "wilcoxon_p": 7.519420763211106e-10,
+    "wins": 50,
+    "losses": 0,
+    "ties": 0,
+    "win_rate": 100.0,
+    "tail_loss_5k": 0.0,
+    "tail_loss_10k": 0.0,
+    "tail_gain_5k": 100.0
+  },
+  "solo_v54p": {
+    "agent_a": "V54++",
+    "agent_b": "IDLE",
+    "total_matches": 50,
+    "mean_reward_a": 159835.56,
+    "mean_reward_b": 3000.0,
+    "mean_margin": 156835.56,
+    "median_margin": 170229.0,
+    "sd_margin": 29539.916326326995,
+    "ci_95": [
+      148623.9835,
+      164907.9235
+    ],
+    "ttest_p": 1.4596191179477288e-37,
+    "wilcoxon_p": 7.519420763211106e-10,
+    "wins": 50,
+    "losses": 0,
+    "ties": 0,
+    "win_rate": 100.0,
+    "tail_loss_5k": 0.0,
+    "tail_loss_10k": 0.0,
+    "tail_gain_5k": 100.0
+  }
+}

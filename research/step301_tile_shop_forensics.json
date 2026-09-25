@@ -1,0 +1,100 @@
+{
+  "tile_bonus_audit": {
+    "hypothesis": "Tile bonuses determine route optimality around Step 301",
+    "engine_fields_checked": [
+      "tiles",
+      "tile_bonus",
+      "fertility",
+      "yield_multiplier",
+      "soil_quality"
+    ],
+    "findings": "The Kaggriculture environment rules (kg_env_dump.py) contain ZERO tile bonuses or location-based multipliers. All 5x5 farm tiles possess identical physical dynamics. The only bonuses in the engine are Animal Care yield bonuses (+1 product per care before harvest) and Town Shop consumption demand.",
+    "verdict": "REJECTED \u2014 Tile bonuses do not exist in the Kaggriculture environment."
+  },
+  "shop_availability_audit": {
+    "pop_a_sample_size": 15,
+    "pop_b_sample_size": 15,
+    "frequencies": {
+      "PopA": {
+        "Step72:YARN_STORE": 6,
+        "Step144:YARN_STORE": 6,
+        "Step144:PIZZA_SHOP": 2,
+        "Step216:YARN_STORE": 8,
+        "Step216:PIZZA_SHOP": 4,
+        "Step216:FARMERS_MARKET": 4,
+        "Step288:YARN_STORE": 11,
+        "Step288:PIZZA_SHOP": 6,
+        "Step288:FARMERS_MARKET": 4,
+        "Step288:PET_CAFE": 18,
+        "Step144:FARMERS_MARKET": 2,
+        "Step288:SMOOTHIE_SHOP": 4,
+        "Step72:PET_CAFE": 5,
+        "Step144:PET_CAFE": 12,
+        "Step216:PET_CAFE": 12,
+        "Step216:ICE_CREAM_SHOP": 1,
+        "Step288:ICE_CREAM_SHOP": 3,
+        "Step216:BAKERY": 12,
+        "Step288:BAKERY": 12,
+        "Step72:BAKERY": 4,
+        "Step144:BAKERY": 6,
+        "Step216:BRUNCH_SPOT": 2,
+        "Step288:BRUNCH_SPOT": 2,
+        "Step144:SMOOTHIE_SHOP": 2,
+        "Step216:SMOOTHIE_SHOP": 2
+      },
+      "PopB": {
+        "Step72:BRUNCH_SPOT": 3,
+        "Step144:BRUNCH_SPOT": 3,
+        "Step144:YARN_STORE": 10,
+        "Step216:BRUNCH_SPOT": 6,
+        "Step216:YARN_STORE": 17,
+        "Step288:BRUNCH_SPOT": 7,
+        "Step288:YARN_STORE": 19,
+        "Step288:ICE_CREAM_SHOP": 11,
+        "Step72:ICE_CREAM_SHOP": 3,
+        "Step144:ICE_CREAM_SHOP": 6,
+        "Step216:ICE_CREAM_SHOP": 9,
+        "Step288:PET_CAFE": 3,
+        "Step72:FARMERS_MARKET": 2,
+        "Step144:FARMERS_MARKET": 2,
+        "Step216:FARMERS_MARKET": 3,
+        "Step288:FARMERS_MARKET": 5,
+        "Step288:BAKERY": 7,
+        "Step72:BAKERY": 4,
+        "Step144:BAKERY": 4,
+        "Step216:BAKERY": 4,
+        "Step144:SMOOTHIE_SHOP": 4,
+        "Step216:SMOOTHIE_SHOP": 4,
+        "Step288:SMOOTHIE_SHOP": 5,
+        "Step72:SMOOTHIE_SHOP": 2,
+        "Step216:PIZZA_SHOP": 2,
+        "Step288:PIZZA_SHOP": 3,
+        "Step72:PIZZA_SHOP": 1,
+        "Step144:PIZZA_SHOP": 1
+      }
+    },
+    "step72_analysis": "YARN_STORE at Step 72 prompts both agents to enter the Yarn route. When YARN_STORE does not unlock at Step 72, both agents default to Backbone.",
+    "step144_analysis": "YARN_STORE at Step 144 triggers Yarn or Bakery-Yarn route in V54++. V54++ already exploits this causal shop gating.",
+    "step216_analysis": "Step 216 shop switching was proven NO-GO in the previous forensic audit because switching at Day 9 destroys macro synchronization on the majority of seeds."
+  },
+  "v66_source_forensics": {
+    "file": "external_repos/kaggriculture-v66-agent/candidate_v66_meta_closed_loop.py",
+    "function": "_advance",
+    "lines": "300-362",
+    "predicates": [
+      "signature == _TWOMOON_STEP72 -> route = 'yarn'",
+      "signature == _YAT_STEP72 -> route = 'recovery'",
+      "signature == _VICTOR_STEP72 -> state['victor_armed'] = True",
+      "signature == _BAKERY_STEP72 -> route = 'bakery_yarn'",
+      "signature == _FARMERS_STEP72 -> route = 'recovery'",
+      "signature == _NEIBYR_STEP72 -> route = 'recovery'",
+      "signature == _C0NRAD_STEP72 -> route = 'ice_minimax'",
+      "signature == _JOHNBLAKE_STEP72 -> route = 'known_yarn'",
+      "signature == _STEPHEN_STEP72 -> route = 'known_yarn'",
+      "signature == _COKE_STEP72 -> state['coke_armed'] = True"
+    ],
+    "inputs": "_public_signature(obs): reads opponent money, opponent hand count, and opponent asset counts (cows, sheep, wheat, melon)",
+    "output_action": "Overrides route to specific historical replay action tapes (e.g. _V58_RECOVERY_ROUTE, _V58_ICE_MINIMAX_ROUTE, _V58_KNOWN_YARN_ROUTE)",
+    "flaw": "Against an unseen opponent like V54++, opponent assets do not match these hardcoded historical tuples. V66's signature checks fail, causing it to fall back to _v59_route and _V58_RECOVERY_ROUTE on Bakery seeds. V66's occasional high performance on those seeds is an accident of hardcoded route fallback, not generalizable intelligence."
+  }
+}

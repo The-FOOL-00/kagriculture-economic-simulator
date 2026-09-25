@@ -1,0 +1,218 @@
+{
+  "solo_test": {
+    "num_seeds": 50,
+    "cand_mean": 153728.32,
+    "v54pp_mean": 153728.32,
+    "mean_delta": 0.0,
+    "median_delta": 0.0,
+    "ci_95": [
+      0.0,
+      0.0
+    ]
+  },
+  "immutability_and_accounting": {
+    "num_seeds": 100,
+    "total_macro_divergences": 0,
+    "total_shop_divergences": 0,
+    "avg_preempts_per_match": 11.73,
+    "total_preempt_events": 1173,
+    "commodity_accounting": {
+      "STRAWBERRY": {
+        "total_units_sold": 26566,
+        "avg_units_sold_per_match": 265.66,
+        "total_revenue": 0.0,
+        "avg_realized_price": 0.0,
+        "mean_sale_step": 545.6488663484487,
+        "total_final_inventory": 0,
+        "avg_final_inventory": 0.0
+      },
+      "WHEAT": {
+        "total_units_sold": 78422,
+        "avg_units_sold_per_match": 784.22,
+        "total_revenue": 0.0,
+        "avg_realized_price": 0.0,
+        "mean_sale_step": 426.2979401993355,
+        "total_final_inventory": 0,
+        "avg_final_inventory": 0.0
+      },
+      "WOOL": {
+        "total_units_sold": 16803,
+        "avg_units_sold_per_match": 168.03,
+        "total_revenue": 0.0,
+        "avg_realized_price": 0.0,
+        "mean_sale_step": 482.193971948672,
+        "total_final_inventory": 0,
+        "avg_final_inventory": 0.0
+      },
+      "MILK": {
+        "total_units_sold": 25664,
+        "avg_units_sold_per_match": 256.64,
+        "total_revenue": 0.0,
+        "avg_realized_price": 0.0,
+        "mean_sale_step": 513.4920561823624,
+        "total_final_inventory": 0,
+        "avg_final_inventory": 0.0
+      },
+      "EGG": {
+        "total_units_sold": 0,
+        "avg_units_sold_per_match": 0.0,
+        "total_revenue": 0.0,
+        "avg_realized_price": 0.0,
+        "mean_sale_step": 0.0,
+        "total_final_inventory": 0,
+        "avg_final_inventory": 0.0
+      },
+      "FERTILIZER": {
+        "total_units_sold": 33846,
+        "avg_units_sold_per_match": 338.46,
+        "total_revenue": 0.0,
+        "avg_realized_price": 0.0,
+        "mean_sale_step": 361.39462444004585,
+        "total_final_inventory": 0,
+        "avg_final_inventory": 0.0
+      }
+    },
+    "sample_preempt_events": [
+      {
+        "step": 313,
+        "commodities": [
+          "WOOL"
+        ],
+        "money_gap": -264.0
+      },
+      {
+        "step": 388,
+        "commodities": [
+          "STRAWBERRY"
+        ],
+        "money_gap": -3781.0
+      },
+      {
+        "step": 472,
+        "commodities": [
+          "MILK"
+        ],
+        "money_gap": -3477.0
+      },
+      {
+        "step": 313,
+        "commodities": [
+          "WOOL"
+        ],
+        "money_gap": -273.0
+      },
+      {
+        "step": 387,
+        "commodities": [
+          "WOOL"
+        ],
+        "money_gap": -3243.0
+      },
+      {
+        "step": 388,
+        "commodities": [
+          "STRAWBERRY"
+        ],
+        "money_gap": -2324.0
+      },
+      {
+        "step": 328,
+        "commodities": [
+          "MILK"
+        ],
+        "money_gap": -1.0
+      },
+      {
+        "step": 419,
+        "commodities": [
+          "WOOL"
+        ],
+        "money_gap": -1.0
+      },
+      {
+        "step": 525,
+        "commodities": [
+          "STRAWBERRY"
+        ],
+        "money_gap": -51.0
+      },
+      {
+        "step": 388,
+        "commodities": [
+          "STRAWBERRY"
+        ],
+        "money_gap": -3280.0
+      },
+      {
+        "step": 483,
+        "commodities": [
+          "WOOL"
+        ],
+        "money_gap": -2671.0
+      },
+      {
+        "step": 513,
+        "commodities": [
+          "WOOL"
+        ],
+        "money_gap": -4023.0
+      },
+      {
+        "step": 328,
+        "commodities": [
+          "MILK"
+        ],
+        "money_gap": 0.0
+      },
+      {
+        "step": 419,
+        "commodities": [
+          "WOOL"
+        ],
+        "money_gap": 0.0
+      },
+      {
+        "step": 591,
+        "commodities": [
+          "WOOL"
+        ],
+        "money_gap": 159.0
+      },
+      {
+        "step": 442,
+        "commodities": [
+          "MILK"
+        ],
+        "money_gap": -1.0
+      },
+      {
+        "step": 445,
+        "commodities": [
+          "MILK"
+        ],
+        "money_gap": 1.0
+      },
+      {
+        "step": 470,
+        "commodities": [
+          "MILK"
+        ],
+        "money_gap": 3.0
+      },
+      {
+        "step": 328,
+        "commodities": [
+          "MILK"
+        ],
+        "money_gap": 0.0
+      },
+      {
+        "step": 328,
+        "commodities": [
+          "MILK"
+        ],
+        "money_gap": 0.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "metadata": {
+    "protocol": "V54++ Residual Mechanism Census",
+    "fresh_seed_count": 500,
+    "seed_range": [
+      900001,
+      900500
+    ],
+    "total_turns_analyzed": 359500,
+    "elapsed_seconds": 927.2340867519379,
+    "v54p_mean_reward": 87265.416,
+    "v66_mean_reward": 86204.472,
+    "v54p_mean_margin": 1060.944,
+    "v54p_win_rate": 20.200000000000003
+  },
+  "census_statistics": {
+    "fixed_route": {
+      "total_firings": 359500,
+      "unique_seeds": 500,
+      "unique_seeds_pct": 100.0,
+      "pct_of_all_turns": 100.0,
+      "total_actions_changed": 0,
+      "mean_actions_per_seed": 0.0,
+      "reward_correlation": 0.0,
+      "margin_correlation": 0.0
+    },
+    "weed_repair": {
+      "total_firings": 214,
+      "unique_seeds": 32,
+      "unique_seeds_pct": 6.4,
+      "pct_of_all_turns": 0.05952712100139083,
+      "total_actions_changed": 218,
+      "mean_actions_per_seed": 0.436,
+      "reward_correlation": -0.08157092092867348,
+      "margin_correlation": -0.07856632945427566
+    },
+    "debt_repay": {
+      "total_firings": 0,
+      "unique_seeds": 0,
+      "unique_seeds_pct": 0.0,
+      "pct_of_all_turns": 0.0,
+      "total_actions_changed": 0,
+      "mean_actions_per_seed": 0.0,
+      "reward_correlation": 0.0,
+      "margin_correlation": 0.0
+    },
+    "market_preempt": {
+      "total_firings": 5716,
+      "unique_seeds": 473,
+      "unique_seeds_pct": 94.6,
+      "pct_of_all_turns": 1.5899860917941586,
+      "total_actions_changed": 5919,
+      "mean_actions_per_seed": 11.838,
+      "reward_correlation": 0.695583826799043,
+      "margin_correlation": -0.12917074328141198
+    },
+    "deficit_fronting": {
+      "total_firings": 352656,
+      "unique_seeds": 500,
+      "unique_seeds_pct": 100.0,
+      "pct_of_all_turns": 98.09624478442281,
+      "total_actions_changed": 352656,
+      "mean_actions_per_seed": 705.312,
+      "reward_correlation": -0.31507924607895876,
+      "margin_correlation": -0.3124723003346985
+    },
+    "seed_trim": {
+      "total_firings": 500,
+      "unique_seeds": 500,
+      "unique_seeds_pct": 100.0,
+      "pct_of_all_turns": 0.13908205841446453,
+      "total_actions_changed": 500,
+      "mean_actions_per_seed": 1.0,
+      "reward_correlation": 0.0,
+      "margin_correlation": 0.0
+    },
+    "shed_guard": {
+      "total_firings": 708,
+      "unique_seeds": 173,
+      "unique_seeds_pct": 34.599999999999994,
+      "pct_of_all_turns": 0.19694019471488178,
+      "total_actions_changed": 708,
+      "mean_actions_per_seed": 1.416,
+      "reward_correlation": 0.3366245348531014,
+      "margin_correlation": 0.4492312601165884
+    },
+    "terminal_loaded_units": {
+      "total_firings": 500,
+      "unique_seeds": 500,
+      "unique_seeds_pct": 100.0,
+      "pct_of_all_turns": 0.13908205841446453,
+      "total_actions_changed": 1246,
+      "mean_actions_per_seed": 2.492,
+      "reward_correlation": 0.0,
+      "margin_correlation": 0.0
+    },
+    "terminal_units": {
+      "total_firings": 1000,
+      "unique_seeds": 500,
+      "unique_seeds_pct": 100.0,
+      "pct_of_all_turns": 0.27816411682892905,
+      "total_actions_changed": 3492,
+      "mean_actions_per_seed": 6.984,
+      "reward_correlation": 0.0,
+      "margin_correlation": 0.0
+    },
+    "terminal_market": {
+      "total_firings": 500,
+      "unique_seeds": 500,
+      "unique_seeds_pct": 100.0,
+      "pct_of_all_turns": 0.13908205841446453,
+      "total_actions_changed": 982,
+      "mean_actions_per_seed": 1.964,
+      "reward_correlation": 0.0,
+      "margin_correlation": 0.0
+    },
+    "sanitizer": {
+      "total_firings": 0,
+      "unique_seeds": 0,
+      "unique_seeds_pct": 0.0,
+      "pct_of_all_turns": 0.0,
+      "total_actions_changed": 0,
+      "mean_actions_per_seed": 0.0,
+      "reward_correlation": 0.0,
+      "margin_correlation": 0.0
+    },
+    "emergency_fallback": {
+      "total_firings": 0,
+      "unique_seeds": 0,
+      "unique_seeds_pct": 0.0,
+      "pct_of_all_turns": 0.0,
+      "total_actions_changed": 0,
+      "mean_actions_per_seed": 0.0,
+      "reward_correlation": 0.0,
+      "margin_correlation": 0.0
+    }
+  },
+  "preempt_commodities": {
+    "MILK": 2316,
+    "STRAWBERRY": 2490,
+    "FERTILIZER": 55,
+    "WOOL": 948,
+    "WHEAT": 109,
+    "CARROT": 1
+  },
+  "raw_results_sample": [
+    {
+      "seed": 900001,
+      "reward_v54p": 94540.0,
+      "reward_v66": 95846.0,
+      "margin": -1306.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "market_preempt": 14,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 15,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "shed_guard": 0,
+        "terminal_loaded_units": 3,
+        "terminal_units": 8,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "MILK": 1,
+        "STRAWBERRY": 14
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900002,
+      "reward_v54p": 114412.0,
+      "reward_v66": 87436.0,
+      "margin": 26976.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 698,
+        "seed_trim": 1,
+        "market_preempt": 2,
+        "shed_guard": 6,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 2,
+        "deficit_fronting": 698,
+        "seed_trim": 1,
+        "shed_guard": 6,
+        "terminal_loaded_units": 1,
+        "terminal_units": 4,
+        "terminal_market": 1,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "STRAWBERRY": 1,
+        "FERTILIZER": 1
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900003,
+      "reward_v54p": 59202.0,
+      "reward_v66": 60210.0,
+      "margin": -1008.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "market_preempt": 3,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 3,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "shed_guard": 0,
+        "terminal_loaded_units": 3,
+        "terminal_units": 8,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "STRAWBERRY": 3
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900004,
+      "reward_v54p": 94563.0,
+      "reward_v66": 94563.0,
+      "margin": 0.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "market_preempt": 17,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 17,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "shed_guard": 0,
+        "terminal_loaded_units": 3,
+        "terminal_units": 8,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "MILK": 17
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900005,
+      "reward_v54p": 73020.0,
+      "reward_v66": 73021.0,
+      "margin": -1.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "market_preempt": 17,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 17,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "shed_guard": 0,
+        "terminal_loaded_units": 3,
+        "terminal_units": 8,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "MILK": 17
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900006,
+      "reward_v54p": 84960.0,
+      "reward_v66": 85668.0,
+      "margin": -708.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "market_preempt": 14,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 14,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "shed_guard": 0,
+        "terminal_loaded_units": 3,
+        "terminal_units": 8,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "MILK": 7,
+        "STRAWBERRY": 7
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900007,
+      "reward_v54p": 94920.0,
+      "reward_v66": 94920.0,
+      "margin": 0.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "market_preempt": 25,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 26,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "shed_guard": 0,
+        "terminal_loaded_units": 3,
+        "terminal_units": 8,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "MILK": 8,
+        "STRAWBERRY": 17,
+        "WOOL": 1
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900008,
+      "reward_v54p": 41506.0,
+      "reward_v66": 41507.0,
+      "margin": -1.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 708,
+        "weed_repair": 7,
+        "seed_trim": 1,
+        "market_preempt": 1,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 7,
+        "market_preempt": 1,
+        "deficit_fronting": 708,
+        "seed_trim": 1,
+        "shed_guard": 0,
+        "terminal_loaded_units": 3,
+        "terminal_units": 8,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "MILK": 1
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900009,
+      "reward_v54p": 83847.0,
+      "reward_v66": 88400.0,
+      "margin": -4553.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 697,
+        "seed_trim": 1,
+        "market_preempt": 12,
+        "shed_guard": 4,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 13,
+        "deficit_fronting": 697,
+        "seed_trim": 1,
+        "shed_guard": 4,
+        "terminal_loaded_units": 1,
+        "terminal_units": 4,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "STRAWBERRY": 1,
+        "WOOL": 10,
+        "WHEAT": 1,
+        "FERTILIZER": 1
+      },
+      "total_turns": 719
+    },
+    {
+      "seed": 900010,
+      "reward_v54p": 100825.0,
+      "reward_v66": 101386.0,
+      "margin": -561.0,
+      "firings": {
+        "fixed_route": 719,
+        "deficit_fronting": 697,
+        "seed_trim": 1,
+        "market_preempt": 2,
+        "shed_guard": 5,
+        "terminal_loaded_units": 1,
+        "terminal_units": 2,
+        "terminal_market": 1
+      },
+      "actions_changed": {
+        "weed_repair": 0,
+        "market_preempt": 2,
+        "deficit_fronting": 697,
+        "seed_trim": 1,
+        "shed_guard": 5,
+        "terminal_loaded_units": 1,
+        "terminal_units": 4,
+        "terminal_market": 2,
+        "sanitizer": 0
+      },
+      "commodity_firings": {
+        "STRAWBERRY": 1,
+        "WHEAT": 1
+      },
+      "total_turns": 719
+    }
+  ]
+}

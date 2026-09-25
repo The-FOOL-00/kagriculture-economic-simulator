@@ -1,0 +1,11 @@
+{
+  "seeds": [
+    940001,
+    940050
+  ],
+  "num_seeds": 50,
+  "differences": 0,
+  "pass1_checksum": "cd1f8cf30d4fa0d88f9ee56f9f1c557cadade9842bdf371882cda988aae0d673",
+  "pass2_checksum": "cd1f8cf30d4fa0d88f9ee56f9f1c557cadade9842bdf371882cda988aae0d673",
+  "deterministic_match": true
+}

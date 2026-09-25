@@ -1,0 +1,182 @@
+{
+  "baselines": {
+    "Canonical V54": [
+      "C:\\Users\\Sundareswaran\\Kagriculture\\external_repos\\lixingtao123-Kaggriculture\\variant_v54_h3q4\\main.py",
+      "ef9b77603d1110126a133f972ca2155aa124a30fa3639f2f166664e0ba3361fe"
+    ],
+    "Canonical V66": [
+      "C:\\Users\\Sundareswaran\\Kagriculture\\external_repos\\kaggriculture-v66-agent\\main.py",
+      "a7059fd4cdde05bbab05c140c90ed9f386f44a050574514399bd97e030a150b3"
+    ],
+    "V54+ Macro": [
+      "C:\\Users\\Sundareswaran\\Kagriculture\\candidates\\v54_plus_macro.py",
+      "8947a81051e2c31f79c68b2d66222fbabe4b7c2d9c3e630dd6ee8bea7ec01907"
+    ],
+    "V54++ Shop": [
+      "C:\\Users\\Sundareswaran\\Kagriculture\\candidates\\v54_plus_shop.py",
+      "592f0ba31b3b20b5a3aad409a753b5e6bdeb29a9eb2381342b1cd527509fa9e8"
+    ]
+  },
+  "census": {
+    "num_seeds": 500,
+    "third_shop_counts": {
+      "PET_CAFE": 60,
+      "BRUNCH_SPOT": 69,
+      "SMOOTHIE_SHOP": 72,
+      "FARMERS_MARKET": 57,
+      "PIZZA_SHOP": 62,
+      "BAKERY": 64,
+      "YARN_STORE": 60,
+      "ICE_CREAM_SHOP": 56
+    },
+    "late_yarn_count": 45,
+    "late_smoothie_count": 54,
+    "late_bakery_count": 50,
+    "large_v66_win_count": 10
+  },
+  "counterfactuals": {
+    "S0": {
+      "mean_reward": 85109.45,
+      "delta_vs_s0": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "mean_productive": 2560.75,
+      "mean_moves": 3389.375
+    },
+    "S1": {
+      "mean_reward": 85109.45,
+      "delta_vs_s0": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "mean_productive": 2560.75,
+      "mean_moves": 3389.375
+    },
+    "S2": {
+      "mean_reward": 87253.45,
+      "delta_vs_s0": 2144.0,
+      "ci": [
+        -50.66374999999983,
+        4677.896874999998
+      ],
+      "mean_productive": 2573.65,
+      "mean_moves": 3283.175
+    },
+    "S3": {
+      "mean_reward": 84846.425,
+      "delta_vs_s0": -263.025,
+      "ci": [
+        -2629.843125,
+        2003.0874999999999
+      ],
+      "mean_productive": 2548.25,
+      "mean_moves": 3360.65
+    },
+    "S4": {
+      "mean_reward": 85279.8,
+      "delta_vs_s0": 170.35,
+      "ci": [
+        -1800.26875,
+        2237.5418749999985
+      ],
+      "mean_productive": 2569.35,
+      "mean_moves": 3318.575
+    },
+    "S5": {
+      "mean_reward": 87143.1,
+      "delta_vs_s0": 2033.65,
+      "ci": [
+        -1780.256875,
+        5933.326874999999
+      ],
+      "mean_productive": 2569.75,
+      "mean_moves": 3183.65
+    },
+    "S6": {
+      "mean_reward": 85109.45,
+      "delta_vs_s0": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "mean_productive": 2560.75,
+      "mean_moves": 3389.375
+    },
+    "S7": {
+      "mean_reward": 85715.775,
+      "delta_vs_s0": 606.325,
+      "ci": [
+        -3411.188125,
+        4385.119374999998
+      ],
+      "mean_productive": 2526.5,
+      "mean_moves": 3190.0
+    },
+    "S8": {
+      "mean_reward": 85009.55,
+      "delta_vs_s0": -99.9,
+      "ci": [
+        -4454.008124999999,
+        4281.053749999997
+      ],
+      "mean_productive": 2543.05,
+      "mean_moves": 3212.5
+    }
+  },
+  "holdout": {
+    "num_seeds": 500,
+    "num_matches": 1000,
+    "v54pp_mean": 88306.173,
+    "v66_mean": 87020.535,
+    "mean_margin": 1285.638,
+    "median_margin": -137.0,
+    "std_dev": 7011.34612681302,
+    "ci_95": [
+      689.2257249999999,
+      1916.7142749999998
+    ],
+    "record": {
+      "wins": 116,
+      "ties": 93,
+      "losses": 291
+    },
+    "win_rate": 0.232
+  },
+  "solo": {
+    "V66": {
+      "mean": 152500.28,
+      "median": 148572.0,
+      "ci": [
+        140422.194,
+        164114.759
+      ]
+    },
+    "V54++": {
+      "mean": 153569.68,
+      "median": 148572.0,
+      "ci": [
+        141176.531,
+        165379.025
+      ]
+    },
+    "V54+": {
+      "mean": 144907.16,
+      "median": 142803.0,
+      "ci": [
+        133732.514,
+        155841.443
+      ]
+    },
+    "V54": {
+      "mean": 145960.08,
+      "median": 147867.0,
+      "ci": [
+        134030.44400000002,
+        157390.715
+      ]
+    }
+  }
+}

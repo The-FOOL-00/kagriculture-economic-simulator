@@ -1,0 +1,2678 @@
+{
+  "step301_transitions": [
+    {
+      "pop": "PopA",
+      "seed": 1542,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 18194.0,
+        "v66_money": 18403.0,
+        "v54_shed_wheat": 47,
+        "v66_shed_wheat": 49,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 235,
+        "milk_price": 122
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "YARN_STORE"
+        ],
+        "144": [
+          "YARN_STORE",
+          "PIZZA_SHOP"
+        ],
+        "216": [
+          "YARN_STORE",
+          "PIZZA_SHOP",
+          "FARMERS_MARKET"
+        ],
+        "288": [
+          "YARN_STORE",
+          "PIZZA_SHOP",
+          "FARMERS_MARKET",
+          "PET_CAFE"
+        ]
+      },
+      "margin": -5559.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1542,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 18194.0,
+        "v66_money": 18403.0,
+        "v54_shed_wheat": 47,
+        "v66_shed_wheat": 49,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 235,
+        "milk_price": 122
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "YARN_STORE"
+        ],
+        "144": [
+          "YARN_STORE",
+          "PIZZA_SHOP"
+        ],
+        "216": [
+          "YARN_STORE",
+          "PIZZA_SHOP",
+          "FARMERS_MARKET"
+        ],
+        "288": [
+          "YARN_STORE",
+          "PIZZA_SHOP",
+          "FARMERS_MARKET",
+          "PET_CAFE"
+        ]
+      },
+      "margin": -5559.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1609,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 17498.0,
+        "v66_money": 17632.0,
+        "v54_shed_wheat": 49,
+        "v66_shed_wheat": 51,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 235,
+        "milk_price": 91
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "YARN_STORE"
+        ],
+        "144": [
+          "YARN_STORE",
+          "FARMERS_MARKET"
+        ],
+        "216": [
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP"
+        ],
+        "288": [
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP",
+          "SMOOTHIE_SHOP"
+        ]
+      },
+      "margin": -5206.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1609,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 17498.0,
+        "v66_money": 17632.0,
+        "v54_shed_wheat": 49,
+        "v66_shed_wheat": 51,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 235,
+        "milk_price": 91
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "YARN_STORE"
+        ],
+        "144": [
+          "YARN_STORE",
+          "FARMERS_MARKET"
+        ],
+        "216": [
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP"
+        ],
+        "288": [
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP",
+          "SMOOTHIE_SHOP"
+        ]
+      },
+      "margin": -5206.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1691,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 14950.0,
+        "v66_money": 15297.0,
+        "v54_shed_wheat": 44,
+        "v66_shed_wheat": 44,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 39,
+        "wool_price": 125,
+        "milk_price": 108
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "PET_CAFE"
+        ],
+        "144": [
+          "PET_CAFE",
+          "PET_CAFE"
+        ],
+        "216": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "ICE_CREAM_SHOP"
+        ],
+        "288": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "ICE_CREAM_SHOP",
+          "YARN_STORE"
+        ]
+      },
+      "margin": -8202.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1773,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 15415.0,
+        "v66_money": 14814.0,
+        "v54_shed_wheat": 43,
+        "v66_shed_wheat": 44,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 39,
+        "wool_price": 88,
+        "milk_price": 57
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "PET_CAFE"
+        ],
+        "144": [
+          "PET_CAFE",
+          "PET_CAFE"
+        ],
+        "216": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "BAKERY"
+        ],
+        "288": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "BAKERY",
+          "YARN_STORE"
+        ]
+      },
+      "margin": -18804.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1773,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 15415.0,
+        "v66_money": 14814.0,
+        "v54_shed_wheat": 43,
+        "v66_shed_wheat": 44,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 39,
+        "wool_price": 88,
+        "milk_price": 57
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "PET_CAFE"
+        ],
+        "144": [
+          "PET_CAFE",
+          "PET_CAFE"
+        ],
+        "216": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "BAKERY"
+        ],
+        "288": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "BAKERY",
+          "YARN_STORE"
+        ]
+      },
+      "margin": -18804.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1871,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 14746.0,
+        "v66_money": 14820.0,
+        "v54_shed_wheat": 43,
+        "v66_shed_wheat": 50,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 72,
+        "milk_price": 74
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            24
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BAKERY"
+        ],
+        "144": [
+          "BAKERY",
+          "PET_CAFE"
+        ],
+        "216": [
+          "BAKERY",
+          "PET_CAFE",
+          "BRUNCH_SPOT"
+        ],
+        "288": [
+          "BAKERY",
+          "PET_CAFE",
+          "BRUNCH_SPOT",
+          "PET_CAFE"
+        ]
+      },
+      "margin": -5008.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1871,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 14746.0,
+        "v66_money": 14820.0,
+        "v54_shed_wheat": 43,
+        "v66_shed_wheat": 50,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 72,
+        "milk_price": 74
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            24
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BAKERY"
+        ],
+        "144": [
+          "BAKERY",
+          "PET_CAFE"
+        ],
+        "216": [
+          "BAKERY",
+          "PET_CAFE",
+          "BRUNCH_SPOT"
+        ],
+        "288": [
+          "BAKERY",
+          "PET_CAFE",
+          "BRUNCH_SPOT",
+          "PET_CAFE"
+        ]
+      },
+      "margin": -5008.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1948,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 18297.0,
+        "v66_money": 18500.0,
+        "v54_shed_wheat": 47,
+        "v66_shed_wheat": 49,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 40,
+        "wool_price": 235,
+        "milk_price": 129
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "YARN_STORE"
+        ],
+        "144": [
+          "YARN_STORE",
+          "SMOOTHIE_SHOP"
+        ],
+        "216": [
+          "YARN_STORE",
+          "SMOOTHIE_SHOP",
+          "BAKERY"
+        ],
+        "288": [
+          "YARN_STORE",
+          "SMOOTHIE_SHOP",
+          "BAKERY",
+          "PIZZA_SHOP"
+        ]
+      },
+      "margin": -5257.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1948,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 18297.0,
+        "v66_money": 18500.0,
+        "v54_shed_wheat": 47,
+        "v66_shed_wheat": 49,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 40,
+        "wool_price": 235,
+        "milk_price": 129
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "YARN_STORE"
+        ],
+        "144": [
+          "YARN_STORE",
+          "SMOOTHIE_SHOP"
+        ],
+        "216": [
+          "YARN_STORE",
+          "SMOOTHIE_SHOP",
+          "BAKERY"
+        ],
+        "288": [
+          "YARN_STORE",
+          "SMOOTHIE_SHOP",
+          "BAKERY",
+          "PIZZA_SHOP"
+        ]
+      },
+      "margin": -5257.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1949,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 16196.0,
+        "v66_money": 15845.0,
+        "v54_shed_wheat": 43,
+        "v66_shed_wheat": 43,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 39,
+        "wool_price": 196,
+        "milk_price": 70
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "PET_CAFE"
+        ],
+        "144": [
+          "PET_CAFE",
+          "PET_CAFE"
+        ],
+        "216": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "YARN_STORE"
+        ],
+        "288": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP"
+        ]
+      },
+      "margin": -27831.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1949,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16196.0,
+        "v66_money": 15845.0,
+        "v54_shed_wheat": 43,
+        "v66_shed_wheat": 43,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 39,
+        "wool_price": 196,
+        "milk_price": 70
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "PET_CAFE"
+        ],
+        "144": [
+          "PET_CAFE",
+          "PET_CAFE"
+        ],
+        "216": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "YARN_STORE"
+        ],
+        "288": [
+          "PET_CAFE",
+          "PET_CAFE",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP"
+        ]
+      },
+      "margin": -27831.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1969,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 14681.0,
+        "v66_money": 14797.0,
+        "v54_shed_wheat": 43,
+        "v66_shed_wheat": 49,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 72,
+        "milk_price": 74
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            24
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BAKERY"
+        ],
+        "144": [
+          "BAKERY",
+          "BAKERY"
+        ],
+        "216": [
+          "BAKERY",
+          "BAKERY",
+          "BAKERY"
+        ],
+        "288": [
+          "BAKERY",
+          "BAKERY",
+          "BAKERY",
+          "PET_CAFE"
+        ]
+      },
+      "margin": -5503.0
+    },
+    {
+      "pop": "PopA",
+      "seed": 1969,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 14681.0,
+        "v66_money": 14797.0,
+        "v54_shed_wheat": 43,
+        "v66_shed_wheat": 49,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 72,
+        "milk_price": 74
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            24
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BAKERY"
+        ],
+        "144": [
+          "BAKERY",
+          "BAKERY"
+        ],
+        "216": [
+          "BAKERY",
+          "BAKERY",
+          "BAKERY"
+        ],
+        "288": [
+          "BAKERY",
+          "BAKERY",
+          "BAKERY",
+          "PET_CAFE"
+        ]
+      },
+      "margin": -5503.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1643,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16477.0,
+        "v66_money": 15932.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 45,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 237,
+        "milk_price": 57
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BRUNCH_SPOT"
+        ],
+        "144": [
+          "BRUNCH_SPOT",
+          "YARN_STORE"
+        ],
+        "216": [
+          "BRUNCH_SPOT",
+          "YARN_STORE",
+          "YARN_STORE"
+        ],
+        "288": [
+          "BRUNCH_SPOT",
+          "YARN_STORE",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP"
+        ]
+      },
+      "margin": 25231.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1803,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 18964.0,
+        "v66_money": 18059.0,
+        "v54_shed_wheat": 51,
+        "v66_shed_wheat": 57,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 229,
+        "milk_price": 204
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "ICE_CREAM_SHOP"
+        ],
+        "144": [
+          "ICE_CREAM_SHOP",
+          "YARN_STORE"
+        ],
+        "216": [
+          "ICE_CREAM_SHOP",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP"
+        ],
+        "288": [
+          "ICE_CREAM_SHOP",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP",
+          "PET_CAFE"
+        ]
+      },
+      "margin": 7082.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1803,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 18964.0,
+        "v66_money": 18059.0,
+        "v54_shed_wheat": 51,
+        "v66_shed_wheat": 57,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 229,
+        "milk_price": 204
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "ICE_CREAM_SHOP"
+        ],
+        "144": [
+          "ICE_CREAM_SHOP",
+          "YARN_STORE"
+        ],
+        "216": [
+          "ICE_CREAM_SHOP",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP"
+        ],
+        "288": [
+          "ICE_CREAM_SHOP",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP",
+          "PET_CAFE"
+        ]
+      },
+      "margin": 7082.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1757,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16333.0,
+        "v66_money": 15860.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 45,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 229,
+        "milk_price": 51
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "FARMERS_MARKET"
+        ],
+        "144": [
+          "FARMERS_MARKET",
+          "YARN_STORE"
+        ],
+        "216": [
+          "FARMERS_MARKET",
+          "YARN_STORE",
+          "BRUNCH_SPOT"
+        ],
+        "288": [
+          "FARMERS_MARKET",
+          "YARN_STORE",
+          "BRUNCH_SPOT",
+          "BAKERY"
+        ]
+      },
+      "margin": 17598.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1717,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16770.0,
+        "v66_money": 16993.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 56,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 206,
+        "milk_price": 156
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            24
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BAKERY"
+        ],
+        "144": [
+          "BAKERY",
+          "ICE_CREAM_SHOP"
+        ],
+        "216": [
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "YARN_STORE"
+        ],
+        "288": [
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "YARN_STORE",
+          "YARN_STORE"
+        ]
+      },
+      "margin": 6749.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1951,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16982.0,
+        "v66_money": 16312.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 45,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 229,
+        "milk_price": 95
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BRUNCH_SPOT"
+        ],
+        "144": [
+          "BRUNCH_SPOT",
+          "YARN_STORE"
+        ],
+        "216": [
+          "BRUNCH_SPOT",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP"
+        ],
+        "288": [
+          "BRUNCH_SPOT",
+          "YARN_STORE",
+          "ICE_CREAM_SHOP",
+          "FARMERS_MARKET"
+        ]
+      },
+      "margin": 12625.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1996,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16741.0,
+        "v66_money": 16961.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 56,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 199,
+        "milk_price": 156
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            24
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BAKERY"
+        ],
+        "144": [
+          "BAKERY",
+          "ICE_CREAM_SHOP"
+        ],
+        "216": [
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "YARN_STORE"
+        ],
+        "288": [
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "YARN_STORE",
+          "FARMERS_MARKET"
+        ]
+      },
+      "margin": 6265.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1739,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16813.0,
+        "v66_money": 17031.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 56,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 199,
+        "milk_price": 156
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            24
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BAKERY"
+        ],
+        "144": [
+          "BAKERY",
+          "SMOOTHIE_SHOP"
+        ],
+        "216": [
+          "BAKERY",
+          "SMOOTHIE_SHOP",
+          "YARN_STORE"
+        ],
+        "288": [
+          "BAKERY",
+          "SMOOTHIE_SHOP",
+          "YARN_STORE",
+          "BAKERY"
+        ]
+      },
+      "margin": 6105.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1550,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 17547.0,
+        "v66_money": 16381.0,
+        "v54_shed_wheat": 56,
+        "v66_shed_wheat": 57,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 129,
+        "milk_price": 233
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "SMOOTHIE_SHOP"
+        ],
+        "144": [
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP"
+        ],
+        "216": [
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP",
+          "PIZZA_SHOP"
+        ],
+        "288": [
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP",
+          "PIZZA_SHOP",
+          "BAKERY"
+        ]
+      },
+      "margin": 6432.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1505,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 18664.0,
+        "v66_money": 17833.0,
+        "v54_shed_wheat": 51,
+        "v66_shed_wheat": 57,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 229,
+        "milk_price": 179
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "PIZZA_SHOP"
+        ],
+        "144": [
+          "PIZZA_SHOP",
+          "YARN_STORE"
+        ],
+        "216": [
+          "PIZZA_SHOP",
+          "YARN_STORE",
+          "FARMERS_MARKET"
+        ],
+        "288": [
+          "PIZZA_SHOP",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "PET_CAFE"
+        ]
+      },
+      "margin": 25317.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1593,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16602.0,
+        "v66_money": 16285.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 56,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 236,
+        "milk_price": 70
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            24
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BAKERY"
+        ],
+        "144": [
+          "BAKERY",
+          "YARN_STORE"
+        ],
+        "216": [
+          "BAKERY",
+          "YARN_STORE",
+          "YARN_STORE"
+        ],
+        "288": [
+          "BAKERY",
+          "YARN_STORE",
+          "YARN_STORE",
+          "PIZZA_SHOP"
+        ]
+      },
+      "margin": 34782.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1652,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 18051.0,
+        "v66_money": 16297.0,
+        "v54_shed_wheat": 55,
+        "v66_shed_wheat": 56,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 41,
+        "wool_price": 218,
+        "milk_price": 221
+      },
+      "v54_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PASS"
+        ],
+        "market": [],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "ICE_CREAM_SHOP"
+        ],
+        "144": [
+          "ICE_CREAM_SHOP",
+          "SMOOTHIE_SHOP"
+        ],
+        "216": [
+          "ICE_CREAM_SHOP",
+          "SMOOTHIE_SHOP",
+          "YARN_STORE"
+        ],
+        "288": [
+          "ICE_CREAM_SHOP",
+          "SMOOTHIE_SHOP",
+          "YARN_STORE",
+          "BRUNCH_SPOT"
+        ]
+      },
+      "margin": 6496.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1937,
+      "seat": 0,
+      "step300_state": {
+        "v54_money": 16346.0,
+        "v66_money": 15860.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 45,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 229,
+        "milk_price": 57
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "FARMERS_MARKET"
+        ],
+        "144": [
+          "FARMERS_MARKET",
+          "YARN_STORE"
+        ],
+        "216": [
+          "FARMERS_MARKET",
+          "YARN_STORE",
+          "BRUNCH_SPOT"
+        ],
+        "288": [
+          "FARMERS_MARKET",
+          "YARN_STORE",
+          "BRUNCH_SPOT",
+          "ICE_CREAM_SHOP"
+        ]
+      },
+      "margin": 25004.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1959,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 16345.0,
+        "v66_money": 15860.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 43,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 42,
+        "wool_price": 229,
+        "milk_price": 57
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "BRUNCH_SPOT"
+        ],
+        "144": [
+          "BRUNCH_SPOT",
+          "YARN_STORE"
+        ],
+        "216": [
+          "BRUNCH_SPOT",
+          "YARN_STORE",
+          "BRUNCH_SPOT"
+        ],
+        "288": [
+          "BRUNCH_SPOT",
+          "YARN_STORE",
+          "BRUNCH_SPOT",
+          "SMOOTHIE_SHOP"
+        ]
+      },
+      "margin": 12490.0
+    },
+    {
+      "pop": "PopB",
+      "seed": 1870,
+      "seat": 1,
+      "step300_state": {
+        "v54_money": 18891.0,
+        "v66_money": 18062.0,
+        "v54_shed_wheat": 52,
+        "v66_shed_wheat": 57,
+        "v54_cows": 0,
+        "v66_cows": 0,
+        "v54_sheep": 0,
+        "v66_sheep": 0,
+        "wheat_price": 40,
+        "wool_price": 237,
+        "milk_price": 179
+      },
+      "v54_act_301": {
+        "farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "market": [
+          [
+            "SELL",
+            "WHEAT",
+            29
+          ]
+        ],
+        "hands_count": 9
+      },
+      "v66_act_301": {
+        "farmer": [
+          "PLACE",
+          "MILK",
+          9
+        ],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ]
+        ],
+        "hands_count": 9
+      },
+      "shops": {
+        "72": [
+          "SMOOTHIE_SHOP"
+        ],
+        "144": [
+          "SMOOTHIE_SHOP",
+          "YARN_STORE"
+        ],
+        "216": [
+          "SMOOTHIE_SHOP",
+          "YARN_STORE",
+          "YARN_STORE"
+        ],
+        "288": [
+          "SMOOTHIE_SHOP",
+          "YARN_STORE",
+          "YARN_STORE",
+          "YARN_STORE"
+        ]
+      },
+      "margin": 28976.0
+    }
+  ],
+  "shop_sequences": {
+    "PopA": [
+      {
+        "seed": 1542,
+        "shops": {
+          "72": [
+            "YARN_STORE"
+          ],
+          "144": [
+            "YARN_STORE",
+            "PIZZA_SHOP"
+          ],
+          "216": [
+            "YARN_STORE",
+            "PIZZA_SHOP",
+            "FARMERS_MARKET"
+          ],
+          "288": [
+            "YARN_STORE",
+            "PIZZA_SHOP",
+            "FARMERS_MARKET",
+            "PET_CAFE"
+          ]
+        },
+        "margin": -5559.0
+      },
+      {
+        "seed": 1542,
+        "shops": {
+          "72": [
+            "YARN_STORE"
+          ],
+          "144": [
+            "YARN_STORE",
+            "PIZZA_SHOP"
+          ],
+          "216": [
+            "YARN_STORE",
+            "PIZZA_SHOP",
+            "FARMERS_MARKET"
+          ],
+          "288": [
+            "YARN_STORE",
+            "PIZZA_SHOP",
+            "FARMERS_MARKET",
+            "PET_CAFE"
+          ]
+        },
+        "margin": -5559.0
+      },
+      {
+        "seed": 1609,
+        "shops": {
+          "72": [
+            "YARN_STORE"
+          ],
+          "144": [
+            "YARN_STORE",
+            "FARMERS_MARKET"
+          ],
+          "216": [
+            "YARN_STORE",
+            "FARMERS_MARKET",
+            "PIZZA_SHOP"
+          ],
+          "288": [
+            "YARN_STORE",
+            "FARMERS_MARKET",
+            "PIZZA_SHOP",
+            "SMOOTHIE_SHOP"
+          ]
+        },
+        "margin": -5206.0
+      },
+      {
+        "seed": 1609,
+        "shops": {
+          "72": [
+            "YARN_STORE"
+          ],
+          "144": [
+            "YARN_STORE",
+            "FARMERS_MARKET"
+          ],
+          "216": [
+            "YARN_STORE",
+            "FARMERS_MARKET",
+            "PIZZA_SHOP"
+          ],
+          "288": [
+            "YARN_STORE",
+            "FARMERS_MARKET",
+            "PIZZA_SHOP",
+            "SMOOTHIE_SHOP"
+          ]
+        },
+        "margin": -5206.0
+      },
+      {
+        "seed": 1691,
+        "shops": {
+          "72": [
+            "PET_CAFE"
+          ],
+          "144": [
+            "PET_CAFE",
+            "PET_CAFE"
+          ],
+          "216": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "ICE_CREAM_SHOP"
+          ],
+          "288": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "ICE_CREAM_SHOP",
+            "YARN_STORE"
+          ]
+        },
+        "margin": -8202.0
+      },
+      {
+        "seed": 1773,
+        "shops": {
+          "72": [
+            "PET_CAFE"
+          ],
+          "144": [
+            "PET_CAFE",
+            "PET_CAFE"
+          ],
+          "216": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "BAKERY"
+          ],
+          "288": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "BAKERY",
+            "YARN_STORE"
+          ]
+        },
+        "margin": -18804.0
+      },
+      {
+        "seed": 1773,
+        "shops": {
+          "72": [
+            "PET_CAFE"
+          ],
+          "144": [
+            "PET_CAFE",
+            "PET_CAFE"
+          ],
+          "216": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "BAKERY"
+          ],
+          "288": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "BAKERY",
+            "YARN_STORE"
+          ]
+        },
+        "margin": -18804.0
+      },
+      {
+        "seed": 1871,
+        "shops": {
+          "72": [
+            "BAKERY"
+          ],
+          "144": [
+            "BAKERY",
+            "PET_CAFE"
+          ],
+          "216": [
+            "BAKERY",
+            "PET_CAFE",
+            "BRUNCH_SPOT"
+          ],
+          "288": [
+            "BAKERY",
+            "PET_CAFE",
+            "BRUNCH_SPOT",
+            "PET_CAFE"
+          ]
+        },
+        "margin": -5008.0
+      },
+      {
+        "seed": 1871,
+        "shops": {
+          "72": [
+            "BAKERY"
+          ],
+          "144": [
+            "BAKERY",
+            "PET_CAFE"
+          ],
+          "216": [
+            "BAKERY",
+            "PET_CAFE",
+            "BRUNCH_SPOT"
+          ],
+          "288": [
+            "BAKERY",
+            "PET_CAFE",
+            "BRUNCH_SPOT",
+            "PET_CAFE"
+          ]
+        },
+        "margin": -5008.0
+      },
+      {
+        "seed": 1948,
+        "shops": {
+          "72": [
+            "YARN_STORE"
+          ],
+          "144": [
+            "YARN_STORE",
+            "SMOOTHIE_SHOP"
+          ],
+          "216": [
+            "YARN_STORE",
+            "SMOOTHIE_SHOP",
+            "BAKERY"
+          ],
+          "288": [
+            "YARN_STORE",
+            "SMOOTHIE_SHOP",
+            "BAKERY",
+            "PIZZA_SHOP"
+          ]
+        },
+        "margin": -5257.0
+      },
+      {
+        "seed": 1948,
+        "shops": {
+          "72": [
+            "YARN_STORE"
+          ],
+          "144": [
+            "YARN_STORE",
+            "SMOOTHIE_SHOP"
+          ],
+          "216": [
+            "YARN_STORE",
+            "SMOOTHIE_SHOP",
+            "BAKERY"
+          ],
+          "288": [
+            "YARN_STORE",
+            "SMOOTHIE_SHOP",
+            "BAKERY",
+            "PIZZA_SHOP"
+          ]
+        },
+        "margin": -5257.0
+      },
+      {
+        "seed": 1949,
+        "shops": {
+          "72": [
+            "PET_CAFE"
+          ],
+          "144": [
+            "PET_CAFE",
+            "PET_CAFE"
+          ],
+          "216": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "YARN_STORE"
+          ],
+          "288": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP"
+          ]
+        },
+        "margin": -27831.0
+      },
+      {
+        "seed": 1949,
+        "shops": {
+          "72": [
+            "PET_CAFE"
+          ],
+          "144": [
+            "PET_CAFE",
+            "PET_CAFE"
+          ],
+          "216": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "YARN_STORE"
+          ],
+          "288": [
+            "PET_CAFE",
+            "PET_CAFE",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP"
+          ]
+        },
+        "margin": -27831.0
+      },
+      {
+        "seed": 1969,
+        "shops": {
+          "72": [
+            "BAKERY"
+          ],
+          "144": [
+            "BAKERY",
+            "BAKERY"
+          ],
+          "216": [
+            "BAKERY",
+            "BAKERY",
+            "BAKERY"
+          ],
+          "288": [
+            "BAKERY",
+            "BAKERY",
+            "BAKERY",
+            "PET_CAFE"
+          ]
+        },
+        "margin": -5503.0
+      },
+      {
+        "seed": 1969,
+        "shops": {
+          "72": [
+            "BAKERY"
+          ],
+          "144": [
+            "BAKERY",
+            "BAKERY"
+          ],
+          "216": [
+            "BAKERY",
+            "BAKERY",
+            "BAKERY"
+          ],
+          "288": [
+            "BAKERY",
+            "BAKERY",
+            "BAKERY",
+            "PET_CAFE"
+          ]
+        },
+        "margin": -5503.0
+      }
+    ],
+    "PopB": [
+      {
+        "seed": 1643,
+        "shops": {
+          "72": [
+            "BRUNCH_SPOT"
+          ],
+          "144": [
+            "BRUNCH_SPOT",
+            "YARN_STORE"
+          ],
+          "216": [
+            "BRUNCH_SPOT",
+            "YARN_STORE",
+            "YARN_STORE"
+          ],
+          "288": [
+            "BRUNCH_SPOT",
+            "YARN_STORE",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP"
+          ]
+        },
+        "margin": 25231.0
+      },
+      {
+        "seed": 1803,
+        "shops": {
+          "72": [
+            "ICE_CREAM_SHOP"
+          ],
+          "144": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE"
+          ],
+          "216": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP"
+          ],
+          "288": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP",
+            "PET_CAFE"
+          ]
+        },
+        "margin": 7082.0
+      },
+      {
+        "seed": 1803,
+        "shops": {
+          "72": [
+            "ICE_CREAM_SHOP"
+          ],
+          "144": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE"
+          ],
+          "216": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP"
+          ],
+          "288": [
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP",
+            "PET_CAFE"
+          ]
+        },
+        "margin": 7082.0
+      },
+      {
+        "seed": 1757,
+        "shops": {
+          "72": [
+            "FARMERS_MARKET"
+          ],
+          "144": [
+            "FARMERS_MARKET",
+            "YARN_STORE"
+          ],
+          "216": [
+            "FARMERS_MARKET",
+            "YARN_STORE",
+            "BRUNCH_SPOT"
+          ],
+          "288": [
+            "FARMERS_MARKET",
+            "YARN_STORE",
+            "BRUNCH_SPOT",
+            "BAKERY"
+          ]
+        },
+        "margin": 17598.0
+      },
+      {
+        "seed": 1717,
+        "shops": {
+          "72": [
+            "BAKERY"
+          ],
+          "144": [
+            "BAKERY",
+            "ICE_CREAM_SHOP"
+          ],
+          "216": [
+            "BAKERY",
+            "ICE_CREAM_SHOP",
+            "YARN_STORE"
+          ],
+          "288": [
+            "BAKERY",
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "YARN_STORE"
+          ]
+        },
+        "margin": 6749.0
+      },
+      {
+        "seed": 1951,
+        "shops": {
+          "72": [
+            "BRUNCH_SPOT"
+          ],
+          "144": [
+            "BRUNCH_SPOT",
+            "YARN_STORE"
+          ],
+          "216": [
+            "BRUNCH_SPOT",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP"
+          ],
+          "288": [
+            "BRUNCH_SPOT",
+            "YARN_STORE",
+            "ICE_CREAM_SHOP",
+            "FARMERS_MARKET"
+          ]
+        },
+        "margin": 12625.0
+      },
+      {
+        "seed": 1996,
+        "shops": {
+          "72": [
+            "BAKERY"
+          ],
+          "144": [
+            "BAKERY",
+            "ICE_CREAM_SHOP"
+          ],
+          "216": [
+            "BAKERY",
+            "ICE_CREAM_SHOP",
+            "YARN_STORE"
+          ],
+          "288": [
+            "BAKERY",
+            "ICE_CREAM_SHOP",
+            "YARN_STORE",
+            "FARMERS_MARKET"
+          ]
+        },
+        "margin": 6265.0
+      },
+      {
+        "seed": 1739,
+        "shops": {
+          "72": [
+            "BAKERY"
+          ],
+          "144": [
+            "BAKERY",
+            "SMOOTHIE_SHOP"
+          ],
+          "216": [
+            "BAKERY",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE"
+          ],
+          "288": [
+            "BAKERY",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE",
+            "BAKERY"
+          ]
+        },
+        "margin": 6105.0
+      },
+      {
+        "seed": 1550,
+        "shops": {
+          "72": [
+            "SMOOTHIE_SHOP"
+          ],
+          "144": [
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP"
+          ],
+          "216": [
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP"
+          ],
+          "288": [
+            "SMOOTHIE_SHOP",
+            "ICE_CREAM_SHOP",
+            "PIZZA_SHOP",
+            "BAKERY"
+          ]
+        },
+        "margin": 6432.0
+      },
+      {
+        "seed": 1505,
+        "shops": {
+          "72": [
+            "PIZZA_SHOP"
+          ],
+          "144": [
+            "PIZZA_SHOP",
+            "YARN_STORE"
+          ],
+          "216": [
+            "PIZZA_SHOP",
+            "YARN_STORE",
+            "FARMERS_MARKET"
+          ],
+          "288": [
+            "PIZZA_SHOP",
+            "YARN_STORE",
+            "FARMERS_MARKET",
+            "PET_CAFE"
+          ]
+        },
+        "margin": 25317.0
+      },
+      {
+        "seed": 1593,
+        "shops": {
+          "72": [
+            "BAKERY"
+          ],
+          "144": [
+            "BAKERY",
+            "YARN_STORE"
+          ],
+          "216": [
+            "BAKERY",
+            "YARN_STORE",
+            "YARN_STORE"
+          ],
+          "288": [
+            "BAKERY",
+            "YARN_STORE",
+            "YARN_STORE",
+            "PIZZA_SHOP"
+          ]
+        },
+        "margin": 34782.0
+      },
+      {
+        "seed": 1652,
+        "shops": {
+          "72": [
+            "ICE_CREAM_SHOP"
+          ],
+          "144": [
+            "ICE_CREAM_SHOP",
+            "SMOOTHIE_SHOP"
+          ],
+          "216": [
+            "ICE_CREAM_SHOP",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE"
+          ],
+          "288": [
+            "ICE_CREAM_SHOP",
+            "SMOOTHIE_SHOP",
+            "YARN_STORE",
+            "BRUNCH_SPOT"
+          ]
+        },
+        "margin": 6496.0
+      },
+      {
+        "seed": 1937,
+        "shops": {
+          "72": [
+            "FARMERS_MARKET"
+          ],
+          "144": [
+            "FARMERS_MARKET",
+            "YARN_STORE"
+          ],
+          "216": [
+            "FARMERS_MARKET",
+            "YARN_STORE",
+            "BRUNCH_SPOT"
+          ],
+          "288": [
+            "FARMERS_MARKET",
+            "YARN_STORE",
+            "BRUNCH_SPOT",
+            "ICE_CREAM_SHOP"
+          ]
+        },
+        "margin": 25004.0
+      },
+      {
+        "seed": 1959,
+        "shops": {
+          "72": [
+            "BRUNCH_SPOT"
+          ],
+          "144": [
+            "BRUNCH_SPOT",
+            "YARN_STORE"
+          ],
+          "216": [
+            "BRUNCH_SPOT",
+            "YARN_STORE",
+            "BRUNCH_SPOT"
+          ],
+          "288": [
+            "BRUNCH_SPOT",
+            "YARN_STORE",
+            "BRUNCH_SPOT",
+            "SMOOTHIE_SHOP"
+          ]
+        },
+        "margin": 12490.0
+      },
+      {
+        "seed": 1870,
+        "shops": {
+          "72": [
+            "SMOOTHIE_SHOP"
+          ],
+          "144": [
+            "SMOOTHIE_SHOP",
+            "YARN_STORE"
+          ],
+          "216": [
+            "SMOOTHIE_SHOP",
+            "YARN_STORE",
+            "YARN_STORE"
+          ],
+          "288": [
+            "SMOOTHIE_SHOP",
+            "YARN_STORE",
+            "YARN_STORE",
+            "YARN_STORE"
+          ]
+        },
+        "margin": 28976.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "horizon_effect": {
+    "336": {
+      "day": 14,
+      "avg_v54_cash": 19362.6,
+      "avg_v66_cash": 19267.43076923077,
+      "cash_gap_v66_lead": -95.1692307692283,
+      "avg_v54_wheat_sold": 187.7846153846154,
+      "avg_v66_wheat_sold": 162.33846153846153,
+      "wheat_sold_lead": -25.446153846153862,
+      "avg_wheat_price": 40.8,
+      "avg_wool_price": 196.4923076923077,
+      "avg_milk_price": 96.95384615384616
+    },
+    "360": {
+      "day": 15,
+      "avg_v54_cash": 23313.923076923078,
+      "avg_v66_cash": 23245.96923076923,
+      "cash_gap_v66_lead": -67.95384615384683,
+      "avg_v54_wheat_sold": 239.8,
+      "avg_v66_wheat_sold": 215.2,
+      "wheat_sold_lead": -24.600000000000023,
+      "avg_wheat_price": 40.4,
+      "avg_wool_price": 178.44615384615383,
+      "avg_milk_price": 65.78461538461538
+    },
+    "384": {
+      "day": 16,
+      "avg_v54_cash": 27115.56923076923,
+      "avg_v66_cash": 27342.6,
+      "cash_gap_v66_lead": 227.03076923076878,
+      "avg_v54_wheat_sold": 316.2,
+      "avg_v66_wheat_sold": 274.32307692307694,
+      "wheat_sold_lead": -41.87692307692305,
+      "avg_wheat_price": 40.46153846153846,
+      "avg_wool_price": 173.83076923076922,
+      "avg_milk_price": 60.90769230769231
+    },
+    "432": {
+      "day": 18,
+      "avg_v54_cash": 37446.692307692305,
+      "avg_v66_cash": 36316.307692307695,
+      "cash_gap_v66_lead": -1130.3846153846098,
+      "avg_v54_wheat_sold": 454.96923076923076,
+      "avg_v66_wheat_sold": 370.44615384615383,
+      "wheat_sold_lead": -84.52307692307693,
+      "avg_wheat_price": 40.92307692307692,
+      "avg_wool_price": 173.95384615384614,
+      "avg_milk_price": 53.707692307692305
+    },
+    "480": {
+      "day": 20,
+      "avg_v54_cash": 47328.13846153846,
+      "avg_v66_cash": 46012.81538461539,
+      "cash_gap_v66_lead": -1315.3230769230722,
+      "avg_v54_wheat_sold": 537.8461538461538,
+      "avg_v66_wheat_sold": 441.66153846153844,
+      "wheat_sold_lead": -96.18461538461537,
+      "avg_wheat_price": 41.276923076923076,
+      "avg_wool_price": 172.04615384615386,
+      "avg_milk_price": 31.784615384615385
+    },
+    "528": {
+      "day": 22,
+      "avg_v54_cash": 57076.769230769234,
+      "avg_v66_cash": 55692.47692307692,
+      "cash_gap_v66_lead": -1384.2923076923107,
+      "avg_v54_wheat_sold": 707.0615384615385,
+      "avg_v66_wheat_sold": 555.876923076923,
+      "wheat_sold_lead": -151.18461538461543,
+      "avg_wheat_price": 40.323076923076925,
+      "avg_wool_price": 153.66153846153847,
+      "avg_milk_price": 32.43076923076923
+    },
+    "576": {
+      "day": 24,
+      "avg_v54_cash": 63018.015384615384,
+      "avg_v66_cash": 61102.584615384614,
+      "cash_gap_v66_lead": -1915.4307692307702,
+      "avg_v54_wheat_sold": 795.0461538461539,
+      "avg_v66_wheat_sold": 648.9692307692308,
+      "wheat_sold_lead": -146.0769230769231,
+      "avg_wheat_price": 41.09230769230769,
+      "avg_wool_price": 140.1076923076923,
+      "avg_milk_price": 28.215384615384615
+    },
+    "624": {
+      "day": 26,
+      "avg_v54_cash": 68322.5076923077,
+      "avg_v66_cash": 66052.69230769231,
+      "cash_gap_v66_lead": -2269.8153846153873,
+      "avg_v54_wheat_sold": 933.3538461538461,
+      "avg_v66_wheat_sold": 746.3846153846154,
+      "wheat_sold_lead": -186.96923076923076,
+      "avg_wheat_price": 41.03076923076923,
+      "avg_wool_price": 119.04615384615384,
+      "avg_milk_price": 33.0
+    }
+  },
+  "liquidity_effect": {
+    "loss_seeds": {
+      "avg_midgame_cash_gap": 1657.32,
+      "avg_midgame_wheat_revenue_gap": -6422.4
+    },
+    "win_seeds": {
+      "avg_midgame_cash_gap": -4266.6,
+      "avg_midgame_wheat_revenue_gap": -2812.9
+    }
+  },
+  "physical_capacity_effect": {
+    "Loss Matches": {
+      "v54_avg_cows": 0.0,
+      "v66_avg_cows": 0.0,
+      "v54_avg_sheep": 0.0,
+      "v66_avg_sheep": 0.0,
+      "v54_avg_feed_consumed": 0.0,
+      "v66_avg_feed_consumed": 0.0,
+      "v54_avg_wool": 0.0,
+      "v66_avg_wool": 0.0,
+      "v54_avg_milk": 0.0,
+      "v66_avg_milk": 0.0
+    },
+    "Win Matches": {
+      "v54_avg_cows": 0.0,
+      "v66_avg_cows": 0.0,
+      "v54_avg_sheep": 0.0,
+      "v66_avg_sheep": 0.0,
+      "v54_avg_feed_consumed": 0.0,
+      "v66_avg_feed_consumed": 0.0,
+      "v54_avg_wool": 0.0,
+      "v66_avg_wool": 0.0,
+      "v54_avg_milk": 0.0,
+      "v66_avg_milk": 0.0
+    }
+  },
+  "regime_classification": {
+    "regime_counts": {
+      "Regime A (Wheat Superior)": 25,
+      "Regime B (Livestock Superior)": 30,
+      "Regime C (Indifferent)": 10
+    },
+    "sample_size": 55,
+    "accuracy": 0.6545454545454545,
+    "precision": 0.875,
+    "recall": 0.28,
+    "false_positive_rate": 0.03333333333333333,
+    "false_negative_rate": 0.72
+  }
+}
