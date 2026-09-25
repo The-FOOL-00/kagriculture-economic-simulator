@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-09-25 14:45:14",
+  "train_samples": 3560,
+  "val_samples": 1780,
+  "obs_dim": 112,
+  "num_actions": 16,
+  "action_distribution": {
+    "0": 2858,
+    "10": 289,
+    "13": 19,
+    "14": 206,
+    "15": 188
+  },
+  "train_seeds": [
+    249635,
+    249636,
+    249637,
+    249638,
+    249639,
+    249640,
+    249641,
+    249642,
+    249643,
+    249644,
+    249645,
+    249646,
+    249647,
+    249648,
+    249649,
+    249650,
+    249651,
+    249652,
+    249653,
+    249654
+  ],
+  "val_seeds": [
+    249675,
+    249676,
+    249677,
+    249678,
+    249679,
+    249680,
+    249681,
+    249682,
+    249683,
+    249684
+  ],
+  "train_path": "C:\\Users\\Sundareswaran\\Kagriculture\\research\\v40\\artifacts\\v40_train_dataset.pt",
+  "val_path": "C:\\Users\\Sundareswaran\\Kagriculture\\research\\v40\\artifacts\\v40_val_dataset.pt",
+  "duration_seconds": 87.86434745788574
+}
