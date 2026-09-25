@@ -1,0 +1,178 @@
+[
+  {
+    "iteration": 1,
+    "seed": 249635,
+    "opp_id": "E8_DMITRII",
+    "reward": -312.5,
+    "cash_delta": -115.0,
+    "margin_delta": -140.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 10.459236145019531
+  },
+  {
+    "iteration": 2,
+    "seed": 249636,
+    "opp_id": "E2_A7",
+    "reward": 135.0,
+    "cash_delta": 20.0,
+    "margin_delta": 135.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 1.7533659934997559
+  },
+  {
+    "iteration": 3,
+    "seed": 249637,
+    "opp_id": "E0_V3",
+    "reward": -219.0,
+    "cash_delta": -218.0,
+    "margin_delta": 108.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 5.587838172912598
+  },
+  {
+    "iteration": 4,
+    "seed": 249638,
+    "opp_id": "SYN_AGG",
+    "reward": -65.0,
+    "cash_delta": -26.0,
+    "margin_delta": -26.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 0.6362098455429077
+  },
+  {
+    "iteration": 5,
+    "seed": 249640,
+    "opp_id": "E8_DMITRII",
+    "reward": -785.0,
+    "cash_delta": -324.0,
+    "margin_delta": -299.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 63.60110855102539
+  },
+  {
+    "iteration": 6,
+    "seed": 249644,
+    "opp_id": "E2_A7",
+    "reward": -237.5,
+    "cash_delta": -169.0,
+    "margin_delta": 16.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 6.284599781036377
+  },
+  {
+    "iteration": 7,
+    "seed": 249648,
+    "opp_id": "E0_V3",
+    "reward": 59.0,
+    "cash_delta": -122.0,
+    "margin_delta": 242.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 0.2531834542751312
+  },
+  {
+    "iteration": 8,
+    "seed": 249650,
+    "opp_id": "SYN_AGG",
+    "reward": -202.5,
+    "cash_delta": -81.0,
+    "margin_delta": -81.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 4.514407157897949
+  },
+  {
+    "iteration": 9,
+    "seed": 249635,
+    "opp_id": "E8_DMITRII",
+    "reward": -312.5,
+    "cash_delta": -115.0,
+    "margin_delta": -140.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 10.341989517211914
+  },
+  {
+    "iteration": 10,
+    "seed": 249636,
+    "opp_id": "E2_A7",
+    "reward": 125.0,
+    "cash_delta": 10.0,
+    "margin_delta": 125.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 1.492250919342041
+  },
+  {
+    "iteration": 11,
+    "seed": 249637,
+    "opp_id": "E0_V3",
+    "reward": -354.0,
+    "cash_delta": -284.0,
+    "margin_delta": 72.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 13.319356918334961
+  },
+  {
+    "iteration": 12,
+    "seed": 249638,
+    "opp_id": "SYN_AGG",
+    "reward": -77.5,
+    "cash_delta": -31.0,
+    "margin_delta": -31.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 0.8486886024475098
+  },
+  {
+    "iteration": 13,
+    "seed": 249640,
+    "opp_id": "E8_DMITRII",
+    "reward": -785.0,
+    "cash_delta": -324.0,
+    "margin_delta": -299.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 62.759403228759766
+  },
+  {
+    "iteration": 14,
+    "seed": 249644,
+    "opp_id": "E2_A7",
+    "reward": -237.5,
+    "cash_delta": -169.0,
+    "margin_delta": 16.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 6.051059246063232
+  },
+  {
+    "iteration": 15,
+    "seed": 249648,
+    "opp_id": "E0_V3",
+    "reward": 59.0,
+    "cash_delta": -122.0,
+    "margin_delta": 242.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 0.3415319323539734
+  },
+  {
+    "iteration": 16,
+    "seed": 249650,
+    "opp_id": "SYN_AGG",
+    "reward": -110.0,
+    "cash_delta": -44.0,
+    "margin_delta": -44.0,
+    "rescue": false,
+    "casualty": false,
+    "loss": 1.3656387329101562
+  }
+]

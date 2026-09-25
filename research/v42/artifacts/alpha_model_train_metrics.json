@@ -1,0 +1,282 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 26.566103074480505,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 2,
+    "train_loss": 270.36332044093047,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 3,
+    "train_loss": 383.35209549579986,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 4,
+    "train_loss": 443.15441377504783,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 5,
+    "train_loss": 381.57058365029445,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 6,
+    "train_loss": 312.42147904393426,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 7,
+    "train_loss": 341.55249060778056,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 8,
+    "train_loss": 372.28826410104244,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 9,
+    "train_loss": 330.88299659069844,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 10,
+    "train_loss": 334.32236053137217,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 11,
+    "train_loss": 372.0219089879709,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 12,
+    "train_loss": 367.2153509208823,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 13,
+    "train_loss": 403.3242481719045,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 14,
+    "train_loss": 304.7861587628722,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 15,
+    "train_loss": 492.77090158910653,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 16,
+    "train_loss": 306.0955528213697,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 17,
+    "train_loss": 297.0993989846286,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 18,
+    "train_loss": 297.71043821358506,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 19,
+    "train_loss": 316.1348406865316,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 20,
+    "train_loss": 307.7914226055145,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 21,
+    "train_loss": 330.3017175232663,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 22,
+    "train_loss": 286.33746476033156,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 23,
+    "train_loss": 356.0874568031115,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 24,
+    "train_loss": 289.70826448237193,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 25,
+    "train_loss": 281.76556929858293,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 26,
+    "train_loss": 307.02143676491346,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 27,
+    "train_loss": 314.6102934497244,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 28,
+    "train_loss": 308.20434011957224,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 29,
+    "train_loss": 322.3422053806922,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 30,
+    "train_loss": 296.69240113566906,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 31,
+    "train_loss": 311.19820886324436,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 32,
+    "train_loss": 303.5572717417689,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 33,
+    "train_loss": 297.19664893080204,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 34,
+    "train_loss": 293.30351277046344,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  },
+  {
+    "epoch": 35,
+    "train_loss": 286.23746710840396,
+    "val_agreement": 88.47305389221557,
+    "val_regret": 21.7125748502994,
+    "val_fp_rate": 0.0,
+    "val_rescues": 0
+  }
+]
