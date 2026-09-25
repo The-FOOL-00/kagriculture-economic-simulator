@@ -1,0 +1,1293 @@
+{
+ "a7": {
+  "n": 99,
+  "W": 56,
+  "L": 43,
+  "T": 0,
+  "winrate": 0.5657,
+  "opp_lb": {
+   "n": 97,
+   "min": 617.0,
+   "p25": 1783.4,
+   "median": 1863.8,
+   "mean": 1846.4,
+   "p75": 1976.6,
+   "max": 2695.2
+  },
+  "opp_lb_by_result": {
+   "W": {
+    "n": 55,
+    "median": 1812.1,
+    "mean": 1713.6
+   },
+   "L": {
+    "n": 42,
+    "median": 1926.1,
+    "mean": 2020.2
+   }
+  },
+  "our_reward": {
+   "median": 96980.0,
+   "mean": 98177.6
+  },
+  "delta": {
+   "median": 284.0,
+   "mean": 3386.3
+  },
+  "losses": [
+   {
+    "ep": 111886277,
+    "opp": "Fedor",
+    "opp_lb": 1834.1,
+    "delta": -14189.0
+   },
+   {
+    "ep": 111975251,
+    "opp": "Chaoqi Luo",
+    "opp_lb": 2040.3,
+    "delta": -11170.0
+   },
+   {
+    "ep": 111876058,
+    "opp": "shawenher",
+    "opp_lb": 2319.5,
+    "delta": -10395.0
+   },
+   {
+    "ep": 111878712,
+    "opp": "wen chong yu",
+    "opp_lb": 1844.5,
+    "delta": -8984.0
+   },
+   {
+    "ep": 111916954,
+    "opp": "eviltsundera",
+    "opp_lb": 860.0,
+    "delta": -7269.0
+   },
+   {
+    "ep": 112016921,
+    "opp": "Rohit Kumar Sahoo",
+    "opp_lb": 1466.2,
+    "delta": -6352.0
+   },
+   {
+    "ep": 111911269,
+    "opp": "carbonapi",
+    "opp_lb": 2337.7,
+    "delta": -6319.0
+   },
+   {
+    "ep": 111895336,
+    "opp": "Guilherme Volpe",
+    "opp_lb": 2013.7,
+    "delta": -6039.0
+   },
+   {
+    "ep": 111921474,
+    "opp": "Ezzzzzekki",
+    "opp_lb": 2676.6,
+    "delta": -5733.0
+   },
+   {
+    "ep": 111874934,
+    "opp": "GOAT   Mathieu \"ZywOo\" Herbaut",
+    "opp_lb": 2558.2,
+    "delta": -5691.0
+   },
+   {
+    "ep": 111863520,
+    "opp": "Marlubie",
+    "opp_lb": 2002.7,
+    "delta": -4307.0
+   },
+   {
+    "ep": 111875310,
+    "opp": "Zhongyi Dai",
+    "opp_lb": 1783.4,
+    "delta": -4186.0
+   },
+   {
+    "ep": 111912405,
+    "opp": "atl132",
+    "opp_lb": 2268.1,
+    "delta": -3673.0
+   },
+   {
+    "ep": 111919236,
+    "opp": "xsong2020",
+    "opp_lb": 2077.1,
+    "delta": -3060.0
+   },
+   {
+    "ep": 111864683,
+    "opp": "Suyash Verma",
+    "opp_lb": 2658.3,
+    "delta": -2480.0
+   },
+   {
+    "ep": 111950010,
+    "opp": "jiazepin",
+    "opp_lb": 2475.2,
+    "delta": -2446.0
+   },
+   {
+    "ep": 112012851,
+    "opp": "Setu Chokshi",
+    "opp_lb": 1882.5,
+    "delta": -2286.0
+   },
+   {
+    "ep": 111910136,
+    "opp": "Raghav Agrawal",
+    "opp_lb": 1879.0,
+    "delta": -2135.0
+   },
+   {
+    "ep": 111933531,
+    "opp": "HIDEYO CHIBA",
+    "opp_lb": 2694.3,
+    "delta": -2055.0
+   },
+   {
+    "ep": 111885138,
+    "opp": "yuxian6666",
+    "opp_lb": 1927.3,
+    "delta": -2048.0
+   },
+   {
+    "ep": 111957499,
+    "opp": "yesterdays_rebel",
+    "opp_lb": 2102.5,
+    "delta": -1690.0
+   },
+   {
+    "ep": 111897606,
+    "opp": "Fanch",
+    "opp_lb": 1104.3,
+    "delta": -1678.0
+   },
+   {
+    "ep": 111887492,
+    "opp": "levshaazz",
+    "opp_lb": 1966.8,
+    "delta": -1401.0
+   },
+   {
+    "ep": 111890799,
+    "opp": "PursueML",
+    "opp_lb": 1804.6,
+    "delta": -1367.0
+   },
+   {
+    "ep": 111957591,
+    "opp": "aisamhottman",
+    "opp_lb": 2695.2,
+    "delta": -1174.0
+   },
+   {
+    "ep": 111899899,
+    "opp": "\u5b64\u5be1\u5c11\u5e74",
+    "opp_lb": null,
+    "delta": -914.0
+   },
+   {
+    "ep": 111894209,
+    "opp": "David Goldrajch",
+    "opp_lb": 1938.2,
+    "delta": -671.0
+   },
+   {
+    "ep": 112010013,
+    "opp": "Han Chen",
+    "opp_lb": 1801.5,
+    "delta": -621.0
+   },
+   {
+    "ep": 111914236,
+    "opp": "Dzmitry Pihulski",
+    "opp_lb": 2543.1,
+    "delta": -538.0
+   },
+   {
+    "ep": 111980339,
+    "opp": "Arfin Mustofa",
+    "opp_lb": 1885.3,
+    "delta": -480.0
+   },
+   {
+    "ep": 111913542,
+    "opp": "D\u01b0\u01a1ng \u0110\u1ee9c Anh",
+    "opp_lb": 1886.2,
+    "delta": -436.0
+   },
+   {
+    "ep": 111927167,
+    "opp": "TY0912",
+    "opp_lb": 1861.7,
+    "delta": -303.0
+   },
+   {
+    "ep": 111915812,
+    "opp": "xder",
+    "opp_lb": 1848.1,
+    "delta": -155.0
+   },
+   {
+    "ep": 111965545,
+    "opp": "AM",
+    "opp_lb": 1924.9,
+    "delta": -152.0
+   },
+   {
+    "ep": 111950940,
+    "opp": "\u590f\u7d75",
+    "opp_lb": 1937.7,
+    "delta": -140.0
+   },
+   {
+    "ep": 111942786,
+    "opp": "maoxin123",
+    "opp_lb": 1915.9,
+    "delta": -139.0
+   },
+   {
+    "ep": 111968874,
+    "opp": "fumiya utsuno",
+    "opp_lb": 1906.4,
+    "delta": -136.0
+   },
+   {
+    "ep": 111941660,
+    "opp": "maoxin123",
+    "opp_lb": 1915.9,
+    "delta": -126.0
+   },
+   {
+    "ep": 112008297,
+    "opp": "Songyot P",
+    "opp_lb": 1912.2,
+    "delta": -77.0
+   },
+   {
+    "ep": 111898593,
+    "opp": "Masataka Suzuki",
+    "opp_lb": 1889.5,
+    "delta": -63.0
+   },
+   {
+    "ep": 111970579,
+    "opp": "kuengo",
+    "opp_lb": 2560.9,
+    "delta": -59.0
+   },
+   {
+    "ep": 111896472,
+    "opp": "MAOSEN ",
+    "opp_lb": 1952.0,
+    "delta": -45.0
+   },
+   {
+    "ep": 111893071,
+    "opp": "kevin zhou",
+    "opp_lb": 1897.5,
+    "delta": -34.0
+   }
+  ],
+  "wins_vs_strongest": [
+   {
+    "ep": 111891936,
+    "opp": "naren_v",
+    "opp_lb": 2435.9,
+    "delta": 1286.0
+   },
+   {
+    "ep": 111906724,
+    "opp": "naren_v",
+    "opp_lb": 2435.9,
+    "delta": 1286.0
+   },
+   {
+    "ep": 111924864,
+    "opp": "naren_v",
+    "opp_lb": 2435.9,
+    "delta": 1286.0
+   },
+   {
+    "ep": 111888521,
+    "opp": "Jacques Buis",
+    "opp_lb": 2385.8,
+    "delta": 3896.0
+   },
+   {
+    "ep": 111883982,
+    "opp": "Lunospital",
+    "opp_lb": 2213.8,
+    "delta": 1286.0
+   },
+   {
+    "ep": 111882871,
+    "opp": "Reyhan Ksatria",
+    "opp_lb": 2164.2,
+    "delta": 2041.0
+   },
+   {
+    "ep": 111923745,
+    "opp": "Michael Timbs",
+    "opp_lb": 2081.8,
+    "delta": 12495.0
+   },
+   {
+    "ep": 111904442,
+    "opp": "BobtheBot369",
+    "opp_lb": 1978.1,
+    "delta": 188.0
+   },
+   {
+    "ep": 111922605,
+    "opp": "UmutUygurr",
+    "opp_lb": 1976.6,
+    "delta": 632.0
+   },
+   {
+    "ep": 111994936,
+    "opp": "YujieXing10",
+    "opp_lb": 1950.4,
+    "delta": 21.0
+   }
+  ]
+ },
+ "v22r1": {
+  "n": 251,
+  "W": 112,
+  "L": 138,
+  "T": 1,
+  "winrate": 0.4462,
+  "opp_lb": {
+   "n": 246,
+   "min": 92.6,
+   "p25": 1842.1,
+   "median": 1928.8000000000002,
+   "mean": 2008.4,
+   "p75": 2299.4,
+   "max": 2859.2
+  },
+  "opp_lb_by_result": {
+   "W": {
+    "n": 112,
+    "median": 1856.8,
+    "mean": 1817.4
+   },
+   "L": {
+    "n": 133,
+    "median": 2081.2,
+    "mean": 2168.1
+   },
+   "T": {
+    "n": 1,
+    "median": 2174.1,
+    "mean": 2174.1
+   }
+  },
+  "our_reward": {
+   "median": 99020.0,
+   "mean": 100337.1
+  },
+  "delta": {
+   "median": -96.0,
+   "mean": 1672.2
+  },
+  "losses": [
+   {
+    "ep": 111543772,
+    "opp": "redblackbst",
+    "opp_lb": 2859.2,
+    "delta": -15708.0
+   },
+   {
+    "ep": 111963629,
+    "opp": "Ndabenhle Ngema",
+    "opp_lb": 2211.7,
+    "delta": -14889.0
+   },
+   {
+    "ep": 111906269,
+    "opp": "JR",
+    "opp_lb": 2430.7,
+    "delta": -13785.0
+   },
+   {
+    "ep": 111327426,
+    "opp": "kk.sky.9k",
+    "opp_lb": 2601.4,
+    "delta": -11489.0
+   },
+   {
+    "ep": 111316936,
+    "opp": "coolin666",
+    "opp_lb": 2416.2,
+    "delta": -10340.0
+   },
+   {
+    "ep": 111556761,
+    "opp": "threnox",
+    "opp_lb": 1937.2,
+    "delta": -10112.0
+   },
+   {
+    "ep": 111637434,
+    "opp": "Fedor",
+    "opp_lb": 1834.1,
+    "delta": -8042.0
+   },
+   {
+    "ep": 111572610,
+    "opp": "T Hansda",
+    "opp_lb": 2178.4,
+    "delta": -7719.0
+   },
+   {
+    "ep": 111906139,
+    "opp": "Leo Udah",
+    "opp_lb": 2129.1,
+    "delta": -7550.0
+   },
+   {
+    "ep": 111703806,
+    "opp": "Hangyu Yu",
+    "opp_lb": 2705.1,
+    "delta": -7414.0
+   },
+   {
+    "ep": 111985098,
+    "opp": "Bohdan Boklah",
+    "opp_lb": 1762.6,
+    "delta": -6631.0
+   },
+   {
+    "ep": 111536760,
+    "opp": "payne yam",
+    "opp_lb": 1935.3,
+    "delta": -6623.0
+   },
+   {
+    "ep": 111809351,
+    "opp": "Aniket Sharma",
+    "opp_lb": 2669.9,
+    "delta": -6176.0
+   },
+   {
+    "ep": 111357026,
+    "opp": "Fedor",
+    "opp_lb": 1834.1,
+    "delta": -5982.0
+   },
+   {
+    "ep": 111881076,
+    "opp": "JeremyLIU858",
+    "opp_lb": 1929.6,
+    "delta": -5721.0
+   },
+   {
+    "ep": 111768023,
+    "opp": "marwar22",
+    "opp_lb": 2380.1,
+    "delta": -5708.0
+   },
+   {
+    "ep": 111608213,
+    "opp": "tokitamago",
+    "opp_lb": 2176.6,
+    "delta": -5321.0
+   },
+   {
+    "ep": 111921933,
+    "opp": "Abhi Datta",
+    "opp_lb": 2441.4,
+    "delta": -5227.0
+   },
+   {
+    "ep": 111874038,
+    "opp": "Yuan Weijun",
+    "opp_lb": 2655.6,
+    "delta": -5073.0
+   },
+   {
+    "ep": 111348151,
+    "opp": "giraffeneck",
+    "opp_lb": 2563.2,
+    "delta": -5000.0
+   },
+   {
+    "ep": 111530511,
+    "opp": "\u597d\u8fd0\u8fde\u8fde",
+    "opp_lb": 2511.7,
+    "delta": -4956.0
+   },
+   {
+    "ep": 111847746,
+    "opp": "\u307b\u306e\u307c\u306e\u7267\u5834",
+    "opp_lb": 2469.5,
+    "delta": -4948.0
+   },
+   {
+    "ep": 111591971,
+    "opp": "Jyo",
+    "opp_lb": null,
+    "delta": -4746.0
+   },
+   {
+    "ep": 111570609,
+    "opp": "One-For-All",
+    "opp_lb": 2397.1,
+    "delta": -4737.0
+   },
+   {
+    "ep": 111504241,
+    "opp": "xiao xiongwei",
+    "opp_lb": 2673.9,
+    "delta": -4671.0
+   },
+   {
+    "ep": 111671179,
+    "opp": "\u5317\u67d3\u714b\u5bb8",
+    "opp_lb": null,
+    "delta": -4643.0
+   },
+   {
+    "ep": 111646702,
+    "opp": "Kirderf",
+    "opp_lb": 2670.3,
+    "delta": -4324.0
+   },
+   {
+    "ep": 111325969,
+    "opp": "hongzhouzhou",
+    "opp_lb": 1786.2,
+    "delta": -4167.0
+   },
+   {
+    "ep": 111620003,
+    "opp": "Sushanth Tiruvaipati",
+    "opp_lb": 2303.0,
+    "delta": -4114.0
+   },
+   {
+    "ep": 111698921,
+    "opp": "yuki #2",
+    "opp_lb": 1896.5,
+    "delta": -3904.0
+   },
+   {
+    "ep": 111318073,
+    "opp": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u041a\u043e\u0432\u043a\u0456\u043d",
+    "opp_lb": 2669.2,
+    "delta": -3739.0
+   },
+   {
+    "ep": 111362568,
+    "opp": "infamemconculcemus",
+    "opp_lb": 1872.0,
+    "delta": -3728.0
+   },
+   {
+    "ep": 111418055,
+    "opp": "Gobi Elangovan",
+    "opp_lb": 2366.9,
+    "delta": -3654.0
+   },
+   {
+    "ep": 111826546,
+    "opp": "Ryoya Tsuruoka",
+    "opp_lb": 2563.0,
+    "delta": -3606.0
+   },
+   {
+    "ep": 111726094,
+    "opp": "ReD_MooN_rise",
+    "opp_lb": 2335.1,
+    "delta": -3501.0
+   },
+   {
+    "ep": 112004839,
+    "opp": "Dzmitry Pihulski",
+    "opp_lb": 2543.1,
+    "delta": -3485.0
+   },
+   {
+    "ep": 111974011,
+    "opp": "Van-Phuc Huynh",
+    "opp_lb": 2160.5,
+    "delta": -3182.0
+   },
+   {
+    "ep": 111416029,
+    "opp": "Zhou Hengyu",
+    "opp_lb": 2640.3,
+    "delta": -3071.0
+   },
+   {
+    "ep": 111323736,
+    "opp": "momohuhu_kkkkkarrot",
+    "opp_lb": 2523.8,
+    "delta": -3059.0
+   },
+   {
+    "ep": 111514341,
+    "opp": "Sailor Ren",
+    "opp_lb": 2434.4,
+    "delta": -2966.0
+   },
+   {
+    "ep": 111966360,
+    "opp": "infamemconculcemus",
+    "opp_lb": 1872.0,
+    "delta": -2935.0
+   },
+   {
+    "ep": 111793314,
+    "opp": "Kudo",
+    "opp_lb": 2682.1,
+    "delta": -2846.0
+   },
+   {
+    "ep": 111391137,
+    "opp": "Guilherme Volpe",
+    "opp_lb": 2013.7,
+    "delta": -2822.0
+   },
+   {
+    "ep": 111322014,
+    "opp": "Mike Mordetsky",
+    "opp_lb": 2542.3,
+    "delta": -2721.0
+   },
+   {
+    "ep": 111722503,
+    "opp": "fanmili",
+    "opp_lb": 2156.6,
+    "delta": -2643.0
+   },
+   {
+    "ep": 111931348,
+    "opp": "Daiki Takahashi",
+    "opp_lb": 2291.5,
+    "delta": -2512.0
+   },
+   {
+    "ep": 111343731,
+    "opp": "montplusa",
+    "opp_lb": 1740.3,
+    "delta": -2440.0
+   },
+   {
+    "ep": 111586248,
+    "opp": "ketterking",
+    "opp_lb": 2157.4,
+    "delta": -2342.0
+   },
+   {
+    "ep": 111961178,
+    "opp": "Kucing Garong",
+    "opp_lb": 2623.8,
+    "delta": -2292.0
+   },
+   {
+    "ep": 111347065,
+    "opp": "Smackaveli",
+    "opp_lb": 1357.1,
+    "delta": -2228.0
+   },
+   {
+    "ep": 111511706,
+    "opp": "mxt1022",
+    "opp_lb": 2076.0,
+    "delta": -2109.0
+   },
+   {
+    "ep": 111397659,
+    "opp": "Duck Typing",
+    "opp_lb": 2355.5,
+    "delta": -2026.0
+   },
+   {
+    "ep": 111429400,
+    "opp": "satokato",
+    "opp_lb": 1980.6,
+    "delta": -1991.0
+   },
+   {
+    "ep": 111470041,
+    "opp": "BobtheBot369",
+    "opp_lb": 1978.1,
+    "delta": -1978.0
+   },
+   {
+    "ep": 111754576,
+    "opp": "God111",
+    "opp_lb": 1928.7,
+    "delta": -1932.0
+   },
+   {
+    "ep": 111383075,
+    "opp": "\u5b64\u5be1\u5c11\u5e74",
+    "opp_lb": null,
+    "delta": -1811.0
+   },
+   {
+    "ep": 111585200,
+    "opp": "E-Max AI",
+    "opp_lb": 2299.4,
+    "delta": -1667.0
+   },
+   {
+    "ep": 111322600,
+    "opp": "Hongxin Su",
+    "opp_lb": 2384.0,
+    "delta": -1557.0
+   },
+   {
+    "ep": 111388117,
+    "opp": "Hubillionaire",
+    "opp_lb": 1881.1,
+    "delta": -1513.0
+   },
+   {
+    "ep": 111680330,
+    "opp": "Winter01",
+    "opp_lb": 2152.4,
+    "delta": -1461.0
+   },
+   {
+    "ep": 111921667,
+    "opp": "\u5b64\u5be1\u5c11\u5e74",
+    "opp_lb": null,
+    "delta": -1429.0
+   },
+   {
+    "ep": 111925586,
+    "opp": "mocatti",
+    "opp_lb": 2000.6,
+    "delta": -1418.0
+   },
+   {
+    "ep": 111946401,
+    "opp": "John Doe",
+    "opp_lb": 1919.3,
+    "delta": -1407.0
+   },
+   {
+    "ep": 111432891,
+    "opp": "Setu Chokshi",
+    "opp_lb": 1882.5,
+    "delta": -1301.0
+   },
+   {
+    "ep": 111991249,
+    "opp": "nikotin55",
+    "opp_lb": 2014.2,
+    "delta": -1280.0
+   },
+   {
+    "ep": 111899334,
+    "opp": "KUO JEN WEI",
+    "opp_lb": 1978.3,
+    "delta": -1265.0
+   },
+   {
+    "ep": 111860037,
+    "opp": "Duc-Anh Nguyen",
+    "opp_lb": 1853.4,
+    "delta": -1262.0
+   },
+   {
+    "ep": 111476273,
+    "opp": "linhaiy",
+    "opp_lb": 1929.3,
+    "delta": -1260.0
+   },
+   {
+    "ep": 111654202,
+    "opp": "nasubiman",
+    "opp_lb": 1915.1,
+    "delta": -1226.0
+   },
+   {
+    "ep": 111962718,
+    "opp": "Daiki Takahashi",
+    "opp_lb": 2291.5,
+    "delta": -1202.0
+   },
+   {
+    "ep": 111637345,
+    "opp": "Jordi Corbilla",
+    "opp_lb": 2160.8,
+    "delta": -1100.0
+   },
+   {
+    "ep": 111359940,
+    "opp": "Ayush Gupta #2",
+    "opp_lb": 1904.0,
+    "delta": -1068.0
+   },
+   {
+    "ep": 111463651,
+    "opp": "Izzoudine Mohamed KANTA",
+    "opp_lb": 1381.0,
+    "delta": -1055.0
+   },
+   {
+    "ep": 111981437,
+    "opp": "JeremyLIU858",
+    "opp_lb": 1929.6,
+    "delta": -1051.0
+   },
+   {
+    "ep": 111400403,
+    "opp": "YBEJlKA",
+    "opp_lb": 1944.4,
+    "delta": -1013.0
+   },
+   {
+    "ep": 111369217,
+    "opp": "shoryakumar mishra",
+    "opp_lb": 2502.0,
+    "delta": -1004.0
+   },
+   {
+    "ep": 111970863,
+    "opp": "Sergey Kutepov",
+    "opp_lb": 2701.6,
+    "delta": -981.0
+   },
+   {
+    "ep": 111590458,
+    "opp": "Mforg",
+    "opp_lb": 1964.6,
+    "delta": -967.0
+   },
+   {
+    "ep": 111621363,
+    "opp": "Xiangsong Tian",
+    "opp_lb": 1955.0,
+    "delta": -950.0
+   },
+   {
+    "ep": 111842145,
+    "opp": "Phoenix750",
+    "opp_lb": 2081.2,
+    "delta": -943.0
+   },
+   {
+    "ep": 111946520,
+    "opp": "Deskbo",
+    "opp_lb": 1872.0,
+    "delta": -942.0
+   },
+   {
+    "ep": 111351489,
+    "opp": "islet",
+    "opp_lb": 1995.8,
+    "delta": -921.0
+   },
+   {
+    "ep": 111446099,
+    "opp": "FlameZywoo",
+    "opp_lb": 1989.5,
+    "delta": -839.0
+   },
+   {
+    "ep": 111375868,
+    "opp": "Kundan Bhaskar",
+    "opp_lb": 2536.3,
+    "delta": -834.0
+   },
+   {
+    "ep": 111579384,
+    "opp": "The Grower",
+    "opp_lb": 2823.3,
+    "delta": -804.0
+   },
+   {
+    "ep": 111407751,
+    "opp": "Seho.Connect",
+    "opp_lb": 2623.1,
+    "delta": -802.0
+   },
+   {
+    "ep": 111404927,
+    "opp": "feles99",
+    "opp_lb": 2359.3,
+    "delta": -789.0
+   },
+   {
+    "ep": 111630639,
+    "opp": "Dresden",
+    "opp_lb": 1909.0,
+    "delta": -789.0
+   },
+   {
+    "ep": 111743592,
+    "opp": "alessandrozonta",
+    "opp_lb": 1919.9,
+    "delta": -735.0
+   },
+   {
+    "ep": 111817907,
+    "opp": "thwaitsusa2",
+    "opp_lb": 1897.1,
+    "delta": -705.0
+   },
+   {
+    "ep": 111775744,
+    "opp": "lvisdd",
+    "opp_lb": 2177.8,
+    "delta": -683.0
+   },
+   {
+    "ep": 111380288,
+    "opp": "Ali Alghaithi",
+    "opp_lb": 1933.3,
+    "delta": -675.0
+   },
+   {
+    "ep": 111373636,
+    "opp": "Amyel21",
+    "opp_lb": 1855.8,
+    "delta": -661.0
+   },
+   {
+    "ep": 111505899,
+    "opp": "Ryuuga89",
+    "opp_lb": 1813.1,
+    "delta": -550.0
+   },
+   {
+    "ep": 111798314,
+    "opp": "linmumu009",
+    "opp_lb": 2711.9,
+    "delta": -540.0
+   },
+   {
+    "ep": 111329331,
+    "opp": "cooked",
+    "opp_lb": 2427.2,
+    "delta": -534.0
+   },
+   {
+    "ep": 111923737,
+    "opp": "Sara Lark",
+    "opp_lb": 2382.2,
+    "delta": -527.0
+   },
+   {
+    "ep": 111759302,
+    "opp": "Jordi Corbilla",
+    "opp_lb": 2160.8,
+    "delta": -440.0
+   },
+   {
+    "ep": 111488047,
+    "opp": "TY0912",
+    "opp_lb": 1861.7,
+    "delta": -420.0
+   },
+   {
+    "ep": 111788552,
+    "opp": "thwaitsusa2",
+    "opp_lb": 1897.1,
+    "delta": -403.0
+   },
+   {
+    "ep": 111749091,
+    "opp": "YujieXing10",
+    "opp_lb": 1950.4,
+    "delta": -397.0
+   },
+   {
+    "ep": 111803550,
+    "opp": "Carson Zhang",
+    "opp_lb": 2685.1,
+    "delta": -351.0
+   },
+   {
+    "ep": 111337013,
+    "opp": "Chiranjith",
+    "opp_lb": 1898.5,
+    "delta": -317.0
+   },
+   {
+    "ep": 111432728,
+    "opp": "MilkaDVP",
+    "opp_lb": null,
+    "delta": -307.0
+   },
+   {
+    "ep": 111854163,
+    "opp": "alessandrozonta",
+    "opp_lb": 1919.9,
+    "delta": -307.0
+   },
+   {
+    "ep": 111782557,
+    "opp": "Zhou Haonan",
+    "opp_lb": 2543.5,
+    "delta": -306.0
+   },
+   {
+    "ep": 111411282,
+    "opp": "Arnav Goel",
+    "opp_lb": 2459.5,
+    "delta": -304.0
+   },
+   {
+    "ep": 111372546,
+    "opp": "9Hash",
+    "opp_lb": 1929.1,
+    "delta": -298.0
+   },
+   {
+    "ep": 111837536,
+    "opp": "inny",
+    "opp_lb": 1894.9,
+    "delta": -298.0
+   },
+   {
+    "ep": 111619120,
+    "opp": "yy",
+    "opp_lb": 2719.2,
+    "delta": -295.0
+   },
+   {
+    "ep": 111370186,
+    "opp": "mraz1006",
+    "opp_lb": 2352.4,
+    "delta": -291.0
+   },
+   {
+    "ep": 111339325,
+    "opp": "ShuHaya",
+    "opp_lb": 1838.2,
+    "delta": -289.0
+   },
+   {
+    "ep": 111342636,
+    "opp": "SShota-box",
+    "opp_lb": 2000.9,
+    "delta": -288.0
+   },
+   {
+    "ep": 111364793,
+    "opp": "alessandrozonta",
+    "opp_lb": 1919.9,
+    "delta": -288.0
+   },
+   {
+    "ep": 111489007,
+    "opp": "kglctf",
+    "opp_lb": 2348.5,
+    "delta": -287.0
+   },
+   {
+    "ep": 111365894,
+    "opp": "alessandrozonta",
+    "opp_lb": 1919.9,
+    "delta": -282.0
+   },
+   {
+    "ep": 111378084,
+    "opp": "Zhongkai Shangguan",
+    "opp_lb": 2079.3,
+    "delta": -266.0
+   },
+   {
+    "ep": 111770281,
+    "opp": "Sanyam Jain",
+    "opp_lb": 1922.7,
+    "delta": -242.0
+   },
+   {
+    "ep": 111873327,
+    "opp": "YBEJlKA",
+    "opp_lb": 1944.4,
+    "delta": -242.0
+   },
+   {
+    "ep": 111500566,
+    "opp": "Takuto Inoue",
+    "opp_lb": 2418.0,
+    "delta": -237.0
+   },
+   {
+    "ep": 111732461,
+    "opp": "John Doe",
+    "opp_lb": 1919.3,
+    "delta": -236.0
+   },
+   {
+    "ep": 111629683,
+    "opp": "renta.k",
+    "opp_lb": 2229.5,
+    "delta": -221.0
+   },
+   {
+    "ep": 111379187,
+    "opp": "Zhongkai Shangguan",
+    "opp_lb": 2079.3,
+    "delta": -210.0
+   },
+   {
+    "ep": 111831997,
+    "opp": "Saksham Gupta",
+    "opp_lb": 2409.6,
+    "delta": -164.0
+   },
+   {
+    "ep": 111679934,
+    "opp": "Ioannis Tzachristas",
+    "opp_lb": 2206.7,
+    "delta": -123.0
+   },
+   {
+    "ep": 111468450,
+    "opp": "lllleeeo",
+    "opp_lb": 1876.9,
+    "delta": -96.0
+   },
+   {
+    "ep": 111333762,
+    "opp": "RicardoL\u00f3pez",
+    "opp_lb": 2608.5,
+    "delta": -90.0
+   },
+   {
+    "ep": 111331177,
+    "opp": "SamarthRawat18",
+    "opp_lb": 1787.8,
+    "delta": -86.0
+   },
+   {
+    "ep": 111382764,
+    "opp": "Hubillionaire",
+    "opp_lb": 1881.1,
+    "delta": -46.0
+   },
+   {
+    "ep": 111518079,
+    "opp": "Kembang Melon",
+    "opp_lb": 1924.5,
+    "delta": -36.0
+   },
+   {
+    "ep": 111321476,
+    "opp": "qi yun",
+    "opp_lb": 2174.1,
+    "delta": -31.0
+   },
+   {
+    "ep": 111438274,
+    "opp": "dpquoc",
+    "opp_lb": 2338.3,
+    "delta": -26.0
+   },
+   {
+    "ep": 111769028,
+    "opp": "xder",
+    "opp_lb": 1848.1,
+    "delta": -24.0
+   },
+   {
+    "ep": 111415320,
+    "opp": "Alperen S\u00f6ylen",
+    "opp_lb": 2561.9,
+    "delta": -18.0
+   },
+   {
+    "ep": 111808292,
+    "opp": "KOSUKE MATSUDA",
+    "opp_lb": 1824.7,
+    "delta": -18.0
+   },
+   {
+    "ep": 111382834,
+    "opp": "Anay Garodia",
+    "opp_lb": 1851.1,
+    "delta": -16.0
+   },
+   {
+    "ep": 111662099,
+    "opp": "Sakito Horie",
+    "opp_lb": 1803.0,
+    "delta": -4.0
+   },
+   {
+    "ep": 111340424,
+    "opp": "moonzfxs",
+    "opp_lb": 1892.0,
+    "delta": -2.0
+   }
+  ],
+  "wins_vs_strongest": [
+   {
+    "ep": 111355923,
+    "opp": "Gabriel",
+    "opp_lb": 2769.9,
+    "delta": 1886.0
+   },
+   {
+    "ep": 111315826,
+    "opp": "yy",
+    "opp_lb": 2719.2,
+    "delta": 4665.0
+   },
+   {
+    "ep": 111395966,
+    "opp": "yy",
+    "opp_lb": 2719.2,
+    "delta": 1578.0
+   },
+   {
+    "ep": 111312534,
+    "opp": "Wills Cui",
+    "opp_lb": 2587.8,
+    "delta": 3379.0
+   },
+   {
+    "ep": 111338211,
+    "opp": "S.Aoki",
+    "opp_lb": 2451.2,
+    "delta": 354.0
+   },
+   {
+    "ep": 111320350,
+    "opp": "MD. Nazmus Sakib Anik",
+    "opp_lb": 2432.9,
+    "delta": 2284.0
+   },
+   {
+    "ep": 111354808,
+    "opp": "ArnabKarmakar",
+    "opp_lb": 2427.5,
+    "delta": 331.0
+   },
+   {
+    "ep": 111334880,
+    "opp": "Hanaro",
+    "opp_lb": 2405.4,
+    "delta": 2226.0
+   },
+   {
+    "ep": 111494822,
+    "opp": "Tavuk Master",
+    "opp_lb": 2394.0,
+    "delta": 121.0
+   },
+   {
+    "ep": 111725606,
+    "opp": "Tavuk Master",
+    "opp_lb": 2394.0,
+    "delta": 1345.0
+   }
+  ]
+ }
+}
