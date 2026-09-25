@@ -1,0 +1,178 @@
+[
+  {
+    "iteration": 1,
+    "seed": 249635,
+    "opp_id": "E8_DMITRII",
+    "chosen_plan": 3,
+    "delta_cash_v42": 5.0,
+    "delta_margin_v42": 1.0,
+    "reward": 1.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 2,
+    "seed": 249636,
+    "opp_id": "E2_A7",
+    "chosen_plan": 1,
+    "delta_cash_v42": -1.0,
+    "delta_margin_v42": -2.0,
+    "reward": -2.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 3,
+    "seed": 249637,
+    "opp_id": "E0_V3",
+    "chosen_plan": 4,
+    "delta_cash_v42": 20.0,
+    "delta_margin_v42": 72.0,
+    "reward": 72.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 4,
+    "seed": 249638,
+    "opp_id": "SYN_AGG",
+    "chosen_plan": 4,
+    "delta_cash_v42": 3.0,
+    "delta_margin_v42": 3.0,
+    "reward": 3.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 5,
+    "seed": 249640,
+    "opp_id": "E8_DMITRII",
+    "chosen_plan": 3,
+    "delta_cash_v42": 0.0,
+    "delta_margin_v42": 0.0,
+    "reward": 0.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 6,
+    "seed": 249644,
+    "opp_id": "E2_A7",
+    "chosen_plan": 4,
+    "delta_cash_v42": -12.0,
+    "delta_margin_v42": -4.0,
+    "reward": -4.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 7,
+    "seed": 249648,
+    "opp_id": "E0_V3",
+    "chosen_plan": 0,
+    "delta_cash_v42": 4.0,
+    "delta_margin_v42": 17.0,
+    "reward": 17.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 8,
+    "seed": 249657,
+    "opp_id": "SYN_AGG",
+    "chosen_plan": 2,
+    "delta_cash_v42": 0.0,
+    "delta_margin_v42": 0.0,
+    "reward": 0.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 9,
+    "seed": 249635,
+    "opp_id": "E8_DMITRII",
+    "chosen_plan": 4,
+    "delta_cash_v42": 11.0,
+    "delta_margin_v42": 9.0,
+    "reward": 9.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 10,
+    "seed": 249636,
+    "opp_id": "E2_A7",
+    "chosen_plan": 0,
+    "delta_cash_v42": 0.0,
+    "delta_margin_v42": 0.0,
+    "reward": 0.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 11,
+    "seed": 249637,
+    "opp_id": "E0_V3",
+    "chosen_plan": 4,
+    "delta_cash_v42": 20.0,
+    "delta_margin_v42": 72.0,
+    "reward": 72.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 12,
+    "seed": 249638,
+    "opp_id": "SYN_AGG",
+    "chosen_plan": 1,
+    "delta_cash_v42": 3.0,
+    "delta_margin_v42": 3.0,
+    "reward": 3.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 13,
+    "seed": 249640,
+    "opp_id": "E8_DMITRII",
+    "chosen_plan": 3,
+    "delta_cash_v42": 0.0,
+    "delta_margin_v42": 0.0,
+    "reward": 0.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 14,
+    "seed": 249644,
+    "opp_id": "E2_A7",
+    "chosen_plan": 0,
+    "delta_cash_v42": -12.0,
+    "delta_margin_v42": -4.0,
+    "reward": -4.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 15,
+    "seed": 249648,
+    "opp_id": "E0_V3",
+    "chosen_plan": 0,
+    "delta_cash_v42": 4.0,
+    "delta_margin_v42": 17.0,
+    "reward": 17.0,
+    "rescue": false,
+    "casualty": false
+  },
+  {
+    "iteration": 16,
+    "seed": 249657,
+    "opp_id": "SYN_AGG",
+    "chosen_plan": 2,
+    "delta_cash_v42": 0.0,
+    "delta_margin_v42": 0.0,
+    "reward": 0.0,
+    "rescue": false,
+    "casualty": false
+  }
+]

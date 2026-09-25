@@ -1,0 +1,79 @@
+{
+  "Ladder A (V35 Baseline)": {
+    "ladder_name": "Ladder A (V35 Baseline)",
+    "total_matchups": 16,
+    "total_legs": 32,
+    "candidate_win_rate": 100.0,
+    "baseline_win_rate": 100.0,
+    "mean_cash_delta": 0.0,
+    "median_cash_delta": 0.0,
+    "total_casualties": 0,
+    "total_rescues": 0
+  },
+  "Ladder B (V39 Targeted)": {
+    "ladder_name": "Ladder B (V39 Targeted)",
+    "total_matchups": 16,
+    "total_legs": 32,
+    "candidate_win_rate": 100.0,
+    "baseline_win_rate": 100.0,
+    "mean_cash_delta": 82.31,
+    "median_cash_delta": 64.5,
+    "total_casualties": 0,
+    "total_rescues": 0
+  },
+  "Ladder C (V42-Det)": {
+    "ladder_name": "Ladder C (V42-Det)",
+    "total_matchups": 16,
+    "total_legs": 32,
+    "candidate_win_rate": 100.0,
+    "baseline_win_rate": 100.0,
+    "mean_cash_delta": 106.19,
+    "median_cash_delta": 63.0,
+    "total_casualties": 0,
+    "total_rescues": 0
+  },
+  "Ladder D (V42-Alpha Model)": {
+    "ladder_name": "Ladder D (V42-Alpha Model)",
+    "total_matchups": 16,
+    "total_legs": 32,
+    "candidate_win_rate": 100.0,
+    "baseline_win_rate": 100.0,
+    "mean_cash_delta": 0.0,
+    "median_cash_delta": 0.0,
+    "total_casualties": 0,
+    "total_rescues": 0
+  },
+  "Ladder E (V43-Seq Det)": {
+    "ladder_name": "Ladder E (V43-Seq Det)",
+    "total_matchups": 16,
+    "total_legs": 32,
+    "candidate_win_rate": 100.0,
+    "baseline_win_rate": 100.0,
+    "mean_cash_delta": 97.94,
+    "median_cash_delta": 60.0,
+    "total_casualties": 0,
+    "total_rescues": 0
+  },
+  "Ladder F (V43-Learned Seq)": {
+    "ladder_name": "Ladder F (V43-Learned Seq)",
+    "total_matchups": 16,
+    "total_legs": 32,
+    "candidate_win_rate": 100.0,
+    "baseline_win_rate": 100.0,
+    "mean_cash_delta": 74.12,
+    "median_cash_delta": 0.0,
+    "total_casualties": 0,
+    "total_rescues": 0
+  },
+  "Ladder G (V43-Recurrent RL)": {
+    "ladder_name": "Ladder G (V43-Recurrent RL)",
+    "total_matchups": 16,
+    "total_legs": 32,
+    "candidate_win_rate": 100.0,
+    "baseline_win_rate": 100.0,
+    "mean_cash_delta": 97.94,
+    "median_cash_delta": 60.0,
+    "total_casualties": 0,
+    "total_rescues": 0
+  }
+}

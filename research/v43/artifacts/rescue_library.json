@@ -1,0 +1,223 @@
+{
+  "total_losses_audited": 2,
+  "distinct_matches_rescued": 1,
+  "rescue_coverage_rate": 50.0,
+  "rescues_by_sequence_depth": {
+    "1": 1,
+    "2": 0,
+    "3": 0
+  },
+  "rescues": [
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "1STEP_LIQ_FULL_694",
+      "schedule": {
+        "694": 4
+      },
+      "alpha_entry_point": 694,
+      "sequence_depth": 1,
+      "base_margin": -374.0,
+      "cand_margin": 145.0,
+      "margin_delta": 519.0,
+      "cash_delta": 173.0,
+      "base_win": false,
+      "cand_win": true,
+      "is_rescue": true,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "1STEP_LIQ_PART_694",
+      "schedule": {
+        "694": 2
+      },
+      "alpha_entry_point": 694,
+      "sequence_depth": 1,
+      "base_margin": -374.0,
+      "cand_margin": -64.0,
+      "margin_delta": 310.0,
+      "cash_delta": 140.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "2STEP_LIQ_50_50",
+      "schedule": {
+        "694": 2,
+        "705": 2
+      },
+      "alpha_entry_point": 694,
+      "sequence_depth": 2,
+      "base_margin": -374.0,
+      "cand_margin": -34.0,
+      "margin_delta": 340.0,
+      "cash_delta": 153.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "2STEP_LIQ_30_70",
+      "schedule": {
+        "694": 1,
+        "705": 3
+      },
+      "alpha_entry_point": 694,
+      "sequence_depth": 2,
+      "base_margin": -374.0,
+      "cand_margin": -105.0,
+      "margin_delta": 269.0,
+      "cash_delta": 125.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "2STEP_LIQ_40_60",
+      "schedule": {
+        "694": 1,
+        "705": 3
+      },
+      "alpha_entry_point": 694,
+      "sequence_depth": 2,
+      "base_margin": -374.0,
+      "cand_margin": -105.0,
+      "margin_delta": 269.0,
+      "cash_delta": 125.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "2STEP_PRESERVE_AND_LIQ",
+      "schedule": {
+        "300": 8,
+        "694": 2
+      },
+      "alpha_entry_point": 300,
+      "sequence_depth": 2,
+      "base_margin": -374.0,
+      "cand_margin": -64.0,
+      "margin_delta": 310.0,
+      "cash_delta": 140.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "2STEP_DEFER_AND_LIQ",
+      "schedule": {
+        "200": 9,
+        "694": 2
+      },
+      "alpha_entry_point": 200,
+      "sequence_depth": 2,
+      "base_margin": -374.0,
+      "cand_margin": -64.0,
+      "margin_delta": 310.0,
+      "cash_delta": 140.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "3STEP_PRESERVE_STAGGERED_LIQ",
+      "schedule": {
+        "250": 8,
+        "694": 2,
+        "705": 2
+      },
+      "alpha_entry_point": 250,
+      "sequence_depth": 3,
+      "base_margin": -374.0,
+      "cand_margin": -34.0,
+      "margin_delta": 340.0,
+      "cash_delta": 153.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "3STEP_DEFER_STAGGERED_LIQ",
+      "schedule": {
+        "200": 9,
+        "694": 2,
+        "705": 2
+      },
+      "alpha_entry_point": 200,
+      "sequence_depth": 3,
+      "base_margin": -374.0,
+      "cand_margin": -34.0,
+      "margin_delta": 340.0,
+      "cash_delta": 153.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "3STEP_STAGGERED_FLUSH",
+      "schedule": {
+        "694": 2,
+        "705": 2,
+        "716": 4
+      },
+      "alpha_entry_point": 694,
+      "sequence_depth": 3,
+      "base_margin": -374.0,
+      "cand_margin": -34.0,
+      "margin_delta": 340.0,
+      "cash_delta": 153.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    },
+    {
+      "seed": 249657,
+      "opp_id": "E2_A7",
+      "schedule_name": "3STEP_OPTIMAL_COMBO",
+      "schedule": {
+        "300": 8,
+        "694": 2,
+        "716": 4
+      },
+      "alpha_entry_point": 300,
+      "sequence_depth": 3,
+      "base_margin": -374.0,
+      "cand_margin": -64.0,
+      "margin_delta": 310.0,
+      "cash_delta": 140.0,
+      "base_win": false,
+      "cand_win": false,
+      "is_rescue": false,
+      "is_mitigation": true
+    }
+  ]
+}

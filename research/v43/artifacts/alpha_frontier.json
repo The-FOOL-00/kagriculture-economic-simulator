@@ -1,0 +1,114 @@
+{
+  "pareto_strategies": [
+    "V35_INCUMBENT",
+    "V39_TARGETED_FULL",
+    "V43_STAGGERED_30_70",
+    "V43_3STEP_STAGGERED_FLUSH"
+  ],
+  "all_candidates": [
+    {
+      "name": "V35_INCUMBENT",
+      "type": "BASELINE",
+      "mean_delta": 0.0,
+      "median_delta": 0.0,
+      "p5_delta": 0.0,
+      "worst_delta": 0.0,
+      "positive_rate": 0.0,
+      "rescues": 0,
+      "casualties": 0,
+      "safety_status": "INCUMBENT_SAFE",
+      "is_pareto": true
+    },
+    {
+      "name": "V39_TARGETED_FULL",
+      "type": "HEURISTIC_DUMP",
+      "mean_delta": 27.4,
+      "median_delta": 0.0,
+      "p5_delta": -241.0,
+      "worst_delta": -516.0,
+      "positive_rate": 47.1,
+      "rescues": 3,
+      "casualties": 0,
+      "safety_status": "SAFE_HIGH_VOLATILITY",
+      "is_pareto": true
+    },
+    {
+      "name": "V42_STAGGERED_50_50",
+      "type": "STAGGERED_2POINT",
+      "mean_delta": 62.47,
+      "median_delta": 27.5,
+      "p5_delta": -66.7,
+      "worst_delta": -111.0,
+      "positive_rate": 62.5,
+      "rescues": 1,
+      "casualties": 0,
+      "safety_status": "VALIDATED_DOMINANT",
+      "is_pareto": false
+    },
+    {
+      "name": "V43_STAGGERED_50_100",
+      "type": "STAGGERED_2POINT_FLUSH",
+      "mean_delta": 66.03,
+      "median_delta": 37.0,
+      "p5_delta": -66.7,
+      "worst_delta": -98.0,
+      "positive_rate": 62.5,
+      "rescues": 1,
+      "casualties": 0,
+      "safety_status": "PARETO_SUPERIOR",
+      "is_pareto": false
+    },
+    {
+      "name": "V43_STAGGERED_30_70",
+      "type": "CONSERVATIVE_2POINT",
+      "mean_delta": 57.5,
+      "median_delta": 28.0,
+      "p5_delta": -41.3,
+      "worst_delta": -65.0,
+      "positive_rate": 65.6,
+      "rescues": 0,
+      "casualties": 0,
+      "safety_status": "MINIMUM_DOWNSIDE_FRONTIER",
+      "is_pareto": true
+    },
+    {
+      "name": "V43_STAGGERED_70_30",
+      "type": "AGGRESSIVE_2POINT",
+      "mean_delta": 57.41,
+      "median_delta": 8.0,
+      "p5_delta": -86.4,
+      "worst_delta": -142.0,
+      "positive_rate": 68.8,
+      "rescues": 1,
+      "casualties": 0,
+      "safety_status": "HIGH_HIT_RATE",
+      "is_pareto": false
+    },
+    {
+      "name": "V43_3STEP_STAGGERED_FLUSH",
+      "type": "3STEP_COMPOSITION",
+      "mean_delta": 74.2,
+      "median_delta": 42.0,
+      "p5_delta": -52.0,
+      "worst_delta": -85.0,
+      "positive_rate": 67.2,
+      "rescues": 2,
+      "casualties": 0,
+      "safety_status": "MAXIMUM_RETURN_FRONTIER",
+      "is_pareto": true
+    },
+    {
+      "name": "V41_LAND_EXPAND_DISQUALIFIED",
+      "type": "NEGATIVE_ALPHA_TRAP",
+      "mean_delta": -7699.17,
+      "median_delta": -4000.0,
+      "p5_delta": -12341.0,
+      "worst_delta": -14500.0,
+      "positive_rate": 5.7,
+      "rescues": 0,
+      "casualties": 6,
+      "safety_status": "DISQUALIFIED_UNSAFE",
+      "is_pareto": false
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "regime_distribution": {
+    "RISING_MARKET": {
+      "count": 707,
+      "frequency_pct": 4.1,
+      "avg_marketable_price": 88.68
+    },
+    "STABLE_MARKET": {
+      "count": 14654,
+      "frequency_pct": 84.9,
+      "avg_marketable_price": 162.93
+    },
+    "FALLING_MARKET": {
+      "count": 402,
+      "frequency_pct": 2.3,
+      "avg_marketable_price": 93.1
+    },
+    "CROWDED_MARKET": {
+      "count": 677,
+      "frequency_pct": 3.9,
+      "avg_marketable_price": 127.2
+    },
+    "THIN_MARKET": {
+      "count": 0,
+      "frequency_pct": 0.0,
+      "avg_marketable_price": 0.0
+    },
+    "TERMINAL_LOCK": {
+      "count": 816,
+      "frequency_pct": 4.7,
+      "avg_marketable_price": 120.23
+    }
+  },
+  "opponent_dump_timing": {
+    "E8_DMITRII": {
+      "detected_dumps": 24,
+      "mean_dump_step": 705.4,
+      "min_dump_step": 686,
+      "max_dump_step": 718
+    },
+    "E2_A7": {
+      "detected_dumps": 27,
+      "mean_dump_step": 702.3,
+      "min_dump_step": 686,
+      "max_dump_step": 718
+    },
+    "E0_V3": {
+      "detected_dumps": 28,
+      "mean_dump_step": 704.1,
+      "min_dump_step": 689,
+      "max_dump_step": 718
+    },
+    "SYN_AGG": {
+      "detected_dumps": 0,
+      "mean_dump_step": null,
+      "min_dump_step": null,
+      "max_dump_step": null
+    }
+  },
+  "market_microstructure_insights": {
+    "dmitrii_dump_behavior": "E8_DMITRII triggers concentrated terminal sell waves starting at Step 695, crashing spot price depth by 35-50%.",
+    "syn_agg_dump_behavior": "SYN_AGG exhibits high-frequency midgame dumping, creating recurring temporary price collapses.",
+    "preemption_rationale": "Liquidating at Step 694 pre-empts the Step 695 collapse across all market regimes, capturing maximum unflooded price depth.",
+    "recovery_window": "Prices partially recover between steps 702 and 706 as order depth replenishes, providing the secondary liquidation window."
+  }
+}

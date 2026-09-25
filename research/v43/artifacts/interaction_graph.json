@@ -1,0 +1,367 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "name": "NO_INTERVENTION"
+    },
+    {
+      "id": 1,
+      "name": "LIQUIDATE_PARTIAL_30"
+    },
+    {
+      "id": 2,
+      "name": "LIQUIDATE_PARTIAL_50"
+    },
+    {
+      "id": 3,
+      "name": "LIQUIDATE_PARTIAL_70"
+    },
+    {
+      "id": 4,
+      "name": "LIQUIDATE_FULL_100"
+    },
+    {
+      "id": 5,
+      "name": "SPOT_SELL_PEAK_MILK"
+    },
+    {
+      "id": 6,
+      "name": "SPOT_SELL_PEAK_WOOL"
+    },
+    {
+      "id": 7,
+      "name": "HOLD_DEPRESSED_GOODS"
+    },
+    {
+      "id": 8,
+      "name": "PRESERVE_LIQUIDITY_BUFFER"
+    },
+    {
+      "id": 9,
+      "name": "DEFER_EXPANSION_LOW_CASH"
+    }
+  ],
+  "edges": [
+    {
+      "source": 2,
+      "target": 2,
+      "pair_name": "STAGGERED_LIQ_50_50",
+      "interaction_effect": -76.91,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 128.78,
+      "rescues": 4,
+      "casualties": 0
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "pair_name": "STAGGERED_LIQ_30_70",
+      "interaction_effect": -73.16,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 122.31,
+      "rescues": 3,
+      "casualties": 0
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "pair_name": "STAGGERED_LIQ_50_100",
+      "interaction_effect": -62.97,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 120.84,
+      "rescues": 4,
+      "casualties": 0
+    },
+    {
+      "source": 4,
+      "target": 2,
+      "pair_name": "EARLY_DUMP_CONFLICT",
+      "interaction_effect": -84.84,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 107.78,
+      "rescues": 4,
+      "casualties": 0
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "pair_name": "LIQUIDITY_AND_DEFER",
+      "interaction_effect": -2418.97,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 2418.97,
+      "rescues": 0,
+      "casualties": 0
+    },
+    {
+      "source": 7,
+      "target": 5,
+      "pair_name": "HOLD_THEN_SPOT_MILK",
+      "interaction_effect": -1781.97,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 1780.31,
+      "rescues": 4,
+      "casualties": 0
+    },
+    {
+      "source": 7,
+      "target": 6,
+      "pair_name": "HOLD_THEN_SPOT_WOOL",
+      "interaction_effect": -1781.97,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 1781.97,
+      "rescues": 4,
+      "casualties": 0
+    },
+    {
+      "source": 5,
+      "target": 2,
+      "pair_name": "SPOT_MILK_AND_LIQ_50",
+      "interaction_effect": -2354.81,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 2415.53,
+      "rescues": 5,
+      "casualties": 0
+    },
+    {
+      "source": 6,
+      "target": 2,
+      "pair_name": "SPOT_WOOL_AND_LIQ_50",
+      "interaction_effect": -2354.81,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 2415.53,
+      "rescues": 5,
+      "casualties": 0
+    },
+    {
+      "source": 8,
+      "target": 2,
+      "pair_name": "PRESERVE_AND_LIQ_50",
+      "interaction_effect": -1605.5,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 1671.28,
+      "rescues": 5,
+      "casualties": 0
+    },
+    {
+      "source": 9,
+      "target": 2,
+      "pair_name": "DEFER_AND_LIQ_50",
+      "interaction_effect": -1696.06,
+      "classification": "ANTI_SYNERGY",
+      "composite_alpha": 1751.66,
+      "rescues": 0,
+      "casualties": 0
+    }
+  ],
+  "pair_details": {
+    "STAGGERED_LIQ_50_50": {
+      "pair_name": "STAGGERED_LIQ_50_50",
+      "step1": 694,
+      "action1": 2,
+      "name1": "LIQUIDATE_PARTIAL_50",
+      "step2": 705,
+      "action2": 2,
+      "name2": "LIQUIDATE_PARTIAL_50",
+      "mean_alpha_a": 120.84,
+      "mean_alpha_b": 84.84,
+      "mean_alpha_ab": 128.78,
+      "mean_interaction": -76.91,
+      "median_interaction": -0.5,
+      "p5_interaction": -368.45,
+      "p95_interaction": 0.9,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 4,
+      "casualties": 0
+    },
+    "STAGGERED_LIQ_30_70": {
+      "pair_name": "STAGGERED_LIQ_30_70",
+      "step1": 694,
+      "action1": 1,
+      "name1": "LIQUIDATE_PARTIAL_30",
+      "step2": 705,
+      "action2": 3,
+      "name2": "LIQUIDATE_PARTIAL_70",
+      "mean_alpha_a": 105.31,
+      "mean_alpha_b": 90.16,
+      "mean_alpha_ab": 122.31,
+      "mean_interaction": -73.16,
+      "median_interaction": 0.0,
+      "p5_interaction": -368.45,
+      "p95_interaction": 3.35,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 3,
+      "casualties": 0
+    },
+    "STAGGERED_LIQ_50_100": {
+      "pair_name": "STAGGERED_LIQ_50_100",
+      "step1": 694,
+      "action1": 2,
+      "name1": "LIQUIDATE_PARTIAL_50",
+      "step2": 716,
+      "action2": 4,
+      "name2": "LIQUIDATE_FULL_100",
+      "mean_alpha_a": 120.84,
+      "mean_alpha_b": 62.97,
+      "mean_alpha_ab": 120.84,
+      "mean_interaction": -62.97,
+      "median_interaction": 0.0,
+      "p5_interaction": -368.45,
+      "p95_interaction": 4.0,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 4,
+      "casualties": 0
+    },
+    "EARLY_DUMP_CONFLICT": {
+      "pair_name": "EARLY_DUMP_CONFLICT",
+      "step1": 694,
+      "action1": 4,
+      "name1": "LIQUIDATE_FULL_100",
+      "step2": 705,
+      "action2": 2,
+      "name2": "LIQUIDATE_PARTIAL_50",
+      "mean_alpha_a": 107.78,
+      "mean_alpha_b": 84.84,
+      "mean_alpha_ab": 107.78,
+      "mean_interaction": -84.84,
+      "median_interaction": -1.0,
+      "p5_interaction": -368.45,
+      "p95_interaction": 0.9,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 4,
+      "casualties": 0
+    },
+    "LIQUIDITY_AND_DEFER": {
+      "pair_name": "LIQUIDITY_AND_DEFER",
+      "step1": 200,
+      "action1": 8,
+      "name1": "PRESERVE_LIQUIDITY_BUFFER",
+      "step2": 280,
+      "action2": 9,
+      "name2": "DEFER_EXPANSION_LOW_CASH",
+      "mean_alpha_a": 2418.97,
+      "mean_alpha_b": 2418.97,
+      "mean_alpha_ab": 2418.97,
+      "mean_interaction": -2418.97,
+      "median_interaction": 0.0,
+      "p5_interaction": -18146.4,
+      "p95_interaction": 0.0,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 0,
+      "casualties": 0
+    },
+    "HOLD_THEN_SPOT_MILK": {
+      "pair_name": "HOLD_THEN_SPOT_MILK",
+      "step1": 350,
+      "action1": 7,
+      "name1": "HOLD_DEPRESSED_GOODS",
+      "step2": 500,
+      "action2": 5,
+      "name2": "SPOT_SELL_PEAK_MILK",
+      "mean_alpha_a": 1781.97,
+      "mean_alpha_b": 1780.31,
+      "mean_alpha_ab": 1780.31,
+      "mean_interaction": -1781.97,
+      "median_interaction": 0.0,
+      "p5_interaction": -14696.45,
+      "p95_interaction": 295.2,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 4,
+      "casualties": 0
+    },
+    "HOLD_THEN_SPOT_WOOL": {
+      "pair_name": "HOLD_THEN_SPOT_WOOL",
+      "step1": 350,
+      "action1": 7,
+      "name1": "HOLD_DEPRESSED_GOODS",
+      "step2": 500,
+      "action2": 6,
+      "name2": "SPOT_SELL_PEAK_WOOL",
+      "mean_alpha_a": 1781.97,
+      "mean_alpha_b": 1781.97,
+      "mean_alpha_ab": 1781.97,
+      "mean_interaction": -1781.97,
+      "median_interaction": 0.0,
+      "p5_interaction": -14696.45,
+      "p95_interaction": 295.2,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 4,
+      "casualties": 0
+    },
+    "SPOT_MILK_AND_LIQ_50": {
+      "pair_name": "SPOT_MILK_AND_LIQ_50",
+      "step1": 400,
+      "action1": 5,
+      "name1": "SPOT_SELL_PEAK_MILK",
+      "step2": 694,
+      "action2": 2,
+      "name2": "LIQUIDATE_PARTIAL_50",
+      "mean_alpha_a": 2354.81,
+      "mean_alpha_b": 2415.53,
+      "mean_alpha_ab": 2415.53,
+      "mean_interaction": -2354.81,
+      "median_interaction": 0.0,
+      "p5_interaction": -18047.2,
+      "p95_interaction": 227.7,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 5,
+      "casualties": 0
+    },
+    "SPOT_WOOL_AND_LIQ_50": {
+      "pair_name": "SPOT_WOOL_AND_LIQ_50",
+      "step1": 400,
+      "action1": 6,
+      "name1": "SPOT_SELL_PEAK_WOOL",
+      "step2": 694,
+      "action2": 2,
+      "name2": "LIQUIDATE_PARTIAL_50",
+      "mean_alpha_a": 2354.81,
+      "mean_alpha_b": 2415.53,
+      "mean_alpha_ab": 2415.53,
+      "mean_interaction": -2354.81,
+      "median_interaction": 0.0,
+      "p5_interaction": -18047.2,
+      "p95_interaction": 227.7,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 5,
+      "casualties": 0
+    },
+    "PRESERVE_AND_LIQ_50": {
+      "pair_name": "PRESERVE_AND_LIQ_50",
+      "step1": 300,
+      "action1": 8,
+      "name1": "PRESERVE_LIQUIDITY_BUFFER",
+      "step2": 694,
+      "action2": 2,
+      "name2": "LIQUIDATE_PARTIAL_50",
+      "mean_alpha_a": 1605.5,
+      "mean_alpha_b": 1671.28,
+      "mean_alpha_ab": 1671.28,
+      "mean_interaction": -1605.5,
+      "median_interaction": 0.0,
+      "p5_interaction": -13160.65,
+      "p95_interaction": 76.5,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 5,
+      "casualties": 0
+    },
+    "DEFER_AND_LIQ_50": {
+      "pair_name": "DEFER_AND_LIQ_50",
+      "step1": 250,
+      "action1": 9,
+      "name1": "DEFER_EXPANSION_LOW_CASH",
+      "step2": 694,
+      "action2": 2,
+      "name2": "LIQUIDATE_PARTIAL_50",
+      "mean_alpha_a": 1696.06,
+      "mean_alpha_b": 1751.66,
+      "mean_alpha_ab": 1751.66,
+      "mean_interaction": -1696.06,
+      "median_interaction": 0.0,
+      "p5_interaction": -13365.0,
+      "p95_interaction": 0.0,
+      "classification": "ANTI_SYNERGY",
+      "rescues": 0,
+      "casualties": 0
+    }
+  }
+}
