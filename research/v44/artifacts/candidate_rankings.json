@@ -1,0 +1,46 @@
+[
+  {
+    "rank": 1,
+    "candidate": "V44_COMPOSITION_CHAMPION",
+    "components": [
+      "TOWN_SHOP_ARBITRAGE",
+      "INVESTMENT_PAYBACK_CUTOFF",
+      "TERMINAL_STAGGERED_FLUSH"
+    ],
+    "mean_delta_v35": 94.08,
+    "median_delta_v35": 53.0,
+    "incremental_delta_v43": 24.08,
+    "casualties": 0,
+    "rescues": 1,
+    "win_rate": 95.8,
+    "status": "APPROVED_FOR_LEAGUE_TOURNAMENT"
+  },
+  {
+    "rank": 2,
+    "candidate": "V43_INCUMBENT_CHAMPION",
+    "components": [
+      "TERMINAL_STAGGERED_FLUSH"
+    ],
+    "mean_delta_v35": 70.0,
+    "median_delta_v35": 30.0,
+    "incremental_delta_v43": 0.0,
+    "casualties": 0,
+    "rescues": 1,
+    "win_rate": 95.8,
+    "status": "BASELINE_BENCHMARK"
+  },
+  {
+    "rank": 3,
+    "candidate": "V35_INCUMBENT_BASELINE",
+    "components": [
+      "A7_WASH_OPENING"
+    ],
+    "mean_delta_v35": 0.0,
+    "median_delta_v35": 0.0,
+    "incremental_delta_v43": -70.0,
+    "casualties": 0,
+    "rescues": 0,
+    "win_rate": 91.7,
+    "status": "ANCHOR_BASELINE"
+  }
+]

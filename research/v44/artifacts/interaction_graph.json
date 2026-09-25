@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    "TERMINAL_STAGGERED_FLUSH",
+    "TOWN_SHOP_ARBITRAGE",
+    "INVESTMENT_PAYBACK_CUTOFF",
+    "HIRE_EARLY_SURGE",
+    "ADVANCE_LAND_2"
+  ],
+  "edges": [
+    {
+      "pair": [
+        "TERMINAL_STAGGERED_FLUSH",
+        "TOWN_SHOP_ARBITRAGE"
+      ],
+      "alpha_A": 70.0,
+      "alpha_B": 0.0,
+      "alpha_AB": 94.08,
+      "interaction_effect": 24.08,
+      "relationship": "STRONGLY_SYNERGISTIC",
+      "mechanism": "Town shop arbitrage monetizes interim production without exhausting terminal tranches"
+    },
+    {
+      "pair": [
+        "TERMINAL_STAGGERED_FLUSH",
+        "INVESTMENT_PAYBACK_CUTOFF"
+      ],
+      "alpha_A": 70.0,
+      "alpha_B": 0.0,
+      "alpha_AB": 94.08,
+      "interaction_effect": 24.08,
+      "relationship": "STRONGLY_SYNERGISTIC",
+      "mechanism": "Payback cutoff preserves liquid cash that is cleanly realized at terminal"
+    },
+    {
+      "pair": [
+        "TOWN_SHOP_ARBITRAGE",
+        "ADVANCE_LAND_2"
+      ],
+      "alpha_A": 0.0,
+      "alpha_B": 2009.12,
+      "alpha_AB": -1420.0,
+      "interaction_effect": -3429.12,
+      "relationship": "STRONGLY_ANTISYNERGISTIC",
+      "mechanism": "Early land buy drains cash while early spot sales suffer price depression"
+    }
+  ]
+}

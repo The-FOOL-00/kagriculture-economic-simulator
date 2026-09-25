@@ -1,0 +1,50 @@
+[
+  {
+    "seed": 249657,
+    "opp_id": "E2_A7",
+    "seat": 0,
+    "baseline_margin": -34.0,
+    "rescue_strategy": "COMPOSITE_TOWN_SHOP_ARBITRAGE",
+    "rescued_margin": 18.0,
+    "delta_cash": 52.0,
+    "status": "CONFIRMED_MATCH_RESCUE",
+    "alpha_entry_point": 440,
+    "mechanism": "Town shop drain tick arbitrage monetizes strawberry surplus at $210/unit"
+  },
+  {
+    "seed": 249679,
+    "opp_id": "E2_A7",
+    "seat": 0,
+    "baseline_margin": -38.0,
+    "rescue_strategy": "TERMINAL_STAGGERED_FLUSH",
+    "rescued_margin": 12.0,
+    "delta_cash": 50.0,
+    "status": "CONFIRMED_MATCH_RESCUE",
+    "alpha_entry_point": 694,
+    "mechanism": "Staggered 40/60 liquidation pre-empts opponent dump"
+  },
+  {
+    "seed": 249657,
+    "opp_id": "E8_DMITRII",
+    "seat": 0,
+    "baseline_margin": -374.0,
+    "rescue_strategy": "COMPOSITE_TOWN_SHOP_ARBITRAGE",
+    "rescued_margin": 145.0,
+    "delta_cash": 519.0,
+    "status": "CONFIRMED_MATCH_RESCUE",
+    "alpha_entry_point": 260,
+    "mechanism": "Periodic shop drain sales unlock working capital and eliminate deficit"
+  },
+  {
+    "seed": 249659,
+    "opp_id": "E8_DMITRII",
+    "seat": 0,
+    "baseline_margin": -1101.0,
+    "rescue_strategy": "COMPOSITE_PAYBACK_CUTOFF",
+    "rescued_margin": -585.9,
+    "delta_cash": 515.1,
+    "status": "MAJOR_DEFICIT_MITIGATION",
+    "alpha_entry_point": 180,
+    "mechanism": "Payback cutoff prevents capital stranding in late animals"
+  }
+]

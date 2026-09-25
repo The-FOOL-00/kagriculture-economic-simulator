@@ -1,0 +1,44 @@
+{
+  "SHOP_DRAIN_TICK": {
+    "condition": "step % 4 == 0 or step % 4 == 1",
+    "market_state": "INVENTORY_DEFICIT",
+    "pricing_behavior": "SUPER_LINEAR_SCARCITY_PEAK",
+    "typical_price_multiplier": "1.3x to 1.8x base",
+    "recommended_action": "EXECUTE_TRANCHE_SPOT_SALE"
+  },
+  "TOWN_CENTER_DRAIN_TICK": {
+    "condition": "step % 12 == 0 or step % 12 == 1",
+    "market_state": "BROAD_COMMODITY_DRAIN",
+    "pricing_behavior": "MODERATE_PRICE_SPIKE",
+    "typical_price_multiplier": "1.2x to 1.5x base",
+    "recommended_action": "EXECUTE_DIVERSIFIED_SALE"
+  },
+  "OFF_TICK_ACCUMULATION": {
+    "condition": "step % 4 in (2, 3)",
+    "market_state": "ORDER_BOOK_SATURATION",
+    "pricing_behavior": "LOGARITHMIC_DECAY_FLOOR",
+    "typical_price_multiplier": "0.7x to 0.9x base",
+    "recommended_action": "HOLD_INVENTORY_IN_SHED"
+  },
+  "TERMINAL_PREEMPTION": {
+    "condition": "693 <= step <= 696",
+    "market_state": "PRE_CRASH_OPTIMUM",
+    "pricing_behavior": "HIGH_PRICE_BEFORE_OPPONENT_HARVEST",
+    "typical_price_multiplier": "1.0x to 1.4x base",
+    "recommended_action": "LIQUIDATE_40_PERCENT"
+  },
+  "TERMINAL_RECOVERY": {
+    "condition": "704 <= step <= 707",
+    "market_state": "POST_DUMP_ABSORPTION",
+    "pricing_behavior": "SECONDARY_ELASTICITY_PEAK",
+    "typical_price_multiplier": "0.9x to 1.2x base",
+    "recommended_action": "LIQUIDATE_60_PERCENT_REMAINDER"
+  },
+  "TERMINAL_FINAL_FLUSH": {
+    "condition": "step >= 716",
+    "market_state": "EPISODE_CLOSING",
+    "pricing_behavior": "ANY_PRICE_BEATS_ZERO_SALVAGE",
+    "typical_price_multiplier": "UNCONSTRAINED",
+    "recommended_action": "LIQUIDATE_100_PERCENT_RESIDUAL"
+  }
+}

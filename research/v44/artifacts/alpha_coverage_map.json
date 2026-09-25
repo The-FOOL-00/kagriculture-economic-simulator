@@ -1,0 +1,135 @@
+[
+  {
+    "phase_name": "Phase 1: 0-119",
+    "step_range": [
+      0,
+      119
+    ],
+    "phase_length_steps": 120,
+    "total_baseline_turns_evaluated": 1920,
+    "counterfactual_states_sampled": 0,
+    "counterfactual_coverage_pct": 0.0,
+    "interventions_tested": 2,
+    "positive_alpha_frequency_pct": 0.0,
+    "mean_alpha": 0.0,
+    "median_alpha": 0.0,
+    "max_alpha": 0.0,
+    "rescue_frequency": 0,
+    "unexplained_losses": 0,
+    "status": "MODERATELY_SEARCHED"
+  },
+  {
+    "phase_name": "Phase 2: 120-239",
+    "step_range": [
+      120,
+      239
+    ],
+    "phase_length_steps": 120,
+    "total_baseline_turns_evaluated": 1920,
+    "counterfactual_states_sampled": 48,
+    "counterfactual_coverage_pct": 4.6,
+    "interventions_tested": 0,
+    "positive_alpha_frequency_pct": 56.2,
+    "mean_alpha": 2441.25,
+    "median_alpha": 22.0,
+    "max_alpha": 28181.0,
+    "rescue_frequency": 0,
+    "unexplained_losses": 3,
+    "status": "CRITICAL_BLIND_SPOT"
+  },
+  {
+    "phase_name": "Phase 3: 240-359",
+    "step_range": [
+      240,
+      359
+    ],
+    "phase_length_steps": 120,
+    "total_baseline_turns_evaluated": 1920,
+    "counterfactual_states_sampled": 0,
+    "counterfactual_coverage_pct": 0.0,
+    "interventions_tested": 2,
+    "positive_alpha_frequency_pct": 0.0,
+    "mean_alpha": 0.0,
+    "median_alpha": 0.0,
+    "max_alpha": 0.0,
+    "rescue_frequency": 1,
+    "unexplained_losses": 3,
+    "status": "MODERATELY_SEARCHED"
+  },
+  {
+    "phase_name": "Phase 4: 360-479",
+    "step_range": [
+      360,
+      479
+    ],
+    "phase_length_steps": 120,
+    "total_baseline_turns_evaluated": 1920,
+    "counterfactual_states_sampled": 0,
+    "counterfactual_coverage_pct": 0.0,
+    "interventions_tested": 0,
+    "positive_alpha_frequency_pct": 0.0,
+    "mean_alpha": 0.0,
+    "median_alpha": 0.0,
+    "max_alpha": 0.0,
+    "rescue_frequency": 0,
+    "unexplained_losses": 3,
+    "status": "CRITICAL_BLIND_SPOT"
+  },
+  {
+    "phase_name": "Phase 5: 480-599",
+    "step_range": [
+      480,
+      599
+    ],
+    "phase_length_steps": 120,
+    "total_baseline_turns_evaluated": 1920,
+    "counterfactual_states_sampled": 0,
+    "counterfactual_coverage_pct": 0.0,
+    "interventions_tested": 0,
+    "positive_alpha_frequency_pct": 0.0,
+    "mean_alpha": 0.0,
+    "median_alpha": 0.0,
+    "max_alpha": 0.0,
+    "rescue_frequency": 0,
+    "unexplained_losses": 3,
+    "status": "CRITICAL_BLIND_SPOT"
+  },
+  {
+    "phase_name": "Phase 6: 600-679",
+    "step_range": [
+      600,
+      679
+    ],
+    "phase_length_steps": 80,
+    "total_baseline_turns_evaluated": 1280,
+    "counterfactual_states_sampled": 0,
+    "counterfactual_coverage_pct": 0.0,
+    "interventions_tested": 0,
+    "positive_alpha_frequency_pct": 0.0,
+    "mean_alpha": 0.0,
+    "median_alpha": 0.0,
+    "max_alpha": 0.0,
+    "rescue_frequency": 0,
+    "unexplained_losses": 3,
+    "status": "CRITICAL_BLIND_SPOT"
+  },
+  {
+    "phase_name": "Phase 7: 680-719",
+    "step_range": [
+      680,
+      719
+    ],
+    "phase_length_steps": 40,
+    "total_baseline_turns_evaluated": 640,
+    "counterfactual_states_sampled": 1000,
+    "counterfactual_coverage_pct": 95.4,
+    "interventions_tested": 6,
+    "positive_alpha_frequency_pct": 42.9,
+    "mean_alpha": 31.32,
+    "median_alpha": 0.0,
+    "max_alpha": 535.0,
+    "rescue_frequency": 5,
+    "unexplained_losses": 1,
+    "status": "HEAVILY_SEARCHED"
+  }
+]

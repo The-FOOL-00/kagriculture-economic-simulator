@@ -1,0 +1,632 @@
+[
+  {
+    "seed": 249657,
+    "opp_id": "E2_A7",
+    "seat": 0,
+    "terminal_cash": 133551.0,
+    "terminal_opp_cash": 133585.0,
+    "terminal_margin": -34.0,
+    "deficit": 34.0,
+    "alpha_entry_point": 440,
+    "largest_deficit_interval": [
+      695,
+      696
+    ],
+    "max_interval_drop": 1701.0,
+    "estimated_recoverable_margin": 34.0,
+    "recoverable_pct": 100.0,
+    "classification": "HIGHLY_RECOVERABLE",
+    "trajectory_sample": [
+      {
+        "step": 0,
+        "my_cash": 3000.0,
+        "opp_cash": 3000.0,
+        "margin": 0.0,
+        "my_quads": 1,
+        "opp_quads": 1,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 80,
+        "my_cash": 219.0,
+        "opp_cash": 221.0,
+        "margin": -2.0,
+        "my_quads": 1,
+        "opp_quads": 1,
+        "my_hands": 5,
+        "opp_hands": 5
+      },
+      {
+        "step": 160,
+        "my_cash": 987.0,
+        "opp_cash": 959.0,
+        "margin": 28.0,
+        "my_quads": 2,
+        "opp_quads": 2,
+        "my_hands": 7,
+        "opp_hands": 7
+      },
+      {
+        "step": 240,
+        "my_cash": 2460.0,
+        "opp_cash": 2432.0,
+        "margin": 28.0,
+        "my_quads": 2,
+        "opp_quads": 2,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 320,
+        "my_cash": 20957.0,
+        "opp_cash": 20929.0,
+        "margin": 28.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 9,
+        "opp_hands": 9
+      },
+      {
+        "step": 400,
+        "my_cash": 37299.0,
+        "opp_cash": 37271.0,
+        "margin": 28.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 480,
+        "my_cash": 50737.0,
+        "opp_cash": 51004.0,
+        "margin": -267.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 560,
+        "my_cash": 64575.0,
+        "opp_cash": 64949.0,
+        "margin": -374.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 12,
+        "opp_hands": 12
+      },
+      {
+        "step": 640,
+        "my_cash": 78711.0,
+        "opp_cash": 79085.0,
+        "margin": -374.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 14,
+        "opp_hands": 14
+      },
+      {
+        "step": 682,
+        "my_cash": 103968.0,
+        "opp_cash": 104342.0,
+        "margin": -374.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 686,
+        "my_cash": 104399.0,
+        "opp_cash": 104773.0,
+        "margin": -374.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 690,
+        "my_cash": 104399.0,
+        "opp_cash": 104773.0,
+        "margin": -374.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 694,
+        "my_cash": 106112.0,
+        "opp_cash": 105250.0,
+        "margin": 862.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 698,
+        "my_cash": 119014.0,
+        "opp_cash": 119070.0,
+        "margin": -56.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 702,
+        "my_cash": 119057.0,
+        "opp_cash": 119113.0,
+        "margin": -56.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 706,
+        "my_cash": 119305.0,
+        "opp_cash": 119193.0,
+        "margin": 112.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 710,
+        "my_cash": 119462.0,
+        "opp_cash": 119496.0,
+        "margin": -34.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 714,
+        "my_cash": 124476.0,
+        "opp_cash": 124510.0,
+        "margin": -34.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      },
+      {
+        "step": 718,
+        "my_cash": 132837.0,
+        "opp_cash": 132871.0,
+        "margin": -34.0,
+        "my_quads": 4,
+        "opp_quads": 4,
+        "my_hands": 13,
+        "opp_hands": 13
+      }
+    ]
+  },
+  {
+    "seed": 249659,
+    "opp_id": "E8_DMITRII",
+    "seat": 0,
+    "terminal_cash": 109056.0,
+    "terminal_opp_cash": 110157.0,
+    "terminal_margin": -1101.0,
+    "deficit": 1101.0,
+    "alpha_entry_point": 180,
+    "largest_deficit_interval": [
+      600,
+      620
+    ],
+    "max_interval_drop": 2306.0,
+    "estimated_recoverable_margin": 515.15,
+    "recoverable_pct": 46.8,
+    "classification": "PARTIALLY_RECOVERABLE",
+    "trajectory_sample": [
+      {
+        "step": 0,
+        "my_cash": 3000.0,
+        "opp_cash": 3000.0,
+        "margin": 0.0,
+        "my_quads": 1,
+        "opp_quads": 1,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 80,
+        "my_cash": 222.0,
+        "opp_cash": 226.0,
+        "margin": -4.0,
+        "my_quads": 1,
+        "opp_quads": 1,
+        "my_hands": 5,
+        "opp_hands": 5
+      },
+      {
+        "step": 160,
+        "my_cash": 963.0,
+        "opp_cash": 993.0,
+        "margin": -30.0,
+        "my_quads": 2,
+        "opp_quads": 2,
+        "my_hands": 7,
+        "opp_hands": 7
+      },
+      {
+        "step": 240,
+        "my_cash": 2558.0,
+        "opp_cash": 2468.0,
+        "margin": 90.0,
+        "my_quads": 2,
+        "opp_quads": 2,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 320,
+        "my_cash": 21095.0,
+        "opp_cash": 20346.0,
+        "margin": 749.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 9,
+        "opp_hands": 9
+      },
+      {
+        "step": 400,
+        "my_cash": 40090.0,
+        "opp_cash": 38106.0,
+        "margin": 1984.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 480,
+        "my_cash": 60717.0,
+        "opp_cash": 60168.0,
+        "margin": 549.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 560,
+        "my_cash": 80952.0,
+        "opp_cash": 79763.0,
+        "margin": 1189.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 10
+      },
+      {
+        "step": 640,
+        "my_cash": 90324.0,
+        "opp_cash": 92054.0,
+        "margin": -1730.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 10
+      },
+      {
+        "step": 682,
+        "my_cash": 97684.0,
+        "opp_cash": 99419.0,
+        "margin": -1735.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 686,
+        "my_cash": 98332.0,
+        "opp_cash": 100066.0,
+        "margin": -1734.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 690,
+        "my_cash": 98332.0,
+        "opp_cash": 100066.0,
+        "margin": -1734.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 694,
+        "my_cash": 99667.0,
+        "opp_cash": 100507.0,
+        "margin": -840.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 698,
+        "my_cash": 104307.0,
+        "opp_cash": 104414.0,
+        "margin": -107.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 702,
+        "my_cash": 104315.0,
+        "opp_cash": 104416.0,
+        "margin": -101.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 706,
+        "my_cash": 104385.0,
+        "opp_cash": 104416.0,
+        "margin": -31.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 710,
+        "my_cash": 104521.0,
+        "opp_cash": 106015.0,
+        "margin": -1494.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 714,
+        "my_cash": 106239.0,
+        "opp_cash": 107488.0,
+        "margin": -1249.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 718,
+        "my_cash": 107884.0,
+        "opp_cash": 109025.0,
+        "margin": -1141.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      }
+    ]
+  },
+  {
+    "seed": 249659,
+    "opp_id": "E8_DMITRII",
+    "seat": 1,
+    "terminal_cash": 109056.0,
+    "terminal_opp_cash": 110157.0,
+    "terminal_margin": -1101.0,
+    "deficit": 1101.0,
+    "alpha_entry_point": 180,
+    "largest_deficit_interval": [
+      600,
+      620
+    ],
+    "max_interval_drop": 2306.0,
+    "estimated_recoverable_margin": 515.15,
+    "recoverable_pct": 46.8,
+    "classification": "PARTIALLY_RECOVERABLE",
+    "trajectory_sample": [
+      {
+        "step": 0,
+        "my_cash": 3000.0,
+        "opp_cash": 3000.0,
+        "margin": 0.0,
+        "my_quads": 1,
+        "opp_quads": 1,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 80,
+        "my_cash": 222.0,
+        "opp_cash": 226.0,
+        "margin": -4.0,
+        "my_quads": 1,
+        "opp_quads": 1,
+        "my_hands": 5,
+        "opp_hands": 5
+      },
+      {
+        "step": 160,
+        "my_cash": 963.0,
+        "opp_cash": 993.0,
+        "margin": -30.0,
+        "my_quads": 2,
+        "opp_quads": 2,
+        "my_hands": 7,
+        "opp_hands": 7
+      },
+      {
+        "step": 240,
+        "my_cash": 2558.0,
+        "opp_cash": 2468.0,
+        "margin": 90.0,
+        "my_quads": 2,
+        "opp_quads": 2,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 320,
+        "my_cash": 21095.0,
+        "opp_cash": 20346.0,
+        "margin": 749.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 9,
+        "opp_hands": 9
+      },
+      {
+        "step": 400,
+        "my_cash": 40090.0,
+        "opp_cash": 38106.0,
+        "margin": 1984.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 480,
+        "my_cash": 60717.0,
+        "opp_cash": 60168.0,
+        "margin": 549.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 0,
+        "opp_hands": 0
+      },
+      {
+        "step": 560,
+        "my_cash": 80952.0,
+        "opp_cash": 79763.0,
+        "margin": 1189.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 10
+      },
+      {
+        "step": 640,
+        "my_cash": 90324.0,
+        "opp_cash": 92054.0,
+        "margin": -1730.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 10
+      },
+      {
+        "step": 682,
+        "my_cash": 97684.0,
+        "opp_cash": 99419.0,
+        "margin": -1735.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 686,
+        "my_cash": 98332.0,
+        "opp_cash": 100066.0,
+        "margin": -1734.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 690,
+        "my_cash": 98332.0,
+        "opp_cash": 100066.0,
+        "margin": -1734.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 694,
+        "my_cash": 99667.0,
+        "opp_cash": 100507.0,
+        "margin": -840.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 698,
+        "my_cash": 104307.0,
+        "opp_cash": 104414.0,
+        "margin": -107.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 702,
+        "my_cash": 104315.0,
+        "opp_cash": 104416.0,
+        "margin": -101.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 706,
+        "my_cash": 104385.0,
+        "opp_cash": 104416.0,
+        "margin": -31.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 710,
+        "my_cash": 104521.0,
+        "opp_cash": 106015.0,
+        "margin": -1494.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 714,
+        "my_cash": 106239.0,
+        "opp_cash": 107488.0,
+        "margin": -1249.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      },
+      {
+        "step": 718,
+        "my_cash": 107884.0,
+        "opp_cash": 109025.0,
+        "margin": -1141.0,
+        "my_quads": 3,
+        "opp_quads": 3,
+        "my_hands": 11,
+        "opp_hands": 11
+      }
+    ]
+  }
+]
