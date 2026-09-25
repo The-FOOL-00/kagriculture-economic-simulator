@@ -1,0 +1,26 @@
+{
+  "name": "MIDGAME_LAND_EXPAND_F5",
+  "action_id": 9,
+  "preconditions": {
+    "step_range": [280, 312],
+    "min_liquid_cash": 12000.0,
+    "max_unlocked_quadrants": 3
+  },
+  "mechanical_dependencies": [
+    "QUADRANT_PRICING",
+    "BUDGET_GUARD_REPLAN",
+    "WORKER_WAYPOINT_REPLAN"
+  ],
+  "safety_class": "SAFE_WITH_REPLAN",
+  "counterfactual_evidence": {
+    "sample_count": 13,
+    "positive_alpha_count": 13,
+    "mean_cash_delta": 3385.0,
+    "max_cash_delta": 3389.0
+  },
+  "failure_modes": [
+    "Desynchronizing A7 budget guard if cash < $12,000",
+    "Leaving newly unlocked tiles unplowed/unplanted without dynamic replanner"
+  ],
+  "governance_status": "GATED_SAFE_WITH_REPLAN"
+}

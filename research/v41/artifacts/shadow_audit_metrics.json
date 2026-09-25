@@ -1,0 +1,15 @@
+{
+  "total_evaluations": 20,
+  "proposals_count": 0,
+  "proposal_frequency": 0.0,
+  "safe_percentage": 100.0,
+  "oracle_agreement_rate": 75.0,
+  "false_positive_count": 0,
+  "false_positive_rate": 0.0,
+  "false_negative_count": 2,
+  "mean_regret": 31.85,
+  "median_regret": 0.0,
+  "p95_regret": 225.0,
+  "worst_regret": 225.0,
+  "duration_seconds": 12.76
+}

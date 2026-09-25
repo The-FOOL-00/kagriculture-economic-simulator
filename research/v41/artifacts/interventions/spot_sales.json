@@ -1,0 +1,27 @@
+{
+  "name": "OPPORTUNISTIC_SPOT_SALE",
+  "action_ids": [3, 4, 5, 6],
+  "preconditions": {
+    "step_max": 690,
+    "commodity_price_floors": {
+      "MILK": 30.0,
+      "WOOL": 35.0,
+      "STRAWBERRY": 25.0,
+      "MELON": 35.0
+    },
+    "min_held_quantity": 2
+  },
+  "mechanical_dependencies": ["SHED_STOCK", "MARKET_ORDER_QUEUE"],
+  "safety_class": "SAFE_ATOMIC",
+  "counterfactual_evidence": {
+    "milk_mean_delta": 139.35,
+    "wool_mean_delta": 10.34,
+    "strawberry_mean_delta": 119.75,
+    "max_observed_delta": 528.0
+  },
+  "failure_modes": [
+    "Selling stock required for downstream animal feeding (WHEAT)",
+    "Exceeding 10 market orders per turn limit"
+  ],
+  "governance_status": "APPROVED_SAFE_ATOMIC"
+}

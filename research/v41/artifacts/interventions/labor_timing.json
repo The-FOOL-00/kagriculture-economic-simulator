@@ -1,0 +1,22 @@
+{
+  "name": "LABOR_HIRING_CONSTRAINTS",
+  "action_ids": ["FREEZE_HIRING", "BLIND_HIRE"],
+  "preconditions": {
+    "dynamic_scheduler_active": true
+  },
+  "mechanical_dependencies": [
+    "HAND_ALIGN_BIJECTION",
+    "FIBONACCI_WAGE_BURDEN",
+    "DAILY_WATERING_CHORES"
+  ],
+  "safety_class": "UNSAFE",
+  "empirical_impact": {
+    "freeze_hiring_loss": -11466.0,
+    "unbudgeted_hire_loss": "EXPONENTIAL_WAGE_DRAIN"
+  },
+  "failure_modes": [
+    "Chore queue truncation via _hand_align",
+    "Crop death and weed germination on unassigned plots"
+  ],
+  "governance_status": "PERMANENTLY_PROHIBITED"
+}

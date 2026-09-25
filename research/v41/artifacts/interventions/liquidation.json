@@ -1,0 +1,23 @@
+{
+  "name": "TERMINAL_LIQUIDATE_694",
+  "action_id": 1,
+  "preconditions": {
+    "step_range": [692, 694],
+    "required_inventory": ["STRAWBERRY", "MILK", "WOOL", "MELON"],
+    "min_held_quantity": 1
+  },
+  "mechanical_dependencies": ["MARKET_ORDER_QUEUE"],
+  "safety_class": "SAFE_ATOMIC",
+  "counterfactual_evidence": {
+    "sample_count": 59,
+    "positive_alpha_count": 59,
+    "mean_cash_delta": 132.32,
+    "max_cash_delta": 346.0,
+    "min_cash_delta": 4.0
+  },
+  "failure_modes": [
+    "Opponent dumps at step 691 (ahead of our window)",
+    "Shed is empty due to earlier forced liquidation"
+  ],
+  "governance_status": "APPROVED_SAFE_ATOMIC"
+}
