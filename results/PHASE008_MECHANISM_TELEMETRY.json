@@ -1,0 +1,669 @@
+{
+  "metadata": {
+    "date": "2026-09-18",
+    "phase": "008",
+    "governance_v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "total_matches": 100,
+    "execution_time_sec": 233.09
+  },
+  "primary_cohort_seeds": {
+    "249000": {
+      "seed": 249000,
+      "m1_margin": -24.0,
+      "m2_margin": -24.0,
+      "net_delta": -24.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.25
+    },
+    "249001": {
+      "seed": 249001,
+      "m1_margin": 97.0,
+      "m2_margin": 97.0,
+      "net_delta": 97.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.49
+    },
+    "249002": {
+      "seed": 249002,
+      "m1_margin": -26.0,
+      "m2_margin": -26.0,
+      "net_delta": -26.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.31
+    },
+    "249003": {
+      "seed": 249003,
+      "m1_margin": 130.0,
+      "m2_margin": 130.0,
+      "net_delta": 130.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.77
+    },
+    "249004": {
+      "seed": 249004,
+      "m1_margin": 22.0,
+      "m2_margin": 22.0,
+      "net_delta": 22.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.74
+    },
+    "249005": {
+      "seed": 249005,
+      "m1_margin": 88.0,
+      "m2_margin": 88.0,
+      "net_delta": 88.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.67
+    },
+    "249006": {
+      "seed": 249006,
+      "m1_margin": 0.0,
+      "m2_margin": 0.0,
+      "net_delta": 0.0,
+      "m1_commits": 0,
+      "m2_commits": 0,
+      "total_commits": 0,
+      "commits_by_mech": {},
+      "seed_elapsed_s": 5.06
+    },
+    "249007": {
+      "seed": 249007,
+      "m1_margin": 124.0,
+      "m2_margin": 124.0,
+      "net_delta": 124.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.59
+    },
+    "249008": {
+      "seed": 249008,
+      "m1_margin": 73.0,
+      "m2_margin": 73.0,
+      "net_delta": 73.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.55
+    },
+    "249009": {
+      "seed": 249009,
+      "m1_margin": 109.0,
+      "m2_margin": -125.0,
+      "net_delta": -8.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.66
+    },
+    "249010": {
+      "seed": 249010,
+      "m1_margin": 13.0,
+      "m2_margin": 13.0,
+      "net_delta": 13.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.26
+    },
+    "249011": {
+      "seed": 249011,
+      "m1_margin": 118.0,
+      "m2_margin": 118.0,
+      "net_delta": 118.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.7
+    },
+    "249012": {
+      "seed": 249012,
+      "m1_margin": 49.0,
+      "m2_margin": 49.0,
+      "net_delta": 49.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.6
+    },
+    "249013": {
+      "seed": 249013,
+      "m1_margin": 72.0,
+      "m2_margin": 72.0,
+      "net_delta": 72.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.46
+    },
+    "249014": {
+      "seed": 249014,
+      "m1_margin": 100.0,
+      "m2_margin": 100.0,
+      "net_delta": 100.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.61
+    },
+    "249015": {
+      "seed": 249015,
+      "m1_margin": 5.0,
+      "m2_margin": 5.0,
+      "net_delta": 5.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.55
+    },
+    "249016": {
+      "seed": 249016,
+      "m1_margin": 3.0,
+      "m2_margin": 3.0,
+      "net_delta": 3.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.62
+    },
+    "249017": {
+      "seed": 249017,
+      "m1_margin": 1566.0,
+      "m2_margin": -1486.0,
+      "net_delta": 40.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.61
+    },
+    "249018": {
+      "seed": 249018,
+      "m1_margin": 113.0,
+      "m2_margin": 113.0,
+      "net_delta": 113.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.63
+    },
+    "249019": {
+      "seed": 249019,
+      "m1_margin": 32.0,
+      "m2_margin": 32.0,
+      "net_delta": 32.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.54
+    },
+    "249020": {
+      "seed": 249020,
+      "m1_margin": 49.0,
+      "m2_margin": 49.0,
+      "net_delta": 49.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.59
+    },
+    "249021": {
+      "seed": 249021,
+      "m1_margin": 9.0,
+      "m2_margin": 9.0,
+      "net_delta": 9.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.76
+    },
+    "249022": {
+      "seed": 249022,
+      "m1_margin": 31.0,
+      "m2_margin": 31.0,
+      "net_delta": 31.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.63
+    },
+    "249023": {
+      "seed": 249023,
+      "m1_margin": 120.0,
+      "m2_margin": 120.0,
+      "net_delta": 120.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.35
+    },
+    "249024": {
+      "seed": 249024,
+      "m1_margin": 73.0,
+      "m2_margin": 73.0,
+      "net_delta": 73.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 5.14
+    }
+  },
+  "benchmark_cohort_seeds": {
+    "50000": {
+      "seed": 50000,
+      "m1_margin": 440.0,
+      "m2_margin": 440.0,
+      "net_delta": 440.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.7
+    },
+    "50001": {
+      "seed": 50001,
+      "m1_margin": 1085.0,
+      "m2_margin": 1085.0,
+      "net_delta": 1085.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.69
+    },
+    "50002": {
+      "seed": 50002,
+      "m1_margin": 17.0,
+      "m2_margin": 17.0,
+      "net_delta": 17.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.51
+    },
+    "50003": {
+      "seed": 50003,
+      "m1_margin": 18.0,
+      "m2_margin": 18.0,
+      "net_delta": 18.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.7
+    },
+    "50004": {
+      "seed": 50004,
+      "m1_margin": -30.0,
+      "m2_margin": -30.0,
+      "net_delta": -30.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.83
+    },
+    "50005": {
+      "seed": 50005,
+      "m1_margin": -18.0,
+      "m2_margin": -18.0,
+      "net_delta": -18.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.49
+    },
+    "50006": {
+      "seed": 50006,
+      "m1_margin": -8.0,
+      "m2_margin": -8.0,
+      "net_delta": -8.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.44
+    },
+    "50007": {
+      "seed": 50007,
+      "m1_margin": 7.0,
+      "m2_margin": 7.0,
+      "net_delta": 7.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.86
+    },
+    "50008": {
+      "seed": 50008,
+      "m1_margin": 32.0,
+      "m2_margin": 32.0,
+      "net_delta": 32.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.94
+    },
+    "50009": {
+      "seed": 50009,
+      "m1_margin": -49.0,
+      "m2_margin": -49.0,
+      "net_delta": -49.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.66
+    },
+    "50010": {
+      "seed": 50010,
+      "m1_margin": -2.0,
+      "m2_margin": -2.0,
+      "net_delta": -2.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.77
+    },
+    "50011": {
+      "seed": 50011,
+      "m1_margin": 119.0,
+      "m2_margin": 119.0,
+      "net_delta": 119.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.7
+    },
+    "50012": {
+      "seed": 50012,
+      "m1_margin": 42.0,
+      "m2_margin": -110.0,
+      "net_delta": -34.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.98
+    },
+    "50013": {
+      "seed": 50013,
+      "m1_margin": 4.0,
+      "m2_margin": 4.0,
+      "net_delta": 4.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.72
+    },
+    "50014": {
+      "seed": 50014,
+      "m1_margin": 105.0,
+      "m2_margin": 105.0,
+      "net_delta": 105.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.84
+    },
+    "50015": {
+      "seed": 50015,
+      "m1_margin": -10.0,
+      "m2_margin": -10.0,
+      "net_delta": -10.0,
+      "m1_commits": 3,
+      "m2_commits": 3,
+      "total_commits": 6,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 6
+      },
+      "seed_elapsed_s": 4.84
+    },
+    "50016": {
+      "seed": 50016,
+      "m1_margin": 116.0,
+      "m2_margin": 116.0,
+      "net_delta": 116.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.51
+    },
+    "50017": {
+      "seed": 50017,
+      "m1_margin": -567.0,
+      "m2_margin": 595.0,
+      "net_delta": 14.0,
+      "m1_commits": 2,
+      "m2_commits": 2,
+      "total_commits": 4,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 4
+      },
+      "seed_elapsed_s": 4.38
+    },
+    "50018": {
+      "seed": 50018,
+      "m1_margin": -3.0,
+      "m2_margin": -3.0,
+      "net_delta": -3.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.88
+    },
+    "50019": {
+      "seed": 50019,
+      "m1_margin": 6.0,
+      "m2_margin": 6.0,
+      "net_delta": 6.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.62
+    },
+    "50020": {
+      "seed": 50020,
+      "m1_margin": 113.0,
+      "m2_margin": 113.0,
+      "net_delta": 113.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.7
+    },
+    "50021": {
+      "seed": 50021,
+      "m1_margin": 113.0,
+      "m2_margin": 113.0,
+      "net_delta": 113.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.42
+    },
+    "50022": {
+      "seed": 50022,
+      "m1_margin": 133.0,
+      "m2_margin": 133.0,
+      "net_delta": 133.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 5.29
+    },
+    "50023": {
+      "seed": 50023,
+      "m1_margin": -17.0,
+      "m2_margin": -17.0,
+      "net_delta": -17.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.75
+    },
+    "50024": {
+      "seed": 50024,
+      "m1_margin": 22.0,
+      "m2_margin": 22.0,
+      "net_delta": 22.0,
+      "m1_commits": 1,
+      "m2_commits": 1,
+      "total_commits": 2,
+      "commits_by_mech": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 2
+      },
+      "seed_elapsed_s": 4.68
+    }
+  },
+  "mechanism_attribution": {
+    "primary_cohort": {
+      "DEPENDENCY_AWARE_MARKET_TIMING": 86
+    },
+    "benchmark_cohort": {
+      "DEPENDENCY_AWARE_MARKET_TIMING": 78
+    }
+  }
+}

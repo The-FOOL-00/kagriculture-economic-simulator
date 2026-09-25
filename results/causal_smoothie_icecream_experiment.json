@@ -1,0 +1,26 @@
+{
+  "Baseline Plan 0 (Generic Fallback)": {
+    "mean_cash": 89602.9875,
+    "opp_cash": 82007.6375,
+    "margin": 7595.35,
+    "win_rate": 0.9625
+  },
+  "Candidate Plan 8 (Smoothie Route)": {
+    "mean_cash": 89250.7875,
+    "opp_cash": 82114.4125,
+    "margin": 7136.375,
+    "win_rate": 0.9375
+  },
+  "Candidate Plan 6 (Ice Cream Route)": {
+    "mean_cash": 89169.1125,
+    "opp_cash": 82030.275,
+    "margin": 7138.8375,
+    "win_rate": 0.9375
+  },
+  "Candidate Plan 11 (Smoothie Route 11)": {
+    "mean_cash": 89166.4875,
+    "opp_cash": 82033.4,
+    "margin": 7133.0875,
+    "win_rate": 0.9375
+  }
+}

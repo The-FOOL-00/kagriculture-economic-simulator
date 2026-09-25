@@ -1,0 +1,68 @@
+{
+  "V54++ Residual Baseline": {
+    "N": 400,
+    "dmitrii_mean": 96557.215,
+    "dmitrii_median": 95471.0,
+    "opp_mean": 87782.09,
+    "opp_median": 87786.0,
+    "mean_margin": 8775.125,
+    "median_margin": 9129.0,
+    "std_margin": 6390.368141338148,
+    "se_margin": 319.5184070669074,
+    "ci95": [
+      8148.868922148861,
+      9401.381077851138
+    ],
+    "ci99": [
+      7952.045583395647,
+      9598.204416604354
+    ],
+    "wins": 374,
+    "losses": 26,
+    "ties": 0,
+    "win_rate": 0.935,
+    "p0_win_rate": 0.935,
+    "p1_win_rate": 0.935,
+    "tail_losses_100": 0.06,
+    "tail_losses_500": 0.055,
+    "tail_losses_1000": 0.05,
+    "tail_gains_1000": 0.905,
+    "tail_gains_5000": 0.775,
+    "tail_gains_10000": 0.4025,
+    "worst_loss": -10198.0,
+    "best_win": 36834.0
+  },
+  "V54++ Baseline (Shop)": {
+    "N": 400,
+    "dmitrii_mean": 96561.735,
+    "dmitrii_median": 95471.0,
+    "opp_mean": 87787.2575,
+    "opp_median": 87786.0,
+    "mean_margin": 8774.4775,
+    "median_margin": 9131.0,
+    "std_margin": 6397.242104677483,
+    "se_margin": 319.86210523387416,
+    "ci95": [
+      8147.547773741608,
+      9401.407226258394
+    ],
+    "ci99": [
+      7950.512716917541,
+      9598.44228308246
+    ],
+    "wins": 374,
+    "losses": 26,
+    "ties": 0,
+    "win_rate": 0.935,
+    "p0_win_rate": 0.935,
+    "p1_win_rate": 0.935,
+    "tail_losses_100": 0.06,
+    "tail_losses_500": 0.055,
+    "tail_losses_1000": 0.05,
+    "tail_gains_1000": 0.905,
+    "tail_gains_5000": 0.775,
+    "tail_gains_10000": 0.4025,
+    "worst_loss": -10256.0,
+    "best_win": 36834.0
+  }
+}

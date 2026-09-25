@@ -1,0 +1,6762 @@
+[
+  {
+    "seed": 249378,
+    "seat": 0,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 44.1387000028044
+  },
+  {
+    "seed": 249378,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 36.0,
+        "delta_margin": 73.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 37.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 36.0,
+        "delta_margin_realized": 73.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 129.97700000414625
+  },
+  {
+    "seed": 249378,
+    "seat": 1,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 42.409999994561076
+  },
+  {
+    "seed": 249378,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 36.0,
+        "delta_margin": 73.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 37.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 36.0,
+        "delta_margin_realized": 73.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 107.89060001843609
+  },
+  {
+    "seed": 249380,
+    "seat": 0,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 1.0,
+        "delta_margin": 2.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 1.0,
+        "delta_margin_realized": 2.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "BUY_LAND"
+            ],
+            [
+              "BUY_SEED",
+              "TOMATO",
+              10
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "BUY_LAND"
+            ],
+            [
+              "BUY_SEED",
+              "TOMATO",
+              10
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 53.418499999679625
+  },
+  {
+    "seed": 249380,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E3_SHED_CAPACITY_RISK",
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 10.0,
+        "delta_margin": 19.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 9.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 10.0,
+        "delta_margin_realized": 19.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "TOMATO",
+              8
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "TOMATO",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 112.18749999534339
+  },
+  {
+    "seed": 249380,
+    "seat": 1,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 1.0,
+        "delta_margin": 2.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 1.0,
+        "delta_margin_realized": 2.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "BUY_LAND"
+            ],
+            [
+              "BUY_SEED",
+              "TOMATO",
+              10
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "BUY_LAND"
+            ],
+            [
+              "BUY_SEED",
+              "TOMATO",
+              10
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 45.3894000092987
+  },
+  {
+    "seed": 249380,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E3_SHED_CAPACITY_RISK",
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 10.0,
+        "delta_margin": 19.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 9.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 10.0,
+        "delta_margin_realized": 19.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "TOMATO",
+              8
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "TOMATO",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 101.27179999835789
+  },
+  {
+    "seed": 249381,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 12.0,
+        "delta_margin": 28.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 16.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 12.0,
+        "delta_margin_realized": 28.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 114.06420002458617
+  },
+  {
+    "seed": 249381,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 12.0,
+        "delta_margin": 28.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 16.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 12.0,
+        "delta_margin_realized": 28.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 112.6292000117246
+  },
+  {
+    "seed": 249383,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E3_SHED_CAPACITY_RISK",
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 18.0,
+        "delta_margin": 39.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 21.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 18.0,
+        "delta_margin_realized": 39.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 117.79750001733191
+  },
+  {
+    "seed": 249383,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E3_SHED_CAPACITY_RISK",
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 18.0,
+        "delta_margin": 39.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 21.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 18.0,
+        "delta_margin_realized": 39.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 101.83810000307858
+  },
+  {
+    "seed": 249384,
+    "seat": 0,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 2.0,
+        "delta_margin": 4.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 2.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 2.0,
+        "delta_margin_realized": 4.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 43.53660001652315
+  },
+  {
+    "seed": 249384,
+    "seat": 0,
+    "step": 554,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 554
+      }
+    ],
+    "total_time_ms": 54.031999985454604
+  },
+  {
+    "seed": 249384,
+    "seat": 1,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 2.0,
+        "delta_margin": 4.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 2.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 2.0,
+        "delta_margin_realized": 4.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 45.399900001939386
+  },
+  {
+    "seed": 249384,
+    "seat": 1,
+    "step": 554,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 554
+      }
+    ],
+    "total_time_ms": 52.63540000305511
+  },
+  {
+    "seed": 249386,
+    "seat": 0,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 45.08999999961816
+  },
+  {
+    "seed": 249386,
+    "seat": 0,
+    "step": 554,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 554
+      }
+    ],
+    "total_time_ms": 51.891200011596084
+  },
+  {
+    "seed": 249386,
+    "seat": 1,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 44.54760000226088
+  },
+  {
+    "seed": 249386,
+    "seat": 1,
+    "step": 554,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 554
+      }
+    ],
+    "total_time_ms": 48.098200000822544
+  },
+  {
+    "seed": 249388,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 18.0,
+        "delta_margin": 39.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 21.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 18.0,
+        "delta_margin_realized": 39.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 123.23460000334308
+  },
+  {
+    "seed": 249388,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 18.0,
+        "delta_margin": 39.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 21.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 18.0,
+        "delta_margin_realized": 39.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 111.45090000354685
+  },
+  {
+    "seed": 249389,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 14.0,
+        "delta_margin": 28.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 14.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 14.0,
+        "delta_margin_realized": 28.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 118.35249999421649
+  },
+  {
+    "seed": 249389,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 14.0,
+        "delta_margin": 28.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 14.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 14.0,
+        "delta_margin_realized": 28.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 118.06179999257438
+  },
+  {
+    "seed": 249391,
+    "seat": 0,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 1.0,
+        "delta_margin": 3.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 2.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 1.0,
+        "delta_margin_realized": 3.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 43.48779999418184
+  },
+  {
+    "seed": 249391,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 44.0,
+        "delta_margin": 92.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 48.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 44.0,
+        "delta_margin_realized": 92.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 110.71039998205379
+  },
+  {
+    "seed": 249391,
+    "seat": 1,
+    "step": 433,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_433",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 1.0,
+        "delta_margin": 3.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 2.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 1.0,
+        "delta_margin_realized": 3.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "EAST"
+          ],
+          "hands": [
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              3
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "EAST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WOOL",
+              2
+            ],
+            [
+              "SELL",
+              "EGG",
+              4
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              12
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 433
+      }
+    ],
+    "total_time_ms": 44.75749999983236
+  },
+  {
+    "seed": 249391,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 44.0,
+        "delta_margin": 92.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 48.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 44.0,
+        "delta_margin_realized": 92.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 109.86849997425452
+  },
+  {
+    "seed": 249394,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 16.0,
+        "delta_margin": 33.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 17.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 16.0,
+        "delta_margin_realized": 33.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              8
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 185.70410000393167
+  },
+  {
+    "seed": 249394,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 16.0,
+        "delta_margin": 33.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 17.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 16.0,
+        "delta_margin_realized": 33.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              8
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              8
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 352.2264999919571
+  },
+  {
+    "seed": 249395,
+    "seat": 0,
+    "step": 554,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 554
+      }
+    ],
+    "total_time_ms": 135.42690000031143
+  },
+  {
+    "seed": 249395,
+    "seat": 0,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 26.0,
+        "delta_margin": 53.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 27.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 26.0,
+        "delta_margin_realized": 53.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 308.00530000124127
+  },
+  {
+    "seed": 249395,
+    "seat": 1,
+    "step": 554,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 1,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_554",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 18,
+        "delta_money": 0.0,
+        "delta_margin": 1.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 1.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 0.0,
+        "delta_margin_realized": 1.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "WEST"
+          ],
+          "hands": [
+            [
+              "WEST"
+            ],
+            [
+              "EAST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "FEED"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "SOUTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "WEST"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              6
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": false,
+        "macro_regime_type": "NONE",
+        "macro_escalation_reason": null,
+        "first_divergence_turn": 554
+      }
+    ],
+    "total_time_ms": 160.4458999936469
+  },
+  {
+    "seed": 249395,
+    "seat": 1,
+    "step": 649,
+    "decision": "COMMIT",
+    "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+    "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+    "events": [
+      "E4_MARKET_REGIME_SHIFT",
+      "E5_OPPONENT_SUPPLY_SHOCK",
+      "E11_OPPONENT_PRESSURE_SHIFT"
+    ],
+    "opportunities": 4,
+    "candidates": [
+      {
+        "patch_id": "PATCH_MARKET_TIMING_STEP_649",
+        "family": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "opp_detected": true,
+        "patch_generated": true,
+        "patch_pruned": false,
+        "sim_run": true,
+        "horizon": 36,
+        "delta_money": 26.0,
+        "delta_margin": 53.0,
+        "delta_route_cost": 0.0,
+        "delta_dependency_completion": 0.0,
+        "delta_opponent_pressure": 27.0,
+        "weed_asset_value": 0.0,
+        "delta_money_realized": 26.0,
+        "delta_margin_realized": 53.0,
+        "projected_asset_value": 0.0,
+        "projection_status": "REALIZED",
+        "spatial_consistency_ok": true,
+        "safety_pass": true,
+        "safety_rejection": null,
+        "economic_rejection": null,
+        "commit_decision": true,
+        "baseline_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "candidate_action": {
+          "farmer": [
+            "FEED"
+          ],
+          "hands": [
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "WEST"
+            ],
+            [
+              "NORTH"
+            ],
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              "PICKUP",
+              "WHEAT"
+            ],
+            [
+              "SOUTH"
+            ]
+          ],
+          "market": [
+            [
+              "SELL",
+              "WHEAT",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ],
+            [
+              "SELL",
+              "EGG",
+              2
+            ],
+            [
+              "SELL",
+              "MILK",
+              9
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              18
+            ],
+            [
+              "BUY_PRODUCT",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ]
+        },
+        "why_v3_did_not_do_this": null,
+        "candidate_quantity": 0,
+        "candidate_reason": null,
+        "macro_escalated": true,
+        "macro_regime_type": "LIVESTOCK_FEED_RISK",
+        "macro_escalation_reason": "FEED_DEFICIT_RISK: Selling grain (6 wheat) with active livestock",
+        "first_divergence_turn": 649
+      }
+    ],
+    "total_time_ms": 314.0447000041604
+  }
+]

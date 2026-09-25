@@ -1,0 +1,856 @@
+{
+  "BAKERY|BAKERY": {
+    "val0": 12150,
+    "val1": 10800,
+    "total_absorption": 22950,
+    "overlap": [
+      "EGG",
+      "WHEAT"
+    ],
+    "prods": [
+      "EGG",
+      "WHEAT"
+    ]
+  },
+  "BAKERY|PIZZA_SHOP": {
+    "val0": 12150,
+    "val1": 35280,
+    "total_absorption": 47430,
+    "overlap": [
+      "WHEAT"
+    ],
+    "prods": [
+      "WHEAT",
+      "TOMATO",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "BAKERY|BRUNCH_SPOT": {
+    "val0": 12150,
+    "val1": 28080,
+    "total_absorption": 40230,
+    "overlap": [
+      "EGG",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG"
+    ]
+  },
+  "BAKERY|YARN_STORE": {
+    "val0": 12150,
+    "val1": 57600,
+    "total_absorption": 69750,
+    "overlap": [],
+    "prods": [
+      "EGG",
+      "WOOL",
+      "WHEAT"
+    ]
+  },
+  "BAKERY|ICE_CREAM_SHOP": {
+    "val0": 12150,
+    "val1": 43920,
+    "total_absorption": 56070,
+    "overlap": [
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "BAKERY|PET_CAFE": {
+    "val0": 12150,
+    "val1": 10080,
+    "total_absorption": 22230,
+    "overlap": [],
+    "prods": [
+      "EGG",
+      "CARROT",
+      "WHEAT"
+    ]
+  },
+  "BAKERY|SMOOTHIE_SHOP": {
+    "val0": 12150,
+    "val1": 40320,
+    "total_absorption": 52470,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "MILK",
+      "EGG",
+      "WHEAT"
+    ]
+  },
+  "BAKERY|FARMERS_MARKET": {
+    "val0": 12150,
+    "val1": 34560,
+    "total_absorption": 46710,
+    "overlap": [
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "CARROT",
+      "TOMATO",
+      "EGG"
+    ]
+  },
+  "PIZZA_SHOP|BAKERY": {
+    "val0": 39690,
+    "val1": 10800,
+    "total_absorption": 50490,
+    "overlap": [
+      "WHEAT"
+    ],
+    "prods": [
+      "WHEAT",
+      "TOMATO",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "PIZZA_SHOP|PIZZA_SHOP": {
+    "val0": 39690,
+    "val1": 35280,
+    "total_absorption": 74970,
+    "overlap": [
+      "MILK",
+      "WHEAT",
+      "TOMATO"
+    ],
+    "prods": [
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "PIZZA_SHOP|BRUNCH_SPOT": {
+    "val0": 39690,
+    "val1": 28080,
+    "total_absorption": 67770,
+    "overlap": [
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "TOMATO",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "PIZZA_SHOP|YARN_STORE": {
+    "val0": 39690,
+    "val1": 57600,
+    "total_absorption": 97290,
+    "overlap": [],
+    "prods": [
+      "WOOL",
+      "WHEAT",
+      "MILK",
+      "TOMATO"
+    ]
+  },
+  "PIZZA_SHOP|ICE_CREAM_SHOP": {
+    "val0": 39690,
+    "val1": 43920,
+    "total_absorption": 83610,
+    "overlap": [
+      "MILK",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "PIZZA_SHOP|PET_CAFE": {
+    "val0": 39690,
+    "val1": 10080,
+    "total_absorption": 49770,
+    "overlap": [],
+    "prods": [
+      "CARROT",
+      "WHEAT",
+      "MILK",
+      "TOMATO"
+    ]
+  },
+  "PIZZA_SHOP|SMOOTHIE_SHOP": {
+    "val0": 39690,
+    "val1": 40320,
+    "total_absorption": 80010,
+    "overlap": [
+      "MILK"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "PIZZA_SHOP|FARMERS_MARKET": {
+    "val0": 39690,
+    "val1": 34560,
+    "total_absorption": 74250,
+    "overlap": [
+      "WHEAT",
+      "TOMATO"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "TOMATO",
+      "CARROT",
+      "MILK"
+    ]
+  },
+  "BRUNCH_SPOT|BAKERY": {
+    "val0": 31590,
+    "val1": 10800,
+    "total_absorption": 42390,
+    "overlap": [
+      "EGG",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG"
+    ]
+  },
+  "BRUNCH_SPOT|PIZZA_SHOP": {
+    "val0": 31590,
+    "val1": 35280,
+    "total_absorption": 66870,
+    "overlap": [
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "TOMATO",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "BRUNCH_SPOT|BRUNCH_SPOT": {
+    "val0": 31590,
+    "val1": 28080,
+    "total_absorption": 59670,
+    "overlap": [
+      "STRAWBERRY",
+      "EGG",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG"
+    ]
+  },
+  "BRUNCH_SPOT|YARN_STORE": {
+    "val0": 31590,
+    "val1": 57600,
+    "total_absorption": 89190,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "EGG",
+      "WOOL",
+      "WHEAT"
+    ]
+  },
+  "BRUNCH_SPOT|ICE_CREAM_SHOP": {
+    "val0": 31590,
+    "val1": 43920,
+    "total_absorption": 75510,
+    "overlap": [
+      "STRAWBERRY",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "BRUNCH_SPOT|PET_CAFE": {
+    "val0": 31590,
+    "val1": 10080,
+    "total_absorption": 41670,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "EGG",
+      "CARROT",
+      "WHEAT"
+    ]
+  },
+  "BRUNCH_SPOT|SMOOTHIE_SHOP": {
+    "val0": 31590,
+    "val1": 40320,
+    "total_absorption": 71910,
+    "overlap": [
+      "STRAWBERRY"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "BRUNCH_SPOT|FARMERS_MARKET": {
+    "val0": 31590,
+    "val1": 34560,
+    "total_absorption": 66150,
+    "overlap": [
+      "STRAWBERRY",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "CARROT",
+      "TOMATO",
+      "EGG"
+    ]
+  },
+  "YARN_STORE|BAKERY": {
+    "val0": 64800,
+    "val1": 10800,
+    "total_absorption": 75600,
+    "overlap": [],
+    "prods": [
+      "EGG",
+      "WOOL",
+      "WHEAT"
+    ]
+  },
+  "YARN_STORE|PIZZA_SHOP": {
+    "val0": 64800,
+    "val1": 35280,
+    "total_absorption": 100080,
+    "overlap": [],
+    "prods": [
+      "MILK",
+      "WOOL",
+      "WHEAT",
+      "TOMATO"
+    ]
+  },
+  "YARN_STORE|BRUNCH_SPOT": {
+    "val0": 64800,
+    "val1": 28080,
+    "total_absorption": 92880,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "EGG",
+      "WOOL",
+      "WHEAT"
+    ]
+  },
+  "YARN_STORE|YARN_STORE": {
+    "val0": 64800,
+    "val1": 57600,
+    "total_absorption": 122400,
+    "overlap": [
+      "WOOL"
+    ],
+    "prods": [
+      "WOOL"
+    ]
+  },
+  "YARN_STORE|ICE_CREAM_SHOP": {
+    "val0": 64800,
+    "val1": 43920,
+    "total_absorption": 108720,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "MILK",
+      "WOOL",
+      "WHEAT"
+    ]
+  },
+  "YARN_STORE|PET_CAFE": {
+    "val0": 64800,
+    "val1": 10080,
+    "total_absorption": 74880,
+    "overlap": [],
+    "prods": [
+      "WOOL",
+      "CARROT"
+    ]
+  },
+  "YARN_STORE|SMOOTHIE_SHOP": {
+    "val0": 64800,
+    "val1": 40320,
+    "total_absorption": 105120,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "WOOL",
+      "MILK"
+    ]
+  },
+  "YARN_STORE|FARMERS_MARKET": {
+    "val0": 64800,
+    "val1": 34560,
+    "total_absorption": 99360,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO",
+      "WOOL"
+    ]
+  },
+  "ICE_CREAM_SHOP|BAKERY": {
+    "val0": 49410,
+    "val1": 10800,
+    "total_absorption": 60210,
+    "overlap": [
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "ICE_CREAM_SHOP|PIZZA_SHOP": {
+    "val0": 49410,
+    "val1": 35280,
+    "total_absorption": 84690,
+    "overlap": [
+      "MILK",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "ICE_CREAM_SHOP|BRUNCH_SPOT": {
+    "val0": 49410,
+    "val1": 28080,
+    "total_absorption": 77490,
+    "overlap": [
+      "STRAWBERRY",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "ICE_CREAM_SHOP|YARN_STORE": {
+    "val0": 49410,
+    "val1": 57600,
+    "total_absorption": 107010,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "WOOL",
+      "WHEAT",
+      "MILK"
+    ]
+  },
+  "ICE_CREAM_SHOP|ICE_CREAM_SHOP": {
+    "val0": 49410,
+    "val1": 43920,
+    "total_absorption": 93330,
+    "overlap": [
+      "STRAWBERRY",
+      "MILK",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "MILK"
+    ]
+  },
+  "ICE_CREAM_SHOP|PET_CAFE": {
+    "val0": 49410,
+    "val1": 10080,
+    "total_absorption": 59490,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "MILK"
+    ]
+  },
+  "ICE_CREAM_SHOP|SMOOTHIE_SHOP": {
+    "val0": 49410,
+    "val1": 40320,
+    "total_absorption": 89730,
+    "overlap": [
+      "STRAWBERRY",
+      "MILK"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "MILK"
+    ]
+  },
+  "ICE_CREAM_SHOP|FARMERS_MARKET": {
+    "val0": 49410,
+    "val1": 34560,
+    "total_absorption": 83970,
+    "overlap": [
+      "STRAWBERRY",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "CARROT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "PET_CAFE|BAKERY": {
+    "val0": 11340,
+    "val1": 10800,
+    "total_absorption": 22140,
+    "overlap": [],
+    "prods": [
+      "EGG",
+      "WHEAT",
+      "CARROT"
+    ]
+  },
+  "PET_CAFE|PIZZA_SHOP": {
+    "val0": 11340,
+    "val1": 35280,
+    "total_absorption": 46620,
+    "overlap": [],
+    "prods": [
+      "MILK",
+      "WHEAT",
+      "CARROT",
+      "TOMATO"
+    ]
+  },
+  "PET_CAFE|BRUNCH_SPOT": {
+    "val0": 11340,
+    "val1": 28080,
+    "total_absorption": 39420,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "EGG",
+      "WHEAT",
+      "CARROT"
+    ]
+  },
+  "PET_CAFE|YARN_STORE": {
+    "val0": 11340,
+    "val1": 57600,
+    "total_absorption": 68940,
+    "overlap": [],
+    "prods": [
+      "WOOL",
+      "CARROT"
+    ]
+  },
+  "PET_CAFE|ICE_CREAM_SHOP": {
+    "val0": 11340,
+    "val1": 43920,
+    "total_absorption": 55260,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "MILK",
+      "WHEAT",
+      "CARROT"
+    ]
+  },
+  "PET_CAFE|PET_CAFE": {
+    "val0": 11340,
+    "val1": 10080,
+    "total_absorption": 21420,
+    "overlap": [
+      "CARROT"
+    ],
+    "prods": [
+      "CARROT"
+    ]
+  },
+  "PET_CAFE|SMOOTHIE_SHOP": {
+    "val0": 11340,
+    "val1": 40320,
+    "total_absorption": 51660,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "MILK",
+      "CARROT"
+    ]
+  },
+  "PET_CAFE|FARMERS_MARKET": {
+    "val0": 11340,
+    "val1": 34560,
+    "total_absorption": 45900,
+    "overlap": [
+      "CARROT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO"
+    ]
+  },
+  "SMOOTHIE_SHOP|BAKERY": {
+    "val0": 45360,
+    "val1": 10800,
+    "total_absorption": 56160,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "EGG",
+      "WHEAT",
+      "MILK"
+    ]
+  },
+  "SMOOTHIE_SHOP|PIZZA_SHOP": {
+    "val0": 45360,
+    "val1": 35280,
+    "total_absorption": 80640,
+    "overlap": [
+      "MILK"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "SMOOTHIE_SHOP|BRUNCH_SPOT": {
+    "val0": 45360,
+    "val1": 28080,
+    "total_absorption": 73440,
+    "overlap": [
+      "STRAWBERRY"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "EGG",
+      "MILK"
+    ]
+  },
+  "SMOOTHIE_SHOP|YARN_STORE": {
+    "val0": 45360,
+    "val1": 57600,
+    "total_absorption": 102960,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "WOOL",
+      "MILK"
+    ]
+  },
+  "SMOOTHIE_SHOP|ICE_CREAM_SHOP": {
+    "val0": 45360,
+    "val1": 43920,
+    "total_absorption": 89280,
+    "overlap": [
+      "STRAWBERRY",
+      "MILK"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "WHEAT",
+      "MILK"
+    ]
+  },
+  "SMOOTHIE_SHOP|PET_CAFE": {
+    "val0": 45360,
+    "val1": 10080,
+    "total_absorption": 55440,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "MILK"
+    ]
+  },
+  "SMOOTHIE_SHOP|SMOOTHIE_SHOP": {
+    "val0": 45360,
+    "val1": 40320,
+    "total_absorption": 85680,
+    "overlap": [
+      "STRAWBERRY",
+      "MILK"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "MILK"
+    ]
+  },
+  "SMOOTHIE_SHOP|FARMERS_MARKET": {
+    "val0": 45360,
+    "val1": 34560,
+    "total_absorption": 79920,
+    "overlap": [
+      "STRAWBERRY"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "FARMERS_MARKET|BAKERY": {
+    "val0": 38880,
+    "val1": 10800,
+    "total_absorption": 49680,
+    "overlap": [
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO",
+      "EGG"
+    ]
+  },
+  "FARMERS_MARKET|PIZZA_SHOP": {
+    "val0": 38880,
+    "val1": 35280,
+    "total_absorption": 74160,
+    "overlap": [
+      "WHEAT",
+      "TOMATO"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "FARMERS_MARKET|BRUNCH_SPOT": {
+    "val0": 38880,
+    "val1": 28080,
+    "total_absorption": 66960,
+    "overlap": [
+      "STRAWBERRY",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO",
+      "EGG"
+    ]
+  },
+  "FARMERS_MARKET|YARN_STORE": {
+    "val0": 38880,
+    "val1": 57600,
+    "total_absorption": 96480,
+    "overlap": [],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO",
+      "WOOL"
+    ]
+  },
+  "FARMERS_MARKET|ICE_CREAM_SHOP": {
+    "val0": 38880,
+    "val1": 43920,
+    "total_absorption": 82800,
+    "overlap": [
+      "STRAWBERRY",
+      "WHEAT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "FARMERS_MARKET|PET_CAFE": {
+    "val0": 38880,
+    "val1": 10080,
+    "total_absorption": 48960,
+    "overlap": [
+      "CARROT"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO"
+    ]
+  },
+  "FARMERS_MARKET|SMOOTHIE_SHOP": {
+    "val0": 38880,
+    "val1": 40320,
+    "total_absorption": 79200,
+    "overlap": [
+      "STRAWBERRY"
+    ],
+    "prods": [
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT",
+      "TOMATO",
+      "MILK"
+    ]
+  },
+  "FARMERS_MARKET|FARMERS_MARKET": {
+    "val0": 38880,
+    "val1": 34560,
+    "total_absorption": 73440,
+    "overlap": [
+      "STRAWBERRY",
+      "WHEAT",
+      "CARROT",
+      "TOMATO"
+    ],
+    "prods": [
+      "TOMATO",
+      "STRAWBERRY",
+      "CARROT",
+      "WHEAT"
+    ]
+  }
+}

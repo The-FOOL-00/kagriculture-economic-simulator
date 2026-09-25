@@ -1,0 +1,354 @@
+{
+  "status": "PILOT COMPLETE / NO QUALIFICATION",
+  "cohort": "249286..249295",
+  "n_seeds": 10,
+  "n_matches": 20,
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "v3_sha_verified": true,
+  "mean_paired_margin_delta": -884.2,
+  "std_paired_margin_delta": 852.0590485536916,
+  "se_paired_margin_delta": 269.4447294385663,
+  "ci_95_lower": -1493.726324677677,
+  "ci_95_upper": -274.673675322323,
+  "record_w_l_t": {
+    "wins": 1,
+    "losses": 9,
+    "ties": 0
+  },
+  "total_commits": 54,
+  "total_simulations": 2082,
+  "total_macro_escalations": 736,
+  "escalation_rate": 0.35350624399615754,
+  "mean_latency_ms": 75.1745761059293,
+  "p95_latency_ms": 205.63270999991803,
+  "max_latency_ms": 377.1798000088893,
+  "safety_violations": 0,
+  "seed_records": [
+    {
+      "seed": 249286,
+      "s0_margin": -727.0,
+      "s1_margin": -859.0,
+      "paired_margin": -793.0,
+      "s0_commits": 3,
+      "s1_commits": 3,
+      "s0_escalations": 39,
+      "s1_escalations": 39,
+      "s0_sims": 110,
+      "s1_sims": 110,
+      "mean_latency_ms": 70.36465305975224,
+      "p95_latency_ms": 186.36304000974633,
+      "max_latency_ms": 322.661500016693,
+      "s0_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 3
+      },
+      "s1_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 3
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 5,
+        "LIVESTOCK_FEED_RISK": 18,
+        "BUDGET_GUARD_BLOCK": 9,
+        "ORDER_QUEUE_ALTERATION": 7
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 5,
+        "LIVESTOCK_FEED_RISK": 18,
+        "BUDGET_GUARD_BLOCK": 9,
+        "ORDER_QUEUE_ALTERATION": 7
+      }
+    },
+    {
+      "seed": 249287,
+      "s0_margin": -357.0,
+      "s1_margin": -357.0,
+      "paired_margin": -357.0,
+      "s0_commits": 5,
+      "s1_commits": 5,
+      "s0_escalations": 40,
+      "s1_escalations": 40,
+      "s0_sims": 107,
+      "s1_sims": 107,
+      "mean_latency_ms": 74.51607753842148,
+      "p95_latency_ms": 196.9007099833107,
+      "max_latency_ms": 312.6023999939207,
+      "s0_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 5
+      },
+      "s1_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 5
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 8,
+        "BUDGET_GUARD_BLOCK": 5,
+        "LIVESTOCK_FEED_RISK": 18,
+        "ORDER_QUEUE_ALTERATION": 9
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 8,
+        "BUDGET_GUARD_BLOCK": 5,
+        "LIVESTOCK_FEED_RISK": 18,
+        "ORDER_QUEUE_ALTERATION": 9
+      }
+    },
+    {
+      "seed": 249288,
+      "s0_margin": -1485.0,
+      "s1_margin": -1637.0,
+      "paired_margin": -1561.0,
+      "s0_commits": 0,
+      "s1_commits": 0,
+      "s0_escalations": 33,
+      "s1_escalations": 33,
+      "s0_sims": 88,
+      "s1_sims": 88,
+      "mean_latency_ms": 73.14368136357794,
+      "p95_latency_ms": 193.61735997663348,
+      "max_latency_ms": 377.1798000088893,
+      "s0_comm_mechs": {},
+      "s1_comm_mechs": {},
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 5,
+        "LIVESTOCK_FEED_RISK": 13,
+        "BUDGET_GUARD_BLOCK": 6,
+        "ORDER_QUEUE_ALTERATION": 9
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 6,
+        "BUDGET_GUARD_BLOCK": 6,
+        "LIVESTOCK_FEED_RISK": 12,
+        "ORDER_QUEUE_ALTERATION": 9
+      }
+    },
+    {
+      "seed": 249289,
+      "s0_margin": -52.0,
+      "s1_margin": -52.0,
+      "paired_margin": -52.0,
+      "s0_commits": 5,
+      "s1_commits": 5,
+      "s0_escalations": 35,
+      "s1_escalations": 35,
+      "s0_sims": 99,
+      "s1_sims": 99,
+      "mean_latency_ms": 77.61361286522087,
+      "p95_latency_ms": 197.79358000087086,
+      "max_latency_ms": 281.87289999914356,
+      "s0_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 5
+      },
+      "s1_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 5
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 4,
+        "ORDER_QUEUE_ALTERATION": 14,
+        "LIVESTOCK_FEED_RISK": 14,
+        "BUDGET_GUARD_BLOCK": 3
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 4,
+        "ORDER_QUEUE_ALTERATION": 14,
+        "LIVESTOCK_FEED_RISK": 14,
+        "BUDGET_GUARD_BLOCK": 3
+      }
+    },
+    {
+      "seed": 249290,
+      "s0_margin": -1653.0,
+      "s1_margin": -1653.0,
+      "paired_margin": -1653.0,
+      "s0_commits": 1,
+      "s1_commits": 1,
+      "s0_escalations": 43,
+      "s1_escalations": 43,
+      "s0_sims": 108,
+      "s1_sims": 108,
+      "mean_latency_ms": 72.7463328233693,
+      "p95_latency_ms": 190.55918000231034,
+      "max_latency_ms": 376.33260001894087,
+      "s0_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 1
+      },
+      "s1_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 1
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 10,
+        "BUDGET_GUARD_BLOCK": 8,
+        "ORDER_QUEUE_ALTERATION": 10,
+        "LIVESTOCK_FEED_RISK": 15
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 10,
+        "BUDGET_GUARD_BLOCK": 8,
+        "ORDER_QUEUE_ALTERATION": 10,
+        "LIVESTOCK_FEED_RISK": 15
+      }
+    },
+    {
+      "seed": 249291,
+      "s0_margin": 54.0,
+      "s1_margin": 54.0,
+      "paired_margin": 54.0,
+      "s0_commits": 1,
+      "s1_commits": 1,
+      "s0_escalations": 33,
+      "s1_escalations": 33,
+      "s0_sims": 99,
+      "s1_sims": 99,
+      "mean_latency_ms": 73.06564290718316,
+      "p95_latency_ms": 188.95223998697477,
+      "max_latency_ms": 338.3932000142522,
+      "s0_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 1
+      },
+      "s1_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 1
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 7,
+        "LIVESTOCK_FEED_RISK": 10,
+        "BUDGET_GUARD_BLOCK": 7,
+        "ORDER_QUEUE_ALTERATION": 9
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 7,
+        "LIVESTOCK_FEED_RISK": 10,
+        "BUDGET_GUARD_BLOCK": 7,
+        "ORDER_QUEUE_ALTERATION": 9
+      }
+    },
+    {
+      "seed": 249292,
+      "s0_margin": -2159.0,
+      "s1_margin": -2159.0,
+      "paired_margin": -2159.0,
+      "s0_commits": 2,
+      "s1_commits": 2,
+      "s0_escalations": 34,
+      "s1_escalations": 34,
+      "s0_sims": 114,
+      "s1_sims": 114,
+      "mean_latency_ms": 77.40434172469912,
+      "p95_latency_ms": 200.95417000411544,
+      "max_latency_ms": 335.5993999866769,
+      "s0_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 2
+      },
+      "s1_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 2
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 5,
+        "LIVESTOCK_FEED_RISK": 16,
+        "BUDGET_GUARD_BLOCK": 7,
+        "ORDER_QUEUE_ALTERATION": 6
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 5,
+        "LIVESTOCK_FEED_RISK": 16,
+        "BUDGET_GUARD_BLOCK": 7,
+        "ORDER_QUEUE_ALTERATION": 6
+      }
+    },
+    {
+      "seed": 249293,
+      "s0_margin": -337.0,
+      "s1_margin": -337.0,
+      "paired_margin": -337.0,
+      "s0_commits": 1,
+      "s1_commits": 1,
+      "s0_escalations": 45,
+      "s1_escalations": 45,
+      "s0_sims": 102,
+      "s1_sims": 102,
+      "mean_latency_ms": 74.83738845656109,
+      "p95_latency_ms": 203.84169999451845,
+      "max_latency_ms": 322.1066999831237,
+      "s0_comm_mechs": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 1
+      },
+      "s1_comm_mechs": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 1
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 8,
+        "BUDGET_GUARD_BLOCK": 9,
+        "LIVESTOCK_FEED_RISK": 19,
+        "ORDER_QUEUE_ALTERATION": 9
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 8,
+        "BUDGET_GUARD_BLOCK": 9,
+        "LIVESTOCK_FEED_RISK": 19,
+        "ORDER_QUEUE_ALTERATION": 9
+      }
+    },
+    {
+      "seed": 249294,
+      "s0_margin": -1908.0,
+      "s1_margin": -1908.0,
+      "paired_margin": -1908.0,
+      "s0_commits": 4,
+      "s1_commits": 4,
+      "s0_escalations": 29,
+      "s1_escalations": 29,
+      "s0_sims": 104,
+      "s1_sims": 104,
+      "mean_latency_ms": 79.2438668292874,
+      "p95_latency_ms": 205.63270999991803,
+      "max_latency_ms": 310.02609999268316,
+      "s0_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 4
+      },
+      "s1_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 4
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 6,
+        "LIVESTOCK_FEED_RISK": 12,
+        "BUDGET_GUARD_BLOCK": 8,
+        "ORDER_QUEUE_ALTERATION": 3
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 6,
+        "LIVESTOCK_FEED_RISK": 12,
+        "BUDGET_GUARD_BLOCK": 8,
+        "ORDER_QUEUE_ALTERATION": 3
+      }
+    },
+    {
+      "seed": 249295,
+      "s0_margin": -76.0,
+      "s1_margin": -76.0,
+      "paired_margin": -76.0,
+      "s0_commits": 5,
+      "s1_commits": 5,
+      "s0_escalations": 37,
+      "s1_escalations": 37,
+      "s0_sims": 110,
+      "s1_sims": 110,
+      "mean_latency_ms": 78.81016349122032,
+      "p95_latency_ms": 200.24861999845598,
+      "max_latency_ms": 349.4139999966137,
+      "s0_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 5
+      },
+      "s1_comm_mechs": {
+        "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": 5
+      },
+      "s0_regimes": {
+        "CASH_CAPEX_GATE": 3,
+        "ORDER_QUEUE_ALTERATION": 13,
+        "LIVESTOCK_FEED_RISK": 17,
+        "BUDGET_GUARD_BLOCK": 4
+      },
+      "s1_regimes": {
+        "CASH_CAPEX_GATE": 3,
+        "ORDER_QUEUE_ALTERATION": 13,
+        "LIVESTOCK_FEED_RISK": 17,
+        "BUDGET_GUARD_BLOCK": 4
+      }
+    }
+  ]
+}

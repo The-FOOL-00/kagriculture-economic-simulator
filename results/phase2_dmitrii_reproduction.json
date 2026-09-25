@@ -1,0 +1,68 @@
+{
+  "compiled_v54_plus_residual": {
+    "N": 400,
+    "dmitrii_mean": 93402.385,
+    "dmitrii_median": 91640.0,
+    "opp_mean": 84262.545,
+    "opp_median": 82376.0,
+    "mean_margin": 9139.84,
+    "median_margin": 9076.0,
+    "std_margin": 5427.9328276382885,
+    "se_margin": 271.39664138191443,
+    "ci95": [
+      8607.902582891447,
+      9671.777417108553
+    ],
+    "ci99": [
+      8440.722251800189,
+      9838.957748199811
+    ],
+    "wins": 379,
+    "losses": 21,
+    "ties": 0,
+    "win_rate": 0.9475,
+    "p0_win_rate": 0.945,
+    "p1_win_rate": 0.95,
+    "tail_losses_100": 0.05,
+    "tail_losses_500": 0.0425,
+    "tail_losses_1000": 0.0425,
+    "tail_gains_1000": 0.9375,
+    "tail_gains_5000": 0.82,
+    "tail_gains_10000": 0.42,
+    "worst_loss": -6932.0,
+    "best_win": 27925.0
+  },
+  "compiled_v54_plus_shop": {
+    "N": 400,
+    "dmitrii_mean": 93406.2575,
+    "dmitrii_median": 91650.0,
+    "opp_mean": 84261.1575,
+    "opp_median": 82377.0,
+    "mean_margin": 9145.1,
+    "median_margin": 9079.0,
+    "std_margin": 5433.510431481894,
+    "se_margin": 271.67552157409466,
+    "ci95": [
+      8612.615977714775,
+      9677.584022285226
+    ],
+    "ci99": [
+      8445.263856425132,
+      9844.936143574869
+    ],
+    "wins": 379,
+    "losses": 21,
+    "ties": 0,
+    "win_rate": 0.9475,
+    "p0_win_rate": 0.945,
+    "p1_win_rate": 0.95,
+    "tail_losses_100": 0.05,
+    "tail_losses_500": 0.0425,
+    "tail_losses_1000": 0.0425,
+    "tail_gains_1000": 0.9375,
+    "tail_gains_5000": 0.82,
+    "tail_gains_10000": 0.415,
+    "worst_loss": -6932.0,
+    "best_win": 27925.0
+  }
+}

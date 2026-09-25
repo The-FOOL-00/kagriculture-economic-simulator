@@ -1,0 +1,832 @@
+{
+  "phase": "PHASE022",
+  "date": "2026-09-20",
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "fresh_cohort": {
+    "seeds": [
+      249376,
+      249377,
+      249378,
+      249379,
+      249380,
+      249381,
+      249382,
+      249383,
+      249384,
+      249385,
+      249386,
+      249387,
+      249388,
+      249389,
+      249390,
+      249391,
+      249392,
+      249393,
+      249394,
+      249395
+    ],
+    "n_seeds": 20,
+    "n_matches": 40,
+    "summary": {
+      "n_matches": 40,
+      "n_seeds": 20,
+      "mean_delta": 33.35,
+      "median_delta": 22.0,
+      "std_delta": 1152.0081585804405,
+      "se_delta": 182.14848321053194,
+      "ci_95": [
+        -335.0800830884113,
+        401.78008308841135
+      ],
+      "p_value_t": 0.8556740708000795,
+      "p_value_wilcoxon": 0.034086443546771795,
+      "cohens_d": 0.02894944775486266,
+      "wins": 21,
+      "losses": 7,
+      "ties": 12,
+      "win_rate": 0.525,
+      "mean_trt_reward": 94346.4,
+      "mean_ctrl_reward": 94313.05,
+      "commits_by_mechanism": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 34
+      },
+      "total_candidates": 1310,
+      "safety_violations": 0
+    },
+    "matches": [
+      {
+        "seed": 249376,
+        "seat": 0,
+        "trt_reward": 101807.0,
+        "ctrl_reward": 101807.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 39.38
+      },
+      {
+        "seed": 249376,
+        "seat": 1,
+        "trt_reward": 101807.0,
+        "ctrl_reward": 101807.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 39.63
+      },
+      {
+        "seed": 249377,
+        "seat": 0,
+        "trt_reward": 80143.0,
+        "ctrl_reward": 80143.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 42.36
+      },
+      {
+        "seed": 249377,
+        "seat": 1,
+        "trt_reward": 80143.0,
+        "ctrl_reward": 80143.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 45.77
+      },
+      {
+        "seed": 249378,
+        "seat": 0,
+        "trt_reward": 100244.0,
+        "ctrl_reward": 100141.0,
+        "paired_delta": 103.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 43.62
+      },
+      {
+        "seed": 249378,
+        "seat": 1,
+        "trt_reward": 100244.0,
+        "ctrl_reward": 100141.0,
+        "paired_delta": 103.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 42.2
+      },
+      {
+        "seed": 249379,
+        "seat": 0,
+        "trt_reward": 88267.0,
+        "ctrl_reward": 88267.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 43.61
+      },
+      {
+        "seed": 249379,
+        "seat": 1,
+        "trt_reward": 88267.0,
+        "ctrl_reward": 88267.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 48.16
+      },
+      {
+        "seed": 249380,
+        "seat": 0,
+        "trt_reward": 106924.0,
+        "ctrl_reward": 106792.0,
+        "paired_delta": 132.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 46.87
+      },
+      {
+        "seed": 249380,
+        "seat": 1,
+        "trt_reward": 106924.0,
+        "ctrl_reward": 106792.0,
+        "paired_delta": 132.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 45.98
+      },
+      {
+        "seed": 249381,
+        "seat": 0,
+        "trt_reward": 93205.0,
+        "ctrl_reward": 93090.0,
+        "paired_delta": 115.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 40.84
+      },
+      {
+        "seed": 249381,
+        "seat": 1,
+        "trt_reward": 93205.0,
+        "ctrl_reward": 93090.0,
+        "paired_delta": 115.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 41.11
+      },
+      {
+        "seed": 249382,
+        "seat": 0,
+        "trt_reward": 109370.0,
+        "ctrl_reward": 109351.0,
+        "paired_delta": 19.0,
+        "commits": {},
+        "elapsed_sec": 41.11
+      },
+      {
+        "seed": 249382,
+        "seat": 1,
+        "trt_reward": 109351.0,
+        "ctrl_reward": 109370.0,
+        "paired_delta": -19.0,
+        "commits": {},
+        "elapsed_sec": 41.63
+      },
+      {
+        "seed": 249383,
+        "seat": 0,
+        "trt_reward": 87708.0,
+        "ctrl_reward": 87550.0,
+        "paired_delta": 158.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 80.36
+      },
+      {
+        "seed": 249383,
+        "seat": 1,
+        "trt_reward": 87708.0,
+        "ctrl_reward": 87550.0,
+        "paired_delta": 158.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 46.73
+      },
+      {
+        "seed": 249384,
+        "seat": 0,
+        "trt_reward": 93913.0,
+        "ctrl_reward": 93939.0,
+        "paired_delta": -26.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 40.06
+      },
+      {
+        "seed": 249384,
+        "seat": 1,
+        "trt_reward": 93913.0,
+        "ctrl_reward": 93939.0,
+        "paired_delta": -26.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 40.98
+      },
+      {
+        "seed": 249385,
+        "seat": 0,
+        "trt_reward": 109313.0,
+        "ctrl_reward": 109313.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 43.25
+      },
+      {
+        "seed": 249385,
+        "seat": 1,
+        "trt_reward": 109313.0,
+        "ctrl_reward": 109313.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 43.23
+      },
+      {
+        "seed": 249386,
+        "seat": 0,
+        "trt_reward": 78337.0,
+        "ctrl_reward": 78474.0,
+        "paired_delta": -137.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 40.68
+      },
+      {
+        "seed": 249386,
+        "seat": 1,
+        "trt_reward": 78272.0,
+        "ctrl_reward": 78192.0,
+        "paired_delta": 80.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 40.36
+      },
+      {
+        "seed": 249387,
+        "seat": 0,
+        "trt_reward": 97460.0,
+        "ctrl_reward": 97460.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 43.97
+      },
+      {
+        "seed": 249387,
+        "seat": 1,
+        "trt_reward": 97460.0,
+        "ctrl_reward": 97460.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 44.37
+      },
+      {
+        "seed": 249388,
+        "seat": 0,
+        "trt_reward": 67366.0,
+        "ctrl_reward": 67341.0,
+        "paired_delta": 25.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 44.44
+      },
+      {
+        "seed": 249388,
+        "seat": 1,
+        "trt_reward": 67366.0,
+        "ctrl_reward": 67341.0,
+        "paired_delta": 25.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 42.33
+      },
+      {
+        "seed": 249389,
+        "seat": 0,
+        "trt_reward": 111188.0,
+        "ctrl_reward": 111726.0,
+        "paired_delta": -538.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 41.03
+      },
+      {
+        "seed": 249389,
+        "seat": 1,
+        "trt_reward": 111716.0,
+        "ctrl_reward": 111198.0,
+        "paired_delta": 518.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 41.07
+      },
+      {
+        "seed": 249390,
+        "seat": 0,
+        "trt_reward": 107565.0,
+        "ctrl_reward": 102678.0,
+        "paired_delta": 4887.0,
+        "commits": {},
+        "elapsed_sec": 49.74
+      },
+      {
+        "seed": 249390,
+        "seat": 1,
+        "trt_reward": 102678.0,
+        "ctrl_reward": 107565.0,
+        "paired_delta": -4887.0,
+        "commits": {},
+        "elapsed_sec": 49.84
+      },
+      {
+        "seed": 249391,
+        "seat": 0,
+        "trt_reward": 132192.0,
+        "ctrl_reward": 132151.0,
+        "paired_delta": 41.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 40.76
+      },
+      {
+        "seed": 249391,
+        "seat": 1,
+        "trt_reward": 132192.0,
+        "ctrl_reward": 132151.0,
+        "paired_delta": 41.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 39.73
+      },
+      {
+        "seed": 249392,
+        "seat": 0,
+        "trt_reward": 88943.0,
+        "ctrl_reward": 88943.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 47.66
+      },
+      {
+        "seed": 249392,
+        "seat": 1,
+        "trt_reward": 88943.0,
+        "ctrl_reward": 88943.0,
+        "paired_delta": 0.0,
+        "commits": {},
+        "elapsed_sec": 105.05
+      },
+      {
+        "seed": 249393,
+        "seat": 0,
+        "trt_reward": 94011.0,
+        "ctrl_reward": 95334.0,
+        "paired_delta": -1323.0,
+        "commits": {},
+        "elapsed_sec": 113.09
+      },
+      {
+        "seed": 249393,
+        "seat": 1,
+        "trt_reward": 95406.0,
+        "ctrl_reward": 94172.0,
+        "paired_delta": 1234.0,
+        "commits": {},
+        "elapsed_sec": 118.95
+      },
+      {
+        "seed": 249394,
+        "seat": 0,
+        "trt_reward": 81497.0,
+        "ctrl_reward": 81410.0,
+        "paired_delta": 87.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 67.52
+      },
+      {
+        "seed": 249394,
+        "seat": 1,
+        "trt_reward": 81497.0,
+        "ctrl_reward": 81410.0,
+        "paired_delta": 87.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 1
+        },
+        "elapsed_sec": 116.5
+      },
+      {
+        "seed": 249395,
+        "seat": 0,
+        "trt_reward": 58999.0,
+        "ctrl_reward": 58884.0,
+        "paired_delta": 115.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 109.13
+      },
+      {
+        "seed": 249395,
+        "seat": 1,
+        "trt_reward": 58999.0,
+        "ctrl_reward": 58884.0,
+        "paired_delta": 115.0,
+        "commits": {
+          "DEPENDENCY_AWARE_MARKET_TIMING": 2
+        },
+        "elapsed_sec": 111.87
+      }
+    ]
+  },
+  "attribution": {
+    "FULL_FOUNDATION": {
+      "n_matches": 40,
+      "n_seeds": 20,
+      "mean_delta": 33.35,
+      "median_delta": 22.0,
+      "std_delta": 1152.0081585804405,
+      "se_delta": 182.14848321053194,
+      "ci_95": [
+        -335.0800830884113,
+        401.78008308841135
+      ],
+      "p_value_t": 0.8556740708000795,
+      "p_value_wilcoxon": 0.034086443546771795,
+      "cohens_d": 0.02894944775486266,
+      "wins": 21,
+      "losses": 7,
+      "ties": 12,
+      "win_rate": 0.525,
+      "mean_trt_reward": 94346.4,
+      "mean_ctrl_reward": 94313.05,
+      "commits_by_mechanism": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 34
+      },
+      "total_candidates": 1310,
+      "safety_violations": 0
+    },
+    "NO_MARKET_TIMING": {
+      "n_matches": 40,
+      "n_seeds": 20,
+      "mean_delta": -2.15,
+      "median_delta": 0.0,
+      "std_delta": 1150.4767919075764,
+      "se_delta": 181.9063528795757,
+      "ci_95": [
+        -370.09032826652066,
+        365.7903282665207
+      ],
+      "p_value_t": 0.9906300634497395,
+      "p_value_wilcoxon": 1.0,
+      "cohens_d": -0.0018687904137858699,
+      "wins": 5,
+      "losses": 5,
+      "ties": 30,
+      "win_rate": 0.125,
+      "mean_trt_reward": 94336.25,
+      "mean_ctrl_reward": 94338.4,
+      "commits_by_mechanism": {},
+      "total_candidates": 1073,
+      "safety_violations": 0
+    },
+    "NO_TERMINAL_LIQUIDATION": {
+      "n_matches": 40,
+      "n_seeds": 20,
+      "mean_delta": 33.35,
+      "median_delta": 22.0,
+      "std_delta": 1152.0081585804405,
+      "se_delta": 182.14848321053194,
+      "ci_95": [
+        -335.0800830884113,
+        401.78008308841135
+      ],
+      "p_value_t": 0.8556740708000795,
+      "p_value_wilcoxon": 0.034086443546771795,
+      "cohens_d": 0.02894944775486266,
+      "wins": 21,
+      "losses": 7,
+      "ties": 12,
+      "win_rate": 0.525,
+      "mean_trt_reward": 94346.4,
+      "mean_ctrl_reward": 94313.05,
+      "commits_by_mechanism": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 34
+      },
+      "total_candidates": 1310,
+      "safety_violations": 0
+    },
+    "NO_PHASE_SHUTDOWN": {
+      "n_matches": 40,
+      "n_seeds": 20,
+      "mean_delta": 33.35,
+      "median_delta": 22.0,
+      "std_delta": 1152.0081585804405,
+      "se_delta": 182.14848321053194,
+      "ci_95": [
+        -335.0800830884113,
+        401.78008308841135
+      ],
+      "p_value_t": 0.8556740708000795,
+      "p_value_wilcoxon": 0.034086443546771795,
+      "cohens_d": 0.02894944775486266,
+      "wins": 21,
+      "losses": 7,
+      "ties": 12,
+      "win_rate": 0.525,
+      "mean_trt_reward": 94346.4,
+      "mean_ctrl_reward": 94313.05,
+      "commits_by_mechanism": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 34
+      },
+      "total_candidates": 1310,
+      "safety_violations": 0
+    },
+    "MARKET_TIMING_ONLY": {
+      "n_matches": 40,
+      "n_seeds": 20,
+      "mean_delta": 33.35,
+      "median_delta": 22.0,
+      "std_delta": 1152.0081585804405,
+      "se_delta": 182.14848321053194,
+      "ci_95": [
+        -335.0800830884113,
+        401.78008308841135
+      ],
+      "p_value_t": 0.8556740708000795,
+      "p_value_wilcoxon": 0.034086443546771795,
+      "cohens_d": 0.02894944775486266,
+      "wins": 21,
+      "losses": 7,
+      "ties": 12,
+      "win_rate": 0.525,
+      "mean_trt_reward": 94346.4,
+      "mean_ctrl_reward": 94313.05,
+      "commits_by_mechanism": {
+        "DEPENDENCY_AWARE_MARKET_TIMING": 34
+      },
+      "total_candidates": 1310,
+      "safety_violations": 0
+    },
+    "TERMINAL_LIQUIDATION_ONLY": {
+      "n_matches": 40,
+      "n_seeds": 20,
+      "mean_delta": -2.15,
+      "median_delta": 0.0,
+      "std_delta": 1150.4767919075764,
+      "se_delta": 181.9063528795757,
+      "ci_95": [
+        -370.09032826652066,
+        365.7903282665207
+      ],
+      "p_value_t": 0.9906300634497395,
+      "p_value_wilcoxon": 1.0,
+      "cohens_d": -0.0018687904137858699,
+      "wins": 5,
+      "losses": 5,
+      "ties": 30,
+      "win_rate": 0.125,
+      "mean_trt_reward": 94336.25,
+      "mean_ctrl_reward": 94338.4,
+      "commits_by_mechanism": {},
+      "total_candidates": 1073,
+      "safety_violations": 0
+    },
+    "PHASE_SHUTDOWN_ONLY": {
+      "n_matches": 40,
+      "n_seeds": 20,
+      "mean_delta": -2.15,
+      "median_delta": 0.0,
+      "std_delta": 1150.4767919075764,
+      "se_delta": 181.9063528795757,
+      "ci_95": [
+        -370.09032826652066,
+        365.7903282665207
+      ],
+      "p_value_t": 0.9906300634497395,
+      "p_value_wilcoxon": 1.0,
+      "cohens_d": -0.0018687904137858699,
+      "wins": 5,
+      "losses": 5,
+      "ties": 30,
+      "win_rate": 0.125,
+      "mean_trt_reward": 94336.25,
+      "mean_ctrl_reward": 94338.4,
+      "commits_by_mechanism": {},
+      "total_candidates": 1073,
+      "safety_violations": 0
+    }
+  },
+  "determinism": {
+    "seeds_tested": [
+      249376,
+      249377,
+      249378,
+      249379,
+      249380
+    ],
+    "runs_per_seed": 3,
+    "total_comparisons": 10,
+    "mismatches": 0,
+    "deterministic": true
+  },
+  "fidelity": {
+    "n_samples": 34,
+    "mean_mae": 0.0,
+    "max_mae": 0.0,
+    "samples": [
+      {
+        "seed": 249378,
+        "step": 433,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 0.0,
+        "realized_delta": 0.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249378,
+        "step": 649,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 36.0,
+        "realized_delta": 36.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249378,
+        "step": 433,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 0.0,
+        "realized_delta": 0.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249378,
+        "step": 649,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 36.0,
+        "realized_delta": 36.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249380,
+        "step": 433,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 1.0,
+        "realized_delta": 1.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249380,
+        "step": 649,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 10.0,
+        "realized_delta": 10.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249380,
+        "step": 433,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 1.0,
+        "realized_delta": 1.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249380,
+        "step": 649,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 10.0,
+        "realized_delta": 10.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249381,
+        "step": 649,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 12.0,
+        "realized_delta": 12.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249381,
+        "step": 649,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 12.0,
+        "realized_delta": 12.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249383,
+        "step": 649,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 18.0,
+        "realized_delta": 18.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249383,
+        "step": 649,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 18.0,
+        "realized_delta": 18.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249384,
+        "step": 433,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 2.0,
+        "realized_delta": 2.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249384,
+        "step": 554,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 0.0,
+        "realized_delta": 0.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249384,
+        "step": 433,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 2.0,
+        "realized_delta": 2.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249384,
+        "step": 554,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 0.0,
+        "realized_delta": 0.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249386,
+        "step": 433,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 0.0,
+        "realized_delta": 0.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249386,
+        "step": 554,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 0.0,
+        "realized_delta": 0.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249386,
+        "step": 433,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 0.0,
+        "realized_delta": 0.0,
+        "diff": 0.0
+      },
+      {
+        "seed": 249386,
+        "step": 554,
+        "mechanism": "DEPENDENCY_AWARE_MARKET_TIMING",
+        "predicted_delta": 0.0,
+        "realized_delta": 0.0,
+        "diff": 0.0
+      }
+    ],
+    "fidelity_status": "VERIFIED_HIGH_FIDELITY"
+  },
+  "latency": {
+    "n_steps": 28760,
+    "mean_ms": 75.75792770503527,
+    "median_ms": 50.889549995190464,
+    "p95_ms": 229.39726001495723,
+    "p99_ms": 404.87375700933626,
+    "max_ms": 2346.6820000030566,
+    "within_limit": false
+  },
+  "total_elapsed_sec": 29237.13
+}

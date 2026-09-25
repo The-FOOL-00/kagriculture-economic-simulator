@@ -1,0 +1,327 @@
+{
+  "0": {
+    "cows": 8,
+    "sheep": 6,
+    "geese": 3,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 260,
+    "land": 2,
+    "sales": {
+      "WHEAT": 18280,
+      "FERTILIZER": 10357,
+      "WOOL": 7184,
+      "MILK": 8257,
+      "MELON": 6072,
+      "EGG": 8077,
+      "STRAWBERRY": 6253,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    }
+  },
+  "1": {
+    "cows": 6,
+    "sheep": 10,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 277,
+    "land": 2,
+    "sales": {
+      "WHEAT": 10389,
+      "FERTILIZER": 8447,
+      "WOOL": 9580,
+      "MILK": 4421,
+      "MELON": 1172,
+      "EGG": 1169,
+      "STRAWBERRY": 10390,
+      "CARROT": 1182,
+      "TOMATO": 1100
+    }
+  },
+  "2": {
+    "cows": 8,
+    "sheep": 6,
+    "geese": 3,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 260,
+    "land": 2,
+    "sales": {
+      "WHEAT": 18277,
+      "FERTILIZER": 10352,
+      "WOOL": 7177,
+      "MILK": 8244,
+      "MELON": 6072,
+      "EGG": 8074,
+      "STRAWBERRY": 6253,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    }
+  },
+  "3": {
+    "cows": 6,
+    "sheep": 11,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 276,
+    "land": 2,
+    "sales": {
+      "WHEAT": 25268,
+      "FERTILIZER": 18351,
+      "WOOL": 12594,
+      "MILK": 9319,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    }
+  },
+  "4": {
+    "cows": 6,
+    "sheep": 10,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 276,
+    "land": 2,
+    "sales": {
+      "WHEAT": 25265,
+      "FERTILIZER": 18341,
+      "WOOL": 12694,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    }
+  },
+  "5": {
+    "cows": 6,
+    "sheep": 10,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 276,
+    "land": 2,
+    "sales": {
+      "WHEAT": 25275,
+      "FERTILIZER": 18343,
+      "WOOL": 12733,
+      "MILK": 9342,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13299,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    }
+  },
+  "6": {
+    "cows": 6,
+    "sheep": 11,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 276,
+    "land": 2,
+    "sales": {
+      "WHEAT": 25265,
+      "FERTILIZER": 18343,
+      "WOOL": 12694,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    }
+  },
+  "7": {
+    "cows": 6,
+    "sheep": 11,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 275,
+    "land": 2,
+    "sales": {
+      "WHEAT": 25265,
+      "FERTILIZER": 18343,
+      "WOOL": 12694,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    }
+  },
+  "8": {
+    "cows": 6,
+    "sheep": 11,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 275,
+    "land": 2,
+    "sales": {
+      "WHEAT": 25265,
+      "FERTILIZER": 18342,
+      "WOOL": 12702,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    }
+  },
+  "9": {
+    "cows": 6,
+    "sheep": 11,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 165,
+      "STRAWBERRY": 33,
+      "CARROT": 28
+    },
+    "fertilizations": 61,
+    "hires": 276,
+    "land": 2,
+    "sales": {
+      "WHEAT": 18270,
+      "FERTILIZER": 10324,
+      "WOOL": 7300,
+      "MILK": 8221,
+      "MELON": 6072,
+      "STRAWBERRY": 6250,
+      "EGG": 8018,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    }
+  },
+  "10": {
+    "cows": 6,
+    "sheep": 11,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 277,
+    "land": 2,
+    "sales": {
+      "WHEAT": 25290,
+      "FERTILIZER": 18348,
+      "WOOL": 12594,
+      "MILK": 9319,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    }
+  },
+  "11": {
+    "cows": 6,
+    "sheep": 11,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "fertilizations": 61,
+    "hires": 276,
+    "land": 2,
+    "sales": {
+      "WHEAT": 25265,
+      "FERTILIZER": 18342,
+      "WOOL": 12594,
+      "MILK": 9322,
+      "MELON": 7072,
+      "EGG": 9070,
+      "STRAWBERRY": 13265,
+      "CARROT": 19045,
+      "TOMATO": 7000
+    }
+  },
+  "12": {
+    "cows": 4,
+    "sheep": 14,
+    "geese": 0,
+    "crops": {
+      "MELON": 12,
+      "WHEAT": 165,
+      "STRAWBERRY": 33,
+      "CARROT": 28
+    },
+    "fertilizations": 61,
+    "hires": 277,
+    "land": 2,
+    "sales": {
+      "WHEAT": 18404,
+      "FERTILIZER": 10380,
+      "WOOL": 7368,
+      "MILK": 8220,
+      "MELON": 6072,
+      "STRAWBERRY": 6263,
+      "EGG": 8018,
+      "CARROT": 18045,
+      "TOMATO": 6000
+    }
+  }
+}

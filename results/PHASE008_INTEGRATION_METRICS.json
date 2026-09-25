@@ -1,0 +1,64 @@
+{
+  "governance": {
+    "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "prospective_matches": 0,
+    "holdouts_untouched": [
+      "340050-340199",
+      "214200-214249",
+      "340300-340349"
+    ],
+    "resource_conversion_quarantined": true
+  },
+  "primary_cohort_summary": {
+    "cohort": "PRIMARY_RESERVED_249k",
+    "n_seeds": 25,
+    "n_matches": 50,
+    "mean_net_delta": 52.12,
+    "median_net_delta": 49.0,
+    "std_delta": 49.55,
+    "se_delta": 9.91,
+    "ci95": [
+      32.7,
+      71.54
+    ],
+    "t_statistic": 5.2594,
+    "p_value_approx": 0.0,
+    "win_loss_tie": "21/3/1",
+    "win_rate": 0.84,
+    "tie_excluded_win_rate": 0.875,
+    "commits_by_mechanism": {
+      "DEPENDENCY_AWARE_MARKET_TIMING": 86
+    },
+    "total_commits": 86,
+    "latency_p50_ms": 1.679,
+    "latency_p95_ms": 5.431,
+    "latency_p99_ms": 11.315,
+    "worst_turn_ms": 52.971
+  },
+  "benchmark_cohort_summary": {
+    "cohort": "BENCHMARK_HISTORICAL_50k",
+    "n_seeds": 25,
+    "n_matches": 50,
+    "mean_net_delta": 86.92,
+    "median_net_delta": 14.0,
+    "std_delta": 230.17,
+    "se_delta": 46.03,
+    "ci95": [
+      -3.31,
+      177.15
+    ],
+    "t_statistic": 1.8882,
+    "p_value_approx": 0.059004,
+    "win_loss_tie": "16/9/0",
+    "win_rate": 0.64,
+    "tie_excluded_win_rate": 0.64,
+    "commits_by_mechanism": {
+      "DEPENDENCY_AWARE_MARKET_TIMING": 78
+    },
+    "total_commits": 78,
+    "latency_p50_ms": 1.697,
+    "latency_p95_ms": 5.627,
+    "latency_p99_ms": 10.821,
+    "worst_turn_ms": 65.464
+  }
+}
