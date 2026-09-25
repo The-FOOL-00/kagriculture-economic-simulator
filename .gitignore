@@ -9,8 +9,16 @@ __pycache__/
 !results/PHASE014_*.json
 !PHASE022R1_QUAL_MANIFEST.json
 !PHASE022R1_QA_RESULTS.json
+!research/*.json
 !research/**/*.json
+!results/*.json
+!results/**/*.json
 replays/
+live_data/
+scratch/**/replays/
+scratch/*.json
+results/v27_*.jsonl
+results/v32_p2_bc_legs.jsonl
 .tempmediaStorage/
 
 # Submission archives
