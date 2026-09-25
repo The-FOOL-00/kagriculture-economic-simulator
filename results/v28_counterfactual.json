@@ -1,0 +1,244 @@
+{
+ "CF1_run1": {
+  "a7_cash": 11948.0,
+  "below_silent": 521.73046875,
+  "label": "CF-V28-1 tip gate run1",
+  "live_a7_market": [
+   [
+    "SELL",
+    "FERTILIZER",
+    17
+   ],
+   [
+    "SELL",
+    "WOOL",
+    3
+   ],
+   [
+    "BUY_PRODUCT",
+    "WHEAT",
+    6
+   ],
+   [
+    "BUY_LAND"
+   ],
+   [
+    "BUY_ANIMAL",
+    "SHEEP",
+    6
+   ],
+   [
+    "HIRE"
+   ],
+   [
+    "HIRE"
+   ]
+  ],
+  "live_a7_sheep": 6,
+  "live_v3_market": [
+   [
+    "SELL",
+    "FERTILIZER",
+    17
+   ],
+   [
+    "SELL",
+    "WOOL",
+    3
+   ]
+  ],
+  "live_v3_sheep": 0,
+  "probe_step": 289,
+  "seed": 249534,
+  "swap_a7_on_v3state_market": [
+   [
+    "SELL",
+    "FERTILIZER",
+    17
+   ],
+   [
+    "SELL",
+    "WOOL",
+    3
+   ]
+  ],
+  "swap_a7_on_v3state_sheep": 0,
+  "swap_v3_on_a7state_market": [
+   [
+    "SELL",
+    "FERTILIZER",
+    17
+   ],
+   [
+    "SELL",
+    "WOOL",
+    3
+   ],
+   [
+    "BUY_PRODUCT",
+    "WHEAT",
+    6
+   ],
+   [
+    "BUY_LAND"
+   ],
+   [
+    "BUY_ANIMAL",
+    "SHEEP",
+    6
+   ],
+   [
+    "HIRE"
+   ],
+   [
+    "HIRE"
+   ]
+  ],
+  "swap_v3_on_a7state_sheep": 6,
+  "terminal_after_restore": [
+   108580.0,
+   120667.0
+  ],
+  "threshold": {
+   "injection": 522.3486328125,
+   "sheep_qty": 6
+  },
+  "v3_cash": 9916.0
+ },
+ "CF1_run2_independent": {
+  "a7_cash": 11948.0,
+  "below_silent": 521.73046875,
+  "label": "CF-V28-1 tip gate run2",
+  "live_a7_market": [
+   [
+    "SELL",
+    "FERTILIZER",
+    17
+   ],
+   [
+    "SELL",
+    "WOOL",
+    3
+   ],
+   [
+    "BUY_PRODUCT",
+    "WHEAT",
+    6
+   ],
+   [
+    "BUY_LAND"
+   ],
+   [
+    "BUY_ANIMAL",
+    "SHEEP",
+    6
+   ],
+   [
+    "HIRE"
+   ],
+   [
+    "HIRE"
+   ]
+  ],
+  "live_a7_sheep": 6,
+  "live_v3_market": [
+   [
+    "SELL",
+    "FERTILIZER",
+    17
+   ],
+   [
+    "SELL",
+    "WOOL",
+    3
+   ]
+  ],
+  "live_v3_sheep": 0,
+  "probe_step": 289,
+  "seed": 249534,
+  "swap_a7_on_v3state_market": [
+   [
+    "SELL",
+    "FERTILIZER",
+    17
+   ],
+   [
+    "SELL",
+    "WOOL",
+    3
+   ]
+  ],
+  "swap_a7_on_v3state_sheep": 0,
+  "swap_v3_on_a7state_market": [
+   [
+    "SELL",
+    "FERTILIZER",
+    17
+   ],
+   [
+    "SELL",
+    "WOOL",
+    3
+   ],
+   [
+    "BUY_PRODUCT",
+    "WHEAT",
+    6
+   ],
+   [
+    "BUY_LAND"
+   ],
+   [
+    "BUY_ANIMAL",
+    "SHEEP",
+    6
+   ],
+   [
+    "HIRE"
+   ],
+   [
+    "HIRE"
+   ]
+  ],
+  "swap_v3_on_a7state_sheep": 6,
+  "terminal_after_restore": [
+   108580.0,
+   120667.0
+  ],
+  "threshold": {
+   "injection": 522.3486328125,
+   "sheep_qty": 6
+  },
+  "v3_cash": 9916.0
+ },
+ "CF2": {
+  "a7_cash": 266.0,
+  "below_silent": 5.9375,
+  "label": "CF-V28-2 melon budget",
+  "live_a7_market": [
+   [
+    "BUY_SEED",
+    "MELON",
+    2
+   ]
+  ],
+  "live_v3_market": [
+   [
+    "BUY_SEED",
+    "MELON",
+    1
+   ]
+  ],
+  "probe_step": 17,
+  "seed": 249530,
+  "terminal_after_restore": [
+   106557.0,
+   105271.0
+  ],
+  "threshold_x2": {
+   "injection": 6.53125,
+   "melon_qty": 2
+  },
+  "v3_cash": 158.0
+ }
+}
