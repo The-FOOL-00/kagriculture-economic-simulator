@@ -1,0 +1,563 @@
+{
+ "M_ITEM_cond": {
+  "CARROT": 11770,
+  "COW": 1268,
+  "EGG": 7180,
+  "FERTILIZER": 34264,
+  "GOOSE": 376,
+  "MELON": 4884,
+  "MILK": 17380,
+  "SHEEP": 1312,
+  "STRAWBERRY": 20310,
+  "TOMATO": 1988,
+  "WHEAT": 60646,
+  "WOOL": 15984
+ },
+ "M_OP": {
+  "BUY_ANIMAL": 2956,
+  "BUY_LAND": 584,
+  "BUY_PRODUCT": 17876,
+  "BUY_SEED": 44236,
+  "HIRE": 67788,
+  "NOOP": 1479866,
+  "SELL": 112294
+ },
+ "M_QTY_cond": {
+  "0": 370,
+  "1": 57624,
+  "10": 2010,
+  "100": 1932,
+  "1000": 20300,
+  "11": 1012,
+  "12": 2684,
+  "13": 1040,
+  "14": 770,
+  "15": 760,
+  "16": 982,
+  "17": 650,
+  "18": 462,
+  "19": 114,
+  "2": 26176,
+  "20": 404,
+  "21": 136,
+  "22": 172,
+  "23": 12,
+  "24": 256,
+  "25": 16,
+  "29": 8,
+  "3": 17304,
+  "30": 120,
+  "31": 4,
+  "32": 8,
+  "33": 248,
+  "35": 8,
+  "36": 244,
+  "38": 2,
+  "39": 12,
+  "4": 9448,
+  "40": 8,
+  "47": 8,
+  "48": 144,
+  "5": 4398,
+  "50": 120,
+  "55": 8,
+  "57": 16,
+  "59": 96,
+  "6": 10792,
+  "60": 88,
+  "63": 128,
+  "65": 8,
+  "69": 8,
+  "7": 3090,
+  "71": 56,
+  "73": 8,
+  "74": 48,
+  "75": 24,
+  "77": 48,
+  "79": 8,
+  "8": 5106,
+  "80": 128,
+  "81": 16,
+  "82": 8,
+  "83": 56,
+  "84": 116,
+  "85": 52,
+  "88": 60,
+  "89": 336,
+  "9": 4980,
+  "90": 88,
+  "91": 52,
+  "92": 62,
+  "93": 22,
+  "96": 56,
+  "983": 252,
+  "984": 128,
+  "985": 56,
+  "986": 80,
+  "988": 48,
+  "992": 12,
+  "996": 248,
+  "997": 288,
+  "998": 480,
+  "999": 240
+ },
+ "M_TRUNC": 0,
+ "N1": 0,
+ "N2": 0,
+ "N3": 0,
+ "U_ARG_cond": {
+  "CARROT": 8136,
+  "COW": 3548,
+  "EGG": 240,
+  "FERTILIZER": 12932,
+  "GOOSE": 1176,
+  "MELON": 5250,
+  "MILK": 4000,
+  "SHEEP": 3892,
+  "STRAWBERRY": 11739,
+  "TOMATO": 1140,
+  "WHEAT": 77456,
+  "WOOL": 2880
+ },
+ "U_OP": {
+  "BUILD_COOP": 1056,
+  "BUILD_PASTURE": 3768,
+  "CARE": 101720,
+  "COLLECT_FERTILIZER": 94660,
+  "DIG": 8786,
+  "DROP": 10620,
+  "EAST": 153774,
+  "FEED": 83066,
+  "FERTILIZE": 25932,
+  "HARVEST": 117856,
+  "NORTH": 224624,
+  "PASS": 134895,
+  "PICKUP": 47692,
+  "PLACE": 27068,
+  "PLANT": 57629,
+  "SOUTH": 127110,
+  "WATER": 271180,
+  "WEST": 217258
+ },
+ "U_QTY_cond": {
+  "1": 8,
+  "10": 728,
+  "1000": 1892,
+  "12": 1108,
+  "13": 76,
+  "14": 152,
+  "16": 240,
+  "18": 156,
+  "2": 13032,
+  "3": 10528,
+  "4": 4972,
+  "5": 7954,
+  "6": 7428,
+  "7": 610,
+  "8": 1288,
+  "9": 352,
+  "IMPLICIT": 24236
+ },
+ "U_TRUNC": 0,
+ "farmer_OP": {
+  "BUILD_PASTURE": 248,
+  "CARE": 13288,
+  "COLLECT_FERTILIZER": 13092,
+  "DIG": 632,
+  "DROP": 1336,
+  "EAST": 16000,
+  "FEED": 11868,
+  "FERTILIZE": 1444,
+  "HARVEST": 14128,
+  "NORTH": 18348,
+  "PASS": 15900,
+  "PICKUP": 6000,
+  "PLACE": 5168,
+  "PLANT": 4300,
+  "SOUTH": 15072,
+  "WATER": 17084,
+  "WEST": 18652
+ },
+ "hand_count": {
+  "0": 7440,
+  "10": 11328,
+  "11": 45130,
+  "12": 15106,
+  "13": 18668,
+  "14": 4008,
+  "3": 5760,
+  "4": 16320,
+  "5": 11056,
+  "6": 480,
+  "7": 9432,
+  "8": 10876,
+  "9": 16956
+ },
+ "legs": 120,
+ "legs_sha16": "55c907db955b1210",
+ "market_count": {
+  "0": 70772,
+  "1": 54790,
+  "10": 4532,
+  "2": 23204,
+  "3": 7492,
+  "4": 2554,
+  "5": 1870,
+  "6": 1542,
+  "7": 1398,
+  "8": 1278,
+  "9": 3128
+ },
+ "max_hands": 14,
+ "max_market": 10,
+ "none_farmer": 0,
+ "none_hands": 0,
+ "none_market": 0,
+ "per_slot_M_OP": [
+  {
+   "BUY_ANIMAL": 172,
+   "BUY_LAND": 12,
+   "BUY_PRODUCT": 8316,
+   "BUY_SEED": 27502,
+   "HIRE": 1832,
+   "NOOP": 70772,
+   "SELL": 63954
+  },
+  {
+   "BUY_ANIMAL": 748,
+   "BUY_PRODUCT": 4908,
+   "BUY_SEED": 12970,
+   "HIRE": 6524,
+   "NOOP": 125802,
+   "SELL": 21608
+  },
+  {
+   "BUY_ANIMAL": 576,
+   "BUY_LAND": 36,
+   "BUY_PRODUCT": 2418,
+   "BUY_SEED": 2908,
+   "HIRE": 7708,
+   "NOOP": 148766,
+   "SELL": 10148
+  },
+  {
+   "BUY_ANIMAL": 416,
+   "BUY_LAND": 172,
+   "BUY_PRODUCT": 1104,
+   "BUY_SEED": 328,
+   "HIRE": 8712,
+   "NOOP": 156258,
+   "SELL": 5570
+  },
+  {
+   "BUY_ANIMAL": 200,
+   "BUY_LAND": 76,
+   "BUY_PRODUCT": 582,
+   "BUY_SEED": 124,
+   "HIRE": 9308,
+   "NOOP": 158812,
+   "SELL": 3458
+  },
+  {
+   "BUY_ANIMAL": 124,
+   "BUY_PRODUCT": 422,
+   "BUY_SEED": 56,
+   "HIRE": 8648,
+   "NOOP": 160682,
+   "SELL": 2628
+  },
+  {
+   "BUY_LAND": 212,
+   "BUY_PRODUCT": 122,
+   "BUY_SEED": 68,
+   "HIRE": 8120,
+   "NOOP": 162224,
+   "SELL": 1814
+  },
+  {
+   "BUY_ANIMAL": 404,
+   "BUY_LAND": 76,
+   "BUY_PRODUCT": 4,
+   "BUY_SEED": 48,
+   "HIRE": 6800,
+   "NOOP": 163622,
+   "SELL": 1606
+  },
+  {
+   "BUY_ANIMAL": 248,
+   "BUY_SEED": 232,
+   "HIRE": 5672,
+   "NOOP": 164900,
+   "SELL": 1508
+  },
+  {
+   "BUY_ANIMAL": 68,
+   "HIRE": 4464,
+   "NOOP": 168028
+  }
+ ],
+ "plant_zero_seed": 84,
+ "seeds": [
+  249635,
+  249636,
+  249637,
+  249638,
+  249639,
+  249640,
+  249641,
+  249642,
+  249643,
+  249644,
+  249645,
+  249646,
+  249647,
+  249648,
+  249649
+ ],
+ "step0_total": 240,
+ "step0_total_by_teacher": {
+  "E0_V3": 60,
+  "E2_A7": 60,
+  "E6_W72": 60,
+  "E7_W2015": 60
+ },
+ "step0_wash_by_teacher": {
+  "E0_V3": 60,
+  "E2_A7": 60,
+  "E6_W72": 60,
+  "E7_W2015": 60
+ },
+ "step0_wash_examples": [
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     50
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     50
+    ]
+   ],
+   "seed": 249635,
+   "side": "rows0",
+   "teacher": "E0_V3",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     30
+    ]
+   ],
+   "seed": 249635,
+   "side": "rows1",
+   "teacher": "E2_A7",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     30
+    ]
+   ],
+   "seed": 249636,
+   "side": "rows0",
+   "teacher": "E2_A7",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     50
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     50
+    ]
+   ],
+   "seed": 249636,
+   "side": "rows1",
+   "teacher": "E0_V3",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     50
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     50
+    ]
+   ],
+   "seed": 249636,
+   "side": "rows0",
+   "teacher": "E0_V3",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     30
+    ]
+   ],
+   "seed": 249636,
+   "side": "rows1",
+   "teacher": "E2_A7",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     50
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     50
+    ]
+   ],
+   "seed": 249635,
+   "side": "rows0",
+   "teacher": "E0_V3",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     20
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     15
+    ]
+   ],
+   "seed": 249635,
+   "side": "rows1",
+   "teacher": "E7_W2015",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     7
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     2
+    ]
+   ],
+   "seed": 249635,
+   "side": "rows0",
+   "teacher": "E6_W72",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     20
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     15
+    ]
+   ],
+   "seed": 249635,
+   "side": "rows1",
+   "teacher": "E7_W2015",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     20
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     15
+    ]
+   ],
+   "seed": 249635,
+   "side": "rows0",
+   "teacher": "E7_W2015",
+   "wash": true
+  },
+  {
+   "market": [
+    [
+     "BUY_PRODUCT",
+     "WHEAT",
+     50
+    ],
+    [
+     "SELL",
+     "WHEAT",
+     50
+    ]
+   ],
+   "seed": 249635,
+   "side": "rows1",
+   "teacher": "E0_V3",
+   "wash": true
+  }
+ ],
+ "steps": 172560,
+ "teachers": {
+  "E0_V3": 43140,
+  "E2_A7": 43140,
+  "E6_W72": 43140,
+  "E7_W2015": 43140
+ },
+ "train_steps": 138048,
+ "val_seeds": [
+  249647,
+  249648,
+  249649
+ ],
+ "val_steps": 34512,
+ "vocab_sha16": "f0df959940dfd216"
+}

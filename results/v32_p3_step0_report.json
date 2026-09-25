@@ -1,0 +1,5928 @@
+{
+ "a7_probe": {
+  "curve": [
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 0,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 25,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 50,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 75,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 100,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 125,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 150,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 175,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 200,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 225,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 250,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 275,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 300,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 325,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 350,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 375,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 400,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 425,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 450,
+    "exact": 0,
+    "full": 0.0,
+    "n": 60,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 475,
+    "exact": 60,
+    "full": 1.0,
+    "n": 60,
+    "wash": 60
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 500,
+    "exact": 60,
+    "full": 1.0,
+    "n": 60,
+    "wash": 60
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 525,
+    "exact": 60,
+    "full": 1.0,
+    "n": 60,
+    "wash": 60
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 550,
+    "exact": 60,
+    "full": 1.0,
+    "n": 60,
+    "wash": 60
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 575,
+    "exact": 60,
+    "full": 1.0,
+    "n": 60,
+    "wash": 60
+   },
+   {
+    "by_teacher": {
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 599,
+    "exact": 60,
+    "full": 1.0,
+    "n": 60,
+    "wash": 60
+   }
+  ],
+  "final": {
+   "by_teacher": {
+    "E2_A7": {
+     "exact": 60,
+     "n": 60,
+     "wash": 60
+    }
+   },
+   "exact": 60,
+   "n": 60,
+   "wash": 60
+  },
+  "final_rows": [
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249635,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249636,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249636,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249635,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249635,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249635,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249637,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249636,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249636,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249637,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249637,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249637,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249638,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249638,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249638,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249638,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249639,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249639,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249639,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249639,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249640,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249640,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249641,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249640,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249641,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249640,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249641,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249641,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249642,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249642,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249642,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249642,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249643,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249643,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249643,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249643,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249644,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249644,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249644,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249644,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249645,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249645,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249645,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249645,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249646,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249646,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249646,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249646,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249647,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249647,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249647,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249647,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249648,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249648,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249648,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249648,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249649,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249649,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249649,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": true,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     30
+    ],
+    "seed": 249649,
+    "teacher": "E2_A7",
+    "wash": true
+   }
+  ]
+ },
+ "mixture_probe": {
+  "curve": [
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 0,
+    "exact": 0,
+    "full": 0.0,
+    "n": 240,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 25,
+    "exact": 0,
+    "full": 0.0,
+    "n": 240,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 50,
+    "exact": 0,
+    "full": 0.0,
+    "n": 240,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 75,
+    "exact": 0,
+    "full": 0.0,
+    "n": 240,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 0
+     }
+    },
+    "ep": 100,
+    "exact": 0,
+    "full": 0.0,
+    "n": 240,
+    "wash": 0
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 125,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 150,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 175,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 200,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 225,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 250,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 275,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 300,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 325,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 350,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 375,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 400,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 425,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 450,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 475,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 500,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 525,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 550,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 60,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 575,
+    "exact": 60,
+    "full": 0.25,
+    "n": 240,
+    "wash": 240
+   },
+   {
+    "by_teacher": {
+     "E0_V3": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E2_A7": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E6_W72": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     },
+     "E7_W2015": {
+      "exact": 0,
+      "n": 60,
+      "wash": 60
+     }
+    },
+    "ep": 599,
+    "exact": 0,
+    "full": 0.0,
+    "n": 240,
+    "wash": 240
+   }
+  ],
+  "final": {
+   "by_teacher": {
+    "E0_V3": {
+     "exact": 0,
+     "n": 60,
+     "wash": 60
+    },
+    "E2_A7": {
+     "exact": 0,
+     "n": 60,
+     "wash": 60
+    },
+    "E6_W72": {
+     "exact": 0,
+     "n": 60,
+     "wash": 60
+    },
+    "E7_W2015": {
+     "exact": 0,
+     "n": 60,
+     "wash": 60
+    }
+   },
+   "exact": 0,
+   "n": 240,
+   "wash": 240
+  },
+  "final_rows": [
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249635,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249636,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249637,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249638,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249639,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249640,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249641,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249642,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249643,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249644,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249645,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249646,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249647,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249648,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E2_A7",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E7_W2015",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E0_V3",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E6_W72",
+    "wash": true
+   },
+   {
+    "exact": false,
+    "pred_m0": [
+     "BUY_PRODUCT",
+     "WHEAT",
+     30
+    ],
+    "pred_m1": [
+     "SELL",
+     "WHEAT",
+     2
+    ],
+    "seed": 249649,
+    "teacher": "E2_A7",
+    "wash": true
+   }
+  ]
+ }
+}

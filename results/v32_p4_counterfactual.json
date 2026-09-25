@@ -1,0 +1,20 @@
+[
+ {
+  "seed": 249675,
+  "p3_baseline_cash": 881.0,
+  "p3_spliced_wash_cash": 64.0,
+  "p4_arm1_cash": 12.0
+ },
+ {
+  "seed": 249676,
+  "p3_baseline_cash": 887.0,
+  "p3_spliced_wash_cash": 7.0,
+  "p4_arm1_cash": 2.0
+ },
+ {
+  "seed": 249677,
+  "p3_baseline_cash": 199.0,
+  "p3_spliced_wash_cash": 0.0,
+  "p4_arm1_cash": 280.0
+ }
+]
