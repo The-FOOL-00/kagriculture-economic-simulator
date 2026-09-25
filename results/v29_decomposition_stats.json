@@ -1,0 +1,65 @@
+{
+ "n_seeds": 40,
+ "M_head_to_head": 1289.175,
+ "Cbar_create": 0.0,
+ "C_sd": 0.0,
+ "C_ci95": [
+  0.0,
+  0.0
+ ],
+ "C_median": 0.0,
+ "C_seed_positive": 0,
+ "C_quantiles": {
+  "min": 0.0,
+  "q05": 0.0,
+  "q25": 0.0,
+  "median": 0.0,
+  "q75": 0.0,
+  "q95": 0.0,
+  "max": 0.0
+ },
+ "Ebar_extract": 1289.175,
+ "E_sd": 14.992113311286756,
+ "E_ci95": [
+  1284.380289553023,
+  1293.969710446977
+ ],
+ "E_median": 1286.0,
+ "extract_share": 1.0,
+ "create_share": 0.0,
+ "catastrophic_weakness_veto": false,
+ "outcome_b_pattern": true,
+ "L_A": {
+  "mean": 94574.775,
+  "sd": 19828.378275861116,
+  "quantiles": {
+   "min": 57793.0,
+   "q05": 64334.025,
+   "q25": 81261.0,
+   "median": 90510.5,
+   "q75": 109797.25,
+   "q95": 124069.95,
+   "max": 143472.0
+  }
+ },
+ "L_V": {
+  "mean": 94574.775,
+  "sd": 19828.378275861116,
+  "quantiles": {
+   "min": 57793.0,
+   "q05": 64334.025,
+   "q25": 81261.0,
+   "median": 90510.5,
+   "q75": 109797.25,
+   "q95": 124069.95,
+   "max": 143472.0
+  }
+ },
+ "C0_mean": 0.0,
+ "C1_mean": 0.0,
+ "C0_median": 0.0,
+ "C1_median": 0.0,
+ "G_V_nonzero": 6,
+ "G_A_nonzero": 6,
+ "decomp_csv_sha256": "b11426d2a14a08cb0c8d553e8024b1779b634e939c50cec2304c3e0dc64c056c"
+}
