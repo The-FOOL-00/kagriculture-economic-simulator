@@ -9,6 +9,7 @@ __pycache__/
 !results/PHASE014_*.json
 !PHASE022R1_QUAL_MANIFEST.json
 !PHASE022R1_QA_RESULTS.json
+!research/**/*.json
 replays/
 .tempmediaStorage/
 
