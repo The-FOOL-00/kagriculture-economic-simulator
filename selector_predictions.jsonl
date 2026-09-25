@@ -1,0 +1,11 @@
+{"step": 0, "seed": 249675, "opponent": "E2_A7", "seat": 0, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249675, "opponent": "E2_A7", "seat": 1, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249676, "opponent": "E2_A7", "seat": 0, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249676, "opponent": "E2_A7", "seat": 1, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249677, "opponent": "E2_A7", "seat": 0, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249677, "opponent": "E2_A7", "seat": 1, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249678, "opponent": "E2_A7", "seat": 0, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249678, "opponent": "E2_A7", "seat": 1, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249679, "opponent": "E2_A7", "seat": 0, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249677, "opponent": "E8_DMITRII", "seat": 0, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
+{"step": 0, "seed": 249677, "opponent": "E8_DMITRII", "seat": 1, "decision": "OVERRIDE", "rule": "WHEAT_WASH_25", "confidence": 0.95, "override_action": [["BUY_PRODUCT", "WHEAT", 25], ["SELL", "WHEAT", 25]]}
