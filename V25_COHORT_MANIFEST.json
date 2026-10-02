@@ -1,0 +1,42 @@
+{
+  "project": "Kagriculture-V25",
+  "created_at": "2026-09-21T11:37:00Z",
+  "description": "Preregistered virgin seed cohorts for V25 Coherent Planner research",
+  "engine_version": "1.32.7",
+  "protected_holdouts_preserved": [
+    {"range": "340050..340199", "count": 150, "status": "LOCKED"},
+    {"range": "214200..214249", "count": 50, "status": "LOCKED"}
+  ],
+  "consumed_prior_cohorts": [
+    {"name": "Phase017_to_Phase022", "range": "249286..249395", "count": 110},
+    {"name": "V24_Pilot", "range": "249400..249409", "count": 10}
+  ],
+  "v25_discovery_cohort": {
+    "purpose": "Screening and comparative evaluation of P1, P2, P3 prototypes vs V3",
+    "seed_start": 249430,
+    "seed_end": 249449,
+    "seed_count": 20,
+    "seating": "mirrored (seat 0 and seat 1)",
+    "total_matches_per_candidate": 40,
+    "seeds": [
+      249430, 249431, 249432, 249433, 249434,
+      249435, 249436, 249437, 249438, 249439,
+      249440, 249441, 249442, 249443, 249444,
+      249445, 249446, 249447, 249448, 249449
+    ]
+  },
+  "v25_confirmation_cohort": {
+    "purpose": "Independent confirmation of best promoted candidate before release study",
+    "seed_start": 249450,
+    "seed_end": 249469,
+    "seed_count": 20,
+    "seating": "mirrored (seat 0 and seat 1)",
+    "total_matches": 40,
+    "seeds": [
+      249450, 249451, 249452, 249453, 249454,
+      249455, 249456, 249457, 249458, 249459,
+      249460, 249461, 249462, 249463, 249464,
+      249465, 249466, 249467, 249468, 249469
+    ]
+  }
+}
