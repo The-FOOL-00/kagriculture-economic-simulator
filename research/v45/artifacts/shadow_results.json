@@ -1,0 +1,13 @@
+{
+  "total_match_legs": 128,
+  "total_proposals": 550,
+  "positive_alpha_proposals": 0,
+  "destructive_proposals": 550,
+  "proposal_precision_pct": 0.0,
+  "false_positive_destructive_rate_pct": 100.0,
+  "median_economic_regret": 70.27,
+  "mean_realized_alpha_on_proposals": -70.27,
+  "confirmed_rescues": 0,
+  "catastrophic_safety_violations": 0,
+  "shadow_gate_verdict": "REJECTED (Proposals Fail Regret and Precision Gate)"
+}

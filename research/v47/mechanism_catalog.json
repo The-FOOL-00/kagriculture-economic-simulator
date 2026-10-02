@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "program": "Kagriculture V47 3000 Breakthrough Program",
+  "generated_at": "2026-09-25",
+  "mechanisms": [
+    {
+      "mechanism": "ORDERPRI2_RIVAL_STOCK_ORDERING",
+      "agent": "thomastschinkel_2945",
+      "source": "research/v47/elite_corpus/agents/thomastschinkel_2945/main.py:4773-4950",
+      "implementation": "Tracks rival field harvests to infer rival inventory. Reorders existing SELL orders descending by rival-exposure price damage: _or2_exposure(item, qty, rival_stock). Preserves order multiset and non-SELL orders.",
+      "observed_trigger": "Active every turn step >= 1 with >=2 movable SELL orders.",
+      "candidate_causal_explanation": "Front-runs rival's impending sales on the exact commodities the rival has freshly harvested into shed, capturing peak price quotes before rival can execute."
+    },
+    {
+      "mechanism": "RACE_SALE_ADVANCEMENT",
+      "agent": "thomastschinkel_2945",
+      "source": "research/v47/elite_corpus/agents/thomastschinkel_2945/main.py:4835-4869",
+      "implementation": "When rival has harvested >= K units of an item, advances planned future sales of that item from future tape steps (horizon H=40 turns) into the current turn. Deducts advanced quantity from future tape sales ('debts') to preserve total production economics.",
+      "observed_trigger": "Step 24 <= step < 694, rival harvest detected, available shed stock > 0, price >= 2.",
+      "candidate_causal_explanation": "Captures current town demand and prevents opponent from dumping first; preserves macro production by not creating phantom inventory."
+    },
+    {
+      "mechanism": "SLOT_SWAP_UNDER_SATURATION",
+      "agent": "thomastschinkel_2945",
+      "source": "research/v47/elite_corpus/agents/thomastschinkel_2945/main.py:4870-4923",
+      "implementation": "When all 10 order slots are full and high-exposure item has shed stock, drops weakest sale (lowest price exposure) and substitutes advanced sale of high-exposure item, returning debited slots.",
+      "observed_trigger": "Step 288 <= step < 694, len(orders) >= 10, candidate gain > weakest gain + margin.",
+      "candidate_causal_explanation": "Eliminates deadweight low-margin orders during peak capacity constraints to execute time-critical high-value sales."
+    },
+    {
+      "mechanism": "MARKET_IMPACT_SLOT_REORDERING",
+      "agent": "kaitofukami_v48_3009",
+      "source": "research/v47/differential/3009_modules/scripts_v22_market_impact.py:125-147",
+      "implementation": "Calculates nonlinear price degradation: Q * (P(Inv) - P(Inv + Q)) using exact 1.32.7 market pricing curves. Sorts SELL slots in-place by impact descending.",
+      "observed_trigger": "Any turn with >=2 SELL orders.",
+      "candidate_causal_explanation": "Higher-volume / steeper-curve commodities execute in the first transaction sub-slots before own or concurrent market impact degrades price."
+    },
+    {
+      "mechanism": "DEMAND_AWARE_SELL_ORDERING",
+      "agent": "kaitofukami_v48_3009",
+      "source": "research/v47/differential/3009_modules/v23_policy_library.py:38-80",
+      "implementation": "Multiplies market impact score by (1 + alpha * urgency) where urgency is recovery_days / 10. Items with lower town demand have longer recovery times, so they receive higher priority.",
+      "observed_trigger": "Step >= 1 with >=2 SELL orders and unlocked shops.",
+      "candidate_causal_explanation": "Towns absorb high-demand goods quickly, so prices recover. Low-demand goods suffer persistent price depression, making early sale much more valuable."
+    },
+    {
+      "mechanism": "ACTOR_LOCAL_WEED_REPAIR",
+      "agent": "kaitofukami_v48_3009",
+      "source": "research/v47/differential/3009_modules/scripts_v22_weed_repair.py:26-122",
+      "implementation": "Intercepts PLANT/BUILD actions that collide with WEED tiles. Intercepting worker DIGs on step t, retries intended action on step t+1, then replays fixed-route steps for k turns.",
+      "observed_trigger": "Worker attempts BUILD_PASTURE or PLANT on tile with kind == WEED.",
+      "candidate_causal_explanation": "Prevents catastrophic route invalidation and permanent idle worker stall caused by random weed spawns."
+    },
+    {
+      "mechanism": "COWSWAP_SHOP_ROUTING",
+      "agent": "thomastschinkel_2945",
+      "source": "research/v47/elite_corpus/agents/thomastschinkel_2945/main.py:5523-5756",
+      "implementation": "At first planned COW purchase (step 144-192), checks open town shops. If no milk shops open and egg shop open, dynamically swaps purchase to GOOSE, rewrites pasture build to coop, and routes eggs to market.",
+      "observed_trigger": "Step 144 <= step < 192, BUY_ANIMAL COW planned, shop condition satisfied.",
+      "candidate_causal_explanation": "Cows require milk shops to be profitable; when town lacks milk demand, geese produce faster recurring egg cash without price depression."
+    },
+    {
+      "mechanism": "HERD2_LIVESTOCK_PORTFOLIO",
+      "agent": "thomastschinkel_2945",
+      "source": "research/v47/elite_corpus/agents/thomastschinkel_2945/main.py:5237-5480",
+      "implementation": "Dynamic livestock EV evaluator at step 192-360. Computes expected revenue minus costs for GOOSE vs COW vs SHEEP given current market inventory, shop demand, and competitor animal counts.",
+      "observed_trigger": "Step 192 <= step < 360, BUY_ANIMAL GOOSE planned, EV(best) >= 1.3 * EV(goose) and gain >= $600.",
+      "candidate_causal_explanation": "Adapts livestock capex to the highest-demand animal product unlocked in town, preventing investment in saturated commodities."
+    },
+    {
+      "mechanism": "CARROT2_CROP_SUBSTITUTION",
+      "agent": "thomastschinkel_2945",
+      "source": "research/v47/elite_corpus/agents/thomastschinkel_2945/main.py:4468-4580",
+      "implementation": "Substitutes CARROT for WHEAT planting between days 6 and 28 if carrot book margin pays more and animal wheat feed reserves are guaranteed for >=2 days.",
+      "observed_trigger": "Day 6-28, planting tile, feed reserve safe, carrot margin profitable.",
+      "candidate_causal_explanation": "Carrot produces faster 4-day crop turnaround with high pet cafe / farmers market demand without starving livestock."
+    },
+    {
+      "mechanism": "SHEDROOM_OVERFLOW_GUARD",
+      "agent": "thomastschinkel_2945",
+      "source": "research/v47/elite_corpus/agents/thomastschinkel_2945/main.py:5140-5230",
+      "implementation": "Projects end-of-day drop from workers returning to shed. If drop would exceed 40-unit shed capacity, preemptively sells surplus items before nightfall.",
+      "observed_trigger": "Step % 24 in late turns of day, projected_shed > 40 capacity.",
+      "candidate_causal_explanation": "Prevents catastrophic item loss where excess harvested goods are discarded by engine on night transition."
+    },
+    {
+      "mechanism": "CAPHARV_TERMINAL_HARVEST",
+      "agent": "thomastschinkel_2945",
+      "source": "research/v47/elite_corpus/agents/thomastschinkel_2945/main.py:5010-5028",
+      "implementation": "Harvests mature animals on days 28-29 that would otherwise produce uncollected yield before game end.",
+      "observed_trigger": "Day 28-29, animal has yield_units > 0.",
+      "candidate_causal_explanation": "Extracts maximum terminal cash value from capital assets on the final two days."
+    }
+  ]
+}

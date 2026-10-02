@@ -1,0 +1,466 @@
+{
+  "ROUTE_A_BALANCED_COMPOUND": {
+    "opponents": {
+      "E8_DMITRII": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 759.0,
+        "median_cash": 759.0,
+        "mean_margin": -168568.625,
+        "p10_margin": -185482.0,
+        "casualties": 0
+      },
+      "E2_A7": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 795.0,
+        "median_cash": 795.0,
+        "mean_margin": -175005.0,
+        "p10_margin": -189929.0,
+        "casualties": 0
+      },
+      "E0_V3": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 837.0,
+        "median_cash": 837.0,
+        "mean_margin": -177324.5625,
+        "p10_margin": -192549.5,
+        "casualties": 0
+      },
+      "SYN_AGG": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 779.0,
+        "median_cash": 779.0,
+        "mean_margin": -2221.0,
+        "p10_margin": -2221.0,
+        "casualties": 0
+      },
+      "V44": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 779.0,
+        "median_cash": 779.0,
+        "mean_margin": -170854.5,
+        "p10_margin": -188459.0,
+        "casualties": 0
+      }
+    },
+    "overall": {
+      "legs": 80,
+      "win_rate": 0.0,
+      "mean_cash": 789.8,
+      "median_cash": 779.0,
+      "mean_margin": -138794.7375,
+      "p10_margin": -188821.0,
+      "casualties": 0
+    }
+  },
+  "ROUTE_B_DAIRY_INTENSIVE": {
+    "opponents": {
+      "E8_DMITRII": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 80.0,
+        "median_cash": 80.0,
+        "mean_margin": -172474.0,
+        "p10_margin": -192658.0,
+        "casualties": 0
+      },
+      "E2_A7": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 66.0,
+        "median_cash": 66.0,
+        "mean_margin": -173318.0,
+        "p10_margin": -194216.0,
+        "casualties": 0
+      },
+      "E0_V3": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 58.0,
+        "median_cash": 58.0,
+        "mean_margin": -157964.5,
+        "p10_margin": -177637.5,
+        "casualties": 0
+      },
+      "SYN_AGG": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 50.0,
+        "median_cash": 50.0,
+        "mean_margin": -2950.0,
+        "p10_margin": -2950.0,
+        "casualties": 0
+      },
+      "V44": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 50.0,
+        "median_cash": 50.0,
+        "mean_margin": -173321.75,
+        "p10_margin": -194243.5,
+        "casualties": 0
+      }
+    },
+    "overall": {
+      "legs": 80,
+      "win_rate": 0.0,
+      "mean_cash": 60.8,
+      "median_cash": 58.0,
+      "mean_margin": -136005.65,
+      "p10_margin": -189222.1,
+      "casualties": 0
+    }
+  },
+  "ROUTE_C_TEXTILE_SHEEP": {
+    "opponents": {
+      "E8_DMITRII": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 759.0,
+        "median_cash": 759.0,
+        "mean_margin": -168568.625,
+        "p10_margin": -185482.0,
+        "casualties": 0
+      },
+      "E2_A7": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 795.0,
+        "median_cash": 795.0,
+        "mean_margin": -175005.0,
+        "p10_margin": -189929.0,
+        "casualties": 0
+      },
+      "E0_V3": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 837.0,
+        "median_cash": 837.0,
+        "mean_margin": -177324.5625,
+        "p10_margin": -192549.5,
+        "casualties": 0
+      },
+      "SYN_AGG": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 779.0,
+        "median_cash": 779.0,
+        "mean_margin": -2221.0,
+        "p10_margin": -2221.0,
+        "casualties": 0
+      },
+      "V44": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 779.0,
+        "median_cash": 779.0,
+        "mean_margin": -170854.5,
+        "p10_margin": -188459.0,
+        "casualties": 0
+      }
+    },
+    "overall": {
+      "legs": 80,
+      "win_rate": 0.0,
+      "mean_cash": 789.8,
+      "median_cash": 779.0,
+      "mean_margin": -138794.7375,
+      "p10_margin": -188821.0,
+      "casualties": 0
+    }
+  },
+  "ROUTE_D_MELON_HORTICULTURE": {
+    "opponents": {
+      "E8_DMITRII": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 278.0,
+        "median_cash": 278.0,
+        "mean_margin": -171514.125,
+        "p10_margin": -195469.0,
+        "casualties": 0
+      },
+      "E2_A7": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 314.0,
+        "median_cash": 314.0,
+        "mean_margin": -172680.1875,
+        "p10_margin": -194848.5,
+        "casualties": 0
+      },
+      "E0_V3": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 356.0,
+        "median_cash": 356.0,
+        "mean_margin": -170355.5,
+        "p10_margin": -192784.0,
+        "casualties": 0
+      },
+      "SYN_AGG": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 298.0,
+        "median_cash": 298.0,
+        "mean_margin": -2702.0,
+        "p10_margin": -2702.0,
+        "casualties": 0
+      },
+      "V44": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 298.0,
+        "median_cash": 298.0,
+        "mean_margin": -172665.375,
+        "p10_margin": -194858.0,
+        "casualties": 0
+      }
+    },
+    "overall": {
+      "legs": 80,
+      "win_rate": 0.0,
+      "mean_cash": 308.8,
+      "median_cash": 298.0,
+      "mean_margin": -137983.4375,
+      "p10_margin": -192702.4,
+      "casualties": 0
+    }
+  },
+  "ROUTE_E_STRAWBERRY_PERENNIAL": {
+    "opponents": {
+      "E8_DMITRII": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 419.0,
+        "median_cash": 419.0,
+        "mean_margin": -163121.625,
+        "p10_margin": -191894.5,
+        "casualties": 0
+      },
+      "E2_A7": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 455.0,
+        "median_cash": 455.0,
+        "mean_margin": -166949.375,
+        "p10_margin": -192591.0,
+        "casualties": 0
+      },
+      "E0_V3": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 497.0,
+        "median_cash": 497.0,
+        "mean_margin": -167115.9375,
+        "p10_margin": -178931.5,
+        "casualties": 0
+      },
+      "SYN_AGG": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 439.0,
+        "median_cash": 439.0,
+        "mean_margin": -2561.0,
+        "p10_margin": -2561.0,
+        "casualties": 0
+      },
+      "V44": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 439.0,
+        "median_cash": 439.0,
+        "mean_margin": -166956.25,
+        "p10_margin": -192623.0,
+        "casualties": 0
+      }
+    },
+    "overall": {
+      "legs": 80,
+      "win_rate": 0.0,
+      "mean_cash": 449.8,
+      "median_cash": 439.0,
+      "mean_margin": -133340.8375,
+      "p10_margin": -189611.0,
+      "casualties": 0
+    }
+  },
+  "ROUTE_F_FAST_LAND_SCALE": {
+    "opponents": {
+      "E8_DMITRII": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 759.0,
+        "median_cash": 759.0,
+        "mean_margin": -168568.625,
+        "p10_margin": -185482.0,
+        "casualties": 0
+      },
+      "E2_A7": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 795.0,
+        "median_cash": 795.0,
+        "mean_margin": -175005.0,
+        "p10_margin": -189929.0,
+        "casualties": 0
+      },
+      "E0_V3": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 837.0,
+        "median_cash": 837.0,
+        "mean_margin": -177324.5625,
+        "p10_margin": -192549.5,
+        "casualties": 0
+      },
+      "SYN_AGG": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 779.0,
+        "median_cash": 779.0,
+        "mean_margin": -2221.0,
+        "p10_margin": -2221.0,
+        "casualties": 0
+      },
+      "V44": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 779.0,
+        "median_cash": 779.0,
+        "mean_margin": -170854.5,
+        "p10_margin": -188459.0,
+        "casualties": 0
+      }
+    },
+    "overall": {
+      "legs": 80,
+      "win_rate": 0.0,
+      "mean_cash": 789.8,
+      "median_cash": 779.0,
+      "mean_margin": -138794.7375,
+      "p10_margin": -188821.0,
+      "casualties": 0
+    }
+  },
+  "ROUTE_G_LEAN_LABOR_DEFENSE": {
+    "opponents": {
+      "E8_DMITRII": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 761.0,
+        "median_cash": 761.0,
+        "mean_margin": -168566.625,
+        "p10_margin": -185480.0,
+        "casualties": 0
+      },
+      "E2_A7": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 797.0,
+        "median_cash": 797.0,
+        "mean_margin": -175003.0,
+        "p10_margin": -189927.0,
+        "casualties": 0
+      },
+      "E0_V3": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 839.0,
+        "median_cash": 839.0,
+        "mean_margin": -177322.5625,
+        "p10_margin": -192547.5,
+        "casualties": 0
+      },
+      "SYN_AGG": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 781.0,
+        "median_cash": 781.0,
+        "mean_margin": -2219.0,
+        "p10_margin": -2219.0,
+        "casualties": 0
+      },
+      "V44": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 781.0,
+        "median_cash": 781.0,
+        "mean_margin": -170852.5,
+        "p10_margin": -188457.0,
+        "casualties": 0
+      }
+    },
+    "overall": {
+      "legs": 80,
+      "win_rate": 0.0,
+      "mean_cash": 791.8,
+      "median_cash": 781.0,
+      "mean_margin": -138792.7375,
+      "p10_margin": -188819.0,
+      "casualties": 0
+    }
+  },
+  "ROUTE_H_EARLY_AMORTIZATION": {
+    "opponents": {
+      "E8_DMITRII": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 806.0,
+        "median_cash": 806.0,
+        "mean_margin": -168528.625,
+        "p10_margin": -185442.0,
+        "casualties": 0
+      },
+      "E2_A7": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 830.0,
+        "median_cash": 830.0,
+        "mean_margin": -170868.0,
+        "p10_margin": -188442.0,
+        "casualties": 0
+      },
+      "E0_V3": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 884.0,
+        "median_cash": 884.0,
+        "mean_margin": -177277.5625,
+        "p10_margin": -192502.5,
+        "casualties": 0
+      },
+      "SYN_AGG": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 830.0,
+        "median_cash": 830.0,
+        "mean_margin": -2170.0,
+        "p10_margin": -2170.0,
+        "casualties": 0
+      },
+      "V44": {
+        "legs": 16,
+        "win_rate": 0.0,
+        "mean_cash": 819.0,
+        "median_cash": 819.0,
+        "mean_margin": -174979.5,
+        "p10_margin": -189892.5,
+        "casualties": 0
+      }
+    },
+    "overall": {
+      "legs": 80,
+      "win_rate": 0.0,
+      "mean_cash": 833.8,
+      "median_cash": 830.0,
+      "mean_margin": -138764.7375,
+      "p10_margin": -188743.9,
+      "casualties": 0
+    }
+  }
+}

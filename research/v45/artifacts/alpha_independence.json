@@ -1,0 +1,57 @@
+{
+  "program": "V45 Adversarial Market Intelligence",
+  "baseline_incumbent": "candidates/v44_economic_portfolio/main.py",
+  "historical_baseline": "candidates/v35_a7_opening/main.py",
+  "inherited_alpha_vs_v35": {
+    "mean_cash_delta": 71.16,
+    "median_cash_delta": 20.50,
+    "casualties": 0,
+    "rescues": 1,
+    "win_rate_pct": 100.0
+  },
+  "evaluated_v45_candidates_vs_v44": {
+    "TRANCHE_70_30": {
+      "mean_incremental_cash": -1.38,
+      "median_incremental_cash": 0.0,
+      "casualties": 0,
+      "rescues": 0,
+      "verdict": "NON_ADDITIVE_NEUTRAL"
+    },
+    "TRANCHE_60_40": {
+      "mean_incremental_cash": 0.38,
+      "median_incremental_cash": 0.0,
+      "casualties": 1,
+      "rescues": 0,
+      "verdict": "REJECTED_CASUALTY"
+    },
+    "DEPTH_CAPPED_15": {
+      "mean_incremental_cash": -4.59,
+      "median_incremental_cash": -6.50,
+      "casualties": 1,
+      "rescues": 0,
+      "verdict": "REJECTED_CASUALTY"
+    },
+    "PREEMPT_691_692": {
+      "mean_incremental_cash": -70.27,
+      "median_incremental_cash": -71.00,
+      "casualties": 1,
+      "rescues": 0,
+      "verdict": "REJECTED_SEVERE_LOSS"
+    },
+    "DYNAMIC_PREEMPT": {
+      "mean_incremental_cash": -100.70,
+      "median_incremental_cash": -118.00,
+      "casualties": 1,
+      "rescues": 0,
+      "verdict": "REJECTED_SEVERE_LOSS"
+    },
+    "ADVERSARIAL_PORTFOLIO": {
+      "mean_incremental_cash": -123.86,
+      "median_incremental_cash": -142.00,
+      "casualties": 1,
+      "rescues": 0,
+      "verdict": "REJECTED_SEVERE_LOSS"
+    }
+  },
+  "formal_scientific_conclusion": "V45_MARKET_ALPHA_NOT_ROBUST"
+}

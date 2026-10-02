@@ -1,0 +1,179 @@
+{
+  "k_silhouette_scores": {
+    "2": 0.4788544480525782,
+    "3": 0.5025695736490821,
+    "4": 0.26630358950175986,
+    "5": 0.2823014179640932,
+    "6": 0.2192719696851451,
+    "7": 0.2591464426035597,
+    "8": 0.24980882666383128,
+    "9": 0.25318830186655894,
+    "10": 0.27039599381696344,
+    "11": 0.254214734671193,
+    "12": 0.26999282646552136
+  },
+  "optimal_k": 3,
+  "selected_k": 5,
+  "families": {
+    "Family_0": {
+      "family_id": 0,
+      "archetype_name": "High-Yield Horticulture (Melon Specialist)",
+      "size": 35,
+      "percentage": 14.112903225806454,
+      "representative_source": "episode-92913673-replay.json",
+      "representative_player": 0,
+      "cash_stats": {
+        "mean": 19836.571428571428,
+        "median": 19813.0,
+        "p05": 3685.8,
+        "p95": 38873.09999999999
+      },
+      "macro_fingerprint": {
+        "mean_hires": 116.82857142857142,
+        "mean_land_purchases": 1.7714285714285714,
+        "cow_probability": 0.05714285714285714,
+        "sheep_probability": 0.02857142857142857,
+        "mean_strawberry_sales": 7.457142857142857,
+        "mean_melon_sales": 164.25714285714287,
+        "mean_milk_sales": 6.514285714285714,
+        "mean_wool_sales": 1.1714285714285715
+      },
+      "strengths": [
+        "High High-Yield Horticulture (Melon Specialist) economic compounding",
+        "Peak cash potential up to $38873.10"
+      ],
+      "weaknesses": [
+        "Vulnerable to targeted market pre-emption",
+        "Requires high liquidity synchronization"
+      ]
+    },
+    "Family_1": {
+      "family_id": 1,
+      "archetype_name": "Dual-Livestock Compound (Cow + Sheep)",
+      "size": 73,
+      "percentage": 29.435483870967744,
+      "representative_source": "episode_107513417.json",
+      "representative_player": 0,
+      "cash_stats": {
+        "mean": 58118.45205479452,
+        "median": 55275.0,
+        "p05": 28044.0,
+        "p95": 87945.79999999997
+      },
+      "macro_fingerprint": {
+        "mean_hires": 299.17808219178085,
+        "mean_land_purchases": 1.9863013698630136,
+        "cow_probability": 0.9863013698630136,
+        "sheep_probability": 1.0,
+        "mean_strawberry_sales": 215.34246575342465,
+        "mean_melon_sales": 88.38356164383562,
+        "mean_milk_sales": 229.17808219178082,
+        "mean_wool_sales": 141.42465753424656
+      },
+      "strengths": [
+        "High Dual-Livestock Compound (Cow + Sheep) economic compounding",
+        "Peak cash potential up to $87945.80"
+      ],
+      "weaknesses": [
+        "Vulnerable to targeted market pre-emption",
+        "Requires high liquidity synchronization"
+      ]
+    },
+    "Family_2": {
+      "family_id": 2,
+      "archetype_name": "Dual-Livestock Compound (Cow + Sheep)",
+      "size": 2,
+      "percentage": 0.8064516129032258,
+      "representative_source": "episode_107547195.json",
+      "representative_player": 1,
+      "cash_stats": {
+        "mean": 89717.5,
+        "median": 89717.5,
+        "p05": 76582.45,
+        "p95": 102852.55
+      },
+      "macro_fingerprint": {
+        "mean_hires": 260.0,
+        "mean_land_purchases": 2.0,
+        "cow_probability": 1.0,
+        "sheep_probability": 1.0,
+        "mean_strawberry_sales": 6253.0,
+        "mean_melon_sales": 6072.0,
+        "mean_milk_sales": 8257.0,
+        "mean_wool_sales": 6188.0
+      },
+      "strengths": [
+        "High Dual-Livestock Compound (Cow + Sheep) economic compounding",
+        "Peak cash potential up to $102852.55"
+      ],
+      "weaknesses": [
+        "Vulnerable to targeted market pre-emption",
+        "Requires high liquidity synchronization"
+      ]
+    },
+    "Family_3": {
+      "family_id": 3,
+      "archetype_name": "High-Yield Horticulture (Melon Specialist)",
+      "size": 8,
+      "percentage": 3.225806451612903,
+      "representative_source": "episode-92902361-replay.json",
+      "representative_player": 1,
+      "cash_stats": {
+        "mean": 21814.75,
+        "median": 13263.0,
+        "p05": 5462.2,
+        "p95": 51924.44999999999
+      },
+      "macro_fingerprint": {
+        "mean_hires": 107.0,
+        "mean_land_purchases": 0.5,
+        "cow_probability": 0.25,
+        "sheep_probability": 0.125,
+        "mean_strawberry_sales": 37.5,
+        "mean_melon_sales": 78.0,
+        "mean_milk_sales": 11.0,
+        "mean_wool_sales": 4.25
+      },
+      "strengths": [
+        "High High-Yield Horticulture (Melon Specialist) economic compounding",
+        "Peak cash potential up to $51924.45"
+      ],
+      "weaknesses": [
+        "Vulnerable to targeted market pre-emption",
+        "Requires high liquidity synchronization"
+      ]
+    },
+    "Family_4": {
+      "family_id": 4,
+      "archetype_name": "Dual-Livestock Compound (Cow + Sheep)",
+      "size": 130,
+      "percentage": 52.41935483870967,
+      "representative_source": "episode_107653622.json",
+      "representative_player": 0,
+      "cash_stats": {
+        "mean": 96481.33846153846,
+        "median": 92433.5,
+        "p05": 63032.05,
+        "p95": 143146.24999999997
+      },
+      "macro_fingerprint": {
+        "mean_hires": 283.7307692307692,
+        "mean_land_purchases": 2.046153846153846,
+        "cow_probability": 1.0,
+        "sheep_probability": 1.0,
+        "mean_strawberry_sales": 312.8615384615385,
+        "mean_melon_sales": 105.70769230769231,
+        "mean_milk_sales": 300.4076923076923,
+        "mean_wool_sales": 197.56923076923076
+      },
+      "strengths": [
+        "High Dual-Livestock Compound (Cow + Sheep) economic compounding",
+        "Peak cash potential up to $143146.25"
+      ],
+      "weaknesses": [
+        "Vulnerable to targeted market pre-emption",
+        "Requires high liquidity synchronization"
+      ]
+    }
+  }
+}

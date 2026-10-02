@@ -1,0 +1,47 @@
+{
+  "BASE_2945": {
+    "mean_margin": 3582.765625,
+    "median_margin": 2403.0,
+    "win_rate": 0.953125
+  },
+  "M1_SHOP_ROUTE": {
+    "mean_delta_vs_2945": 4.15625,
+    "median_delta_vs_2945": 0.0,
+    "p10_delta": 0.0,
+    "win_rate": 0.984375,
+    "casualties": 0,
+    "rescues": 4
+  },
+  "NO_M3_ORDERPRI2": {
+    "mean_delta_vs_2945": 0.0,
+    "median_delta_vs_2945": 0.0,
+    "p10_delta": 0.0,
+    "win_rate": 0.953125,
+    "casualties": 0,
+    "rescues": 0
+  },
+  "NO_M4_COWSWAP": {
+    "mean_delta_vs_2945": -239.734375,
+    "median_delta_vs_2945": 0.0,
+    "p10_delta": 0.0,
+    "win_rate": 0.984375,
+    "casualties": 0,
+    "rescues": 4
+  },
+  "NO_M5_SHEDROOM": {
+    "mean_delta_vs_2945": -94.6484375,
+    "median_delta_vs_2945": -67.0,
+    "p10_delta": -398.0,
+    "win_rate": 0.953125,
+    "casualties": 0,
+    "rescues": 0
+  },
+  "M1_PLUS_NO_M4": {
+    "mean_delta_vs_2945": -239.734375,
+    "median_delta_vs_2945": 0.0,
+    "p10_delta": 0.0,
+    "win_rate": 0.984375,
+    "casualties": 0,
+    "rescues": 4
+  }
+}

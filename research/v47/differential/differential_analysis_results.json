@@ -1,0 +1,1763 @@
+{
+  "seeds": [
+    249800,
+    249801,
+    249802,
+    249803,
+    249804,
+    249805,
+    249806,
+    249807,
+    249808,
+    249809,
+    249810,
+    249811,
+    249812,
+    249813,
+    249814,
+    249815
+  ],
+  "v44_vs_2945": [
+    {
+      "seed": 249800,
+      "v44_cash": 84933.0,
+      "2945_cash": 87263.0,
+      "margin_v44": -2330.0,
+      "v44_macro": {
+        "terminal_cash": 84933.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 4,
+          "COW": 7,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 87263.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 5,
+          "COW": 6,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 28,
+          "Mid (Day 11-20)": 64,
+          "Late (Day 21-27)": 105,
+          "Terminal (Day 28-29)": 23
+        },
+        "divergence_by_family": {
+          "market": 195,
+          "hands": 54,
+          "farmer": 7
+        },
+        "total_divergence_steps": 228
+      }
+    },
+    {
+      "seed": 249801,
+      "v44_cash": 76695.0,
+      "2945_cash": 79098.0,
+      "margin_v44": -2403.0,
+      "v44_macro": {
+        "terminal_cash": 76695.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 8,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 79098.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 8,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 24,
+          "Mid (Day 11-20)": 62,
+          "Late (Day 21-27)": 126,
+          "Terminal (Day 28-29)": 33
+        },
+        "divergence_by_family": {
+          "market": 225,
+          "hands": 68,
+          "farmer": 2
+        },
+        "total_divergence_steps": 253
+      }
+    },
+    {
+      "seed": 249802,
+      "v44_cash": 73296.0,
+      "2945_cash": 72372.0,
+      "margin_v44": 924.0,
+      "v44_macro": {
+        "terminal_cash": 73296.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 5,
+          "COW": 6,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 72372.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 5,
+          "COW": 6,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 19,
+          "Mid (Day 11-20)": 72,
+          "Late (Day 21-27)": 80,
+          "Terminal (Day 28-29)": 17
+        },
+        "divergence_by_family": {
+          "market": 182,
+          "hands": 20,
+          "farmer": 1
+        },
+        "total_divergence_steps": 196
+      }
+    },
+    {
+      "seed": 249803,
+      "v44_cash": 99436.0,
+      "2945_cash": 100283.0,
+      "margin_v44": -847.0,
+      "v44_macro": {
+        "terminal_cash": 99436.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 100283.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 24,
+          "Mid (Day 11-20)": 59,
+          "Late (Day 21-27)": 97,
+          "Terminal (Day 28-29)": 15
+        },
+        "divergence_by_family": {
+          "market": 194,
+          "hands": 12,
+          "farmer": 1
+        },
+        "total_divergence_steps": 203
+      }
+    },
+    {
+      "seed": 249804,
+      "v44_cash": 100036.0,
+      "2945_cash": 103650.0,
+      "margin_v44": -3614.0,
+      "v44_macro": {
+        "terminal_cash": 100036.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "SHEEP": 11,
+          "COW": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 103650.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "SHEEP": 11,
+          "COW": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 124,
+          "Mid (Day 11-20)": 231,
+          "Late (Day 21-27)": 157,
+          "Terminal (Day 28-29)": 24
+        },
+        "divergence_by_family": {
+          "market": 350,
+          "farmer": 213,
+          "hands": 459
+        },
+        "total_divergence_steps": 544
+      }
+    },
+    {
+      "seed": 249805,
+      "v44_cash": 107793.0,
+      "2945_cash": 109204.0,
+      "margin_v44": -1411.0,
+      "v44_macro": {
+        "terminal_cash": 107793.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 109204.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 24,
+          "Mid (Day 11-20)": 61,
+          "Late (Day 21-27)": 111,
+          "Terminal (Day 28-29)": 34
+        },
+        "divergence_by_family": {
+          "market": 214,
+          "hands": 47,
+          "farmer": 2
+        },
+        "total_divergence_steps": 238
+      }
+    },
+    {
+      "seed": 249806,
+      "v44_cash": 89700.0,
+      "2945_cash": 96287.0,
+      "margin_v44": -6587.0,
+      "v44_macro": {
+        "terminal_cash": 89700.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "SHEEP": 10,
+          "COW": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 96287.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "SHEEP": 11,
+          "COW": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 121,
+          "Mid (Day 11-20)": 232,
+          "Late (Day 21-27)": 160,
+          "Terminal (Day 28-29)": 30
+        },
+        "divergence_by_family": {
+          "market": 363,
+          "farmer": 193,
+          "hands": 460
+        },
+        "total_divergence_steps": 551
+      }
+    },
+    {
+      "seed": 249807,
+      "v44_cash": 151937.0,
+      "2945_cash": 153556.0,
+      "margin_v44": -1619.0,
+      "v44_macro": {
+        "terminal_cash": 151937.0,
+        "land_quadrants": 4,
+        "hands": 13,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 8,
+          "SHEEP": 6
+        },
+        "crops": {
+          "TOMATO": 10
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 153556.0,
+        "land_quadrants": 4,
+        "hands": 13,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 8,
+          "SHEEP": 6
+        },
+        "crops": {
+          "TOMATO": 10
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 24,
+          "Mid (Day 11-20)": 58,
+          "Late (Day 21-27)": 103,
+          "Terminal (Day 28-29)": 20
+        },
+        "divergence_by_family": {
+          "market": 208,
+          "hands": 13,
+          "farmer": 2
+        },
+        "total_divergence_steps": 213
+      }
+    },
+    {
+      "seed": 249808,
+      "v44_cash": 91266.0,
+      "2945_cash": 91958.0,
+      "margin_v44": -692.0,
+      "v44_macro": {
+        "terminal_cash": 91266.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 91958.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 24,
+          "Mid (Day 11-20)": 63,
+          "Late (Day 21-27)": 103,
+          "Terminal (Day 28-29)": 14
+        },
+        "divergence_by_family": {
+          "market": 198,
+          "hands": 15,
+          "farmer": 1
+        },
+        "total_divergence_steps": 212
+      }
+    },
+    {
+      "seed": 249809,
+      "v44_cash": 71445.0,
+      "2945_cash": 81638.0,
+      "margin_v44": -10193.0,
+      "v44_macro": {
+        "terminal_cash": 71445.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 8,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 81638.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "SHEEP": 9,
+          "COW": 6,
+          "GOOSE": 2
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 31,
+          "Mid (Day 11-20)": 78,
+          "Late (Day 21-27)": 110,
+          "Terminal (Day 28-29)": 39
+        },
+        "divergence_by_family": {
+          "market": 220,
+          "hands": 77,
+          "farmer": 6
+        },
+        "total_divergence_steps": 266
+      }
+    },
+    {
+      "seed": 249810,
+      "v44_cash": 50944.0,
+      "2945_cash": 54276.0,
+      "margin_v44": -3332.0,
+      "v44_macro": {
+        "terminal_cash": 50944.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 5,
+          "COW": 6,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 54276.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 4,
+          "COW": 6,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 24,
+          "Mid (Day 11-20)": 77,
+          "Late (Day 21-27)": 122,
+          "Terminal (Day 28-29)": 39
+        },
+        "divergence_by_family": {
+          "market": 243,
+          "hands": 80,
+          "farmer": 3
+        },
+        "total_divergence_steps": 270
+      }
+    },
+    {
+      "seed": 249811,
+      "v44_cash": 119318.0,
+      "2945_cash": 119923.0,
+      "margin_v44": -605.0,
+      "v44_macro": {
+        "terminal_cash": 119318.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 119923.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 24,
+          "Mid (Day 11-20)": 60,
+          "Late (Day 21-27)": 97,
+          "Terminal (Day 28-29)": 15
+        },
+        "divergence_by_family": {
+          "market": 194,
+          "hands": 12,
+          "farmer": 1
+        },
+        "total_divergence_steps": 204
+      }
+    },
+    {
+      "seed": 249812,
+      "v44_cash": 110437.0,
+      "2945_cash": 114673.0,
+      "margin_v44": -4236.0,
+      "v44_macro": {
+        "terminal_cash": 110437.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "SHEEP": 11,
+          "COW": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 114673.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "SHEEP": 11,
+          "COW": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 119,
+          "Mid (Day 11-20)": 231,
+          "Late (Day 21-27)": 160,
+          "Terminal (Day 28-29)": 27
+        },
+        "divergence_by_family": {
+          "market": 344,
+          "farmer": 192,
+          "hands": 445
+        },
+        "total_divergence_steps": 545
+      }
+    },
+    {
+      "seed": 249813,
+      "v44_cash": 95806.0,
+      "2945_cash": 98054.0,
+      "margin_v44": -2248.0,
+      "v44_macro": {
+        "terminal_cash": 95806.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 98054.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "COW": 12,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 27,
+          "Mid (Day 11-20)": 57,
+          "Late (Day 21-27)": 90,
+          "Terminal (Day 28-29)": 22
+        },
+        "divergence_by_family": {
+          "market": 191,
+          "hands": 32,
+          "farmer": 2
+        },
+        "total_divergence_steps": 204
+      }
+    },
+    {
+      "seed": 249814,
+      "v44_cash": 89568.0,
+      "2945_cash": 90936.0,
+      "margin_v44": -1368.0,
+      "v44_macro": {
+        "terminal_cash": 89568.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 8,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 90936.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 8,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 24,
+          "Mid (Day 11-20)": 60,
+          "Late (Day 21-27)": 98,
+          "Terminal (Day 28-29)": 18
+        },
+        "divergence_by_family": {
+          "market": 197,
+          "hands": 15,
+          "farmer": 1
+        },
+        "total_divergence_steps": 208
+      }
+    },
+    {
+      "seed": 249815,
+      "v44_cash": 75440.0,
+      "2945_cash": 79089.0,
+      "margin_v44": -3649.0,
+      "v44_macro": {
+        "terminal_cash": 75440.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 5,
+          "COW": 6,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "2945_macro": {
+        "terminal_cash": 79089.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 5,
+          "COW": 6,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 8,
+          "Early (Day 4-10)": 23,
+          "Mid (Day 11-20)": 74,
+          "Late (Day 21-27)": 120,
+          "Terminal (Day 28-29)": 36
+        },
+        "divergence_by_family": {
+          "market": 232,
+          "hands": 72,
+          "farmer": 3
+        },
+        "total_divergence_steps": 261
+      }
+    }
+  ],
+  "v44_vs_3009": [
+    {
+      "seed": 249800,
+      "v44_cash": 75969.0,
+      "3009_cash": 49450.0,
+      "margin_v44": 26519.0,
+      "v44_macro": {
+        "terminal_cash": 75969.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "3009_macro": {
+        "terminal_cash": 49450.0,
+        "land_quadrants": 3,
+        "hands": 9,
+        "animals": {
+          "COW": 11,
+          "SHEEP": 4
+        },
+        "crops": {
+          "WHEAT": 12
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 96,
+          "Early (Day 4-10)": 168,
+          "Mid (Day 11-20)": 240,
+          "Late (Day 21-27)": 168,
+          "Terminal (Day 28-29)": 47
+        },
+        "divergence_by_family": {
+          "market": 533,
+          "farmer": 656,
+          "hands": 688
+        },
+        "total_divergence_steps": 719
+      }
+    },
+    {
+      "seed": 249801,
+      "v44_cash": 86224.0,
+      "3009_cash": 55502.0,
+      "margin_v44": 30722.0,
+      "v44_macro": {
+        "terminal_cash": 86224.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 8,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "3009_macro": {
+        "terminal_cash": 55502.0,
+        "land_quadrants": 3,
+        "hands": 9,
+        "animals": {
+          "COW": 11,
+          "SHEEP": 4
+        },
+        "crops": {
+          "WHEAT": 12
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 96,
+          "Early (Day 4-10)": 168,
+          "Mid (Day 11-20)": 240,
+          "Late (Day 21-27)": 168,
+          "Terminal (Day 28-29)": 47
+        },
+        "divergence_by_family": {
+          "market": 551,
+          "farmer": 658,
+          "hands": 688
+        },
+        "total_divergence_steps": 719
+      }
+    },
+    {
+      "seed": 249802,
+      "v44_cash": 125306.0,
+      "3009_cash": 96645.0,
+      "margin_v44": 28661.0,
+      "v44_macro": {
+        "terminal_cash": 125306.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 5,
+          "COW": 6,
+          "SHEEP": 6
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "3009_macro": {
+        "terminal_cash": 96645.0,
+        "land_quadrants": 3,
+        "hands": 9,
+        "animals": {
+          "COW": 11,
+          "SHEEP": 4
+        },
+        "crops": {
+          "WHEAT": 12
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 96,
+          "Early (Day 4-10)": 168,
+          "Mid (Day 11-20)": 240,
+          "Late (Day 21-27)": 168,
+          "Terminal (Day 28-29)": 47
+        },
+        "divergence_by_family": {
+          "market": 557,
+          "farmer": 657,
+          "hands": 688
+        },
+        "total_divergence_steps": 719
+      }
+    },
+    {
+      "seed": 249803,
+      "v44_cash": 122869.0,
+      "3009_cash": 111080.0,
+      "margin_v44": 11789.0,
+      "v44_macro": {
+        "terminal_cash": 122869.0,
+        "land_quadrants": 3,
+        "hands": 11,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "3009_macro": {
+        "terminal_cash": 111080.0,
+        "land_quadrants": 3,
+        "hands": 9,
+        "animals": {
+          "COW": 11,
+          "SHEEP": 4
+        },
+        "crops": {
+          "WHEAT": 12
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 96,
+          "Early (Day 4-10)": 168,
+          "Mid (Day 11-20)": 240,
+          "Late (Day 21-27)": 168,
+          "Terminal (Day 28-29)": 47
+        },
+        "divergence_by_family": {
+          "market": 532,
+          "farmer": 656,
+          "hands": 688
+        },
+        "total_divergence_steps": 719
+      }
+    },
+    {
+      "seed": 249804,
+      "v44_cash": 87558.0,
+      "3009_cash": 71871.0,
+      "margin_v44": 15687.0,
+      "v44_macro": {
+        "terminal_cash": 87558.0,
+        "land_quadrants": 4,
+        "hands": 13,
+        "animals": {
+          "SHEEP": 10,
+          "COW": 6
+        },
+        "crops": {
+          "TOMATO": 10
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "3009_macro": {
+        "terminal_cash": 71871.0,
+        "land_quadrants": 3,
+        "hands": 8,
+        "animals": {
+          "COW": 6,
+          "SHEEP": 10
+        },
+        "crops": {
+          "WHEAT": 10,
+          "CARROT": 4
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 96,
+          "Early (Day 4-10)": 168,
+          "Mid (Day 11-20)": 240,
+          "Late (Day 21-27)": 168,
+          "Terminal (Day 28-29)": 47
+        },
+        "divergence_by_family": {
+          "market": 473,
+          "farmer": 654,
+          "hands": 688
+        },
+        "total_divergence_steps": 719
+      }
+    },
+    {
+      "seed": 249805,
+      "v44_cash": 149666.0,
+      "3009_cash": 137848.0,
+      "margin_v44": 11818.0,
+      "v44_macro": {
+        "terminal_cash": 149666.0,
+        "land_quadrants": 4,
+        "hands": 13,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {
+          "TOMATO": 10
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "3009_macro": {
+        "terminal_cash": 137848.0,
+        "land_quadrants": 3,
+        "hands": 9,
+        "animals": {
+          "COW": 11,
+          "SHEEP": 4
+        },
+        "crops": {
+          "WHEAT": 12
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 96,
+          "Early (Day 4-10)": 168,
+          "Mid (Day 11-20)": 240,
+          "Late (Day 21-27)": 168,
+          "Terminal (Day 28-29)": 47
+        },
+        "divergence_by_family": {
+          "market": 533,
+          "farmer": 656,
+          "hands": 688
+        },
+        "total_divergence_steps": 719
+      }
+    },
+    {
+      "seed": 249806,
+      "v44_cash": 117635.0,
+      "3009_cash": 93041.0,
+      "margin_v44": 24594.0,
+      "v44_macro": {
+        "terminal_cash": 117635.0,
+        "land_quadrants": 4,
+        "hands": 13,
+        "animals": {
+          "SHEEP": 19,
+          "COW": 4
+        },
+        "crops": {},
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "3009_macro": {
+        "terminal_cash": 93041.0,
+        "land_quadrants": 3,
+        "hands": 8,
+        "animals": {
+          "COW": 6,
+          "SHEEP": 10
+        },
+        "crops": {
+          "CARROT": 2,
+          "WHEAT": 9
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 96,
+          "Early (Day 4-10)": 168,
+          "Mid (Day 11-20)": 240,
+          "Late (Day 21-27)": 168,
+          "Terminal (Day 28-29)": 47
+        },
+        "divergence_by_family": {
+          "market": 433,
+          "farmer": 647,
+          "hands": 688
+        },
+        "total_divergence_steps": 719
+      }
+    },
+    {
+      "seed": 249807,
+      "v44_cash": 142510.0,
+      "3009_cash": 96952.0,
+      "margin_v44": 45558.0,
+      "v44_macro": {
+        "terminal_cash": 142510.0,
+        "land_quadrants": 4,
+        "hands": 13,
+        "animals": {
+          "GOOSE": 3,
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "crops": {
+          "TOMATO": 10
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "3009_macro": {
+        "terminal_cash": 96952.0,
+        "land_quadrants": 3,
+        "hands": 9,
+        "animals": {
+          "COW": 11,
+          "SHEEP": 4
+        },
+        "crops": {
+          "WHEAT": 12
+        },
+        "terminal_shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        }
+      },
+      "differential": {
+        "first_divergence_step": 0,
+        "divergence_by_phase": {
+          "Opening (Day 0-3)": 96,
+          "Early (Day 4-10)": 168,
+          "Mid (Day 11-20)": 240,
+          "Late (Day 21-27)": 168,
+          "Terminal (Day 28-29)": 47
+        },
+        "divergence_by_family": {
+          "market": 534,
+          "farmer": 656,
+          "hands": 688
+        },
+        "total_divergence_steps": 719
+      }
+    }
+  ]
+}

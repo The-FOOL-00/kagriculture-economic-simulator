@@ -1,0 +1,33 @@
+{
+  "total_games": 128,
+  "total_steps": 92032,
+  "total_dump_events": 12425,
+  "large_dump_events": 2232,
+  "midgame_dumps": 11502,
+  "terminal_dumps": 923,
+  "dumps_by_opponent": {
+    "E8_DMITRII": 3334,
+    "E2_A7": 2884,
+    "E0_V3": 3006,
+    "SYN_AGG": 3201
+  },
+  "dumps_by_commodity": {
+    "STRAWBERRY": 3845,
+    "MILK": 3671,
+    "WOOL": 5836,
+    "MELON": 904
+  },
+  "terminal_collapse_timing": {
+    "mean_step": 710.3,
+    "min_step": 696,
+    "median_step": 718.0,
+    "p25_step": 696.0,
+    "p75_step": 718.0
+  },
+  "price_velocity_correlation": {
+    "STRAWBERRY": -0.032,
+    "MILK": -0.142,
+    "WOOL": -0.147,
+    "MELON": 0.294
+  }
+}

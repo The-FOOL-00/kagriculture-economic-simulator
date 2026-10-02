@@ -1,0 +1,35 @@
+{
+  "T1": {
+    "mean_delta": 0.0,
+    "median_delta": 0.0,
+    "ci_95": [
+      0.0,
+      0.0
+    ],
+    "positive_legs": 0,
+    "negative_legs": 0,
+    "zero_legs": 256
+  },
+  "T2": {
+    "mean_delta": 0.0,
+    "median_delta": 0.0,
+    "ci_95": [
+      0.0,
+      0.0
+    ],
+    "positive_legs": 0,
+    "negative_legs": 0,
+    "zero_legs": 256
+  },
+  "T4": {
+    "mean_delta": 0.0,
+    "median_delta": 0.0,
+    "ci_95": [
+      0.0,
+      0.0
+    ],
+    "positive_legs": 0,
+    "negative_legs": 0,
+    "zero_legs": 256
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "best_horizon_t": 12,
+  "results_by_horizon": {
+    "12": {
+      "mean_acc": 0.5707692307692308,
+      "mean_fpr": 0.0
+    },
+    "24": {
+      "mean_acc": 0.5707692307692308,
+      "mean_fpr": 0.0
+    },
+    "36": {
+      "mean_acc": 0.5707692307692308,
+      "mean_fpr": 0.0
+    },
+    "48": {
+      "mean_acc": 0.5707692307692308,
+      "mean_fpr": 0.0
+    },
+    "60": {
+      "mean_acc": 0.5707692307692308,
+      "mean_fpr": 0.0
+    },
+    "72": {
+      "mean_acc": 0.5384615384615384,
+      "mean_fpr": 0.14857142857142858
+    },
+    "96": {
+      "mean_acc": 0.5310769230769231,
+      "mean_fpr": 0.1619047619047619
+    }
+  },
+  "top_features": [
+    {
+      "feature": "opp_final_cash",
+      "importance": 0.23584494324744065
+    },
+    {
+      "feature": "opp_cash_burn_rate",
+      "importance": 0.19681446802160507
+    },
+    {
+      "feature": "opp_cash_delta",
+      "importance": 0.18529166259490495
+    },
+    {
+      "feature": "opp_mean_farmer_dist",
+      "importance": 0.08742817110845129
+    },
+    {
+      "feature": "opp_hands_count",
+      "importance": 0.06522266680279916
+    },
+    {
+      "feature": "opp_pasture_present",
+      "importance": 0.05199589573102139
+    },
+    {
+      "feature": "mkt_wheat_price",
+      "importance": 0.048106559779540016
+    },
+    {
+      "feature": "opp_sheep_visible",
+      "importance": 0.04758321659308526
+    }
+  ],
+  "classes": [
+    "ROUTE_1",
+    "ROUTE_107",
+    "ROUTE_110",
+    "ROUTE_12",
+    "ROUTE_120",
+    "V44"
+  ],
+  "decision_tree_accuracy": 0.5703125,
+  "target_distribution": {
+    "ROUTE_1": 14,
+    "ROUTE_107": 2,
+    "ROUTE_110": 18,
+    "ROUTE_12": 3,
+    "ROUTE_120": 18,
+    "V44": 73
+  }
+}

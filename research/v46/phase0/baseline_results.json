@@ -1,0 +1,118 @@
+{
+  "summary": {
+    "V35": {
+      "legs": 128,
+      "mean_cash": 119226.7265625,
+      "median_cash": 113482.5,
+      "p05_cash": 71643.0,
+      "mean_margin": 43409.1484375,
+      "median_margin": 1422.0,
+      "wins": 128,
+      "ties": 0,
+      "losses": 0,
+      "win_rate": 100.0,
+      "casualties": 0,
+      "rescues_vs_v35": 0,
+      "regressions_vs_v35": 0,
+      "paired_delta_mean_vs_v35": 0.0,
+      "paired_delta_med_vs_v35": 0.0,
+      "bootstrap_95_ci_vs_v35": [
+        0.0,
+        0.0
+      ]
+    },
+    "V39": {
+      "legs": 128,
+      "mean_cash": 119277.515625,
+      "median_cash": 113437.5,
+      "p05_cash": 71641.0,
+      "mean_margin": 43606.265625,
+      "median_margin": 2153.0,
+      "wins": 128,
+      "ties": 0,
+      "losses": 0,
+      "win_rate": 100.0,
+      "casualties": 0,
+      "rescues_vs_v35": 0,
+      "regressions_vs_v35": 0,
+      "paired_delta_mean_vs_v35": 50.7890625,
+      "paired_delta_med_vs_v35": 0.5,
+      "bootstrap_95_ci_vs_v35": [
+        24.6091796875,
+        76.765625
+      ]
+    },
+    "V42": {
+      "legs": 128,
+      "mean_cash": 119291.7265625,
+      "median_cash": 113478.0,
+      "p05_cash": 71662.0,
+      "mean_margin": 43591.3359375,
+      "median_margin": 1965.0,
+      "wins": 128,
+      "ties": 0,
+      "losses": 0,
+      "win_rate": 100.0,
+      "casualties": 0,
+      "rescues_vs_v35": 0,
+      "regressions_vs_v35": 0,
+      "paired_delta_mean_vs_v35": 65.0,
+      "paired_delta_med_vs_v35": 13.0,
+      "bootstrap_95_ci_vs_v35": [
+        42.9529296875,
+        87.2421875
+      ]
+    },
+    "V43": {
+      "legs": 128,
+      "mean_cash": 119290.59375,
+      "median_cash": 113486.0,
+      "p05_cash": 71662.0,
+      "mean_margin": 43585.1640625,
+      "median_margin": 1947.0,
+      "wins": 128,
+      "ties": 0,
+      "losses": 0,
+      "win_rate": 100.0,
+      "casualties": 0,
+      "rescues_vs_v35": 0,
+      "regressions_vs_v35": 0,
+      "paired_delta_mean_vs_v35": 63.8671875,
+      "paired_delta_med_vs_v35": 14.5,
+      "bootstrap_95_ci_vs_v35": [
+        42.8193359375,
+        85.61777343749999
+      ]
+    },
+    "V44": {
+      "legs": 128,
+      "mean_cash": 119291.7265625,
+      "median_cash": 113478.0,
+      "p05_cash": 71662.0,
+      "mean_margin": 43591.3359375,
+      "median_margin": 1965.0,
+      "wins": 128,
+      "ties": 0,
+      "losses": 0,
+      "win_rate": 100.0,
+      "casualties": 0,
+      "rescues_vs_v35": 0,
+      "regressions_vs_v35": 0,
+      "paired_delta_mean_vs_v35": 65.0,
+      "paired_delta_med_vs_v35": 13.0,
+      "bootstrap_95_ci_vs_v35": [
+        43.062109375,
+        87.00078124999999
+      ]
+    }
+  },
+  "hashes": {
+    "candidates/v35_a7_opening/main.py": "1959021BDB1AEFF720732AEC866F5C9F3C9FA0B259EE0AB25982BDA367593249",
+    "candidates/v30_a7_standalone/main.py": "51C1D25245F68DD8DE66B355F2AD6CA1D79DE8AF02EFED521A5A82F7BE69CE3F",
+    "candidates/v42_alpha_residual/main.py": "0B90784AFC8CFC66D3A947448E99CE796E5286C3E0D70F4A85B593141B24F296",
+    "candidates/v43_compositional_alpha/main.py": "281ACD6961CC4172133483014FC2A47AA51341102B02FFBDCA9598CB44A92D02",
+    "candidates/v44_economic_portfolio/main.py": "58FDE86583A64689994AE26CDA8DD050B0A05ACE769C173042FCD76FB9BA34DF",
+    "submission_aec_v22r1.tar.gz": "6B879B3E499D2CF43B76884F6EF433479468B5C316F92CF4A8CC5119586FB3F5"
+  },
+  "elapsed_seconds": 177.2910308999999
+}

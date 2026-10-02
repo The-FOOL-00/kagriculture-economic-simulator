@@ -1,0 +1,56 @@
+{
+  "n_matches": 192,
+  "adversaries": [
+    "E8_DMITRII",
+    "SYN_AGG",
+    "ADV_PREEMPTOR",
+    "ADV_DAIRY_FLOOD",
+    "ADV_WOOL_MONOPOLY",
+    "ADV_MELON_CRUSH"
+  ],
+  "breakdown": {
+    "E8_DMITRII": {
+      "n": 32,
+      "v44_win_rate": 0.9375,
+      "v46_win_rate": 0.9375,
+      "mean_cash_delta": 0.0,
+      "median_cash_delta": 0.0
+    },
+    "SYN_AGG": {
+      "n": 32,
+      "v44_win_rate": 1.0,
+      "v46_win_rate": 1.0,
+      "mean_cash_delta": -2605.15625,
+      "median_cash_delta": 0.0
+    },
+    "ADV_PREEMPTOR": {
+      "n": 32,
+      "v44_win_rate": 0.5625,
+      "v46_win_rate": 0.5625,
+      "mean_cash_delta": 0.0,
+      "median_cash_delta": 0.0
+    },
+    "ADV_DAIRY_FLOOD": {
+      "n": 32,
+      "v44_win_rate": 0.34375,
+      "v46_win_rate": 0.34375,
+      "mean_cash_delta": 0.0,
+      "median_cash_delta": 0.0
+    },
+    "ADV_WOOL_MONOPOLY": {
+      "n": 32,
+      "v44_win_rate": 0.875,
+      "v46_win_rate": 0.875,
+      "mean_cash_delta": 0.0,
+      "median_cash_delta": 0.0
+    },
+    "ADV_MELON_CRUSH": {
+      "n": 32,
+      "v44_win_rate": 1.0,
+      "v46_win_rate": 1.0,
+      "mean_cash_delta": 0.0,
+      "median_cash_delta": 0.0
+    }
+  },
+  "elapsed_seconds": 126.87043550002272
+}

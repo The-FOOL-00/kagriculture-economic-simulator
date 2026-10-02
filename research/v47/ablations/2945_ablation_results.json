@@ -1,0 +1,44 @@
+{
+  "A0_FULL": {
+    "wr_vs_v44": 0.96875,
+    "mean_margin": 3017.328125,
+    "mean_cash_2945": 100052.78125,
+    "mean_cash_v44": 97035.453125
+  },
+  "A1_NO_COWSWAP": {
+    "wr_vs_v44": 0.96875,
+    "mean_margin": 2889.078125,
+    "mean_cash_2945": 99887.59375,
+    "mean_cash_v44": 96998.515625
+  },
+  "A2_NO_HERD2": {
+    "wr_vs_v44": 0.96875,
+    "mean_margin": 2889.078125,
+    "mean_cash_2945": 99887.59375,
+    "mean_cash_v44": 96998.515625
+  },
+  "A3_NO_SHEDROOM": {
+    "wr_vs_v44": 0.921875,
+    "mean_margin": 2779.078125,
+    "mean_cash_2945": 99826.640625,
+    "mean_cash_v44": 97047.5625
+  },
+  "A4_NO_CAPHARV": {
+    "wr_vs_v44": 0.921875,
+    "mean_margin": 2642.734375,
+    "mean_cash_2945": 99618.140625,
+    "mean_cash_v44": 96975.40625
+  },
+  "A5_NO_ORDERPRI2": {
+    "wr_vs_v44": 0.875,
+    "mean_margin": 2175.34375,
+    "mean_cash_2945": 99476.6875,
+    "mean_cash_v44": 97301.34375
+  },
+  "A6_NO_CARROT": {
+    "wr_vs_v44": 0.84375,
+    "mean_margin": 1892.8125,
+    "mean_cash_2945": 99210.1875,
+    "mean_cash_v44": 97317.375
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "REGIME_1_PRE_COLLAPSE": {
+    "description": "Pre-dump equilibrium: prices near or above base, low recent volume, rising opponent inventory.",
+    "price_threshold": ">= 1.0 * base_price",
+    "opponent_pressure": "HIGH (P(dump_8) >= 0.60)",
+    "optimal_action": "PRE_EMPTIVE_TRANCHE"
+  },
+  "REGIME_2_ACTIVE_COLLAPSE": {
+    "description": "Post-dump collapse: market inventory saturated (I > I0), price falling rapidly.",
+    "price_threshold": "< 0.85 * base_price",
+    "opponent_pressure": "RECENT_DUMP_DETECTED",
+    "optimal_action": "HOLD_OR_DELAY"
+  },
+  "REGIME_3_SHOP_DRAIN_SPIKE": {
+    "description": "Town shop drain tick (step % 4 == 0): town shops consume inventory, driving acute price spike.",
+    "price_threshold": ">= 1.25 * base_price",
+    "opponent_pressure": "LOW_OR_MODERATE",
+    "optimal_action": "SCARCITY_ARBITRAGE_TRANCHE"
+  },
+  "REGIME_4_TERMINAL_PRE_EMPTION": {
+    "description": "Steps 690-694 terminal window: immediately before structural Step 695 opponent liquidation wave.",
+    "step_window": "690..694",
+    "optimal_action": "PRIMARY_STAGGERED_PRE_EMPTION"
+  },
+  "REGIME_5_TERMINAL_RECOVERY": {
+    "description": "Steps 704-706 and 716+: order book re-absorbs after first dump; secondary depth available.",
+    "step_window": "704..718",
+    "optimal_action": "SECONDARY_STAGGERED_FLUSH"
+  }
+}

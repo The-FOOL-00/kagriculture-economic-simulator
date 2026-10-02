@@ -1,0 +1,3212 @@
+{
+  "V44_BASELINE": [
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249800,
+      "seat": 0,
+      "cash_c": 84933.0,
+      "cash_o": 87263.0,
+      "margin": -2330.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249800,
+      "seat": 1,
+      "cash_c": 84933.0,
+      "cash_o": 87263.0,
+      "margin": -2330.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249801,
+      "seat": 0,
+      "cash_c": 76695.0,
+      "cash_o": 79098.0,
+      "margin": -2403.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249801,
+      "seat": 1,
+      "cash_c": 76695.0,
+      "cash_o": 79098.0,
+      "margin": -2403.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249802,
+      "seat": 0,
+      "cash_c": 73296.0,
+      "cash_o": 72372.0,
+      "margin": 924.0,
+      "win": 1,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249802,
+      "seat": 1,
+      "cash_c": 73296.0,
+      "cash_o": 72372.0,
+      "margin": 924.0,
+      "win": 1,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249803,
+      "seat": 0,
+      "cash_c": 99436.0,
+      "cash_o": 100283.0,
+      "margin": -847.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249803,
+      "seat": 1,
+      "cash_c": 99436.0,
+      "cash_o": 100283.0,
+      "margin": -847.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249804,
+      "seat": 0,
+      "cash_c": 100036.0,
+      "cash_o": 103650.0,
+      "margin": -3614.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249804,
+      "seat": 1,
+      "cash_c": 100036.0,
+      "cash_o": 103650.0,
+      "margin": -3614.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249805,
+      "seat": 0,
+      "cash_c": 107793.0,
+      "cash_o": 109204.0,
+      "margin": -1411.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249805,
+      "seat": 1,
+      "cash_c": 107793.0,
+      "cash_o": 109204.0,
+      "margin": -1411.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249806,
+      "seat": 0,
+      "cash_c": 89700.0,
+      "cash_o": 96287.0,
+      "margin": -6587.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249806,
+      "seat": 1,
+      "cash_c": 89700.0,
+      "cash_o": 96287.0,
+      "margin": -6587.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249807,
+      "seat": 0,
+      "cash_c": 151937.0,
+      "cash_o": 153556.0,
+      "margin": -1619.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249807,
+      "seat": 1,
+      "cash_c": 151937.0,
+      "cash_o": 153556.0,
+      "margin": -1619.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249808,
+      "seat": 0,
+      "cash_c": 91266.0,
+      "cash_o": 91958.0,
+      "margin": -692.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249808,
+      "seat": 1,
+      "cash_c": 91266.0,
+      "cash_o": 91958.0,
+      "margin": -692.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249809,
+      "seat": 0,
+      "cash_c": 71445.0,
+      "cash_o": 81638.0,
+      "margin": -10193.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249809,
+      "seat": 1,
+      "cash_c": 71445.0,
+      "cash_o": 81638.0,
+      "margin": -10193.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249810,
+      "seat": 0,
+      "cash_c": 50944.0,
+      "cash_o": 54276.0,
+      "margin": -3332.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249810,
+      "seat": 1,
+      "cash_c": 50944.0,
+      "cash_o": 54276.0,
+      "margin": -3332.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249811,
+      "seat": 0,
+      "cash_c": 119318.0,
+      "cash_o": 119923.0,
+      "margin": -605.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249811,
+      "seat": 1,
+      "cash_c": 119318.0,
+      "cash_o": 119923.0,
+      "margin": -605.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249812,
+      "seat": 0,
+      "cash_c": 110437.0,
+      "cash_o": 114673.0,
+      "margin": -4236.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249812,
+      "seat": 1,
+      "cash_c": 110321.0,
+      "cash_o": 114796.0,
+      "margin": -4475.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249813,
+      "seat": 0,
+      "cash_c": 95806.0,
+      "cash_o": 98054.0,
+      "margin": -2248.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249813,
+      "seat": 1,
+      "cash_c": 95806.0,
+      "cash_o": 98054.0,
+      "margin": -2248.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249814,
+      "seat": 0,
+      "cash_c": 89568.0,
+      "cash_o": 90936.0,
+      "margin": -1368.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249814,
+      "seat": 1,
+      "cash_c": 89568.0,
+      "cash_o": 90936.0,
+      "margin": -1368.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249815,
+      "seat": 0,
+      "cash_c": 75440.0,
+      "cash_o": 79089.0,
+      "margin": -3649.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249815,
+      "seat": 1,
+      "cash_c": 75440.0,
+      "cash_o": 79089.0,
+      "margin": -3649.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249816,
+      "seat": 0,
+      "cash_c": 65572.0,
+      "cash_o": 66920.0,
+      "margin": -1348.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249816,
+      "seat": 1,
+      "cash_c": 65572.0,
+      "cash_o": 66920.0,
+      "margin": -1348.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249817,
+      "seat": 0,
+      "cash_c": 109100.0,
+      "cash_o": 110106.0,
+      "margin": -1006.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249817,
+      "seat": 1,
+      "cash_c": 109100.0,
+      "cash_o": 110106.0,
+      "margin": -1006.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249818,
+      "seat": 0,
+      "cash_c": 110028.0,
+      "cash_o": 113811.0,
+      "margin": -3783.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249818,
+      "seat": 1,
+      "cash_c": 110028.0,
+      "cash_o": 113811.0,
+      "margin": -3783.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249819,
+      "seat": 0,
+      "cash_c": 100874.0,
+      "cash_o": 101612.0,
+      "margin": -738.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249819,
+      "seat": 1,
+      "cash_c": 100874.0,
+      "cash_o": 101612.0,
+      "margin": -738.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249820,
+      "seat": 0,
+      "cash_c": 74444.0,
+      "cash_o": 78113.0,
+      "margin": -3669.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249820,
+      "seat": 1,
+      "cash_c": 74444.0,
+      "cash_o": 78113.0,
+      "margin": -3669.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249821,
+      "seat": 0,
+      "cash_c": 81739.0,
+      "cash_o": 82975.0,
+      "margin": -1236.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249821,
+      "seat": 1,
+      "cash_c": 81739.0,
+      "cash_o": 82975.0,
+      "margin": -1236.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249822,
+      "seat": 0,
+      "cash_c": 77006.0,
+      "cash_o": 78843.0,
+      "margin": -1837.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249822,
+      "seat": 1,
+      "cash_c": 77006.0,
+      "cash_o": 78843.0,
+      "margin": -1837.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249823,
+      "seat": 0,
+      "cash_c": 103010.0,
+      "cash_o": 109865.0,
+      "margin": -6855.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249823,
+      "seat": 1,
+      "cash_c": 103010.0,
+      "cash_o": 109865.0,
+      "margin": -6855.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249824,
+      "seat": 0,
+      "cash_c": 139273.0,
+      "cash_o": 139285.0,
+      "margin": -12.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249824,
+      "seat": 1,
+      "cash_c": 139273.0,
+      "cash_o": 139285.0,
+      "margin": -12.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249825,
+      "seat": 0,
+      "cash_c": 150337.0,
+      "cash_o": 160583.0,
+      "margin": -10246.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249825,
+      "seat": 1,
+      "cash_c": 150337.0,
+      "cash_o": 160583.0,
+      "margin": -10246.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249826,
+      "seat": 0,
+      "cash_c": 109174.0,
+      "cash_o": 110140.0,
+      "margin": -966.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249826,
+      "seat": 1,
+      "cash_c": 109174.0,
+      "cash_o": 110140.0,
+      "margin": -966.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249827,
+      "seat": 0,
+      "cash_c": 81083.0,
+      "cash_o": 87685.0,
+      "margin": -6602.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249827,
+      "seat": 1,
+      "cash_c": 81083.0,
+      "cash_o": 87685.0,
+      "margin": -6602.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249828,
+      "seat": 0,
+      "cash_c": 126951.0,
+      "cash_o": 127339.0,
+      "margin": -388.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249828,
+      "seat": 1,
+      "cash_c": 126027.0,
+      "cash_o": 128514.0,
+      "margin": -2487.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249829,
+      "seat": 0,
+      "cash_c": 79766.0,
+      "cash_o": 81489.0,
+      "margin": -1723.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249829,
+      "seat": 1,
+      "cash_c": 79766.0,
+      "cash_o": 81489.0,
+      "margin": -1723.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249830,
+      "seat": 0,
+      "cash_c": 109930.0,
+      "cash_o": 112512.0,
+      "margin": -2582.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249830,
+      "seat": 1,
+      "cash_c": 111269.0,
+      "cash_o": 111804.0,
+      "margin": -535.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249831,
+      "seat": 0,
+      "cash_c": 98648.0,
+      "cash_o": 107856.0,
+      "margin": -9208.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V44_BASELINE",
+      "seed": 249831,
+      "seat": 1,
+      "cash_c": 98648.0,
+      "cash_o": 107856.0,
+      "margin": -9208.0,
+      "win": 0,
+      "casualties": 0
+    }
+  ],
+  "V47_C1_IMPACT": [
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249800,
+      "seat": 0,
+      "cash_c": 84883.0,
+      "cash_o": 87321.0,
+      "margin": -2438.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249800,
+      "seat": 1,
+      "cash_c": 84883.0,
+      "cash_o": 87321.0,
+      "margin": -2438.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249801,
+      "seat": 0,
+      "cash_c": 76344.0,
+      "cash_o": 79392.0,
+      "margin": -3048.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249801,
+      "seat": 1,
+      "cash_c": 76344.0,
+      "cash_o": 79392.0,
+      "margin": -3048.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249802,
+      "seat": 0,
+      "cash_c": 72856.0,
+      "cash_o": 72737.0,
+      "margin": 119.0,
+      "win": 1,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249802,
+      "seat": 1,
+      "cash_c": 72856.0,
+      "cash_o": 72737.0,
+      "margin": 119.0,
+      "win": 1,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249803,
+      "seat": 0,
+      "cash_c": 99001.0,
+      "cash_o": 100670.0,
+      "margin": -1669.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249803,
+      "seat": 1,
+      "cash_c": 99001.0,
+      "cash_o": 100670.0,
+      "margin": -1669.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249804,
+      "seat": 0,
+      "cash_c": 99753.0,
+      "cash_o": 103863.0,
+      "margin": -4110.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249804,
+      "seat": 1,
+      "cash_c": 99753.0,
+      "cash_o": 103863.0,
+      "margin": -4110.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249805,
+      "seat": 0,
+      "cash_c": 107785.0,
+      "cash_o": 109205.0,
+      "margin": -1420.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249805,
+      "seat": 1,
+      "cash_c": 107785.0,
+      "cash_o": 109205.0,
+      "margin": -1420.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249806,
+      "seat": 0,
+      "cash_c": 89480.0,
+      "cash_o": 96456.0,
+      "margin": -6976.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249806,
+      "seat": 1,
+      "cash_c": 89480.0,
+      "cash_o": 96456.0,
+      "margin": -6976.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249807,
+      "seat": 0,
+      "cash_c": 151114.0,
+      "cash_o": 154241.0,
+      "margin": -3127.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249807,
+      "seat": 1,
+      "cash_c": 151114.0,
+      "cash_o": 154241.0,
+      "margin": -3127.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249808,
+      "seat": 0,
+      "cash_c": 91098.0,
+      "cash_o": 92110.0,
+      "margin": -1012.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249808,
+      "seat": 1,
+      "cash_c": 91098.0,
+      "cash_o": 92110.0,
+      "margin": -1012.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249809,
+      "seat": 0,
+      "cash_c": 71228.0,
+      "cash_o": 81827.0,
+      "margin": -10599.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249809,
+      "seat": 1,
+      "cash_c": 71228.0,
+      "cash_o": 81827.0,
+      "margin": -10599.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249810,
+      "seat": 0,
+      "cash_c": 50763.0,
+      "cash_o": 54415.0,
+      "margin": -3652.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249810,
+      "seat": 1,
+      "cash_c": 50763.0,
+      "cash_o": 54415.0,
+      "margin": -3652.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249811,
+      "seat": 0,
+      "cash_c": 119014.0,
+      "cash_o": 120185.0,
+      "margin": -1171.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249811,
+      "seat": 1,
+      "cash_c": 119014.0,
+      "cash_o": 120185.0,
+      "margin": -1171.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249812,
+      "seat": 0,
+      "cash_c": 110348.0,
+      "cash_o": 114759.0,
+      "margin": -4411.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249812,
+      "seat": 1,
+      "cash_c": 110232.0,
+      "cash_o": 114882.0,
+      "margin": -4650.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249813,
+      "seat": 0,
+      "cash_c": 95432.0,
+      "cash_o": 98391.0,
+      "margin": -2959.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249813,
+      "seat": 1,
+      "cash_c": 95432.0,
+      "cash_o": 98391.0,
+      "margin": -2959.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249814,
+      "seat": 0,
+      "cash_c": 89510.0,
+      "cash_o": 90995.0,
+      "margin": -1485.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249814,
+      "seat": 1,
+      "cash_c": 89510.0,
+      "cash_o": 90995.0,
+      "margin": -1485.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249815,
+      "seat": 0,
+      "cash_c": 75280.0,
+      "cash_o": 79236.0,
+      "margin": -3956.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249815,
+      "seat": 1,
+      "cash_c": 75280.0,
+      "cash_o": 79236.0,
+      "margin": -3956.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249816,
+      "seat": 0,
+      "cash_c": 66193.0,
+      "cash_o": 66346.0,
+      "margin": -153.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249816,
+      "seat": 1,
+      "cash_c": 66193.0,
+      "cash_o": 66346.0,
+      "margin": -153.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249817,
+      "seat": 0,
+      "cash_c": 109084.0,
+      "cash_o": 110116.0,
+      "margin": -1032.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249817,
+      "seat": 1,
+      "cash_c": 109084.0,
+      "cash_o": 110116.0,
+      "margin": -1032.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249818,
+      "seat": 0,
+      "cash_c": 109886.0,
+      "cash_o": 113925.0,
+      "margin": -4039.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249818,
+      "seat": 1,
+      "cash_c": 109886.0,
+      "cash_o": 113925.0,
+      "margin": -4039.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249819,
+      "seat": 0,
+      "cash_c": 100774.0,
+      "cash_o": 101700.0,
+      "margin": -926.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249819,
+      "seat": 1,
+      "cash_c": 100774.0,
+      "cash_o": 101700.0,
+      "margin": -926.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249820,
+      "seat": 0,
+      "cash_c": 73982.0,
+      "cash_o": 78536.0,
+      "margin": -4554.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249820,
+      "seat": 1,
+      "cash_c": 73982.0,
+      "cash_o": 78536.0,
+      "margin": -4554.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249821,
+      "seat": 0,
+      "cash_c": 81595.0,
+      "cash_o": 83075.0,
+      "margin": -1480.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249821,
+      "seat": 1,
+      "cash_c": 81595.0,
+      "cash_o": 83075.0,
+      "margin": -1480.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249822,
+      "seat": 0,
+      "cash_c": 76703.0,
+      "cash_o": 79121.0,
+      "margin": -2418.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249822,
+      "seat": 1,
+      "cash_c": 76703.0,
+      "cash_o": 79121.0,
+      "margin": -2418.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249823,
+      "seat": 0,
+      "cash_c": 102977.0,
+      "cash_o": 109851.0,
+      "margin": -6874.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249823,
+      "seat": 1,
+      "cash_c": 102977.0,
+      "cash_o": 109851.0,
+      "margin": -6874.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249824,
+      "seat": 0,
+      "cash_c": 139168.0,
+      "cash_o": 139385.0,
+      "margin": -217.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249824,
+      "seat": 1,
+      "cash_c": 139168.0,
+      "cash_o": 139385.0,
+      "margin": -217.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249825,
+      "seat": 0,
+      "cash_c": 150372.0,
+      "cash_o": 160555.0,
+      "margin": -10183.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249825,
+      "seat": 1,
+      "cash_c": 150372.0,
+      "cash_o": 160555.0,
+      "margin": -10183.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249826,
+      "seat": 0,
+      "cash_c": 108778.0,
+      "cash_o": 110462.0,
+      "margin": -1684.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249826,
+      "seat": 1,
+      "cash_c": 108778.0,
+      "cash_o": 110462.0,
+      "margin": -1684.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249827,
+      "seat": 0,
+      "cash_c": 81434.0,
+      "cash_o": 87390.0,
+      "margin": -5956.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249827,
+      "seat": 1,
+      "cash_c": 81434.0,
+      "cash_o": 87390.0,
+      "margin": -5956.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249828,
+      "seat": 0,
+      "cash_c": 127028.0,
+      "cash_o": 127273.0,
+      "margin": -245.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249828,
+      "seat": 1,
+      "cash_c": 126107.0,
+      "cash_o": 128446.0,
+      "margin": -2339.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249829,
+      "seat": 0,
+      "cash_c": 79686.0,
+      "cash_o": 81553.0,
+      "margin": -1867.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249829,
+      "seat": 1,
+      "cash_c": 79686.0,
+      "cash_o": 81553.0,
+      "margin": -1867.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249830,
+      "seat": 0,
+      "cash_c": 109575.0,
+      "cash_o": 112864.0,
+      "margin": -3289.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249830,
+      "seat": 1,
+      "cash_c": 110716.0,
+      "cash_o": 112009.0,
+      "margin": -1293.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249831,
+      "seat": 0,
+      "cash_c": 98777.0,
+      "cash_o": 107721.0,
+      "margin": -8944.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C1_IMPACT",
+      "seed": 249831,
+      "seat": 1,
+      "cash_c": 98777.0,
+      "cash_o": 107721.0,
+      "margin": -8944.0,
+      "win": 0,
+      "casualties": 0
+    }
+  ],
+  "V47_C2_DEMAND_IMPACT": [
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249800,
+      "seat": 0,
+      "cash_c": 84877.0,
+      "cash_o": 87326.0,
+      "margin": -2449.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249800,
+      "seat": 1,
+      "cash_c": 84877.0,
+      "cash_o": 87326.0,
+      "margin": -2449.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249801,
+      "seat": 0,
+      "cash_c": 76344.0,
+      "cash_o": 79392.0,
+      "margin": -3048.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249801,
+      "seat": 1,
+      "cash_c": 76344.0,
+      "cash_o": 79392.0,
+      "margin": -3048.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249802,
+      "seat": 0,
+      "cash_c": 72855.0,
+      "cash_o": 72737.0,
+      "margin": 118.0,
+      "win": 1,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249802,
+      "seat": 1,
+      "cash_c": 72855.0,
+      "cash_o": 72737.0,
+      "margin": 118.0,
+      "win": 1,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249803,
+      "seat": 0,
+      "cash_c": 98997.0,
+      "cash_o": 100678.0,
+      "margin": -1681.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249803,
+      "seat": 1,
+      "cash_c": 98997.0,
+      "cash_o": 100678.0,
+      "margin": -1681.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249804,
+      "seat": 0,
+      "cash_c": 99800.0,
+      "cash_o": 103841.0,
+      "margin": -4041.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249804,
+      "seat": 1,
+      "cash_c": 99800.0,
+      "cash_o": 103841.0,
+      "margin": -4041.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249805,
+      "seat": 0,
+      "cash_c": 107786.0,
+      "cash_o": 109205.0,
+      "margin": -1419.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249805,
+      "seat": 1,
+      "cash_c": 107786.0,
+      "cash_o": 109205.0,
+      "margin": -1419.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249806,
+      "seat": 0,
+      "cash_c": 89480.0,
+      "cash_o": 96456.0,
+      "margin": -6976.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249806,
+      "seat": 1,
+      "cash_c": 89480.0,
+      "cash_o": 96456.0,
+      "margin": -6976.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249807,
+      "seat": 0,
+      "cash_c": 151114.0,
+      "cash_o": 154241.0,
+      "margin": -3127.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249807,
+      "seat": 1,
+      "cash_c": 151114.0,
+      "cash_o": 154241.0,
+      "margin": -3127.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249808,
+      "seat": 0,
+      "cash_c": 91098.0,
+      "cash_o": 92109.0,
+      "margin": -1011.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249808,
+      "seat": 1,
+      "cash_c": 91098.0,
+      "cash_o": 92109.0,
+      "margin": -1011.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249809,
+      "seat": 0,
+      "cash_c": 71231.0,
+      "cash_o": 81824.0,
+      "margin": -10593.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249809,
+      "seat": 1,
+      "cash_c": 71231.0,
+      "cash_o": 81824.0,
+      "margin": -10593.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249810,
+      "seat": 0,
+      "cash_c": 50784.0,
+      "cash_o": 54395.0,
+      "margin": -3611.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249810,
+      "seat": 1,
+      "cash_c": 50784.0,
+      "cash_o": 54395.0,
+      "margin": -3611.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249811,
+      "seat": 0,
+      "cash_c": 119014.0,
+      "cash_o": 120185.0,
+      "margin": -1171.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249811,
+      "seat": 1,
+      "cash_c": 119014.0,
+      "cash_o": 120185.0,
+      "margin": -1171.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249812,
+      "seat": 0,
+      "cash_c": 110348.0,
+      "cash_o": 114759.0,
+      "margin": -4411.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249812,
+      "seat": 1,
+      "cash_c": 110232.0,
+      "cash_o": 114882.0,
+      "margin": -4650.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249813,
+      "seat": 0,
+      "cash_c": 95432.0,
+      "cash_o": 98391.0,
+      "margin": -2959.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249813,
+      "seat": 1,
+      "cash_c": 95432.0,
+      "cash_o": 98391.0,
+      "margin": -2959.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249814,
+      "seat": 0,
+      "cash_c": 89537.0,
+      "cash_o": 90965.0,
+      "margin": -1428.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249814,
+      "seat": 1,
+      "cash_c": 89537.0,
+      "cash_o": 90965.0,
+      "margin": -1428.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249815,
+      "seat": 0,
+      "cash_c": 75304.0,
+      "cash_o": 79217.0,
+      "margin": -3913.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249815,
+      "seat": 1,
+      "cash_c": 75304.0,
+      "cash_o": 79217.0,
+      "margin": -3913.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249816,
+      "seat": 0,
+      "cash_c": 66193.0,
+      "cash_o": 66346.0,
+      "margin": -153.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249816,
+      "seat": 1,
+      "cash_c": 66193.0,
+      "cash_o": 66346.0,
+      "margin": -153.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249817,
+      "seat": 0,
+      "cash_c": 109084.0,
+      "cash_o": 110116.0,
+      "margin": -1032.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249817,
+      "seat": 1,
+      "cash_c": 109084.0,
+      "cash_o": 110116.0,
+      "margin": -1032.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249818,
+      "seat": 0,
+      "cash_c": 109869.0,
+      "cash_o": 113940.0,
+      "margin": -4071.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249818,
+      "seat": 1,
+      "cash_c": 109869.0,
+      "cash_o": 113940.0,
+      "margin": -4071.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249819,
+      "seat": 0,
+      "cash_c": 100768.0,
+      "cash_o": 101704.0,
+      "margin": -936.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249819,
+      "seat": 1,
+      "cash_c": 100768.0,
+      "cash_o": 101704.0,
+      "margin": -936.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249820,
+      "seat": 0,
+      "cash_c": 74017.0,
+      "cash_o": 78505.0,
+      "margin": -4488.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249820,
+      "seat": 1,
+      "cash_c": 74017.0,
+      "cash_o": 78505.0,
+      "margin": -4488.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249821,
+      "seat": 0,
+      "cash_c": 81587.0,
+      "cash_o": 83083.0,
+      "margin": -1496.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249821,
+      "seat": 1,
+      "cash_c": 81587.0,
+      "cash_o": 83083.0,
+      "margin": -1496.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249822,
+      "seat": 0,
+      "cash_c": 76703.0,
+      "cash_o": 79121.0,
+      "margin": -2418.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249822,
+      "seat": 1,
+      "cash_c": 76703.0,
+      "cash_o": 79121.0,
+      "margin": -2418.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249823,
+      "seat": 0,
+      "cash_c": 102992.0,
+      "cash_o": 109833.0,
+      "margin": -6841.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249823,
+      "seat": 1,
+      "cash_c": 102992.0,
+      "cash_o": 109833.0,
+      "margin": -6841.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249824,
+      "seat": 0,
+      "cash_c": 139160.0,
+      "cash_o": 139394.0,
+      "margin": -234.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249824,
+      "seat": 1,
+      "cash_c": 139160.0,
+      "cash_o": 139394.0,
+      "margin": -234.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249825,
+      "seat": 0,
+      "cash_c": 150361.0,
+      "cash_o": 160562.0,
+      "margin": -10201.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249825,
+      "seat": 1,
+      "cash_c": 150361.0,
+      "cash_o": 160562.0,
+      "margin": -10201.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249826,
+      "seat": 0,
+      "cash_c": 108778.0,
+      "cash_o": 110462.0,
+      "margin": -1684.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249826,
+      "seat": 1,
+      "cash_c": 108778.0,
+      "cash_o": 110462.0,
+      "margin": -1684.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249827,
+      "seat": 0,
+      "cash_c": 81434.0,
+      "cash_o": 87390.0,
+      "margin": -5956.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249827,
+      "seat": 1,
+      "cash_c": 81434.0,
+      "cash_o": 87390.0,
+      "margin": -5956.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249828,
+      "seat": 0,
+      "cash_c": 127032.0,
+      "cash_o": 127268.0,
+      "margin": -236.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249828,
+      "seat": 1,
+      "cash_c": 126111.0,
+      "cash_o": 128441.0,
+      "margin": -2330.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249829,
+      "seat": 0,
+      "cash_c": 79679.0,
+      "cash_o": 81557.0,
+      "margin": -1878.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249829,
+      "seat": 1,
+      "cash_c": 79679.0,
+      "cash_o": 81557.0,
+      "margin": -1878.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249830,
+      "seat": 0,
+      "cash_c": 109581.0,
+      "cash_o": 112860.0,
+      "margin": -3279.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249830,
+      "seat": 1,
+      "cash_c": 110722.0,
+      "cash_o": 112005.0,
+      "margin": -1283.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249831,
+      "seat": 0,
+      "cash_c": 98781.0,
+      "cash_o": 107735.0,
+      "margin": -8954.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C2_DEMAND_IMPACT",
+      "seed": 249831,
+      "seat": 1,
+      "cash_c": 98781.0,
+      "cash_o": 107735.0,
+      "margin": -8954.0,
+      "win": 0,
+      "casualties": 0
+    }
+  ],
+  "V47_C3_RIVAL_STOCK": [
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249800,
+      "seat": 0,
+      "cash_c": 84818.0,
+      "cash_o": 87359.0,
+      "margin": -2541.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249800,
+      "seat": 1,
+      "cash_c": 84818.0,
+      "cash_o": 87359.0,
+      "margin": -2541.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249801,
+      "seat": 0,
+      "cash_c": 76278.0,
+      "cash_o": 79477.0,
+      "margin": -3199.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249801,
+      "seat": 1,
+      "cash_c": 76278.0,
+      "cash_o": 79477.0,
+      "margin": -3199.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249802,
+      "seat": 0,
+      "cash_c": 72175.0,
+      "cash_o": 73439.0,
+      "margin": -1264.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249802,
+      "seat": 1,
+      "cash_c": 72175.0,
+      "cash_o": 73439.0,
+      "margin": -1264.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249803,
+      "seat": 0,
+      "cash_c": 98839.0,
+      "cash_o": 100845.0,
+      "margin": -2006.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249803,
+      "seat": 1,
+      "cash_c": 98839.0,
+      "cash_o": 100845.0,
+      "margin": -2006.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249804,
+      "seat": 0,
+      "cash_c": 99916.0,
+      "cash_o": 103739.0,
+      "margin": -3823.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249804,
+      "seat": 1,
+      "cash_c": 99916.0,
+      "cash_o": 103739.0,
+      "margin": -3823.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249805,
+      "seat": 0,
+      "cash_c": 107631.0,
+      "cash_o": 109363.0,
+      "margin": -1732.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249805,
+      "seat": 1,
+      "cash_c": 107631.0,
+      "cash_o": 109363.0,
+      "margin": -1732.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249806,
+      "seat": 0,
+      "cash_c": 89546.0,
+      "cash_o": 96441.0,
+      "margin": -6895.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249806,
+      "seat": 1,
+      "cash_c": 89546.0,
+      "cash_o": 96441.0,
+      "margin": -6895.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249807,
+      "seat": 0,
+      "cash_c": 151595.0,
+      "cash_o": 153814.0,
+      "margin": -2219.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249807,
+      "seat": 1,
+      "cash_c": 151595.0,
+      "cash_o": 153814.0,
+      "margin": -2219.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249808,
+      "seat": 0,
+      "cash_c": 90931.0,
+      "cash_o": 92268.0,
+      "margin": -1337.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249808,
+      "seat": 1,
+      "cash_c": 90931.0,
+      "cash_o": 92268.0,
+      "margin": -1337.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249809,
+      "seat": 0,
+      "cash_c": 71033.0,
+      "cash_o": 82023.0,
+      "margin": -10990.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249809,
+      "seat": 1,
+      "cash_c": 71033.0,
+      "cash_o": 82023.0,
+      "margin": -10990.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249810,
+      "seat": 0,
+      "cash_c": 50787.0,
+      "cash_o": 54412.0,
+      "margin": -3625.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249810,
+      "seat": 1,
+      "cash_c": 50787.0,
+      "cash_o": 54412.0,
+      "margin": -3625.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249811,
+      "seat": 0,
+      "cash_c": 118782.0,
+      "cash_o": 120413.0,
+      "margin": -1631.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249811,
+      "seat": 1,
+      "cash_c": 118782.0,
+      "cash_o": 120413.0,
+      "margin": -1631.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249812,
+      "seat": 0,
+      "cash_c": 110249.0,
+      "cash_o": 114839.0,
+      "margin": -4590.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249812,
+      "seat": 1,
+      "cash_c": 110133.0,
+      "cash_o": 114962.0,
+      "margin": -4829.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249813,
+      "seat": 0,
+      "cash_c": 95136.0,
+      "cash_o": 98679.0,
+      "margin": -3543.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249813,
+      "seat": 1,
+      "cash_c": 95136.0,
+      "cash_o": 98679.0,
+      "margin": -3543.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249814,
+      "seat": 0,
+      "cash_c": 89327.0,
+      "cash_o": 91171.0,
+      "margin": -1844.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249814,
+      "seat": 1,
+      "cash_c": 89327.0,
+      "cash_o": 91171.0,
+      "margin": -1844.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249815,
+      "seat": 0,
+      "cash_c": 75009.0,
+      "cash_o": 79502.0,
+      "margin": -4493.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249815,
+      "seat": 1,
+      "cash_c": 75009.0,
+      "cash_o": 79502.0,
+      "margin": -4493.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249816,
+      "seat": 0,
+      "cash_c": 65043.0,
+      "cash_o": 67470.0,
+      "margin": -2427.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249816,
+      "seat": 1,
+      "cash_c": 65043.0,
+      "cash_o": 67470.0,
+      "margin": -2427.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249817,
+      "seat": 0,
+      "cash_c": 108953.0,
+      "cash_o": 110256.0,
+      "margin": -1303.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249817,
+      "seat": 1,
+      "cash_c": 108953.0,
+      "cash_o": 110256.0,
+      "margin": -1303.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249818,
+      "seat": 0,
+      "cash_c": 109831.0,
+      "cash_o": 113994.0,
+      "margin": -4163.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249818,
+      "seat": 1,
+      "cash_c": 109831.0,
+      "cash_o": 113994.0,
+      "margin": -4163.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249819,
+      "seat": 0,
+      "cash_c": 100608.0,
+      "cash_o": 101862.0,
+      "margin": -1254.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249819,
+      "seat": 1,
+      "cash_c": 100608.0,
+      "cash_o": 101862.0,
+      "margin": -1254.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249820,
+      "seat": 0,
+      "cash_c": 73919.0,
+      "cash_o": 78601.0,
+      "margin": -4682.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249820,
+      "seat": 1,
+      "cash_c": 73919.0,
+      "cash_o": 78601.0,
+      "margin": -4682.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249821,
+      "seat": 0,
+      "cash_c": 81493.0,
+      "cash_o": 83206.0,
+      "margin": -1713.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249821,
+      "seat": 1,
+      "cash_c": 81493.0,
+      "cash_o": 83206.0,
+      "margin": -1713.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249822,
+      "seat": 0,
+      "cash_c": 76516.0,
+      "cash_o": 79310.0,
+      "margin": -2794.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249822,
+      "seat": 1,
+      "cash_c": 76516.0,
+      "cash_o": 79310.0,
+      "margin": -2794.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249823,
+      "seat": 0,
+      "cash_c": 102935.0,
+      "cash_o": 109937.0,
+      "margin": -7002.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249823,
+      "seat": 1,
+      "cash_c": 102935.0,
+      "cash_o": 109937.0,
+      "margin": -7002.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249824,
+      "seat": 0,
+      "cash_c": 139059.0,
+      "cash_o": 139487.0,
+      "margin": -428.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249824,
+      "seat": 1,
+      "cash_c": 139059.0,
+      "cash_o": 139487.0,
+      "margin": -428.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249825,
+      "seat": 0,
+      "cash_c": 150291.0,
+      "cash_o": 160666.0,
+      "margin": -10375.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249825,
+      "seat": 1,
+      "cash_c": 150291.0,
+      "cash_o": 160666.0,
+      "margin": -10375.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249826,
+      "seat": 0,
+      "cash_c": 108619.0,
+      "cash_o": 110646.0,
+      "margin": -2027.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249826,
+      "seat": 1,
+      "cash_c": 108619.0,
+      "cash_o": 110646.0,
+      "margin": -2027.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249827,
+      "seat": 0,
+      "cash_c": 81283.0,
+      "cash_o": 87560.0,
+      "margin": -6277.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249827,
+      "seat": 1,
+      "cash_c": 81283.0,
+      "cash_o": 87560.0,
+      "margin": -6277.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249828,
+      "seat": 0,
+      "cash_c": 126863.0,
+      "cash_o": 127440.0,
+      "margin": -577.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249828,
+      "seat": 1,
+      "cash_c": 125948.0,
+      "cash_o": 128607.0,
+      "margin": -2659.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249829,
+      "seat": 0,
+      "cash_c": 79674.0,
+      "cash_o": 81670.0,
+      "margin": -1996.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249829,
+      "seat": 1,
+      "cash_c": 79674.0,
+      "cash_o": 81670.0,
+      "margin": -1996.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249830,
+      "seat": 0,
+      "cash_c": 109472.0,
+      "cash_o": 112965.0,
+      "margin": -3493.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249830,
+      "seat": 1,
+      "cash_c": 110606.0,
+      "cash_o": 112114.0,
+      "margin": -1508.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249831,
+      "seat": 0,
+      "cash_c": 98733.0,
+      "cash_o": 107781.0,
+      "margin": -9048.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C3_RIVAL_STOCK",
+      "seed": 249831,
+      "seat": 1,
+      "cash_c": 98733.0,
+      "cash_o": 107781.0,
+      "margin": -9048.0,
+      "win": 0,
+      "casualties": 0
+    }
+  ],
+  "V47_C5_MARKET_COMBO": [
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249800,
+      "seat": 0,
+      "cash_c": 84876.0,
+      "cash_o": 87327.0,
+      "margin": -2451.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249800,
+      "seat": 1,
+      "cash_c": 84876.0,
+      "cash_o": 87327.0,
+      "margin": -2451.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249801,
+      "seat": 0,
+      "cash_c": 76333.0,
+      "cash_o": 79401.0,
+      "margin": -3068.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249801,
+      "seat": 1,
+      "cash_c": 76333.0,
+      "cash_o": 79401.0,
+      "margin": -3068.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249802,
+      "seat": 0,
+      "cash_c": 72855.0,
+      "cash_o": 72737.0,
+      "margin": 118.0,
+      "win": 1,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249802,
+      "seat": 1,
+      "cash_c": 72855.0,
+      "cash_o": 72737.0,
+      "margin": 118.0,
+      "win": 1,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249803,
+      "seat": 0,
+      "cash_c": 98987.0,
+      "cash_o": 100687.0,
+      "margin": -1700.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249803,
+      "seat": 1,
+      "cash_c": 98987.0,
+      "cash_o": 100687.0,
+      "margin": -1700.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249804,
+      "seat": 0,
+      "cash_c": 99800.0,
+      "cash_o": 103841.0,
+      "margin": -4041.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249804,
+      "seat": 1,
+      "cash_c": 99800.0,
+      "cash_o": 103841.0,
+      "margin": -4041.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249805,
+      "seat": 0,
+      "cash_c": 107775.0,
+      "cash_o": 109214.0,
+      "margin": -1439.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249805,
+      "seat": 1,
+      "cash_c": 107775.0,
+      "cash_o": 109214.0,
+      "margin": -1439.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249806,
+      "seat": 0,
+      "cash_c": 89480.0,
+      "cash_o": 96456.0,
+      "margin": -6976.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249806,
+      "seat": 1,
+      "cash_c": 89480.0,
+      "cash_o": 96456.0,
+      "margin": -6976.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249807,
+      "seat": 0,
+      "cash_c": 151105.0,
+      "cash_o": 154252.0,
+      "margin": -3147.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249807,
+      "seat": 1,
+      "cash_c": 151105.0,
+      "cash_o": 154252.0,
+      "margin": -3147.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249808,
+      "seat": 0,
+      "cash_c": 91088.0,
+      "cash_o": 92118.0,
+      "margin": -1030.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249808,
+      "seat": 1,
+      "cash_c": 91088.0,
+      "cash_o": 92118.0,
+      "margin": -1030.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249809,
+      "seat": 0,
+      "cash_c": 71227.0,
+      "cash_o": 81827.0,
+      "margin": -10600.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249809,
+      "seat": 1,
+      "cash_c": 71227.0,
+      "cash_o": 81827.0,
+      "margin": -10600.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249810,
+      "seat": 0,
+      "cash_c": 50773.0,
+      "cash_o": 54404.0,
+      "margin": -3631.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249810,
+      "seat": 1,
+      "cash_c": 50773.0,
+      "cash_o": 54404.0,
+      "margin": -3631.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249811,
+      "seat": 0,
+      "cash_c": 119003.0,
+      "cash_o": 120194.0,
+      "margin": -1191.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249811,
+      "seat": 1,
+      "cash_c": 119003.0,
+      "cash_o": 120194.0,
+      "margin": -1191.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249812,
+      "seat": 0,
+      "cash_c": 110348.0,
+      "cash_o": 114759.0,
+      "margin": -4411.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249812,
+      "seat": 1,
+      "cash_c": 110232.0,
+      "cash_o": 114882.0,
+      "margin": -4650.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249813,
+      "seat": 0,
+      "cash_c": 95422.0,
+      "cash_o": 98400.0,
+      "margin": -2978.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249813,
+      "seat": 1,
+      "cash_c": 95422.0,
+      "cash_o": 98400.0,
+      "margin": -2978.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249814,
+      "seat": 0,
+      "cash_c": 89523.0,
+      "cash_o": 90978.0,
+      "margin": -1455.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249814,
+      "seat": 1,
+      "cash_c": 89523.0,
+      "cash_o": 90978.0,
+      "margin": -1455.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249815,
+      "seat": 0,
+      "cash_c": 75304.0,
+      "cash_o": 79217.0,
+      "margin": -3913.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249815,
+      "seat": 1,
+      "cash_c": 75304.0,
+      "cash_o": 79217.0,
+      "margin": -3913.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249816,
+      "seat": 0,
+      "cash_c": 66196.0,
+      "cash_o": 66343.0,
+      "margin": -147.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249816,
+      "seat": 1,
+      "cash_c": 66196.0,
+      "cash_o": 66343.0,
+      "margin": -147.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249817,
+      "seat": 0,
+      "cash_c": 109073.0,
+      "cash_o": 110117.0,
+      "margin": -1044.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249817,
+      "seat": 1,
+      "cash_c": 109073.0,
+      "cash_o": 110117.0,
+      "margin": -1044.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249818,
+      "seat": 0,
+      "cash_c": 109869.0,
+      "cash_o": 113940.0,
+      "margin": -4071.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249818,
+      "seat": 1,
+      "cash_c": 109869.0,
+      "cash_o": 113940.0,
+      "margin": -4071.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249819,
+      "seat": 0,
+      "cash_c": 100758.0,
+      "cash_o": 101713.0,
+      "margin": -955.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249819,
+      "seat": 1,
+      "cash_c": 100758.0,
+      "cash_o": 101713.0,
+      "margin": -955.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249820,
+      "seat": 0,
+      "cash_c": 74017.0,
+      "cash_o": 78505.0,
+      "margin": -4488.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249820,
+      "seat": 1,
+      "cash_c": 74017.0,
+      "cash_o": 78505.0,
+      "margin": -4488.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249821,
+      "seat": 0,
+      "cash_c": 81586.0,
+      "cash_o": 83084.0,
+      "margin": -1498.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249821,
+      "seat": 1,
+      "cash_c": 81586.0,
+      "cash_o": 83084.0,
+      "margin": -1498.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249822,
+      "seat": 0,
+      "cash_c": 76693.0,
+      "cash_o": 79130.0,
+      "margin": -2437.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249822,
+      "seat": 1,
+      "cash_c": 76693.0,
+      "cash_o": 79130.0,
+      "margin": -2437.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249823,
+      "seat": 0,
+      "cash_c": 102992.0,
+      "cash_o": 109833.0,
+      "margin": -6841.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249823,
+      "seat": 1,
+      "cash_c": 102992.0,
+      "cash_o": 109833.0,
+      "margin": -6841.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249824,
+      "seat": 0,
+      "cash_c": 139148.0,
+      "cash_o": 139408.0,
+      "margin": -260.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249824,
+      "seat": 1,
+      "cash_c": 139148.0,
+      "cash_o": 139408.0,
+      "margin": -260.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249825,
+      "seat": 0,
+      "cash_c": 150351.0,
+      "cash_o": 160571.0,
+      "margin": -10220.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249825,
+      "seat": 1,
+      "cash_c": 150351.0,
+      "cash_o": 160571.0,
+      "margin": -10220.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249826,
+      "seat": 0,
+      "cash_c": 108764.0,
+      "cash_o": 110475.0,
+      "margin": -1711.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249826,
+      "seat": 1,
+      "cash_c": 108764.0,
+      "cash_o": 110475.0,
+      "margin": -1711.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249827,
+      "seat": 0,
+      "cash_c": 81434.0,
+      "cash_o": 87390.0,
+      "margin": -5956.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249827,
+      "seat": 1,
+      "cash_c": 81434.0,
+      "cash_o": 87390.0,
+      "margin": -5956.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249828,
+      "seat": 0,
+      "cash_c": 127014.0,
+      "cash_o": 127285.0,
+      "margin": -271.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249828,
+      "seat": 1,
+      "cash_c": 126095.0,
+      "cash_o": 128456.0,
+      "margin": -2361.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249829,
+      "seat": 0,
+      "cash_c": 79668.0,
+      "cash_o": 81566.0,
+      "margin": -1898.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249829,
+      "seat": 1,
+      "cash_c": 79668.0,
+      "cash_o": 81566.0,
+      "margin": -1898.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249830,
+      "seat": 0,
+      "cash_c": 109581.0,
+      "cash_o": 112860.0,
+      "margin": -3279.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249830,
+      "seat": 1,
+      "cash_c": 110722.0,
+      "cash_o": 112005.0,
+      "margin": -1283.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249831,
+      "seat": 0,
+      "cash_c": 98781.0,
+      "cash_o": 107735.0,
+      "margin": -8954.0,
+      "win": 0,
+      "casualties": 0
+    },
+    {
+      "cand": "V47_C5_MARKET_COMBO",
+      "seed": 249831,
+      "seat": 1,
+      "cash_c": 98781.0,
+      "cash_o": 107735.0,
+      "margin": -8954.0,
+      "win": 0,
+      "casualties": 0
+    }
+  ]
+}

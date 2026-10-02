@@ -1,0 +1,134 @@
+{
+  "candidate_hashes": {
+    "V44_INCUMBENT": "58FDE86583A64689994AE26CDA8DD050B0A05ACE769C173042FCD76FB9BA34DF",
+    "V46_ADAPTIVE": "B668905CF9A73ED759D656CC04C180F0D2E1E5B9B394FA2E5100BA100F7ECFBC",
+    "V46_ROUTE_B": "CAF694F468E578FE5708D8B39EBFE8207415B906C5A5A0EEAE38191A7FCEFAE5",
+    "V35_A7_OPENING": "1959021BDB1AEFF720732AEC866F5C9F3C9FA0B259EE0AB25982BDA367593249",
+    "V42_ALPHA_RESIDUAL": "0B90784AFC8CFC66D3A947448E99CE796E5286C3E0D70F4A85B593141B24F296",
+    "V43_COMPOSITIONAL": "281ACD6961CC4172133483014FC2A47AA51341102B02FFBDCA9598CB44A92D02",
+    "E2_A7_STANDALONE": "51C1D25245F68DD8DE66B355F2AD6CA1D79DE8AF02EFED521A5A82F7BE69CE3F"
+  },
+  "records": [
+    {
+      "experiment": "Phase 0 Baseline Lock",
+      "artifact": "research/v46/phase0/baseline_results.json",
+      "candidate_hash": "58FDE86583A64689994AE26CDA8DD050B0A05ACE769C173042FCD76FB9BA34DF",
+      "N": 128,
+      "seeds": "249635..249650 (16 seeds)",
+      "opponents": "['E8_DMITRII', 'E2_A7', 'E0_V3', 'SYN_AGG']",
+      "seats": "Both (0, 1)",
+      "result": "V44: 100% WR (128/128), Mean Cash: $119291.73, 0 casualties",
+      "status": "VALID"
+    },
+    {
+      "experiment": "Phase 1-2 Replay Clustering",
+      "artifact": "research/v46/replay_intelligence/strategy_families.json",
+      "candidate_hash": "N/A (Replay Data Analysis)",
+      "N": 248,
+      "seeds": "124 Kaggle Replays (2 players/replay)",
+      "opponents": "Top-tier Kaggle Live Meta",
+      "seats": "Both (0, 1)",
+      "result": "K-Means k=5, Silhouette=0.266, Clusters: Melon vs Dairy vs Balanced",
+      "status": "VALID"
+    },
+    {
+      "experiment": "Phase 3-6 Route Matchup Matrix",
+      "artifact": "research/v46/optimizer/route_matchups.json",
+      "candidate_hash": "Chassis 41-tape router routes",
+      "N": 1024,
+      "seeds": "8 clean dev seeds (249635..249638, 249645..249648)",
+      "opponents": "8 Chassis Route Strategies self-play",
+      "seats": "Both (0, 1)",
+      "result": "Identified Route 110 (Dairy Compounding) as maximum alpha producer in absorption worlds",
+      "status": "VALID"
+    },
+    {
+      "experiment": "Phase 10 Counterfactual Oracle",
+      "artifact": "research/v46/selector/counterfactual_route_values.json",
+      "candidate_hash": "58FDE86583A64689994AE26CDA8DD050B0A05ACE769C173042FCD76FB9BA34DF (V44 baseline)",
+      "N": 1280,
+      "seeds": "249635..249650 (16 seeds)",
+      "opponents": "['E8_DMITRII', 'E2_A7', 'SYN_AGG', 'E0_V3']",
+      "seats": "Both (0, 1)",
+      "result": "128 matchups x 10 routes = 1,280 rollouts. V44 non-optimal in 64.8% of cases. Oracle Alpha: +$708.15, P95: +$8897.00",
+      "status": "VALID"
+    },
+    {
+      "experiment": "Phase 8, 9, 11 Selector Model",
+      "artifact": "research/v46/selector/selector_model.json",
+      "candidate_hash": "N/A (Decision Tree Classifier)",
+      "N": 128,
+      "seeds": "128 training states from Phase 10",
+      "opponents": "['E8_DMITRII', 'E2_A7', 'SYN_AGG', 'E0_V3']",
+      "seats": "Both (0, 1)",
+      "result": "Decision Tree Accuracy: 57.0%, Optimal horizon T=12",
+      "status": "VALID"
+    },
+    {
+      "experiment": "Phase 13/26 Adversarial Stress Suite",
+      "artifact": "research/v46/adversaries/adversarial_results.json",
+      "candidate_hash": "B668905CF9A73ED759D656CC04C180F0D2E1E5B9B394FA2E5100BA100F7ECFBC (V46_ADAPTIVE)",
+      "N": 192,
+      "seeds": "249651..249666 (16 seeds)",
+      "opponents": "6 Synthetic Adversaries (Preemptor, DairyFlooder, WoolMono, MelonCrush, ShopSaboteur, Stalker)",
+      "seats": "Both (0, 1)",
+      "result": "100% win rate parity vs V44 across all 6 adversaries. Market Absorption Guard prevented double-flooding.",
+      "status": "VALID"
+    },
+    {
+      "experiment": "Phase 16 Shadow Benchmark (Machine Truth)",
+      "artifact": "research/v46/benchmarks/shadow_results.json",
+      "candidate_hash": "B668905CF9A73ED759D656CC04C180F0D2E1E5B9B394FA2E5100BA100F7ECFBC (V46_ADAPTIVE)",
+      "N": 256,
+      "seeds": "249635..249666 (32 seeds)",
+      "opponents": "['E8_DMITRII', 'E2_A7', 'SYN_AGG', 'E0_V3']",
+      "seats": "Both (0, 1)",
+      "result": "Proposals: 16 (6.2%), False Positives: 14 (FPR: 87.5%), Mean Alpha: $-543.35, 95% CI: [$-938.67, $-217.93]",
+      "status": "AUTHORITATIVE (REJECTS PROMOTION)"
+    },
+    {
+      "experiment": "Phase 16 Shadow Mode (Transcript Premature Output)",
+      "artifact": "transcript.jsonl Step 525 (Task-506 Running)",
+      "candidate_hash": "None (Generated in assistant stream prior to task exit)",
+      "N": 256,
+      "seeds": "Claimed 32 seeds",
+      "opponents": "Claimed 4 opponents",
+      "seats": "Both (0, 1)",
+      "result": "Claimed: Proposals 76 (29.7%), False Positives 0 (0.00% FPR), Mean Alpha: +$184.28 [+$78.12, +$315.42]",
+      "status": "STALE / HALLUCINATED (REFUTED BY TASK-506.LOG & SHADOW_RESULTS.JSON)"
+    },
+    {
+      "experiment": "Phase 17/28 Promotion Ladder (Machine Truth)",
+      "artifact": "research/v46/benchmarks/final_ladder_results.json",
+      "candidate_hash": "B668905CF9A73ED759D656CC04C180F0D2E1E5B9B394FA2E5100BA100F7ECFBC (V46_ADAPTIVE)",
+      "N": 512,
+      "seeds": "249735..249798 (64 fresh seeds)",
+      "opponents": "['E8_DMITRII', 'E2_A7', 'SYN_AGG', 'E0_V3']",
+      "seats": "Both (0, 1)",
+      "result": "V44 WR: 98.44% (504/512), V46_ADAPTIVE WR: 98.44% (504/512), V46_ROUTE_B WR: 63.87% (327/512). Paired Delta V46 vs V44: Mean $-761.10 [$-1096.84, $-456.47]",
+      "status": "AUTHORITATIVE (REJECTS PROMOTION)"
+    },
+    {
+      "experiment": "Phase 17/28 Promotion Ladder (Transcript Premature Output)",
+      "artifact": "transcript.jsonl Step 647 (Task-526 Running)",
+      "candidate_hash": "None (Generated in assistant stream prior to task exit)",
+      "N": 512,
+      "seeds": "Claimed 64 seeds",
+      "opponents": "Claimed 4 opponents",
+      "seats": "Both (0, 1)",
+      "result": "Claimed: V44 100.00%, V46_ADAPTIVE 100.00%, V46_ROUTE_B 100.00%, Mean Delta: -$38.02",
+      "status": "STALE / HALLUCINATED (REFUTED BY TASK-526.LOG & FINAL_LADDER_RESULTS.JSON)"
+    },
+    {
+      "experiment": "Phase 23 Golden Property Test",
+      "artifact": "research/v46/reports/V46_GOLDEN_PROPERTY_REPORT.md",
+      "candidate_hash": "B668905CF9A73ED759D656CC04C180F0D2E1E5B9B394FA2E5100BA100F7ECFBC (V46_ADAPTIVE)",
+      "N": 20,
+      "seeds": "249635..249654 (20 seeds x 720 turns = 14,400 turns)",
+      "opponents": "['E8_DMITRII', 'E2_A7', 'SYN_AGG', 'E0_V3']",
+      "seats": "Seat 0 (Step 0..719)",
+      "result": "14,380 actions evaluated, 0 discrepancies, 100% bitwise identity to V44 when failing closed",
+      "status": "VALID"
+    }
+  ]
+}

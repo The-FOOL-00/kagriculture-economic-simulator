@@ -1,0 +1,46 @@
+{
+  "A": {
+    "mean_delta": -11152.2890625,
+    "median_delta": -8390.0,
+    "ci_95": [
+      -14513.761164380838,
+      -7790.816960619162
+    ],
+    "positive_legs": 31,
+    "negative_legs": 97,
+    "zero_legs": 0
+  },
+  "E": {
+    "mean_delta": -42.5703125,
+    "median_delta": 0.0,
+    "ci_95": [
+      -68.42724555611903,
+      -16.713379443880974
+    ],
+    "positive_legs": 22,
+    "negative_legs": 25,
+    "zero_legs": 81
+  },
+  "F": {
+    "mean_delta": -95.9765625,
+    "median_delta": -68.0,
+    "ci_95": [
+      -142.7410321523769,
+      -49.212092847623104
+    ],
+    "positive_legs": 40,
+    "negative_legs": 69,
+    "zero_legs": 19
+  },
+  "G": {
+    "mean_delta": -95.9765625,
+    "median_delta": -68.0,
+    "ci_95": [
+      -142.7410321523769,
+      -49.212092847623104
+    ],
+    "positive_legs": 40,
+    "negative_legs": 69,
+    "zero_legs": 19
+  }
+}

@@ -1,0 +1,5132 @@
+[
+  {
+    "seed": 249800,
+    "seat_v47": 0,
+    "cash_v47": 86014.0,
+    "cash_2945": 86014.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249800,
+    "seat_v47": 1,
+    "cash_v47": 86014.0,
+    "cash_2945": 86014.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249801,
+    "seat_v47": 0,
+    "cash_v47": 79826.0,
+    "cash_2945": 79826.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249801,
+    "seat_v47": 1,
+    "cash_v47": 79826.0,
+    "cash_2945": 79826.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249802,
+    "seat_v47": 0,
+    "cash_v47": 73485.0,
+    "cash_2945": 73485.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249802,
+    "seat_v47": 1,
+    "cash_v47": 73485.0,
+    "cash_2945": 73485.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249803,
+    "seat_v47": 0,
+    "cash_v47": 101764.0,
+    "cash_2945": 101764.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249803,
+    "seat_v47": 1,
+    "cash_v47": 101764.0,
+    "cash_2945": 101764.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249804,
+    "seat_v47": 0,
+    "cash_v47": 103759.0,
+    "cash_2945": 103759.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249804,
+    "seat_v47": 1,
+    "cash_v47": 103759.0,
+    "cash_2945": 103759.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249805,
+    "seat_v47": 0,
+    "cash_v47": 108678.0,
+    "cash_2945": 108678.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249805,
+    "seat_v47": 1,
+    "cash_v47": 108678.0,
+    "cash_2945": 108678.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249806,
+    "seat_v47": 0,
+    "cash_v47": 92409.0,
+    "cash_2945": 92409.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249806,
+    "seat_v47": 1,
+    "cash_v47": 92409.0,
+    "cash_2945": 92409.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249807,
+    "seat_v47": 0,
+    "cash_v47": 153663.0,
+    "cash_2945": 153663.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249807,
+    "seat_v47": 1,
+    "cash_v47": 153663.0,
+    "cash_2945": 153663.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249808,
+    "seat_v47": 0,
+    "cash_v47": 92711.0,
+    "cash_2945": 92711.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249808,
+    "seat_v47": 1,
+    "cash_v47": 92711.0,
+    "cash_2945": 92711.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249809,
+    "seat_v47": 0,
+    "cash_v47": 73366.0,
+    "cash_2945": 73366.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249809,
+    "seat_v47": 1,
+    "cash_v47": 73366.0,
+    "cash_2945": 73366.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249810,
+    "seat_v47": 0,
+    "cash_v47": 54190.0,
+    "cash_2945": 54190.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249810,
+    "seat_v47": 1,
+    "cash_v47": 54190.0,
+    "cash_2945": 54190.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249811,
+    "seat_v47": 0,
+    "cash_v47": 120601.0,
+    "cash_2945": 120601.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249811,
+    "seat_v47": 1,
+    "cash_v47": 120601.0,
+    "cash_2945": 120601.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249812,
+    "seat_v47": 0,
+    "cash_v47": 112400.0,
+    "cash_2945": 112282.0,
+    "margin": 118.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 301,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 301,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "2945_farmer": [
+          "COLLECT_FERTILIZER"
+        ]
+      },
+      {
+        "step": 479,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 502,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249812,
+    "seat_v47": 1,
+    "cash_v47": 112282.0,
+    "cash_2945": 112400.0,
+    "margin": -118.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 301,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 301,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "COLLECT_FERTILIZER"
+        ],
+        "2945_farmer": [
+          "COLLECT_FERTILIZER"
+        ]
+      },
+      {
+        "step": 479,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 502,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249813,
+    "seat_v47": 0,
+    "cash_v47": 89764.0,
+    "cash_2945": 89764.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249813,
+    "seat_v47": 1,
+    "cash_v47": 89764.0,
+    "cash_2945": 89764.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249814,
+    "seat_v47": 0,
+    "cash_v47": 91293.0,
+    "cash_2945": 91293.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249814,
+    "seat_v47": 1,
+    "cash_v47": 91293.0,
+    "cash_2945": 91293.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249815,
+    "seat_v47": 0,
+    "cash_v47": 79929.0,
+    "cash_2945": 79929.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249815,
+    "seat_v47": 1,
+    "cash_v47": 79929.0,
+    "cash_2945": 79929.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249816,
+    "seat_v47": 0,
+    "cash_v47": 67362.0,
+    "cash_2945": 67362.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249816,
+    "seat_v47": 1,
+    "cash_v47": 67362.0,
+    "cash_2945": 67362.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249817,
+    "seat_v47": 0,
+    "cash_v47": 109980.0,
+    "cash_2945": 109980.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249817,
+    "seat_v47": 1,
+    "cash_v47": 109980.0,
+    "cash_2945": 109980.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249818,
+    "seat_v47": 0,
+    "cash_v47": 112526.0,
+    "cash_2945": 112526.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249818,
+    "seat_v47": 1,
+    "cash_v47": 112526.0,
+    "cash_2945": 112526.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249819,
+    "seat_v47": 0,
+    "cash_v47": 101337.0,
+    "cash_2945": 101337.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249819,
+    "seat_v47": 1,
+    "cash_v47": 101337.0,
+    "cash_2945": 101337.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249820,
+    "seat_v47": 0,
+    "cash_v47": 73343.0,
+    "cash_2945": 73343.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249820,
+    "seat_v47": 1,
+    "cash_v47": 73343.0,
+    "cash_2945": 73343.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249821,
+    "seat_v47": 0,
+    "cash_v47": 82991.0,
+    "cash_2945": 82991.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249821,
+    "seat_v47": 1,
+    "cash_v47": 82991.0,
+    "cash_2945": 82991.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249822,
+    "seat_v47": 0,
+    "cash_v47": 78086.0,
+    "cash_2945": 78086.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 700,
+    "num_div_steps": 1,
+    "div_details": [
+      {
+        "step": 700,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249822,
+    "seat_v47": 1,
+    "cash_v47": 78086.0,
+    "cash_2945": 78086.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 700,
+    "num_div_steps": 1,
+    "div_details": [
+      {
+        "step": 700,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249823,
+    "seat_v47": 0,
+    "cash_v47": 118260.0,
+    "cash_2945": 118260.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249823,
+    "seat_v47": 1,
+    "cash_v47": 118260.0,
+    "cash_2945": 118260.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249824,
+    "seat_v47": 0,
+    "cash_v47": 139267.0,
+    "cash_2945": 139272.0,
+    "margin": -5.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 673,
+    "num_div_steps": 2,
+    "div_details": [
+      {
+        "step": 673,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "EGG",
+            1
+          ],
+          [
+            "SELL",
+            "MILK",
+            11
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "SELL",
+            "CARROT",
+            8
+          ],
+          [
+            "SELL",
+            "CARROT",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            11
+          ],
+          [
+            "SELL",
+            "WOOL",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "EGG",
+            1
+          ],
+          [
+            "SELL",
+            "MILK",
+            11
+          ],
+          [
+            "SELL",
+            "CARROT",
+            8
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "SELL",
+            "CARROT",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            11
+          ],
+          [
+            "SELL",
+            "WOOL",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 692,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1000
+          ],
+          [
+            "SELL",
+            "CARROT",
+            1000
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1000
+          ],
+          [
+            "SELL",
+            "CARROT",
+            1000
+          ]
+        ],
+        "v47_farmer": [
+          "EAST"
+        ],
+        "2945_farmer": [
+          "EAST"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249824,
+    "seat_v47": 1,
+    "cash_v47": 139272.0,
+    "cash_2945": 139267.0,
+    "margin": 5.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 673,
+    "num_div_steps": 2,
+    "div_details": [
+      {
+        "step": 673,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "EGG",
+            1
+          ],
+          [
+            "SELL",
+            "MILK",
+            11
+          ],
+          [
+            "SELL",
+            "CARROT",
+            8
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "SELL",
+            "CARROT",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            11
+          ],
+          [
+            "SELL",
+            "WOOL",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "EGG",
+            1
+          ],
+          [
+            "SELL",
+            "MILK",
+            11
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "SELL",
+            "CARROT",
+            8
+          ],
+          [
+            "SELL",
+            "CARROT",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            11
+          ],
+          [
+            "SELL",
+            "WOOL",
+            20
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 692,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1000
+          ],
+          [
+            "SELL",
+            "CARROT",
+            1000
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            1000
+          ],
+          [
+            "SELL",
+            "CARROT",
+            1000
+          ]
+        ],
+        "v47_farmer": [
+          "EAST"
+        ],
+        "2945_farmer": [
+          "EAST"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249825,
+    "seat_v47": 0,
+    "cash_v47": 157953.0,
+    "cash_2945": 157953.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249825,
+    "seat_v47": 1,
+    "cash_v47": 157953.0,
+    "cash_2945": 157953.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249826,
+    "seat_v47": 0,
+    "cash_v47": 110846.0,
+    "cash_2945": 110846.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249826,
+    "seat_v47": 1,
+    "cash_v47": 110846.0,
+    "cash_2945": 110846.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249827,
+    "seat_v47": 0,
+    "cash_v47": 87045.0,
+    "cash_2945": 87045.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249827,
+    "seat_v47": 1,
+    "cash_v47": 87045.0,
+    "cash_2945": 87045.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249828,
+    "seat_v47": 0,
+    "cash_v47": 128730.0,
+    "cash_2945": 127749.0,
+    "margin": 981.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 180,
+    "num_div_steps": 6,
+    "div_details": [
+      {
+        "step": 180,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 473,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "WOOL",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            1
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "EAST"
+        ],
+        "2945_farmer": [
+          "EAST"
+        ]
+      },
+      {
+        "step": 529,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "MILK",
+            2
+          ],
+          [
+            "SELL",
+            "MILK",
+            1
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "EGG",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "MILK",
+            2
+          ],
+          [
+            "SELL",
+            "MILK",
+            1
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "EGG",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 542,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 598,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 600,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            12
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "SELL",
+            "EGG",
+            12
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            12
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            5
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "SELL",
+            "EGG",
+            12
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "PICKUP",
+          "WHEAT"
+        ],
+        "2945_farmer": [
+          "PICKUP",
+          "WHEAT"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249828,
+    "seat_v47": 1,
+    "cash_v47": 127749.0,
+    "cash_2945": 128730.0,
+    "margin": -981.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 180,
+    "num_div_steps": 6,
+    "div_details": [
+      {
+        "step": 180,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 473,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            1
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "WOOL",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "EAST"
+        ],
+        "2945_farmer": [
+          "EAST"
+        ]
+      },
+      {
+        "step": 529,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "MILK",
+            2
+          ],
+          [
+            "SELL",
+            "MILK",
+            1
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "EGG",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "MILK",
+            2
+          ],
+          [
+            "SELL",
+            "MILK",
+            1
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "EGG",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 542,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 598,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 600,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            12
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            5
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "SELL",
+            "EGG",
+            12
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            12
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "SELL",
+            "EGG",
+            12
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "PICKUP",
+          "WHEAT"
+        ],
+        "2945_farmer": [
+          "PICKUP",
+          "WHEAT"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249829,
+    "seat_v47": 0,
+    "cash_v47": 79697.0,
+    "cash_2945": 79697.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249829,
+    "seat_v47": 1,
+    "cash_v47": 79697.0,
+    "cash_2945": 79697.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249830,
+    "seat_v47": 0,
+    "cash_v47": 106110.0,
+    "cash_2945": 107127.0,
+    "margin": -1017.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 180,
+    "num_div_steps": 10,
+    "div_details": [
+      {
+        "step": 180,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 227,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 519,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            4
+          ]
+        ],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "EAST"
+        ],
+        "2945_farmer": [
+          "EAST"
+        ]
+      },
+      {
+        "step": 529,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "MILK",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "MILK",
+            1
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 542,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 544,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "FERTILIZE"
+        ],
+        "2945_farmer": [
+          "FERTILIZE"
+        ]
+      },
+      {
+        "step": 552,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ],
+          [
+            "SELL",
+            "MILK",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            15
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            3
+          ],
+          [
+            "SELL",
+            "MILK",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            15
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 577,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            10
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            12
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 589,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 600,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            5
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "PICKUP",
+          "WHEAT"
+        ],
+        "2945_farmer": [
+          "PICKUP",
+          "WHEAT"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249830,
+    "seat_v47": 1,
+    "cash_v47": 107127.0,
+    "cash_2945": 106110.0,
+    "margin": 1017.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 180,
+    "num_div_steps": 10,
+    "div_details": [
+      {
+        "step": 180,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 227,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 519,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "EAST"
+        ],
+        "2945_farmer": [
+          "EAST"
+        ]
+      },
+      {
+        "step": 529,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "MILK",
+            1
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "MILK",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 542,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 544,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "FERTILIZE"
+        ],
+        "2945_farmer": [
+          "FERTILIZE"
+        ]
+      },
+      {
+        "step": 552,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            3
+          ],
+          [
+            "SELL",
+            "MILK",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            15
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            4
+          ],
+          [
+            "SELL",
+            "MILK",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            15
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 577,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            12
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            10
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "FERTILIZER",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 589,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 600,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            5
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            9
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "PICKUP",
+          "WHEAT"
+        ],
+        "2945_farmer": [
+          "PICKUP",
+          "WHEAT"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249831,
+    "seat_v47": 0,
+    "cash_v47": 98409.0,
+    "cash_2945": 98409.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249831,
+    "seat_v47": 1,
+    "cash_v47": 98409.0,
+    "cash_2945": 98409.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249832,
+    "seat_v47": 0,
+    "cash_v47": 109590.0,
+    "cash_2945": 109590.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249832,
+    "seat_v47": 1,
+    "cash_v47": 109590.0,
+    "cash_2945": 109590.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249833,
+    "seat_v47": 0,
+    "cash_v47": 85180.0,
+    "cash_2945": 85180.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249833,
+    "seat_v47": 1,
+    "cash_v47": 85180.0,
+    "cash_2945": 85180.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249834,
+    "seat_v47": 0,
+    "cash_v47": 77747.0,
+    "cash_2945": 80958.0,
+    "margin": -3211.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 33,
+    "num_div_steps": 63,
+    "div_details": [
+      {
+        "step": 33,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 83,
+        "diffs": [
+          "farmer"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "DIG"
+        ],
+        "2945_farmer": [
+          "FEED"
+        ]
+      },
+      {
+        "step": 169,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "CARROT",
+            8
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 179,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 312,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            3
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ],
+        "2945_farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ]
+      },
+      {
+        "step": 330,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "FEED"
+        ],
+        "2945_farmer": [
+          "FEED"
+        ]
+      },
+      {
+        "step": 337,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 338,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 350,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 354,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249834,
+    "seat_v47": 1,
+    "cash_v47": 80958.0,
+    "cash_2945": 77747.0,
+    "margin": 3211.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 33,
+    "num_div_steps": 63,
+    "div_details": [
+      {
+        "step": 33,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 83,
+        "diffs": [
+          "farmer"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "FEED"
+        ],
+        "2945_farmer": [
+          "DIG"
+        ]
+      },
+      {
+        "step": 169,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "CARROT",
+            8
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 179,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 312,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            3
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ],
+        "2945_farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ]
+      },
+      {
+        "step": 330,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "FEED"
+        ],
+        "2945_farmer": [
+          "FEED"
+        ]
+      },
+      {
+        "step": 337,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "HIRE"
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 338,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "WEST"
+        ],
+        "2945_farmer": [
+          "WEST"
+        ]
+      },
+      {
+        "step": 350,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ]
+        ],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 354,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249835,
+    "seat_v47": 0,
+    "cash_v47": 109543.0,
+    "cash_2945": 109543.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249835,
+    "seat_v47": 1,
+    "cash_v47": 109543.0,
+    "cash_2945": 109543.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249836,
+    "seat_v47": 0,
+    "cash_v47": 124188.0,
+    "cash_2945": 124188.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249836,
+    "seat_v47": 1,
+    "cash_v47": 124188.0,
+    "cash_2945": 124188.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249837,
+    "seat_v47": 0,
+    "cash_v47": 98993.0,
+    "cash_2945": 98993.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249837,
+    "seat_v47": 1,
+    "cash_v47": 98993.0,
+    "cash_2945": 98993.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249838,
+    "seat_v47": 0,
+    "cash_v47": 89405.0,
+    "cash_2945": 89405.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249838,
+    "seat_v47": 1,
+    "cash_v47": 89405.0,
+    "cash_2945": 89405.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249839,
+    "seat_v47": 0,
+    "cash_v47": 111478.0,
+    "cash_2945": 111350.0,
+    "margin": 128.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 302,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 302,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "SOUTH"
+        ],
+        "2945_farmer": [
+          "SOUTH"
+        ]
+      },
+      {
+        "step": 478,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 502,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            4
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249839,
+    "seat_v47": 1,
+    "cash_v47": 111350.0,
+    "cash_2945": 111478.0,
+    "margin": -128.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 302,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 302,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WOOL",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "SOUTH"
+        ],
+        "2945_farmer": [
+          "SOUTH"
+        ]
+      },
+      {
+        "step": 478,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 502,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            4
+          ]
+        ],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249840,
+    "seat_v47": 0,
+    "cash_v47": 110832.0,
+    "cash_2945": 110832.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249840,
+    "seat_v47": 1,
+    "cash_v47": 110832.0,
+    "cash_2945": 110832.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249841,
+    "seat_v47": 0,
+    "cash_v47": 150223.0,
+    "cash_2945": 150223.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249841,
+    "seat_v47": 1,
+    "cash_v47": 150223.0,
+    "cash_2945": 150223.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249842,
+    "seat_v47": 0,
+    "cash_v47": 113390.0,
+    "cash_2945": 113390.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249842,
+    "seat_v47": 1,
+    "cash_v47": 113390.0,
+    "cash_2945": 113390.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249843,
+    "seat_v47": 0,
+    "cash_v47": 82512.0,
+    "cash_2945": 82512.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 184,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 184,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 185,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 186,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249843,
+    "seat_v47": 1,
+    "cash_v47": 82512.0,
+    "cash_2945": 82512.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 184,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 184,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 185,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 186,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249844,
+    "seat_v47": 0,
+    "cash_v47": 108069.0,
+    "cash_2945": 108069.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249844,
+    "seat_v47": 1,
+    "cash_v47": 108069.0,
+    "cash_2945": 108069.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249845,
+    "seat_v47": 0,
+    "cash_v47": 86261.0,
+    "cash_2945": 86261.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 676,
+    "num_div_steps": 1,
+    "div_details": [
+      {
+        "step": 676,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "CARE"
+        ],
+        "2945_farmer": [
+          "CARE"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249845,
+    "seat_v47": 1,
+    "cash_v47": 86261.0,
+    "cash_2945": 86261.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 676,
+    "num_div_steps": 1,
+    "div_details": [
+      {
+        "step": 676,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "CARE"
+        ],
+        "2945_farmer": [
+          "CARE"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249846,
+    "seat_v47": 0,
+    "cash_v47": 102399.0,
+    "cash_2945": 102399.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249846,
+    "seat_v47": 1,
+    "cash_v47": 102399.0,
+    "cash_2945": 102399.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249847,
+    "seat_v47": 0,
+    "cash_v47": 86714.0,
+    "cash_2945": 86714.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249847,
+    "seat_v47": 1,
+    "cash_v47": 86714.0,
+    "cash_2945": 86714.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249848,
+    "seat_v47": 0,
+    "cash_v47": 58407.0,
+    "cash_2945": 58407.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249848,
+    "seat_v47": 1,
+    "cash_v47": 58407.0,
+    "cash_2945": 58407.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249849,
+    "seat_v47": 0,
+    "cash_v47": 107617.0,
+    "cash_2945": 107617.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 184,
+    "num_div_steps": 1,
+    "div_details": [
+      {
+        "step": 184,
+        "diffs": [
+          "farmer"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "DIG"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249849,
+    "seat_v47": 1,
+    "cash_v47": 107617.0,
+    "cash_2945": 107617.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 184,
+    "num_div_steps": 1,
+    "div_details": [
+      {
+        "step": 184,
+        "diffs": [
+          "farmer"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "DIG"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249850,
+    "seat_v47": 0,
+    "cash_v47": 83648.0,
+    "cash_2945": 83728.0,
+    "margin": -80.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 190,
+    "num_div_steps": 4,
+    "div_details": [
+      {
+        "step": 190,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "PLANT",
+          "WHEAT"
+        ],
+        "2945_farmer": [
+          "PLANT",
+          "WHEAT"
+        ]
+      },
+      {
+        "step": 191,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 236,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "PLANT",
+          "WHEAT"
+        ],
+        "2945_farmer": [
+          "PLANT",
+          "WHEAT"
+        ]
+      },
+      {
+        "step": 254,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            3
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "SOUTH"
+        ],
+        "2945_farmer": [
+          "SOUTH"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249850,
+    "seat_v47": 1,
+    "cash_v47": 83728.0,
+    "cash_2945": 83648.0,
+    "margin": 80.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 190,
+    "num_div_steps": 4,
+    "div_details": [
+      {
+        "step": 190,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "PLANT",
+          "WHEAT"
+        ],
+        "2945_farmer": [
+          "PLANT",
+          "WHEAT"
+        ]
+      },
+      {
+        "step": 191,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 236,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "PLANT",
+          "WHEAT"
+        ],
+        "2945_farmer": [
+          "PLANT",
+          "WHEAT"
+        ]
+      },
+      {
+        "step": 254,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            3
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ],
+        "v47_farmer": [
+          "SOUTH"
+        ],
+        "2945_farmer": [
+          "SOUTH"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249851,
+    "seat_v47": 0,
+    "cash_v47": 112081.0,
+    "cash_2945": 112081.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249851,
+    "seat_v47": 1,
+    "cash_v47": 112081.0,
+    "cash_2945": 112081.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249852,
+    "seat_v47": 0,
+    "cash_v47": 119192.0,
+    "cash_2945": 119192.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249852,
+    "seat_v47": 1,
+    "cash_v47": 119192.0,
+    "cash_2945": 119192.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249853,
+    "seat_v47": 0,
+    "cash_v47": 85876.0,
+    "cash_2945": 85876.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249853,
+    "seat_v47": 1,
+    "cash_v47": 85876.0,
+    "cash_2945": 85876.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249854,
+    "seat_v47": 0,
+    "cash_v47": 94143.0,
+    "cash_2945": 94023.0,
+    "margin": 120.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 301,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 301,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 388,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            6
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "CARE"
+        ],
+        "2945_farmer": [
+          "CARE"
+        ]
+      },
+      {
+        "step": 401,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            3
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "EAST"
+        ],
+        "2945_farmer": [
+          "EAST"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249854,
+    "seat_v47": 1,
+    "cash_v47": 94023.0,
+    "cash_2945": 94143.0,
+    "margin": -120.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 301,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 301,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "WATER"
+        ],
+        "2945_farmer": [
+          "WATER"
+        ]
+      },
+      {
+        "step": 388,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            6
+          ]
+        ],
+        "v47_farmer": [
+          "CARE"
+        ],
+        "2945_farmer": [
+          "CARE"
+        ]
+      },
+      {
+        "step": 401,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "MILK",
+            3
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "MILK",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "EAST"
+        ],
+        "2945_farmer": [
+          "EAST"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249855,
+    "seat_v47": 0,
+    "cash_v47": 75267.0,
+    "cash_2945": 75267.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249855,
+    "seat_v47": 1,
+    "cash_v47": 75267.0,
+    "cash_2945": 75267.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249856,
+    "seat_v47": 0,
+    "cash_v47": 107584.0,
+    "cash_2945": 107584.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249856,
+    "seat_v47": 1,
+    "cash_v47": 107584.0,
+    "cash_2945": 107584.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249857,
+    "seat_v47": 0,
+    "cash_v47": 93753.0,
+    "cash_2945": 92898.0,
+    "margin": 855.0,
+    "outcome": "V47_WIN",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 187,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 187,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 454,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 478,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            9
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            8
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249857,
+    "seat_v47": 1,
+    "cash_v47": 92898.0,
+    "cash_2945": 93753.0,
+    "margin": -855.0,
+    "outcome": "V47_LOSS",
+    "classification": "MATERIAL_DIFFERENCE",
+    "first_div_step": 187,
+    "num_div_steps": 3,
+    "div_details": [
+      {
+        "step": 187,
+        "diffs": [
+          "hands"
+        ],
+        "v47_mkt": [],
+        "2945_mkt": [],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      },
+      {
+        "step": 454,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            3
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ]
+        ],
+        "v47_farmer": [
+          "NORTH"
+        ],
+        "2945_farmer": [
+          "NORTH"
+        ]
+      },
+      {
+        "step": 478,
+        "diffs": [
+          "market"
+        ],
+        "v47_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            8
+          ]
+        ],
+        "2945_mkt": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            9
+          ]
+        ],
+        "v47_farmer": [
+          "PASS"
+        ],
+        "2945_farmer": [
+          "PASS"
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 249858,
+    "seat_v47": 0,
+    "cash_v47": 55991.0,
+    "cash_2945": 55991.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249858,
+    "seat_v47": 1,
+    "cash_v47": 55991.0,
+    "cash_2945": 55991.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249859,
+    "seat_v47": 0,
+    "cash_v47": 66328.0,
+    "cash_2945": 66328.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249859,
+    "seat_v47": 1,
+    "cash_v47": 66328.0,
+    "cash_2945": 66328.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249860,
+    "seat_v47": 0,
+    "cash_v47": 95051.0,
+    "cash_2945": 95051.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249860,
+    "seat_v47": 1,
+    "cash_v47": 95051.0,
+    "cash_2945": 95051.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249861,
+    "seat_v47": 0,
+    "cash_v47": 108490.0,
+    "cash_2945": 108490.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249861,
+    "seat_v47": 1,
+    "cash_v47": 108490.0,
+    "cash_2945": 108490.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249862,
+    "seat_v47": 0,
+    "cash_v47": 84809.0,
+    "cash_2945": 84809.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249862,
+    "seat_v47": 1,
+    "cash_v47": 84809.0,
+    "cash_2945": 84809.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249863,
+    "seat_v47": 0,
+    "cash_v47": 99981.0,
+    "cash_2945": 99981.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  },
+  {
+    "seed": 249863,
+    "seat_v47": 1,
+    "cash_v47": 99981.0,
+    "cash_2945": 99981.0,
+    "margin": 0.0,
+    "outcome": "TIE",
+    "classification": "EXACT_PARITY",
+    "first_div_step": null,
+    "num_div_steps": 0,
+    "div_details": []
+  }
+]

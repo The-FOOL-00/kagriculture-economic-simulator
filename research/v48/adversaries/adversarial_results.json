@@ -1,0 +1,29 @@
+{
+  "DAIRY_FLOOD": {
+    "legs": 128,
+    "win_rate_2945": 1.0,
+    "win_rate_v48": 1.0,
+    "mean_delta": 29.875,
+    "median_delta": 0.0,
+    "margin_2945": 173386.5078125,
+    "margin_v48": 173416.3828125
+  },
+  "WOOL_FLOOD": {
+    "legs": 128,
+    "win_rate_2945": 1.0,
+    "win_rate_v48": 1.0,
+    "mean_delta": 29.875,
+    "median_delta": 0.0,
+    "margin_2945": 173586.5078125,
+    "margin_v48": 173616.3828125
+  },
+  "TERMINAL_DUMPER": {
+    "legs": 128,
+    "win_rate_2945": 1.0,
+    "win_rate_v48": 1.0,
+    "mean_delta": 29.875,
+    "median_delta": 0.0,
+    "margin_2945": 170586.5078125,
+    "margin_v48": 170616.3828125
+  }
+}

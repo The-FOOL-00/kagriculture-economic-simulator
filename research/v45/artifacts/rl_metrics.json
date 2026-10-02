@@ -1,0 +1,23 @@
+{
+  "program": "V45 Online Recurrent RL & Self-Play Governance Audit",
+  "rl_entry_gate_requirements": {
+    "required_fresh_paired_legs": 256,
+    "required_casualties": 0,
+    "required_mean_delta_vs_v44": 75.0,
+    "required_ci_lower_bound": 20.0,
+    "required_rescues": 3
+  },
+  "measured_deterministic_candidate": {
+    "fresh_paired_legs_evaluated": 128,
+    "casualties": 0,
+    "mean_cash_delta_vs_v44": 0.0,
+    "median_cash_delta_vs_v44": 0.0,
+    "ci_lower_bound": 0.0,
+    "confirmed_rescues": 0,
+    "shadow_gate_verdict": "REJECTED (0.0% precision, 100% destructive rate)"
+  },
+  "rl_activation_verdict": "ABORTED_BY_GOVERNANCE_GATE",
+  "rationale": "In strict adherence to Section 21 and Section 50, online recurrent RL was not launched because deterministic market alpha failed the prerequisite Gate B promotion threshold. Compute was correctly conserved rather than wasted on ungrounded PPO optimization.",
+  "self_play_status": "NOT_ACTIVATED",
+  "kill_switch_active": true
+}
