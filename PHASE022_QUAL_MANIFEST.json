@@ -1,0 +1,122 @@
+{
+  "phase": "PHASE022",
+  "title": "Foundation Consolidation, Adversarial Validation & Submission Hardening",
+  "date": "2026-09-20",
+  "v3_chassis_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "v3_verified_bit_identical": true,
+  "git_baseline": "15c0f29ab90ec51eada363c60aee7958099a76a3",
+  "submission_artifact": {
+    "file": "submission_aec_v22.tar.gz",
+    "size_bytes": 547236,
+    "sha256": "2b23bc228366e7df5fbe4ecdd38bd3c26d3fd1c0da58e5b97f745c979075df23",
+    "entry_point": "main.py:agent",
+    "bundled_v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "portability_scan": "PASS (0 absolute paths, 0 undeclared dependencies)",
+    "standalone_720_step_test": "PASS (DONE, zero errors)",
+    "packaged_determinism": "PASS ($3000.00 == $3000.00)"
+  },
+  "tests": {
+    "baseline_regression_suite": 776,
+    "adversarial_stress_suite": 8,
+    "total_tests_passed": 784,
+    "failures": 0
+  },
+  "live_foundation": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN",
+  "permanent_quarantines": [
+    "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER",
+    "MULTIWORKER_HARVEST_SYNCHRONIZATION",
+    "ASSET_HOLDING_VALUATION_TRIGGER",
+    "FRONTLOAD_ORDERS",
+    "LOCAL_WEED_DIG",
+    "RESOURCE_CONVERSION",
+    "EMERGENCY_FEED_PURCHASE",
+    "BOUNDARY-SAFE TRANCHE"
+  ],
+  "cohorts": {
+    "protected_historical_through": 249375,
+    "fresh_cohort_evaluated": [249376, 249395],
+    "consumed_through": 249395,
+    "reserve_untouched_from": 249396,
+    "holdouts_untouched": {
+      "primary_locked_holdout_340050_340199": true,
+      "gate03_virgin_holdout_214200_214249": true,
+      "tournament_cohort_340300_340349": true
+    }
+  },
+  "fresh_cohort_validation": {
+    "n_seeds": 20,
+    "n_matches": 40,
+    "mean_paired_delta": 33.35,
+    "median_paired_delta": 22.0,
+    "std_delta": 1152.01,
+    "se_delta": 182.15,
+    "ci_95": [-335.08, 401.78],
+    "p_value_wilcoxon": 0.034086,
+    "p_value_t": 0.855674,
+    "cohens_d": 0.0289,
+    "record_win_loss_tie": [21, 7, 12],
+    "win_rate_excluding_ties": 0.75,
+    "overall_win_or_tie_rate": 0.825,
+    "safety_violations": 0
+  },
+  "attribution_and_interaction": {
+    "matches_evaluated": 280,
+    "arms_evaluated": 7,
+    "causal_alpha_driver": "DEPENDENCY_AWARE_MARKET_TIMING (+$35.50 marginal delta)",
+    "defense_in_depth": ["TERMINAL_LIQUIDATION", "PHASE_SHUTDOWN"],
+    "interaction_collisions": 0,
+    "order_duplications": 0,
+    "stale_state_executions": 0
+  },
+  "determinism_audit": {
+    "seeds_tested": [249376, 249377, 249378, 249379, 249380],
+    "runs_per_seed": 3,
+    "total_comparisons": 10,
+    "mismatches": 0,
+    "bit_identical_deterministic": true
+  },
+  "counterfactual_fidelity_audit": {
+    "traces_audited": 34,
+    "mean_absolute_error": 0.0,
+    "max_discrepancy": 0.0,
+    "sign_inversions": 0,
+    "exact_clone_and_rollout_verified": true
+  },
+  "latency_audit": {
+    "steps_profiled": 28760,
+    "mean_ms": 75.76,
+    "median_ms": 50.89,
+    "p95_ms": 229.40,
+    "p99_ms": 404.87,
+    "turn_budget_limit_ms": 1000.0,
+    "compliant": true
+  },
+  "final_scientific_decision": "FOUNDATION VALIDATED / SUBMISSION READY",
+  "decision_rationale": "All six Phase 022 readiness gates passed decisively: fresh-cohort validation demonstrates statistically significant positive alpha (p=0.034, 21W/7L/12T), zero safety violations across 28,800 steps, 100% bit-identical determinism, exact counterfactual rollout fidelity (MAE=$0.00), compliant median latency of 50.89 ms, and successful standalone execution of the packaged submission archive.",
+  "r1_status": "RETIRED - SUPERSEDED BY PHASE022R1_QUAL_MANIFEST.json (2026-09-20). Original keys above preserved as history; r1_corrections governs.",
+  "r1_corrections": {
+    "submission_artifact": "RETIRED: submission_aec_v22.tar.gz (2b23bc22...) cannot execute under the competition loader (NameError: __file__; $3,000 all-PASS corpse). Repaired release: submission_aec_v22r1.tar.gz.",
+    "statistical_framing": "No Phase 022 preregistration exists. Four-test table: match t p=0.86 FAIL / match Wilcoxon p=0.034 nominal / seed t p=0.024 / seed Wilcoxon ~0.050-0.055 straddling 0.05. d=0.03 negligible. +$33.35 is a cohort sample mean with zero-spanning CI.",
+    "attribution": "Cohort-scoped: market timing was the mechanism associated with the observed incremental effect in this design (+$35.50 marginal); Liq/Shutdown never fired live (protective value unproven).",
+    "counterfactual_fidelity": "WITHDRAWN as circular (realized copied from predicted; zero independent re-simulation).",
+    "determinism": "V22 compared aggregates only; '720/720 steps' unsupported. Superseded by R1 per-turn replay audit.",
+    "latency": "Median ~51 ms; tail materially higher (P95 ~229, P99 ~405, max ~2347 ms); config 100 ms limit breached; 719 steps/match.",
+    "holdouts": "340300..340349 CONSUMED/RETIRED (EXP-AEC-004), not untouched. 340050..340199 and 214200..214249 remain untouched.",
+    "safety": "V22 counter vacuous (restated as observed outcomes); predicates purchase_ok/market_collision_ok unevaluated placeholders; instrumentation repaired in R1.",
+    "final_scientific_decision_corrected": "Positive mean paired delta (+$33.35) on the tested cohort with substantial uncertainty; no universal/optimality establishment. Release status per PHASE022R1_RELEASE_GATE.md only."
+  },
+  "artifacts": [
+    "PHASE022_BASELINE_FREEZE.md",
+    "PHASE022_FRESH_VALIDATION.md",
+    "PHASE022_MECHANISM_ATTRIBUTION.md",
+    "PHASE022_ADVERSARIAL_STRESS.md",
+    "PHASE022_DETERMINISM_AUDIT.md",
+    "PHASE022_COUNTERFACTUAL_FIDELITY.md",
+    "PHASE022_PERFORMANCE_AUDIT.md",
+    "PHASE022_AEC_DECISION_TRACE.md",
+    "PHASE022_AUTONOMY_TRACE.md",
+    "PHASE022_SUBMISSION_INTEGRITY.md",
+    "PHASE022_FINAL_REPORT.md",
+    "PHASE022_QUAL_MANIFEST.json"
+  ]
+}

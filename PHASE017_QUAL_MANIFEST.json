@@ -1,0 +1,105 @@
+{
+  "phase_id": "PHASE_017",
+  "campaign_name": "RESIDUAL_ALPHA_OVERBLOCKING_OPPORTUNITY_REPRESENTATION_AUDIT",
+  "date": "2026-09-19",
+  "governance": {
+    "chassis_tarball": "submission_Vj_kc_v3.tar.gz",
+    "chassis_expected_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "chassis_verified_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "chassis_intact": true,
+    "certified_fresh_cohort": "249286..249295",
+    "protected_cohorts_checked": [
+      "340050..340199",
+      "214200..214249",
+      "340300..340349"
+    ],
+    "protected_cohorts_touched": 0,
+    "retired_cohorts_checked": [
+      "249000..249285"
+    ],
+    "retired_cohorts_reused": 0
+  },
+  "test_health": {
+    "phase017_counterfactual_fidelity_tests": 7,
+    "phase017_counterfactual_fidelity_passed": 7,
+    "phase016_macro_regime_tests": 8,
+    "phase016_macro_regime_passed": 8,
+    "total_repository_tests": 714,
+    "total_repository_passed": 714,
+    "pass_rate": 1.0
+  },
+  "audit_metrics": {
+    "total_matches": 20,
+    "total_candidates_screened": 6508,
+    "simulated_candidates": 2082,
+    "escalated_candidates": 736,
+    "escalation_rate": 0.3535,
+    "committed_candidates": 54,
+    "macro_probe_precision": 0.981,
+    "macro_probe_recall": 1.0,
+    "overblocking_rate": 0.0,
+    "false_rejections_count": 0
+  },
+  "residual_economics": {
+    "n_seeds": 10,
+    "n_matches": 20,
+    "mean_paired_margin_delta": -884.20,
+    "ci_95_lower": -1493.73,
+    "ci_95_upper": -274.67,
+    "wins": 1,
+    "losses": 9,
+    "ties": 0,
+    "best_seed_delta": 54.0,
+    "worst_seed_delta": -2159.0
+  },
+  "causal_attribution": {
+    "mean_direct_local_delta": 336.13,
+    "mean_macro_divergence_cost": -468.50,
+    "mean_net_macro_effect": -132.37,
+    "funnel_crowding_seed_249288_loss": -1561.00,
+    "funnel_crowding_pct_of_deficit": 17.65
+  },
+  "mechanism_status": {
+    "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER": {
+      "scientific_status": "FUNCTIONALLY_COMPLETE_QUARANTINED",
+      "commit_eligibility": false,
+      "quarantined": true,
+      "candidates": 6206,
+      "commits": 52,
+      "rejections": 6154,
+      "net_paired_delta_contribution": -884.20
+    },
+    "ASSET_HOLDING_VALUATION_TRIGGER": {
+      "scientific_status": "FUNCTIONALLY_COMPLETE_QUARANTINED",
+      "commit_eligibility": false,
+      "quarantined": true,
+      "detections": 1180
+    },
+    "DEPENDENCY_AWARE_MARKET_TIMING": {
+      "scientific_status": "QUALIFIED_CORE_FOUNDATION",
+      "commit_eligibility": true,
+      "quarantined": false,
+      "candidates": 44,
+      "commits": 2,
+      "net_paired_delta_contribution": 3.18
+    },
+    "TERMINAL_LIQUIDATION": {
+      "scientific_status": "QUALIFIED_CORE_FOUNDATION",
+      "commit_eligibility": true,
+      "quarantined": false
+    },
+    "PHASE_SHUTDOWN": {
+      "scientific_status": "QUALIFIED_CORE_FOUNDATION",
+      "commit_eligibility": true,
+      "quarantined": false
+    }
+  },
+  "runtime_performance": {
+    "mean_latency_ms_per_turn": 75.17,
+    "median_latency_ms_per_turn": 58.40,
+    "p95_latency_ms_per_turn": 205.63,
+    "max_latency_ms_per_turn": 377.18
+  },
+  "scientific_decision": "DIAGNOSTIC COMPLETE / NO ARCHITECTURAL CHANGE",
+  "dominant_failure_layer": "CANDIDATE_CONSTRUCTION_AND_FUNNEL_CROWDING"
+}

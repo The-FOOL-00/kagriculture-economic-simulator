@@ -1,0 +1,1399 @@
+{
+  "timestamp": "2026-08-30 12:37:42 UTC",
+  "environment": {
+    "python_version": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "kaggle_environments_version": "1.32.7",
+    "engine_source_hash_kaggriculture_py": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "engine_source_hash_kaggriculture_json": "a82c89c1a2315b93f39775d8e025471a01b738647c9772658368ee6b1b6f4867"
+  },
+  "files": {
+    ".gitignore": {
+      "size_bytes": 187,
+      "sha256": "a287cfade6d4406fe967b28c9b2e12b09ee82f577be6cb8fa5011140af97a90f"
+    },
+    "ARCHITECTURE.md": {
+      "size_bytes": 4975,
+      "sha256": "5b1be3b29c47589c6b4ff3e49a58de5fb217f831f5c26f4e83be9b1a594b8820"
+    },
+    "CAUSAL_ATTRIBUTION_REPORT.md": {
+      "size_bytes": 4472,
+      "sha256": "648eeae7ef49f9695b304acf301e296d937525caa8e14eaec0f2877902edf61f"
+    },
+    "CHAMPIONSHIP_SCOREBOARD.md": {
+      "size_bytes": 3226,
+      "sha256": "b31301a1567cbd298aaf9c7e3d655fc231e5ade2c38307e0f4d88a106fc26134"
+    },
+    "EXPERIMENTS.md": {
+      "size_bytes": 2190,
+      "sha256": "56c45fc57b85932137ddead0372a2484181a6b06846daca852eadae7a60d22d4"
+    },
+    "FINAL_CHAMPION_REPORT.md": {
+      "size_bytes": 3796,
+      "sha256": "6137134880dc0aafa232a98bdbf8ee9242a7ae2de852d8faa0c3b0ba57f3b420"
+    },
+    "LIVE_SUBMISSION_LOG.md": {
+      "size_bytes": 1424,
+      "sha256": "693695d30fb3559594047572eb26e4726a4b6552fba03d319ba1772bcd3d057f"
+    },
+    "TOMORROW_READINESS_REPORT.md": {
+      "size_bytes": 2348,
+      "sha256": "f224d3ac7ed1c6b5c14d52cdb4860d01dfa98fdc37a9b13d8fe204cb42d796e3"
+    },
+    "TOMORROW_SUBMISSION_CHECKLIST.md": {
+      "size_bytes": 2359,
+      "sha256": "902694b69a2579ddcc7cea8bea3356094ae9609395ea41f2f89142b0205d498f"
+    },
+    "ablation_emergency_only.py": {
+      "size_bytes": 2040,
+      "sha256": "352fa42041b112c9a5a52705da594ddd7ae5dda9aad36ad18752448d7c81dde4"
+    },
+    "ablation_results.json": {
+      "size_bytes": 108,
+      "sha256": "2f9f92973f1ddb7d3e3eca6f25ea9cc1d7884aa613d4eaefe7049c25d88bdd37"
+    },
+    "adversary_and_policy_results.json": {
+      "size_bytes": 1159,
+      "sha256": "352ac3b1382433f61b5eef402008083b4e31f2c9e444fcdfaa9a06068f37d943"
+    },
+    "analyze_live_submissions.py": {
+      "size_bytes": 1344,
+      "sha256": "f5d5d22d537b578f34d13a86e7cd6b2e758b8d3f0ed40e147f6ea2300c359448"
+    },
+    "arena.py": {
+      "size_bytes": 1905,
+      "sha256": "cd7c5f1e37bf69f8b9b8dcb1f337a6b4f44d51e4a3cdacf7fe2ff08b5eb30d5d"
+    },
+    "batch8_predictive_results.json": {
+      "size_bytes": 18935,
+      "sha256": "27226b963fb06d86ea3109bc70f7e28f61efd6caee3f054b44990d888a0ef098"
+    },
+    "benchmark_harness.py": {
+      "size_bytes": 6178,
+      "sha256": "746a867bf80cf9e7bf7f38a25a972381b8ffc51e8a7857969528aacbaf349df8"
+    },
+    "bot.py": {
+      "size_bytes": 1383,
+      "sha256": "5228ff57a43dd6a8de27f2a6f6314f1a4c11b834850d960e4559f6baa86b2594"
+    },
+    "compiler.py": {
+      "size_bytes": 3644,
+      "sha256": "cc495d3bd90c7104a1be289c3255afdb4781cba7aac50163216e9e7104f46ab0"
+    },
+    "config.py": {
+      "size_bytes": 4381,
+      "sha256": "3b489c1a9551c8326a75e7c7d2105516249e793e98fa2907e1fed8a201bb7efd"
+    },
+    "current_engine_master_results.json": {
+      "size_bytes": 25663,
+      "sha256": "34a8c11c8c9e23011d0f1b20acf21d6873a608a7055ec14e8cc04d3a98e9331f"
+    },
+    "current_engine_trace.json": {
+      "size_bytes": 53251,
+      "sha256": "c1180aab25740adb16c094c2129399075bf38f5656869015f60f5e188f8efcce"
+    },
+    "debug_feed_insulated_match.py": {
+      "size_bytes": 2024,
+      "sha256": "c0e1d08646e03e61c7e0bb2ec69125c54416dba8f9d402596132e3c77a3fff71"
+    },
+    "debug_forensic_divergence.py": {
+      "size_bytes": 2180,
+      "sha256": "2ab67cffabf44c1b180984d33270606efc8bcb0cc7d5e3b33d022d18441c95e0"
+    },
+    "deep_loss_forensics_results.json": {
+      "size_bytes": 135033,
+      "sha256": "81e9e0e28618a444169f392fc5ce22488491b9bd6335d06528dfbfd04c41b063"
+    },
+    "deep_loss_forensics_timeline.py": {
+      "size_bytes": 10804,
+      "sha256": "f8e2c8bd67a36e1a0ba130b5b505947940bf29160f79081f88f70f7be15af18a"
+    },
+    "diff_lab.py": {
+      "size_bytes": 517,
+      "sha256": "933e5b6f0f44260e71fb89ff89dfe9477e75ca5488ddde20262533c4605dce83"
+    },
+    "economy.py": {
+      "size_bytes": 10670,
+      "sha256": "f1ecb2512564250af2e2186a43794a61e5077e3669e520f603c32d662a0bd681"
+    },
+    "elo3000_test_replay.json": {
+      "size_bytes": 11182404,
+      "sha256": "2d281ecc263ac47057066006b13ba1c88034780a154fe4cbf32b558379acc460"
+    },
+    "evaluate_batch8_predictive_challenger.py": {
+      "size_bytes": 2547,
+      "sha256": "0d43627e0f44a59b99e1e157541c957cbe0ad4a90f2dac2e0a4fa8c1cc4453a0"
+    },
+    "evaluate_suite.py": {
+      "size_bytes": 3810,
+      "sha256": "3cd3887aafaeb0de08679c3b489073a2845c3f1f98aa4b13df0bfa4a79cc874e"
+    },
+    "farm_state.py": {
+      "size_bytes": 6138,
+      "sha256": "af52481831e83785be9785d01236c84940f2c37a8ee2171e4f7ce193487f3785"
+    },
+    "feed_insulation_experiment_results.json": {
+      "size_bytes": 165098,
+      "sha256": "82aa1ad661127c729f381ef0ee3946486325bfba9ae935da83bc253e3d8baab5"
+    },
+    "forensic_losses.json": {
+      "size_bytes": 15017,
+      "sha256": "1a4a7aa4bdedc2ded532214a1bdcbc5c6440398a16a9c2f3fa737d78b033fc07"
+    },
+    "generate_clean_batch_agents.py": {
+      "size_bytes": 1239,
+      "sha256": "3de8389da29f48f391339d58da1836520f8825d1d75757b1f762c5f1d7aaf718"
+    },
+    "generate_opponents.py": {
+      "size_bytes": 29351,
+      "sha256": "f831285d801d63356f7ce85f26eb12ec3470751dd9d1d02264ff81a1d33f4201"
+    },
+    "generate_synthetic_agents.py": {
+      "size_bytes": 9109,
+      "sha256": "4c92922b240fdd1251465f3a4e3d9184fa04d2ba13a4d993b19f718aefee2e07"
+    },
+    "grandmaster_bot.py": {
+      "size_bytes": 1133,
+      "sha256": "c156a61905f5fa990147a2befada18639b3b07bea749486f83b3a8018bb0b66d"
+    },
+    "grandmaster_economy.py": {
+      "size_bytes": 8796,
+      "sha256": "d364a3bb30ddb90254b19ce9fcc616a2e7b816a9b0849212702ecee5c6fd4dcd"
+    },
+    "grandmaster_scheduler.py": {
+      "size_bytes": 13011,
+      "sha256": "fa2494df27b7d2f249a2d261038385d191c42be0d864b0cb940b55dd8d224e42"
+    },
+    "head_to_head_results.json": {
+      "size_bytes": 5147,
+      "sha256": "d76e73d332590a0f3a1494f0c0f572ada84327e9e599e7b91ebb936754075d6a"
+    },
+    "inspect_scratch_progression.py": {
+      "size_bytes": 1212,
+      "sha256": "407c7bc87e824e55af6689965818bffcdf27efd9e9740e7cb5969e7f7ec3f99f"
+    },
+    "kg_env_dump.py": {
+      "size_bytes": 39821,
+      "sha256": "417cbe39757c705a558a426217b1d7173ddd3485c0a45dc94390ab8478f3b504"
+    },
+    "loss_forensics.py": {
+      "size_bytes": 7354,
+      "sha256": "9093bf2dbed6a874114b2ffebbaa51d612b1010fb526b5ff13d0db5976421009"
+    },
+    "main.py": {
+      "size_bytes": 25886,
+      "sha256": "919ae278198b4e61b374b5b5e683cc1981d9c07934358ace09de0dcb06727300"
+    },
+    "master_83k_replay.json": {
+      "size_bytes": 12580726,
+      "sha256": "f3a55d4d1b0cd42e222204171a3e166ff938010afb92cd9cd74afbd0eec59770"
+    },
+    "master_fast_replay.json": {
+      "size_bytes": 9535424,
+      "sha256": "c2c6cf228e99377f2a0a31b01172dcb7a576202ca40e31ad9d51a750f585894b"
+    },
+    "master_fixed_replay.json": {
+      "size_bytes": 10894859,
+      "sha256": "da0721eb538ddcee9fc5ad83fe5b9d31d0e1e46dc8e3a95fcbadb60028ebb83b"
+    },
+    "measure_selfplay_asymmetry.py": {
+      "size_bytes": 2147,
+      "sha256": "966ae34c5c9714556ab24a4e3c415b8a77f8d7ae543e4d265a267854c6ea0929"
+    },
+    "parameter_and_lookahead_sweeps.py": {
+      "size_bytes": 7075,
+      "sha256": "77bae5d95228bb6657f254b0682019b644d09eb979e76b045d3554de04465a1a"
+    },
+    "pathfinding.py": {
+      "size_bytes": 2879,
+      "sha256": "7db67081d86e3caed8f635aad0059e265c9c847deeba08d4206666bbd0438b8f"
+    },
+    "predictive_market_experiment_results.json": {
+      "size_bytes": 53066,
+      "sha256": "309cc09f6aec9d93c96ff734f4c73bca879975ebfd54979a09927d7302b03fe4"
+    },
+    "quick_batch_sweep.py": {
+      "size_bytes": 1469,
+      "sha256": "004bcb99566541ad768d987b2729e5a8710e2a6df4afd329309449b673753dbd"
+    },
+    "release_check.py": {
+      "size_bytes": 6112,
+      "sha256": "3b2e4a2b4c82dad950c077f7856af3ea13618129e7a92a6b382aeb0d3469eb13"
+    },
+    "replay_analyzer.py": {
+      "size_bytes": 5299,
+      "sha256": "65ef4c7324723ab9ee073e7627d3483978848594bec1cd6da85afdb061492f6f"
+    },
+    "resolve_contradiction_and_rank.py": {
+      "size_bytes": 9914,
+      "sha256": "cbe1987e6c8d014b02e30be44546b724625bc0d76ed1536841aeed758f35449d"
+    },
+    "run_ablation_benchmark.py": {
+      "size_bytes": 20213,
+      "sha256": "055179f4034459c512acd38012dffbcd498d30836d193b4002c331baab28fe2a"
+    },
+    "run_ablation_study.py": {
+      "size_bytes": 4136,
+      "sha256": "518c3af034d7ad8414765ba264cdc2422eb12495cb99b44458025b55dffc5905"
+    },
+    "run_adversarial_and_policy_suite.py": {
+      "size_bytes": 6764,
+      "sha256": "958f6f9c2b1585d055b2bc3fb0ed2f872125bdabdd4a349474d7a21fa0225c5e"
+    },
+    "run_championship_benchmark.py": {
+      "size_bytes": 6119,
+      "sha256": "b0d4154134a74a3e715dab435938ace4a164b74d4fd4adbc29a49a432b7179b4"
+    },
+    "run_feed_insulation_experiment.py": {
+      "size_bytes": 12014,
+      "sha256": "5c43b81e818c89c9122ae6ceb036b221e149374cc2aef899eb7d4b38af803518"
+    },
+    "run_full_championship_suite.py": {
+      "size_bytes": 2925,
+      "sha256": "f5eb08f22ae162a85f0eac83f4343b021fc0a51d93c3ad4cd09ae1bae1e718bd"
+    },
+    "run_head_to_head_investigation.py": {
+      "size_bytes": 5093,
+      "sha256": "1ab93a84beef61a3d94235e0b843fc4dcc5850c6c9e0a962f4af0e86de02053d"
+    },
+    "run_holdout.py": {
+      "size_bytes": 1076,
+      "sha256": "741ddc60d165dfee3fc0c3239b45b97d35ed45cdf409807f0c27dba381e26497"
+    },
+    "run_predictive_market_experiment.py": {
+      "size_bytes": 12324,
+      "sha256": "c87c1e8a84e4824c04aceb4cf0e83e5cdbe20ba4e9664db24971f2b2d74d72de"
+    },
+    "run_stress.py": {
+      "size_bytes": 1062,
+      "sha256": "3c1919febb5cac072cf2209e309a09d48c82080688a5141ea2f1d262fc687503"
+    },
+    "sample_replay.json": {
+      "size_bytes": 13465302,
+      "sha256": "ce4ebf495a742a52b3046d543379bb64f243d0fb3fad9637abb840d0b04f807a"
+    },
+    "search_strategy_space.py": {
+      "size_bytes": 8181,
+      "sha256": "84aa9aaf034fd04d8b85e8e56769c0452dcebdb8b2f596bb6ece63ac95a0ec1e"
+    },
+    "stage_championship_candidates.py": {
+      "size_bytes": 7635,
+      "sha256": "2f39418df4d22f40fd450435fc9faaf5dfc0ceaeed54a79f996f57242468feaf"
+    },
+    "submission.tar.gz": {
+      "size_bytes": 6241,
+      "sha256": "7d23da1b4076313b36b77da1e3583609dbcadb1120735098d10a7247a20e2336"
+    },
+    "submit_slots.py": {
+      "size_bytes": 2232,
+      "sha256": "adedc29d77d34f980a1b4e80d1d92b372daf4eaaa4e0537f22579587e0422fad"
+    },
+    "sweep_experimental_results.json": {
+      "size_bytes": 4601,
+      "sha256": "63120a5fd65d78c93758005c5c5a2104867f0e8d544635f8b6693996b420516d"
+    },
+    "test_lab_reproducibility.py": {
+      "size_bytes": 5177,
+      "sha256": "df044a02511d60069eada66a5054df9f67797d653155fd2136f35ee95d48f06a"
+    },
+    "titan_day0_replay.json": {
+      "size_bytes": 11453448,
+      "sha256": "03f035f088165d3307e731569c63e7105a9daaccdc1b2fce73d161777a9cbc24"
+    },
+    "titan_test_replay.json": {
+      "size_bytes": 12611954,
+      "sha256": "bf8aac90e875fdac4425fa2bf8cd45f6a65d30507112761cedd348bf1c51a051"
+    },
+    "titan_wheat_replay.json": {
+      "size_bytes": 10748718,
+      "sha256": "9bfacf49d31de5d308c0226ccb262bc212171263148d7a73d067e60703baadc9"
+    },
+    "tournament_engine.py": {
+      "size_bytes": 8952,
+      "sha256": "d0d11ee0b95aba4bee66970f6c2d7bfca6e0888a0432c40877bfef6248555767"
+    },
+    "tournament_suite.py": {
+      "size_bytes": 2131,
+      "sha256": "3e316f08021e098bfa5439ad591e9eccb8b60e19d43ee33eae8ce3525f3282a2"
+    },
+    "trace_feeding_starvation.py": {
+      "size_bytes": 1530,
+      "sha256": "7757eb0a81d53cb0af758d9e127711d2be31101eff233957113d9b60e119ee08"
+    },
+    "walkthrough.md": {
+      "size_bytes": 3017,
+      "sha256": "dd9725cebf35c46ce7fb07fda3e55367cd94159a89f95dcb188c5fc15e36b461"
+    },
+    "worker_scheduler.py": {
+      "size_bytes": 11570,
+      "sha256": "4baa2b82ad9f323984cec3a4eb06fe647842daa15be61740990f00d5e8943136"
+    },
+    "ablation_agents/ablation_full.py": {
+      "size_bytes": 30422,
+      "sha256": "657fba0f7e562905265dbd5622339b69fe9d5466339e1609138c897812ea200a"
+    },
+    "ablation_agents/ablation_no_care.py": {
+      "size_bytes": 30423,
+      "sha256": "4ff4ca12e6a7b7a7bf9a7736bf52116a175f13b351eebdd9ff9955e7c4d2e228"
+    },
+    "ablation_agents/ablation_no_livestock.py": {
+      "size_bytes": 30422,
+      "sha256": "3c4008cb586aef0e1f6ba1e99c075851b3d543ecfeb271aee9f44e8a4f37e44c"
+    },
+    "ablation_agents/ablation_no_melon.py": {
+      "size_bytes": 30421,
+      "sha256": "0c6e07dd7f9c45769709d1de7a0778fedafccda3bdd2566f69a0d46b390a7f9d"
+    },
+    "ablation_agents/ablation_no_sync.py": {
+      "size_bytes": 30423,
+      "sha256": "4860b76498c09fae655b882331c01a66a8bb4c03fb6632d22bfa3f8545d8b988"
+    },
+    "ablation_agents/ablation_plus_fertilizer.py": {
+      "size_bytes": 30421,
+      "sha256": "cf43cecb5114add20c14978fd1e7621a2974d079955de532836146ca60706030"
+    },
+    "agents/ablation_b_emergency_only.py": {
+      "size_bytes": 18828,
+      "sha256": "2768a893f1e5ff229733085d733ec344ac39a3da072b180755f70443feb6fd0c"
+    },
+    "agents/ablation_batch_12.py": {
+      "size_bytes": 24461,
+      "sha256": "cf372f2f17634475d46b6476b58b648c076e78c71ea3ee8402b6d210d0b568ed"
+    },
+    "agents/ablation_batch_14.py": {
+      "size_bytes": 24461,
+      "sha256": "c26d696491becb58fc9f039acf008a013748e87357b015c3aa2cb0119250dafb"
+    },
+    "agents/ablation_batch_18.py": {
+      "size_bytes": 24461,
+      "sha256": "1c6a71db92c25520df652f9a61d1bf54e6bcb3ef5f7a963ec86bca5cce6b31ef"
+    },
+    "agents/ablation_batch_24.py": {
+      "size_bytes": 24461,
+      "sha256": "8a751e68960a42ee07d63c43db816ed5299b34522b7b054bf2c51329367301c3"
+    },
+    "agents/ablation_batch_4.py": {
+      "size_bytes": 24460,
+      "sha256": "f36f850f92dcb91617dea02ea87bcfd08a86bf5b23ae7a392d04c1b97787c7be"
+    },
+    "agents/ablation_batch_8.py": {
+      "size_bytes": 24460,
+      "sha256": "6b990fb544c33fab2c0e774bf8dff8a81565e01e07c3fef50a7d9ff7a2ed0ee7"
+    },
+    "agents/ablation_c_batch8_only.py": {
+      "size_bytes": 24460,
+      "sha256": "6b990fb544c33fab2c0e774bf8dff8a81565e01e07c3fef50a7d9ff7a2ed0ee7"
+    },
+    "agents/ablation_variants.py": {
+      "size_bytes": 20437,
+      "sha256": "1667b88e9a681413244c00c27946388d01c7531ce0402f002512bd5424f013ff"
+    },
+    "agents/apex_v2_frozen.py": {
+      "size_bytes": 25886,
+      "sha256": "919ae278198b4e61b374b5b5e683cc1981d9c07934358ace09de0dcb06727300"
+    },
+    "agents/expanded_opponent_suite.py": {
+      "size_bytes": 8856,
+      "sha256": "7a17d9680dc4e9e4a10504ce8202e348c1f9eb6be0cf83ab146e8f8a25e57eb6"
+    },
+    "agents/golden_v1.py": {
+      "size_bytes": 25548,
+      "sha256": "a6db1fb780b6173c9e9159cf27643a158a359bc25af1af27d231eb784d50c0c5"
+    },
+    "agents/ground_truth_control_current_engine.py": {
+      "size_bytes": 23984,
+      "sha256": "d5cc1fb9f93926812849d499e1e24adc25fef1f7552debe28789d8ce0bba7845"
+    },
+    "agents/hybrid_6c3s_10m.py": {
+      "size_bytes": 29838,
+      "sha256": "f0eef7481cddc74b53dd83b7741bb642f5682508523adb38780039b2e8a66de3"
+    },
+    "agents/hybrid_8c4s_15m_feed_insulated.py": {
+      "size_bytes": 28282,
+      "sha256": "1bbfb9d4bc487e36352a3dd0bc2a615740e00d982b6a2e14965eff81dd852310"
+    },
+    "agents/hybrid_dynamic_economic.py": {
+      "size_bytes": 24715,
+      "sha256": "976138bcd0acd491a58872c41f4c8233c08a91c654e7efa81b9c26f18f92fec8"
+    },
+    "agents/hybrid_lookahead.py": {
+      "size_bytes": 24357,
+      "sha256": "42cb4a103edf443d4077b654887fcfa8eb34459be487011912bf5e4ae51c90fb"
+    },
+    "agents/hybrid_predictive_market.py": {
+      "size_bytes": 27238,
+      "sha256": "491fcfb7576d71d9ec2214f456d1585a5e786633a19fbf200269363f7c571e88"
+    },
+    "agents/opponent_ecosystem.py": {
+      "size_bytes": 30753,
+      "sha256": "6e6fc42f2f8993c0a99cfdf6b06cad29583aff33c3cdf13e34b4cbd1a3ea28da"
+    },
+    "agents/slot4_control_frozen.py": {
+      "size_bytes": 23979,
+      "sha256": "0ffcd70b23db50984fc9ad94b37512c39cdeaa6f5a1a5bf2b6384dad07de379b"
+    },
+    "agents/slot4_control_frozen_v2.py": {
+      "size_bytes": 23984,
+      "sha256": "d5cc1fb9f93926812849d499e1e24adc25fef1f7552debe28789d8ce0bba7845"
+    },
+    "agents/synthetic_suite.py": {
+      "size_bytes": 12194,
+      "sha256": "966af620fe2f51b4ada358c8b100cde91b06e50671901dd17fe0c512b5908f3f"
+    },
+    "agents/synthetic/balanced.py": {
+      "size_bytes": 5779,
+      "sha256": "21ad4e911d354ca859ac93b6fef36ebeeecefd52db03b4b4d2c87bbd84c5383d"
+    },
+    "agents/synthetic/crop_efficient.py": {
+      "size_bytes": 5707,
+      "sha256": "a699fa5d8477469c9e72372d932a27078e53971c546955f79f44417b31a11bff"
+    },
+    "agents/synthetic/land_expansion.py": {
+      "size_bytes": 5580,
+      "sha256": "e3d2ae756dc1bddfe0f7d8ff8590b61fdc9d0cf1b9c2e6263cfcd8de2fa52aed"
+    },
+    "agents/synthetic/melon_burst.py": {
+      "size_bytes": 5704,
+      "sha256": "adf4a8ccf556ec87abba4645de8d3101737b7d0d80194331da4d578b8116e539"
+    },
+    "agents/synthetic/strawberry_rush.py": {
+      "size_bytes": 5713,
+      "sha256": "8ba9ae6297faa392f4ffe57daf28c3c8b2ec59e6fdf98a764fa8623d419dad8f"
+    },
+    "baseline_backup/compiler.py": {
+      "size_bytes": 2877,
+      "sha256": "8a03be9d2e6b27ec0ebbee7ed5647cf2f681239d1e030e940f6dc5dd2578d607"
+    },
+    "baseline_backup/main.py": {
+      "size_bytes": 50391,
+      "sha256": "a1d88a4e19ca70d3be91403ab8943da32775ce016265cc43dece7f4279d59910"
+    },
+    "baseline_backup/stage_championship_candidates.py": {
+      "size_bytes": 5170,
+      "sha256": "87414fbbc23d853abac9c2f9d3f4d03e9dc5c600794ab44f845ba00cc18286c7"
+    },
+    "baseline_backup/submission.tar.gz": {
+      "size_bytes": 5467,
+      "sha256": "6ccc1e635e2ca65682c00f979f69b05da219fcc206cbb2872bacbbde4158aaf8"
+    },
+    "baseline_backup/submit_slots.py": {
+      "size_bytes": 1994,
+      "sha256": "88aeac2c8006d51246080a43b0ddf192b6a0cb6892c23ba135760c45f97b76da"
+    },
+    "baseline_backup/agents/hybrid_6c3s_10m.py": {
+      "size_bytes": 25341,
+      "sha256": "245480819b9412e5e294386a48689d7de06299ef1d3a10956a93d5857789344b"
+    },
+    "baseline_backup/agents/hybrid_dynamic_economic.py": {
+      "size_bytes": 21071,
+      "sha256": "188b4bc7c6d178c7f32ee46505cef395f49625e3c2152959e0e07abb147f5be1"
+    },
+    "baseline_backup/agents/hybrid_lookahead.py": {
+      "size_bytes": 18125,
+      "sha256": "30100513007734b69e1c4403bce0dac9850ea0662b120d16af5770feb06a669e"
+    },
+    "baseline_backup/candidates/slot1_titan_control.py": {
+      "size_bytes": 43686,
+      "sha256": "70ca45bb216830c75e955de6e75462f997decb8060c2ca447dbc9e95dce7fc0f"
+    },
+    "baseline_backup/candidates/slot2_hybrid_6c3s_10m.py": {
+      "size_bytes": 25341,
+      "sha256": "245480819b9412e5e294386a48689d7de06299ef1d3a10956a93d5857789344b"
+    },
+    "baseline_backup/candidates/slot2_loss_fix_challenger.py": {
+      "size_bytes": 43686,
+      "sha256": "70ca45bb216830c75e955de6e75462f997decb8060c2ca447dbc9e95dce7fc0f"
+    },
+    "baseline_backup/candidates/slot3_hybrid_dynamic.py": {
+      "size_bytes": 21071,
+      "sha256": "188b4bc7c6d178c7f32ee46505cef395f49625e3c2152959e0e07abb147f5be1"
+    },
+    "baseline_backup/candidates/slot3_opponent_adaptive.py": {
+      "size_bytes": 43686,
+      "sha256": "70ca45bb216830c75e955de6e75462f997decb8060c2ca447dbc9e95dce7fc0f"
+    },
+    "baseline_backup/candidates/slot4_hybrid_lookahead.py": {
+      "size_bytes": 18125,
+      "sha256": "30100513007734b69e1c4403bce0dac9850ea0662b120d16af5770feb06a669e"
+    },
+    "baseline_backup/candidates/slot4_market_planner.py": {
+      "size_bytes": 43686,
+      "sha256": "70ca45bb216830c75e955de6e75462f997decb8060c2ca447dbc9e95dce7fc0f"
+    },
+    "baseline_backup/candidates/slot5_hybrid_8c4s.py": {
+      "size_bytes": 25852,
+      "sha256": "829058a6bc8167b6b225812b3c499473df1ea1dc30cb84a3ddfcdc1e07e89e51"
+    },
+    "baseline_backup/candidates/slot5_local_champion.py": {
+      "size_bytes": 43686,
+      "sha256": "70ca45bb216830c75e955de6e75462f997decb8060c2ca447dbc9e95dce7fc0f"
+    },
+    "baseline_backup/engine/dynamic_allocator.py": {
+      "size_bytes": 5338,
+      "sha256": "5931a19d9c389776b349e781a58e52d45b5639338ed88b33022ec60aa640e1cc"
+    },
+    "baseline_backup/engine/labor_scheduler.py": {
+      "size_bytes": 12233,
+      "sha256": "d81fc24719c18ebb18e3ee08a26924df5cd74eb1347b721ef9cb40846abbd3ff"
+    },
+    "baseline_backup/engine/livestock_engine.py": {
+      "size_bytes": 7418,
+      "sha256": "14b54bb19c388c13550a06d72ba0fc21b1e1afe57ef06dbaeb7838bf12513fa6"
+    },
+    "baseline_backup/engine/macro_planner.py": {
+      "size_bytes": 9806,
+      "sha256": "d121f6e11babde8b714f5992c9c4fd30a7e57ed9da7064de7461b8f0be8f1357"
+    },
+    "baseline_backup/engine/market_executor.py": {
+      "size_bytes": 4584,
+      "sha256": "e1087f19e0d2f51dc42290b5fcef2975dc0977915590c143874ea35f67763077"
+    },
+    "baseline_backup/engine/opponent_model.py": {
+      "size_bytes": 3374,
+      "sha256": "bfaa18e96299def1987766c017ae809f163ca40112a42dfb3a68618383f9c86d"
+    },
+    "baseline_backup/engine/world_model.py": {
+      "size_bytes": 5226,
+      "sha256": "6fb35e34e4a41da5315d4297298134f5530e83323860c79c5d27b812f02ce6b7"
+    },
+    "benchmarks/seeds/development.txt": {
+      "size_bytes": 3500,
+      "sha256": "241f7b38f9aa545cb29fc4dc8203531031b266f137ddc8e4ec69f5efaa8f99cb"
+    },
+    "benchmarks/seeds/holdout.txt": {
+      "size_bytes": 3500,
+      "sha256": "87b298cac153231ee97cf3c1a0585971b63f457d602ed209cc60bbe573982b5c"
+    },
+    "benchmarks/seeds/stress.txt": {
+      "size_bytes": 1400,
+      "sha256": "3e1faaa2fa1a2ae787dfab6d4024a1c685c1c9a82d0c7ea396fd0c908edc0f83"
+    },
+    "candidates/slot1_titan_control.py": {
+      "size_bytes": 43686,
+      "sha256": "70ca45bb216830c75e955de6e75462f997decb8060c2ca447dbc9e95dce7fc0f"
+    },
+    "candidates/slot2_hybrid_6c3s_10m.py": {
+      "size_bytes": 29838,
+      "sha256": "f0eef7481cddc74b53dd83b7741bb642f5682508523adb38780039b2e8a66de3"
+    },
+    "candidates/slot3_hybrid_dynamic.py": {
+      "size_bytes": 24715,
+      "sha256": "976138bcd0acd491a58872c41f4c8233c08a91c654e7efa81b9c26f18f92fec8"
+    },
+    "candidates/slot4_hybrid_lookahead.py": {
+      "size_bytes": 24357,
+      "sha256": "42cb4a103edf443d4077b654887fcfa8eb34459be487011912bf5e4ae51c90fb"
+    },
+    "candidates/slot5_apex_synthesis_v2.py": {
+      "size_bytes": 25886,
+      "sha256": "919ae278198b4e61b374b5b5e683cc1981d9c07934358ace09de0dcb06727300"
+    },
+    "candidates/slot5_hybrid_8c4s.py": {
+      "size_bytes": 30432,
+      "sha256": "8b528a9211251bae20373bf8fe43d483c13b8223a2488dd5722dd9de8a728940"
+    },
+    "engine/dynamic_allocator.py": {
+      "size_bytes": 5452,
+      "sha256": "5f297d12ccd85b462d4ad401b14ad08935ca16ccf32aac1f856745874d1acf34"
+    },
+    "engine/economic_evaluator.py": {
+      "size_bytes": 5075,
+      "sha256": "24c164523612a88f7827d99442cf6e7c9f3517aaf4713b792da4e2c0c5350167"
+    },
+    "engine/labor_scheduler.py": {
+      "size_bytes": 12432,
+      "sha256": "72c4114ea94e95d43b6ad2f761096ad437a852a4911353bea1b77c8b5c29fb94"
+    },
+    "engine/livestock_engine.py": {
+      "size_bytes": 8373,
+      "sha256": "1271f74bd677b39cfc027efedb633012862f6ff0864c4cc6a8112c8ff913750d"
+    },
+    "engine/macro_planner.py": {
+      "size_bytes": 8371,
+      "sha256": "1f65a1990ca088b71cf13f3183cb776c6666fff20ad41bfa829c20641477b34d"
+    },
+    "engine/market_executor.py": {
+      "size_bytes": 2183,
+      "sha256": "83f97e5f8377d76daf8757797543eced3f11035c2e1eccdea393eb4080bafe50"
+    },
+    "engine/market_forecast.py": {
+      "size_bytes": 2914,
+      "sha256": "ec12118bb908398037e5bff0d999bf890502e00a2c591f082cf8dec17477822e"
+    },
+    "engine/market_model.py": {
+      "size_bytes": 2371,
+      "sha256": "fd234c688235af9b632c2ac8dd0baf9e9b7597d9c771604a178316e12b593f2c"
+    },
+    "engine/opponent_model.py": {
+      "size_bytes": 3374,
+      "sha256": "bfaa18e96299def1987766c017ae809f163ca40112a42dfb3a68618383f9c86d"
+    },
+    "engine/opponent_supply_forecaster.py": {
+      "size_bytes": 6295,
+      "sha256": "be2683774fcdac37885caf504d5e49abaf99322c391409defaf51348dc1f3d5a"
+    },
+    "engine/predictive_market_executor.py": {
+      "size_bytes": 4637,
+      "sha256": "f7f79bfe77fabbd35b51980e844b25a93b859edd083bb22baf14ecdd38bfcadb"
+    },
+    "engine/strategic_lookahead.py": {
+      "size_bytes": 6999,
+      "sha256": "1c2ceb1beb990a9a7b40d0facf44e0a8bad319e29f9d0b9a8daec13a93413f53"
+    },
+    "engine/town_model.py": {
+      "size_bytes": 1643,
+      "sha256": "3b5781a93e1367c25d68121c28622f09884818488759389264a279093754c063"
+    },
+    "engine/unified_agent.py": {
+      "size_bytes": 677,
+      "sha256": "f6b75e590ef9379d2dd062f88701da4279d16374798b7fedd78021c763c4fc6a"
+    },
+    "engine/world_model.py": {
+      "size_bytes": 5226,
+      "sha256": "6fb35e34e4a41da5315d4297298134f5530e83323860c79c5d27b812f02ce6b7"
+    },
+    "env_backup_1_30_1/AGENTS.md": {
+      "size_bytes": 12694,
+      "sha256": "0ad68d6de1acd0625177eaf4df9225c3cd9a609fb3efd62e15739b71bc37ddd5"
+    },
+    "env_backup_1_30_1/README.md": {
+      "size_bytes": 21708,
+      "sha256": "cad7f5562e42d7ed0741ccce7ce7e75da1cedbd9fa80393e7d3ace200678f4f8"
+    },
+    "env_backup_1_30_1/kaggriculture.json": {
+      "size_bytes": 5578,
+      "sha256": "be357a24ad960e76447ebe7cf3f66222b2cc03129083534166207240e66a2d1f"
+    },
+    "env_backup_1_30_1/kaggriculture.py": {
+      "size_bytes": 38757,
+      "sha256": "dd20d2327df761e5d02b7d09fff16a57b11e7ae95dc494ac79fc38a8edeb37d1"
+    },
+    "generated_agents_1_32_7/ablation_batch_14.py": {
+      "size_bytes": 25319,
+      "sha256": "61f26ab2c33912a0a7895095d877fc99ef5e47bc6f1df802215699a7096d43b2"
+    },
+    "generated_agents_1_32_7/ablation_batch_24.py": {
+      "size_bytes": 25319,
+      "sha256": "82f735f3cce3e395b50cdd949aa0908cc2912d4337decf1eff95443dc40d317f"
+    },
+    "generated_agents_1_32_7/ablation_no_2d_buffer.py": {
+      "size_bytes": 25319,
+      "sha256": "9f61658e0037f11221d03bfb138f305b104e0fb744f0d156281f743777f16077"
+    },
+    "generated_agents_1_32_7/ablation_no_cycle2_melons.py": {
+      "size_bytes": 25319,
+      "sha256": "9e0cd8540fd901683060b5e4473938a2eb7bc9130a8396f0ba3ee261ba63b936"
+    },
+    "generated_agents_1_32_7/ablation_no_day0_land.py": {
+      "size_bytes": 25321,
+      "sha256": "6c4664c6456074982d562188055a2722cd8ca03c9cca1ab5941547fc476d2233"
+    },
+    "generated_agents_1_32_7/ablation_no_emergency_liquidity.py": {
+      "size_bytes": 25011,
+      "sha256": "022db0c8453d81628320ab7cf7279b59c7d1a8b1ba7db0b4d65e86769c6377c1"
+    },
+    "generated_agents_1_32_7/apex_base.py": {
+      "size_bytes": 25319,
+      "sha256": "82f735f3cce3e395b50cdd949aa0908cc2912d4337decf1eff95443dc40d317f"
+    },
+    "generated_agents_1_32_7/strat_carrot_hinge_arbitrage.py": {
+      "size_bytes": 25009,
+      "sha256": "f6269a3a10d252594ed15f059a42de80a193edd2d68e375d3e75beb7acee25a1"
+    },
+    "generated_agents_1_32_7/strat_cow_heavy_10c_4s.py": {
+      "size_bytes": 25321,
+      "sha256": "4da5f52a19d3373c06656f1de14049b2d013c7f3b08ba869fa911ded6b4d09c2"
+    },
+    "generated_agents_1_32_7/strat_cow_heavy_12c_2s.py": {
+      "size_bytes": 25321,
+      "sha256": "114574b570af3188fd088084f99c2896f39b74d5afb6052d21522e03b533ca1e"
+    },
+    "generated_agents_1_32_7/strat_geese_hybrid_8c_4s_4g.py": {
+      "size_bytes": 25319,
+      "sha256": "65cb57093198b7e5599321ed0843d4ce25928ea9b47c640ba682fe0347d4bcae"
+    },
+    "generated_agents_1_32_7/strat_high_labor_8hands.py": {
+      "size_bytes": 25009,
+      "sha256": "a05acd4b7525403e775b28bbb6eb434bb4033746ef8a33bef4534e6cb532e58a"
+    },
+    "generated_agents_1_32_7/strat_low_labor_4hands.py": {
+      "size_bytes": 25009,
+      "sha256": "a05acd4b7525403e775b28bbb6eb434bb4033746ef8a33bef4534e6cb532e58a"
+    },
+    "generated_agents_1_32_7/strat_melon_heavy_25m.py": {
+      "size_bytes": 25319,
+      "sha256": "55e95d129f5e27bccd24380f90c9a706ed7aad1c6011461cca0c8b727d1a2aaa"
+    },
+    "generated_agents_1_32_7/strat_sheep_heavy_4c_8s.py": {
+      "size_bytes": 25319,
+      "sha256": "ae73777f951c50244fc12d82db1893697304262fa5ac9c12d34727cd3a9c7dba"
+    },
+    "generated_agents_1_32_7/sweep_batch_12.py": {
+      "size_bytes": 25319,
+      "sha256": "f5849f8e927978f60889df2df081cb80975cf12cab5a6fd6cb991a9cd8e41194"
+    },
+    "generated_agents_1_32_7/sweep_batch_14.py": {
+      "size_bytes": 25319,
+      "sha256": "e69f3d6fceae363955913044023d494152ceb956411db26cf04773d9a70e8870"
+    },
+    "generated_agents_1_32_7/sweep_batch_18.py": {
+      "size_bytes": 25319,
+      "sha256": "6a3ff6a33a222815395ca913ecb2d6f2f04c081b832e123d53eea6d05b4a7206"
+    },
+    "generated_agents_1_32_7/sweep_batch_24.py": {
+      "size_bytes": 25319,
+      "sha256": "a0778a55ede577e350ecc284bd1daec09d94eb3fc989b215742d5811562fd929"
+    },
+    "generated_agents_1_32_7/sweep_batch_4.py": {
+      "size_bytes": 25317,
+      "sha256": "da1b99484fc00a38fbb41422d435265cc0101477bc5e5eea235b4d8a643a0d71"
+    },
+    "generated_agents_1_32_7/sweep_batch_8.py": {
+      "size_bytes": 25317,
+      "sha256": "99a70de2178cbaaaaca9a30f456aac184af72679cbaf1ecfde94b2cd299867bd"
+    },
+    "live_data/README.md": {
+      "size_bytes": 649,
+      "sha256": "49aa6efccdc284d2f7497d0b0b3a5c10d22ddeafbe557e0aeb64013a421b6e02"
+    },
+    "opponents/adversarial_champion_killer.py": {
+      "size_bytes": 18240,
+      "sha256": "33ff2fae6e64dcec238e9b883640821e81c59bd482e9a90e51cb578ff6a6be20"
+    },
+    "opponents/o10_anti_melon.py": {
+      "size_bytes": 24882,
+      "sha256": "d3def78b65d5f08744881b093e0a99c8dee8f631fa698b6d61e94f373a81ba47"
+    },
+    "opponents/o11_anti_livestock.py": {
+      "size_bytes": 24880,
+      "sha256": "4f5429bfbaca949de7c3499f47e56c6338331ae1a8f44d6eb1198186ea23de35"
+    },
+    "opponents/o12_top_meta.py": {
+      "size_bytes": 24884,
+      "sha256": "431723dbf42604c9f993c09933f192934a5c7c97c1d55b47f83c5158d0f3c3df"
+    },
+    "opponents/o1_titan.py": {
+      "size_bytes": 64331,
+      "sha256": "ee048eb7c60b1c51fef5721301d4b453eddb28524693f25cbda3839ae73d7d72"
+    },
+    "opponents/o2_golden_v1.py": {
+      "size_bytes": 25548,
+      "sha256": "a6db1fb780b6173c9e9159cf27643a158a359bc25af1af27d231eb784d50c0c5"
+    },
+    "opponents/o3_melon_specialist.py": {
+      "size_bytes": 24886,
+      "sha256": "d70ad8aa91ad06b813da9e8dabd57eaea922bc3d6d4d76b57f654fa637b808f4"
+    },
+    "opponents/o4_fast_crop.py": {
+      "size_bytes": 24885,
+      "sha256": "97017fd3dee37248af3dab7992257cfce8e6eb49c32ba36682a03b6c81f8a37f"
+    },
+    "opponents/o5_cow_specialist.py": {
+      "size_bytes": 24881,
+      "sha256": "fee1fba998d0f245fd7e9f8ffaa35a2b41f4825206c75c0c15424883df1d89da"
+    },
+    "opponents/o6_sheep_specialist.py": {
+      "size_bytes": 24881,
+      "sha256": "465f96d30e3d761aa6a99849193dccb9599a8142483e9c643fa3705eb6f67d12"
+    },
+    "opponents/o7_balanced_livestock.py": {
+      "size_bytes": 24884,
+      "sha256": "32dbefa7e1d33c29a5330f76586fe9636d24ac426e49ab3b019084938acc1221"
+    },
+    "opponents/o8_economic_optimizer.py": {
+      "size_bytes": 24715,
+      "sha256": "976138bcd0acd491a58872c41f4c8233c08a91c654e7efa81b9c26f18f92fec8"
+    },
+    "opponents/o9_market_aggressor.py": {
+      "size_bytes": 24881,
+      "sha256": "683237b546db8f8edd9587e292cf040c1fb69de8bf6e5c7762c0921d52b9d95e"
+    },
+    "replays/episode-92890298-replay.json": {
+      "size_bytes": 11893588,
+      "sha256": "a5d81a4278a74ba73d43cbfbe768ec15097c282d6eaca2888763b452ef5722b8"
+    },
+    "replays/episode-92891241-replay.json": {
+      "size_bytes": 15254547,
+      "sha256": "b4a2de89b9c5da1429b2bd0850c5a89757e23cac74ac10a5004ff3951709a968"
+    },
+    "replays/episode-92892151-replay.json": {
+      "size_bytes": 19789359,
+      "sha256": "92cf31376094841136d33ce63a55a4285b8f063386a476ca943ef6e2af9b4fff"
+    },
+    "replays/episode-92892184-replay.json": {
+      "size_bytes": 9962375,
+      "sha256": "62b1329616ae67f25fb9e4fabf6ad53622e99c4f084f88fd8fea369125505ddb"
+    },
+    "replays/episode-92893095-replay.json": {
+      "size_bytes": 17771091,
+      "sha256": "8c3e97844920784c71a013f73471db76d9f4edc45fc4a2e91954ddecd827027f"
+    },
+    "replays/episode-92894047-replay.json": {
+      "size_bytes": 18369088,
+      "sha256": "c42d9c4e8d38f2bac71f34923de508fb3c7dcfca23586baa672bbe11759f4ea2"
+    },
+    "replays/episode-92894998-replay.json": {
+      "size_bytes": 14925234,
+      "sha256": "17b79ac23f8f1c7a7cb0d5f889825c07149b2d4aefc754de9a69e3648733a99f"
+    },
+    "replays/episode-92895857-replay.json": {
+      "size_bytes": 17767546,
+      "sha256": "ead62924058b9f529a8776fa205e69ba50156c300994b25761fe41aaf20ec926"
+    },
+    "replays/episode-92895915-replay.json": {
+      "size_bytes": 17982486,
+      "sha256": "e83985e1bc8dab4be0f5b8ef9fd3a838ff2b841adced73b848917d8b8bd72a96"
+    },
+    "replays/episode-92896820-replay.json": {
+      "size_bytes": 14675390,
+      "sha256": "8a2f156554c3869ebf011b5c74577bf18958a5d357d2c709a2f67873f9c6ec28"
+    },
+    "replays/episode-92896863-replay.json": {
+      "size_bytes": 23754493,
+      "sha256": "10871bdb4f93cc47fc87d1b0c4181f8826a8a8089dd3a035937c6df3dba8d5b9"
+    },
+    "replays/episode-92897742-replay.json": {
+      "size_bytes": 20906469,
+      "sha256": "7d242a696a922f674288f2e2e84ee42996b20e2fdc5be710a5beb2a806ae8900"
+    },
+    "replays/episode-92898684-replay.json": {
+      "size_bytes": 23932215,
+      "sha256": "217da8c137c2399f2a1e4b64e0b63cb2a33140032981c511071e345a0f33f7ae"
+    },
+    "replays/episode-92901543-replay.json": {
+      "size_bytes": 15849809,
+      "sha256": "0ed78a7b932a4400745243ccc76e7c3fe3d1157baff3f1108fdf52b66c713767"
+    },
+    "replays/episode-92902361-replay.json": {
+      "size_bytes": 15734112,
+      "sha256": "b27e787c8b6ae600b222a2103321fd10f84b8ed69c2e4326fbd4481de9214a3f"
+    },
+    "replays/episode-92903285-replay.json": {
+      "size_bytes": 20438160,
+      "sha256": "7e816d9b160fc37659614de81b48b50e53e8396bd3d9f6335c8db2676f61cbc9"
+    },
+    "replays/episode-92904235-replay.json": {
+      "size_bytes": 23608555,
+      "sha256": "ea33430789778157d6ca86546700ba89ae158cd648f07ad840a4e7da05b7fd86"
+    },
+    "replays/episode-92905182-replay.json": {
+      "size_bytes": 22707084,
+      "sha256": "6fa6edba1d8c512d250b0e7a86bef2074fe9aeb37c072bf1fc75e7054f356036"
+    },
+    "replays/episode-92906133-replay.json": {
+      "size_bytes": 15285699,
+      "sha256": "7e4ce5a306200ab9522c9c81748a264602d36409ce774a7cb4019657ecb28c38"
+    },
+    "replays/episode-92907072-replay.json": {
+      "size_bytes": 16461287,
+      "sha256": "18d88591c00b37c52c552c15dd1dc97060d29547d5144c8171d9f064f148d52b"
+    },
+    "replays/episode-92908014-replay.json": {
+      "size_bytes": 16710628,
+      "sha256": "ffcf3a01a9d61bd417f5586469b7e334cd7dc315017f94530be6eab2c77b484f"
+    },
+    "replays/episode-92908966-replay.json": {
+      "size_bytes": 21235078,
+      "sha256": "e16e85cc5c2a0d4cc1a1b3476f5cafb53a2fa95ad2bc169ac1b86c4abb8e2881"
+    },
+    "replays/episode-92909926-replay.json": {
+      "size_bytes": 18227097,
+      "sha256": "f1f9f84ab380cf71c538b25438cc1821e2dd86595663d28a1c21fc278a942751"
+    },
+    "replays/episode-92910860-replay.json": {
+      "size_bytes": 18041439,
+      "sha256": "e4f45780af77ab9b9d6fd647c629686fbe4a2f87a3727ce7f04f77d6d4b76152"
+    },
+    "replays/episode-92911811-replay.json": {
+      "size_bytes": 17857177,
+      "sha256": "6a29c6280ff426719e7b4bc83d35069ac62e2c3ce9853cc8236a7ecc1943e540"
+    },
+    "replays/episode-92912736-replay.json": {
+      "size_bytes": 18914373,
+      "sha256": "226693f4386fe6e468babf12f1cf000677c9fd969967db28d331b1b1230a79d5"
+    },
+    "replays/episode-92913673-replay.json": {
+      "size_bytes": 24427271,
+      "sha256": "05541f4dc851ff5d3f14b5c8fa35edb39140530f3b64f582c27e31bf8a599aa1"
+    },
+    "scratch/adversary_stress_results.json": {
+      "size_bytes": 1818,
+      "sha256": "42fc29a7cd192b2934ff8b848bfe80f3bfd1671b6ead65936122851bfe5a2a3a"
+    },
+    "scratch/apex_synthesis_v2.py": {
+      "size_bytes": 25776,
+      "sha256": "14d4cf5abd5b47886d835c2b47e5c71d3f0560d5550606835a731910dd4c07c8"
+    },
+    "scratch/apex_v2_tournament_results.json": {
+      "size_bytes": 1741,
+      "sha256": "223b726876fcdf5aeb5600c00da2285a5b401bbd2b0665afd972de50a99ee098"
+    },
+    "scratch/audit_benchmarks_repro.py": {
+      "size_bytes": 7876,
+      "sha256": "44dfc11cda925eb5029f91bbcbf00364f379351de4a8a2a4a25ee1f757b6ced5"
+    },
+    "scratch/audit_code_forensics.py": {
+      "size_bytes": 5464,
+      "sha256": "3c9f8f2bbc5c81634a7c06ebce4ee88b974aeefd05bf2f1070b74a0fea36c833"
+    },
+    "scratch/audit_engine_deep.py": {
+      "size_bytes": 4047,
+      "sha256": "671b966698ae06e001382d773069c28f38be14e3e32866206e32f229daffb29d"
+    },
+    "scratch/audit_mechanics_and_sweeps.py": {
+      "size_bytes": 8569,
+      "sha256": "09d3ec8ed17ce715e66efbce9851783ea35b713b6eb9b36617f0e8f0a1e68ee7"
+    },
+    "scratch/audit_part1_to_3.py": {
+      "size_bytes": 5182,
+      "sha256": "713ce913f06ecdf8aee84d1b509066853cae8b21f2ce8e5eb590ad6ff33b3b05"
+    },
+    "scratch/audit_repo_infrastructure.py": {
+      "size_bytes": 2874,
+      "sha256": "282b88ac19e8bed4c4624b7d8f0cde73c67c1df8a0c62498c3d8293efabbaec4"
+    },
+    "scratch/audit_repo_step.py": {
+      "size_bytes": 1739,
+      "sha256": "81fc4a696eb7769fb83eefa52311f43c692e9552d6273795a345b167e3f2ad4e"
+    },
+    "scratch/audit_robustness_and_ops.py": {
+      "size_bytes": 7269,
+      "sha256": "684a918e927d9827b188ed9b63c10758fa095135e1a1ff24eea8c11f2e339255"
+    },
+    "scratch/audit_runtime_and_memory.py": {
+      "size_bytes": 4638,
+      "sha256": "ecedccf3ddfcc168911c33279a811a6664465497e47abeee249235800df8c61d"
+    },
+    "scratch/benchmark_ground_truth.py": {
+      "size_bytes": 7176,
+      "sha256": "7acf7d6e032ec2fea1ecd8a62b8372b227ae4db4717faae419f445c37cb753ac"
+    },
+    "scratch/causal_attribution_results.json": {
+      "size_bytes": 2899,
+      "sha256": "475d89e0cea1b0f9b3ccf689470edfd8b2153d5ec19581dbaeb1a4a4bd6edcb4"
+    },
+    "scratch/clean_benchmark_results.json": {
+      "size_bytes": 4211,
+      "sha256": "69744c2fa6f2d931eb555b3f2721638e21a75632e52fd544d70af6d36e24e51d"
+    },
+    "scratch/compare_params.py": {
+      "size_bytes": 1968,
+      "sha256": "88946d0609ba7d8a4d7ee9340b459d1e53b20f01e92d50c94ee25cde70aa29bd"
+    },
+    "scratch/compare_titans.py": {
+      "size_bytes": 649,
+      "sha256": "f0339f3600577778d21ba82940a9810ddb2ab69706f00da4e0d3d296b707cb5c"
+    },
+    "scratch/create_manifest.py": {
+      "size_bytes": 1524,
+      "sha256": "6f7f29602af2fbcf3535bae1f0cd79509118aedc4a6a25c078f49daa2ce94033"
+    },
+    "scratch/day_by_day_trace.py": {
+      "size_bytes": 2313,
+      "sha256": "29c47fde9a57100697edc77ef9d66aa59082532cec0883186b9d83d789052380"
+    },
+    "scratch/debug_ab.py": {
+      "size_bytes": 516,
+      "sha256": "7fbcddccf88b85ccb2849e07dbb04070739cc796da91fc6170322025dab8cc56"
+    },
+    "scratch/debug_parametric.py": {
+      "size_bytes": 702,
+      "sha256": "691dbc0416756cb64c9a788b7a98362086a555bb56f2436e0c22cece22c1906e"
+    },
+    "scratch/decompose_margin.py": {
+      "size_bytes": 2443,
+      "sha256": "7506886fd6d62412b621da0f2d0031bbddc0224c9a2fc7721e00be88dd321950"
+    },
+    "scratch/deep_loss_forensics_h2h.py": {
+      "size_bytes": 3803,
+      "sha256": "9fe6e65d5f1b86eb12f7f547d37872e926a5aab90f790c78465a0b07d41e9565"
+    },
+    "scratch/diff_1301_1327.py": {
+      "size_bytes": 801,
+      "sha256": "0cd2578b6830484f1c0da582a82d94c33dcf2630d4a39854bdcdc4a67c932023"
+    },
+    "scratch/diff_batch14.py": {
+      "size_bytes": 1046,
+      "sha256": "e19aca16192a3cbec2be49207c4b7a2a158b3e1201e68f328061a19ddfc5444f"
+    },
+    "scratch/diff_json.py": {
+      "size_bytes": 907,
+      "sha256": "8cc26a6131a966487ff03c2d3e32e11262f0a8682db3dfc5a163aef7cf86ee10"
+    },
+    "scratch/evaluate_strategy_candidates.py": {
+      "size_bytes": 5721,
+      "sha256": "47583c12d6756dc876286a31671a8a1a5a82b33930c638a48da662c91a6be790"
+    },
+    "scratch/find_step.py": {
+      "size_bytes": 593,
+      "sha256": "f0995f852b358d7cc63a80e7fa476556de07758fd556967d12871b3d249b38d6"
+    },
+    "scratch/freeze_apex_v2.py": {
+      "size_bytes": 1694,
+      "sha256": "6bc63daf61920ab45fbf1055ac14ec19991304804c76284b6eec927d7b509f97"
+    },
+    "scratch/fresh_verification_results.json": {
+      "size_bytes": 5099,
+      "sha256": "4ec2fe17cce86f7c998074c2f71ab1f4abf708f6f0792ff067bfa15f5db086a9"
+    },
+    "scratch/generate_clean_ablations.py": {
+      "size_bytes": 2801,
+      "sha256": "76bbe497f84a1cda115faed248152bb6a56bd26a25b8c32dfc53db10efaa9576"
+    },
+    "scratch/generate_strategy_candidates.py": {
+      "size_bytes": 3545,
+      "sha256": "830298a3b721be19817c90a06d2400eafff7309a5959ef7085367e716cef10b3"
+    },
+    "scratch/inspect_core_details.py": {
+      "size_bytes": 552,
+      "sha256": "0ec2e8d90cb91f337c94c945431f5d56098fa91aec7f208eb2ff60ad1fd3815a"
+    },
+    "scratch/inspect_core_methods.py": {
+      "size_bytes": 384,
+      "sha256": "e72040ba176baca1b083ea4a7b48ef320cbef4c67152635d6702059f8d840c26"
+    },
+    "scratch/inspect_runner.py": {
+      "size_bytes": 318,
+      "sha256": "6fefa574c750379e98f904f0c124dbeb7a5d8dc0eb36fa54d97c72189b49c724"
+    },
+    "scratch/inspect_schemas.py": {
+      "size_bytes": 581,
+      "sha256": "5169f7c28787e952b2ea746a064b230ee90facfa6c161c8d34063bb5d7d03720"
+    },
+    "scratch/inspect_shared_state.py": {
+      "size_bytes": 322,
+      "sha256": "6df126f30f87f6caa61a6efa9835049cb87627ed289036d32109f0b358514bb4"
+    },
+    "scratch/margin_decomposition.json": {
+      "size_bytes": 229,
+      "sha256": "3b26a390374f7ff546416cde8a52a9f2152e3349ada26cfa4acf835c8ccee736"
+    },
+    "scratch/print_manifest.py": {
+      "size_bytes": 979,
+      "sha256": "3aac8e9c3af18cb97d37886bed27e2fcf00a5c84db358b440314a624e577bc4d"
+    },
+    "scratch/probe_obs.py": {
+      "size_bytes": 490,
+      "sha256": "729b7fe11938f11f55ef059cace5ab54f5bb6998a0ca624f56b7e202f6d60306"
+    },
+    "scratch/record_trace.py": {
+      "size_bytes": 3484,
+      "sha256": "43ff641ad9a8ca575a06d2bd6a498f06c25c76794eab6a5778e6e92116084417"
+    },
+    "scratch/run_adversarial_stress_test.py": {
+      "size_bytes": 6753,
+      "sha256": "9e222127e3499c5ff8b18e704388411926ba3b8165e66d01b98f3574929cc2a6"
+    },
+    "scratch/run_apex_v2_tournament.py": {
+      "size_bytes": 5228,
+      "sha256": "4452da898e91b46160ce7dc54db319f54bf21d7723246d80f6a676d6f43d7802"
+    },
+    "scratch/run_audit_tests.py": {
+      "size_bytes": 616,
+      "sha256": "e60952c918d89b380ef7dd3ca40da38a7e34b1eadd60379ddc846bfc3b4a38eb"
+    },
+    "scratch/run_clean_ablations_eval.py": {
+      "size_bytes": 5333,
+      "sha256": "b41f7d5d960a6fb18729d1f277ea7c84c58e4b7e278b6838b2741f0dee471238"
+    },
+    "scratch/run_clean_experiments.py": {
+      "size_bytes": 5969,
+      "sha256": "1972856579b8e28ba87a3e76f93c77b94bb262a278b9798e9d789e56e3fb21b2"
+    },
+    "scratch/run_clean_validation_suite.py": {
+      "size_bytes": 6759,
+      "sha256": "ba497f40077fd3744be62400c8c30069ba4338addd45230cd61e2c8f441f2121"
+    },
+    "scratch/run_forensic_harness.py": {
+      "size_bytes": 4935,
+      "sha256": "ace01e71c89f08aba0bfdd7ea2fb67ebe65ac619d138211ae34e1d149c47e78e"
+    },
+    "scratch/run_forensic_suite.py": {
+      "size_bytes": 7702,
+      "sha256": "8ddc725f26a6eba4cf8c6f7e1bcf62393fc0e09ffcfe7c0d9801ed2d00ec2597"
+    },
+    "scratch/run_forensics_analysis.py": {
+      "size_bytes": 5568,
+      "sha256": "f9768ac568542f811e094a57b74ecdfd03a19060cded163af4e0fb10ac432747"
+    },
+    "scratch/run_full_benchmark_and_sweeps.py": {
+      "size_bytes": 6127,
+      "sha256": "7e39cc80a6ee3b9d05b1a72597cd7cde143fa17df2defd25e8a9845c02587255"
+    },
+    "scratch/run_holdout_validation.py": {
+      "size_bytes": 4164,
+      "sha256": "91d1e4cea3f929d63c62096002f822dd977611b0be1e4f2ef6effb0ed7f8c29e"
+    },
+    "scratch/run_strategy_grid_search.py": {
+      "size_bytes": 28936,
+      "sha256": "53f3cf6140a72857e80ba2c46164b46b997b0ec7ebb32087ce3eee6385f9d60e"
+    },
+    "scratch/scan_agents.py": {
+      "size_bytes": 2303,
+      "sha256": "dc34435dd50de22a9d2e8107f80697ae23068732f0fcd775cd464cdd49a5966f"
+    },
+    "scratch/strategy_space_results.json": {
+      "size_bytes": 3860,
+      "sha256": "a344383c694e95913c1c2d71c8313982178454dba86f2badb12da99756f3f253"
+    },
+    "scratch/sync_hashes.py": {
+      "size_bytes": 857,
+      "sha256": "9cf2591c26ac625c38ed5d6229966aef285511c17dcad532aaa9edbfa373547f"
+    },
+    "scratch/test_champion_forensics.py": {
+      "size_bytes": 1755,
+      "sha256": "139cfecca3aad16dc36ef505069feed8966271efc6cd5c0f3175ca0fb552966f"
+    },
+    "scratch/test_custom_loop_bug.py": {
+      "size_bytes": 1148,
+      "sha256": "f18990f40df8fc751cd91ce0f15f971f862672cc8312bfe13659cf4138820bfa"
+    },
+    "scratch/test_feed_logistics.py": {
+      "size_bytes": 347,
+      "sha256": "379c3cf75b58c20b3861201087fb9d760ce265b9161c14c6d65b5946c612939e"
+    },
+    "scratch/test_obs_structure.py": {
+      "size_bytes": 1677,
+      "sha256": "d2641a7ffc52e0178471c50abf2e27dd2202394afd8d6b1d308b9030bc2e0efb"
+    },
+    "scratch/test_single_match.py": {
+      "size_bytes": 814,
+      "sha256": "7353e2fde5f48c3b4dbc44833fb64f3904084866e7d66df4ce4879c5ee35def7"
+    },
+    "scratch/test_step.py": {
+      "size_bytes": 803,
+      "sha256": "6643a110a264094f1ef7de80606bff31503f121e86b623b0d70392a46c734b6d"
+    },
+    "scratch/test_step_bug.py": {
+      "size_bytes": 2195,
+      "sha256": "e6632a55900207bb6777161ca5999a9f7a3b9457d1c79441ddcffb48ccf99034"
+    },
+    "scratch/trace_apex_execution.py": {
+      "size_bytes": 4141,
+      "sha256": "d33548451361c888662b6c3f708fc7319ce7946fedfe23da2148427c7059acbc"
+    },
+    "scratch/trace_feed_midgame.py": {
+      "size_bytes": 1711,
+      "sha256": "5ae85c43a14e974786b0f76e9baf50287f4b1392256cf747caed2d382e533071"
+    },
+    "scratch/trace_summary.json": {
+      "size_bytes": 236,
+      "sha256": "e5529596fc8c8880e9d0fc4d7832b3acfc69062843ea8e7446aec356f369746f"
+    },
+    "scratch/trace_synthetic.py": {
+      "size_bytes": 889,
+      "sha256": "7ffe024d7349e054d48a7d5b5feda78ab2696e752e4243f81430ecbb21b62451"
+    },
+    "scratch/verify_main_release.py": {
+      "size_bytes": 975,
+      "sha256": "504bec1e4cacca092684f4e65959c5f7a1f392030b8f950c394764c0f667721a"
+    },
+    "scratch/adversaries/adv1_melon_predator.py": {
+      "size_bytes": 25886,
+      "sha256": "84356134658785014aa9cbff6dedc4c8b9ccfb69a59b4304396fb93a2b73e527"
+    },
+    "scratch/adversaries/adv2_wheat_cornerer.py": {
+      "size_bytes": 25886,
+      "sha256": "f8757df678627d705d7b16c373599bd3fdac78e5108bf03b3ef604fdf9d2a88c"
+    },
+    "scratch/adversaries/adv3_price_sinker.py": {
+      "size_bytes": 25861,
+      "sha256": "97648fd615fbaaf380d8d0734edb4fc228b44c4fd88324c52095df88b4f0074a"
+    },
+    "scratch/adversaries/adv4_cow_juggernaut.py": {
+      "size_bytes": 25887,
+      "sha256": "633dde9251cd028b94b9e420e3452560fec7321477f31f11c02a70e0074b72ec"
+    },
+    "scratch/clean_ablations/apex_base.py": {
+      "size_bytes": 26096,
+      "sha256": "07b3e1be276a0fdfa24529b84564a948b68c28494926f392f16c13f2bcf04269"
+    },
+    "scratch/clean_ablations/apex_no_2day_feed.py": {
+      "size_bytes": 26096,
+      "sha256": "d2322ef95de6ec65f1afff4b6f8a5147ee5203ef2710514a86340c5018c71eff"
+    },
+    "scratch/clean_ablations/apex_no_batch24.py": {
+      "size_bytes": 26096,
+      "sha256": "cf6f0d3d966a18de176abc4c362477bdffb8932d999353754a269f0237e71c25"
+    },
+    "scratch/clean_ablations/apex_no_cycle2_melon.py": {
+      "size_bytes": 26096,
+      "sha256": "a0d436cd76089355916e4ba9518d0f64ea286891f7870a4bb050bb0aa0a2c6fb"
+    },
+    "scratch/clean_ablations/apex_no_day0_land.py": {
+      "size_bytes": 26097,
+      "sha256": "030de8d2577ee05650affa260932d9166b93073de4516530cef86fb165c6c720"
+    },
+    "scratch/clean_ablations/apex_no_emergency.py": {
+      "size_bytes": 26078,
+      "sha256": "beae5b34f89efa178ca3a763b209087165b7e8bdaaee0f3886d7d968036d07d2"
+    },
+    "scratch/strategy_candidates/s1_control_exact.py": {
+      "size_bytes": 24556,
+      "sha256": "5e2b254a5156d3780d1ac56b95a4b037ccdc6c029f21692f19c4533f704ebdbb"
+    },
+    "scratch/strategy_candidates/s2_pure_crop.py": {
+      "size_bytes": 24556,
+      "sha256": "2b448023182463191bef007820f47ee9402839351302574763ef5d2932690539"
+    },
+    "scratch/strategy_candidates/s3_pure_livestock.py": {
+      "size_bytes": 24556,
+      "sha256": "63f20a91a3177dbaddb5734a34abd84b0aff9e85969542fff34797c5199b86a5"
+    },
+    "scratch/strategy_candidates/s4_cow_heavy.py": {
+      "size_bytes": 25187,
+      "sha256": "b57b53b23de0a34f9ddfd03275f6e8bcc1658efb77dcbc562d6813afc5cd1342"
+    },
+    "scratch/strategy_candidates/s5_sheep_heavy.py": {
+      "size_bytes": 25186,
+      "sha256": "a99f2eec11072aa3bbf9bece195a9255d02d930e9d9bbcaf2ce21ec3ad7d5e8c"
+    },
+    "scratch/strategy_candidates/s6_synthesis_peak.py": {
+      "size_bytes": 25186,
+      "sha256": "3360df03ae226a086ccb0e7a3115376ecf23fa1871edd19d051f19bc9123afe1"
+    },
+    "scratch/strategy_candidates/s7_high_melon.py": {
+      "size_bytes": 25186,
+      "sha256": "c74be25a309c007839568b42136d17e8c972913e079c4090607a0329050d19ea"
+    },
+    "scratch/strategy_candidates/s8_fast_hybrid.py": {
+      "size_bytes": 25186,
+      "sha256": "2ba1d1dde00d713284f3074753711def22ef99a569d8c4e2b840f91c9a1bad85"
+    },
+    "scratch/strategy_candidates/s9_batch18_synthesis.py": {
+      "size_bytes": 25186,
+      "sha256": "585bafdeaf17a557185aae189b85f1772a821e3beab875254578d79746fd526a"
+    },
+    "scripts/generate_1_32_7_agents.py": {
+      "size_bytes": 30841,
+      "sha256": "c8d4e25dae2e3c579b8e42c26b1344f3d2fe43da3f027d2970fdb492fdfa7a59"
+    },
+    "scripts/master_harness.py": {
+      "size_bytes": 4523,
+      "sha256": "88cc412df0f51a9c0e7d1075e1a60d01f66837dda3e060eab718014a2337c94a"
+    },
+    "scripts/run_ablations_and_strategies_1_32_7.py": {
+      "size_bytes": 5468,
+      "sha256": "340a2dc1d568692f37fa4cce3e983dbe46f9520a94b35b3c4aaf1ab115338cbd"
+    },
+    "scripts/run_all_experiments_1_32_7.py": {
+      "size_bytes": 11321,
+      "sha256": "7527ab51702c4eb7d85dfcc50d72f4c4cd6eb68ba8192df7b110d3f3191610e9"
+    },
+    "scripts/verify_market_and_diff.py": {
+      "size_bytes": 3072,
+      "sha256": "293741aae54f1d1ec1ceb845ca0b77da44b7878684c4968e7d80d0e3499362af"
+    },
+    "sweep_agents/sweep_c_0.py": {
+      "size_bytes": 30422,
+      "sha256": "a0d737a21f621ea281dc0e8cb16d2c81493e2c8b56edc049cadb417f3b73ed8c"
+    },
+    "sweep_agents/sweep_c_2.py": {
+      "size_bytes": 30422,
+      "sha256": "2ae891d13a4dc2ba0a6ad58a7095c161a7c214d400e689a81dc69383e19a0b88"
+    },
+    "sweep_agents/sweep_c_4.py": {
+      "size_bytes": 30422,
+      "sha256": "f9fb41b09e3db777df4d83c1c2294fd21d5835b6f31d6b66ac722224c1a53ae8"
+    },
+    "sweep_agents/sweep_c_6.py": {
+      "size_bytes": 30422,
+      "sha256": "657fba0f7e562905265dbd5622339b69fe9d5466339e1609138c897812ea200a"
+    },
+    "sweep_agents/sweep_c_8.py": {
+      "size_bytes": 30422,
+      "sha256": "114df5bc857f375616341fa4d7e1b44e8e351c53f684ab83656df0f42fec127a"
+    },
+    "sweep_agents/sweep_combo_4c_2s_10m.py": {
+      "size_bytes": 30422,
+      "sha256": "0f011d2802c2b4d7e951f580363b84de02a7240bd064ffd4bb22936a48d1bcb1"
+    },
+    "sweep_agents/sweep_combo_4c_2s_15m.py": {
+      "size_bytes": 30422,
+      "sha256": "28e959a22b845c30a5afec1bdfcc07063883568e74fddc70dae4de1901274292"
+    },
+    "sweep_agents/sweep_combo_6c_2s_10m.py": {
+      "size_bytes": 30422,
+      "sha256": "55ef53fcf24c066d6c3c68662d2d5b7fb97cb6c749913e7879f49fdc30935c49"
+    },
+    "sweep_agents/sweep_combo_6c_2s_15m.py": {
+      "size_bytes": 30422,
+      "sha256": "815ef4c9980b716105b07bd1b9fe91702df9509a6196e1f93c6afea3cbd3bf7a"
+    },
+    "sweep_agents/sweep_combo_6c_3s_10m.py": {
+      "size_bytes": 30422,
+      "sha256": "657fba0f7e562905265dbd5622339b69fe9d5466339e1609138c897812ea200a"
+    },
+    "sweep_agents/sweep_combo_6c_3s_15m.py": {
+      "size_bytes": 30422,
+      "sha256": "6659afa5af25bd2a4d5768abb96544e5bdb862bbb184151195bd46ae4d689535"
+    },
+    "sweep_agents/sweep_combo_8c_4s_10m.py": {
+      "size_bytes": 30422,
+      "sha256": "b34dc96a7349e9d18e1c45188824fb1f8fecb371b3901547de379622de1c34ad"
+    },
+    "sweep_agents/sweep_combo_8c_4s_15m.py": {
+      "size_bytes": 30422,
+      "sha256": "adadef8fd72b5b6845433276bb5c3e84d28d9f9281e802e9671c3c9707ed739b"
+    },
+    "sweep_agents/sweep_m_0.py": {
+      "size_bytes": 30421,
+      "sha256": "0c6e07dd7f9c45769709d1de7a0778fedafccda3bdd2566f69a0d46b390a7f9d"
+    },
+    "sweep_agents/sweep_m_10.py": {
+      "size_bytes": 30422,
+      "sha256": "657fba0f7e562905265dbd5622339b69fe9d5466339e1609138c897812ea200a"
+    },
+    "sweep_agents/sweep_m_12.py": {
+      "size_bytes": 30422,
+      "sha256": "d858441cd3e4490e2cfb4d54fe4474e0dd9e12b4a598528f523cd636dc0bc9f3"
+    },
+    "sweep_agents/sweep_m_15.py": {
+      "size_bytes": 30422,
+      "sha256": "6659afa5af25bd2a4d5768abb96544e5bdb862bbb184151195bd46ae4d689535"
+    },
+    "sweep_agents/sweep_m_18.py": {
+      "size_bytes": 30422,
+      "sha256": "d56eeca69363929359f9a8cf3e23183da14be1fa964f0dd9e05c96b9ca79561e"
+    },
+    "sweep_agents/sweep_m_20.py": {
+      "size_bytes": 30422,
+      "sha256": "96b2ff55ef669e90bb3d7935c40ecc9d4d3dbbc8bcb37cf854f7478e5f5d387f"
+    },
+    "sweep_agents/sweep_m_5.py": {
+      "size_bytes": 30421,
+      "sha256": "31d0b4e88a71d36cb3e848d0c9f8b3f9e863295aae2d697ca3d7a02723502513"
+    },
+    "sweep_agents/sweep_m_8.py": {
+      "size_bytes": 30421,
+      "sha256": "b614f56ee5c85f7cecd25cd4244b9b0093aea68978c5effc45f953bed9c2f628"
+    },
+    "sweep_agents/sweep_s_0.py": {
+      "size_bytes": 30422,
+      "sha256": "de0ff95d135f923a2cadddea391b3b862c38993d6e95178164f8169a95e6827a"
+    },
+    "sweep_agents/sweep_s_1.py": {
+      "size_bytes": 30422,
+      "sha256": "8287deb829bfb3227d2b31f38314e1bef02a14d5542005696e1db418f8acc545"
+    },
+    "sweep_agents/sweep_s_2.py": {
+      "size_bytes": 30422,
+      "sha256": "55ef53fcf24c066d6c3c68662d2d5b7fb97cb6c749913e7879f49fdc30935c49"
+    },
+    "sweep_agents/sweep_s_3.py": {
+      "size_bytes": 30422,
+      "sha256": "657fba0f7e562905265dbd5622339b69fe9d5466339e1609138c897812ea200a"
+    },
+    "sweep_agents/sweep_s_4.py": {
+      "size_bytes": 30422,
+      "sha256": "688b2e25b144e8b2078ec2ec7dd6c4a4c43b9ae3772d2ad89194b101d191866b"
+    },
+    "sweep_agents/sweep_s_5.py": {
+      "size_bytes": 30422,
+      "sha256": "f50393e0ffe349d514187d14e43efed871bf0d946b82ab9b57043082051f7f99"
+    },
+    "v5/README.md": {
+      "size_bytes": 654,
+      "sha256": "338e2a24b45ce3a2a47e63689811fc8d91a2d70fad282a3f027b91e1e8a297f1"
+    }
+  }
+}

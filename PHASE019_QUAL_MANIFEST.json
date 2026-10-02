@@ -1,0 +1,77 @@
+{
+  "phase": "PHASE019",
+  "title": "Uncertainty-Aware Commit Selection & Robust Economic Decision Audit",
+  "date": "2026-09-20",
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "v3_verified_pre": true,
+  "v3_verified_post": true,
+  "git_baseline": "d89ab7480d02f3661b0a3e749518c7236f907a7c",
+  "tests": {
+    "baseline": 765,
+    "current": 769,
+    "failures": 0
+  },
+  "phase016_evaluator": {
+    "modified": false,
+    "counterfactual_diff": []
+  },
+  "live_foundation": "V3 + DEPENDENCY_AWARE_MARKET_TIMING + TERMINAL_LIQUIDATION + PHASE_SHUTDOWN (unchanged)",
+  "phase015_status": "QUARANTINED (under decision audit)",
+  "cohorts": {
+    "phase017_consumed": [249286, 249295],
+    "phase018_consumed": [249296, 249335],
+    "phase019_diagnostic_u1": [249336, 249345],
+    "phase019_repair_cohort": [249346, 249355],
+    "reserve_untouched_from": 249356
+  },
+  "arms": {
+    "U0_baseline": {
+      "description": "Phase018-approved infra + reservation + Phase015 treatment",
+      "config": "build_phase019_u0_config"
+    },
+    "U1_shadow_robustness": {
+      "description": "U0 + shadow robustness observation and regret logging",
+      "config": "build_phase019_u1_config"
+    },
+    "U2_robust_abstention": {
+      "description": "U1 + robust abstention gate (abstain if unstable)",
+      "config": "build_phase019_u2_config"
+    },
+    "U3_robust_relative_selection": {
+      "description": "U1 + robust relative selection (foundation primacy)",
+      "config": "build_phase019_u3_config"
+    },
+    "U4_adaptive_breadth": {
+      "description": "U1 + adaptive runner-up evaluation breadth",
+      "config": "build_phase019_u4_config"
+    }
+  },
+  "artifacts": [
+    "PHASE019_BASELINE_FREEZE.md",
+    "PHASE019_COMMIT_PATH_AUDIT.md",
+    "PHASE019_WINMODEL_AUDIT.md",
+    "PHASE019_CANDIDATE_RANKING_AUDIT.md",
+    "PHASE019_ROBUSTNESS_SPEC.md",
+    "PHASE019_COMMIT_REGRET_ANALYSIS.md",
+    "PHASE019_ABSTENTION_ANALYSIS.md",
+    "PHASE019_FOUNDATION_OPPORTUNITY_COST.md",
+    "PHASE019_FRESH_PILOT.md",
+    "PHASE019_FINAL_REPORT.md",
+    "PHASE019_QUAL_MANIFEST.json"
+  ],
+  "results": {
+    "U1_diagnostic": {
+      "mean_paired_delta": -757.35,
+      "median_paired_delta": -467.50,
+      "ci95": [-1322.00, -192.70],
+      "win_loss_tie": [0, 9, 1]
+    },
+    "U2_robust_abstention": {
+      "mean_paired_delta": -636.90,
+      "median_paired_delta": -374.00,
+      "ci95": [-1155.98, -117.82],
+      "win_loss_tie": [2, 6, 2]
+    }
+  },
+  "final_verdict": "ROBUSTNESS SIGNAL IDENTIFIED / NO PROMOTION"
+}

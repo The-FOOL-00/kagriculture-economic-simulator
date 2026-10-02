@@ -1,0 +1,14 @@
+{
+  "experiment": "EXP-ARCH-003_H1_TERMINAL_REPAIR",
+  "cohort_lo": 330000,
+  "cohort_hi": 330499,
+  "authorized_seeds": 500,
+  "executed_seeds": 50,
+  "total_games": 100,
+  "start_time": "2026-09-16T12:43:02.429928+00:00",
+  "end_time": "2026-09-16T13:02:49.724132+00:00",
+  "elapsed_seconds": 1187.1560186000002,
+  "baseline_sha256": "18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb",
+  "runner_sha256": "ae4d4e95cef6e297520cc48304f0ebc2fb77a1333ac6f5f1baf6dadb1fa92313",
+  "status": "IN_PROGRESS"
+}

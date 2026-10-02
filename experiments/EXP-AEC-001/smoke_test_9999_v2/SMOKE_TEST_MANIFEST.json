@@ -1,0 +1,84 @@
+{
+  "experiment_id": "EXP-AEC-001",
+  "smoke_test": true,
+  "smoke_version": "V2_CORRECTED_MECHANISM_ISOLATION",
+  "seed": 9999,
+  "output_directory": "C:\\Users\\Sundareswaran\\Kagriculture\\experiments\\EXP-AEC-001\\smoke_test_9999_v2",
+  "player_assignments": {
+    "match_1": {
+      "player_0": "AEC_TREATMENT",
+      "player_1": "V3_CONTROL"
+    },
+    "match_2": {
+      "player_0": "V3_CONTROL",
+      "player_1": "AEC_TREATMENT"
+    }
+  },
+  "v3_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "aec_git_commit": "fc79fbe6a51bbfd2a866b1fe3b5a80d16fdf0e64",
+  "python_version": "3.14.3",
+  "simulator_version": "1.32.7",
+  "start_time": "2026-09-17T08:28:43.960385+00:00",
+  "end_time": "2026-09-17T08:29:00.847565+00:00",
+  "elapsed_seconds": 16.89,
+  "accounting": {
+    "authorized_seeds": [
+      9999
+    ],
+    "started_seeds": [
+      9999
+    ],
+    "completed_seeds": [
+      9999
+    ],
+    "failed_seeds": [],
+    "untouched_seeds": [],
+    "duplicated_seeds": []
+  },
+  "per_match_status": {
+    "match_1": "COMPLETED_VALID",
+    "match_2": "COMPLETED_VALID",
+    "replay": "COMPLETED_IDENTICAL"
+  },
+  "per_match_completion": {
+    "match_1_steps": 719,
+    "match_2_steps": 719
+  },
+  "mechanism_isolation_checks": {
+    "quarantined_mechanisms_zero_commits": true,
+    "match_1_commits_by_mechanism": {},
+    "match_2_commits_by_mechanism": {},
+    "match_1_quarantined_by_mechanism": {
+      "EMERGENCY_FEED_PURCHASE": 89,
+      "DYNAMIC_SHADOW_HARVEST": 282,
+      "CARGO_FERRY_PRIORITY": 1555,
+      "OPPONENT_PREEMPT_SELL": 328,
+      "TERMINAL_HARVEST_SWEEP": 20
+    },
+    "match_2_quarantined_by_mechanism": {
+      "EMERGENCY_FEED_PURCHASE": 89,
+      "DYNAMIC_SHADOW_HARVEST": 282,
+      "CARGO_FERRY_PRIORITY": 1555,
+      "OPPONENT_PREEMPT_SELL": 328,
+      "TERMINAL_HARVEST_SWEEP": 20
+    }
+  },
+  "infrastructure_checks": {
+    "game_initialized": true,
+    "719_steps_completed_both_matches": true,
+    "zero_infrastructure_crashes": true,
+    "baseline_calls_equal_turns": true,
+    "zero_duplicate_baseline_calls": true,
+    "zero_unhandled_exceptions": true,
+    "zero_state_leakage": true,
+    "deterministic_replay_passed": true,
+    "atomic_persistence_verified": true,
+    "frozen_artifacts_intact": true,
+    "holdout_untouched": true,
+    "zero_hidden_retries": true,
+    "zero_orphan_workers": true
+  },
+  "governance_note": "V1 smoke test (smoke_test_9999) passed infrastructure but failed treatment isolation due to OPPONENT_PREEMPT_SELL proposal and commit. V2 smoke test (smoke_test_9999_v2) strictly enforces the preregistered foundation mask via OpportunityEngine, PatchGenerator, and Executor commit gates.",
+  "overall_infrastructure_verdict": "PASS \u2014 INFRASTRUCTURE READY",
+  "overall_treatment_isolation_verdict": "PASS \u2014 MECHANISM ISOLATION VERIFIED"
+}

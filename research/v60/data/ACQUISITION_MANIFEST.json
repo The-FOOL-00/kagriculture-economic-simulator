@@ -1,0 +1,125 @@
+{
+  "generated": "2026-09-28",
+  "mission": "V60 — September Replay Acquisition",
+  "dates_required": [
+    "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-05",
+    "2026-09-06", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10",
+    "2026-09-11", "2026-09-12", "2026-09-13", "2026-09-14", "2026-09-15",
+    "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20",
+    "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25",
+    "2026-09-26", "2026-09-27"
+  ],
+  "target_teams": [
+    "DSM", "Vadim Vasilenko", "Majkel1337", "Unknown Mother-Goose",
+    "THIRD FARM CLUB", "M & M & P & Q", "Kaggledew Valley"
+  ],
+  "datasets_identified": {
+    "georgymamarin/kaggriculture-episodes": {
+      "version": 77,
+      "last_updated": "2026-09-28T00:24:55Z",
+      "total_bytes": 0,
+      "url": "https://www.kaggle.com/datasets/georgymamarin/kaggriculture-episodes",
+      "status": "DOWNLOAD_BLOCKED",
+      "note": "Redirects to browser login. API key auth insufficient."
+    },
+    "kaggle/kaggriculture-episodes-index": {
+      "version": 60,
+      "last_updated": "2026-09-28T00:02:18Z",
+      "total_bytes": 2091,
+      "url": "https://www.kaggle.com/datasets/kaggle/kaggriculture-episodes-index",
+      "status": "DOWNLOAD_BLOCKED",
+      "note": "2KB index file. Redirects to browser login."
+    },
+    "kaggle/kaggriculture-episodes-2026-09-26": {
+      "version": 1,
+      "last_updated": "2026-09-27T00:01:36Z",
+      "total_bytes": 0,
+      "url": "https://www.kaggle.com/datasets/kaggle/kaggriculture-episodes-2026-09-26",
+      "status": "DOWNLOAD_BLOCKED",
+      "note": "Sep 26 daily episodes. Redirects to browser login."
+    },
+    "ashok205/kaggriculture-top10-replay-archive": {
+      "version": 41,
+      "last_updated": "2026-09-26T22:51:52Z",
+      "total_bytes": 3957825092,
+      "url": "https://www.kaggle.com/datasets/ashok205/kaggriculture-top10-replay-archive",
+      "status": "DOWNLOAD_BLOCKED",
+      "note": "3.96GB daily top-10 replay corpus. Redirects to browser login. HIGHEST PRIORITY."
+    },
+    "xishengfeng/kaggriculture-replay-db": {
+      "version": 5,
+      "last_updated": "2026-09-26T21:22:59Z",
+      "total_bytes": 2083079525,
+      "url": "https://www.kaggle.com/datasets/xishengfeng/kaggriculture-replay-db",
+      "status": "DOWNLOAD_BLOCKED",
+      "note": "2.08GB replay DB. Redirects to browser login."
+    }
+  },
+  "working_methods": {
+    "kaggleusercontent_cdn": {
+      "url_pattern": "https://www.kaggleusercontent.com/episodes/{episode_id}.json",
+      "auth_required": false,
+      "status": "WORKING",
+      "note": "Public CDN. Downloads full replay JSON. No auth required.",
+      "limitation": "Need episode IDs first."
+    },
+    "list_episodes_api": {
+      "url": "https://www.kaggle.com/api/i/competitions.EpisodeService/ListEpisodes",
+      "method": "POST",
+      "body": {"submissionId": "<integer>"},
+      "auth_required": false,
+      "status": "WORKING",
+      "rate_limit": "~1 req/sec",
+      "note": "Returns episode list for a submission ID. Need submission IDs first."
+    },
+    "kaggle_dataset_list_api": {
+      "url": "https://www.kaggle.com/api/v1/datasets/list?search=...",
+      "auth_required": true,
+      "status": "WORKING",
+      "note": "Returns metadata only, not download URLs. Credentials: thefool00."
+    }
+  },
+  "blocked_methods": {
+    "kaggle_cli": {
+      "command": "kaggle competitions replay {ep_id}",
+      "error": "ConnectionResetError on SSL handshake during OAuth token introspection",
+      "status": "BLOCKED"
+    },
+    "dataset_download_api": {
+      "url": "https://www.kaggle.com/api/v1/datasets/{owner}/{name}/download",
+      "error": "302 redirect to /account/login - requires browser session cookie",
+      "status": "BLOCKED"
+    },
+    "competition_endpoints": {
+      "url": "https://www.kaggle.com/api/v1/competitions/kaggriculture/...",
+      "error": "404 for all competition-specific API paths",
+      "status": "BLOCKED"
+    }
+  },
+  "local_data_inventory": {
+    "georgymamarin_local_corpus": {
+      "path": "replays/raw/georgymamarin/",
+      "episodes_csv_rows": 74699,
+      "date_range": "2026-07-30 to 2026-08-31",
+      "team_count": 7090,
+      "submission_ids": 26571,
+      "max_submission_id": 55924458,
+      "note": "Ends at August 31. No September data."
+    },
+    "keep_replays": {
+      "path": "live_data/episodes_v31r2/keep/",
+      "file_count": 193,
+      "total_size_gb": 5.93,
+      "date": "2026-09-20 to 2026-09-22",
+      "submissions": ["a7 (44 files)", "v22r1 (140 files)", "other (9 files)"],
+      "module_version": "1.32.7",
+      "elite_teams_found": 0,
+      "note": "All losses from our own Sep 20-22 submissions. Opponents are mid-tier (~1600-2400 Elo)."
+    }
+  },
+  "sep_discovery_status": {
+    "method_tried": "Scan submission IDs from 55924459 to 55974459 via ListEpisodes",
+    "status": "IN_PROGRESS",
+    "sep_episodes_found": "PENDING"
+  }
+}

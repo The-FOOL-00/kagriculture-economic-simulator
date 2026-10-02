@@ -1,0 +1,172 @@
+{
+  "manifest_version": "1.0.0",
+  "experiment": "EXP-ARCH-002_H1_DOMINANCE_TERMINAL",
+  "canonical_root": "/kaggle/working/Kagriculture",
+  "hardware_target": "Kaggle GPU T4 x 2",
+  "external_data_files_required": false,
+  "total_files": 23,
+  "total_bytes": 682042,
+  "files": [
+    {
+      "source": "candidates/compiled_v54_plus_residual.py",
+      "kaggle_destination": "candidates/compiled_v54_plus_residual.py",
+      "sha256": "18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb",
+      "size_bytes": 338100,
+      "reason_required": "Frozen baseline agent policy (V54++ residual, SHA-256 18402ec6...)"
+    },
+    {
+      "source": "candidates/closed_loop_architecture/dev_005_confirmed_shop_scheduler.py",
+      "kaggle_destination": "candidates/closed_loop_architecture/dev_005_confirmed_shop_scheduler.py",
+      "sha256": "f52b168619e47bea6a052faff890fc84804cb39b47392d247139967f910e2a78",
+      "size_bytes": 16186,
+      "reason_required": "Protected baseline component artifact for integrity audit"
+    },
+    {
+      "source": "candidates/closed_loop_architecture/dev_006_horizon_guard_scheduler.py",
+      "kaggle_destination": "candidates/closed_loop_architecture/dev_006_horizon_guard_scheduler.py",
+      "sha256": "06db94e59e2c271b5490aad78fdb760bd8a250f28ec4407de2d2f6be0644f5eb",
+      "size_bytes": 17657,
+      "reason_required": "Protected baseline component artifact for integrity audit"
+    },
+    {
+      "source": "extracted_agents/dmitrii_lb2800/unit_model.py",
+      "kaggle_destination": "extracted_agents/dmitrii_lb2800/unit_model.py",
+      "sha256": "c03e8c5cd10466c229ee0a44dece9a3943c10bff135d96a7822ffe75d6922724",
+      "size_bytes": 12009,
+      "reason_required": "Pinned engine extract unit/decay model (engine 1.32.7)"
+    },
+    {
+      "source": "experiments/EXP-DEV-006_HORIZON_KILLTEST/port/kagsim_py/__init__.py",
+      "kaggle_destination": "experiments/EXP-DEV-006_HORIZON_KILLTEST/port/kagsim_py/__init__.py",
+      "sha256": "5fd8ceec4c7737aa06eb15d09cf4e8aa58037e481baaf0d2fbd5430228fb2f3e",
+      "size_bytes": 230,
+      "reason_required": "Authoritative Python simulator package entry"
+    },
+    {
+      "source": "experiments/EXP-DEV-006_HORIZON_KILLTEST/port/kagsim_py/api.py",
+      "kaggle_destination": "experiments/EXP-DEV-006_HORIZON_KILLTEST/port/kagsim_py/api.py",
+      "sha256": "d935b80120270e85dd7ada8e858d5243d142b9d2953bbaddd1ed28ae78a115ce",
+      "size_bytes": 10132,
+      "reason_required": "Authoritative Python simulator Game API"
+    },
+    {
+      "source": "experiments/EXP-DEV-006_HORIZON_KILLTEST/port/kagsim_py/mt.py",
+      "kaggle_destination": "experiments/EXP-DEV-006_HORIZON_KILLTEST/port/kagsim_py/mt.py",
+      "sha256": "589817b354169c98c135294d5c5d0d32cc9041c88485a5a72855ee6daad431e1",
+      "size_bytes": 4138,
+      "reason_required": "Bit-exact Mersenne Twister RNG implementation"
+    },
+    {
+      "source": "experiments/EXP-DEV-006_HORIZON_KILLTEST/port/kagsim_py/sim.py",
+      "kaggle_destination": "experiments/EXP-DEV-006_HORIZON_KILLTEST/port/kagsim_py/sim.py",
+      "sha256": "f2be941eb693c11423142b62023549fae56361b209f168e40f6c3705e7590e2b",
+      "size_bytes": 30436,
+      "reason_required": "Bit-exact Python simulator engine implementation"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/01_ISOLATION_AUDIT.md",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/01_ISOLATION_AUDIT.md",
+      "sha256": "0381a93eee7cc3d51833439ce868d51923dc9a2ff0cca68f9d692e5f81c03de4",
+      "size_bytes": 56107,
+      "reason_required": "Governing isolation audit document"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/02_PREREGISTRATION.md",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/02_PREREGISTRATION.md",
+      "sha256": "508f1dff91f1bfd34186b1eeb6e899c97f87b99fff3841513abe3a88dc4a71b5",
+      "size_bytes": 46931,
+      "reason_required": "Governing preregistration protocol (G-HASH target)"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/07_REEXECUTION_ELIGIBILITY_AUDIT.md",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/07_REEXECUTION_ELIGIBILITY_AUDIT.md",
+      "sha256": "06870a49e75790026823dda7102c44f1b7fdbec6965600b3362bf31179f60ade",
+      "size_bytes": 20592,
+      "reason_required": "Governing re-execution eligibility audit"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/08_REEXECUTION_FREEZE_RECORD.md",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/08_REEXECUTION_FREEZE_RECORD.md",
+      "sha256": "a30effe2abf433c46cf24212e9e903f48e588c75a8791964aaeb83d3e8bb6e66",
+      "size_bytes": 7698,
+      "reason_required": "Authorizing re-execution freeze record"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_const.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_const.py",
+      "sha256": "080d0992ff1235dddbcf1be5bd0d5eb7a9c0eaf533ef0f725941f39ba226479c",
+      "size_bytes": 2885,
+      "reason_required": "Frozen H1 constants and pins"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_units.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_units.py",
+      "sha256": "9100029a1eac43d8cac527f79b33c865233435f52fd40f18e931278468fc8033",
+      "size_bytes": 2195,
+      "reason_required": "Frozen H1 unit model wrapper shim"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_baseline.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_baseline.py",
+      "sha256": "20e7728f196228a022e762b7490b2081085f4ed639b48adecc810c1d2a0e4e58",
+      "size_bytes": 11102,
+      "reason_required": "Frozen baseline loader and unbound controller access"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_dominance.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_dominance.py",
+      "sha256": "37d36383f32f68d7a437331a709d07bcbe0ac2a88cf9265fa9ea36e26c623a23",
+      "size_bytes": 7415,
+      "reason_required": "Frozen row-wise prefix dominance and acceptance predicates"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_search.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_search.py",
+      "sha256": "1d476f7d7292f5f8af13ced0133b99f0dbb0e10499c64a5bd850ae394bbdaf9b",
+      "size_bytes": 12510,
+      "reason_required": "Frozen candidate proposal search (budget 128/1/8)"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_shadow.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_shadow.py",
+      "sha256": "8857a671e6d510ddb44957126b6839584d4264fc8d20f56ab94d7f9ea046055b",
+      "size_bytes": 21324,
+      "reason_required": "Frozen shadow simulator and baseline forward replay"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_telemetry.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_telemetry.py",
+      "sha256": "dd7c9aa3a45fc0dea0b020d56b7c9368d071e9ae9f0e031e0026d228a4c6b31c",
+      "size_bytes": 5385,
+      "reason_required": "Frozen telemetry reason codes and telemetry records"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_agent.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/h1_agent.py",
+      "sha256": "06aa31c72ea8c9740be2568810b7ade17edee1827e779b88cceddda70a40f4ae",
+      "size_bytes": 17789,
+      "reason_required": "Frozen H1 overlay agent wrapper"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/run_arch002_h1_reexecution.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/run_arch002_h1_reexecution.py",
+      "sha256": "e6f830c8847985f834dd3c498537e07f20fb006494e0596773e4f09d86b6a405",
+      "size_bytes": 22169,
+      "reason_required": "Corrected re-execution runner (P-RE-RUN)"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/tests/conftest.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/tests/conftest.py",
+      "sha256": "d12e5178c3afd095d7d8d7ff8792e88660e9807b92f0c4795fe3624c79deea09",
+      "size_bytes": 3588,
+      "reason_required": "Test fixtures for pytest runner validation"
+    },
+    {
+      "source": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/tests/test_h1_reexecution_validation.py",
+      "kaggle_destination": "experiments/EXP-ARCH-002_H1_DOMINANCE_TERMINAL/tests/test_h1_reexecution_validation.py",
+      "sha256": "c3b77aaa0c042a071f1b04cd625527260979ce55d699a7a122ddb810969be348",
+      "size_bytes": 15464,
+      "reason_required": "Frozen re-execution runner validation suite (Phase G)"
+    }
+  ]
+}

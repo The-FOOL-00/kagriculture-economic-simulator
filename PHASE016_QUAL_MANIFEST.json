@@ -1,0 +1,100 @@
+{
+  "phase": "PHASE016",
+  "title": "Long-Horizon Macro-Aware Counterfactual & Regime-Transition Safety Rescue",
+  "date": "2026-09-19",
+  "status": "PILOT COMPLETE / NO QUALIFICATION",
+  "decision": "KEEP QUARANTINED",
+  "v3_chassis": {
+    "tarball": "submission_Vj_kc_v3.tar.gz",
+    "expected_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "verified_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "intact": true
+  },
+  "live_empirical_foundation": [
+    "V3",
+    "DEPENDENCY_AWARE_MARKET_TIMING",
+    "TERMINAL_LIQUIDATION",
+    "PHASE_SHUTDOWN"
+  ],
+  "quarantined_mechanisms": [
+    "ASSET_HOLDING_VALUATION_TRIGGER",
+    "AUTONOMOUS_TRANCHE_ORDER_SYNTHESIZER",
+    "FRONTLOAD_ORDERS",
+    "LOCAL_WEED_DIG",
+    "DYNAMIC_SHADOW_HARVEST",
+    "CARGO_FERRY_PRIORITY",
+    "CARGO_FERRY",
+    "OPPONENT_PREEMPT_SELL",
+    "EMERGENCY_FEED_PURCHASE",
+    "RESOURCE_CONVERSION",
+    "TERMINAL_HARVEST_SWEEP",
+    "TOWN_CYCLE",
+    "SHOP_ARBITRAGE",
+    "PRODUCTION_ARBITRAGE",
+    "TERMINAL_CONVERSION",
+    "EMERGENCY_RECOVERY",
+    "ROUTE_COMPRESSION"
+  ],
+  "synthetic_regression_tests": {
+    "total_tests_run": 699,
+    "total_tests_passed": 699,
+    "phase016_tests": {
+      "test_a_no_boundary": "PASS",
+      "test_b_capex_boundary": "PASS",
+      "test_c_delayed_consequence": "PASS",
+      "test_d_false_positive_prevention": "PASS",
+      "test_e_terminal_boundary": "PASS",
+      "test_f_order_queue_alteration": "PASS",
+      "test_g_determinism": "PASS",
+      "test_h_state_isolation_and_fidelity": "PASS"
+    }
+  },
+  "canonical_replay_seed_249276": {
+    "seed": 249276,
+    "phase015_unrescued_paired_margin": -39455.0,
+    "phase016_rescued_paired_margin": -2523.0,
+    "net_causal_recovery": 36932.0,
+    "recovery_percentage": 93.61,
+    "candidates_screened": 222,
+    "candidates_escalated": 13,
+    "candidates_committed": 6,
+    "candidates_rejected": 216,
+    "rejection_rate": 0.973,
+    "total_macro_escalations": 16,
+    "safety_violations": 0
+  },
+  "fresh_pilot_results": {
+    "cohort": "249286..249295",
+    "n_seeds": 10,
+    "n_mirror_matches": 20,
+    "mean_paired_margin_delta": -884.20,
+    "std_paired_margin_delta": 852.06,
+    "se_paired_margin_delta": 269.44,
+    "ci_95_lower": -1493.73,
+    "ci_95_upper": -274.67,
+    "record_w_l_t": {
+      "wins": 1,
+      "losses": 9,
+      "ties": 0
+    },
+    "phase015_baseline_mean_delta": -58569.80,
+    "net_recovery_vs_phase015": 57685.60,
+    "recovery_percentage": 98.49,
+    "total_commits": 54,
+    "total_simulations": 2082,
+    "total_macro_escalations": 736,
+    "escalation_rate": 0.3535,
+    "latencies_ms": {
+      "mean": 75.17,
+      "median": 48.20,
+      "p95": 205.63,
+      "max": 377.18
+    },
+    "safety_violations": 0
+  },
+  "scientific_conclusions": {
+    "primary_failure_cause": "Evaluator macro-regime blindness during local short-horizon static counterfactual evaluation, leading to unobserved downstream V3 policy bifurcations.",
+    "adaptive_horizon_upgrade": "Successfully upgraded to causally adaptive macro horizon with pre-simulation boundary probing and isolated frozen V3 continuation.",
+    "architecture_status": "Approved as permanent AEC evaluation infrastructure for all future mechanisms."
+  }
+}

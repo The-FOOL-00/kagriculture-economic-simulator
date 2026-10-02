@@ -1,0 +1,45 @@
+{
+  "experiment": "EXP-AEC-001",
+  "protocol": "experiments/EXP-AEC-001_AEC_V1_PREREGISTRATION.md",
+  "cohort_lo": 340000,
+  "cohort_hi": 340049,
+  "cohort_size": 50,
+  "matches_per_seed": 2,
+  "total_games": 100,
+  "start_time": "2026-09-17T09:07:18.939841+00:00",
+  "end_time": "2026-09-17T09:10:23.356928+00:00",
+  "elapsed_seconds": 184.42,
+  "git_commit": "6fd787b38d7af24a322e18bc089ccb2ccbe5386a",
+  "v3_tarball_sha256": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+  "frozen_file_hashes": {
+    "submission_Vj_kc_v3.tar.gz": "845e0d10981b11b06d272048ff5cee30d70a0403dd757651a556a78c8bf18943",
+    "submission_Vj_kc_v2.tar.gz": "45b9c54fd4946ff94a7a6de03be3e9d2da1c1662316be1129813b362b0bd22b2",
+    "candidates\\compiled_v54_plus_residual.py": "18402ec6fa3709b9b5ef90dd9c8d7b9c0e44aea55ab163e44a80a4adc0cb7eeb",
+    "candidates\\compiled_v54_plus_shop.py": "f651ccd220e701968bc33579812d8917da63f5b0582f2fd0d363fa6a16ffd8b8",
+    "DEVELOPMENT_HOLDOUT_REGISTRY.md": "0b35f56c4c0a130f559fdd1a90999ed865c905c8e0854937c35e129a73771205"
+  },
+  "enabled_mechanisms": [
+    "LOCAL_WEED_DIG",
+    "FRONTLOAD_ORDERS",
+    "TERMINAL_LIQUIDATION",
+    "PHASE_SHUTDOWN"
+  ],
+  "quarantined_mechanisms": [
+    "DYNAMIC_SHADOW_HARVEST",
+    "CARGO_FERRY_PRIORITY",
+    "OPPONENT_PREEMPT_SELL",
+    "EMERGENCY_FEED_PURCHASE",
+    "TERMINAL_HARVEST_SWEEP",
+    "TOWN_CYCLE"
+  ],
+  "status": "COMPLETED",
+  "final_stats": {
+    "mean_delta_margin": 0.0,
+    "median_delta_margin": 0.0,
+    "treatment_wins": 5,
+    "control_wins": 5,
+    "ties": 90,
+    "delta_win_rate_percentage_points": 0.0,
+    "hypothesis_verdict": "ACCEPTED"
+  }
+}
