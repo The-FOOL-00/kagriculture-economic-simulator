@@ -1,32 +1,51 @@
-from kaggle_environments import make
+import sys, os
+sys.path.insert(0, os.path.abspath("."))
+from research.v40.env.fast_sim import FastKagricultureSim
+import candidates.v49_meta_fusion.main as v49_mod
+import candidates.v44_economic_portfolio.main as v44_mod
 
-def trace_commodity_sales(agent_path, item="MILK"):
-    cfg = {"episodeSteps": 720, "seed": 1004}
-    env = make("kaggriculture", configuration=cfg, debug=False)
-    env.run([agent_path, "starter"])
-    steps = env.steps
+sim = FastKagricultureSim(seed=250436)
+obs = sim.reset()
+
+v49_milk_sold = 0
+v49_milk_revenue = 0
+opp_milk_sold = 0
+opp_milk_revenue = 0
+
+milk_trace = []
+
+for step in range(719):
+    p_milk = obs[0]["market"]["prices"]["MILK"]
+    i_milk = obs[0]["market"]["inventory"]["MILK"]
     
-    events = []
-    for step_idx in range(len(steps)):
-        act = steps[step_idx][0].get("action", {}) or {}
-        obs = steps[step_idx][0].get("observation", {})
-        m_state = obs.get("market", {})
-        p = m_state.get("prices", {}).get(item, 0)
-        inv = m_state.get("inventory", {}).get(item, 0)
+    a0 = v49_mod.agent(obs[0], sim.configuration)
+    a1 = v44_mod.agent(obs[1], sim.configuration)
+    
+    # Check if either agent sold milk
+    m0 = a0.get("market", [])
+    m1 = a1.get("market", [])
+    
+    sold0 = sum(o[2] for o in m0 if len(o) >= 3 and o[0] == "SELL" and o[1] == "MILK")
+    sold1 = sum(o[2] for o in m1 if len(o) >= 3 and o[0] == "SELL" and o[1] == "MILK")
+    
+    if sold0 > 0 or sold1 > 0 or step in [216, 288, 360, 432, 504, 576, 693, 704, 716]:
+        shed0 = (obs[0].get("private") or {}).get("shed", {}).get("MILK", 0)
+        shed1 = (obs[1].get("private") or {}).get("shed", {}).get("MILK", 0)
+        milk_trace.append({
+            "step": step,
+            "milk_price": p_milk,
+            "milk_inv": i_milk,
+            "v49_sold": sold0,
+            "v49_shed": shed0,
+            "opp_sold": sold1,
+            "opp_shed": shed1
+        })
         
-        for o in act.get("market", []):
-            if o[0] == "SELL" and o[1] == item:
-                qty = int(o[2])
-                events.append((step_idx, step_idx // 24, step_idx % 24, qty, p, inv))
-    return events
+    obs, rewards, done, info = sim.step([a0, a1])
+    if done:
+        break
 
-e1 = trace_commodity_sales("candidates/candidate_cl_economic_v1.py", "MILK")
-e2 = trace_commodity_sales("candidates/candidate_cl_economic_v2.py", "MILK")
-
-print("--- CL-Economic-V1 MILK SALES (first 15) ---")
-for ev in e1[:15]:
-    print(f"Step {ev[0]:3d} (Day {ev[1]:2d}, Hr {ev[2]:2d}): Sold {ev[3]:2d} {ev[4]:.1f}$/u | MktInv={ev[5]}")
-
-print("\n--- CL-Economic-V2 MILK SALES (remaining) ---")
-for ev in e2[15:]:
-    print(f"Step {ev[0]:3d} (Day {ev[1]:2d}, Hr {ev[2]:2d}): Sold {ev[3]:2d} {ev[4]:.1f}$/u | MktInv={ev[5]}")
+print(f"{'Step':<5} {'Price':<6} {'MktInv':<7} | {'V49 Sold':<9} {'V49 Shed':<9} | {'Opp Sold':<9} {'Opp Shed':<9}")
+print("-" * 65)
+for t in milk_trace:
+    print(f"{t['step']:<5} ${t['milk_price']:<5} {t['milk_inv']:<7} | {t['v49_sold']:<9} {t['v49_shed']:<9} | {t['opp_sold']:<9} {t['opp_shed']:<9}")

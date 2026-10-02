@@ -1,0 +1,51 @@
+{
+  "engine_version": "1.32.7",
+  "baseline_file": "agents/aethel_factorial_base.py",
+  "baseline_sha256": "c1945f24f34ca9d5124e8200df14af019f6cb4cdec3ca402d9a3a88f6b04e36f",
+  "candidate_a": {
+    "path": "agents/candidate_a_aethel_v1.py",
+    "sha256": "c1945f24f34ca9d5124e8200df14af019f6cb4cdec3ca402d9a3a88f6b04e36f",
+    "market_controller": false,
+    "terminal_712": false,
+    "front_running": false
+  },
+  "candidate_b": {
+    "path": "agents/candidate_b_aethel_mc.py",
+    "sha256": "4ce1034a7e23aadd30dac1cd1c7e2ec9b2565ac2410ce4169bc0cc348cf4c1a7",
+    "market_controller": true,
+    "terminal_712": false,
+    "front_running": false
+  },
+  "candidate_c": {
+    "path": "agents/candidate_c_aethel_t712.py",
+    "sha256": "61467e87ffb0b957283222e60e68fa597b5f9912400828c287c759ad71e7dda5",
+    "market_controller": false,
+    "terminal_712": true,
+    "front_running": false
+  },
+  "candidate_d": {
+    "path": "agents/candidate_d_aethel_refined.py",
+    "sha256": "79efb19a9b9d8146d53a7531d1f1962d5d963b8ea2b5b509e12ad526559de93d",
+    "market_controller": true,
+    "terminal_712": true,
+    "front_running": false
+  },
+  "market_controller": {
+    "A": false,
+    "B": true,
+    "C": false,
+    "D": true
+  },
+  "terminal_712": {
+    "A": false,
+    "B": false,
+    "C": true,
+    "D": true
+  },
+  "front_running": {
+    "A": false,
+    "B": false,
+    "C": false,
+    "D": false
+  }
+}
