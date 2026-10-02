@@ -2,7 +2,7 @@
 
 **Experiment Identifier**: `EXP-DEV-002`  
 **Experiment Title**: Hedged Adaptive Crop Portfolio Research  
-**Governing Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md)  
+**Governing Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md)  
 **Protocol Cryptographic Hash (SHA-256)**: `735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446`  
 **Git Commit**: `b2a4f45`  
 **Candidate Treatment**: `dev_002_hedged_portfolio` ([`candidates/closed_loop_architecture/dev_002_hedged_portfolio.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/closed_loop_architecture/dev_002_hedged_portfolio.py))  
@@ -85,7 +85,7 @@ The remaining 8 seeds engaged dynamic specialization:
 
 ## 5. Decision Rules and Stage 3 Verdict
 
-Under Section 2.7 of [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md):
+Under Section 2.7 of [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md):
 1. $\Delta \mu = +\$250.06 > +\$50.00$ — **PASS**
 2. $p_{05} = +\$0.00 \ge -\$200.00$ — **PASS**
 3. Worst single-seed loss $= -\$11.00 \ge -\$800.00$ — **PASS**

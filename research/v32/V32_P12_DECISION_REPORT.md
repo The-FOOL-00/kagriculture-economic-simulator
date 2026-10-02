@@ -200,7 +200,7 @@ Under Program Stop Conditions (Section 69):
 
 ## 10. Slot Safety & Live Portfolio Impact
 
-- **Slot A:** [candidates/v22_patch1/main.py](file:///c:/Users/Sundareswaran/Kagriculture/candidates/v22_patch1/main.py) (`V22R1`) — **PROTECTED & UNTOUCHED.**
+- **Slot A:** [candidates/v22_patch1/main.py](file:///c:/Users/Sundareswaran/Kagriculture/temporary/main.py) (`V22R1`) — **PROTECTED & UNTOUCHED.**
 - **Slot B:** [candidates/v30_a7_standalone/main.py](file:///c:/Users/Sundareswaran/Kagriculture/candidates/v30_a7_standalone/main.py) (`A7`) — **PROTECTED & UNTOUCHED.**
 - **P12 Codebase:** Preserved as a modular research package in [candidates/v32_p12_options/](file:///c:/Users/Sundareswaran/Kagriculture/candidates/v32_p12_options/) with complete documentation and unit test suites. No files in the competition submission path are modified.
 

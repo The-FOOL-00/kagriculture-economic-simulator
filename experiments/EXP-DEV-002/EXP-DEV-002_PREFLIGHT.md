@@ -16,7 +16,7 @@ Under Section 1 and Section 9 of the prompt directives, and Section 12 of the go
 
 While environment, cryptographic hashes, sandbox containment, holdout partitions, and controls passed all verification gates, **EXP-DEV-002 failed the mandatory Protocol Specification Gate**:
 1. **Intended Mission vs. Registered Protocol Conflict**: The user request directs research into *"Hedged Adaptive Portfolio Research: Can adaptive portfolio behavior capture useful information from revealed shops while explicitly limiting irreversible downside exposure?"* with comparators `ClosedLoopAgentV2`, 19S/0T static baseline, and `Dmitrii-LB2800`.
-2. **Pre-Registered Definition in Frozen Protocol**: The cryptographically frozen protocol [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md) defines `EXP-DEV-002` strictly as:
+2. **Pre-Registered Definition in Frozen Protocol**: The cryptographically frozen protocol [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md) defines `EXP-DEV-002` strictly as:
    - **Research Question 2**: *"Rebuilt Shop Information Value Quantification"*
    - **Candidate Treatment**: `dev_002_shop_voi_evaluator` (measuring Expected Value of Information $\text{VoI}(t)$ against an unconditional open-loop expected value baseline).
 3. **No Code on Disk**: `dev_002_shop_voi_evaluator.py` does not exist in the codebase (0 lines of code).
@@ -31,7 +31,7 @@ While environment, cryptographic hashes, sandbox containment, holdout partitions
 ## 2. Preflight Verification Checklist
 
 ### A. Protocol & Governance
-- [x] **protocol exists**: **PASS** — [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md)
+- [x] **protocol exists**: **PASS** — [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md)
 - [x] **protocol hash matches freeze**: **PASS** — `671e915eadd72adb710421b45e6a33ad533abd9d68ff67770b8dd412ff7381b3` verified bit-exact.
 - [x] **frozen Git commit exists**: **PASS** — Commit `a1ba5acb0d04689874ce1333892825f014eea924` committed and verified.
 - [x] **protocol unchanged since freeze**: **PASS** — `git diff --exit-code DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md` returns 0.

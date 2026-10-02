@@ -40,11 +40,11 @@ When submission quota resets tomorrow, deploy this diversified experimental rost
 
 1. **`Slot 1 — Control`** ([`candidates/slot1_titan_control.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot1_titan_control.py)):
    - Current stable live reference (Titan Apex v3 baseline).
-2. **`Slot 2 — Loss-Fix Challenger`** ([`candidates/slot2_loss_fix_challenger.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot2_loss_fix_challenger.py)):
+2. **`Slot 2 — Loss-Fix Challenger`** ([`candidates/slot2_loss_fix_challenger.py`](file:///c:/Users/Sundareswaran/Kagriculture/baseline_backup/candidates/slot2_loss_fix_challenger.py)):
    - High-throughput liquidation pipeline addressing the 87% melon selling logjam.
-3. **`Slot 3 — Opponent-Adaptive Challenger`** ([`candidates/slot3_opponent_adaptive.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot3_opponent_adaptive.py)):
+3. **`Slot 3 — Opponent-Adaptive Challenger`** ([`candidates/slot3_opponent_adaptive.py`](file:///c:/Users/Sundareswaran/Kagriculture/baseline_backup/candidates/slot3_opponent_adaptive.py)):
    - Dynamic opponent farm radar & anti-glut crop counter-hedging.
-4. **`Slot 4 — Market Planner Challenger`** ([`candidates/slot4_market_planner.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot4_market_planner.py)):
+4. **`Slot 4 — Market Planner Challenger`** ([`candidates/slot4_market_planner.py`](file:///c:/Users/Sundareswaran/Kagriculture/baseline_backup/candidates/slot4_market_planner.py)):
    - Non-linear price elasticity & post-consumption scarcity arbitrage.
-5. **`Slot 5 — Local Champion`** ([`candidates/slot5_local_champion.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot5_local_champion.py)):
+5. **`Slot 5 — Local Champion`** ([`candidates/slot5_local_champion.py`](file:///c:/Users/Sundareswaran/Kagriculture/baseline_backup/candidates/slot5_local_champion.py)):
    - Unified Titan Apex v4 production build with compiled zero-dependency runtime.

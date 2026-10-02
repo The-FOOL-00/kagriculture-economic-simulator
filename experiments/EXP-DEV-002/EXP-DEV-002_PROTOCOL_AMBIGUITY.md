@@ -17,7 +17,7 @@ Under **Directive 1** of the user instructions:
 And under **Directive 10 (Protocol Fallback D)**:
 > *"STOP if ambiguity remains. Do not choose the interpretation that maximizes the chance of Top-10 performance."*
 
-An exhaustive audit of [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md) and [`DEVELOPMENT_EXPERIMENT_REGISTRY.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_REGISTRY.md) revealed a **fundamental, irreconcilable discrepancy** between the user's intended research mission and the prospective pre-registration frozen on disk.
+An exhaustive audit of [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md) and [`DEVELOPMENT_EXPERIMENT_REGISTRY.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_REGISTRY.md) revealed a **fundamental, irreconcilable discrepancy** between the user's intended research mission and the prospective pre-registration frozen on disk.
 
 In strict compliance with the anti-silent-redefinition covenant, **zero simulation runs have been launched**, and execution is formally **HALTED**.
 

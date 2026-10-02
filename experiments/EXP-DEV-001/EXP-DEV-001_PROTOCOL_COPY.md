@@ -43,7 +43,7 @@ Under Section 12 of the Governing Protocol, all subsequent experimental executio
 4. **Mandatory Reporting of Negative Results**:
    - Failed, inconclusive, or retracted experiments must remain permanently recorded with equal visibility to positive findings. Cherry-picking favorable seeds or suppressing negative trials is a catastrophic scientific violation.
 5. **Zero-Leakage Active Containment**:
-   - All experimental executions must run within the `ActiveContainmentSandbox` specified in [`DEVELOPMENT_GATE_0_3_LEAKAGE_VERIFICATION.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_GATE_0_3_LEAKAGE_VERIFICATION.md).
+   - All experimental executions must run within the `ActiveContainmentSandbox` specified in [`DEVELOPMENT_GATE_0_3_LEAKAGE_VERIFICATION.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_GATE_0_3_LEAKAGE_VERIFICATION.md).
    - Any agent attempting file I/O, `gc` inspection, lookahead simulation, or network access will be immediately disqualified.
 
 ---

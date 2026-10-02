@@ -1,7 +1,7 @@
 # EXP-DEV-002 FORENSIC AUDIT: FINAL POSTMORTEM VERDICT
 
 **Experiment Identifier**: `EXP-DEV-002` (Hedged Adaptive Crop Portfolio)  
-**Governing Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md) (SHA-256 `735ad844b727...`, Git Commit `b2a4f45`)  
+**Governing Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md) (SHA-256 `735ad844b727...`, Git Commit `b2a4f45`)  
 **Sample Cohort**: Discovery Partition Seeds `50000` to `50049` ($N=50$ seeds, 100 matches per pair)  
 **Audit Date**: 2026-09-11  
 **Auditor**: Antigravity Autonomous Pair Programmer (Lead Forensic Auditor)  

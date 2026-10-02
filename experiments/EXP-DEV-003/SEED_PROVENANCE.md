@@ -82,7 +82,7 @@ In accordance with Section 2 and Section 3 of the directive, we performed an exh
   - `scratch/fresh_holdout_seeds.json`: Contains seeds `60032`, `60034`, `60035`, `60036`...
   - `scratch/holdout_verification_results.json`: 246 seed matches recording simulation margins.
 - **Historical Governance (Category A / E)**:
-  - Formally recorded as contaminated in [`DEVELOPMENT_HOLDOUT_REGISTRY.md:50`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_HOLDOUT_REGISTRY.md#L50) and [`DEVELOPMENT_GATE_0_3_FINAL_VERDICT.md:35`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_GATE_0_3_FINAL_VERDICT.md#L35).
+  - Formally recorded as contaminated in [`DEVELOPMENT_HOLDOUT_REGISTRY.md:50`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_HOLDOUT_REGISTRY.md#L50) and [`DEVELOPMENT_GATE_0_3_FINAL_VERDICT.md:35`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_GATE_0_3_FINAL_VERDICT.md#L35).
 - **Verdict**: **STRICTLY CONTAMINATED — REJECTED**.
 
 ### 3.2 Audit of Candidate `70000–70049`

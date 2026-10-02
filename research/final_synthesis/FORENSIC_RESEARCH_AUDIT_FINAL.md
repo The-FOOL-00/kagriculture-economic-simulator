@@ -138,7 +138,7 @@ Fourteen substantive reports were audited:
 
 ## 10. INTERNAL CONTRADICTIONS
 
-The audit resolved nine primary contradictions, detailed in [`CONTRADICTIONS.md`](file:///c:/Users/Sundareswaran/Kagriculture/CONTRADICTIONS.md):
+The audit resolved nine primary contradictions, detailed in [`CONTRADICTIONS.md`](file:///c:/Users/Sundareswaran/Kagriculture/docs/CONTRADICTIONS.md):
 - **V2 Superiority vs Parity**: Parity is statistically established; superiority is an unproven point estimate.
 - **Worst Loss -$6,367 vs -$730**: -$6,367 is an unpooled single-match seat artifact; -$730 is the true paired CRN worst loss.
 - **V3 Discovery Gain vs Holdout Loss**: V3 overfit to Discovery and regressed on Fresh Holdout.

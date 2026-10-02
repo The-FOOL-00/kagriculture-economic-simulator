@@ -3,7 +3,7 @@
 **Experiment Identifier**: `EXP-DEV-002`  
 **Phase**: Pre-Qualification Integrity Gate (Gate Pre-50050)  
 **Governing Standard**: Prospective Scientific Pre-Registration, Strict Partition Isolation, and Zero-Contamination Covenant  
-**Authoritative Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md)  
+**Authoritative Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md)  
 **Execution Candidate**: [`candidates/closed_loop_architecture/dev_002_hedged_portfolio.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/closed_loop_architecture/dev_002_hedged_portfolio.py)  
 **Audit Timestamp**: 2026-09-11 20:20:00 IST (14:50:00 UTC)  
 **Auditor**: Antigravity Autonomous Pair Programmer (Audit Engine)  
@@ -36,7 +36,7 @@
 - **Uncommitted Treatment Modifications**: **NONE**. The candidate file is identical to its audited state.
 
 ### B. Protocol Hash Verification
-- **Target File**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md)
+- **Target File**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md)
 - **Computed SHA-256**: `735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446`
 - **Registered Reference**: `735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446` (recorded in `experiments/EXP-DEV-002/EXP-DEV-002_PROTOCOL_HASH.txt` and commit `b2a4f45`)
 - **Status**: **BIT-EXACT MATCH (100% VERIFIED)**.

@@ -1,8 +1,8 @@
 # EXP-DEV-001 POSTMORTEM PROTOCOL AUDIT
 
 **Experiment Identifier**: `EXP-DEV-001`  
-**Governing Document**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md)  
-**Freeze Ledger**: [`DEVELOPMENT_PROTOCOL_FREEZE.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_PROTOCOL_FREEZE.md)  
+**Governing Document**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md)  
+**Freeze Ledger**: [`DEVELOPMENT_PROTOCOL_FREEZE.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_PROTOCOL_FREEZE.md)  
 **Auditor**: Antigravity Autonomous Pair Programmer (Forensic Audit Engine)  
 **Date**: 2026-09-11  
 
@@ -26,7 +26,7 @@ Prior to inspecting experimental execution, the cryptographic integrity of the g
 
 ## 2. Specification Audit: Pre-Registered Protocol Elements vs. Executed Run
 
-Each structural element of EXP-DEV-001 defined in Section 4.1 of [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md#L68-L90) was audited against the executed runner ([`experiments/EXP-DEV-001/run_exp_dev_001.py`](file:///c:/Users/Sundareswaran/Kagriculture/experiments/EXP-DEV-001/run_exp_dev_001.py)):
+Each structural element of EXP-DEV-001 defined in Section 4.1 of [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md#L68-L90) was audited against the executed runner ([`experiments/EXP-DEV-001/run_exp_dev_001.py`](file:///c:/Users/Sundareswaran/Kagriculture/experiments/EXP-DEV-001/run_exp_dev_001.py)):
 
 ### 2.1 Research Question & Formal Hypotheses
 - **Protocol RQ1**: "Does conditioning crop planting on revealed town shops at Day 3 (Step 72) and Day 6 (Step 144) outperform the static 19S/0T Strawberry Bedrock without increasing downside tail variance?"

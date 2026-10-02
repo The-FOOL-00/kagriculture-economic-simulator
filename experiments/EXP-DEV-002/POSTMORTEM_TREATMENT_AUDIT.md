@@ -3,7 +3,7 @@
 **Experiment Identifier**: `EXP-DEV-002`  
 **Candidate Treatment**: `dev_002_hedged_portfolio`  
 **Target Codebase File**: [`candidates/closed_loop_architecture/dev_002_hedged_portfolio.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/closed_loop_architecture/dev_002_hedged_portfolio.py)  
-**Governing Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md)  
+**Governing Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md)  
 **Audit Date**: 2026-09-11  
 **Auditor**: Antigravity Autonomous Pair Programmer (Audit Engine)  
 
@@ -11,7 +11,7 @@
 
 ## 1. Executive Summary
 
-This audit performs an exhaustive, line-by-line verification of the executable candidate treatment [`dev_002_hedged_portfolio.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/closed_loop_architecture/dev_002_hedged_portfolio.py) against the specifications pre-registered in [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md).
+This audit performs an exhaustive, line-by-line verification of the executable candidate treatment [`dev_002_hedged_portfolio.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/closed_loop_architecture/dev_002_hedged_portfolio.py) against the specifications pre-registered in [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md).
 
 ### Audit Finding:
 > **Zero silent drift. Every parameter, threshold, priority rule, and execution logic in the candidate implementation matches the pre-registered protocol bit-for-bit.**

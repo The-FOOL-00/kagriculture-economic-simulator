@@ -35,10 +35,10 @@ Titan Apex v4 achieved **100.0% Win Rates** against all synthetic archetypes (`S
 | Slot | File | Architecture | Primary Experimental Question |
 | :---: | :--- | :--- | :--- |
 | **1** | [`candidates/slot1_titan_control.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot1_titan_control.py) | Titan Control Baseline | Live ladder benchmark reference point |
-| **2** | [`candidates/slot2_loss_fix_challenger.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot2_loss_fix_challenger.py) | High-Throughput Liquidation | Does unthrottled harvest liquidation transfer to live ladder? |
-| **3** | [`candidates/slot3_opponent_adaptive.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot3_opponent_adaptive.py) | Opponent Farm Radar | Does anti-glut crop counter-hedging outperform static allocations? |
-| **4** | [`candidates/slot4_market_planner.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot4_market_planner.py) | Scarcity Arbitrage Planner | Does town consumption wave forecasting boost net wealth? |
-| **5** | [`candidates/slot5_local_champion.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/slot5_local_champion.py) | **Titan Apex v4 Champion** | Full integrated production candidate |
+| **2** | [`candidates/slot2_loss_fix_challenger.py`](file:///c:/Users/Sundareswaran/Kagriculture/baseline_backup/candidates/slot2_loss_fix_challenger.py) | High-Throughput Liquidation | Does unthrottled harvest liquidation transfer to live ladder? |
+| **3** | [`candidates/slot3_opponent_adaptive.py`](file:///c:/Users/Sundareswaran/Kagriculture/baseline_backup/candidates/slot3_opponent_adaptive.py) | Opponent Farm Radar | Does anti-glut crop counter-hedging outperform static allocations? |
+| **4** | [`candidates/slot4_market_planner.py`](file:///c:/Users/Sundareswaran/Kagriculture/baseline_backup/candidates/slot4_market_planner.py) | Scarcity Arbitrage Planner | Does town consumption wave forecasting boost net wealth? |
+| **5** | [`candidates/slot5_local_champion.py`](file:///c:/Users/Sundareswaran/Kagriculture/baseline_backup/candidates/slot5_local_champion.py) | **Titan Apex v4 Champion** | Full integrated production candidate |
 
 ---
 

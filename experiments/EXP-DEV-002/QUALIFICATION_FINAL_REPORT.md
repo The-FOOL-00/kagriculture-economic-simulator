@@ -4,7 +4,7 @@
 **Experiment Identifier**: `EXP-DEV-002`  
 **Phase**: Confirmatory Qualification Stage (Stage 2)  
 **Governing Standard**: Strict Prospective Pre-Registration, Immutability Covenant, and Anti-HARKing Protocol  
-**Authoritative Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md) (SHA-256: `735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446`)  
+**Authoritative Protocol**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md) (SHA-256: `735ad844b727a967058e4f817a72ae6bf3ea3f5a40182fa18f59f972da91f446`)  
 **Frozen Candidate Treatment**: [`candidates/closed_loop_architecture/dev_002_hedged_portfolio.py`](file:///c:/Users/Sundareswaran/Kagriculture/candidates/closed_loop_architecture/dev_002_hedged_portfolio.py) (SHA-256: `cdd19cc8d2b6a718ce6252223b9016ce76e5b08b88de10689ea5fce4ddb8f907`)  
 **Evaluation Partition**: Qualification (Seeds `50050–50099`, $N=50$ seeds, 100 paired matches per comparator)  
 **Evaluation Date**: 2026-09-11 20:25:00 IST (14:55:00 UTC)  
@@ -118,7 +118,7 @@ All statistics were independently recomputed directly from the paired observatio
 
 ## 7. Pre-Registered Qualification Success Criteria
 
-Evaluated against the formal Stage 2 Confirmation criteria registered in [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md) Section 2.7:
+Evaluated against the formal Stage 2 Confirmation criteria registered in [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md) Section 2.7:
 
 | Criterion | Formal Protocol Requirement | Observed Empirical Value | Status | Evidence Source |
 | :--- | :--- | :---: | :---: | :--- |

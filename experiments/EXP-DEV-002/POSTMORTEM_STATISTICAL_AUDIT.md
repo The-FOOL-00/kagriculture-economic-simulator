@@ -93,7 +93,7 @@ The table below summarizes performance against the external benchmark `Dmitrii-L
 
 ## 5. Verification of Pre-Registered Discovery Gating Criteria
 
-Under Section 2.7 of [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md):
+Under Section 2.7 of [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1_1.md):
 $$\text{ADVANCE IF: } \Delta \mu > +\$50.00 \quad \text{AND} \quad p_{05} \ge -\$200.00 \quad \text{AND} \quad \min_{s}(\text{Margin}(s)) \ge -\$800.00$$
 
 | Gating Criterion | Threshold Required | Observed Value | Gating Status |

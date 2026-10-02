@@ -2,7 +2,7 @@
 
 **Experiment Identifier**: `EXP-DEV-001`  
 **Governing Standard**: Prospective Scientific Pre-Registration & Evidence Lock Standard  
-**Protocol Document**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md)  
+**Protocol Document**: [`DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md`](file:///c:/Users/Sundareswaran/Kagriculture/research/audits/DEVELOPMENT_EXPERIMENT_PROTOCOL_V1.md)  
 **Protocol Freeze Hash (SHA-256)**: `671e915eadd72adb710421b45e6a33ad533abd9d68ff67770b8dd412ff7381b3`  
 **Protocol Git Commit**: `a1ba5acb0d04689874ce1333892825f014eea924`  
 **Execution Date**: 2026-09-11  
