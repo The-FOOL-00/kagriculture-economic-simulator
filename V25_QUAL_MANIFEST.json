@@ -1,0 +1,46 @@
+{
+  "project": "Kagriculture-V25",
+  "generated_at": "2026-09-21T12:20:00Z",
+  "decision_state": "V25 BACKBONE CONFIRMED / AEC TRANSFER FAILED",
+  "frozen_release_preserved": {
+    "archive_name": "submission_aec_v22r1.tar.gz",
+    "git_tag": "v22r1",
+    "sha256": "6b879b3e1577c24430e791f1a5665893d56d81b83df39c13eeeb26590f77eafe",
+    "status": "FROZEN_IMMUTABLE"
+  },
+  "promoted_backbone": {
+    "candidate_id": "V25_P3_UNIFIED",
+    "source_file": "candidates/v25_p3_unified.py",
+    "code_hash": "24982c75a40bb28d6c82be202e796e6d1c81ef9326f582a939f50e82c5f111ae",
+    "primary_mechanisms": [
+      "Optimal Opening Capital Velocity (OPEN_UNITS = 30)",
+      "Zero-Inventory In-Place Labor Dispatch (Watering & Weed Clearing)"
+    ]
+  },
+  "discovery_cohort_results": {
+    "seeds": "249430..249449",
+    "matches": 40,
+    "mean_paired_delta": 1300.70,
+    "median_paired_delta": 1300.00,
+    "record": "39W - 0L - 1T",
+    "win_rate": 0.975,
+    "tail_floor": 411.00
+  },
+  "confirmation_cohort_results": {
+    "seeds": "249450..249469",
+    "matches": 40,
+    "mean_paired_delta": 453.77,
+    "median_paired_delta": 424.50,
+    "net_positive_rate": 0.675,
+    "record": "14W - 11L - 15T",
+    "tail_floor": -5054.00,
+    "max_delta": 13053.00
+  },
+  "aec_transfer_results": {
+    "arm1_v3_standalone": {"mean_delta": 0.00, "record": "1W - 1L - 18T"},
+    "arm2_v3_plus_aec_v22r1": {"mean_delta": -21.80, "record": "1W - 2L - 17T"},
+    "arm3_v25_p3_standalone": {"mean_delta": -789.90, "record": "6W - 11L - 3T"},
+    "arm4_v25_p3_plus_aec": {"mean_delta": -3339.40, "record": "6W - 12L - 2T", "tail_loss": -23824.00}
+  },
+  "next_steps": "Retain V22R1 as active leaderboard submission. Defer AEC re-adaptation for V25 to a dedicated post-competition engineering phase."
+}
