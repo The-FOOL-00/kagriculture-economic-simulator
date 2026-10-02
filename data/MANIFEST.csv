@@ -1,0 +1,13 @@
+name,local_path,size_mb,purpose,source,how_to_reacquire,required_env,sha256,exact_historical_reproducibility_required
+live_tournament_episodes,live_data/episodes_v31r2/,6069.85,Live tournament match replays for meta intelligence,Kaggle Episodes API,research/v60/data/ACQUISITION_COMMANDS.sh,kaggle-environments 1.32.7,N/A,False
+competition_replay_archive,replays/,3949.39,Raw historical match replays across ladder tiers,Kaggle Competition Replays,research/v60/data/ACQUISITION_COMMANDS.sh,kaggle-environments 1.32.7,N/A,False
+v60_sep_elite_replays,research/v60/data/tmp_ep_jsons/,2527.15,Raw match replays from top September ladder participants,Kaggle Episodes API,python research/v60/data/acquire_sep_elite_replays.py,kaggle-environments 1.32.7,N/A,False
+teammate_online_replays,external_repos/lixingtao123-Kaggriculture/online_replays/,1456.39,Teammate shared replay collection (A B C1 C2),Teammate Repository,git clone / external archive,Python 3.11+,N/A,False
+scratch_replays_dump,scratch/replays/,1027.91,Intermediate simulation replays for diagnostic traces,Local Simulation Runs,python scripts/run_tournament.py,Python 3.11+,N/A,False
+scratch_v39_replays,scratch/v39/live/replays/,896.04,Intermediate simulation replays for V39 liquidation research,Local Simulation Runs,python scratch/v39/run_sim.py,Python 3.11+,N/A,False
+v32_p2_bc_legs,results/v32_p2_bc_legs.jsonl,220.69,Turn-by-turn trajectory logs for behavioral cloning,Local Benchmark Execution,python research/v32/eval_bc.py,kaggle-environments 1.32.7,N/A,False
+v27_trajectories,results/v27_trajectories.jsonl,160.10,Trajectory state logs for V27 robustness study,Local Benchmark Execution,python research/v27/run_robustness.py,kaggle-environments 1.32.7,N/A,False
+v27_fresh_trajectories,results/v27_fresh_trajectories.jsonl,128.14,Trajectory state logs for V27 fresh cohort study,Local Benchmark Execution,python research/v27/run_fresh.py,kaggle-environments 1.32.7,N/A,False
+market_pressure_dataset,research/v45/artifacts/market_pressure_dataset.pt,116.23,PyTorch tensor dataset for opponent pressure classifier,Generated from Replay Traces,python research/v45/data/train_market_pressure.py,PyTorch 2.12+,N/A,False
+august_replay_database,research/v58/data/replay_database.jsonl,114.13,Parsed August match replay records,August Public Replay Corpus,python research/v58/scripts/build_db.py,Python 3.11+,N/A,False
+opponent_market_history,research/v45/artifacts/opponent_market_history.jsonl,108.76,Intermediate opponent market action logs,Derived from Replay Parsing,python research/v45/data/extract_history.py,Python 3.11+,N/A,False
