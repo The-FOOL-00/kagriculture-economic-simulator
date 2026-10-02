@@ -1,0 +1,83 @@
+{
+  "catalog_version": "V51_EXTERNAL_AUDIT_V1",
+  "generated_at": "2026-09-26T13:05:00+05:30",
+  "mechanisms": {
+    "M1_Weed_Action_Repair": {
+      "id": "M1_WEED_ACTION_REPAIR",
+      "source_notebook": "kaitofukami/40-40-early-floor-39-46-top-10-v48-fast-routes",
+      "author": "Kaito Fukami",
+      "source_module": "scripts.v22_weed_repair",
+      "mechanism_class": "Local Blocked-Action State Machine",
+      "trigger_condition": "actor intended action in ('BUILD_PASTURE', 'PLANT') AND tile.kind == 'WEED'",
+      "action_sequence": [
+        "turn t: replace intended action with ['DIG']",
+        "turn t+1: replay original intended action",
+        "turn t+2..t+1+N: replay tape actions offset by -1 turn for N steps (default N=8)",
+        "turn t+2+N: expire transaction, re-align to base policy"
+      ],
+      "scope": "Strictly local to blocked actor; market actions and unaffected actors untouched",
+      "reported_metric": "Core component of public 3009.0 LB snapshot",
+      "local_status": "Extracted and reconstructed in research/v51/external",
+      "promotion_eligibility": "Direct candidate if natural blocker frequency > 0"
+    },
+    "M2_Strict_Future_Route_Validity": {
+      "id": "M2_STRICT_FUTURE_ROUTE_VALIDITY",
+      "source_notebook": "kaitofukami/25-27-strict-future-v27-midgame-meta-reset",
+      "author": "Kaito Fukami",
+      "source_module": "v27.route_validator",
+      "mechanism_class": "Offline Evaluation Protocol",
+      "description": "Chronological train/test split on scraped public replays to prevent temporal data leakage",
+      "reported_metric": "25/27 strict-future Top-30 test cases",
+      "local_status": "Audited in V33; confirmed as offline evaluation protocol, not an online game policy",
+      "promotion_eligibility": "Evaluation protocol only"
+    },
+    "M3_Midgame_Meta_Reset": {
+      "id": "M3_MIDGAME_META_RESET",
+      "source_notebook": "kaitofukami/25-27-strict-future-v27-midgame-meta-reset",
+      "author": "Kaito Fukami",
+      "source_module": "meta_reset_replication.py",
+      "mechanism_class": "Macro Route Switching Checkpoint",
+      "trigger_condition": "Step in (48, 144, 288) AND market saturation detected",
+      "action_sequence": "Discard active route tape, switch to R2 livestock or alternative",
+      "reported_metric": "3090.1 offline replay metric",
+      "local_status": "Audited in V33: 33.3% WR, -$8,433 downside tail due to physical farm asset mismatch",
+      "promotion_eligibility": "Rejected for general use; research fallback only"
+    },
+    "M4_Demand_Recovery_Sell_Reordering": {
+      "id": "M4_DEMAND_RECOVERY_SELL_REORDERING",
+      "source_notebook": "kaitofukami/40-40-early-floor-39-46-top-10-v48-fast-routes",
+      "author": "Kaito Fukami / PR #1394",
+      "source_module": "v23.policy_library.reorder_sell_slots",
+      "mechanism_class": "Market Order Permutation",
+      "trigger_condition": "Sell orders present and market regime == 'rebalance'",
+      "action_sequence": "Sort SELL slots using demand recovery curves and rival inventory exposure",
+      "reported_metric": "Part of 3009.0 module order",
+      "local_status": "Audited in V47: Mean Delta -$158.2 to -$164.3 on V44 chassis due to price-recovery disruption",
+      "promotion_eligibility": "Killed in V47 per Part 38 Stop Conditions"
+    },
+    "M5_Market_Front_Running": {
+      "id": "M5_MARKET_FRONT_RUNNING",
+      "source_notebook": "thomastschinkel/the-2945-farm-96-vs-the-top-10-public-bots",
+      "author": "Thomas Tschinkel / Yusuke Hayashi",
+      "source_module": "ORDERPRI2",
+      "mechanism_class": "Rival Inventory Tracking & Front-Running",
+      "trigger_condition": "Rival harvests animal products or crops",
+      "action_sequence": "Prioritize selling rival's held goods before rival reaches town center",
+      "reported_metric": "+$467.4 causal marginal value in V47 backward ablation ladder",
+      "local_status": "Already active inside V47, V48, V49 chassis",
+      "promotion_eligibility": "Already integrated in champion"
+    },
+    "M6_Late_Seed_Cap": {
+      "id": "M6_LATE_SEED_CAP",
+      "source_notebook": "V49 Meta Fusion / E402",
+      "author": "Ahmed Berat Ozer / Antigravity Team",
+      "source_module": "candidates.v49_meta_fusion.main",
+      "mechanism_class": "Terminal Capital Leakage Prevention",
+      "trigger_condition": "Step >= 624 AND op == 'BUY_SEED' for WHEAT/CARROT",
+      "action_sequence": "Clamp seed purchases to remaining unplanted demand in active route",
+      "reported_metric": "+$64.46 mean cash superiority out-of-sample across 576 legs (95% CI [+$58.19, +$70.87])",
+      "local_status": "Verified champion mechanism in V49",
+      "promotion_eligibility": "Active champion baseline"
+    }
+  }
+}

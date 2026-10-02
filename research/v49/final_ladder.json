@@ -1,0 +1,104 @@
+{
+  "V44": {
+    "legs": 256,
+    "win_rate_v48": 0.94921875,
+    "win_rate_v49": 0.95703125,
+    "mean_delta": 90.859375,
+    "median_delta": 160.0,
+    "ci_95": [
+      0.0,
+      160.0
+    ],
+    "p10_delta": 0.0,
+    "rescues": 2,
+    "casualties": 0,
+    "active_legs": 150,
+    "active_mean": 155.06666666666666,
+    "active_median": 160.0
+  },
+  "dmitrii_lb2800": {
+    "legs": 256,
+    "win_rate_v48": 1.0,
+    "win_rate_v49": 1.0,
+    "mean_delta": 89.296875,
+    "median_delta": 160.0,
+    "ci_95": [
+      0.0,
+      160.0
+    ],
+    "p10_delta": 0.0,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 146,
+    "active_mean": 156.57534246575344,
+    "active_median": 160.0
+  },
+  "tetsutani_pasture": {
+    "legs": 256,
+    "win_rate_v48": 1.0,
+    "win_rate_v49": 1.0,
+    "mean_delta": 88.359375,
+    "median_delta": 140.0,
+    "ci_95": [
+      0.0,
+      160.0
+    ],
+    "p10_delta": 0.0,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 146,
+    "active_mean": 154.93150684931507,
+    "active_median": 160.0
+  },
+  "kaitofukami_v48_3009": {
+    "legs": 256,
+    "win_rate_v48": 1.0,
+    "win_rate_v49": 1.0,
+    "mean_delta": 53.0859375,
+    "median_delta": 0.0,
+    "ci_95": [
+      0.0,
+      160.0
+    ],
+    "p10_delta": 0.0,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 88,
+    "active_mean": 154.4318181818182,
+    "active_median": 160.0
+  },
+  "indarkarhana_top10": {
+    "legs": 256,
+    "win_rate_v48": 1.0,
+    "win_rate_v49": 1.0,
+    "mean_delta": 85.546875,
+    "median_delta": 120.0,
+    "ci_95": [
+      0.0,
+      160.0
+    ],
+    "p10_delta": 0.0,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 143,
+    "active_mean": 153.14685314685315,
+    "active_median": 160.0
+  },
+  "saiteja_mega_3000": {
+    "legs": 256,
+    "win_rate_v48": 1.0,
+    "win_rate_v49": 1.0,
+    "mean_delta": 53.7109375,
+    "median_delta": 0.0,
+    "ci_95": [
+      0.0,
+      160.0
+    ],
+    "p10_delta": 0.0,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 92,
+    "active_mean": 149.45652173913044,
+    "active_median": 160.0
+  }
+}

@@ -1,0 +1,1664 @@
+[
+  {
+    "seed": 250401,
+    "seat": 0,
+    "state": {
+      "seed": 250401,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 89212.0,
+    "cash_without_cowswap": 89212.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 1419.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250401,
+    "seat": 1,
+    "state": {
+      "seed": 250401,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 89212.0,
+    "cash_without_cowswap": 89212.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 1419.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250403,
+    "seat": 0,
+    "state": {
+      "seed": 250403,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 69285.0,
+    "cash_without_cowswap": 69285.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 3751.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250403,
+    "seat": 1,
+    "state": {
+      "seed": 250403,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 69285.0,
+    "cash_without_cowswap": 69285.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 3751.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250408,
+    "seat": 0,
+    "state": {
+      "seed": 250408,
+      "seat": 0,
+      "step": 150,
+      "money": 2207.0,
+      "unlocked_shops": [
+        "PET_CAFE",
+        "BAKERY"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 51.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9991,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 76097.0,
+    "cash_without_cowswap": 76097.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 2469.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250408,
+    "seat": 1,
+    "state": {
+      "seed": 250408,
+      "seat": 1,
+      "step": 150,
+      "money": 2207.0,
+      "unlocked_shops": [
+        "PET_CAFE",
+        "BAKERY"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 51.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9991,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 76097.0,
+    "cash_without_cowswap": 76097.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 2469.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250413,
+    "seat": 0,
+    "state": {
+      "seed": 250413,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 60770.0,
+    "cash_without_cowswap": 57350.0,
+    "cowswap_net_delta": 3420.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 5566.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250413,
+    "seat": 1,
+    "state": {
+      "seed": 250413,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 60770.0,
+    "cash_without_cowswap": 57350.0,
+    "cowswap_net_delta": 3420.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 5566.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250414,
+    "seat": 0,
+    "state": {
+      "seed": 250414,
+      "seat": 0,
+      "step": 150,
+      "money": 2207.0,
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": false,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 50.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9993,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 65066.0,
+    "cash_without_cowswap": 62452.0,
+    "cowswap_net_delta": 2614.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 4185.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250414,
+    "seat": 1,
+    "state": {
+      "seed": 250414,
+      "seat": 1,
+      "step": 150,
+      "money": 2207.0,
+      "unlocked_shops": [
+        "PET_CAFE",
+        "FARMERS_MARKET"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": false,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 50.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9993,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 65066.0,
+    "cash_without_cowswap": 62452.0,
+    "cowswap_net_delta": 2614.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 4185.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250415,
+    "seat": 0,
+    "state": {
+      "seed": 250415,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 51.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9991,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 80214.0,
+    "cash_without_cowswap": 78952.0,
+    "cowswap_net_delta": 1262.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 1963.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250415,
+    "seat": 1,
+    "state": {
+      "seed": 250415,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "FARMERS_MARKET",
+        "BAKERY"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 51.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9991,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 80214.0,
+    "cash_without_cowswap": 78952.0,
+    "cowswap_net_delta": 1262.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 1963.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250416,
+    "seat": 0,
+    "state": {
+      "seed": 250416,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 95157.0,
+    "cash_without_cowswap": 92692.0,
+    "cowswap_net_delta": 2465.0,
+    "won_with_cowswap": false,
+    "won_without_cowswap": false,
+    "terminal_margin_vs_v44": -716.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250416,
+    "seat": 1,
+    "state": {
+      "seed": 250416,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 95157.0,
+    "cash_without_cowswap": 92692.0,
+    "cowswap_net_delta": 2465.0,
+    "won_with_cowswap": false,
+    "won_without_cowswap": false,
+    "terminal_margin_vs_v44": -716.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250419,
+    "seat": 0,
+    "state": {
+      "seed": 250419,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 63956.0,
+    "cash_without_cowswap": 60607.0,
+    "cowswap_net_delta": 3349.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 3596.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250419,
+    "seat": 1,
+    "state": {
+      "seed": 250419,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 63956.0,
+    "cash_without_cowswap": 60607.0,
+    "cowswap_net_delta": 3349.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 3596.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250422,
+    "seat": 0,
+    "state": {
+      "seed": 250422,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9971,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 109823.0,
+    "cash_without_cowswap": 109823.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 834.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250422,
+    "seat": 1,
+    "state": {
+      "seed": 250422,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9971,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 109823.0,
+    "cash_without_cowswap": 109823.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 834.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250423,
+    "seat": 0,
+    "state": {
+      "seed": 250423,
+      "seat": 0,
+      "step": 150,
+      "money": 2207.0,
+      "unlocked_shops": [
+        "PET_CAFE",
+        "BRUNCH_SPOT"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 51.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9991,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 107871.0,
+    "cash_without_cowswap": 107871.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 9966.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250423,
+    "seat": 1,
+    "state": {
+      "seed": 250423,
+      "seat": 1,
+      "step": 150,
+      "money": 2207.0,
+      "unlocked_shops": [
+        "PET_CAFE",
+        "BRUNCH_SPOT"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 51.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9991,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 107871.0,
+    "cash_without_cowswap": 107871.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 9966.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250425,
+    "seat": 0,
+    "state": {
+      "seed": 250425,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 61852.0,
+    "cash_without_cowswap": 59972.0,
+    "cowswap_net_delta": 1880.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 1877.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250425,
+    "seat": 1,
+    "state": {
+      "seed": 250425,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BAKERY",
+        "PET_CAFE"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 61852.0,
+    "cash_without_cowswap": 59972.0,
+    "cowswap_net_delta": 1880.0,
+    "won_with_cowswap": true,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": 1877.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250433,
+    "seat": 0,
+    "state": {
+      "seed": 250433,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9971,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 118867.0,
+    "cash_without_cowswap": 118867.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": false,
+    "won_without_cowswap": false,
+    "terminal_margin_vs_v44": -470.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250433,
+    "seat": 1,
+    "state": {
+      "seed": 250433,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BRUNCH_SPOT"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9971,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 118867.0,
+    "cash_without_cowswap": 118867.0,
+    "cowswap_net_delta": 0.0,
+    "won_with_cowswap": false,
+    "won_without_cowswap": false,
+    "terminal_margin_vs_v44": -470.0,
+    "classification": "NEUTRAL_COWSWAP"
+  },
+  {
+    "seed": 250436,
+    "seat": 0,
+    "state": {
+      "seed": 250436,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 113638.0,
+    "cash_without_cowswap": 113142.0,
+    "cowswap_net_delta": 496.0,
+    "won_with_cowswap": false,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": -1405.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250436,
+    "seat": 1,
+    "state": {
+      "seed": 250436,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9973,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 113638.0,
+    "cash_without_cowswap": 113142.0,
+    "cowswap_net_delta": 496.0,
+    "won_with_cowswap": false,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": -1405.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250439,
+    "seat": 0,
+    "state": {
+      "seed": 250439,
+      "seat": 0,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9971,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 110292.0,
+    "cash_without_cowswap": 108976.0,
+    "cowswap_net_delta": 1316.0,
+    "won_with_cowswap": false,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": -1407.0,
+    "classification": "GOOD_COWSWAP"
+  },
+  {
+    "seed": 250439,
+    "seat": 1,
+    "state": {
+      "seed": 250439,
+      "seat": 1,
+      "step": 150,
+      "money": 2205.0,
+      "unlocked_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "shop_count": 2,
+      "has_milk_shop": false,
+      "has_egg_shop": true,
+      "has_yarn_store": false,
+      "milk_price": 183.0,
+      "egg_price": 52.0,
+      "milk_inventory": 9993,
+      "egg_inventory": 9971,
+      "current_cows": 4,
+      "current_geese": 0,
+      "coops": 0,
+      "pastures": 6,
+      "market_orders": [
+        [
+          "SELL",
+          "WOOL",
+          4
+        ],
+        [
+          "BUY_PRODUCT",
+          "WHEAT",
+          2
+        ],
+        [
+          "BUY_LAND"
+        ],
+        [
+          "BUY_ANIMAL",
+          "GOOSE",
+          2
+        ],
+        [
+          "BUY_PRODUCT",
+          "FERTILIZER",
+          1
+        ]
+      ],
+      "swapped_to_goose": true
+    },
+    "cash_with_cowswap": 110292.0,
+    "cash_without_cowswap": 108976.0,
+    "cowswap_net_delta": 1316.0,
+    "won_with_cowswap": false,
+    "won_without_cowswap": true,
+    "terminal_margin_vs_v44": -1407.0,
+    "classification": "GOOD_COWSWAP"
+  }
+]

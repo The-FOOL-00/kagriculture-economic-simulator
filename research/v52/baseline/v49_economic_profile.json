@@ -1,0 +1,932 @@
+{
+  "sample_seeds": [
+    250400,
+    250401,
+    250402,
+    250403,
+    250404,
+    250405,
+    250406,
+    250407,
+    250416,
+    250436
+  ],
+  "total_runs": 20,
+  "mean_terminal_money": 93312.75,
+  "median_terminal_money": 90643.5,
+  "std_terminal_money": 16823.627007500494,
+  "milestones": [
+    {
+      "day": 0,
+      "step": 12,
+      "mean_money": 501.0,
+      "std_money": 0.0,
+      "mean_cows": 2.0,
+      "mean_sheep": 2.0,
+      "mean_geese": 0.0,
+      "mean_hands": 5.0,
+      "mean_quadrants": 1.0,
+      "mean_wheat_reserve": 3.0,
+      "mean_shed_occupancy": 3.0
+    },
+    {
+      "day": 1,
+      "step": 36,
+      "mean_money": 151.0,
+      "std_money": 0.0,
+      "mean_cows": 2.0,
+      "mean_sheep": 2.0,
+      "mean_geese": 0.0,
+      "mean_hands": 3.0,
+      "mean_quadrants": 1.0,
+      "mean_wheat_reserve": 6.0,
+      "mean_shed_occupancy": 6.0
+    },
+    {
+      "day": 2,
+      "step": 60,
+      "mean_money": 243.0,
+      "std_money": 0.0,
+      "mean_cows": 2.0,
+      "mean_sheep": 2.0,
+      "mean_geese": 0.0,
+      "mean_hands": 4.0,
+      "mean_quadrants": 1.0,
+      "mean_wheat_reserve": 1.0,
+      "mean_shed_occupancy": 1.0
+    },
+    {
+      "day": 3,
+      "step": 84,
+      "mean_money": 282.0,
+      "std_money": 0.0,
+      "mean_cows": 3.0,
+      "mean_sheep": 2.0,
+      "mean_geese": 0.0,
+      "mean_hands": 5.0,
+      "mean_quadrants": 1.0,
+      "mean_wheat_reserve": 0.0,
+      "mean_shed_occupancy": 0.0
+    },
+    {
+      "day": 4,
+      "step": 108,
+      "mean_money": 414.4,
+      "std_money": 1.2,
+      "mean_cows": 4.0,
+      "mean_sheep": 2.0,
+      "mean_geese": 0.0,
+      "mean_hands": 4.0,
+      "mean_quadrants": 1.0,
+      "mean_wheat_reserve": 4.0,
+      "mean_shed_occupancy": 4.0
+    },
+    {
+      "day": 5,
+      "step": 132,
+      "mean_money": 640.4,
+      "std_money": 0.8000000000000002,
+      "mean_cows": 4.0,
+      "mean_sheep": 2.0,
+      "mean_geese": 0.0,
+      "mean_hands": 4.0,
+      "mean_quadrants": 1.0,
+      "mean_wheat_reserve": 8.0,
+      "mean_shed_occupancy": 8.0
+    },
+    {
+      "day": 6,
+      "step": 156,
+      "mean_money": 1578.8,
+      "std_money": 96.56583246676851,
+      "mean_cows": 4.6,
+      "mean_sheep": 2.0,
+      "mean_geese": 0.4,
+      "mean_hands": 7.0,
+      "mean_quadrants": 2.0,
+      "mean_wheat_reserve": 12.0,
+      "mean_shed_occupancy": 14.0
+    },
+    {
+      "day": 7,
+      "step": 180,
+      "mean_money": 800.9,
+      "std_money": 98.9186029015776,
+      "mean_cows": 6.2,
+      "mean_sheep": 2.0,
+      "mean_geese": 0.8,
+      "mean_hands": 7.0,
+      "mean_quadrants": 2.0,
+      "mean_wheat_reserve": 3.0,
+      "mean_shed_occupancy": 3.0
+    },
+    {
+      "day": 8,
+      "step": 204,
+      "mean_money": 1383.5,
+      "std_money": 204.3547161188114,
+      "mean_cows": 7.2,
+      "mean_sheep": 3.0,
+      "mean_geese": 0.8,
+      "mean_hands": 8.0,
+      "mean_quadrants": 2.0,
+      "mean_wheat_reserve": 12.0,
+      "mean_shed_occupancy": 12.0
+    },
+    {
+      "day": 9,
+      "step": 228,
+      "mean_money": 2055.2,
+      "std_money": 230.00426083009853,
+      "mean_cows": 7.2,
+      "mean_sheep": 4.0,
+      "mean_geese": 0.8,
+      "mean_hands": 8.0,
+      "mean_quadrants": 2.0,
+      "mean_wheat_reserve": 23.0,
+      "mean_shed_occupancy": 24.0
+    },
+    {
+      "day": 10,
+      "step": 252,
+      "mean_money": 10707.3,
+      "std_money": 224.2092995395151,
+      "mean_cows": 7.5,
+      "mean_sheep": 4.7,
+      "mean_geese": 0.8,
+      "mean_hands": 11.0,
+      "mean_quadrants": 2.0,
+      "mean_wheat_reserve": 44.9,
+      "mean_shed_occupancy": 47.9
+    },
+    {
+      "day": 11,
+      "step": 276,
+      "mean_money": 14468.9,
+      "std_money": 1104.0259915418658,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 10.0,
+      "mean_quadrants": 3.0,
+      "mean_wheat_reserve": 47.0,
+      "mean_shed_occupancy": 47.4
+    },
+    {
+      "day": 12,
+      "step": 300,
+      "mean_money": 18048.6,
+      "std_money": 1713.7067835542928,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 9.0,
+      "mean_quadrants": 3.0,
+      "mean_wheat_reserve": 13.0,
+      "mean_shed_occupancy": 15.8
+    },
+    {
+      "day": 13,
+      "step": 324,
+      "mean_money": 20246.6,
+      "std_money": 1885.5966535820965,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 9.0,
+      "mean_quadrants": 3.0,
+      "mean_wheat_reserve": 0.0,
+      "mean_shed_occupancy": 0.0
+    },
+    {
+      "day": 14,
+      "step": 348,
+      "mean_money": 23076.6,
+      "std_money": 2993.402401949995,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 9.0,
+      "mean_quadrants": 3.0,
+      "mean_wheat_reserve": 0.0,
+      "mean_shed_occupancy": 12.6
+    },
+    {
+      "day": 15,
+      "step": 372,
+      "mean_money": 25816.7,
+      "std_money": 3816.843500852504,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 10.0,
+      "mean_quadrants": 3.0,
+      "mean_wheat_reserve": 0.0,
+      "mean_shed_occupancy": 1.4
+    },
+    {
+      "day": 16,
+      "step": 396,
+      "mean_money": 29630.1,
+      "std_money": 4767.380789280421,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.0,
+      "mean_quadrants": 3.0,
+      "mean_wheat_reserve": 1.8,
+      "mean_shed_occupancy": 10.7
+    },
+    {
+      "day": 17,
+      "step": 420,
+      "mean_money": 34919.4,
+      "std_money": 5830.378147255973,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.0,
+      "mean_quadrants": 3.0,
+      "mean_wheat_reserve": 12.0,
+      "mean_shed_occupancy": 18.8
+    },
+    {
+      "day": 18,
+      "step": 444,
+      "mean_money": 39363.6,
+      "std_money": 6980.188066234318,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.2,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 15.6,
+      "mean_shed_occupancy": 19.7
+    },
+    {
+      "day": 19,
+      "step": 468,
+      "mean_money": 45476.2,
+      "std_money": 7676.246319653897,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 10.4,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 14.0,
+      "mean_shed_occupancy": 24.4
+    },
+    {
+      "day": 20,
+      "step": 492,
+      "mean_money": 49120.95,
+      "std_money": 8232.277500637354,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.1,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 14.4,
+      "mean_shed_occupancy": 25.3
+    },
+    {
+      "day": 21,
+      "step": 516,
+      "mean_money": 54906.45,
+      "std_money": 9367.18589265207,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.2,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 8.5,
+      "mean_shed_occupancy": 13.4
+    },
+    {
+      "day": 22,
+      "step": 540,
+      "mean_money": 60164.65,
+      "std_money": 11137.264050362639,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.1,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 15.7,
+      "mean_shed_occupancy": 23.3
+    },
+    {
+      "day": 23,
+      "step": 564,
+      "mean_money": 64130.25,
+      "std_money": 12909.827573887267,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.1,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 8.3,
+      "mean_shed_occupancy": 14.0
+    },
+    {
+      "day": 24,
+      "step": 588,
+      "mean_money": 67477.3,
+      "std_money": 14044.958964340194,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.4,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 0.9,
+      "mean_shed_occupancy": 11.55
+    },
+    {
+      "day": 25,
+      "step": 612,
+      "mean_money": 70822.0,
+      "std_money": 14556.017123512875,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.2,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 5.0,
+      "mean_shed_occupancy": 16.75
+    },
+    {
+      "day": 26,
+      "step": 636,
+      "mean_money": 74250.15,
+      "std_money": 15269.977145611583,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.5,
+      "mean_hands": 11.3,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 0.0,
+      "mean_shed_occupancy": 16.9
+    },
+    {
+      "day": 27,
+      "step": 660,
+      "mean_money": 77747.0,
+      "std_money": 15520.577956377783,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.4,
+      "mean_hands": 11.1,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 3.7,
+      "mean_shed_occupancy": 7.5
+    },
+    {
+      "day": 28,
+      "step": 684,
+      "mean_money": 81640.9,
+      "std_money": 15873.244712093367,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.4,
+      "mean_hands": 11.5,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 0.0,
+      "mean_shed_occupancy": 23.2
+    },
+    {
+      "day": 29,
+      "step": 708,
+      "mean_money": 88371.5,
+      "std_money": 16768.78748896294,
+      "mean_cows": 7.5,
+      "mean_sheep": 6.0,
+      "mean_geese": 3.4,
+      "mean_hands": 11.2,
+      "mean_quadrants": 3.1,
+      "mean_wheat_reserve": 4.8,
+      "mean_shed_occupancy": 5.2
+    }
+  ],
+  "runs_summary": [
+    {
+      "seed": 250400,
+      "seat": 0,
+      "terminal_money": 90777.0,
+      "cum_output": {
+        "MILK": 8497,
+        "WOOL": 6264,
+        "EGG": 8185,
+        "WHEAT": 18167,
+        "CARROT": 17096,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6475,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8344,
+        "WOOL": 6222,
+        "EGG": 8109,
+        "WHEAT": 17422,
+        "CARROT": 17048,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6348,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250400,
+      "seat": 1,
+      "terminal_money": 90777.0,
+      "cum_output": {
+        "MILK": 8497,
+        "WOOL": 6264,
+        "EGG": 8185,
+        "WHEAT": 18167,
+        "CARROT": 17096,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6475,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8344,
+        "WOOL": 6222,
+        "EGG": 8109,
+        "WHEAT": 17422,
+        "CARROT": 17048,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6348,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250401,
+      "seat": 0,
+      "terminal_money": 89212.0,
+      "cum_output": {
+        "MILK": 8366,
+        "WOOL": 6298,
+        "EGG": 8269,
+        "WHEAT": 18084,
+        "CARROT": 17131,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6487,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8286,
+        "WOOL": 6206,
+        "EGG": 8149,
+        "WHEAT": 17389,
+        "CARROT": 17070,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6359,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250401,
+      "seat": 1,
+      "terminal_money": 89212.0,
+      "cum_output": {
+        "MILK": 8366,
+        "WOOL": 6298,
+        "EGG": 8269,
+        "WHEAT": 18084,
+        "CARROT": 17131,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6487,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8286,
+        "WOOL": 6206,
+        "EGG": 8149,
+        "WHEAT": 17389,
+        "CARROT": 17070,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6359,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250402,
+      "seat": 0,
+      "terminal_money": 112573.0,
+      "cum_output": {
+        "MILK": 8469,
+        "WOOL": 6259,
+        "EGG": 8171,
+        "WHEAT": 18099,
+        "CARROT": 17117,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6434,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8328,
+        "WOOL": 6211,
+        "EGG": 8090,
+        "WHEAT": 17386,
+        "CARROT": 17061,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6319,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250402,
+      "seat": 1,
+      "terminal_money": 112573.0,
+      "cum_output": {
+        "MILK": 8469,
+        "WOOL": 6259,
+        "EGG": 8171,
+        "WHEAT": 18099,
+        "CARROT": 17117,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6434,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8328,
+        "WOOL": 6211,
+        "EGG": 8090,
+        "WHEAT": 17386,
+        "CARROT": 17061,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6319,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250403,
+      "seat": 0,
+      "terminal_money": 69285.0,
+      "cum_output": {
+        "MILK": 8372,
+        "WOOL": 6262,
+        "EGG": 8274,
+        "WHEAT": 18063,
+        "CARROT": 17229,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6483,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8286,
+        "WOOL": 6208,
+        "EGG": 8147,
+        "WHEAT": 17372,
+        "CARROT": 17119,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6355,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250403,
+      "seat": 1,
+      "terminal_money": 69285.0,
+      "cum_output": {
+        "MILK": 8372,
+        "WOOL": 6262,
+        "EGG": 8274,
+        "WHEAT": 18063,
+        "CARROT": 17229,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6483,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8286,
+        "WOOL": 6208,
+        "EGG": 8147,
+        "WHEAT": 17372,
+        "CARROT": 17119,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6355,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250404,
+      "seat": 0,
+      "terminal_money": 66421.0,
+      "cum_output": {
+        "MILK": 8382,
+        "WOOL": 6296,
+        "EGG": 8171,
+        "WHEAT": 18034,
+        "CARROT": 17237,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6507,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8291,
+        "WOOL": 6225,
+        "EGG": 8092,
+        "WHEAT": 17361,
+        "CARROT": 17122,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6384,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250404,
+      "seat": 1,
+      "terminal_money": 66499.0,
+      "cum_output": {
+        "MILK": 8382,
+        "WOOL": 6296,
+        "EGG": 8171,
+        "WHEAT": 18034,
+        "CARROT": 17237,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6507,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8291,
+        "WOOL": 6225,
+        "EGG": 8092,
+        "WHEAT": 17361,
+        "CARROT": 17122,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6384,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250405,
+      "seat": 0,
+      "terminal_money": 86705.0,
+      "cum_output": {
+        "MILK": 8493,
+        "WOOL": 6282,
+        "EGG": 8172,
+        "WHEAT": 18093,
+        "CARROT": 17106,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6460,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8329,
+        "WOOL": 6201,
+        "EGG": 8089,
+        "WHEAT": 17400,
+        "CARROT": 17048,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6338,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250405,
+      "seat": 1,
+      "terminal_money": 86104.0,
+      "cum_output": {
+        "MILK": 8496,
+        "WOOL": 6282,
+        "EGG": 8172,
+        "WHEAT": 18097,
+        "CARROT": 17106,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6455,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8333,
+        "WOOL": 6201,
+        "EGG": 8089,
+        "WHEAT": 17402,
+        "CARROT": 17048,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6336,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250406,
+      "seat": 0,
+      "terminal_money": 90510.0,
+      "cum_output": {
+        "MILK": 8501,
+        "WOOL": 6327,
+        "EGG": 8192,
+        "WHEAT": 18124,
+        "CARROT": 17096,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6498,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8362,
+        "WOOL": 6241,
+        "EGG": 8116,
+        "WHEAT": 17403,
+        "CARROT": 17048,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6375,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250406,
+      "seat": 1,
+      "terminal_money": 90510.0,
+      "cum_output": {
+        "MILK": 8501,
+        "WOOL": 6327,
+        "EGG": 8192,
+        "WHEAT": 18124,
+        "CARROT": 17096,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6498,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8362,
+        "WOOL": 6241,
+        "EGG": 8116,
+        "WHEAT": 17403,
+        "CARROT": 17048,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6375,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250407,
+      "seat": 0,
+      "terminal_money": 119111.0,
+      "cum_output": {
+        "MILK": 8408,
+        "WOOL": 6390,
+        "EGG": 0,
+        "WHEAT": 18109,
+        "CARROT": 17111,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6510,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8304,
+        "WOOL": 6246,
+        "EGG": 0,
+        "WHEAT": 17393,
+        "CARROT": 17056,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6381,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250407,
+      "seat": 1,
+      "terminal_money": 119111.0,
+      "cum_output": {
+        "MILK": 8408,
+        "WOOL": 6390,
+        "EGG": 0,
+        "WHEAT": 18109,
+        "CARROT": 17111,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6510,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8304,
+        "WOOL": 6246,
+        "EGG": 0,
+        "WHEAT": 17393,
+        "CARROT": 17056,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6381,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250416,
+      "seat": 0,
+      "terminal_money": 95157.0,
+      "cum_output": {
+        "MILK": 8374,
+        "WOOL": 6254,
+        "EGG": 8296,
+        "WHEAT": 18097,
+        "CARROT": 17191,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6447,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8286,
+        "WOOL": 6200,
+        "EGG": 8175,
+        "WHEAT": 17402,
+        "CARROT": 17090,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6332,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250416,
+      "seat": 1,
+      "terminal_money": 95157.0,
+      "cum_output": {
+        "MILK": 8374,
+        "WOOL": 6254,
+        "EGG": 8296,
+        "WHEAT": 18097,
+        "CARROT": 17191,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6447,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8286,
+        "WOOL": 6200,
+        "EGG": 8175,
+        "WHEAT": 17402,
+        "CARROT": 17090,
+        "TOMATO": 6000,
+        "STRAWBERRY": 6332,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250436,
+      "seat": 0,
+      "terminal_money": 113638.0,
+      "cum_output": {
+        "MILK": 8397,
+        "WOOL": 6280,
+        "EGG": 8303,
+        "WHEAT": 18076,
+        "CARROT": 17102,
+        "TOMATO": 6078,
+        "STRAWBERRY": 6457,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8277,
+        "WOOL": 6208,
+        "EGG": 8176,
+        "WHEAT": 17379,
+        "CARROT": 17048,
+        "TOMATO": 6070,
+        "STRAWBERRY": 6336,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    },
+    {
+      "seed": 250436,
+      "seat": 1,
+      "terminal_money": 113638.0,
+      "cum_output": {
+        "MILK": 8397,
+        "WOOL": 6280,
+        "EGG": 8303,
+        "WHEAT": 18076,
+        "CARROT": 17102,
+        "TOMATO": 6078,
+        "STRAWBERRY": 6457,
+        "MELON": 6084
+      },
+      "cum_sales": {
+        "MILK": 8277,
+        "WOOL": 6208,
+        "EGG": 8176,
+        "WHEAT": 17379,
+        "CARROT": 17048,
+        "TOMATO": 6070,
+        "STRAWBERRY": 6336,
+        "MELON": 6072,
+        "FERTILIZER": 0
+      }
+    }
+  ]
+}

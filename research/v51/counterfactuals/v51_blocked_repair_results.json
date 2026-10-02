@@ -1,0 +1,102 @@
+{
+  "C0": {
+    "variant": "C0",
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "p0_min": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "time_seconds": 30.335317611694336
+  },
+  "C1": {
+    "variant": "C1",
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "p0_min": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "time_seconds": 48.935938119888306
+  },
+  "C2": {
+    "variant": "C2",
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "p0_min": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "time_seconds": 46.41124391555786
+  },
+  "C4": {
+    "variant": "C4",
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "p0_min": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "time_seconds": 45.369524240493774
+  },
+  "C5": {
+    "variant": "C5",
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "p0_min": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "time_seconds": 44.179314374923706
+  }
+}

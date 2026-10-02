@@ -1,0 +1,97 @@
+{
+  "loss_res": [
+    {
+      "seed": 249877,
+      "seat": 0,
+      "opp": "V44",
+      "mode": "YARN_HERD",
+      "cash_base": 93443.0,
+      "cash_cand": 93443.0,
+      "delta": 0.0,
+      "win_base": false,
+      "win_cand": false
+    },
+    {
+      "seed": 249877,
+      "seat": 1,
+      "opp": "V44",
+      "mode": "YARN_HERD",
+      "cash_base": 97390.0,
+      "cash_cand": 97390.0,
+      "delta": 0.0,
+      "win_base": true,
+      "win_cand": true
+    },
+    {
+      "seed": 249920,
+      "seat": 0,
+      "opp": "V44",
+      "mode": "YARN_HERD",
+      "cash_base": 150193.0,
+      "cash_cand": 150193.0,
+      "delta": 0.0,
+      "win_base": false,
+      "win_cand": false
+    },
+    {
+      "seed": 249920,
+      "seat": 1,
+      "opp": "V44",
+      "mode": "YARN_HERD",
+      "cash_base": 150193.0,
+      "cash_cand": 150193.0,
+      "delta": 0.0,
+      "win_base": false,
+      "win_cand": false
+    },
+    {
+      "seed": 249865,
+      "seat": 0,
+      "opp": "Tetsutani",
+      "mode": "YARN_HERD",
+      "cash_base": 133377.0,
+      "cash_cand": 133377.0,
+      "delta": 0.0,
+      "win_base": false,
+      "win_cand": false
+    },
+    {
+      "seed": 249865,
+      "seat": 1,
+      "opp": "Tetsutani",
+      "mode": "YARN_HERD",
+      "cash_base": 133377.0,
+      "cash_cand": 133377.0,
+      "delta": 0.0,
+      "win_base": false,
+      "win_cand": false
+    },
+    {
+      "seed": 249884,
+      "seat": 0,
+      "opp": "Tetsutani",
+      "mode": "YARN_HERD",
+      "cash_base": 130581.0,
+      "cash_cand": 130581.0,
+      "delta": 0.0,
+      "win_base": false,
+      "win_cand": false
+    },
+    {
+      "seed": 249884,
+      "seat": 1,
+      "opp": "Tetsutani",
+      "mode": "YARN_HERD",
+      "cash_base": 130581.0,
+      "cash_cand": 130581.0,
+      "delta": 0.0,
+      "win_base": false,
+      "win_cand": false
+    }
+  ],
+  "mean_delta": -117.03125,
+  "median_delta": 50.0,
+  "win_rate_v49": 0.8828125,
+  "rescues": 0,
+  "casualties": 2
+}

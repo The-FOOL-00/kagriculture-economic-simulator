@@ -1,0 +1,20 @@
+{
+  "8C_6S_x_B0": {
+    "mean_delta": 0.0,
+    "description": "Baseline V49"
+  },
+  "8C_6S_x_B1": {
+    "mean_delta": 0.0,
+    "description": "Baseline V49 + Barn Reservation"
+  },
+  "9C_4S_x_B0": {
+    "mean_delta": -10041.184210526315,
+    "description": "9C/4S Herd without barn intervention"
+  },
+  "9C_4S_x_B1": {
+    "mean_delta": -10041.184210526315,
+    "description": "9C/4S Herd + Barn Reservation"
+  },
+  "interaction_term": 0.0,
+  "causal_finding": "Barn congestion is inert in open-loop route tapes (zero blocked movements); herd composition dominates 100% of the delta."
+}

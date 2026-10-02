@@ -1,0 +1,77 @@
+{
+  "governance": {
+    "target_definition": "DEAD_ACTION = action whose incremental terminal value is provably zero or negative under the current future route/state",
+    "core_imperative": "dead-action suppression without choreography desynchronization",
+    "invariance_requirement": "Exact preservation of baseline action behavior in all non-triggered states; zero casualties"
+  },
+  "mechanisms": {
+    "M1_GENERALIZED_SEED_GUARD": {
+      "name": "Generalized Dynamic Planting Demand Seed Cap",
+      "action_type": "market.BUY_SEED",
+      "target_crops": [
+        "WHEAT",
+        "CARROT",
+        "MELON",
+        "TOMATO",
+        "STRAWBERRY"
+      ],
+      "crop_maturation_latencies": {
+        "WHEAT": 2,
+        "CARROT": 2,
+        "TOMATO": 8,
+        "STRAWBERRY": 10,
+        "MELON": 10
+      },
+      "causal_premise": "A seed purchased whose associated future planting action cannot complete at least one harvest cycle before step 718, or for which current seed inventory already satisfies all remaining actionable planting commands, has provably zero terminal liquidation value.",
+      "mathematical_rule": "For each crop p in CROPS: remaining_actionable_plants(p) = sum(1 for (t, unit_cmd) in future_route_tape if is_plant(unit_cmd, p) and (t // 24 + latency[p] <= 29) and has_subsequent_harvest(p, t)) + pending_queue_plants(p); available_seeds(p) = current_inventory(p) - current_turn_plant_commitments(p); order_keep(p) = min(order_qty(p), max(0, remaining_actionable_plants(p) - available_seeds(p))).",
+      "threat_model": "Over-suppression if future route switch occurs or dynamic queuing plants unpredicted crops. Guarded by checking native chassis route and only clamping market orders without altering unit movements."
+    },
+    "M2_DEAD_FERTILIZER_PURCHASE_GUARD": {
+      "name": "Late Fertilizer Purchase Suppression",
+      "action_type": "market.BUY_PRODUCT",
+      "target_product": "FERTILIZER",
+      "base_price": 100,
+      "causal_premise": "Across all 41 routes in the baseline chassis, the maximum step containing any FERTILIZE unit command is step 646. Any BUY_PRODUCT FERTILIZER order executed after step 646 (observed on Route 2 at steps 649 and 697) purchases inventory that can never be applied, generates zero crop acceleration, and sits unliquidated at step 719, leaking ~200-400 coins of dead capital.",
+      "mathematical_rule": "If future_fertilize_commands(t > current_step) <= current_fertilizer_inventory: clamp BUY_PRODUCT FERTILIZER quantity to 0.",
+      "threat_model": "Fertilizer resale arbitrage. Tested: bid-ask spread and price impact make round-trip buy/sell value-destroying. Zero unit choreography risk since only market orders are modified."
+    },
+    "M3_LATE_MARKET_DEAD_BUY_GUARD": {
+      "name": "Late Dead Market Product Purchase Suppression",
+      "action_type": "market.BUY_PRODUCT",
+      "target_products": [
+        "WHEAT",
+        "FERTILIZER"
+      ],
+      "causal_premise": "In late turns (step >= 648), BUY_PRODUCT orders for goods that have no downstream transformation before step 718 (such as buying wheat when no animals remain to be fed or when shed wheat is already sufficient) destroy liquidity through transaction spread.",
+      "mathematical_rule": "If product == 'WHEAT' and (remaining_feed_demands <= current_wheat_inventory): clamp BUY_PRODUCT WHEAT to 0.",
+      "threat_model": "Starvation penalty if animal escapes before step 718. Guard: Only activate if wheat inventory is strictly sufficient for remaining feed steps."
+    },
+    "M4_DAY29_DEAD_ANIMAL_FEED_GUARD": {
+      "name": "Day 29 Terminal Animal Feed Audit",
+      "action_type": "unit.FEED",
+      "target_day": 29,
+      "step_range": [
+        696,
+        718
+      ],
+      "causal_premise": "Daily animal refresh only triggers at end-of-day. At step 718/719, the episode terminates. Any animal fed on Day 29 consumes 1 wheat (worth ~25 coins at market) but its next yield cycle would only occur on Day 30, which is never simulated. Animals only escape after 2 consecutive unfed days.",
+      "mathematical_rule": "Investigate whether unit.FEED on step >= 696 can be converted to unit.PASS and the wheat sold, or whether altering unit action desynchronizes worker route.",
+      "threat_model": "CRITICAL CHOREOGRAPHY RISK: Worker movement and action dependency graphs may desynchronize if unit action is replaced. Requires 0-casualty paired proof before promotion."
+    },
+    "M5_DEAD_SHOP_INTERACTION_GUARD": {
+      "name": "Late Dead Shop Purchase Suppression",
+      "action_type": "shop_purchases",
+      "causal_premise": "Check whether late-game shop visits or unlock triggers consume capital without providing sufficient turns to recoup investment.",
+      "mathematical_rule": "In the incumbent 2945/V48/V49 architecture, shop unlocking is fixed to the town center schedule (day 0, day 6, day 12, etc.). No late discretionary shop purchases exist outside the fixed town schedule.",
+      "threat_model": "No-op in incumbent architecture unless dynamic shop expansion was enabled."
+    },
+    "M6_TERMINAL_INVENTORY_PRESERVATION": {
+      "name": "Terminal Step 716-718 Inventory Liquidation Guard",
+      "action_type": "market.SELL",
+      "target_step": 718,
+      "causal_premise": "At step 719, any unsold inventory in shed yields zero terminal reward. Ensuring all non-zero shed inventories have maximum SELL orders posted across slots 0..9 on steps 716..718 recovers residual capital.",
+      "mathematical_rule": "On step 718, inspect projected shed stock; insert SELL orders for any unquoted sellable product with inventory > 0 up to maxMarketOrdersPerTurn (10).",
+      "threat_model": "Must respect order priority and not displace higher-value sell orders. Market compaction risk must be zero."
+    }
+  }
+}

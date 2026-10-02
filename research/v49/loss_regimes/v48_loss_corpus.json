@@ -1,0 +1,182 @@
+[
+  {
+    "opp": "V44",
+    "seed": 249851,
+    "seat": 0,
+    "cash_v48": 104647.0,
+    "cash_opp": 106193.0,
+    "margin": -1546.0,
+    "shops": [
+      "BRUNCH_SPOT",
+      "FARMERS_MARKET",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP",
+      "PIZZA_SHOP",
+      "PET_CAFE",
+      "PIZZA_SHOP",
+      "FARMERS_MARKET"
+    ]
+  },
+  {
+    "opp": "V44",
+    "seed": 249851,
+    "seat": 1,
+    "cash_v48": 104647.0,
+    "cash_opp": 106193.0,
+    "margin": -1546.0,
+    "shops": [
+      "BRUNCH_SPOT",
+      "FARMERS_MARKET",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP",
+      "PIZZA_SHOP",
+      "PET_CAFE",
+      "PIZZA_SHOP",
+      "FARMERS_MARKET"
+    ]
+  },
+  {
+    "opp": "V44",
+    "seed": 249868,
+    "seat": 0,
+    "cash_v48": 101621.0,
+    "cash_opp": 102575.0,
+    "margin": -954.0,
+    "shops": [
+      "FARMERS_MARKET",
+      "BRUNCH_SPOT",
+      "FARMERS_MARKET",
+      "BAKERY",
+      "SMOOTHIE_SHOP",
+      "PIZZA_SHOP",
+      "PET_CAFE",
+      "FARMERS_MARKET"
+    ]
+  },
+  {
+    "opp": "V44",
+    "seed": 249877,
+    "seat": 0,
+    "cash_v48": 93443.0,
+    "cash_opp": 94171.0,
+    "margin": -728.0,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "FARMERS_MARKET",
+      "BAKERY",
+      "BAKERY",
+      "FARMERS_MARKET",
+      "SMOOTHIE_SHOP",
+      "YARN_STORE",
+      "PET_CAFE"
+    ]
+  },
+  {
+    "opp": "V44",
+    "seed": 249920,
+    "seat": 0,
+    "cash_v48": 150193.0,
+    "cash_opp": 150478.0,
+    "margin": -285.0,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "FARMERS_MARKET",
+      "ICE_CREAM_SHOP",
+      "SMOOTHIE_SHOP",
+      "SMOOTHIE_SHOP",
+      "BRUNCH_SPOT",
+      "SMOOTHIE_SHOP",
+      "YARN_STORE"
+    ]
+  },
+  {
+    "opp": "V44",
+    "seed": 249920,
+    "seat": 1,
+    "cash_v48": 150193.0,
+    "cash_opp": 150478.0,
+    "margin": -285.0,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "FARMERS_MARKET",
+      "ICE_CREAM_SHOP",
+      "SMOOTHIE_SHOP",
+      "SMOOTHIE_SHOP",
+      "BRUNCH_SPOT",
+      "SMOOTHIE_SHOP",
+      "YARN_STORE"
+    ]
+  },
+  {
+    "opp": "Tetsutani",
+    "seed": 249865,
+    "seat": 0,
+    "cash_v48": 133377.0,
+    "cash_opp": 134491.0,
+    "margin": -1114.0,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "YARN_STORE",
+      "ICE_CREAM_SHOP",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP",
+      "PIZZA_SHOP",
+      "YARN_STORE",
+      "PIZZA_SHOP"
+    ]
+  },
+  {
+    "opp": "Tetsutani",
+    "seed": 249865,
+    "seat": 1,
+    "cash_v48": 133377.0,
+    "cash_opp": 134491.0,
+    "margin": -1114.0,
+    "shops": [
+      "ICE_CREAM_SHOP",
+      "YARN_STORE",
+      "ICE_CREAM_SHOP",
+      "PIZZA_SHOP",
+      "ICE_CREAM_SHOP",
+      "PIZZA_SHOP",
+      "YARN_STORE",
+      "PIZZA_SHOP"
+    ]
+  },
+  {
+    "opp": "Tetsutani",
+    "seed": 249884,
+    "seat": 0,
+    "cash_v48": 130581.0,
+    "cash_opp": 130837.0,
+    "margin": -256.0,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "YARN_STORE",
+      "SMOOTHIE_SHOP",
+      "BRUNCH_SPOT",
+      "PIZZA_SHOP",
+      "SMOOTHIE_SHOP",
+      "FARMERS_MARKET",
+      "PET_CAFE"
+    ]
+  },
+  {
+    "opp": "Tetsutani",
+    "seed": 249884,
+    "seat": 1,
+    "cash_v48": 130581.0,
+    "cash_opp": 130837.0,
+    "margin": -256.0,
+    "shops": [
+      "SMOOTHIE_SHOP",
+      "YARN_STORE",
+      "SMOOTHIE_SHOP",
+      "BRUNCH_SPOT",
+      "PIZZA_SHOP",
+      "SMOOTHIE_SHOP",
+      "FARMERS_MARKET",
+      "PET_CAFE"
+    ]
+  }
+]

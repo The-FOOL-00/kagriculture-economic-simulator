@@ -1,0 +1,948 @@
+{
+  "V44_Incumbent": {
+    "candidate": "V44_Incumbent",
+    "config": {
+      "is_v44": true
+    },
+    "time_seconds": 277.10082054138184,
+    "overall": {
+      "legs": 576,
+      "mean_delta_vs_v49": -2774.2899305555557,
+      "median_delta": -1264.0,
+      "bootstrap_95_ci": [
+        -3544.0274739583333,
+        -1999.9026041666666
+      ],
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.8923611111111112,
+      "rescues": 0,
+      "casualties": 58,
+      "active_legs": 576,
+      "active_fraction": 1.0
+    },
+    "elite_suite": {
+      "legs": 384,
+      "mean_delta_vs_v49": -2018.8098958333333,
+      "median_delta": -1093.0,
+      "bootstrap_95_ci": [
+        -3178.948177083333,
+        -867.8309244791675
+      ],
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.8385416666666666,
+      "rescues": 0,
+      "casualties": 58,
+      "active_legs": 384,
+      "active_fraction": 1.0
+    },
+    "adversarial_suite": {
+      "legs": 192,
+      "mean_delta_vs_v49": -4285.25,
+      "median_delta": -5169.5,
+      "bootstrap_95_ci": [
+        -4857.747135416667,
+        -3708.0515625000003
+      ],
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 192,
+      "active_fraction": 1.0
+    },
+    "per_opponent": {
+      "V44": {
+        "legs": 64,
+        "mean_delta_vs_v49": -1487.0625,
+        "median_delta": -674.5,
+        "bootstrap_95_ci": [
+          -2898.0359375,
+          -219.02500000000032
+        ],
+        "win_rate_v49": 0.9375,
+        "win_rate_cand": 0.03125,
+        "rescues": 0,
+        "casualties": 58,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "dmitrii_lb2800": {
+        "legs": 64,
+        "mean_delta_vs_v49": 146.453125,
+        "median_delta": -575.5,
+        "bootstrap_95_ci": [
+          -4975.805859375,
+          5610.073828124993
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "tetsutani_pasture": {
+        "legs": 64,
+        "mean_delta_vs_v49": -698.078125,
+        "median_delta": -1012.0,
+        "bootstrap_95_ci": [
+          -1792.1203125,
+          476.0843749999997
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "kaitofukami_v48_3009": {
+        "legs": 64,
+        "mean_delta_vs_v49": -2966.03125,
+        "median_delta": -1064.5,
+        "bootstrap_95_ci": [
+          -4971.34453125,
+          -1249.5449218750002
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "indarkarhana_top10": {
+        "legs": 64,
+        "mean_delta_vs_v49": -2361.859375,
+        "median_delta": -1564.0,
+        "bootstrap_95_ci": [
+          -3421.14609375,
+          -1289.5484375
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "saiteja_mega_3000": {
+        "legs": 64,
+        "mean_delta_vs_v49": -4746.28125,
+        "median_delta": -1576.5,
+        "bootstrap_95_ci": [
+          -7906.97578125,
+          -1856.476953125002
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "DAIRY_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": -4285.25,
+        "median_delta": -5169.5,
+        "bootstrap_95_ci": [
+          -5298.76796875,
+          -3299.4453125
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "WOOL_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": -4285.25,
+        "median_delta": -5169.5,
+        "bootstrap_95_ci": [
+          -5298.76796875,
+          -3299.4453125
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "TERMINAL_DUMPER": {
+        "legs": 64,
+        "mean_delta_vs_v49": -4285.25,
+        "median_delta": -5169.5,
+        "bootstrap_95_ci": [
+          -5298.76796875,
+          -3299.4453125
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      }
+    }
+  },
+  "V48_Challenger": {
+    "candidate": "V48_Challenger",
+    "config": {
+      "is_v48": true
+    },
+    "time_seconds": 291.84576964378357,
+    "overall": {
+      "legs": 576,
+      "mean_delta_vs_v49": -64.46180555555556,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        -70.86805555555556,
+        -58.19401041666667
+      ],
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.9930555555555556,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 234,
+      "active_fraction": 0.40625
+    },
+    "elite_suite": {
+      "legs": 384,
+      "mean_delta_vs_v49": -66.69270833333333,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        -74.6875,
+        -58.854166666666664
+      ],
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.9895833333333334,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 162,
+      "active_fraction": 0.421875
+    },
+    "adversarial_suite": {
+      "legs": 192,
+      "mean_delta_vs_v49": -60.0,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        -70.83333333333333,
+        -49.166666666666664
+      ],
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 72,
+      "active_fraction": 0.375
+    },
+    "per_opponent": {
+      "V44": {
+        "legs": 64,
+        "mean_delta_vs_v49": -73.75,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -93.125,
+          -54.375
+        ],
+        "win_rate_v49": 0.9375,
+        "win_rate_cand": 0.9375,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 30,
+        "active_fraction": 0.46875
+      },
+      "dmitrii_lb2800": {
+        "legs": 64,
+        "mean_delta_vs_v49": -62.5,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -82.5,
+          -45.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 25,
+        "active_fraction": 0.390625
+      },
+      "tetsutani_pasture": {
+        "legs": 64,
+        "mean_delta_vs_v49": -62.5,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -82.5,
+          -42.5
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 25,
+        "active_fraction": 0.390625
+      },
+      "kaitofukami_v48_3009": {
+        "legs": 64,
+        "mean_delta_vs_v49": -74.53125,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -93.75,
+          -55.3125
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 30,
+        "active_fraction": 0.46875
+      },
+      "indarkarhana_top10": {
+        "legs": 64,
+        "mean_delta_vs_v49": -66.5625,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -85.625,
+          -47.5
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 27,
+        "active_fraction": 0.421875
+      },
+      "saiteja_mega_3000": {
+        "legs": 64,
+        "mean_delta_vs_v49": -60.3125,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -79.22265625,
+          -41.40625
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 25,
+        "active_fraction": 0.390625
+      },
+      "DAIRY_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": -60.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -80.0,
+          -42.5
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 24,
+        "active_fraction": 0.375
+      },
+      "WOOL_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": -60.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -80.0,
+          -42.5
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 24,
+        "active_fraction": 0.375
+      },
+      "TERMINAL_DUMPER": {
+        "legs": 64,
+        "mean_delta_vs_v49": -60.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -80.0,
+          -42.5
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 24,
+        "active_fraction": 0.375
+      }
+    }
+  },
+  "V49_Meta_Fusion": {
+    "candidate": "V49_Meta_Fusion",
+    "config": {},
+    "time_seconds": 289.5207712650299,
+    "overall": {
+      "legs": 576,
+      "mean_delta_vs_v49": 0.0,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.9930555555555556,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 0,
+      "active_fraction": 0.0
+    },
+    "elite_suite": {
+      "legs": 384,
+      "mean_delta_vs_v49": 0.0,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.9895833333333334,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 0,
+      "active_fraction": 0.0
+    },
+    "adversarial_suite": {
+      "legs": 192,
+      "mean_delta_vs_v49": 0.0,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 0,
+      "active_fraction": 0.0
+    },
+    "per_opponent": {
+      "V44": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 0.9375,
+        "win_rate_cand": 0.9375,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "dmitrii_lb2800": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "tetsutani_pasture": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "kaitofukami_v48_3009": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "indarkarhana_top10": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "saiteja_mega_3000": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "DAIRY_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "WOOL_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "TERMINAL_DUMPER": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      }
+    }
+  },
+  "V50_Dead_Action_Guard": {
+    "candidate": "V50_Dead_Action_Guard",
+    "config": {
+      "enable_extended_seeds": true,
+      "seed_step_threshold": 624,
+      "enable_post670_blackout": true
+    },
+    "time_seconds": 290.57099294662476,
+    "overall": {
+      "legs": 576,
+      "mean_delta_vs_v49": 0.0,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.9930555555555556,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 0,
+      "active_fraction": 0.0
+    },
+    "elite_suite": {
+      "legs": 384,
+      "mean_delta_vs_v49": 0.0,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.9895833333333334,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 0,
+      "active_fraction": 0.0
+    },
+    "adversarial_suite": {
+      "legs": 192,
+      "mean_delta_vs_v49": 0.0,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 0,
+      "active_fraction": 0.0
+    },
+    "per_opponent": {
+      "V44": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 0.9375,
+        "win_rate_cand": 0.9375,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "dmitrii_lb2800": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "tetsutani_pasture": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "kaitofukami_v48_3009": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "indarkarhana_top10": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "saiteja_mega_3000": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "DAIRY_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "WOOL_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      },
+      "TERMINAL_DUMPER": {
+        "legs": 64,
+        "mean_delta_vs_v49": 0.0,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          0.0,
+          0.0
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 0,
+        "active_fraction": 0.0
+      }
+    }
+  },
+  "V50_Fert_Guard_Variant": {
+    "candidate": "V50_Fert_Guard_Variant",
+    "config": {
+      "enable_fert_guard": true,
+      "fert_step_threshold": 646
+    },
+    "time_seconds": 295.71230602264404,
+    "overall": {
+      "legs": 576,
+      "mean_delta_vs_v49": -1067.7690972222222,
+      "median_delta": -242.0,
+      "bootstrap_95_ci": [
+        -1225.2812934027777,
+        -921.1529947916667
+      ],
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.9791666666666666,
+      "rescues": 0,
+      "casualties": 8,
+      "active_legs": 404,
+      "active_fraction": 0.7013888888888888
+    },
+    "elite_suite": {
+      "legs": 384,
+      "mean_delta_vs_v49": -1242.7942708333333,
+      "median_delta": -321.0,
+      "bootstrap_95_ci": [
+        -1447.0412760416666,
+        -1051.0486328125003
+      ],
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.96875,
+      "rescues": 0,
+      "casualties": 8,
+      "active_legs": 362,
+      "active_fraction": 0.9427083333333334
+    },
+    "adversarial_suite": {
+      "legs": 192,
+      "mean_delta_vs_v49": -717.71875,
+      "median_delta": 0.0,
+      "bootstrap_95_ci": [
+        -952.1854166666666,
+        -509.21796875
+      ],
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 42,
+      "active_fraction": 0.21875
+    },
+    "per_opponent": {
+      "V44": {
+        "legs": 64,
+        "mean_delta_vs_v49": -969.265625,
+        "median_delta": -367.5,
+        "bootstrap_95_ci": [
+          -1358.24375,
+          -647.699609375
+        ],
+        "win_rate_v49": 0.9375,
+        "win_rate_cand": 0.8125,
+        "rescues": 0,
+        "casualties": 8,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "dmitrii_lb2800": {
+        "legs": 64,
+        "mean_delta_vs_v49": -1311.109375,
+        "median_delta": -363.0,
+        "bootstrap_95_ci": [
+          -1812.819921875,
+          -873.5871093750001
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 64,
+        "active_fraction": 1.0
+      },
+      "tetsutani_pasture": {
+        "legs": 64,
+        "mean_delta_vs_v49": -1276.90625,
+        "median_delta": -437.0,
+        "bootstrap_95_ci": [
+          -1747.885546875,
+          -867.639453125
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 59,
+        "active_fraction": 0.921875
+      },
+      "kaitofukami_v48_3009": {
+        "legs": 64,
+        "mean_delta_vs_v49": -1279.34375,
+        "median_delta": -615.0,
+        "bootstrap_95_ci": [
+          -1791.1578125,
+          -840.5832031250002
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 59,
+        "active_fraction": 0.921875
+      },
+      "indarkarhana_top10": {
+        "legs": 64,
+        "mean_delta_vs_v49": -1530.140625,
+        "median_delta": -287.5,
+        "bootstrap_95_ci": [
+          -2236.594921875,
+          -917.1789062500002
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 58,
+        "active_fraction": 0.90625
+      },
+      "saiteja_mega_3000": {
+        "legs": 64,
+        "mean_delta_vs_v49": -1090.0,
+        "median_delta": -250.0,
+        "bootstrap_95_ci": [
+          -1551.67265625,
+          -684.4277343750003
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 58,
+        "active_fraction": 0.90625
+      },
+      "DAIRY_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": -717.71875,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -1119.7359375,
+          -353.87421875
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 14,
+        "active_fraction": 0.21875
+      },
+      "WOOL_FLOOD": {
+        "legs": 64,
+        "mean_delta_vs_v49": -717.71875,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -1119.7359375,
+          -353.87421875
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 14,
+        "active_fraction": 0.21875
+      },
+      "TERMINAL_DUMPER": {
+        "legs": 64,
+        "mean_delta_vs_v49": -717.71875,
+        "median_delta": 0.0,
+        "bootstrap_95_ci": [
+          -1119.7359375,
+          -353.87421875
+        ],
+        "win_rate_v49": 1.0,
+        "win_rate_cand": 1.0,
+        "rescues": 0,
+        "casualties": 0,
+        "active_legs": 14,
+        "active_fraction": 0.21875
+      }
+    }
+  }
+}

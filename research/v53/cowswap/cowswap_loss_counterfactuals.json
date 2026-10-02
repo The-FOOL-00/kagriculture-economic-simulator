@@ -1,0 +1,706 @@
+[
+  {
+    "loss_id": "L01",
+    "seed": 250416,
+    "seat": 0,
+    "nominal": -716.0,
+    "policies": {
+      "C0": {
+        "cash": 95157.0,
+        "cash_opp": 95873.0,
+        "delta": -716.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C1": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C2": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C3": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C4": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C5": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C6": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      }
+    }
+  },
+  {
+    "loss_id": "L02",
+    "seed": 250416,
+    "seat": 1,
+    "nominal": -716.0,
+    "policies": {
+      "C0": {
+        "cash": 95157.0,
+        "cash_opp": 95873.0,
+        "delta": -716.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C1": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C2": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C3": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C4": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C5": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      },
+      "C6": {
+        "cash": 92692.0,
+        "cash_opp": 94542.0,
+        "delta": -1850.0,
+        "win": false,
+        "status": "WORSE"
+      }
+    }
+  },
+  {
+    "loss_id": "L03",
+    "seed": 250428,
+    "seat": 0,
+    "nominal": -31.0,
+    "policies": {
+      "C0": {
+        "cash": 57196.0,
+        "cash_opp": 57227.0,
+        "delta": -31.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 57196.0,
+        "cash_opp": 57227.0,
+        "delta": -31.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C1": {
+        "cash": 57196.0,
+        "cash_opp": 57227.0,
+        "delta": -31.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C2": {
+        "cash": 57196.0,
+        "cash_opp": 57227.0,
+        "delta": -31.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C3": {
+        "cash": 57196.0,
+        "cash_opp": 57227.0,
+        "delta": -31.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C4": {
+        "cash": 57196.0,
+        "cash_opp": 57227.0,
+        "delta": -31.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C5": {
+        "cash": 57196.0,
+        "cash_opp": 57227.0,
+        "delta": -31.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C6": {
+        "cash": 57196.0,
+        "cash_opp": 57227.0,
+        "delta": -31.0,
+        "win": false,
+        "status": "SAME"
+      }
+    }
+  },
+  {
+    "loss_id": "L04",
+    "seed": 250428,
+    "seat": 1,
+    "nominal": -160.0,
+    "policies": {
+      "C0": {
+        "cash": 57133.0,
+        "cash_opp": 57293.0,
+        "delta": -160.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 57133.0,
+        "cash_opp": 57293.0,
+        "delta": -160.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C1": {
+        "cash": 57133.0,
+        "cash_opp": 57293.0,
+        "delta": -160.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C2": {
+        "cash": 57133.0,
+        "cash_opp": 57293.0,
+        "delta": -160.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C3": {
+        "cash": 57133.0,
+        "cash_opp": 57293.0,
+        "delta": -160.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C4": {
+        "cash": 57133.0,
+        "cash_opp": 57293.0,
+        "delta": -160.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C5": {
+        "cash": 57133.0,
+        "cash_opp": 57293.0,
+        "delta": -160.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C6": {
+        "cash": 57133.0,
+        "cash_opp": 57293.0,
+        "delta": -160.0,
+        "win": false,
+        "status": "SAME"
+      }
+    }
+  },
+  {
+    "loss_id": "L05",
+    "seed": 250433,
+    "seat": 0,
+    "nominal": -470.0,
+    "policies": {
+      "C0": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C1": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C2": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C3": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C4": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C5": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C6": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      }
+    }
+  },
+  {
+    "loss_id": "L06",
+    "seed": 250433,
+    "seat": 1,
+    "nominal": -470.0,
+    "policies": {
+      "C0": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C1": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C2": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C3": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C4": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C5": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C6": {
+        "cash": 118867.0,
+        "cash_opp": 119337.0,
+        "delta": -470.0,
+        "win": false,
+        "status": "SAME"
+      }
+    }
+  },
+  {
+    "loss_id": "L07",
+    "seed": 250436,
+    "seat": 0,
+    "nominal": -1405.0,
+    "policies": {
+      "C0": {
+        "cash": 113638.0,
+        "cash_opp": 115043.0,
+        "delta": -1405.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C1": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C2": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C3": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C4": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C5": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C6": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      }
+    }
+  },
+  {
+    "loss_id": "L08",
+    "seed": 250436,
+    "seat": 1,
+    "nominal": -1405.0,
+    "policies": {
+      "C0": {
+        "cash": 113638.0,
+        "cash_opp": 115043.0,
+        "delta": -1405.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C1": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C2": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C3": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C4": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C5": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C6": {
+        "cash": 113142.0,
+        "cash_opp": 110693.0,
+        "delta": 2449.0,
+        "win": true,
+        "status": "RESCUED"
+      }
+    }
+  },
+  {
+    "loss_id": "L09",
+    "seed": 250439,
+    "seat": 0,
+    "nominal": -1407.0,
+    "policies": {
+      "C0": {
+        "cash": 110292.0,
+        "cash_opp": 111699.0,
+        "delta": -1407.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C1": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C2": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C3": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C4": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C5": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C6": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      }
+    }
+  },
+  {
+    "loss_id": "L10",
+    "seed": 250439,
+    "seat": 1,
+    "nominal": -1407.0,
+    "policies": {
+      "C0": {
+        "cash": 110292.0,
+        "cash_opp": 111699.0,
+        "delta": -1407.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C1": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C2": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C3": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C4": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C5": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      },
+      "C6": {
+        "cash": 108976.0,
+        "cash_opp": 107558.0,
+        "delta": 1418.0,
+        "win": true,
+        "status": "RESCUED"
+      }
+    }
+  },
+  {
+    "loss_id": "L11",
+    "seed": 250497,
+    "seat": 1,
+    "nominal": -901.0,
+    "policies": {
+      "C0": {
+        "cash": 152344.0,
+        "cash_opp": 153245.0,
+        "delta": -901.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C_off": {
+        "cash": 152344.0,
+        "cash_opp": 153245.0,
+        "delta": -901.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C1": {
+        "cash": 152344.0,
+        "cash_opp": 153245.0,
+        "delta": -901.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C2": {
+        "cash": 152344.0,
+        "cash_opp": 153245.0,
+        "delta": -901.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C3": {
+        "cash": 152344.0,
+        "cash_opp": 153245.0,
+        "delta": -901.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C4": {
+        "cash": 152344.0,
+        "cash_opp": 153245.0,
+        "delta": -901.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C5": {
+        "cash": 152344.0,
+        "cash_opp": 153245.0,
+        "delta": -901.0,
+        "win": false,
+        "status": "SAME"
+      },
+      "C6": {
+        "cash": 152344.0,
+        "cash_opp": 153245.0,
+        "delta": -901.0,
+        "win": false,
+        "status": "SAME"
+      }
+    }
+  }
+]

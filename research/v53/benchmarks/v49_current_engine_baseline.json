@@ -1,0 +1,173 @@
+{
+  "engine": "kaggle_environments 1.32.7",
+  "timestamp": "2026-09-26 16:00:52",
+  "total_legs": 448,
+  "wins": 413,
+  "losses": 5,
+  "ties": 30,
+  "win_rate": 0.921875,
+  "overall_stats": {
+    "mean": 25028.006696428572,
+    "median": 13432.5,
+    "p10": 160.0,
+    "ci95_low": 22152.914174107143,
+    "ci95_high": 27956.331082589284
+  },
+  "per_opponent": {
+    "V48": {
+      "legs": 64,
+      "wins": 33,
+      "losses": 1,
+      "ties": 30,
+      "win_rate": 0.515625,
+      "stats": {
+        "mean": 83.25,
+        "median": 99.5,
+        "p10": 0.0,
+        "ci95_low": 61.811328125,
+        "ci95_high": 105.078515625
+      },
+      "seat0": {
+        "mean_delta": 76.84375,
+        "win_rate": 0.5
+      },
+      "seat1": {
+        "mean_delta": 89.65625,
+        "win_rate": 0.53125
+      }
+    },
+    "V44": {
+      "legs": 64,
+      "wins": 60,
+      "losses": 4,
+      "ties": 0,
+      "win_rate": 0.9375,
+      "stats": {
+        "mean": 3624.59375,
+        "median": 2662.0,
+        "p10": 384.0,
+        "ci95_low": 2898.725,
+        "ci95_high": 4410.587890625
+      },
+      "seat0": {
+        "mean_delta": 3618.59375,
+        "win_rate": 0.9375
+      },
+      "seat1": {
+        "mean_delta": 3630.59375,
+        "win_rate": 0.9375
+      }
+    },
+    "dmitrii_lb2800": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "stats": {
+        "mean": 11809.5,
+        "median": 9670.0,
+        "p10": 4905.900000000001,
+        "ci95_low": 10163.5453125,
+        "ci95_high": 13583.40859375
+      },
+      "seat0": {
+        "mean_delta": 11836.28125,
+        "win_rate": 1.0
+      },
+      "seat1": {
+        "mean_delta": 11782.71875,
+        "win_rate": 1.0
+      }
+    },
+    "tetsutani_pasture": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "stats": {
+        "mean": 18113.1875,
+        "median": 13944.5,
+        "p10": 8194.0,
+        "ci95_low": 15776.27109375,
+        "ci95_high": 20598.372265625
+      },
+      "seat0": {
+        "mean_delta": 18073.75,
+        "win_rate": 1.0
+      },
+      "seat1": {
+        "mean_delta": 18152.625,
+        "win_rate": 1.0
+      }
+    },
+    "kaitofukami_v48_3009": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "stats": {
+        "mean": 23398.96875,
+        "median": 19765.0,
+        "p10": 14437.6,
+        "ci95_low": 21103.01484375,
+        "ci95_high": 25720.152734375
+      },
+      "seat0": {
+        "mean_delta": 23127.625,
+        "win_rate": 1.0
+      },
+      "seat1": {
+        "mean_delta": 23670.3125,
+        "win_rate": 1.0
+      }
+    },
+    "indarkarhana_top10": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "stats": {
+        "mean": 25245.25,
+        "median": 17864.0,
+        "p10": 12056.800000000001,
+        "ci95_low": 21542.7546875,
+        "ci95_high": 28982.2296875
+      },
+      "seat0": {
+        "mean_delta": 25415.9375,
+        "win_rate": 1.0
+      },
+      "seat1": {
+        "mean_delta": 25074.5625,
+        "win_rate": 1.0
+      }
+    },
+    "saiteja_mega_3000": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "ties": 0,
+      "win_rate": 1.0,
+      "stats": {
+        "mean": 92921.296875,
+        "median": 89440.5,
+        "p10": 67543.0,
+        "ci95_low": 87836.9859375,
+        "ci95_high": 97894.2578125
+      },
+      "seat0": {
+        "mean_delta": 93088.5625,
+        "win_rate": 1.0
+      },
+      "seat1": {
+        "mean_delta": 92754.03125,
+        "win_rate": 1.0
+      }
+    }
+  },
+  "elapsed_seconds": 139.7432403564453
+}

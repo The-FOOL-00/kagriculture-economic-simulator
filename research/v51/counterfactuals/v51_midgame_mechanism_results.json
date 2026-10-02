@@ -1,0 +1,82 @@
+{
+  "M1_Weed_Repair": {
+    "variant": "M1_Weed_Repair",
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "p0_min": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "time_seconds": 43.51062035560608
+  },
+  "M3_Midgame_Reset_Step72": {
+    "variant": "M3_Midgame_Reset_Step72",
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "p0_min": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "time_seconds": 44.98258018493652
+  },
+  "M4_Sell_Slot_Reordering": {
+    "variant": "M4_Sell_Slot_Reordering",
+    "legs": 64,
+    "mean_delta_vs_v49": -634.984375,
+    "median_delta": -548.0,
+    "std_delta": 386.04936324658695,
+    "p0_min": -1926.0,
+    "p100_max": -197.0,
+    "bootstrap_95_ci": [
+      -734.766796875,
+      -547.16796875
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.765625,
+    "rescues": 0,
+    "casualties": 11,
+    "active_legs": 64,
+    "active_fraction": 1.0,
+    "time_seconds": 45.82027864456177
+  },
+  "M5_Market_Demand_Adaptation": {
+    "variant": "M5_Market_Demand_Adaptation",
+    "legs": 64,
+    "mean_delta_vs_v49": -114.984375,
+    "median_delta": -1.5,
+    "std_delta": 246.85253564660567,
+    "p0_min": -975.0,
+    "p100_max": 148.0,
+    "bootstrap_95_ci": [
+      -179.50078125,
+      -59.374609375000006
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 56,
+    "active_fraction": 0.875,
+    "time_seconds": 45.38068509101868
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "version": "1.32.7",
+  "tests": [
+    {
+      "seed": 250400,
+      "steps_evaluated": 719,
+      "passed": true,
+      "mismatches_count": 0,
+      "sample_mismatches": [],
+      "final_official_money": [
+        128239.0,
+        2951.0
+      ],
+      "final_fast_money": [
+        128239.0,
+        2951.0
+      ],
+      "elapsed_seconds": 81.10896468162537
+    },
+    {
+      "seed": 250436,
+      "steps_evaluated": 719,
+      "passed": true,
+      "mismatches_count": 0,
+      "sample_mismatches": [],
+      "final_official_money": [
+        189079.0,
+        2984.0
+      ],
+      "final_fast_money": [
+        189079.0,
+        2984.0
+      ],
+      "elapsed_seconds": 88.57516169548035
+    },
+    {
+      "seed": 250439,
+      "steps_evaluated": 719,
+      "passed": true,
+      "mismatches_count": 0,
+      "sample_mismatches": [],
+      "final_official_money": [
+        126649.0,
+        2195.0
+      ],
+      "final_fast_money": [
+        126649.0,
+        2195.0
+      ],
+      "elapsed_seconds": 95.28598117828369
+    }
+  ],
+  "overall_parity": true
+}

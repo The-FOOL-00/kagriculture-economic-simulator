@@ -1,0 +1,188 @@
+{
+  "compositions": {
+    "Baseline_8C_6S_3G": {
+      "cows": 8,
+      "sheep": 6,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW"],
+      "pasture_tiles": [
+        [4, 2], [5, 2], [6, 2], [7, 2],
+        [4, 3], [5, 3], [6, 3], [7, 3],
+        [4, 6], [5, 6], [6, 6],
+        [4, 7], [5, 7], [6, 7]
+      ],
+      "coop_tiles": [
+        [7, 6], [7, 7], [8, 6]
+      ],
+      "acquisition_schedule": {
+        "cows": [
+          {"step": 150, "count": 2, "cost": 800},
+          {"step": 169, "count": 1, "cost": 400},
+          {"step": 176, "count": 1, "cost": 400},
+          {"step": 180, "count": 2, "cost": 800},
+          {"step": 210, "count": 2, "cost": 800}
+        ],
+        "sheep": [
+          {"step": 196, "count": 2, "cost": 1000},
+          {"step": 217, "count": 1, "cost": 500},
+          {"step": 226, "count": 1, "cost": 500},
+          {"step": 270, "count": 2, "cost": 1000}
+        ],
+        "geese": [
+          {"step": 241, "count": 2, "cost": 600},
+          {"step": 265, "count": 1, "cost": 300}
+        ]
+      },
+      "capex_total": 7600,
+      "daily_wheat_feed": 17,
+      "diversity_care_multiplier": 1.25
+    },
+    "Public_9C_4S_3G": {
+      "cows": 9,
+      "sheep": 4,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW"],
+      "pasture_tiles": [
+        [4, 2], [5, 2], [6, 2], [7, 2],
+        [4, 3], [5, 3], [6, 3], [7, 3],
+        [8, 2],
+        [4, 6], [5, 6], [6, 6], [7, 6]
+      ],
+      "coop_tiles": [
+        [4, 7], [5, 7], [6, 7]
+      ],
+      "acquisition_schedule": {
+        "cows": [
+          {"step": 150, "count": 2, "cost": 800},
+          {"step": 169, "count": 1, "cost": 400},
+          {"step": 176, "count": 1, "cost": 400},
+          {"step": 180, "count": 2, "cost": 800},
+          {"step": 210, "count": 2, "cost": 800},
+          {"step": 240, "count": 1, "cost": 400}
+        ],
+        "sheep": [
+          {"step": 196, "count": 2, "cost": 1000},
+          {"step": 217, "count": 1, "cost": 500},
+          {"step": 226, "count": 1, "cost": 500}
+        ],
+        "geese": [
+          {"step": 241, "count": 2, "cost": 600},
+          {"step": 265, "count": 1, "cost": 300}
+        ]
+      },
+      "capex_total": 7100,
+      "daily_wheat_feed": 16,
+      "diversity_care_multiplier": 1.25
+    },
+    "Public_9C_5S_3G": {
+      "cows": 9,
+      "sheep": 5,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW"],
+      "pasture_tiles": [
+        [4, 2], [5, 2], [6, 2], [7, 2],
+        [4, 3], [5, 3], [6, 3], [7, 3],
+        [8, 2],
+        [4, 6], [5, 6], [6, 6], [7, 6], [8, 6]
+      ],
+      "coop_tiles": [
+        [4, 7], [5, 7], [6, 7]
+      ],
+      "acquisition_schedule": {
+        "cows": [
+          {"step": 150, "count": 2, "cost": 800},
+          {"step": 169, "count": 1, "cost": 400},
+          {"step": 176, "count": 1, "cost": 400},
+          {"step": 180, "count": 2, "cost": 800},
+          {"step": 210, "count": 2, "cost": 800},
+          {"step": 240, "count": 1, "cost": 400}
+        ],
+        "sheep": [
+          {"step": 196, "count": 2, "cost": 1000},
+          {"step": 217, "count": 1, "cost": 500},
+          {"step": 226, "count": 1, "cost": 500},
+          {"step": 270, "count": 1, "cost": 500}
+        ],
+        "geese": [
+          {"step": 241, "count": 2, "cost": 600},
+          {"step": 265, "count": 1, "cost": 300}
+        ]
+      },
+      "capex_total": 7600,
+      "daily_wheat_feed": 17,
+      "diversity_care_multiplier": 1.25
+    },
+    "Public_9C_6S_3G": {
+      "cows": 9,
+      "sheep": 6,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW"],
+      "capex_total": 8100,
+      "daily_wheat_feed": 18,
+      "diversity_care_multiplier": 1.25
+    },
+    "Public_9C_7S_3G": {
+      "cows": 9,
+      "sheep": 7,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW"],
+      "capex_total": 8600,
+      "daily_wheat_feed": 19,
+      "diversity_care_multiplier": 1.25
+    },
+    "Public_9C_8S_3G": {
+      "cows": 9,
+      "sheep": 8,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW", "SE"],
+      "capex_total": 9100,
+      "daily_wheat_feed": 20,
+      "diversity_care_multiplier": 1.25
+    },
+    "Public_9C_9S_3G": {
+      "cows": 9,
+      "sheep": 9,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW", "SE"],
+      "capex_total": 9600,
+      "daily_wheat_feed": 21,
+      "diversity_care_multiplier": 1.25
+    },
+    "Variant_8C_4S_3G": {
+      "cows": 8,
+      "sheep": 4,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW"],
+      "capex_total": 6600,
+      "daily_wheat_feed": 15,
+      "diversity_care_multiplier": 1.25
+    },
+    "Variant_8C_8S_3G": {
+      "cows": 8,
+      "sheep": 8,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW", "SE"],
+      "capex_total": 8600,
+      "daily_wheat_feed": 19,
+      "diversity_care_multiplier": 1.25
+    },
+    "Variant_10C_4S_3G": {
+      "cows": 10,
+      "sheep": 4,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW"],
+      "capex_total": 7500,
+      "daily_wheat_feed": 17,
+      "diversity_care_multiplier": 1.25
+    },
+    "Variant_10C_6S_3G": {
+      "cows": 10,
+      "sheep": 6,
+      "geese": 3,
+      "quadrants": ["NW", "NE", "SW"],
+      "capex_total": 8500,
+      "daily_wheat_feed": 19,
+      "diversity_care_multiplier": 1.25
+    }
+  }
+}

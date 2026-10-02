@@ -1,0 +1,167 @@
+{
+  "9C_4S": {
+    "composition": "9C_4S",
+    "specs": {
+      "cows": 9,
+      "sheep": 4,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -10941.666666666666,
+    "median_delta": -8304.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "9C_5S": {
+    "composition": "9C_5S",
+    "specs": {
+      "cows": 9,
+      "sheep": 5,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -10803.166666666666,
+    "median_delta": -8319.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "9C_6S": {
+    "composition": "9C_6S",
+    "specs": {
+      "cows": 9,
+      "sheep": 6,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -8831.520833333334,
+    "median_delta": -7074.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "9C_7S": {
+    "composition": "9C_7S",
+    "specs": {
+      "cows": 9,
+      "sheep": 7,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -9766.041666666666,
+    "median_delta": -8047.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "9C_8S": {
+    "composition": "9C_8S",
+    "specs": {
+      "cows": 9,
+      "sheep": 8,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -10370.666666666666,
+    "median_delta": -8658.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "9C_9S": {
+    "composition": "9C_9S",
+    "specs": {
+      "cows": 9,
+      "sheep": 9,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -10441.5,
+    "median_delta": -8658.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "8C_4S": {
+    "composition": "8C_4S",
+    "specs": {
+      "cows": 8,
+      "sheep": 4,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -10586.666666666666,
+    "median_delta": -7892.5,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "8C_6S": {
+    "composition": "8C_6S",
+    "specs": {
+      "cows": 8,
+      "sheep": 6,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -8471.208333333334,
+    "median_delta": -6856.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "8C_8S": {
+    "composition": "8C_8S",
+    "specs": {
+      "cows": 8,
+      "sheep": 8,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -10356.520833333334,
+    "median_delta": -8675.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "10C_4S": {
+    "composition": "10C_4S",
+    "specs": {
+      "cows": 10,
+      "sheep": 4,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -10963.0,
+    "median_delta": -8304.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  },
+  "10C_6S": {
+    "composition": "10C_6S",
+    "specs": {
+      "cows": 10,
+      "sheep": 6,
+      "geese": 3
+    },
+    "legs": 48,
+    "mean_delta_vs_v49": -8844.166666666666,
+    "median_delta": -7092.0,
+    "win_rate": 0.0,
+    "avg_stored_milk": 0.0,
+    "avg_stored_wool": 0.0,
+    "avg_stored_egg": 0.0
+  }
+}

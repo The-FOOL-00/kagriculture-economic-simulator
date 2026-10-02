@@ -1,0 +1,41 @@
+{
+  "M1_SEED_CAP": {
+    "legs": 128,
+    "win_rate_base": 0.9140625,
+    "win_rate_cand": 0.9296875,
+    "mean_delta": 85.625,
+    "median_delta": 140.0,
+    "ci_95": [
+      0.0,
+      160.0
+    ],
+    "rescues": 2,
+    "casualties": 0
+  },
+  "M2_TOMATO_EV": {
+    "legs": 128,
+    "win_rate_base": 0.9140625,
+    "win_rate_cand": 0.9140625,
+    "mean_delta": -69.84375,
+    "median_delta": 0.0,
+    "ci_95": [
+      -3067.349999999999,
+      3127.5750000000107
+    ],
+    "rescues": 0,
+    "casualties": 0
+  },
+  "M1_M2_FUSION": {
+    "legs": 128,
+    "win_rate_base": 0.9140625,
+    "win_rate_cand": 0.9296875,
+    "mean_delta": 15.78125,
+    "median_delta": 160.0,
+    "ci_95": [
+      -2935.349999999999,
+      3155.5750000000103
+    ],
+    "rescues": 2,
+    "casualties": 0
+  }
+}

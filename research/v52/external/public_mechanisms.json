@@ -1,0 +1,69 @@
+{
+  "mechanisms": [
+    {
+      "id": "PUB-MECH-01",
+      "name": "Nishchal Jain Herd Composition & Care Optimization",
+      "author": "Nishchal Jain (nishchaljainds)",
+      "date": "2026-08-03",
+      "engine_version": "1.32.7",
+      "population": "Public Leaderboard & Discussion Community",
+      "exact_mechanism": "Mix optimization over total headcount. Evaluated livestock scaling in kaggriculture simulation; discovered that 9 sheep represented a sharp local optimum while adding indiscriminate extra animals (e.g., 7 cows + 7 sheep) depressed returns due to feed consumption and price-curve cliff effects. Demonstrated that daily CARE action yields ~4.25x multiplier on sheep lifetime output and ~3.27x on cow lifetime output.",
+      "reported_metric": "Public LB score progression; sharp margin peak at 9 sheep vs baseline 6 sheep; documented price collapse when wool/milk exceeds market absorption",
+      "environment": "Public Leaderboard & Local Simulation",
+      "reproducible": true,
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PUB-MECH-02",
+      "name": "Yusuke Hayashi Dynamic Shop Router (EXP173 / shop-router-0911-simple)",
+      "author": "Yusuke Hayashi (yhay81)",
+      "date": "2026-09-11",
+      "engine_version": "1.32.7",
+      "population": "Public Leaderboard (~2720-2945 LB)",
+      "exact_mechanism": "Pre-computed static action tapes conditioned on opening shop pairings (Step 144 / Day 6 shop unlocks). Exploits Step 0 wheat wash liquidity float to fund Day 1 immediate hire of 5 hands, 2 cows, and 2 sheep. Selects specialized route branches based on shop demand patterns.",
+      "reported_metric": "Leaderboard 2720+ -> 2945+; stabilized multi-worker coordination on pre-tilled farm tiles",
+      "environment": "Public Leaderboard & Kaggle Kernels",
+      "reproducible": true,
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "PUB-MECH-03",
+      "name": "Rayk Kretzschmar Atomic Funded Opening (Rank Your Agent lineage)",
+      "author": "Rayk Kretzschmar",
+      "date": "2026-09-05",
+      "engine_version": "1.32.7",
+      "population": "Public Leaderboard (~2650 LB)",
+      "exact_mechanism": "Funded atomic capital deployment on Step 1: aggregates opening capital into bulk tool/animal purchases ($1,946 spent on 5 hires, 2 cows, 2 sheep). Establishes working capital requirements to avoid order rejection due to daily wage deductions.",
+      "reported_metric": "Local tournament margin improvement; eliminated early order bouncing",
+      "environment": "Local Tournament & Public Submissions",
+      "reproducible": true,
+      "license": "MIT"
+    },
+    {
+      "id": "PUB-MECH-04",
+      "name": "Live Meta Replay Snapshot Composition (9C + 4S + 1W + 10H)",
+      "author": "Frontier Public Ladder Cluster (Top-20 / Top-30 Replay Forensics)",
+      "date": "2026-09-18",
+      "engine_version": "1.32.7",
+      "population": "Top-30 Public Ladder Match Replays (3100+ Elo cohort)",
+      "exact_mechanism": "Reallocated capital composition maintaining exactly 9 Cows, 4 Sheep, 1 dedicated internal Wheat rotation, and 10 Hired Hands. Shifts pasture allocation to prioritize high-compounding cow milk while bounding sheep wool production below town saturation limits.",
+      "reported_metric": "3100+ Elo competitive survival; terminal wealth exceeding $130,000 on standard seeds",
+      "environment": "Live Ladder Replays",
+      "reproducible": true,
+      "license": "Fair Use / Competition Research"
+    },
+    {
+      "id": "PUB-MECH-05",
+      "name": "Shared Barn Entrance & Shed Access Desynchronization",
+      "author": "Kaggriculture Meta Research Community & V51 Loss Forensics",
+      "date": "2026-09-24",
+      "engine_version": "1.32.7",
+      "population": "Historical Loss Corpus & Choreography Analysis",
+      "exact_mechanism": "Centralized shed access at coordinates (4,4)-(5,5) creates spatial movement contention when farmer and multiple hands attempt simultaneous DROP/PICKUP operations or cross paths at door bottlenecks. Movement blocking causes downstream action failures on fixed action tapes.",
+      "reported_metric": "Attributed to 2/11 historical V49 losses (Seed 250416, -$716 delta); turn wasted metrics during midday harvest windows",
+      "environment": "Local Deterministic Simulation",
+      "reproducible": true,
+      "license": "Internal Research"
+    }
+  ]
+}

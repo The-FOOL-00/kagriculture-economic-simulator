@@ -1,0 +1,30 @@
+{
+  "B0_baseline": {
+    "delta": -716.0,
+    "cash": 95157.0
+  },
+  "B1_entry_reservation": {
+    "delta": -716.0,
+    "cash": 95157.0
+  },
+  "B2_actor_priority": {
+    "delta": -716.0,
+    "cash": 95157.0
+  },
+  "B3_drop_before_pickup": {
+    "delta": -716.0,
+    "cash": 95157.0
+  },
+  "B4_shortest_dist": {
+    "delta": -716.0,
+    "cash": 95157.0
+  },
+  "B5_alter_conflicting": {
+    "delta": -716.0,
+    "cash": 95157.0
+  },
+  "B6_one_step_detour": {
+    "delta": -716.0,
+    "cash": 95157.0
+  }
+}

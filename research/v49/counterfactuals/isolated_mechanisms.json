@@ -1,0 +1,38 @@
+{
+  "M1_SEED_CAP": {
+    "legs": 128,
+    "win_rate_base": 0.953125,
+    "win_rate_cand": 0.953125,
+    "mean_delta": 84.921875,
+    "median_delta": 120.0,
+    "rescues": 0,
+    "casualties": 0
+  },
+  "M2_MARKET_COMPACT": {
+    "legs": 128,
+    "win_rate_base": 0.953125,
+    "win_rate_cand": 0.0,
+    "mean_delta": -99852.7734375,
+    "median_delta": -97450.0,
+    "rescues": 0,
+    "casualties": 122
+  },
+  "M3_LIQUIDITY_SHIELD": {
+    "legs": 128,
+    "win_rate_base": 0.953125,
+    "win_rate_cand": 0.953125,
+    "mean_delta": -2.0703125,
+    "median_delta": 0.0,
+    "rescues": 0,
+    "casualties": 0
+  },
+  "M1_M2_FUSION": {
+    "legs": 128,
+    "win_rate_base": 0.953125,
+    "win_rate_cand": 0.0,
+    "mean_delta": -99852.7734375,
+    "median_delta": -97450.0,
+    "rescues": 0,
+    "casualties": 122
+  }
+}

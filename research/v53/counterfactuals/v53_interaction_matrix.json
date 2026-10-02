@@ -1,0 +1,32 @@
+{
+  "V49_Baseline": {
+    "mean_margin_vs_v44": -11287.59375,
+    "win_rate": 0.0,
+    "legs": 32
+  },
+  "V49_Plus_C6": {
+    "mean_margin_vs_v44": -11287.59375,
+    "win_rate": 0.0,
+    "legs": 32
+  },
+  "Synthesized_9C4S": {
+    "mean_margin_vs_v44": -16276.59375,
+    "win_rate": 0.0,
+    "legs": 32
+  },
+  "Synthesized_9C5S": {
+    "mean_margin_vs_v44": -15639.8125,
+    "win_rate": 0.0,
+    "legs": 32
+  },
+  "Synthesized_9C4S_Plus_C6": {
+    "mean_margin_vs_v44": -16276.59375,
+    "win_rate": 0.0,
+    "legs": 32
+  },
+  "Synthesized_9C5S_Plus_C6": {
+    "mean_margin_vs_v44": -15639.8125,
+    "win_rate": 0.0,
+    "legs": 32
+  }
+}

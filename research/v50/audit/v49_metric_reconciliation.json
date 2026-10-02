@@ -1,0 +1,277 @@
+{
+  "metadata": {
+    "total_legs": 1536,
+    "seeds_count": 128,
+    "seeds_range": "250400..250527",
+    "opponents": [
+      "V44",
+      "dmitrii_lb2800",
+      "tetsutani_pasture",
+      "kaitofukami_v48_3009",
+      "indarkarhana_top10",
+      "saiteja_mega_3000"
+    ],
+    "timestamp": "2026-09-26 11:31:28"
+  },
+  "invariance_audit": {
+    "turns_0_to_623_divergences": 0,
+    "non_market_action_divergences": 0,
+    "illegal_e402_modifications": 0,
+    "casualties": 0,
+    "rescues": 2,
+    "status": "PASS"
+  },
+  "suite_metrics": {
+    "overall_mean_delta": 76.80989583333333,
+    "overall_median_delta": 0.0,
+    "overall_std_delta": 78.01181105591428,
+    "overall_sem_delta": 1.990511781222931,
+    "active_legs": 765,
+    "active_fraction": 0.498046875,
+    "active_mean_delta": 154.22222222222223,
+    "active_median_delta": 160.0,
+    "gate_b_v44_active_mean": 155.06666666666666,
+    "suite_win_rate_v48": 0.9915364583333334,
+    "suite_win_rate_v49": 0.9928385416666666,
+    "total_wins_v49": 1525,
+    "total_losses_v49": 11,
+    "total_ties_v49": 0,
+    "bootstrap_mean_95_ci": [
+      72.83186848958333,
+      80.79443359375
+    ],
+    "parametric_mean_95_ci": [
+      72.90857236260763,
+      80.71121930405903
+    ],
+    "sample_percentile_95_ci": [
+      0.0,
+      160.0
+    ]
+  },
+  "by_opponent": {
+    "V44": {
+      "legs": 256,
+      "wins_v48": 243,
+      "losses_v48": 13,
+      "ties_v48": 0,
+      "win_rate_v48": 0.94921875,
+      "wins_v49": 245,
+      "losses_v49": 11,
+      "ties_v49": 0,
+      "win_rate_v49": 0.95703125,
+      "rescues": 2,
+      "casualties": 0,
+      "mean_delta": 90.859375,
+      "median_delta": 160.0,
+      "std_delta": 77.17591154971485,
+      "sem_delta": 4.823494471857178,
+      "p10_delta": 0.0,
+      "sample_percentile_95_ci": [
+        0.0,
+        160.0
+      ],
+      "bootstrap_mean_95_ci": [
+        81.3671875,
+        100.2734375
+      ],
+      "parametric_mean_95_ci": [
+        81.4055187749388,
+        100.3132312250612
+      ],
+      "active_legs": 150,
+      "active_mean": 155.06666666666666,
+      "active_median": 160.0
+    },
+    "dmitrii_lb2800": {
+      "legs": 256,
+      "wins_v48": 256,
+      "losses_v48": 0,
+      "ties_v48": 0,
+      "win_rate_v48": 1.0,
+      "wins_v49": 256,
+      "losses_v49": 0,
+      "ties_v49": 0,
+      "win_rate_v49": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "mean_delta": 89.296875,
+      "median_delta": 160.0,
+      "std_delta": 78.08676515362167,
+      "sem_delta": 4.880422822101354,
+      "p10_delta": 0.0,
+      "sample_percentile_95_ci": [
+        0.0,
+        160.0
+      ],
+      "bootstrap_mean_95_ci": [
+        79.7646484375,
+        98.828125
+      ],
+      "parametric_mean_95_ci": [
+        79.73144148559423,
+        98.86230851440577
+      ],
+      "active_legs": 146,
+      "active_mean": 156.57534246575344,
+      "active_median": 160.0
+    },
+    "tetsutani_pasture": {
+      "legs": 256,
+      "wins_v48": 256,
+      "losses_v48": 0,
+      "ties_v48": 0,
+      "win_rate_v48": 1.0,
+      "wins_v49": 256,
+      "losses_v49": 0,
+      "ties_v49": 0,
+      "win_rate_v49": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "mean_delta": 88.359375,
+      "median_delta": 140.0,
+      "std_delta": 77.52826018588951,
+      "sem_delta": 4.845516261618094,
+      "p10_delta": 0.0,
+      "sample_percentile_95_ci": [
+        0.0,
+        160.0
+      ],
+      "bootstrap_mean_95_ci": [
+        78.9052734375,
+        97.8515625
+      ],
+      "parametric_mean_95_ci": [
+        78.862356947879,
+        97.856393052121
+      ],
+      "active_legs": 146,
+      "active_mean": 154.93150684931507,
+      "active_median": 160.0
+    },
+    "kaitofukami_v48_3009": {
+      "legs": 256,
+      "wins_v48": 256,
+      "losses_v48": 0,
+      "ties_v48": 0,
+      "win_rate_v48": 1.0,
+      "wins_v49": 256,
+      "losses_v49": 0,
+      "ties_v49": 0,
+      "win_rate_v49": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "mean_delta": 53.0859375,
+      "median_delta": 0.0,
+      "std_delta": 74.4143700378983,
+      "sem_delta": 4.650898127368643,
+      "p10_delta": 0.0,
+      "sample_percentile_95_ci": [
+        0.0,
+        160.0
+      ],
+      "bootstrap_mean_95_ci": [
+        44.0234375,
+        62.1875
+      ],
+      "parametric_mean_95_ci": [
+        43.970363206282556,
+        62.201511793717444
+      ],
+      "active_legs": 88,
+      "active_mean": 154.4318181818182,
+      "active_median": 160.0
+    },
+    "indarkarhana_top10": {
+      "legs": 256,
+      "wins_v48": 256,
+      "losses_v48": 0,
+      "ties_v48": 0,
+      "win_rate_v48": 1.0,
+      "wins_v49": 256,
+      "losses_v49": 0,
+      "ties_v49": 0,
+      "win_rate_v49": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "mean_delta": 85.546875,
+      "median_delta": 120.0,
+      "std_delta": 77.01090927302978,
+      "sem_delta": 4.813181829564361,
+      "p10_delta": 0.0,
+      "sample_percentile_95_ci": [
+        0.0,
+        160.0
+      ],
+      "bootstrap_mean_95_ci": [
+        76.1328125,
+        94.8046875
+      ],
+      "parametric_mean_95_ci": [
+        76.11323114132703,
+        94.98051885867297
+      ],
+      "active_legs": 143,
+      "active_mean": 153.14685314685315,
+      "active_median": 160.0
+    },
+    "saiteja_mega_3000": {
+      "legs": 256,
+      "wins_v48": 256,
+      "losses_v48": 0,
+      "ties_v48": 0,
+      "win_rate_v48": 1.0,
+      "wins_v49": 256,
+      "losses_v49": 0,
+      "ties_v49": 0,
+      "win_rate_v49": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "mean_delta": 53.7109375,
+      "median_delta": 0.0,
+      "std_delta": 73.7290910041221,
+      "sem_delta": 4.608068187757631,
+      "p10_delta": 0.0,
+      "sample_percentile_95_ci": [
+        0.0,
+        160.0
+      ],
+      "bootstrap_mean_95_ci": [
+        44.765625,
+        62.734375
+      ],
+      "parametric_mean_95_ci": [
+        44.67930817472255,
+        62.74256682527745
+      ],
+      "active_legs": 92,
+      "active_mean": 149.45652173913044,
+      "active_median": 160.0
+    }
+  },
+  "delta_distribution_percentiles": {
+    "p0_min": 0.0,
+    "p1": 0.0,
+    "p2_5": 0.0,
+    "p5": 0.0,
+    "p10": 0.0,
+    "p25": 0.0,
+    "p50_median": 0.0,
+    "p75": 160.0,
+    "p90": 160.0,
+    "p95": 160.0,
+    "p97_5": 160.0,
+    "p99": 160.0,
+    "p100_max": 190.0
+  },
+  "delta_histogram_counts": {
+    "delta_0": 771,
+    "delta_0_to_40": 2,
+    "delta_40_to_80": 6,
+    "delta_80_to_120": 89,
+    "delta_120_to_160": 660,
+    "delta_over_160": 8,
+    "negative_delta": 0
+  },
+  "outright_losses_count": 11
+}

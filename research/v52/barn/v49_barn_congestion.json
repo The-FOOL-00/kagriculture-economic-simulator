@@ -1,0 +1,101 @@
+{
+  "test_seeds": [
+    250416,
+    250428,
+    250433,
+    250436
+  ],
+  "congestion_averages": {
+    "mean_blocked_moves": 0.0,
+    "mean_contention_events": 88.0,
+    "mean_simul_drop_pickup": 4.75
+  },
+  "seed_250416_counterfactuals": {
+    "B0_baseline": {
+      "delta": -716.0,
+      "cash": 95157.0
+    },
+    "B1_entry_reservation": {
+      "delta": -716.0,
+      "cash": 95157.0
+    },
+    "B2_actor_priority": {
+      "delta": -716.0,
+      "cash": 95157.0
+    },
+    "B3_drop_before_pickup": {
+      "delta": -716.0,
+      "cash": 95157.0
+    },
+    "B4_shortest_dist": {
+      "delta": -716.0,
+      "cash": 95157.0
+    },
+    "B5_alter_conflicting": {
+      "delta": -716.0,
+      "cash": 95157.0
+    },
+    "B6_one_step_detour": {
+      "delta": -716.0,
+      "cash": 95157.0
+    }
+  },
+  "detailed_runs": [
+    {
+      "seed": 250416,
+      "seat": 0,
+      "total_blocked_moves": 0,
+      "total_contention_events": 87,
+      "total_simul_drop_pickup": 4
+    },
+    {
+      "seed": 250416,
+      "seat": 1,
+      "total_blocked_moves": 0,
+      "total_contention_events": 87,
+      "total_simul_drop_pickup": 4
+    },
+    {
+      "seed": 250428,
+      "seat": 0,
+      "total_blocked_moves": 0,
+      "total_contention_events": 89,
+      "total_simul_drop_pickup": 4
+    },
+    {
+      "seed": 250428,
+      "seat": 1,
+      "total_blocked_moves": 0,
+      "total_contention_events": 89,
+      "total_simul_drop_pickup": 4
+    },
+    {
+      "seed": 250433,
+      "seat": 0,
+      "total_blocked_moves": 0,
+      "total_contention_events": 88,
+      "total_simul_drop_pickup": 7
+    },
+    {
+      "seed": 250433,
+      "seat": 1,
+      "total_blocked_moves": 0,
+      "total_contention_events": 88,
+      "total_simul_drop_pickup": 7
+    },
+    {
+      "seed": 250436,
+      "seat": 0,
+      "total_blocked_moves": 0,
+      "total_contention_events": 88,
+      "total_simul_drop_pickup": 4
+    },
+    {
+      "seed": 250436,
+      "seat": 1,
+      "total_blocked_moves": 0,
+      "total_contention_events": 88,
+      "total_simul_drop_pickup": 4
+    }
+  ]
+}

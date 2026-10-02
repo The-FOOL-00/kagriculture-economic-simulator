@@ -1,0 +1,248 @@
+{
+  "V49_Parity_Check": {
+    "mechanism": "V49_Parity_Check",
+    "config": {},
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "sem_delta": 0.0,
+    "p0_min": 0.0,
+    "p10": 0.0,
+    "p25": 0.0,
+    "p75": 0.0,
+    "p90": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_mean_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "active_mean": 0.0,
+    "active_median": 0.0,
+    "time_seconds": 30.038736581802368
+  },
+  "M1_Extended_Seeds_624": {
+    "mechanism": "M1_Extended_Seeds_624",
+    "config": {
+      "enable_extended_seeds": true,
+      "seed_step_threshold": 624
+    },
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "sem_delta": 0.0,
+    "p0_min": 0.0,
+    "p10": 0.0,
+    "p25": 0.0,
+    "p75": 0.0,
+    "p90": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_mean_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "active_mean": 0.0,
+    "active_median": 0.0,
+    "time_seconds": 45.69309711456299
+  },
+  "M2_Late_Fert_Guard_646": {
+    "mechanism": "M2_Late_Fert_Guard_646",
+    "config": {
+      "enable_fert_guard": true,
+      "fert_step_threshold": 646
+    },
+    "legs": 64,
+    "mean_delta_vs_v49": -629.671875,
+    "median_delta": -464.5,
+    "std_delta": 796.3039830882066,
+    "sem_delta": 99.53799788602582,
+    "p0_min": -3814.0,
+    "p10": -1516.0,
+    "p25": -724.5,
+    "p75": -190.75,
+    "p90": 2.0,
+    "p100_max": 3.0,
+    "bootstrap_mean_95_ci": [
+      -837.02421875,
+      -452.9789062500001
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.875,
+    "rescues": 0,
+    "casualties": 4,
+    "active_legs": 64,
+    "active_fraction": 1.0,
+    "active_mean": -629.671875,
+    "active_median": -464.5,
+    "time_seconds": 44.229403018951416
+  },
+  "M2_Late_Fert_Guard_624": {
+    "mechanism": "M2_Late_Fert_Guard_624",
+    "config": {
+      "enable_fert_guard": true,
+      "fert_step_threshold": 624
+    },
+    "legs": 64,
+    "mean_delta_vs_v49": -632.328125,
+    "median_delta": -462.0,
+    "std_delta": 793.915993610605,
+    "sem_delta": 99.23949920132563,
+    "p0_min": -3813.0,
+    "p10": -1516.0,
+    "p25": -724.25,
+    "p75": -203.25,
+    "p90": -1.0,
+    "p100_max": 3.0,
+    "bootstrap_mean_95_ci": [
+      -839.286328125,
+      -456.169921875
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.875,
+    "rescues": 0,
+    "casualties": 4,
+    "active_legs": 64,
+    "active_fraction": 1.0,
+    "active_mean": -632.328125,
+    "active_median": -462.0,
+    "time_seconds": 43.79637169837952
+  },
+  "M2_Late_Fert_Guard_631": {
+    "mechanism": "M2_Late_Fert_Guard_631",
+    "config": {
+      "enable_fert_guard": true,
+      "fert_step_threshold": 631
+    },
+    "legs": 64,
+    "mean_delta_vs_v49": -629.671875,
+    "median_delta": -464.5,
+    "std_delta": 796.3039830882066,
+    "sem_delta": 99.53799788602582,
+    "p0_min": -3814.0,
+    "p10": -1516.0,
+    "p25": -724.5,
+    "p75": -190.75,
+    "p90": 2.0,
+    "p100_max": 3.0,
+    "bootstrap_mean_95_ci": [
+      -837.02421875,
+      -452.9789062500001
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.875,
+    "rescues": 0,
+    "casualties": 4,
+    "active_legs": 64,
+    "active_fraction": 1.0,
+    "active_mean": -629.671875,
+    "active_median": -464.5,
+    "time_seconds": 43.208298444747925
+  },
+  "M3_Post670_Seed_Blackout": {
+    "mechanism": "M3_Post670_Seed_Blackout",
+    "config": {
+      "enable_post670_blackout": true
+    },
+    "legs": 64,
+    "mean_delta_vs_v49": 0.0,
+    "median_delta": 0.0,
+    "std_delta": 0.0,
+    "sem_delta": 0.0,
+    "p0_min": 0.0,
+    "p10": 0.0,
+    "p25": 0.0,
+    "p75": 0.0,
+    "p90": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_mean_95_ci": [
+      0.0,
+      0.0
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 0,
+    "active_fraction": 0.0,
+    "active_mean": 0.0,
+    "active_median": 0.0,
+    "time_seconds": 43.59996557235718
+  },
+  "M4_Market_Wheat_Guard_648": {
+    "mechanism": "M4_Market_Wheat_Guard_648",
+    "config": {
+      "enable_market_wheat_guard": true
+    },
+    "legs": 64,
+    "mean_delta_vs_v49": -0.46875,
+    "median_delta": 0.0,
+    "std_delta": 1.532388425208924,
+    "sem_delta": 0.1915485531511155,
+    "p0_min": -6.0,
+    "p10": 0.0,
+    "p25": 0.0,
+    "p75": 0.0,
+    "p90": 0.0,
+    "p100_max": 0.0,
+    "bootstrap_mean_95_ci": [
+      -0.890625,
+      -0.140625
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.9375,
+    "rescues": 0,
+    "casualties": 0,
+    "active_legs": 6,
+    "active_fraction": 0.09375,
+    "active_mean": -5.0,
+    "active_median": -6.0,
+    "time_seconds": 43.34494614601135
+  },
+  "Composite_M1_M2_M3": {
+    "mechanism": "Composite_M1_M2_M3",
+    "config": {
+      "enable_fert_guard": true,
+      "fert_step_threshold": 646,
+      "enable_extended_seeds": true,
+      "seed_step_threshold": 624,
+      "enable_post670_blackout": true
+    },
+    "legs": 64,
+    "mean_delta_vs_v49": -629.671875,
+    "median_delta": -464.5,
+    "std_delta": 796.3039830882066,
+    "sem_delta": 99.53799788602582,
+    "p0_min": -3814.0,
+    "p10": -1516.0,
+    "p25": -724.5,
+    "p75": -190.75,
+    "p90": 2.0,
+    "p100_max": 3.0,
+    "bootstrap_mean_95_ci": [
+      -837.02421875,
+      -452.9789062500001
+    ],
+    "win_rate_v49": 0.9375,
+    "win_rate_cand": 0.875,
+    "rescues": 0,
+    "casualties": 4,
+    "active_legs": 64,
+    "active_fraction": 1.0,
+    "active_mean": -629.671875,
+    "active_median": -464.5,
+    "time_seconds": 44.57870841026306
+  }
+}

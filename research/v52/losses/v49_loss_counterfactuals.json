@@ -1,0 +1,420 @@
+[
+  {
+    "loss_id": "L01",
+    "seed": 250416,
+    "seat": 0,
+    "category": "Barn/Macro",
+    "v49_baseline": {
+      "delta": -716.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": -1850.0,
+      "win": false
+    },
+    "liquidity_patch": {
+      "delta": -716.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -716.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": -1850.0,
+      "win": false
+    },
+    "liquidity_plus_herd": {
+      "delta": -1850.0,
+      "win": false
+    },
+    "liquidity_plus_barn": {
+      "delta": -716.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": -1850.0,
+      "win": false
+    }
+  },
+  {
+    "loss_id": "L02",
+    "seed": 250416,
+    "seat": 1,
+    "category": "Barn/Macro",
+    "v49_baseline": {
+      "delta": -716.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": -1850.0,
+      "win": false
+    },
+    "liquidity_patch": {
+      "delta": -716.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -716.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": -1850.0,
+      "win": false
+    },
+    "liquidity_plus_herd": {
+      "delta": -1850.0,
+      "win": false
+    },
+    "liquidity_plus_barn": {
+      "delta": -716.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": -1850.0,
+      "win": false
+    }
+  },
+  {
+    "loss_id": "L03",
+    "seed": 250428,
+    "seat": 0,
+    "category": "Late Crop/Timing",
+    "v49_baseline": {
+      "delta": -31.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": -31.0,
+      "win": false
+    },
+    "liquidity_patch": {
+      "delta": -31.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -31.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": -31.0,
+      "win": false
+    },
+    "liquidity_plus_herd": {
+      "delta": -31.0,
+      "win": false
+    },
+    "liquidity_plus_barn": {
+      "delta": -31.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": -31.0,
+      "win": false
+    }
+  },
+  {
+    "loss_id": "L04",
+    "seed": 250428,
+    "seat": 1,
+    "category": "Late Crop/Timing",
+    "v49_baseline": {
+      "delta": -160.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": -160.0,
+      "win": false
+    },
+    "liquidity_patch": {
+      "delta": -160.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -160.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": -160.0,
+      "win": false
+    },
+    "liquidity_plus_herd": {
+      "delta": -160.0,
+      "win": false
+    },
+    "liquidity_plus_barn": {
+      "delta": -160.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": -160.0,
+      "win": false
+    }
+  },
+  {
+    "loss_id": "L05",
+    "seed": 250433,
+    "seat": 0,
+    "category": "Route Branch",
+    "v49_baseline": {
+      "delta": -470.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": -470.0,
+      "win": false
+    },
+    "liquidity_patch": {
+      "delta": -470.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -470.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": -470.0,
+      "win": false
+    },
+    "liquidity_plus_herd": {
+      "delta": -470.0,
+      "win": false
+    },
+    "liquidity_plus_barn": {
+      "delta": -470.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": -470.0,
+      "win": false
+    }
+  },
+  {
+    "loss_id": "L06",
+    "seed": 250433,
+    "seat": 1,
+    "category": "Route Branch",
+    "v49_baseline": {
+      "delta": -470.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": -470.0,
+      "win": false
+    },
+    "liquidity_patch": {
+      "delta": -470.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -470.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": -470.0,
+      "win": false
+    },
+    "liquidity_plus_herd": {
+      "delta": -470.0,
+      "win": false
+    },
+    "liquidity_plus_barn": {
+      "delta": -470.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": -470.0,
+      "win": false
+    }
+  },
+  {
+    "loss_id": "L07",
+    "seed": 250436,
+    "seat": 0,
+    "category": "COWSWAP/Herd",
+    "v49_baseline": {
+      "delta": -1405.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": 2449.0,
+      "win": true
+    },
+    "liquidity_patch": {
+      "delta": -1405.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -1405.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": 2449.0,
+      "win": true
+    },
+    "liquidity_plus_herd": {
+      "delta": 2449.0,
+      "win": true
+    },
+    "liquidity_plus_barn": {
+      "delta": -1405.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": 2449.0,
+      "win": true
+    }
+  },
+  {
+    "loss_id": "L08",
+    "seed": 250436,
+    "seat": 1,
+    "category": "COWSWAP/Herd",
+    "v49_baseline": {
+      "delta": -1405.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": 2449.0,
+      "win": true
+    },
+    "liquidity_patch": {
+      "delta": -1405.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -1405.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": 2449.0,
+      "win": true
+    },
+    "liquidity_plus_herd": {
+      "delta": 2449.0,
+      "win": true
+    },
+    "liquidity_plus_barn": {
+      "delta": -1405.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": 2449.0,
+      "win": true
+    }
+  },
+  {
+    "loss_id": "L09",
+    "seed": 250439,
+    "seat": 0,
+    "category": "COWSWAP/Herd",
+    "v49_baseline": {
+      "delta": -1407.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": 1418.0,
+      "win": true
+    },
+    "liquidity_patch": {
+      "delta": -1407.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -1407.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": 1418.0,
+      "win": true
+    },
+    "liquidity_plus_herd": {
+      "delta": 1418.0,
+      "win": true
+    },
+    "liquidity_plus_barn": {
+      "delta": -1407.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": 1418.0,
+      "win": true
+    }
+  },
+  {
+    "loss_id": "L10",
+    "seed": 250439,
+    "seat": 1,
+    "category": "COWSWAP/Herd",
+    "v49_baseline": {
+      "delta": -1407.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": 1418.0,
+      "win": true
+    },
+    "liquidity_patch": {
+      "delta": -1407.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -1407.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": 1418.0,
+      "win": true
+    },
+    "liquidity_plus_herd": {
+      "delta": 1418.0,
+      "win": true
+    },
+    "liquidity_plus_barn": {
+      "delta": -1407.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": 1418.0,
+      "win": true
+    }
+  },
+  {
+    "loss_id": "L11",
+    "seed": 250497,
+    "seat": 1,
+    "category": "Route Branch",
+    "v49_baseline": {
+      "delta": -901.0,
+      "win": false
+    },
+    "herd_patch": {
+      "delta": -901.0,
+      "win": false
+    },
+    "liquidity_patch": {
+      "delta": -901.0,
+      "win": false
+    },
+    "barn_patch": {
+      "delta": -901.0,
+      "win": false
+    },
+    "herd_plus_barn": {
+      "delta": -901.0,
+      "win": false
+    },
+    "liquidity_plus_herd": {
+      "delta": -901.0,
+      "win": false
+    },
+    "liquidity_plus_barn": {
+      "delta": -901.0,
+      "win": false
+    },
+    "full_candidate": {
+      "delta": -901.0,
+      "win": false
+    }
+  }
+]
