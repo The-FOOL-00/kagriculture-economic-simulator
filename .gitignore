@@ -1,25 +1,84 @@
-# Byte-compiled / optimized / DLL files
+# ==============================================================================
+# Kagriculture Hardened Git Ignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Python Bytecode, Caches & Environments
+# ------------------------------------------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
 
-# Large simulation replay artifacts
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ------------------------------------------------------------------------------
+# 2. Operating System & IDE Caches
+# ------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.tempmediaStorage/
+
+# ------------------------------------------------------------------------------
+# 3. Security, Credentials & Secrets (Class F)
+# ------------------------------------------------------------------------------
+.env
+*.env
+kaggle.json
+*.pem
+*.key
+credentials
+secrets.json
+
+# ------------------------------------------------------------------------------
+# 4. Large External Datasets & Simulation Replay Corpora (Class D)
+# Raw match replays (~33 MB each, 15+ GB total) are documented in docs/DATASETS.md
+# ------------------------------------------------------------------------------
+replays/
+live_data/
+scratch/**/replays/
+scratch/replays/
+external_repos/**/online_replays/
+research/v60/data/tmp_ep_jsons/
+
+# ------------------------------------------------------------------------------
+# 5. Large Intermediate Trajectories, ML Checkpoints & Scratch Dumps (Class E/D)
+# ------------------------------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+results/*.jsonl
+results/**/*.jsonl
+research/v58/data/*.jsonl
+scratch/*.json
+scratch/fast_provenance_hits.json
+scratch/forensic_telemetry_dump.json
+
+# ------------------------------------------------------------------------------
+# 6. JSON Handling
+# Exclude raw episode dumps by default, allow structured research & config JSONs
+# ------------------------------------------------------------------------------
 *.json
+!*MANIFEST.json
 !PHASE014_HEADROOM_MANIFEST.json
-!results/PHASE014_*.json
 !PHASE022R1_QUAL_MANIFEST.json
 !PHASE022R1_QA_RESULTS.json
 !research/*.json
 !research/**/*.json
 !results/*.json
 !results/**/*.json
-replays/
-live_data/
-scratch/**/replays/
-scratch/*.json
-results/v27_*.jsonl
-results/v32_p2_bc_legs.jsonl
-.tempmediaStorage/
+!configs/*.json
+!configs/**/*.json
+!data/*.json
 
-# Submission archives
+# Root temporary submission tarball
 submission.tar.gz
