@@ -1,0 +1,40 @@
+{
+ "$schema": "v58/strategy_signature/1",
+ "georgymamarin_base": [
+  "peak_crew",
+  "total_hires",
+  "first_land_day",
+  "elbow_day",
+  "tiles_planted",
+  "plants_carrot",
+  "plants_melon",
+  "plants_strawberry",
+  "plants_tomato",
+  "plants_wheat",
+  "price_*_min/max",
+  "final_money"
+ ],
+ "stream_hashes": [
+  "stream_h24",
+  "stream_h48",
+  "stream_h100",
+  "stream_h136",
+  "stream_h200",
+  "stream_h300",
+  "stream_h400",
+  "stream_h719"
+ ],
+ "v58_extended": [
+  "daily.money",
+  "daily.crew",
+  "daily.animals{SPP:count}",
+  "daily.plants{CROP:count}",
+  "daily.quads",
+  "market_census{OP:count}",
+  "first_sale_day{PROD:day}",
+  "sale_qty{PROD:units}",
+  "anim_peak{SPP:max}",
+  "plant_peak{CROP:max}"
+ ],
+ "provenance": "S2 definitions mirrored in capture_trajectories.py; hashes share S3 normalization"
+}

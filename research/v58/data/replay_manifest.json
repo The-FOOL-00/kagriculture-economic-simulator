@@ -1,0 +1,60 @@
+{
+  "sources": {
+    "S4_teams_csv": {
+      "path": "replays/raw/georgymamarin/teams.csv",
+      "teams": 7090,
+      "sha16": "102d48f47be9aa31"
+    },
+    "S1_episodes_csv": {
+      "path": "replays/raw/georgymamarin/episodes.csv",
+      "episodes": 74699,
+      "sha16": "2500804bae0cd621"
+    },
+    "S2_features_csv": {
+      "path": "replays/raw/georgymamarin/episode_features.csv",
+      "rows": 139902,
+      "sha16": "085b3651bb7861b6"
+    },
+    "S3_hashes_csv": {
+      "path": "replays/raw/georgymamarin/stream_hashes.csv",
+      "rows": 139902,
+      "sha16": "5f9f10c2334b2472"
+    },
+    "S9_leaderboard_csv": {
+      "path": "live_data/episodes_v31r2/kaggriculture-publicleaderboard-2026-09-22T08:50:44.csv",
+      "teams": 9807,
+      "sha16": "d4fb553306947c44"
+    },
+    "S5_keep": {
+      "pattern": "live_data/episodes_v31r2/keep/*.json",
+      "files": 193
+    },
+    "S6_live_tournament": {
+      "pattern": "replays/live_tournament/*.json",
+      "files": 48
+    },
+    "S7_cohorts": {
+      "pattern": "external_repos/lixingtao123-Kaggriculture/online_replays/*/*.json",
+      "files": 48
+    },
+    "S8_root": {
+      "pattern": "replays/episode-*-replay.json",
+      "files": 27
+    }
+  },
+  "notes": [
+    "No 3100+ full-replay archive exists locally; S1-S3 carry 3100+ SEATS as (rating, features, hashes) only.",
+    "S5-S8 local replays are near-exclusively sub-2800 opponents; unsuitable as elite population.",
+    "Elite population for V58 = S1+S2+S3 seats with rating>=2945 (518 seats, 2026-08-05..15, engines 1.32.4-6).",
+    "Engine caveat: only 1 elite seat played on 1.32.7; strategy-family discovery is cross-patch, causal tests run on 1.32.7."
+  ],
+  "outputs": {
+    "replay_database.jsonl": {
+      "rows": 149398,
+      "elite_ge2945": 518
+    },
+    "replay_file_index.jsonl": {
+      "rows": 316
+    }
+  }
+}

@@ -1,0 +1,7 @@
+﻿{
+  "status": "NOT_COMPUTED",
+  "reason": "No Sep current plans identified. Tournament requires candidate plans vs opponents.",
+  "plans_available": 0,
+  "opponents_available": "Aug-derived only (all lose to V49)",
+  "note": "V58 already ran 400-leg Aug elite tournament. Re-running would produce same result."
+}

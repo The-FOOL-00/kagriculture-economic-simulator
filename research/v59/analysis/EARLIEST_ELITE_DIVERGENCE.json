@@ -1,0 +1,18 @@
+﻿{
+  "analysis": "EARLIEST_ELITE_DIVERGENCE",
+  "data_available": false,
+  "reason": "No September replay action streams locally available",
+  "divergence_turns": {
+    "turn_0": "UNKNOWN",
+    "turn_12": "UNKNOWN",
+    "turn_24": "UNKNOWN",
+    "turn_36": "UNKNOWN",
+    "turn_48": "UNKNOWN",
+    "turn_72": "UNKNOWN",
+    "turn_100": "UNKNOWN"
+  },
+  "aug_vs_v49_divergence": "turn_0 (day-0 portfolio differs fundamentally)",
+  "sep_vs_v49_divergence": "UNKNOWN",
+  "conclusion": "NOT_DETERMINABLE",
+  "failure_class": "I"
+}

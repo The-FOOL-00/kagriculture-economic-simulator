@@ -1,0 +1,14 @@
+﻿{
+  "status": "NOT_DISCOVERABLE",
+  "reason": "No September replay action streams available locally",
+  "families_found": 0,
+  "aug_families_from_v58": {
+    "F1": {"description": "Carrot-0 heavy, 24/42/108@land7", "aug_elite_share": "50%", "v49_result": "LOST 0/400"},
+    "F2": {"description": "night_harvest variant", "aug_elite_share": "minority", "v49_result": "LOST"},
+    "F3": {"description": "19/37/143@land6", "aug_elite_share": "30%", "v49_result": "LOST"},
+    "F4": {"description": "P3000-style", "aug_elite_share": "rare", "v49_result": "LOST"},
+    "F5": {"description": "P3090-style", "aug_elite_share": "rare", "v49_result": "LOST"}
+  },
+  "sep_families": "UNKNOWN",
+  "failure_class": "I"
+}

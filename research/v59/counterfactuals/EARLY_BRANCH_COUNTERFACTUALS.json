@@ -1,0 +1,9 @@
+﻿{
+  "status": "NOT_COMPUTED",
+  "reason": "No Sep strategy families discovered. Branch candidates require family identification first.",
+  "branch_types_tested": {
+    "B1_opponent_conditioned": "NOT_TESTED - no opponent family data",
+    "B2_environment_conditioned": "NOT_TESTED - no candidate plans",
+    "B3_joint_conditioned": "NOT_TESTED - no candidate plans"
+  }
+}

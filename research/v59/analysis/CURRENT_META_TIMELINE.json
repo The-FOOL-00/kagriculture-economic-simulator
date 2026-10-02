@@ -1,0 +1,128 @@
+{
+  "v59_meta_timeline_version": "1.0",
+  "generated_at": "2026-09-28T14:18:41+05:30",
+
+  "rating_top_avg_by_date": {
+    "2026-07-30": 1152.4,
+    "2026-07-31": 1427.0,
+    "2026-08-01": 1580.6,
+    "2026-08-02": 2627.2,
+    "2026-08-03": 2960.1,
+    "2026-08-04": 2996.3,
+    "2026-08-05": 3022.8,
+    "2026-08-06": 3081.3,
+    "2026-08-07": 3132.6,
+    "2026-08-08": 3192.9,
+    "2026-08-09": 3218.1,
+    "2026-08-10": 3217.4,
+    "2026-08-11": 3186.7,
+    "2026-08-12": 3190.6,
+    "2026-08-13": 3197.0,
+    "2026-08-14": 3207.0,
+    "2026-08-15": 3202.1,
+    "2026-08-16": 3198.0,
+    "2026-08-17": 3172.7,
+    "2026-08-18": 3173.9,
+    "2026-08-19": 3133.6,
+    "2026-08-20": 3133.6,
+    "2026-08-21": 3135.5,
+    "2026-08-22": 3094.1,
+    "2026-08-23": 3094.9,
+    "2026-08-24": 3066.5,
+    "2026-08-25": 3069.6,
+    "2026-08-26": 3075.2,
+    "2026-08-27": 3071.2,
+    "2026-08-28": 3035.2,
+    "2026-08-29": 3026.2,
+    "2026-08-30": 3030.3,
+    "2026-08-31": 2962.0,
+    "2026-09-22": 3109.5
+  },
+
+  "period_summary": {
+    "July_30_31": {
+      "period": "2026-07-30 to 2026-07-31",
+      "dataset": "georgymamarin (full)",
+      "max_rating": 1427.0,
+      "elite_seats_above_2945": 0,
+      "main_strategy": "Early competition, low ratings",
+      "engine": "1.32.7"
+    },
+    "Aug_01_07": {
+      "period": "2026-08-01 to 2026-08-07",
+      "dataset": "georgymamarin (full)",
+      "max_rating": 3132.6,
+      "elite_seats_above_2945": "~100 estimated",
+      "main_strategy": "Carrot-0 / pre-wash routes emerging",
+      "engine": "1.32.7",
+      "note": "Rapid rating inflation as strong teams dominate"
+    },
+    "Aug_08_15": {
+      "period": "2026-08-08 to 2026-08-15",
+      "dataset": "georgymamarin (full)",
+      "max_rating": 3218.1,
+      "max_rating_date": "2026-08-09",
+      "elite_seats_above_2945": 518,
+      "main_strategy": "Carrot-0 F1 (24/42/108@land7 hex) dominant at 3100+. Two macro crops.",
+      "engine": "1.32.7",
+      "note": "Peak August meta. V58 corpus. Carrot revolution begins Aug W3/W4."
+    },
+    "Aug_16_20": {
+      "period": "2026-08-16 to 2026-08-20",
+      "dataset": "georgymamarin (partial)",
+      "max_rating": 3198.0,
+      "main_strategy": "Carrot/wash transition period",
+      "engine": "1.32.7",
+      "note": "Meta beginning to shift. V49 architecture emerged in this window."
+    },
+    "Aug_21_31": {
+      "period": "2026-08-21 to 2026-08-31",
+      "dataset": "georgymamarin (partial, ends Aug 31)",
+      "max_rating": 3135.5,
+      "main_strategy": "Wash/carrot route (V49-style) consolidating",
+      "engine": "1.32.7",
+      "note": "Top ratings declining as meta shifts. V49 already post-revolution."
+    },
+    "Sep_01_19": {
+      "period": "2026-09-01 to 2026-09-19",
+      "dataset": "NO LOCAL DATA",
+      "max_rating": "UNKNOWN",
+      "elite_seats_above_2945": "UNKNOWN",
+      "main_strategy": "UNKNOWN - gap in local data",
+      "engine": "1.32.7",
+      "note": "CRITICAL GAP. Cannot characterize. Sep 22 LB shows teams like Majkel1337 went from 1201 (Aug) to 3070 (Sep) - massive improvement during this period."
+    },
+    "Sep_20_22": {
+      "period": "2026-09-20 to 2026-09-22",
+      "dataset": "leaderboard snapshot + our episode summaries",
+      "max_rating": 3109.5,
+      "max_team": "DSM",
+      "teams_3000_plus": 7,
+      "teams_2900_plus": 29,
+      "main_strategy": "UNKNOWN from replay data. Leaderboard confirms active top-7 teams.",
+      "engine": "1.32.7",
+      "note": "Sep 22 snapshot. 4 of 7 teams above 3000 are NEW (not in Aug corpus): DSM, Vadim Vasilenko, Unknown Mother-Goose, Kaggledew Valley. Strongly suggests new strategies emerged Sep 1-19."
+    }
+  },
+
+  "meta_drift_evidence": {
+    "finding_1": "Peak Aug rating (3218 on Aug 09) > Sep 22 top (3109). Rating DECLINED overall. New teams displaced old top.",
+    "finding_2": "4 of 7 Sep-22 3000+ teams are NEW — not present in Aug corpus at all.",
+    "finding_3": "Teams in both corpora showed massive rating gains: Majkel1337 +1870, Yannik Schiffner +2216, Sida Zuo +2069. These are likely strategy improvements.",
+    "finding_4": "Aug top-scorer in georgymamarin teams.csv is 2930 (tetsuya). Sep top is 3109 (DSM). Net delta +179 at the very top.",
+    "finding_5": "The kaggle daily index top_avg_score peaked Aug 09 (3218) and declined to Aug 31 (2962). Sep 22 shows partial recovery to 3109.",
+    "implication": "The meta is still evolving. New agents emerged between Aug 31 and Sep 22 that are not captured in any local replay corpus."
+  },
+
+  "v49_position": {
+    "v49_architecture": "September carrot/wash route (post-Aug revolution)",
+    "v49_emerged": "August W3-W4 (carrot revolution window)",
+    "v49_vs_aug_corpus": "V49 is newer than August 3100+ agents (V58 confirmed)",
+    "v49_vs_sep_corpus": "UNKNOWN — Sep replay data inaccessible",
+    "v49_vs_sep_leaderboard": "DSM(3109) > V49 if V49 rating is ~2800. Gap = ~300 rating points.",
+    "question": "Is DSM using the same V49 macro route with better execution, OR a different strategy entirely?"
+  },
+
+  "is_meta_still_evolving": true,
+  "evidence": "YES — 4 new 3000+ teams appeared post-Aug-31. Rating distribution shifted. Sep gap cannot be characterized from local data alone."
+}

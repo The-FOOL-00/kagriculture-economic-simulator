@@ -1,0 +1,17 @@
+﻿{
+  "v49_sha256": "8CAFF63068BF68A34A9141D48F771D9007AFC0DFA792179A737ECCE919FBBD11",
+  "v49_controlled_benchmark": {"wins": 572, "losses": 4, "win_rate": 0.9931, "casualties": 0},
+  "v49_vs_aug_elite": {"result": "V49 WINS ALL", "legs": 400, "v49_wins": 400, "note": "V58 confirmed"},
+  "v49_vs_sep_elite": {"result": "UNKNOWN", "reason": "No September replay data available"},
+  "sep_22_top_teams": [
+    {"team": "DSM", "score": 3109.5, "in_aug_corpus": false, "v49_matchup": "NOT_TESTED"},
+    {"team": "Vadim Vasilenko", "score": 3099.9, "in_aug_corpus": false, "v49_matchup": "NOT_TESTED"},
+    {"team": "Majkel1337", "score": 3070.6, "in_aug_corpus": true, "aug_score": 1201, "v49_matchup": "NOT_TESTED"},
+    {"team": "Unknown Mother-Goose", "score": 3052.5, "in_aug_corpus": false, "v49_matchup": "NOT_TESTED"},
+    {"team": "THIRD FARM CLUB", "score": 3049.1, "in_aug_corpus": true, "aug_score": 2264, "v49_matchup": "NOT_TESTED"},
+    {"team": "M & M & P & Q", "score": 3046.3, "in_aug_corpus": true, "aug_score": 1589, "v49_matchup": "NOT_TESTED"},
+    {"team": "Kaggledew Valley", "score": 3038.8, "in_aug_corpus": false, "v49_matchup": "NOT_TESTED"}
+  ],
+  "conclusion": "CANNOT_COMPARE",
+  "failure_class": "I"
+}

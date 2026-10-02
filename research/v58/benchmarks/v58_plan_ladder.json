@@ -1,0 +1,47 @@
+{
+ "stage": "B_plan_tournament",
+ "legs_total": 400,
+ "elite_wins_total": 0,
+ "matchups": {
+  "v44": {
+   "wr": 0.0,
+   "mean": -163440.425
+  },
+  "kaitofukami_v48_3009": {
+   "wr": 0.0,
+   "mean": -26114.625
+  },
+  "saiteja_mega_3000": {
+   "wr": 0.0,
+   "mean": -90462.925
+  },
+  "thomastschinkel_2945": {
+   "wr": 0.0,
+   "mean": -79.45
+  },
+  "tetsutani_pasture": {
+   "wr": 0.0,
+   "mean": -17445.3
+  },
+  "indarkarhana_top10": {
+   "wr": 0.0,
+   "mean": -19971.225
+  },
+  "dmitrii_lb2800": {
+   "wr": 0.0,
+   "mean": -10271.05
+  },
+  "P3090_claimed": {
+   "wr": 0.0,
+   "mean": -33412.7
+  },
+  "P3000_claimed": {
+   "wr": 0.0,
+   "mean": -31498.65
+  },
+  "night_harvest": {
+   "wr": 0.0,
+   "mean": -44951.8
+  }
+ }
+}

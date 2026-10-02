@@ -1,0 +1,7 @@
+﻿{
+  "status": "NOT_COMPUTABLE",
+  "reason": "Oracle requires multiple candidate plans across sep families. No plans available.",
+  "aug_oracle_value": "~0 (V58 confirmed - all Aug elite plans lose to V49)",
+  "sep_oracle_value": "UNKNOWN",
+  "go_no_go": "CANNOT_ASSESS"
+}

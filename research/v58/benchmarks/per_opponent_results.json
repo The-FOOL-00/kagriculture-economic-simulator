@@ -1,0 +1,117 @@
+{
+ "stage": "B_plan_tournament",
+ "seeds": [
+  10100,
+  10101,
+  10102,
+  10103,
+  10104,
+  10105,
+  10106,
+  10107,
+  10108,
+  10109,
+  10110,
+  10111,
+  10112,
+  10113,
+  10114,
+  10115,
+  10116,
+  10117,
+  10118,
+  10119
+ ],
+ "per_opponent": {
+  "v44": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -163440.425,
+   "median_margin": -163262.0,
+   "catastrophic": 40,
+   "elite_mean_cash": 3000.0
+  },
+  "kaitofukami_v48_3009": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -26114.625,
+   "median_margin": -24474.0,
+   "catastrophic": 40,
+   "elite_mean_cash": 84642.475
+  },
+  "saiteja_mega_3000": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -90462.925,
+   "median_margin": -91359.0,
+   "catastrophic": 40,
+   "elite_mean_cash": 42819.525
+  },
+  "thomastschinkel_2945": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -79.45,
+   "median_margin": -41.0,
+   "catastrophic": 0,
+   "elite_mean_cash": 101074.3
+  },
+  "tetsutani_pasture": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -17445.3,
+   "median_margin": -13483.5,
+   "catastrophic": 31,
+   "elite_mean_cash": 89894.15
+  },
+  "indarkarhana_top10": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -19971.225,
+   "median_margin": -17193.0,
+   "catastrophic": 36,
+   "elite_mean_cash": 86308.5
+  },
+  "dmitrii_lb2800": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -10271.05,
+   "median_margin": -8711.0,
+   "catastrophic": 18,
+   "elite_mean_cash": 97085.0
+  },
+  "P3090_claimed": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -33412.7,
+   "median_margin": -31306.5,
+   "catastrophic": 40,
+   "elite_mean_cash": 84633.925
+  },
+  "P3000_claimed": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -31498.65,
+   "median_margin": -28237.0,
+   "catastrophic": 40,
+   "elite_mean_cash": 88742.1
+  },
+  "night_harvest": {
+   "legs": 40,
+   "elite_wins": 0,
+   "elite_wr": 0.0,
+   "mean_margin_elite_minus_v49": -44951.8,
+   "median_margin": -47284.0,
+   "catastrophic": 40,
+   "elite_mean_cash": 69485.2
+  }
+ }
+}

@@ -1,0 +1,5 @@
+{
+ "stage": "E_safe_selector",
+ "status": "NOT_BUILT",
+ "reason": "0/400 fixed wins; no two qualifying plans; see SELECTOR_COUNTERFACTUALS.json"
+}

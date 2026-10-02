@@ -1,0 +1,69 @@
+﻿{
+  "v59_data_inventory_version": "1.0",
+  "generated_at": "2026-09-28T14:18:41+05:30",
+  "inventory_date": "2026-09-28",
+  "september_replay_sources": {
+    "georgymamarin_dataset": {
+      "source": "replays/raw/georgymamarin/",
+      "date_range": "2026-07-30 to 2026-08-31",
+      "september_episodes": 0,
+      "total_episodes": 74699,
+      "status": "STALE_AUGUST"
+    },
+    "kaggle_index_manifest": {
+      "source": "replays/raw/kaggle_index/manifest.csv",
+      "date_range": "2026-07-30 to 2026-08-31",
+      "september_dates": [],
+      "status": "STALE_AUGUST"
+    },
+    "live_data_episodes_v31r2": {
+      "source": "live_data/episodes_v31r2/",
+      "date_range": "2026-09-20 to 2026-09-22",
+      "total_episodes": 264,
+      "date_breakdown": {
+        "2026-09-20": {"games": 39, "wins": 16, "losses": 23},
+        "2026-09-21": {"games": 111, "wins": 45, "losses": 66},
+        "2026-09-22": {"games": 114, "wins": 61, "losses": 53}
+      },
+      "has_action_streams": false,
+      "has_replay_json": false,
+      "status": "SEPTEMBER_METADATA_ONLY"
+    },
+    "leaderboard_snapshot_sep22": {
+      "snapshot_time": "2026-09-22T08:50:44",
+      "total_teams": 9807,
+      "top_score": 3109.5,
+      "top_team": "DSM",
+      "teams_3000_plus": 7,
+      "teams_2900_plus": 29,
+      "teams_2800_plus": 78,
+      "status": "CURRENT_LEADERBOARD_CONFIRMED"
+    },
+    "destbreso_matchups_benchmark": {
+      "source": "replays/raw/destbreso/matchups_top.parquet",
+      "rows": 421,
+      "distinct_opening_behaviours_above_2000": 112,
+      "status": "AUGUST_DERIVED"
+    },
+    "team_wash_map": {
+      "source": "live_data/episodes_v31r2/team_wash_map.json",
+      "teams_mapped": 139,
+      "top_teams_present": ["Fedor only"],
+      "status": "PARTIAL_SEPTEMBER"
+    }
+  },
+  "september_dates_locally_present": ["2026-09-20", "2026-09-21", "2026-09-22"],
+  "september_dates_locally_absent": ["2026-09-01 through 2026-09-19", "2026-09-23 through 2026-09-28"],
+  "acquisition_status": {
+    "kaggle_api_accessible": false,
+    "external_network_accessible": false,
+    "data_gap": "Sep 1 to Sep 19 and Sep 23 to Sep 28: ZERO local replay data"
+  },
+  "summary": {
+    "newest_usable_replay_population": "August 2026 (ends 2026-08-31)",
+    "newest_leaderboard_snapshot": "2026-09-22T08:50:44",
+    "september_replay_episodes_with_strategic_fingerprints": 0,
+    "september_episode_summaries_only": 264,
+    "critical_gap": "No September replay JSON files with action streams exist locally. Cannot reconstruct current elite strategy fingerprints."
+  }
+}

@@ -1,0 +1,5406 @@
+[
+  {
+    "file": "a7-episode-111851139-replay.json",
+    "prefix": "a7",
+    "ep_id": 111851139,
+    "seed": 0,
+    "team_names": [
+      "Eldritch",
+      "Eldritch"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Eldritch",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      67695.0,
+      68335.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "a7-episode-111863520-replay.json",
+    "prefix": "a7",
+    "ep_id": 111863520,
+    "seed": 215512421,
+    "team_names": [
+      "Marlubie",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Marlubie",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      84092.0,
+      79785.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "a7-episode-111864683-replay.json",
+    "prefix": "a7",
+    "ep_id": 111864683,
+    "seed": 1502773151,
+    "team_names": [
+      "Suyash Verma",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Suyash Verma",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      120042.0,
+      117562.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "a7-episode-111874934-replay.json",
+    "prefix": "a7",
+    "ep_id": 111874934,
+    "seed": 1873823493,
+    "team_names": [
+      "GOAT   Mathieu \"ZywOo\" Herbaut",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "GOAT   Mathieu \"ZywOo\" Herbaut",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      74086.0,
+      68395.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "a7-episode-111875310-replay.json",
+    "prefix": "a7",
+    "ep_id": 111875310,
+    "seed": 1011230368,
+    "team_names": [
+      "Zhongyi Dai",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Zhongyi Dai",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      71790.0,
+      67604.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111876058-replay.json",
+    "prefix": "a7",
+    "ep_id": 111876058,
+    "seed": 620789427,
+    "team_names": [
+      "Eldritch",
+      "shawenher"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "shawenher",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      119404.0,
+      129799.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.6
+  },
+  {
+    "file": "a7-episode-111878712-replay.json",
+    "prefix": "a7",
+    "ep_id": 111878712,
+    "seed": 1846354605,
+    "team_names": [
+      "Eldritch",
+      "wen chong yu"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "wen chong yu",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      97830.0,
+      106814.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "a7-episode-111885138-replay.json",
+    "prefix": "a7",
+    "ep_id": 111885138,
+    "seed": 1945671276,
+    "team_names": [
+      "Eldritch",
+      "yuxian6666"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "yuxian6666",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      83639.0,
+      85687.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "a7-episode-111886277-replay.json",
+    "prefix": "a7",
+    "ep_id": 111886277,
+    "seed": 1883987038,
+    "team_names": [
+      "Eldritch",
+      "Fedor"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Fedor",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      114951.0,
+      129140.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 33.0
+  },
+  {
+    "file": "a7-episode-111887492-replay.json",
+    "prefix": "a7",
+    "ep_id": 111887492,
+    "seed": 671164263,
+    "team_names": [
+      "Eldritch",
+      "levshaazz"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "levshaazz",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      100766.0,
+      102167.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "a7-episode-111890799-replay.json",
+    "prefix": "a7",
+    "ep_id": 111890799,
+    "seed": 1391011089,
+    "team_names": [
+      "PursueML",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "PursueML",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      88248.0,
+      86881.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.5
+  },
+  {
+    "file": "a7-episode-111893071-replay.json",
+    "prefix": "a7",
+    "ep_id": 111893071,
+    "seed": 740207454,
+    "team_names": [
+      "Eldritch",
+      "kevin zhou"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "kevin zhou",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      82308.0,
+      82342.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111894209-replay.json",
+    "prefix": "a7",
+    "ep_id": 111894209,
+    "seed": 1872242696,
+    "team_names": [
+      "Eldritch",
+      "David Goldrajch"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "David Goldrajch",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      152014.0,
+      152685.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111895336-replay.json",
+    "prefix": "a7",
+    "ep_id": 111895336,
+    "seed": 1324696213,
+    "team_names": [
+      "Guilherme Volpe",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Guilherme Volpe",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      132355.0,
+      126316.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "a7-episode-111896472-replay.json",
+    "prefix": "a7",
+    "ep_id": 111896472,
+    "seed": 1074981737,
+    "team_names": [
+      "MAOSEN ",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "MAOSEN ",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      107718.0,
+      107673.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "a7-episode-111897606-replay.json",
+    "prefix": "a7",
+    "ep_id": 111897606,
+    "seed": 911653528,
+    "team_names": [
+      "Eldritch",
+      "Fanch"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Fanch",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      120235.0,
+      121913.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "a7-episode-111898593-replay.json",
+    "prefix": "a7",
+    "ep_id": 111898593,
+    "seed": 492373595,
+    "team_names": [
+      "Eldritch",
+      "Masataka Suzuki"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Masataka Suzuki",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      114589.0,
+      114652.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "a7-episode-111899899-replay.json",
+    "prefix": "a7",
+    "ep_id": 111899899,
+    "seed": 1884837651,
+    "team_names": [
+      "Eldritch",
+      "\u5b64\u5be1\u5c11\u5e74"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "\u5b64\u5be1\u5c11\u5e74",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      149451.0,
+      150365.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "a7-episode-111910136-replay.json",
+    "prefix": "a7",
+    "ep_id": 111910136,
+    "seed": 1647436929,
+    "team_names": [
+      "Raghav Agrawal",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Raghav Agrawal",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      82019.0,
+      79884.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "a7-episode-111911269-replay.json",
+    "prefix": "a7",
+    "ep_id": 111911269,
+    "seed": 1548110405,
+    "team_names": [
+      "Eldritch",
+      "carbonapi"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "carbonapi",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      95759.0,
+      102078.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "a7-episode-111912405-replay.json",
+    "prefix": "a7",
+    "ep_id": 111912405,
+    "seed": 458265823,
+    "team_names": [
+      "atl132",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "atl132",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      126863.0,
+      123190.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "a7-episode-111913542-replay.json",
+    "prefix": "a7",
+    "ep_id": 111913542,
+    "seed": 178773247,
+    "team_names": [
+      "Eldritch",
+      "D\u01b0\u01a1ng \u0110\u1ee9c Anh"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "D\u01b0\u01a1ng \u0110\u1ee9c Anh",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      76873.0,
+      77309.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111914236-replay.json",
+    "prefix": "a7",
+    "ep_id": 111914236,
+    "seed": 497916609,
+    "team_names": [
+      "Dzmitry Pihulski",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Dzmitry Pihulski",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      120776.0,
+      120238.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111915812-replay.json",
+    "prefix": "a7",
+    "ep_id": 111915812,
+    "seed": 1270946119,
+    "team_names": [
+      "Eldritch",
+      "xder"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "xder",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      100942.0,
+      101097.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "a7-episode-111916954-replay.json",
+    "prefix": "a7",
+    "ep_id": 111916954,
+    "seed": 1257214498,
+    "team_names": [
+      "Eldritch",
+      "eviltsundera"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "eviltsundera",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      103060.0,
+      110329.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "a7-episode-111919236-replay.json",
+    "prefix": "a7",
+    "ep_id": 111919236,
+    "seed": 994600186,
+    "team_names": [
+      "xsong2020",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "xsong2020",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      78837.0,
+      75777.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "a7-episode-111921474-replay.json",
+    "prefix": "a7",
+    "ep_id": 111921474,
+    "seed": 79260932,
+    "team_names": [
+      "Ezzzzzekki",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Ezzzzzekki",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      87264.0,
+      81531.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "a7-episode-111927167-replay.json",
+    "prefix": "a7",
+    "ep_id": 111927167,
+    "seed": 1683376907,
+    "team_names": [
+      "Eldritch",
+      "TY0912"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "TY0912",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      73034.0,
+      73337.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.2
+  },
+  {
+    "file": "a7-episode-111933531-replay.json",
+    "prefix": "a7",
+    "ep_id": 111933531,
+    "seed": 1153577975,
+    "team_names": [
+      "Eldritch",
+      "HIDEYO CHIBA"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "HIDEYO CHIBA",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      102557.0,
+      104612.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "a7-episode-111941660-replay.json",
+    "prefix": "a7",
+    "ep_id": 111941660,
+    "seed": 414880756,
+    "team_names": [
+      "maoxin123",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "maoxin123",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      74604.0,
+      74478.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "a7-episode-111942786-replay.json",
+    "prefix": "a7",
+    "ep_id": 111942786,
+    "seed": 1359959205,
+    "team_names": [
+      "maoxin123",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "maoxin123",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      88070.0,
+      87931.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111950010-replay.json",
+    "prefix": "a7",
+    "ep_id": 111950010,
+    "seed": 1877695685,
+    "team_names": [
+      "Eldritch",
+      "jiazepin"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "jiazepin",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      119648.0,
+      122094.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111950940-replay.json",
+    "prefix": "a7",
+    "ep_id": 111950940,
+    "seed": 167058361,
+    "team_names": [
+      "Eldritch",
+      "\u590f\u7d75"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "\u590f\u7d75",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      76477.0,
+      76617.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.5
+  },
+  {
+    "file": "a7-episode-111957499-replay.json",
+    "prefix": "a7",
+    "ep_id": 111957499,
+    "seed": 1959423351,
+    "team_names": [
+      "yesterdays_rebel",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "yesterdays_rebel",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      102912.0,
+      101222.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.3
+  },
+  {
+    "file": "a7-episode-111957591-replay.json",
+    "prefix": "a7",
+    "ep_id": 111957591,
+    "seed": 1200876615,
+    "team_names": [
+      "aisamhottman",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "aisamhottman",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      85733.0,
+      84559.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111965545-replay.json",
+    "prefix": "a7",
+    "ep_id": 111965545,
+    "seed": 707768452,
+    "team_names": [
+      "Eldritch",
+      "AM"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "AM",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      86469.0,
+      86621.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "a7-episode-111968874-replay.json",
+    "prefix": "a7",
+    "ep_id": 111968874,
+    "seed": 1028264006,
+    "team_names": [
+      "Eldritch",
+      "fumiya utsuno"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "fumiya utsuno",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      100510.0,
+      100646.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-111970579-replay.json",
+    "prefix": "a7",
+    "ep_id": 111970579,
+    "seed": 1011131085,
+    "team_names": [
+      "kuengo",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "kuengo",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      80943.0,
+      80884.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "a7-episode-111975251-replay.json",
+    "prefix": "a7",
+    "ep_id": 111975251,
+    "seed": 875294030,
+    "team_names": [
+      "Chaoqi Luo",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Chaoqi Luo",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      92856.0,
+      81686.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.6
+  },
+  {
+    "file": "a7-episode-111980339-replay.json",
+    "prefix": "a7",
+    "ep_id": 111980339,
+    "seed": 1554186936,
+    "team_names": [
+      "Eldritch",
+      "Arfin Mustofa"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Arfin Mustofa",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      88431.0,
+      88911.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "a7-episode-112008297-replay.json",
+    "prefix": "a7",
+    "ep_id": 112008297,
+    "seed": 243770328,
+    "team_names": [
+      "Eldritch",
+      "Songyot P"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Songyot P",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      93092.0,
+      93169.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-112010013-replay.json",
+    "prefix": "a7",
+    "ep_id": 112010013,
+    "seed": 616671687,
+    "team_names": [
+      "Eldritch",
+      "Han Chen"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Han Chen",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      81738.0,
+      82359.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "a7-episode-112012851-replay.json",
+    "prefix": "a7",
+    "ep_id": 112012851,
+    "seed": 1046761944,
+    "team_names": [
+      "Eldritch",
+      "Setu Chokshi"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Setu Chokshi",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      97587.0,
+      99873.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "a7-episode-112016921-replay.json",
+    "prefix": "a7",
+    "ep_id": 112016921,
+    "seed": 1156683872,
+    "team_names": [
+      "Eldritch",
+      "Rohit Kumar Sahoo"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Rohit Kumar Sahoo",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      105315.0,
+      111667.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "episode-111340424-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111340424,
+    "seed": 1207188343,
+    "team_names": [
+      "moonzfxs",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "moonzfxs",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      78183.0,
+      78181.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "episode-111363685-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111363685,
+    "seed": 823969184,
+    "team_names": [
+      "Eldritch",
+      "MAOSEN "
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "MAOSEN ",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      69349.0,
+      65408.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "episode-111470041-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111470041,
+    "seed": 1725847591,
+    "team_names": [
+      "Eldritch",
+      "BobtheBot369"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "BobtheBot369",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      99726.0,
+      101704.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.2
+  },
+  {
+    "file": "episode-111787995-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111787995,
+    "seed": 2045168241,
+    "team_names": [
+      "Dresden",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Dresden",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      111290.0,
+      113168.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "episode-111883982-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111883982,
+    "seed": 1109136016,
+    "team_names": [
+      "Lunospital",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Lunospital",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      107686.0,
+      108972.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.3
+  },
+  {
+    "file": "episode-111888521-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111888521,
+    "seed": 985700356,
+    "team_names": [
+      "Eldritch",
+      "Jacques Buis"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Jacques Buis",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      101184.0,
+      97288.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "episode-111891936-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111891936,
+    "seed": 1399294103,
+    "team_names": [
+      "Eldritch",
+      "naren_v"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "naren_v",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      75337.0,
+      74051.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "episode-111906724-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111906724,
+    "seed": 701999627,
+    "team_names": [
+      "naren_v",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "naren_v",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      86668.0,
+      87954.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "episode-111924864-replay.json",
+    "prefix": "unknown",
+    "ep_id": 111924864,
+    "seed": 1980845369,
+    "team_names": [
+      "Eldritch",
+      "naren_v"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "naren_v",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      88421.0,
+      87135.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111295878-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111295878,
+    "seed": 0,
+    "team_names": [
+      "Eldritch",
+      "Eldritch"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Eldritch",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      67695.0,
+      68335.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "v22r1-episode-111316936-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111316936,
+    "seed": 1272546471,
+    "team_names": [
+      "coolin666",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "coolin666",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      106591.0,
+      96251.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111318073-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111318073,
+    "seed": 2077950782,
+    "team_names": [
+      "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u041a\u043e\u0432\u043a\u0456\u043d",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "\u0412\u043b\u0430\u0434\u0438\u0441\u043b\u0430\u0432 \u041a\u043e\u0432\u043a\u0456\u043d",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      93529.0,
+      89790.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111321476-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111321476,
+    "seed": 144418961,
+    "team_names": [
+      "qi yun",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "qi yun",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      141052.0,
+      141021.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111322014-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111322014,
+    "seed": 1444265605,
+    "team_names": [
+      "Eldritch",
+      "Mike Mordetsky"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Mike Mordetsky",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      126147.0,
+      128868.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111322600-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111322600,
+    "seed": 1966619260,
+    "team_names": [
+      "Hongxin Su",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Hongxin Su",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      106423.0,
+      104866.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111323736-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111323736,
+    "seed": 182448197,
+    "team_names": [
+      "momohuhu_kkkkkarrot",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "momohuhu_kkkkkarrot",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      75488.0,
+      72429.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111325969-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111325969,
+    "seed": 1807235029,
+    "team_names": [
+      "hongzhouzhou",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "hongzhouzhou",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      85512.0,
+      81345.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.3
+  },
+  {
+    "file": "v22r1-episode-111327426-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111327426,
+    "seed": 1273394348,
+    "team_names": [
+      "kk.sky.9k",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "kk.sky.9k",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      121681.0,
+      110192.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111329331-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111329331,
+    "seed": 167398647,
+    "team_names": [
+      "Eldritch",
+      "cooked"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "cooked",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      75019.0,
+      75553.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111331177-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111331177,
+    "seed": 950679010,
+    "team_names": [
+      "Eldritch",
+      "SamarthRawat18"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "SamarthRawat18",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      110543.0,
+      110629.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111333762-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111333762,
+    "seed": 273857075,
+    "team_names": [
+      "Eldritch",
+      "RicardoL\u00f3pez"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "RicardoL\u00f3pez",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      127502.0,
+      127592.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111337013-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111337013,
+    "seed": 1575413672,
+    "team_names": [
+      "Eldritch",
+      "Chiranjith"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Chiranjith",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      125979.0,
+      126296.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111339325-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111339325,
+    "seed": 1375069980,
+    "team_names": [
+      "ShuHaya",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "ShuHaya",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      71751.0,
+      71462.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111340424-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111340424,
+    "seed": 1207188343,
+    "team_names": [
+      "moonzfxs",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "moonzfxs",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      78183.0,
+      78181.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111342636-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111342636,
+    "seed": 1522304359,
+    "team_names": [
+      "Eldritch",
+      "SShota-box"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "SShota-box",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      105790.0,
+      106078.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.5
+  },
+  {
+    "file": "v22r1-episode-111343731-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111343731,
+    "seed": 1897283287,
+    "team_names": [
+      "montplusa",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "montplusa",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      72788.0,
+      70348.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111344837-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111344837,
+    "seed": 112883591,
+    "team_names": [
+      "qi yun",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "qi yun",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      70964.0,
+      70964.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111347065-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111347065,
+    "seed": 1087033086,
+    "team_names": [
+      "Eldritch",
+      "Smackaveli"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Smackaveli",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      105149.0,
+      107377.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111348151-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111348151,
+    "seed": 366272583,
+    "team_names": [
+      "giraffeneck",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "giraffeneck",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      77944.0,
+      72944.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111351489-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111351489,
+    "seed": 1373106957,
+    "team_names": [
+      "islet",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "islet",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      75336.0,
+      74415.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111357026-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111357026,
+    "seed": 358051594,
+    "team_names": [
+      "Fedor",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Fedor",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      79618.0,
+      73636.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111359940-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111359940,
+    "seed": 1970997546,
+    "team_names": [
+      "Ayush Gupta #2",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Ayush Gupta #2",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      96489.0,
+      95421.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.3
+  },
+  {
+    "file": "v22r1-episode-111362568-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111362568,
+    "seed": 626457514,
+    "team_names": [
+      "Eldritch",
+      "infamemconculcemus"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "infamemconculcemus",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      62621.0,
+      66349.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111364793-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111364793,
+    "seed": 1994610573,
+    "team_names": [
+      "Eldritch",
+      "alessandrozonta"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "alessandrozonta",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      139929.0,
+      140217.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111365894-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111365894,
+    "seed": 1418726148,
+    "team_names": [
+      "alessandrozonta",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "alessandrozonta",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      119686.0,
+      119404.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111369217-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111369217,
+    "seed": 1993632607,
+    "team_names": [
+      "Eldritch",
+      "shoryakumar mishra"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "shoryakumar mishra",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      70223.0,
+      71227.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111370186-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111370186,
+    "seed": 796278267,
+    "team_names": [
+      "Eldritch",
+      "mraz1006"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "mraz1006",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      70196.0,
+      70487.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111372546-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111372546,
+    "seed": 209301946,
+    "team_names": [
+      "9Hash",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "9Hash",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      91300.0,
+      91002.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111373636-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111373636,
+    "seed": 666300143,
+    "team_names": [
+      "Eldritch",
+      "Amyel21"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Amyel21",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      63291.0,
+      63952.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111375868-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111375868,
+    "seed": 1498529617,
+    "team_names": [
+      "Kundan Bhaskar",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Kundan Bhaskar",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      85600.0,
+      84766.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111378084-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111378084,
+    "seed": 1035484030,
+    "team_names": [
+      "Zhongkai Shangguan",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Zhongkai Shangguan",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      91141.0,
+      90875.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111379187-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111379187,
+    "seed": 1226651408,
+    "team_names": [
+      "Zhongkai Shangguan",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Zhongkai Shangguan",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      57903.0,
+      57693.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111380288-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111380288,
+    "seed": 1041249097,
+    "team_names": [
+      "Ali Alghaithi",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Ali Alghaithi",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      121150.0,
+      120475.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111382764-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111382764,
+    "seed": 66025492,
+    "team_names": [
+      "Eldritch",
+      "Hubillionaire"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Hubillionaire",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      124932.0,
+      124978.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111382834-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111382834,
+    "seed": 2130743393,
+    "team_names": [
+      "Anay Garodia",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Anay Garodia",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      117304.0,
+      117288.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111383075-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111383075,
+    "seed": 420528340,
+    "team_names": [
+      "\u5b64\u5be1\u5c11\u5e74",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "\u5b64\u5be1\u5c11\u5e74",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      119207.0,
+      117396.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.3
+  },
+  {
+    "file": "v22r1-episode-111388117-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111388117,
+    "seed": 679050423,
+    "team_names": [
+      "Eldritch",
+      "Hubillionaire"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Hubillionaire",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      85547.0,
+      87060.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.2
+  },
+  {
+    "file": "v22r1-episode-111391137-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111391137,
+    "seed": 444465482,
+    "team_names": [
+      "Eldritch",
+      "Guilherme Volpe"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Guilherme Volpe",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      91635.0,
+      94457.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111397659-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111397659,
+    "seed": 1994085878,
+    "team_names": [
+      "Eldritch",
+      "Duck Typing"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Duck Typing",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      115100.0,
+      117126.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111400403-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111400403,
+    "seed": 1404339705,
+    "team_names": [
+      "YBEJlKA",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "YBEJlKA",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      87268.0,
+      86255.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 33.6
+  },
+  {
+    "file": "v22r1-episode-111404927-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111404927,
+    "seed": 244315948,
+    "team_names": [
+      "Eldritch",
+      "feles99"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "feles99",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      86357.0,
+      87146.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111407751-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111407751,
+    "seed": 662116546,
+    "team_names": [
+      "Eldritch",
+      "Seho.Connect"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Seho.Connect",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      122037.0,
+      122839.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111411282-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111411282,
+    "seed": 830971477,
+    "team_names": [
+      "Eldritch",
+      "Arnav Goel"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Arnav Goel",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      100180.0,
+      100484.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111415320-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111415320,
+    "seed": 1264606313,
+    "team_names": [
+      "Eldritch",
+      "Alperen S\u00f6ylen"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Alperen S\u00f6ylen",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      79145.0,
+      79163.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.3
+  },
+  {
+    "file": "v22r1-episode-111416029-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111416029,
+    "seed": 296042393,
+    "team_names": [
+      "Eldritch",
+      "Zhou Hengyu"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Zhou Hengyu",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      78142.0,
+      81213.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111418055-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111418055,
+    "seed": 1032745343,
+    "team_names": [
+      "Gobi Elangovan",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Gobi Elangovan",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      78515.0,
+      74861.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.3
+  },
+  {
+    "file": "v22r1-episode-111429400-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111429400,
+    "seed": 1609061052,
+    "team_names": [
+      "satokato",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "satokato",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      103724.0,
+      101733.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111432728-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111432728,
+    "seed": 327977665,
+    "team_names": [
+      "MilkaDVP",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "MilkaDVP",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      127948.0,
+      127641.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111432891-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111432891,
+    "seed": 654381323,
+    "team_names": [
+      "Setu Chokshi",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Setu Chokshi",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      135379.0,
+      134078.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111438274-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111438274,
+    "seed": 888052259,
+    "team_names": [
+      "Eldritch",
+      "dpquoc"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "dpquoc",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      86123.0,
+      86149.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111446099-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111446099,
+    "seed": 451216597,
+    "team_names": [
+      "FlameZywoo",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "FlameZywoo",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      73799.0,
+      72960.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.5
+  },
+  {
+    "file": "v22r1-episode-111463651-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111463651,
+    "seed": 1350014336,
+    "team_names": [
+      "Izzoudine Mohamed KANTA",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Izzoudine Mohamed KANTA",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      130673.0,
+      129618.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111468450-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111468450,
+    "seed": 1109194852,
+    "team_names": [
+      "Eldritch",
+      "lllleeeo"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "lllleeeo",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      103127.0,
+      103223.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111470041-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111470041,
+    "seed": 1725847591,
+    "team_names": [
+      "Eldritch",
+      "BobtheBot369"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "BobtheBot369",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      99726.0,
+      101704.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.2
+  },
+  {
+    "file": "v22r1-episode-111476273-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111476273,
+    "seed": 1734107013,
+    "team_names": [
+      "linhaiy",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "linhaiy",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      86584.0,
+      85324.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.5
+  },
+  {
+    "file": "v22r1-episode-111488047-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111488047,
+    "seed": 1739673101,
+    "team_names": [
+      "TY0912",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "TY0912",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      120459.0,
+      120039.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.5
+  },
+  {
+    "file": "v22r1-episode-111489007-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111489007,
+    "seed": 52755938,
+    "team_names": [
+      "Eldritch",
+      "kglctf"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "kglctf",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      103027.0,
+      103314.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111500566-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111500566,
+    "seed": 1862627688,
+    "team_names": [
+      "Takuto Inoue",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Takuto Inoue",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      90395.0,
+      90158.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111504241-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111504241,
+    "seed": 1970118024,
+    "team_names": [
+      "xiao xiongwei",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "xiao xiongwei",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      101100.0,
+      96429.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.6
+  },
+  {
+    "file": "v22r1-episode-111505899-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111505899,
+    "seed": 1217171276,
+    "team_names": [
+      "Eldritch",
+      "Ryuuga89"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Ryuuga89",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      111163.0,
+      111713.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111511706-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111511706,
+    "seed": 1200134951,
+    "team_names": [
+      "Eldritch",
+      "mxt1022"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "mxt1022",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      130657.0,
+      132766.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111514341-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111514341,
+    "seed": 752398124,
+    "team_names": [
+      "Sailor Ren",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Sailor Ren",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      117721.0,
+      114755.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111518079-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111518079,
+    "seed": 1585226184,
+    "team_names": [
+      "Kembang Melon",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Kembang Melon",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      123698.0,
+      123662.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111530511-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111530511,
+    "seed": 1022298931,
+    "team_names": [
+      "\u597d\u8fd0\u8fde\u8fde",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "\u597d\u8fd0\u8fde\u8fde",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      111373.0,
+      106417.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111536760-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111536760,
+    "seed": 566643430,
+    "team_names": [
+      "Eldritch",
+      "payne yam"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "payne yam",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      141324.0,
+      147947.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.3
+  },
+  {
+    "file": "v22r1-episode-111543772-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111543772,
+    "seed": 603327028,
+    "team_names": [
+      "Eldritch",
+      "redblackbst"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "redblackbst",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      90697.0,
+      106405.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.0
+  },
+  {
+    "file": "v22r1-episode-111556761-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111556761,
+    "seed": 338087309,
+    "team_names": [
+      "threnox",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "threnox",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      65722.0,
+      55610.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111570609-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111570609,
+    "seed": 1640795880,
+    "team_names": [
+      "Eldritch",
+      "One-For-All"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "One-For-All",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      112691.0,
+      117428.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111572610-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111572610,
+    "seed": 388610673,
+    "team_names": [
+      "T Hansda",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "T Hansda",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      108160.0,
+      100441.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "v22r1-episode-111579384-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111579384,
+    "seed": 1088930573,
+    "team_names": [
+      "Eldritch",
+      "The Grower"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "The Grower",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      69930.0,
+      70734.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111585200-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111585200,
+    "seed": 1746292007,
+    "team_names": [
+      "E-Max AI",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "E-Max AI",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      82244.0,
+      80577.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111586248-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111586248,
+    "seed": 509889542,
+    "team_names": [
+      "ketterking",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "ketterking",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      84168.0,
+      81826.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111590458-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111590458,
+    "seed": 959528911,
+    "team_names": [
+      "Mforg",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Mforg",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      115722.0,
+      114755.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111591971-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111591971,
+    "seed": 1184668096,
+    "team_names": [
+      "Jyo",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Jyo",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      68095.0,
+      63349.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111608213-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111608213,
+    "seed": 388511780,
+    "team_names": [
+      "tokitamago",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "tokitamago",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      129082.0,
+      123761.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111619120-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111619120,
+    "seed": 91753379,
+    "team_names": [
+      "yy",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "yy",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      124831.0,
+      124536.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.5
+  },
+  {
+    "file": "v22r1-episode-111620003-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111620003,
+    "seed": 261429703,
+    "team_names": [
+      "Sushanth Tiruvaipati",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Sushanth Tiruvaipati",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      80870.0,
+      76756.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111621363-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111621363,
+    "seed": 1419709422,
+    "team_names": [
+      "Xiangsong Tian",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Xiangsong Tian",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      116485.0,
+      115535.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111629683-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111629683,
+    "seed": 1927133633,
+    "team_names": [
+      "Eldritch",
+      "renta.k"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "renta.k",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      84936.0,
+      85157.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111630639-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111630639,
+    "seed": 601473606,
+    "team_names": [
+      "Dresden",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Dresden",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      102898.0,
+      102109.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111637345-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111637345,
+    "seed": 581407531,
+    "team_names": [
+      "Jordi Corbilla",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Jordi Corbilla",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      141554.0,
+      140454.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111637434-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111637434,
+    "seed": 1294601858,
+    "team_names": [
+      "Eldritch",
+      "Fedor"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Fedor",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      75789.0,
+      83831.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111646702-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111646702,
+    "seed": 482895561,
+    "team_names": [
+      "Eldritch",
+      "Kirderf"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Kirderf",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      79419.0,
+      83743.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111654202-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111654202,
+    "seed": 1632516510,
+    "team_names": [
+      "nasubiman",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "nasubiman",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      67767.0,
+      66541.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111662099-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111662099,
+    "seed": 1509960711,
+    "team_names": [
+      "Sakito Horie",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Sakito Horie",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      93119.0,
+      93115.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111671179-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111671179,
+    "seed": 1191068818,
+    "team_names": [
+      "\u5317\u67d3\u714b\u5bb8",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "\u5317\u67d3\u714b\u5bb8",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      80423.0,
+      75780.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111679934-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111679934,
+    "seed": 1530007329,
+    "team_names": [
+      "Ioannis Tzachristas",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Ioannis Tzachristas",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      134214.0,
+      134091.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111680330-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111680330,
+    "seed": 1369238120,
+    "team_names": [
+      "Winter01",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Winter01",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      71174.0,
+      69713.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111698921-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111698921,
+    "seed": 31139213,
+    "team_names": [
+      "yuki #2",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "yuki #2",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      80346.0,
+      76442.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111703806-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111703806,
+    "seed": 629248483,
+    "team_names": [
+      "Hangyu Yu",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Hangyu Yu",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      57889.0,
+      50475.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111722503-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111722503,
+    "seed": 176008686,
+    "team_names": [
+      "Eldritch",
+      "fanmili"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "fanmili",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      90028.0,
+      92671.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111726094-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111726094,
+    "seed": 1459528917,
+    "team_names": [
+      "ReD_MooN_rise",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "ReD_MooN_rise",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      102521.0,
+      99020.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111732461-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111732461,
+    "seed": 194870120,
+    "team_names": [
+      "John Doe",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "John Doe",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      83421.0,
+      83185.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111743592-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111743592,
+    "seed": 856343872,
+    "team_names": [
+      "alessandrozonta",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "alessandrozonta",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      107635.0,
+      106900.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111749091-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111749091,
+    "seed": 1333583781,
+    "team_names": [
+      "Eldritch",
+      "YujieXing10"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "YujieXing10",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      133380.0,
+      133777.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111754576-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111754576,
+    "seed": 1685899575,
+    "team_names": [
+      "God111",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "God111",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      96118.0,
+      94186.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.3
+  },
+  {
+    "file": "v22r1-episode-111759302-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111759302,
+    "seed": 1399077696,
+    "team_names": [
+      "Jordi Corbilla",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Jordi Corbilla",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      114507.0,
+      114067.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111768023-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111768023,
+    "seed": 223944014,
+    "team_names": [
+      "Eldritch",
+      "marwar22"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "marwar22",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      79478.0,
+      85186.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 33.3
+  },
+  {
+    "file": "v22r1-episode-111769028-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111769028,
+    "seed": 1776632555,
+    "team_names": [
+      "Eldritch",
+      "xder"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "xder",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      69946.0,
+      69970.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111770281-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111770281,
+    "seed": 1407005318,
+    "team_names": [
+      "Eldritch",
+      "Sanyam Jain"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Sanyam Jain",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      109177.0,
+      109419.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111775744-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111775744,
+    "seed": 1457026640,
+    "team_names": [
+      "Eldritch",
+      "lvisdd"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "lvisdd",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      83758.0,
+      84441.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111782557-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111782557,
+    "seed": 912832435,
+    "team_names": [
+      "Eldritch",
+      "Zhou Haonan"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Zhou Haonan",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      102088.0,
+      102394.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111788552-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111788552,
+    "seed": 28925220,
+    "team_names": [
+      "thwaitsusa2",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "thwaitsusa2",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      65452.0,
+      65049.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111793314-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111793314,
+    "seed": 249584755,
+    "team_names": [
+      "Eldritch",
+      "Kudo"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Kudo",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      98681.0,
+      101527.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.2
+  },
+  {
+    "file": "v22r1-episode-111798314-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111798314,
+    "seed": 1109571120,
+    "team_names": [
+      "linmumu009",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "linmumu009",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      115784.0,
+      115244.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111803550-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111803550,
+    "seed": 118301815,
+    "team_names": [
+      "Eldritch",
+      "Carson Zhang"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Carson Zhang",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      77803.0,
+      78154.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "v22r1-episode-111808292-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111808292,
+    "seed": 1165188697,
+    "team_names": [
+      "Eldritch",
+      "KOSUKE MATSUDA"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "KOSUKE MATSUDA",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      122314.0,
+      122332.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111809351-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111809351,
+    "seed": 1351270435,
+    "team_names": [
+      "Aniket Sharma",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Aniket Sharma",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      66022.0,
+      59846.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111817907-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111817907,
+    "seed": 430419010,
+    "team_names": [
+      "Eldritch",
+      "thwaitsusa2"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "thwaitsusa2",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      84755.0,
+      85460.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111826546-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111826546,
+    "seed": 2132078377,
+    "team_names": [
+      "Ryoya Tsuruoka",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Ryoya Tsuruoka",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      105850.0,
+      102244.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111831997-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111831997,
+    "seed": 664685016,
+    "team_names": [
+      "Saksham Gupta",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Saksham Gupta",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      78307.0,
+      78143.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111837536-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111837536,
+    "seed": 1007256818,
+    "team_names": [
+      "Eldritch",
+      "inny"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "inny",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      93599.0,
+      93897.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111842145-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111842145,
+    "seed": 267231179,
+    "team_names": [
+      "Eldritch",
+      "Phoenix750"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Phoenix750",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      77981.0,
+      78924.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111847746-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111847746,
+    "seed": 99598172,
+    "team_names": [
+      "Eldritch",
+      "\u307b\u306e\u307c\u306e\u7267\u5834"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "\u307b\u306e\u307c\u306e\u7267\u5834",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      90392.0,
+      95340.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111854163-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111854163,
+    "seed": 21822407,
+    "team_names": [
+      "alessandrozonta",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "alessandrozonta",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      89669.0,
+      89362.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111860037-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111860037,
+    "seed": 2091919053,
+    "team_names": [
+      "Eldritch",
+      "Duc-Anh Nguyen"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Duc-Anh Nguyen",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      82782.0,
+      84044.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111873327-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111873327,
+    "seed": 1655822177,
+    "team_names": [
+      "YBEJlKA",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "YBEJlKA",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      155965.0,
+      155723.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111874038-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111874038,
+    "seed": 610967498,
+    "team_names": [
+      "Yuan Weijun",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Yuan Weijun",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      77141.0,
+      72068.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111881076-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111881076,
+    "seed": 666138349,
+    "team_names": [
+      "JeremyLIU858",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "JeremyLIU858",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      94984.0,
+      89263.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111899334-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111899334,
+    "seed": 1187678182,
+    "team_names": [
+      "Eldritch",
+      "KUO JEN WEI"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "KUO JEN WEI",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      125897.0,
+      127162.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111906139-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111906139,
+    "seed": 1380892013,
+    "team_names": [
+      "Leo Udah",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Leo Udah",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      149328.0,
+      141778.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111906269-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111906269,
+    "seed": 1744682254,
+    "team_names": [
+      "JR",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "JR",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      136205.0,
+      122420.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111921667-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111921667,
+    "seed": 220767327,
+    "team_names": [
+      "\u5b64\u5be1\u5c11\u5e74",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "\u5b64\u5be1\u5c11\u5e74",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      82731.0,
+      81302.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.3
+  },
+  {
+    "file": "v22r1-episode-111921933-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111921933,
+    "seed": 1345434127,
+    "team_names": [
+      "Eldritch",
+      "Abhi Datta"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Abhi Datta",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      130474.0,
+      135701.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.4
+  },
+  {
+    "file": "v22r1-episode-111923737-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111923737,
+    "seed": 501633066,
+    "team_names": [
+      "Eldritch",
+      "Sara Lark"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Sara Lark",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      99981.0,
+      100508.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111925586-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111925586,
+    "seed": 530068783,
+    "team_names": [
+      "mocatti",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "mocatti",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      92918.0,
+      91500.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111931348-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111931348,
+    "seed": 606895870,
+    "team_names": [
+      "Eldritch",
+      "Daiki Takahashi"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Daiki Takahashi",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      104937.0,
+      107449.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111946401-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111946401,
+    "seed": 1424238349,
+    "team_names": [
+      "Eldritch",
+      "John Doe"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "John Doe",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      110169.0,
+      111576.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111946520-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111946520,
+    "seed": 1069501449,
+    "team_names": [
+      "Deskbo",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Deskbo",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      104747.0,
+      103805.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111961178-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111961178,
+    "seed": 1335230359,
+    "team_names": [
+      "Kucing Garong",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Kucing Garong",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      129279.0,
+      126987.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.7
+  },
+  {
+    "file": "v22r1-episode-111962718-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111962718,
+    "seed": 544023570,
+    "team_names": [
+      "Daiki Takahashi",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Daiki Takahashi",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      108947.0,
+      107745.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111963629-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111963629,
+    "seed": 1697397769,
+    "team_names": [
+      "Ndabenhle Ngema",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "Ndabenhle Ngema",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      80312.0,
+      65423.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.2
+  },
+  {
+    "file": "v22r1-episode-111966360-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111966360,
+    "seed": 1050202613,
+    "team_names": [
+      "infamemconculcemus",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "infamemconculcemus",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      87586.0,
+      84651.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 34.3
+  },
+  {
+    "file": "v22r1-episode-111970863-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111970863,
+    "seed": 1616606505,
+    "team_names": [
+      "Eldritch",
+      "Sergey Kutepov"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Sergey Kutepov",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      95627.0,
+      96608.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  },
+  {
+    "file": "v22r1-episode-111974011-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111974011,
+    "seed": 1268519617,
+    "team_names": [
+      "Eldritch",
+      "Van-Phuc Huynh"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Van-Phuc Huynh",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      62825.0,
+      66007.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111981437-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111981437,
+    "seed": 1029516441,
+    "team_names": [
+      "Eldritch",
+      "JeremyLIU858"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "JeremyLIU858",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      80184.0,
+      81235.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "v22r1-episode-111985098-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111985098,
+    "seed": 765113007,
+    "team_names": [
+      "Eldritch",
+      "Bohdan Boklah"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Bohdan Boklah",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      94499.0,
+      101130.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.6
+  },
+  {
+    "file": "v22r1-episode-111991249-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 111991249,
+    "seed": 1654601341,
+    "team_names": [
+      "nikotin55",
+      "Eldritch"
+    ],
+    "our_seat": 1,
+    "opp_seat": 0,
+    "opp_team": "nikotin55",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      72292.0,
+      71012.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.4
+  },
+  {
+    "file": "v22r1-episode-112004839-replay.json",
+    "prefix": "v22r1",
+    "ep_id": 112004839,
+    "seed": 661538525,
+    "team_names": [
+      "Eldritch",
+      "Dzmitry Pihulski"
+    ],
+    "our_seat": 0,
+    "opp_seat": 1,
+    "opp_team": "Dzmitry Pihulski",
+    "module_version": "1.32.7",
+    "n_steps": 720,
+    "rewards": [
+      95792.0,
+      99277.0
+    ],
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "final_cash": [
+      null,
+      null
+    ],
+    "file_size_mb": 32.5
+  }
+]

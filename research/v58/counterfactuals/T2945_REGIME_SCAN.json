@@ -1,0 +1,1792 @@
+{
+ "seeds": [
+  10120,
+  10121,
+  10122,
+  10123,
+  10124,
+  10125,
+  10126,
+  10127,
+  10128,
+  10129,
+  10130,
+  10131,
+  10132,
+  10133,
+  10134,
+  10135,
+  10136,
+  10137,
+  10138,
+  10139,
+  10140,
+  10141,
+  10142,
+  10143,
+  10144,
+  10145,
+  10146,
+  10147,
+  10148,
+  10149,
+  10150,
+  10151,
+  10152,
+  10153,
+  10154,
+  10155,
+  10156,
+  10157,
+  10158,
+  10159,
+  10160,
+  10161,
+  10162,
+  10163,
+  10164,
+  10165,
+  10166,
+  10167,
+  10168,
+  10169,
+  10170,
+  10171,
+  10172,
+  10173,
+  10174,
+  10175,
+  10176,
+  10177,
+  10178,
+  10179
+ ],
+ "legs": 120,
+ "t2945_wins": 2,
+ "mean_diff": -108.5,
+ "median_diff": -120.0,
+ "min_diff": -1480.0,
+ "max_diff": 964.0,
+ "win_legs": [
+  {
+   "seed": 10134,
+   "swapped": false,
+   "t2945": 140198.0,
+   "v49": 139234.0,
+   "diff": 964.0,
+   "winner": "t2945",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10153,
+   "swapped": true,
+   "t2945": 97927.0,
+   "v49": 96966.0,
+   "diff": 961.0,
+   "winner": "t2945",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  }
+ ],
+ "closest_losses": [
+  {
+   "seed": 10176,
+   "swapped": false,
+   "t2945": 101254.0,
+   "v49": 101286.0,
+   "diff": -32.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10133,
+   "swapped": false,
+   "t2945": 75185.0,
+   "v49": 75281.0,
+   "diff": -96.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10139,
+   "swapped": false,
+   "t2945": 103008.0,
+   "v49": 103128.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10139,
+   "swapped": true,
+   "t2945": 103008.0,
+   "v49": 103128.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10142,
+   "swapped": false,
+   "t2945": 93117.0,
+   "v49": 93237.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10142,
+   "swapped": true,
+   "t2945": 93117.0,
+   "v49": 93237.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10156,
+   "swapped": true,
+   "t2945": 58480.0,
+   "v49": 58600.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10156,
+   "swapped": false,
+   "t2945": 58480.0,
+   "v49": 58600.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10158,
+   "swapped": false,
+   "t2945": 67976.0,
+   "v49": 68096.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10158,
+   "swapped": true,
+   "t2945": 67976.0,
+   "v49": 68096.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  }
+ ],
+ "all_legs": [
+  {
+   "seed": 10120,
+   "swapped": false,
+   "t2945": 103500.0,
+   "v49": 103500.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10120,
+   "swapped": true,
+   "t2945": 103500.0,
+   "v49": 103500.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10121,
+   "swapped": false,
+   "t2945": 109451.0,
+   "v49": 109611.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10121,
+   "swapped": true,
+   "t2945": 109451.0,
+   "v49": 109611.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10122,
+   "swapped": false,
+   "t2945": 136923.0,
+   "v49": 137083.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10122,
+   "swapped": true,
+   "t2945": 136923.0,
+   "v49": 137083.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10123,
+   "swapped": false,
+   "t2945": 83048.0,
+   "v49": 83048.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10123,
+   "swapped": true,
+   "t2945": 83048.0,
+   "v49": 83048.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10124,
+   "swapped": false,
+   "t2945": 65359.0,
+   "v49": 65519.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10124,
+   "swapped": true,
+   "t2945": 65359.0,
+   "v49": 65519.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10125,
+   "swapped": false,
+   "t2945": 110182.0,
+   "v49": 110342.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10125,
+   "swapped": true,
+   "t2945": 110182.0,
+   "v49": 110342.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10126,
+   "swapped": false,
+   "t2945": 88420.0,
+   "v49": 88420.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10126,
+   "swapped": true,
+   "t2945": 88420.0,
+   "v49": 88420.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10127,
+   "swapped": false,
+   "t2945": 79846.0,
+   "v49": 81326.0,
+   "diff": -1480.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10127,
+   "swapped": true,
+   "t2945": 79846.0,
+   "v49": 81326.0,
+   "diff": -1480.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10128,
+   "swapped": false,
+   "t2945": 72271.0,
+   "v49": 72431.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10128,
+   "swapped": true,
+   "t2945": 72271.0,
+   "v49": 72431.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10129,
+   "swapped": false,
+   "t2945": 53512.0,
+   "v49": 53672.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10129,
+   "swapped": true,
+   "t2945": 53512.0,
+   "v49": 53672.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10130,
+   "swapped": false,
+   "t2945": 116202.0,
+   "v49": 116202.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10130,
+   "swapped": true,
+   "t2945": 116202.0,
+   "v49": 116202.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10131,
+   "swapped": false,
+   "t2945": 73349.0,
+   "v49": 73509.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10131,
+   "swapped": true,
+   "t2945": 73349.0,
+   "v49": 73509.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10132,
+   "swapped": false,
+   "t2945": 106186.0,
+   "v49": 106186.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10132,
+   "swapped": true,
+   "t2945": 106186.0,
+   "v49": 106186.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10133,
+   "swapped": false,
+   "t2945": 75185.0,
+   "v49": 75281.0,
+   "diff": -96.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10133,
+   "swapped": true,
+   "t2945": 75121.0,
+   "v49": 75345.0,
+   "diff": -224.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10134,
+   "swapped": false,
+   "t2945": 140198.0,
+   "v49": 139234.0,
+   "diff": 964.0,
+   "winner": "t2945",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10134,
+   "swapped": true,
+   "t2945": 139114.0,
+   "v49": 140318.0,
+   "diff": -1204.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10135,
+   "swapped": false,
+   "t2945": 117243.0,
+   "v49": 117243.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10135,
+   "swapped": true,
+   "t2945": 117243.0,
+   "v49": 117243.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10136,
+   "swapped": false,
+   "t2945": 104946.0,
+   "v49": 104946.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10136,
+   "swapped": true,
+   "t2945": 104946.0,
+   "v49": 104946.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10137,
+   "swapped": false,
+   "t2945": 92309.0,
+   "v49": 92471.0,
+   "diff": -162.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10137,
+   "swapped": true,
+   "t2945": 92309.0,
+   "v49": 92471.0,
+   "diff": -162.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10138,
+   "swapped": false,
+   "t2945": 140776.0,
+   "v49": 140776.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10138,
+   "swapped": true,
+   "t2945": 140776.0,
+   "v49": 140776.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10139,
+   "swapped": false,
+   "t2945": 103008.0,
+   "v49": 103128.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10139,
+   "swapped": true,
+   "t2945": 103008.0,
+   "v49": 103128.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10140,
+   "swapped": false,
+   "t2945": 161465.0,
+   "v49": 161465.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10140,
+   "swapped": true,
+   "t2945": 161465.0,
+   "v49": 161465.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10141,
+   "swapped": false,
+   "t2945": 102390.0,
+   "v49": 102390.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10141,
+   "swapped": true,
+   "t2945": 102390.0,
+   "v49": 102390.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10142,
+   "swapped": false,
+   "t2945": 93117.0,
+   "v49": 93237.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10142,
+   "swapped": true,
+   "t2945": 93117.0,
+   "v49": 93237.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10143,
+   "swapped": false,
+   "t2945": 125937.0,
+   "v49": 125937.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10143,
+   "swapped": true,
+   "t2945": 125937.0,
+   "v49": 125937.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10144,
+   "swapped": false,
+   "t2945": 118234.0,
+   "v49": 118394.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10144,
+   "swapped": true,
+   "t2945": 118234.0,
+   "v49": 118394.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10145,
+   "swapped": false,
+   "t2945": 65315.0,
+   "v49": 65499.0,
+   "diff": -184.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10145,
+   "swapped": true,
+   "t2945": 65315.0,
+   "v49": 65499.0,
+   "diff": -184.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10146,
+   "swapped": false,
+   "t2945": 81360.0,
+   "v49": 81520.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10146,
+   "swapped": true,
+   "t2945": 81360.0,
+   "v49": 81520.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10147,
+   "swapped": false,
+   "t2945": 82039.0,
+   "v49": 82205.0,
+   "diff": -166.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10147,
+   "swapped": true,
+   "t2945": 82039.0,
+   "v49": 82205.0,
+   "diff": -166.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10148,
+   "swapped": false,
+   "t2945": 75831.0,
+   "v49": 75831.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10148,
+   "swapped": true,
+   "t2945": 75831.0,
+   "v49": 75831.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10149,
+   "swapped": false,
+   "t2945": 139170.0,
+   "v49": 139330.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10149,
+   "swapped": true,
+   "t2945": 139170.0,
+   "v49": 139330.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10150,
+   "swapped": false,
+   "t2945": 113319.0,
+   "v49": 113479.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10150,
+   "swapped": true,
+   "t2945": 113319.0,
+   "v49": 113479.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10151,
+   "swapped": false,
+   "t2945": 125181.0,
+   "v49": 125341.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10151,
+   "swapped": true,
+   "t2945": 125181.0,
+   "v49": 125341.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10152,
+   "swapped": false,
+   "t2945": 106229.0,
+   "v49": 106229.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10152,
+   "swapped": true,
+   "t2945": 106229.0,
+   "v49": 106229.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10153,
+   "swapped": false,
+   "t2945": 96966.0,
+   "v49": 97927.0,
+   "diff": -961.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10153,
+   "swapped": true,
+   "t2945": 97927.0,
+   "v49": 96966.0,
+   "diff": 961.0,
+   "winner": "t2945",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10154,
+   "swapped": false,
+   "t2945": 92961.0,
+   "v49": 92961.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10154,
+   "swapped": true,
+   "t2945": 92961.0,
+   "v49": 92961.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10155,
+   "swapped": false,
+   "t2945": 86062.0,
+   "v49": 86062.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10155,
+   "swapped": true,
+   "t2945": 86062.0,
+   "v49": 86062.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10156,
+   "swapped": false,
+   "t2945": 58480.0,
+   "v49": 58600.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10156,
+   "swapped": true,
+   "t2945": 58480.0,
+   "v49": 58600.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10157,
+   "swapped": false,
+   "t2945": 113413.0,
+   "v49": 113413.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10157,
+   "swapped": true,
+   "t2945": 113413.0,
+   "v49": 113413.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10158,
+   "swapped": false,
+   "t2945": 67976.0,
+   "v49": 68096.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10158,
+   "swapped": true,
+   "t2945": 67976.0,
+   "v49": 68096.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10159,
+   "swapped": false,
+   "t2945": 81956.0,
+   "v49": 81956.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10159,
+   "swapped": true,
+   "t2945": 81956.0,
+   "v49": 81956.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10160,
+   "swapped": false,
+   "t2945": 95210.0,
+   "v49": 95370.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10160,
+   "swapped": true,
+   "t2945": 95210.0,
+   "v49": 95370.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10161,
+   "swapped": false,
+   "t2945": 110545.0,
+   "v49": 110705.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10161,
+   "swapped": true,
+   "t2945": 110545.0,
+   "v49": 110705.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10162,
+   "swapped": false,
+   "t2945": 95474.0,
+   "v49": 95594.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10162,
+   "swapped": true,
+   "t2945": 95474.0,
+   "v49": 95594.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10163,
+   "swapped": false,
+   "t2945": 96271.0,
+   "v49": 96469.0,
+   "diff": -198.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10163,
+   "swapped": true,
+   "t2945": 96271.0,
+   "v49": 96469.0,
+   "diff": -198.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10164,
+   "swapped": false,
+   "t2945": 90562.0,
+   "v49": 90562.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10164,
+   "swapped": true,
+   "t2945": 90562.0,
+   "v49": 90562.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10165,
+   "swapped": false,
+   "t2945": 118629.0,
+   "v49": 118789.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10165,
+   "swapped": true,
+   "t2945": 118629.0,
+   "v49": 118789.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10166,
+   "swapped": false,
+   "t2945": 84607.0,
+   "v49": 84767.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10166,
+   "swapped": true,
+   "t2945": 84607.0,
+   "v49": 84767.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10167,
+   "swapped": false,
+   "t2945": 96927.0,
+   "v49": 97087.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10167,
+   "swapped": true,
+   "t2945": 96927.0,
+   "v49": 97087.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10168,
+   "swapped": false,
+   "t2945": 123642.0,
+   "v49": 123762.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10168,
+   "swapped": true,
+   "t2945": 123642.0,
+   "v49": 123762.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10169,
+   "swapped": false,
+   "t2945": 74556.0,
+   "v49": 74716.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10169,
+   "swapped": true,
+   "t2945": 74556.0,
+   "v49": 74716.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10170,
+   "swapped": false,
+   "t2945": 81674.0,
+   "v49": 81794.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10170,
+   "swapped": true,
+   "t2945": 81674.0,
+   "v49": 81794.0,
+   "diff": -120.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10171,
+   "swapped": false,
+   "t2945": 96611.0,
+   "v49": 96611.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10171,
+   "swapped": true,
+   "t2945": 96611.0,
+   "v49": 96611.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10172,
+   "swapped": false,
+   "t2945": 146446.0,
+   "v49": 146446.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10172,
+   "swapped": true,
+   "t2945": 146446.0,
+   "v49": 146446.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10173,
+   "swapped": false,
+   "t2945": 88298.0,
+   "v49": 88298.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10173,
+   "swapped": true,
+   "t2945": 88298.0,
+   "v49": 88298.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10174,
+   "swapped": false,
+   "t2945": 99851.0,
+   "v49": 99851.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10174,
+   "swapped": true,
+   "t2945": 99851.0,
+   "v49": 99851.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10175,
+   "swapped": false,
+   "t2945": 134542.0,
+   "v49": 134542.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10175,
+   "swapped": true,
+   "t2945": 134542.0,
+   "v49": 134542.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10176,
+   "swapped": false,
+   "t2945": 101254.0,
+   "v49": 101286.0,
+   "diff": -32.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10176,
+   "swapped": true,
+   "t2945": 101126.0,
+   "v49": 101414.0,
+   "diff": -288.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10177,
+   "swapped": false,
+   "t2945": 73154.0,
+   "v49": 73154.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10177,
+   "swapped": true,
+   "t2945": 73154.0,
+   "v49": 73154.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10178,
+   "swapped": false,
+   "t2945": 80053.0,
+   "v49": 80053.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10178,
+   "swapped": true,
+   "t2945": 80053.0,
+   "v49": 80053.0,
+   "diff": 0.0,
+   "winner": "draw",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10179,
+   "swapped": false,
+   "t2945": 104255.0,
+   "v49": 104415.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  },
+  {
+   "seed": 10179,
+   "swapped": true,
+   "t2945": 104255.0,
+   "v49": 104415.0,
+   "diff": -160.0,
+   "winner": "v49",
+   "status": [
+    "DONE",
+    "DONE"
+   ],
+   "error": null
+  }
+ ]
+}

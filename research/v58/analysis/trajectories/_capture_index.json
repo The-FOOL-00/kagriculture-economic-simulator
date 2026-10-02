@@ -1,0 +1,486 @@
+[
+ {
+  "task": "v49_vs_v44_seed10000_p1.json",
+  "ok": true,
+  "mine": 183081.0,
+  "opp": 3000.0,
+  "win": true,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "v44_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 3000.0,
+  "opp": 183081.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "v44_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 3000.0,
+  "opp": 183081.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "v49_vs_v44_seed10001_p0.json",
+  "ok": true,
+  "mine": 166440.0,
+  "opp": 3000.0,
+  "win": true,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "v49_vs_v44_seed10000_p0.json",
+  "ok": true,
+  "mine": 183081.0,
+  "opp": 3000.0,
+  "win": true,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "v44_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 3000.0,
+  "opp": 166440.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "v44_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 3000.0,
+  "opp": 166440.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "v49_vs_v44_seed10001_p1.json",
+  "ok": true,
+  "mine": 166440.0,
+  "opp": 3000.0,
+  "win": true,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "kaitofukami_v48_3009_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 45006.0,
+  "opp": 89554.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "kaitofukami_v48_3009_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 115287.0,
+  "opp": 129938.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "kaitofukami_v48_3009_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 45006.0,
+  "opp": 89554.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "kaitofukami_v48_3009_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 142242.0,
+  "opp": 154454.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "saiteja_mega_3000_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 57501.0,
+  "opp": 162437.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "saiteja_mega_3000_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 57501.0,
+  "opp": 162437.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "saiteja_mega_3000_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 78533.0,
+  "opp": 161055.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "saiteja_mega_3000_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 75765.0,
+  "opp": 157520.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "thomastschinkel_2945_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 81362.0,
+  "opp": 81512.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "thomastschinkel_2945_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 81362.0,
+  "opp": 81512.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "thomastschinkel_2945_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 77439.0,
+  "opp": 77599.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "thomastschinkel_2945_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 77439.0,
+  "opp": 77599.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "tetsutani_pasture_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 63731.0,
+  "opp": 85436.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "tetsutani_pasture_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 63731.0,
+  "opp": 85436.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "tetsutani_pasture_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 67713.0,
+  "opp": 84215.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "tetsutani_pasture_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 67713.0,
+  "opp": 84215.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "indarkarhana_top10_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 55821.0,
+  "opp": 85915.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "indarkarhana_top10_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 55821.0,
+  "opp": 85915.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "indarkarhana_top10_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 68661.0,
+  "opp": 84557.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "dmitrii_lb2800_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 70171.0,
+  "opp": 81616.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "indarkarhana_top10_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 68661.0,
+  "opp": 84557.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "dmitrii_lb2800_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 70171.0,
+  "opp": 81616.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "dmitrii_lb2800_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 70455.0,
+  "opp": 76859.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "dmitrii_lb2800_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 70455.0,
+  "opp": 76859.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "P3090_claimed_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 124207.0,
+  "opp": 148893.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "P3090_claimed_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 124207.0,
+  "opp": 148893.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "P3090_claimed_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 126962.0,
+  "opp": 150727.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "P3090_claimed_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 104060.0,
+  "opp": 134118.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "P3000_claimed_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 103318.0,
+  "opp": 121543.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "P3000_claimed_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 103318.0,
+  "opp": 121543.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "P3000_claimed_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 120523.0,
+  "opp": 141889.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "P3000_claimed_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 132735.0,
+  "opp": 150884.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "night_harvest_vs_v49_seed10000_p0.json",
+  "ok": true,
+  "mine": 40454.0,
+  "opp": 100012.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "night_harvest_vs_v49_seed10001_p1.json",
+  "ok": true,
+  "mine": 55575.0,
+  "opp": 101929.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "night_harvest_vs_v49_seed10000_p1.json",
+  "ok": true,
+  "mine": 40454.0,
+  "opp": 100012.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ },
+ {
+  "task": "night_harvest_vs_v49_seed10001_p0.json",
+  "ok": true,
+  "mine": 55575.0,
+  "opp": 101929.0,
+  "win": false,
+  "statuses": [
+   "DONE",
+   "DONE"
+  ]
+ }
+]

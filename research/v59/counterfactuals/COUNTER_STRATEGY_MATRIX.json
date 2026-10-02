@@ -1,0 +1,6 @@
+﻿{
+  "status": "NOT_COMPUTED",
+  "reason": "No Sep strategy families identified. Matrix requires (our_plan x opp_family) cells.",
+  "matrix_state": "empty",
+  "note": "V58 showed all Aug-family cells negative for V49."
+}

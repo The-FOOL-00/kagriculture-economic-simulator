@@ -1,0 +1,12 @@
+{
+  "all_datasets": [
+    "kaggle/kaggriculture-episodes-2026-09-26",
+    "georgymamarin/kaggriculture-episodes",
+    "kaggle/kaggriculture-episodes-index",
+    "ashok205/kaggriculture-top10-replay-archive",
+    "xishengfeng/kaggriculture-replay-db"
+  ],
+  "sep_datasets": [
+    "kaggle/kaggriculture-episodes-2026-09-26"
+  ]
+}

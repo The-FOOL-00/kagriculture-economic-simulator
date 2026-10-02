@@ -1,0 +1,6 @@
+﻿{
+  "status": "NOT_RUN",
+  "reason": "No V59 candidate survived investigation. Running benchmark without candidate is theater.",
+  "note": "V49 benchmark from V58: 572W/4L available as reference.",
+  "v49_sha256": "8CAFF63068BF68A34A9141D48F771D9007AFC0DFA792179A737ECCE919FBBD11"
+}

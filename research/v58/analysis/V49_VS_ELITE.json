@@ -1,0 +1,874 @@
+{
+ "agents": {
+  "P3000_claimed": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 114973.5,
+   "h100": "92f69b53ed03cb15",
+   "h200": "e3e145be2915cb29",
+   "h100_in_elite": true,
+   "h100_elite_members": 15,
+   "h100_elite_max_rating": 3000.9,
+   "h100_all_seats_sharing": 4036,
+   "h200_in_elite": true,
+   "h200_elite_members": 3,
+   "h200_all_seats_sharing": 2097,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 14,
+    "total_hires": 263,
+    "tiles_planted": 199,
+    "plants_carrot": 0,
+    "plants_melon": 19,
+    "plants_strawberry": 37,
+    "plants_tomato": 0,
+    "plants_wheat": 143,
+    "first_land_day": 6,
+    "final_money": 120523.0
+   },
+   "anim_peak": {
+    "COW": 8,
+    "SHEEP": 4
+   },
+   "plant_peak": {
+    "STRAWBERRY": 36,
+    "WHEAT": 57,
+    "MELON": 12
+   },
+   "mkt": {
+    "BUY_PRODUCT": 4,
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "BUY_SEED": 4,
+    "SELL": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "WHEAT": 0,
+    "FERTILIZER": 2,
+    "WOOL": 6,
+    "MILK": 9,
+    "MELON": 10,
+    "STRAWBERRY": 16
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  },
+  "P3090_claimed": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 119859.0,
+   "h100": "e6651fba348a3438",
+   "h200": "d9141cac5f153a47",
+   "h100_in_elite": true,
+   "h100_elite_members": 13,
+   "h100_elite_max_rating": 2971.1,
+   "h100_all_seats_sharing": 16292,
+   "h200_in_elite": true,
+   "h200_elite_members": 9,
+   "h200_all_seats_sharing": 7924,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 14,
+    "total_hires": 262,
+    "tiles_planted": 199,
+    "plants_carrot": 0,
+    "plants_melon": 19,
+    "plants_strawberry": 37,
+    "plants_tomato": 0,
+    "plants_wheat": 143,
+    "first_land_day": 6,
+    "final_money": 124207.0
+   },
+   "anim_peak": {
+    "COW": 9,
+    "SHEEP": 4
+   },
+   "plant_peak": {
+    "STRAWBERRY": 35,
+    "WHEAT": 57,
+    "MELON": 14
+   },
+   "mkt": {
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "BUY_SEED": 4,
+    "BUY_PRODUCT": 4,
+    "SELL": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "FERTILIZER": 2,
+    "WHEAT": 5,
+    "WOOL": 6,
+    "MILK": 9,
+    "MELON": 10,
+    "STRAWBERRY": 14
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  },
+  "dmitrii_lb2800": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 70313.0,
+   "h100": "3642e90c65cc6c11",
+   "h200": "73a243cd994f599a",
+   "h100_in_elite": false,
+   "h100_elite_members": 0,
+   "h100_elite_max_rating": null,
+   "h100_all_seats_sharing": 0,
+   "h200_in_elite": false,
+   "h200_elite_members": 0,
+   "h200_all_seats_sharing": 0,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 11,
+    "total_hires": 260,
+    "tiles_planted": 239,
+    "plants_carrot": 31,
+    "plants_melon": 12,
+    "plants_strawberry": 33,
+    "plants_tomato": 0,
+    "plants_wheat": 163,
+    "first_land_day": 6,
+    "final_money": 70455.0
+   },
+   "anim_peak": {
+    "COW": 8,
+    "SHEEP": 6
+   },
+   "plant_peak": {
+    "CARROT": 29,
+    "WHEAT": 38,
+    "MELON": 12,
+    "STRAWBERRY": 33
+   },
+   "mkt": {
+    "BUY_PRODUCT": 4,
+    "SELL": 4,
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "BUY_SEED": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "WHEAT": 0,
+    "FERTILIZER": 1,
+    "WOOL": 6,
+    "MILK": 8,
+    "MELON": 10,
+    "EGG": 15,
+    "STRAWBERRY": 15,
+    "CARROT": 27,
+    "TOMATO": 29
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  },
+  "indarkarhana_top10": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 62241.0,
+   "h100": "d9d26ccf7e39aac6",
+   "h200": "2df873e2904429b5",
+   "h100_in_elite": false,
+   "h100_elite_members": 0,
+   "h100_elite_max_rating": null,
+   "h100_all_seats_sharing": 66,
+   "h200_in_elite": false,
+   "h200_elite_members": 0,
+   "h200_all_seats_sharing": 55,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 12,
+    "total_hires": 291,
+    "tiles_planted": 243,
+    "plants_carrot": 6,
+    "plants_melon": 12,
+    "plants_strawberry": 38,
+    "plants_tomato": 0,
+    "plants_wheat": 187,
+    "first_land_day": 6,
+    "final_money": 68661.0
+   },
+   "anim_peak": {
+    "COW": 10,
+    "SHEEP": 4
+   },
+   "plant_peak": {
+    "CARROT": 4,
+    "WHEAT": 40,
+    "MELON": 12,
+    "STRAWBERRY": 38
+   },
+   "mkt": {
+    "BUY_PRODUCT": 4,
+    "BUY_SEED": 4,
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "SELL": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "WHEAT": 0,
+    "FERTILIZER": 1,
+    "WOOL": 6,
+    "MILK": 8,
+    "MELON": 10,
+    "STRAWBERRY": 15,
+    "CARROT": 28
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  },
+  "kaitofukami_v48_3009": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 86885.25,
+   "h100": "eb87e7254ef1fe1e",
+   "h200": "e8ee08498c75a64c",
+   "h100_in_elite": false,
+   "h100_elite_members": 0,
+   "h100_elite_max_rating": null,
+   "h100_all_seats_sharing": 4522,
+   "h200_in_elite": false,
+   "h200_elite_members": 0,
+   "h200_all_seats_sharing": 214,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 15,
+    "total_hires": 282,
+    "tiles_planted": 206,
+    "plants_carrot": 20,
+    "plants_melon": 11,
+    "plants_strawberry": 41,
+    "plants_tomato": 0,
+    "plants_wheat": 134,
+    "first_land_day": 6,
+    "final_money": 115287.0
+   },
+   "anim_peak": {
+    "COW": 11,
+    "SHEEP": 4
+   },
+   "plant_peak": {
+    "CARROT": 12,
+    "WHEAT": 48,
+    "MELON": 7,
+    "STRAWBERRY": 40
+   },
+   "mkt": {
+    "BUY_PRODUCT": 4,
+    "HIRE": 4,
+    "BUY_SEED": 4,
+    "BUY_ANIMAL": 4,
+    "SELL": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "FERTILIZER": 1,
+    "WHEAT": 5,
+    "WOOL": 6,
+    "MELON": 10,
+    "MILK": 12,
+    "STRAWBERRY": 13,
+    "CARROT": 15
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  },
+  "night_harvest": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 48014.5,
+   "h100": "44c973c075570f2a",
+   "h200": "d7f3607567683767",
+   "h100_in_elite": true,
+   "h100_elite_members": 80,
+   "h100_elite_max_rating": 3058.8,
+   "h100_all_seats_sharing": 9704,
+   "h200_in_elite": true,
+   "h200_elite_members": 1,
+   "h200_all_seats_sharing": 68,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 14,
+    "total_hires": 277,
+    "tiles_planted": 158,
+    "plants_carrot": 0,
+    "plants_melon": 24,
+    "plants_strawberry": 42,
+    "plants_tomato": 0,
+    "plants_wheat": 92,
+    "first_land_day": 7,
+    "final_money": 55575.0
+   },
+   "anim_peak": {
+    "COW": 8,
+    "SHEEP": 6
+   },
+   "plant_peak": {
+    "STRAWBERRY": 41,
+    "WHEAT": 38,
+    "MELON": 12
+   },
+   "mkt": {
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "BUY_SEED": 4,
+    "BUY_PRODUCT": 4,
+    "SELL": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "FERTILIZER": 1,
+    "WHEAT": 2,
+    "WOOL": 7,
+    "MILK": 8,
+    "MELON": 10,
+    "STRAWBERRY": 17
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  },
+  "saiteja_mega_3000": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 67325.0,
+   "h100": "7908170ef6777e92",
+   "h200": "09a30ed9d3cab59e",
+   "h100_in_elite": false,
+   "h100_elite_members": 0,
+   "h100_elite_max_rating": null,
+   "h100_all_seats_sharing": 4,
+   "h200_in_elite": false,
+   "h200_elite_members": 0,
+   "h200_all_seats_sharing": 4,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 12,
+    "total_hires": 303,
+    "tiles_planted": 131,
+    "plants_carrot": 0,
+    "plants_melon": 21,
+    "plants_strawberry": 44,
+    "plants_tomato": 0,
+    "plants_wheat": 66,
+    "first_land_day": 7,
+    "final_money": 75765.0
+   },
+   "anim_peak": {
+    "COW": 8,
+    "SHEEP": 6
+   },
+   "plant_peak": {
+    "STRAWBERRY": 32,
+    "WHEAT": 32,
+    "MELON": 11
+   },
+   "mkt": {
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "BUY_SEED": 4,
+    "SELL": 4,
+    "BUY_PRODUCT": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "WHEAT": 0,
+    "FERTILIZER": 1,
+    "WOOL": 2,
+    "MELON": 4,
+    "MILK": 8,
+    "STRAWBERRY": 12,
+    "EGG": 14,
+    "CARROT": 18
+   },
+   "quads_end": [
+    "NW",
+    "NE"
+   ]
+  },
+  "tetsutani_pasture": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 65722.0,
+   "h100": "024a5e0c26f347fc",
+   "h200": "af78fb3913cddf8d",
+   "h100_in_elite": false,
+   "h100_elite_members": 0,
+   "h100_elite_max_rating": null,
+   "h100_all_seats_sharing": 0,
+   "h200_in_elite": false,
+   "h200_elite_members": 0,
+   "h200_all_seats_sharing": 0,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 12,
+    "total_hires": 282,
+    "tiles_planted": 240,
+    "plants_carrot": 31,
+    "plants_melon": 12,
+    "plants_strawberry": 33,
+    "plants_tomato": 0,
+    "plants_wheat": 164,
+    "first_land_day": 6,
+    "final_money": 67713.0
+   },
+   "anim_peak": {
+    "COW": 9,
+    "SHEEP": 5
+   },
+   "plant_peak": {
+    "CARROT": 30,
+    "WHEAT": 41,
+    "MELON": 12,
+    "STRAWBERRY": 33
+   },
+   "mkt": {
+    "BUY_PRODUCT": 4,
+    "SELL": 4,
+    "BUY_SEED": 4,
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "WHEAT": 0,
+    "FERTILIZER": 1,
+    "WOOL": 6,
+    "MILK": 8,
+    "MELON": 10,
+    "EGG": 15,
+    "STRAWBERRY": 16,
+    "CARROT": 28
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  },
+  "thomastschinkel_2945": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 79400.5,
+   "h100": "70eac6946a525177",
+   "h200": "64142a67c1c02b23",
+   "h100_in_elite": false,
+   "h100_elite_members": 0,
+   "h100_elite_max_rating": null,
+   "h100_all_seats_sharing": 0,
+   "h200_in_elite": false,
+   "h200_elite_members": 0,
+   "h200_all_seats_sharing": 0,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 12,
+    "total_hires": 266,
+    "tiles_planted": 239,
+    "plants_carrot": 55,
+    "plants_melon": 12,
+    "plants_strawberry": 33,
+    "plants_tomato": 0,
+    "plants_wheat": 147,
+    "first_land_day": 6,
+    "final_money": 81362.0
+   },
+   "anim_peak": {
+    "COW": 8,
+    "SHEEP": 6
+   },
+   "plant_peak": {
+    "CARROT": 36,
+    "WHEAT": 32,
+    "MELON": 12,
+    "STRAWBERRY": 33
+   },
+   "mkt": {
+    "BUY_PRODUCT": 4,
+    "SELL": 4,
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "BUY_SEED": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "WHEAT": 0,
+    "FERTILIZER": 1,
+    "WOOL": 6,
+    "MILK": 8,
+    "MELON": 10,
+    "EGG": 11,
+    "STRAWBERRY": 15,
+    "CARROT": 19,
+    "TOMATO": 29
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  },
+  "v44": {
+   "games": 4,
+   "wins_vs_v49_opp": 0,
+   "mean_bank": 3000.0,
+   "h100": "eba9d303f5e739dc",
+   "h200": "c8f01a38e0ef9e87",
+   "h100_in_elite": false,
+   "h100_elite_members": 0,
+   "h100_elite_max_rating": null,
+   "h100_all_seats_sharing": 3,
+   "h200_in_elite": false,
+   "h200_elite_members": 0,
+   "h200_all_seats_sharing": 3,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 0,
+    "total_hires": 0,
+    "tiles_planted": 0,
+    "plants_carrot": 0,
+    "plants_melon": 0,
+    "plants_strawberry": 0,
+    "plants_tomato": 0,
+    "plants_wheat": 0,
+    "first_land_day": null,
+    "final_money": 3000.0
+   },
+   "anim_peak": {},
+   "plant_peak": {},
+   "mkt": {},
+   "first_sale": {},
+   "quads_end": [
+    "NW"
+   ]
+  },
+  "v49": {
+   "games": 4,
+   "wins_vs_v49_opp": null,
+   "mean_bank": 174760.5,
+   "h100": "70eac6946a525177",
+   "h200": "a6f4e2f0e45946d0",
+   "h100_in_elite": false,
+   "h100_elite_members": 0,
+   "h100_elite_max_rating": null,
+   "h100_all_seats_sharing": 0,
+   "h200_in_elite": false,
+   "h200_elite_members": 0,
+   "h200_all_seats_sharing": 0,
+   "matches_F1_h100": false,
+   "geo_med": {
+    "peak_crew": 13,
+    "total_hires": 266,
+    "tiles_planted": 239,
+    "plants_carrot": 49,
+    "plants_melon": 12,
+    "plants_strawberry": 33,
+    "plants_tomato": 0,
+    "plants_wheat": 163,
+    "first_land_day": 6,
+    "final_money": 183081.0
+   },
+   "anim_peak": {
+    "COW": 12,
+    "SHEEP": 6
+   },
+   "plant_peak": {
+    "CARROT": 36,
+    "WHEAT": 38,
+    "MELON": 12,
+    "STRAWBERRY": 33
+   },
+   "mkt": {
+    "BUY_PRODUCT": 4,
+    "SELL": 4,
+    "HIRE": 4,
+    "BUY_ANIMAL": 4,
+    "BUY_SEED": 4,
+    "BUY_LAND": 4
+   },
+   "first_sale": {
+    "WHEAT": 0,
+    "FERTILIZER": 1,
+    "WOOL": 6,
+    "MILK": 8,
+    "MELON": 10,
+    "EGG": 15,
+    "STRAWBERRY": 15,
+    "CARROT": 27,
+    "TOMATO": 29
+   },
+   "quads_end": [
+    "NW",
+    "NE",
+    "SW"
+   ]
+  }
+ },
+ "matrix": {
+  "levers": [
+   "peak_crew",
+   "total_hires",
+   "tiles_planted",
+   "plants_melon",
+   "plants_strawberry",
+   "plants_wheat",
+   "plants_carrot",
+   "plants_tomato",
+   "first_land_day",
+   "final_money"
+  ],
+  "V49": {
+   "peak_crew": 13,
+   "total_hires": 266,
+   "tiles_planted": 239,
+   "plants_carrot": 49,
+   "plants_melon": 12,
+   "plants_strawberry": 33,
+   "plants_tomato": 0,
+   "plants_wheat": 163,
+   "first_land_day": 6,
+   "final_money": 183081.0
+  },
+  "families": {
+   "F1": {
+    "n": 258,
+    "rating_med": 2989.6,
+    "peak_crew": 14.0,
+    "total_hires": 263.0,
+    "tiles_planted": 174.0,
+    "plants_melon": 24.0,
+    "plants_strawberry": 42.0,
+    "plants_wheat": 108.0,
+    "plants_carrot": 0.0,
+    "plants_tomato": 0.0,
+    "first_land_day": null,
+    "final_money": null
+   },
+   "F2": {
+    "n": 80,
+    "rating_med": 2974.4,
+    "peak_crew": 14.0,
+    "total_hires": 277.0,
+    "tiles_planted": 158.0,
+    "plants_melon": 24.0,
+    "plants_strawberry": 42.0,
+    "plants_wheat": 92.0,
+    "plants_carrot": 0.0,
+    "plants_tomato": 0.0,
+    "first_land_day": null,
+    "final_money": null
+   },
+   "F3": {
+    "n": 40,
+    "rating_med": 2958.2,
+    "peak_crew": 14.0,
+    "total_hires": 262.0,
+    "tiles_planted": 199.0,
+    "plants_melon": 19.0,
+    "plants_strawberry": 37.0,
+    "plants_wheat": 143.0,
+    "plants_carrot": 0.0,
+    "plants_tomato": 0.0,
+    "first_land_day": null,
+    "final_money": null
+   },
+   "F4": {
+    "n": 15,
+    "rating_med": 2964.0,
+    "peak_crew": 14.0,
+    "total_hires": 263.0,
+    "tiles_planted": 199.0,
+    "plants_melon": 19.0,
+    "plants_strawberry": 37.0,
+    "plants_wheat": 143.0,
+    "plants_carrot": 0.0,
+    "plants_tomato": 0.0,
+    "first_land_day": null,
+    "final_money": null
+   },
+   "F5": {
+    "n": 13,
+    "rating_med": 2953.7,
+    "peak_crew": 14.0,
+    "total_hires": 262.0,
+    "tiles_planted": 199.0,
+    "plants_melon": 19.0,
+    "plants_strawberry": 37.0,
+    "plants_wheat": 143.0,
+    "plants_carrot": 0.0,
+    "plants_tomato": 0.0,
+    "first_land_day": null,
+    "final_money": null
+   },
+   "F6": {
+    "n": 10,
+    "rating_med": 2995.9,
+    "peak_crew": 14.0,
+    "total_hires": 262.0,
+    "tiles_planted": 199.0,
+    "plants_melon": 19.0,
+    "plants_strawberry": 37.0,
+    "plants_wheat": 143.0,
+    "plants_carrot": 0.0,
+    "plants_tomato": 0.0,
+    "first_land_day": null,
+    "final_money": null
+   }
+  },
+  "executables": {
+   "P3000_claimed": {
+    "peak_crew": 14,
+    "total_hires": 263,
+    "tiles_planted": 199,
+    "plants_carrot": 0,
+    "plants_melon": 19,
+    "plants_strawberry": 37,
+    "plants_tomato": 0,
+    "plants_wheat": 143,
+    "first_land_day": 6,
+    "final_money": 120523.0
+   },
+   "P3090_claimed": {
+    "peak_crew": 14,
+    "total_hires": 262,
+    "tiles_planted": 199,
+    "plants_carrot": 0,
+    "plants_melon": 19,
+    "plants_strawberry": 37,
+    "plants_tomato": 0,
+    "plants_wheat": 143,
+    "first_land_day": 6,
+    "final_money": 124207.0
+   },
+   "dmitrii_lb2800": {
+    "peak_crew": 11,
+    "total_hires": 260,
+    "tiles_planted": 239,
+    "plants_carrot": 31,
+    "plants_melon": 12,
+    "plants_strawberry": 33,
+    "plants_tomato": 0,
+    "plants_wheat": 163,
+    "first_land_day": 6,
+    "final_money": 70455.0
+   },
+   "indarkarhana_top10": {
+    "peak_crew": 12,
+    "total_hires": 291,
+    "tiles_planted": 243,
+    "plants_carrot": 6,
+    "plants_melon": 12,
+    "plants_strawberry": 38,
+    "plants_tomato": 0,
+    "plants_wheat": 187,
+    "first_land_day": 6,
+    "final_money": 68661.0
+   },
+   "kaitofukami_v48_3009": {
+    "peak_crew": 15,
+    "total_hires": 282,
+    "tiles_planted": 206,
+    "plants_carrot": 20,
+    "plants_melon": 11,
+    "plants_strawberry": 41,
+    "plants_tomato": 0,
+    "plants_wheat": 134,
+    "first_land_day": 6,
+    "final_money": 115287.0
+   },
+   "night_harvest": {
+    "peak_crew": 14,
+    "total_hires": 277,
+    "tiles_planted": 158,
+    "plants_carrot": 0,
+    "plants_melon": 24,
+    "plants_strawberry": 42,
+    "plants_tomato": 0,
+    "plants_wheat": 92,
+    "first_land_day": 7,
+    "final_money": 55575.0
+   },
+   "saiteja_mega_3000": {
+    "peak_crew": 12,
+    "total_hires": 303,
+    "tiles_planted": 131,
+    "plants_carrot": 0,
+    "plants_melon": 21,
+    "plants_strawberry": 44,
+    "plants_tomato": 0,
+    "plants_wheat": 66,
+    "first_land_day": 7,
+    "final_money": 75765.0
+   },
+   "tetsutani_pasture": {
+    "peak_crew": 12,
+    "total_hires": 282,
+    "tiles_planted": 240,
+    "plants_carrot": 31,
+    "plants_melon": 12,
+    "plants_strawberry": 33,
+    "plants_tomato": 0,
+    "plants_wheat": 164,
+    "first_land_day": 6,
+    "final_money": 67713.0
+   },
+   "thomastschinkel_2945": {
+    "peak_crew": 12,
+    "total_hires": 266,
+    "tiles_planted": 239,
+    "plants_carrot": 55,
+    "plants_melon": 12,
+    "plants_strawberry": 33,
+    "plants_tomato": 0,
+    "plants_wheat": 147,
+    "first_land_day": 6,
+    "final_money": 81362.0
+   },
+   "v44": {
+    "peak_crew": 0,
+    "total_hires": 0,
+    "tiles_planted": 0,
+    "plants_carrot": 0,
+    "plants_melon": 0,
+    "plants_strawberry": 0,
+    "plants_tomato": 0,
+    "plants_wheat": 0,
+    "first_land_day": null,
+    "final_money": 3000.0
+   },
+   "v49": {
+    "peak_crew": 13,
+    "total_hires": 266,
+    "tiles_planted": 239,
+    "plants_carrot": 49,
+    "plants_melon": 12,
+    "plants_strawberry": 33,
+    "plants_tomato": 0,
+    "plants_wheat": 163,
+    "first_land_day": 6,
+    "final_money": 183081.0
+   }
+  }
+ }
+}

@@ -1,0 +1,51 @@
+{
+  "v59_elite_population_version": "1.0",
+  "generated_at": "2026-09-28T14:18:41+05:30",
+  "leaderboard_date": "2026-09-22T08:50:44",
+
+  "current_top_cohort": {
+    "CURRENT_3000_PLUS": {
+      "count": 7,
+      "members": [
+        {"rank": 1, "team": "DSM", "score": 3109.5, "last_submit": "2026-09-22 05:27", "members": "denden12,masspeaks,shimishige", "in_aug_corpus": false, "aug_score": null},
+        {"rank": 2, "team": "Vadim Vasilenko", "score": 3099.9, "last_submit": "2026-09-21 21:16", "members": "vadimvasilenko", "in_aug_corpus": false, "aug_score": null},
+        {"rank": 3, "team": "Majkel1337", "score": 3070.6, "last_submit": "2026-09-21 09:39", "members": "majkel1337", "in_aug_corpus": true, "aug_score": 1201.0},
+        {"rank": 4, "team": "Unknown Mother-Goose", "score": 3052.5, "last_submit": "2026-09-22 00:34", "members": "linkinpony", "in_aug_corpus": false, "aug_score": null},
+        {"rank": 5, "team": "THIRD FARM CLUB", "score": 3049.1, "last_submit": "2026-09-22 02:00", "members": "bowwowforeach,mooegi,shunrcn,simann", "in_aug_corpus": true, "aug_score": 2264.0},
+        {"rank": 6, "team": "M & M & P & Q", "score": 3046.3, "last_submit": "2026-09-21 18:20", "members": "morimo,msd0110,piiiiiiiii,qistripute", "in_aug_corpus": true, "aug_score": 1589.0},
+        {"rank": 7, "team": "Kaggledew Valley", "score": 3038.8, "last_submit": "2026-09-22 02:21", "members": "wscmisx,yanzhou06", "in_aug_corpus": false, "aug_score": null}
+      ],
+      "new_teams_not_in_aug": 4,
+      "active_submitters_sep21_22": 7
+    },
+    "CURRENT_2900_PLUS": {
+      "count": 29,
+      "top_new_teams": ["DSM", "Vadim Vasilenko", "Unknown Mother-Goose", "Kaggledew Valley", "KawattaTaido", "QQ", "???????", "Planned Economy", "Orbital Terraformer", "??seek inspiration??", "TheEggman"],
+      "top_returning_teams_with_big_gains": [
+        {"team": "Yannik Schiffner", "aug": 776, "sep": 2991.6, "delta": 2216},
+        {"team": "Sida Zuo", "aug": 871, "sep": 2940.6, "delta": 2069},
+        {"team": "Majkel1337", "aug": 1201, "sep": 3070.6, "delta": 1870},
+        {"team": "Densike", "aug": 1069, "sep": 2911.4, "delta": 1842},
+        {"team": "M & M & P & Q", "aug": 1589, "sep": 3046.3, "delta": 1457}
+      ]
+    },
+    "CURRENT_2800_PLUS": {
+      "count": 78
+    }
+  },
+
+  "population_characterization": {
+    "total_leaderboard_teams": 9807,
+    "observable_via_replay": "None (no Sep replay JSON available locally)",
+    "observable_via_leaderboard": "Identity, score, submission date, team members",
+    "replay_data_available": false,
+    "strategy_fingerprints_available": false,
+    "action_streams_available": false
+  },
+
+  "key_insight": {
+    "finding": "4 of 7 current 3000+ teams are completely new (not in Aug corpus). All 7 submitted as recently as Sep 21-22 confirming active Sep meta.",
+    "implication": "The current elite is a DIFFERENT POPULATION from Aug V58 corpus. V59 hypothesis is confirmed: September elite may contain unseen strategies.",
+    "blocker": "Without local September replay files, strategy fingerprints cannot be extracted. Cannot answer 'WHAT are they doing' — only THAT they exist."
+  }
+}

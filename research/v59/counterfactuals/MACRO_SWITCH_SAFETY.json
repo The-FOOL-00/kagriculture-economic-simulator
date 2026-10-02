@@ -1,0 +1,5 @@
+﻿{
+  "status": "NOT_TESTED",
+  "reason": "No candidate plans to test macro-switch safety against.",
+  "baseline": "V49 — frozen, never modified"
+}
