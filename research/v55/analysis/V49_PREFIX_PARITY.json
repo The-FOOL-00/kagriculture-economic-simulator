@@ -1,0 +1,1067 @@
+{
+  "prefix_parity_steps": 215,
+  "actions_identical": true,
+  "first_divergence_step": 216,
+  "first_divergence_field": "shops: 416=['BRUNCH_SPOT', 'FARMERS_MARKET', 'PET_CAFE'] vs 436=['BRUNCH_SPOT', 'FARMERS_MARKET', 'PIZZA_SHOP']",
+  "critical_snapshots": {
+    "250416": {
+      "207": {
+        "step": 207,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 37,
+          "TOMATO": 63,
+          "STRAWBERRY": 185,
+          "MELON": 270,
+          "EGG": 53,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 83
+        },
+        "inventory": {
+          "WHEAT": 9881,
+          "CARROT": 9975,
+          "TOMATO": 9975,
+          "STRAWBERRY": 9941,
+          "MELON": 9991,
+          "EGG": 9957,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10084
+        },
+        "v49_cash": 921.0,
+        "opp_cash": 694.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "215": {
+        "step": 215,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 37,
+          "TOMATO": 63,
+          "STRAWBERRY": 187,
+          "MELON": 270,
+          "EGG": 53,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 82
+        },
+        "inventory": {
+          "WHEAT": 9883,
+          "CARROT": 9973,
+          "TOMATO": 9973,
+          "STRAWBERRY": 9937,
+          "MELON": 9991,
+          "EGG": 9955,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10092
+        },
+        "v49_cash": 1285.0,
+        "opp_cash": 986.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "216": {
+        "step": 216,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PET_CAFE"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 37,
+          "TOMATO": 63,
+          "STRAWBERRY": 187,
+          "MELON": 270,
+          "EGG": 53,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 81
+        },
+        "inventory": {
+          "WHEAT": 9883,
+          "CARROT": 9973,
+          "TOMATO": 9973,
+          "STRAWBERRY": 9937,
+          "MELON": 9991,
+          "EGG": 9955,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10095
+        },
+        "v49_cash": 1367.0,
+        "opp_cash": 1149.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "217": {
+        "step": 217,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PET_CAFE"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 37,
+          "TOMATO": 63,
+          "STRAWBERRY": 188,
+          "MELON": 271,
+          "EGG": 53,
+          "MILK": 131,
+          "WOOL": 189,
+          "FERTILIZER": 80
+        },
+        "inventory": {
+          "WHEAT": 9880,
+          "CARROT": 9969,
+          "TOMATO": 9971,
+          "STRAWBERRY": 9934,
+          "MELON": 9990,
+          "EGG": 9953,
+          "MILK": 10014,
+          "WOOL": 10014,
+          "FERTILIZER": 10098
+        },
+        "v49_cash": 1475.0,
+        "opp_cash": 1176.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "287": {
+        "step": 287,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PET_CAFE"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 42,
+          "TOMATO": 66,
+          "STRAWBERRY": 205,
+          "MELON": 76,
+          "EGG": 54,
+          "MILK": 59,
+          "WOOL": 154,
+          "FERTILIZER": 71
+        },
+        "inventory": {
+          "WHEAT": 9751,
+          "CARROT": 9916,
+          "TOMATO": 9952,
+          "STRAWBERRY": 9898,
+          "MELON": 10132,
+          "EGG": 9938,
+          "MILK": 10048,
+          "WOOL": 10028,
+          "FERTILIZER": 10147
+        },
+        "v49_cash": 13451.0,
+        "opp_cash": 12993.0,
+        "v49_hands": 10,
+        "opp_hands": 10
+      },
+      "288": {
+        "step": 288,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PET_CAFE",
+          "ICE_CREAM_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 42,
+          "TOMATO": 66,
+          "STRAWBERRY": 205,
+          "MELON": 76,
+          "EGG": 54,
+          "MILK": 59,
+          "WOOL": 154,
+          "FERTILIZER": 71
+        },
+        "inventory": {
+          "WHEAT": 9751,
+          "CARROT": 9916,
+          "TOMATO": 9952,
+          "STRAWBERRY": 9898,
+          "MELON": 10132,
+          "EGG": 9938,
+          "MILK": 10048,
+          "WOOL": 10028,
+          "FERTILIZER": 10147
+        },
+        "v49_cash": 13451.0,
+        "opp_cash": 12993.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "289": {
+        "step": 289,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PET_CAFE",
+          "ICE_CREAM_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 42,
+          "TOMATO": 66,
+          "STRAWBERRY": 206,
+          "MELON": 78,
+          "EGG": 54,
+          "MILK": 63,
+          "WOOL": 158,
+          "FERTILIZER": 64
+        },
+        "inventory": {
+          "WHEAT": 9747,
+          "CARROT": 9912,
+          "TOMATO": 9950,
+          "STRAWBERRY": 9894,
+          "MELON": 10131,
+          "EGG": 9936,
+          "MILK": 10046,
+          "WOOL": 10027,
+          "FERTILIZER": 10179
+        },
+        "v49_cash": 14445.0,
+        "opp_cash": 13987.0,
+        "v49_hands": 9,
+        "opp_hands": 9
+      },
+      "360": {
+        "step": 360,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PET_CAFE",
+          "ICE_CREAM_SHOP",
+          "BAKERY"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 46,
+          "TOMATO": 68,
+          "STRAWBERRY": 226,
+          "MELON": 84,
+          "EGG": 54,
+          "MILK": 15,
+          "WOOL": 1,
+          "FERTILIZER": 52
+        },
+        "inventory": {
+          "WHEAT": 9736,
+          "CARROT": 9859,
+          "TOMATO": 9931,
+          "STRAWBERRY": 9841,
+          "MELON": 10129,
+          "EGG": 9932,
+          "MILK": 10069,
+          "WOOL": 10059,
+          "FERTILIZER": 10241
+        },
+        "v49_cash": 19287.0,
+        "opp_cash": 19334.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "504": {
+        "step": 504,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PET_CAFE",
+          "ICE_CREAM_SHOP",
+          "BAKERY",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 43,
+          "CARROT": 56,
+          "TOMATO": 75,
+          "STRAWBERRY": 201,
+          "MELON": 99,
+          "EGG": 52,
+          "MILK": 5,
+          "WOOL": 1,
+          "FERTILIZER": 35
+        },
+        "inventory": {
+          "WHEAT": 9669,
+          "CARROT": 9727,
+          "TOMATO": 9871,
+          "STRAWBERRY": 9907,
+          "MELON": 10123,
+          "EGG": 9973,
+          "MILK": 10074,
+          "WOOL": 10059,
+          "FERTILIZER": 10324
+        },
+        "v49_cash": 46536.0,
+        "opp_cash": 46262.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "718": {
+        "step": 718,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PET_CAFE",
+          "ICE_CREAM_SHOP",
+          "BAKERY",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP",
+          "ICE_CREAM_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 37,
+          "CARROT": 55,
+          "TOMATO": 144,
+          "STRAWBERRY": 183,
+          "MELON": 120,
+          "EGG": 45,
+          "MILK": 19,
+          "WOOL": 1,
+          "FERTILIZER": 6
+        },
+        "inventory": {
+          "WHEAT": 9865,
+          "CARROT": 9746,
+          "TOMATO": 9700,
+          "STRAWBERRY": 9943,
+          "MELON": 10114,
+          "EGG": 10018,
+          "MILK": 10067,
+          "WOOL": 10059,
+          "FERTILIZER": 10469
+        },
+        "v49_cash": 94555.0,
+        "opp_cash": 95634.0,
+        "v49_hands": 11,
+        "opp_hands": 11
+      }
+    },
+    "250436": {
+      "207": {
+        "step": 207,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 37,
+          "TOMATO": 63,
+          "STRAWBERRY": 185,
+          "MELON": 270,
+          "EGG": 53,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 83
+        },
+        "inventory": {
+          "WHEAT": 9881,
+          "CARROT": 9975,
+          "TOMATO": 9975,
+          "STRAWBERRY": 9941,
+          "MELON": 9991,
+          "EGG": 9957,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10084
+        },
+        "v49_cash": 921.0,
+        "opp_cash": 694.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "215": {
+        "step": 215,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 37,
+          "TOMATO": 63,
+          "STRAWBERRY": 187,
+          "MELON": 270,
+          "EGG": 53,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 82
+        },
+        "inventory": {
+          "WHEAT": 9883,
+          "CARROT": 9973,
+          "TOMATO": 9973,
+          "STRAWBERRY": 9937,
+          "MELON": 9991,
+          "EGG": 9955,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10092
+        },
+        "v49_cash": 1285.0,
+        "opp_cash": 986.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "216": {
+        "step": 216,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 37,
+          "TOMATO": 63,
+          "STRAWBERRY": 187,
+          "MELON": 270,
+          "EGG": 53,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 81
+        },
+        "inventory": {
+          "WHEAT": 9883,
+          "CARROT": 9973,
+          "TOMATO": 9973,
+          "STRAWBERRY": 9937,
+          "MELON": 9991,
+          "EGG": 9955,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10095
+        },
+        "v49_cash": 1367.0,
+        "opp_cash": 1149.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "217": {
+        "step": 217,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 37,
+          "TOMATO": 64,
+          "STRAWBERRY": 188,
+          "MELON": 271,
+          "EGG": 53,
+          "MILK": 133,
+          "WOOL": 189,
+          "FERTILIZER": 80
+        },
+        "inventory": {
+          "WHEAT": 9879,
+          "CARROT": 9971,
+          "TOMATO": 9970,
+          "STRAWBERRY": 9934,
+          "MELON": 9990,
+          "EGG": 9953,
+          "MILK": 10013,
+          "WOOL": 10014,
+          "FERTILIZER": 10098
+        },
+        "v49_cash": 1475.0,
+        "opp_cash": 1176.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "287": {
+        "step": 287,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 39,
+          "TOMATO": 68,
+          "STRAWBERRY": 205,
+          "MELON": 76,
+          "EGG": 54,
+          "MILK": 97,
+          "WOOL": 154,
+          "FERTILIZER": 71
+        },
+        "inventory": {
+          "WHEAT": 9733,
+          "CARROT": 9952,
+          "TOMATO": 9934,
+          "STRAWBERRY": 9898,
+          "MELON": 10132,
+          "EGG": 9938,
+          "MILK": 10030,
+          "WOOL": 10028,
+          "FERTILIZER": 10147
+        },
+        "v49_cash": 13906.0,
+        "opp_cash": 13428.0,
+        "v49_hands": 10,
+        "opp_hands": 10
+      },
+      "288": {
+        "step": 288,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP",
+          "PIZZA_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 39,
+          "TOMATO": 68,
+          "STRAWBERRY": 205,
+          "MELON": 76,
+          "EGG": 54,
+          "MILK": 97,
+          "WOOL": 154,
+          "FERTILIZER": 71
+        },
+        "inventory": {
+          "WHEAT": 9733,
+          "CARROT": 9952,
+          "TOMATO": 9934,
+          "STRAWBERRY": 9898,
+          "MELON": 10132,
+          "EGG": 9938,
+          "MILK": 10030,
+          "WOOL": 10028,
+          "FERTILIZER": 10147
+        },
+        "v49_cash": 13906.0,
+        "opp_cash": 13428.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "289": {
+        "step": 289,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP",
+          "PIZZA_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 39,
+          "TOMATO": 68,
+          "STRAWBERRY": 206,
+          "MELON": 78,
+          "EGG": 54,
+          "MILK": 103,
+          "WOOL": 158,
+          "FERTILIZER": 64
+        },
+        "inventory": {
+          "WHEAT": 9728,
+          "CARROT": 9950,
+          "TOMATO": 9930,
+          "STRAWBERRY": 9895,
+          "MELON": 10131,
+          "EGG": 9936,
+          "MILK": 10027,
+          "WOOL": 10027,
+          "FERTILIZER": 10179
+        },
+        "v49_cash": 14900.0,
+        "opp_cash": 14422.0,
+        "v49_hands": 9,
+        "opp_hands": 9
+      },
+      "360": {
+        "step": 360,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP",
+          "PIZZA_SHOP",
+          "SMOOTHIE_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 42,
+          "CARROT": 40,
+          "TOMATO": 75,
+          "STRAWBERRY": 220,
+          "MELON": 84,
+          "EGG": 54,
+          "MILK": 91,
+          "WOOL": 1,
+          "FERTILIZER": 52
+        },
+        "inventory": {
+          "WHEAT": 9700,
+          "CARROT": 9931,
+          "TOMATO": 9877,
+          "STRAWBERRY": 9859,
+          "MELON": 10129,
+          "EGG": 9932,
+          "MILK": 10033,
+          "WOOL": 10059,
+          "FERTILIZER": 10241
+        },
+        "v49_cash": 20561.0,
+        "opp_cash": 21348.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "504": {
+        "step": 504,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP",
+          "PIZZA_SHOP",
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP",
+          "YARN_STORE"
+        ],
+        "prices": {
+          "WHEAT": 45,
+          "CARROT": 44,
+          "TOMATO": 95,
+          "STRAWBERRY": 193,
+          "MELON": 99,
+          "EGG": 46,
+          "MILK": 91,
+          "WOOL": 1,
+          "FERTILIZER": 34
+        },
+        "inventory": {
+          "WHEAT": 9610,
+          "CARROT": 9889,
+          "TOMATO": 9763,
+          "STRAWBERRY": 9925,
+          "MELON": 10123,
+          "EGG": 10009,
+          "MILK": 10033,
+          "WOOL": 10059,
+          "FERTILIZER": 10330
+        },
+        "v49_cash": 45784.0,
+        "opp_cash": 45426.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "718": {
+        "step": 718,
+        "shops": [
+          "BRUNCH_SPOT",
+          "FARMERS_MARKET",
+          "PIZZA_SHOP",
+          "PIZZA_SHOP",
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP",
+          "YARN_STORE",
+          "SMOOTHIE_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 37,
+          "CARROT": 33,
+          "TOMATO": 101,
+          "STRAWBERRY": 171,
+          "MELON": 120,
+          "EGG": 42,
+          "MILK": 209,
+          "WOOL": 137,
+          "FERTILIZER": 11
+        },
+        "inventory": {
+          "WHEAT": 9855,
+          "CARROT": 10003,
+          "TOMATO": 9752,
+          "STRAWBERRY": 9963,
+          "MELON": 10114,
+          "EGG": 10118,
+          "MILK": 9968,
+          "WOOL": 10033,
+          "FERTILIZER": 10443
+        },
+        "v49_cash": 112632.0,
+        "opp_cash": 114373.0,
+        "v49_hands": 13,
+        "opp_hands": 13
+      }
+    },
+    "250439": {
+      "207": {
+        "step": 207,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 36,
+          "TOMATO": 61,
+          "STRAWBERRY": 175,
+          "MELON": 270,
+          "EGG": 54,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 83
+        },
+        "inventory": {
+          "WHEAT": 9881,
+          "CARROT": 9991,
+          "TOMATO": 9991,
+          "STRAWBERRY": 9957,
+          "MELON": 9991,
+          "EGG": 9941,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10084
+        },
+        "v49_cash": 914.0,
+        "opp_cash": 701.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "215": {
+        "step": 215,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 36,
+          "TOMATO": 61,
+          "STRAWBERRY": 176,
+          "MELON": 270,
+          "EGG": 54,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 82
+        },
+        "inventory": {
+          "WHEAT": 9883,
+          "CARROT": 9991,
+          "TOMATO": 9991,
+          "STRAWBERRY": 9955,
+          "MELON": 9991,
+          "EGG": 9937,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10092
+        },
+        "v49_cash": 1278.0,
+        "opp_cash": 993.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "216": {
+        "step": 216,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "ICE_CREAM_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 36,
+          "TOMATO": 61,
+          "STRAWBERRY": 176,
+          "MELON": 270,
+          "EGG": 54,
+          "MILK": 129,
+          "WOOL": 187,
+          "FERTILIZER": 81
+        },
+        "inventory": {
+          "WHEAT": 9883,
+          "CARROT": 9991,
+          "TOMATO": 9991,
+          "STRAWBERRY": 9955,
+          "MELON": 9991,
+          "EGG": 9937,
+          "MILK": 10015,
+          "WOOL": 10015,
+          "FERTILIZER": 10094
+        },
+        "v49_cash": 1360.0,
+        "opp_cash": 1075.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "217": {
+        "step": 217,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "ICE_CREAM_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 36,
+          "TOMATO": 61,
+          "STRAWBERRY": 178,
+          "MELON": 271,
+          "EGG": 54,
+          "MILK": 133,
+          "WOOL": 189,
+          "FERTILIZER": 80
+        },
+        "inventory": {
+          "WHEAT": 9879,
+          "CARROT": 9990,
+          "TOMATO": 9990,
+          "STRAWBERRY": 9952,
+          "MELON": 9990,
+          "EGG": 9934,
+          "MILK": 10013,
+          "WOOL": 10014,
+          "FERTILIZER": 10098
+        },
+        "v49_cash": 1468.0,
+        "opp_cash": 1183.0,
+        "v49_hands": 8,
+        "opp_hands": 8
+      },
+      "287": {
+        "step": 287,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "ICE_CREAM_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 36,
+          "TOMATO": 61,
+          "STRAWBERRY": 197,
+          "MELON": 76,
+          "EGG": 56,
+          "MILK": 97,
+          "WOOL": 154,
+          "FERTILIZER": 71
+        },
+        "inventory": {
+          "WHEAT": 9732,
+          "CARROT": 9988,
+          "TOMATO": 9988,
+          "STRAWBERRY": 9916,
+          "MELON": 10132,
+          "EGG": 9902,
+          "MILK": 10030,
+          "WOOL": 10028,
+          "FERTILIZER": 10147
+        },
+        "v49_cash": 13785.0,
+        "opp_cash": 13279.0,
+        "v49_hands": 10,
+        "opp_hands": 10
+      },
+      "288": {
+        "step": 288,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "ICE_CREAM_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 41,
+          "CARROT": 36,
+          "TOMATO": 61,
+          "STRAWBERRY": 197,
+          "MELON": 76,
+          "EGG": 56,
+          "MILK": 97,
+          "WOOL": 154,
+          "FERTILIZER": 71
+        },
+        "inventory": {
+          "WHEAT": 9732,
+          "CARROT": 9988,
+          "TOMATO": 9988,
+          "STRAWBERRY": 9916,
+          "MELON": 10132,
+          "EGG": 9902,
+          "MILK": 10030,
+          "WOOL": 10028,
+          "FERTILIZER": 10147
+        },
+        "v49_cash": 13785.0,
+        "opp_cash": 13279.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "289": {
+        "step": 289,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "ICE_CREAM_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 42,
+          "CARROT": 36,
+          "TOMATO": 62,
+          "STRAWBERRY": 199,
+          "MELON": 78,
+          "EGG": 56,
+          "MILK": 103,
+          "WOOL": 158,
+          "FERTILIZER": 64
+        },
+        "inventory": {
+          "WHEAT": 9727,
+          "CARROT": 9987,
+          "TOMATO": 9987,
+          "STRAWBERRY": 9912,
+          "MELON": 10131,
+          "EGG": 9899,
+          "MILK": 10027,
+          "WOOL": 10027,
+          "FERTILIZER": 10179
+        },
+        "v49_cash": 14779.0,
+        "opp_cash": 14273.0,
+        "v49_hands": 9,
+        "opp_hands": 9
+      },
+      "360": {
+        "step": 360,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "ICE_CREAM_SHOP",
+          "PIZZA_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 42,
+          "CARROT": 36,
+          "TOMATO": 62,
+          "STRAWBERRY": 220,
+          "MELON": 84,
+          "EGG": 58,
+          "MILK": 91,
+          "WOOL": 1,
+          "FERTILIZER": 53
+        },
+        "inventory": {
+          "WHEAT": 9699,
+          "CARROT": 9985,
+          "TOMATO": 9985,
+          "STRAWBERRY": 9859,
+          "MELON": 10129,
+          "EGG": 9875,
+          "MILK": 10033,
+          "WOOL": 10059,
+          "FERTILIZER": 10237
+        },
+        "v49_cash": 20471.0,
+        "opp_cash": 20941.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "504": {
+        "step": 504,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "ICE_CREAM_SHOP",
+          "PIZZA_SHOP",
+          "SMOOTHIE_SHOP",
+          "SMOOTHIE_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 45,
+          "CARROT": 37,
+          "TOMATO": 67,
+          "STRAWBERRY": 193,
+          "MELON": 99,
+          "EGG": 57,
+          "MILK": 84,
+          "WOOL": 1,
+          "FERTILIZER": 34
+        },
+        "inventory": {
+          "WHEAT": 9596,
+          "CARROT": 9979,
+          "TOMATO": 9943,
+          "STRAWBERRY": 9925,
+          "MELON": 10123,
+          "EGG": 9878,
+          "MILK": 10036,
+          "WOOL": 10059,
+          "FERTILIZER": 10331
+        },
+        "v49_cash": 50793.0,
+        "opp_cash": 49904.0,
+        "v49_hands": 0,
+        "opp_hands": 0
+      },
+      "718": {
+        "step": 718,
+        "shops": [
+          "BRUNCH_SPOT",
+          "BAKERY",
+          "ICE_CREAM_SHOP",
+          "ICE_CREAM_SHOP",
+          "PIZZA_SHOP",
+          "SMOOTHIE_SHOP",
+          "SMOOTHIE_SHOP",
+          "PIZZA_SHOP"
+        ],
+        "prices": {
+          "WHEAT": 36,
+          "CARROT": 21,
+          "TOMATO": 79,
+          "STRAWBERRY": 186,
+          "MELON": 120,
+          "EGG": 56,
+          "MILK": 237,
+          "WOOL": 1,
+          "FERTILIZER": 5
+        },
+        "inventory": {
+          "WHEAT": 9870,
+          "CARROT": 10155,
+          "TOMATO": 9844,
+          "STRAWBERRY": 9939,
+          "MELON": 10114,
+          "EGG": 9903,
+          "MILK": 9921,
+          "WOOL": 10059,
+          "FERTILIZER": 10476
+        },
+        "v49_cash": 109706.0,
+        "opp_cash": 111564.0,
+        "v49_hands": 11,
+        "opp_hands": 11
+      }
+    }
+  }
+}

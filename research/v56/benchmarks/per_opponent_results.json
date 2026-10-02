@@ -1,0 +1,87 @@
+{
+  "V49_Meta_Fusion": {
+    "v44_economic_portfolio": {
+      "legs": 64,
+      "wins": 60,
+      "losses": 4,
+      "win_rate": 0.9375,
+      "mean_margin": 6842.15,
+      "rescues": 0,
+      "casualties": 0,
+      "loss_seeds": [250617, 250621],
+      "near_win_seeds": [250616, 250631]
+    },
+    "dmitrii_lb2800": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 14218.40,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "tetsutani_pasture": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 12890.75,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "kaitofukami_v48_3009": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 15410.20,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "indarkarhana_top10": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 11984.60,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "saiteja_mega_3000": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 13450.10,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "DAIRY_FLOOD": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 24102.80,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "WOOL_FLOOD": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 22450.50,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "TERMINAL_DUMPER": {
+      "legs": 64,
+      "wins": 64,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_margin": 28910.30,
+      "rescues": 0,
+      "casualties": 0
+    }
+  }
+}

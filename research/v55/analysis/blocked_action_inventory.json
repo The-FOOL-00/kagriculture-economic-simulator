@@ -1,0 +1,27 @@
+{
+  "seeds_tested": 16,
+  "by_op": {
+    "CARE": 466,
+    "COLLECT_FERTILIZER": 254,
+    "WATER": 401,
+    "DIG": 91,
+    "PLACE": 58,
+    "HARVEST": 207,
+    "PICKUP": 10,
+    "FERTILIZE": 48,
+    "FEED": 25,
+    "DROP": 7
+  },
+  "by_reason": {
+    "ALREADY_CARED": 445,
+    "UNKNOWN": 401,
+    "ALREADY_WATERED": 338,
+    "TILE_NOT_EMPTY_STRUCTURE": 57,
+    "NOT_A_PLANT": 270,
+    "ITEM_NOT_IN_SHED": 10,
+    "NOT_AN_ANIMAL": 42,
+    "ALREADY_FED": 1,
+    "ITEM_NOT_IN_BACKPACK": 1,
+    "NO_WHEAT_IN_SHED": 2
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "C1": {
+    "policy": "C1",
+    "elapsed": 258.912073135376,
+    "overall": {
+      "legs": 576,
+      "mean_delta": -133.02777777777777,
+      "median_delta": 0.0,
+      "ci95_low": -259.2677083333333,
+      "ci95_high": -9.584244791666679,
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.9861111111111112,
+      "rescues": 0,
+      "casualties": 4,
+      "active_legs": 40,
+      "activations": 247
+    },
+    "elite": {
+      "legs": 384,
+      "mean_delta": -343.5729166666667,
+      "median_delta": 0.0,
+      "ci95_low": -499.2802083333333,
+      "ci95_high": -209.85130208333334,
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.9791666666666666,
+      "rescues": 0,
+      "casualties": 4,
+      "active_legs": 34,
+      "activations": 163
+    },
+    "adversarial": {
+      "legs": 192,
+      "mean_delta": 288.0625,
+      "median_delta": 0.0,
+      "ci95_low": 96.02083333333333,
+      "ci95_high": 528.1145833333334,
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 6,
+      "activations": 84
+    }
+  },
+  "C2": {
+    "policy": "C2",
+    "elapsed": 266.4279770851135,
+    "overall": {
+      "legs": 576,
+      "mean_delta": -158.015625,
+      "median_delta": 0.0,
+      "ci95_low": -294.6940972222222,
+      "ci95_high": -28.072960069444544,
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.9861111111111112,
+      "rescues": 0,
+      "casualties": 4,
+      "active_legs": 62,
+      "activations": 576
+    },
+    "elite": {
+      "legs": 384,
+      "mean_delta": -448.7578125,
+      "median_delta": 0.0,
+      "ci95_low": -608.0531249999999,
+      "ci95_high": -309.07220052083335,
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.9791666666666666,
+      "rescues": 0,
+      "casualties": 4,
+      "active_legs": 50,
+      "activations": 384
+    },
+    "adversarial": {
+      "legs": 192,
+      "mean_delta": 423.46875,
+      "median_delta": 0.0,
+      "ci95_low": 189.16666666666666,
+      "ci95_high": 686.0885416666666,
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 12,
+      "activations": 192
+    }
+  },
+  "C4": {
+    "policy": "C4",
+    "elapsed": 267.6693196296692,
+    "overall": {
+      "legs": 576,
+      "mean_delta": -133.02777777777777,
+      "median_delta": 0.0,
+      "ci95_low": -259.2677083333333,
+      "ci95_high": -9.584244791666679,
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.9861111111111112,
+      "rescues": 0,
+      "casualties": 4,
+      "active_legs": 40,
+      "activations": 192
+    },
+    "elite": {
+      "legs": 384,
+      "mean_delta": -343.5729166666667,
+      "median_delta": 0.0,
+      "ci95_low": -499.2802083333333,
+      "ci95_high": -209.85130208333334,
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.9791666666666666,
+      "rescues": 0,
+      "casualties": 4,
+      "active_legs": 34,
+      "activations": 126
+    },
+    "adversarial": {
+      "legs": 192,
+      "mean_delta": 288.0625,
+      "median_delta": 0.0,
+      "ci95_low": 96.02083333333333,
+      "ci95_high": 528.1145833333334,
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 6,
+      "activations": 66
+    }
+  },
+  "C6": {
+    "policy": "C6",
+    "elapsed": 291.5854091644287,
+    "overall": {
+      "legs": 576,
+      "mean_delta": -133.02777777777777,
+      "median_delta": 0.0,
+      "ci95_low": -259.2677083333333,
+      "ci95_high": -9.584244791666679,
+      "win_rate_v49": 0.9930555555555556,
+      "win_rate_cand": 0.9861111111111112,
+      "rescues": 0,
+      "casualties": 4,
+      "active_legs": 40,
+      "activations": 241
+    },
+    "elite": {
+      "legs": 384,
+      "mean_delta": -343.5729166666667,
+      "median_delta": 0.0,
+      "ci95_low": -499.2802083333333,
+      "ci95_high": -209.85130208333334,
+      "win_rate_v49": 0.9895833333333334,
+      "win_rate_cand": 0.9791666666666666,
+      "rescues": 0,
+      "casualties": 4,
+      "active_legs": 34,
+      "activations": 157
+    },
+    "adversarial": {
+      "legs": 192,
+      "mean_delta": 288.0625,
+      "median_delta": 0.0,
+      "ci95_low": 96.02083333333333,
+      "ci95_high": 528.1145833333334,
+      "win_rate_v49": 1.0,
+      "win_rate_cand": 1.0,
+      "rescues": 0,
+      "casualties": 0,
+      "active_legs": 6,
+      "activations": 84
+    }
+  }
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "seed": 250416,
+    "seat": 0,
+    "variant": "B1_HOLD_MILK_UNTIL_650",
+    "v49_cash": 75057.0,
+    "opp_cash": 102869.0,
+    "margin": -27812.0,
+    "won": false
+  },
+  {
+    "seed": 250416,
+    "seat": 0,
+    "variant": "B2_HOLD_MILK_PRICE_THRESHOLD",
+    "v49_cash": 60818.0,
+    "opp_cash": 109293.0,
+    "margin": -48475.0,
+    "won": false
+  },
+  {
+    "seed": 250416,
+    "seat": 0,
+    "variant": "B3_DUMP_MILK_PREEMPTIVE",
+    "v49_cash": 95157.0,
+    "opp_cash": 95873.0,
+    "margin": -716.0,
+    "won": false
+  },
+  {
+    "seed": 250416,
+    "seat": 0,
+    "variant": "B4_HOLD_WOOL_FOR_YARN",
+    "v49_cash": 64509.0,
+    "opp_cash": 107771.0,
+    "margin": -43262.0,
+    "won": false
+  },
+  {
+    "seed": 250416,
+    "seat": 0,
+    "variant": "B5_STAGGERED_PREEMPT_DUOPOLY",
+    "v49_cash": 95085.0,
+    "opp_cash": 95873.0,
+    "margin": -788.0,
+    "won": false
+  },
+  {
+    "seed": 250436,
+    "seat": 0,
+    "variant": "B1_HOLD_MILK_UNTIL_650",
+    "v49_cash": 80808.0,
+    "opp_cash": 148952.0,
+    "margin": -68144.0,
+    "won": false
+  },
+  {
+    "seed": 250436,
+    "seat": 0,
+    "variant": "B2_HOLD_MILK_PRICE_THRESHOLD",
+    "v49_cash": 119024.0,
+    "opp_cash": 118788.0,
+    "margin": 236.0,
+    "won": true
+  },
+  {
+    "seed": 250436,
+    "seat": 0,
+    "variant": "B3_DUMP_MILK_PREEMPTIVE",
+    "v49_cash": 113638.0,
+    "opp_cash": 115043.0,
+    "margin": -1405.0,
+    "won": false
+  },
+  {
+    "seed": 250436,
+    "seat": 0,
+    "variant": "B4_HOLD_WOOL_FOR_YARN",
+    "v49_cash": 105986.0,
+    "opp_cash": 123905.0,
+    "margin": -17919.0,
+    "won": false
+  },
+  {
+    "seed": 250436,
+    "seat": 0,
+    "variant": "B5_STAGGERED_PREEMPT_DUOPOLY",
+    "v49_cash": 113547.0,
+    "opp_cash": 115043.0,
+    "margin": -1496.0,
+    "won": false
+  },
+  {
+    "seed": 250439,
+    "seat": 0,
+    "variant": "B1_HOLD_MILK_UNTIL_650",
+    "v49_cash": 81991.0,
+    "opp_cash": 138348.0,
+    "margin": -56357.0,
+    "won": false
+  },
+  {
+    "seed": 250439,
+    "seat": 0,
+    "variant": "B2_HOLD_MILK_PRICE_THRESHOLD",
+    "v49_cash": 114689.0,
+    "opp_cash": 115242.0,
+    "margin": -553.0,
+    "won": false
+  },
+  {
+    "seed": 250439,
+    "seat": 0,
+    "variant": "B3_DUMP_MILK_PREEMPTIVE",
+    "v49_cash": 110292.0,
+    "opp_cash": 111699.0,
+    "margin": -1407.0,
+    "won": false
+  },
+  {
+    "seed": 250439,
+    "seat": 0,
+    "variant": "B4_HOLD_WOOL_FOR_YARN",
+    "v49_cash": 73783.0,
+    "opp_cash": 123730.0,
+    "margin": -49947.0,
+    "won": false
+  },
+  {
+    "seed": 250439,
+    "seat": 0,
+    "variant": "B5_STAGGERED_PREEMPT_DUOPOLY",
+    "v49_cash": 110292.0,
+    "opp_cash": 111699.0,
+    "margin": -1407.0,
+    "won": false
+  }
+]

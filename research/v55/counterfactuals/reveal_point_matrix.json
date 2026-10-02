@@ -1,0 +1,146 @@
+[
+  {
+    "seed": 250416,
+    "branch_step": 215,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -716.0,
+    "candidate_margin": -31285.0,
+    "margin_delta": -30569.0
+  },
+  {
+    "seed": 250436,
+    "branch_step": 215,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1405.0,
+    "candidate_margin": -778.0,
+    "margin_delta": 627.0
+  },
+  {
+    "seed": 250439,
+    "branch_step": 215,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1407.0,
+    "candidate_margin": -866.0,
+    "margin_delta": 541.0
+  },
+  {
+    "seed": 250416,
+    "branch_step": 216,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -716.0,
+    "candidate_margin": -31285.0,
+    "margin_delta": -30569.0
+  },
+  {
+    "seed": 250436,
+    "branch_step": 216,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1405.0,
+    "candidate_margin": -778.0,
+    "margin_delta": 627.0
+  },
+  {
+    "seed": 250439,
+    "branch_step": 216,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1407.0,
+    "candidate_margin": -866.0,
+    "margin_delta": 541.0
+  },
+  {
+    "seed": 250416,
+    "branch_step": 217,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -716.0,
+    "candidate_margin": -31285.0,
+    "margin_delta": -30569.0
+  },
+  {
+    "seed": 250436,
+    "branch_step": 217,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1405.0,
+    "candidate_margin": -778.0,
+    "margin_delta": 627.0
+  },
+  {
+    "seed": 250439,
+    "branch_step": 217,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1407.0,
+    "candidate_margin": -866.0,
+    "margin_delta": 541.0
+  },
+  {
+    "seed": 250416,
+    "branch_step": 220,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -716.0,
+    "candidate_margin": -31285.0,
+    "margin_delta": -30569.0
+  },
+  {
+    "seed": 250436,
+    "branch_step": 220,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1405.0,
+    "candidate_margin": -778.0,
+    "margin_delta": 627.0
+  },
+  {
+    "seed": 250439,
+    "branch_step": 220,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1407.0,
+    "candidate_margin": -866.0,
+    "margin_delta": 541.0
+  },
+  {
+    "seed": 250416,
+    "branch_step": 240,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -716.0,
+    "candidate_margin": -31285.0,
+    "margin_delta": -30569.0
+  },
+  {
+    "seed": 250436,
+    "branch_step": 240,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1405.0,
+    "candidate_margin": -778.0,
+    "margin_delta": 627.0
+  },
+  {
+    "seed": 250439,
+    "branch_step": 240,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1407.0,
+    "candidate_margin": -866.0,
+    "margin_delta": 541.0
+  },
+  {
+    "seed": 250416,
+    "branch_step": 288,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -716.0,
+    "candidate_margin": -31285.0,
+    "margin_delta": -30569.0
+  },
+  {
+    "seed": 250436,
+    "branch_step": 288,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1405.0,
+    "candidate_margin": -816.0,
+    "margin_delta": 589.0
+  },
+  {
+    "seed": 250439,
+    "branch_step": 288,
+    "family": "B_DEMAND_SALE_TIMING",
+    "baseline_margin": -1407.0,
+    "candidate_margin": -904.0,
+    "margin_delta": 503.0
+  }
+]

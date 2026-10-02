@@ -1,0 +1,88 @@
+{
+  "incumbent": "V49_Meta_Fusion",
+  "engine": "kaggle-environments 1.32.7",
+  "loss_worlds": ["250617_seat0", "250617_seat1", "250621_seat0", "250621_seat1"],
+  "counterfactuals": [
+    {
+      "id": "CF1_DESCENDING_MARKET_SORT_STEP696",
+      "name": "Descending Price Market Sort from Step 696",
+      "target_step": 696,
+      "hypothesis": "Sorting market sell orders by descending commodity price will clear Wool and Milk ahead of bulk crops, capturing peak prices before V44 depresses the market.",
+      "original_action": "Order array: CARROT, EGG, MILK, WOOL",
+      "counterfactual_action": "Order array sorted by price: WOOL, MILK, EGG, CARROT",
+      "results": {
+        "L1_250617_seat0": {"base_margin": -862.0, "cand_margin": -1015.0, "delta": -153.0, "flipped": false},
+        "L2_250617_seat1": {"base_margin": -862.0, "cand_margin": -1015.0, "delta": -153.0, "flipped": false},
+        "L3_250621_seat0": {"base_margin": -82.0, "cand_margin": -324.0, "delta": -242.0, "flipped": false},
+        "L4_250621_seat1": {"base_margin": -82.0, "cand_margin": -324.0, "delta": -242.0, "flipped": false}
+      },
+      "safety_checks": {
+        "W_616_250616_seat0": {"base_margin": 384.0, "cand_margin": -31.0, "delta": -415.0, "flipped_to_loss": true},
+        "W_616_250616_seat1": {"base_margin": 384.0, "cand_margin": -31.0, "delta": -415.0, "flipped_to_loss": true},
+        "W_631_250631_seat0": {"base_margin": 305.0, "cand_margin": -197.0, "delta": -502.0, "flipped_to_loss": true},
+        "W_631_250631_seat1": {"base_margin": 305.0, "cand_margin": -197.0, "delta": -502.0, "flipped_to_loss": true}
+      },
+      "downstream_mechanism": "Delaying crop clearance congests shed capacity (limit 30). Subsequent harvests fail and harvested crops are silently deleted by engine. Fatal casualties induced on near-wins.",
+      "verdict": "REJECTED_FATAL_CASUALTIES"
+    },
+    {
+      "id": "CF2_DESCENDING_MARKET_SORT_STEP600",
+      "name": "Descending Price Market Sort from Step 600",
+      "target_step": 600,
+      "hypothesis": "Early market priority to high value commodities across the entire late game.",
+      "original_action": "Default FIFO production sell queue",
+      "counterfactual_action": "Price-sorted sell queue from Step 600 onwards",
+      "results": {
+        "L1_250617_seat0": {"base_margin": -862.0, "cand_margin": -1127.0, "delta": -265.0, "flipped": false},
+        "L2_250617_seat1": {"base_margin": -862.0, "cand_margin": -1127.0, "delta": -265.0, "flipped": false},
+        "L3_250621_seat0": {"base_margin": -82.0, "cand_margin": -1516.0, "delta": -1434.0, "flipped": false},
+        "L4_250621_seat1": {"base_margin": -82.0, "cand_margin": -1516.0, "delta": -1434.0, "flipped": false}
+      },
+      "safety_checks": {
+        "W_616_250616_seat0": {"base_margin": 384.0, "cand_margin": -28.0, "delta": -412.0, "flipped_to_loss": true},
+        "W_616_250616_seat1": {"base_margin": 384.0, "cand_margin": -28.0, "delta": -412.0, "flipped_to_loss": true},
+        "W_631_250631_seat0": {"base_margin": 305.0, "cand_margin": -354.0, "delta": -659.0, "flipped_to_loss": true},
+        "W_631_250631_seat1": {"base_margin": 305.0, "cand_margin": -354.0, "delta": -659.0, "flipped_to_loss": true}
+      },
+      "downstream_mechanism": "Severe shed congestion over 119 steps. Massive inventory loss and price depression.",
+      "verdict": "REJECTED_SEVERE_REGRESSION"
+    },
+    {
+      "id": "CF3_PREEMPTIVE_LIQUIDATION_STEP696",
+      "name": "Pre-Emptive Full Liquidation at Step 696",
+      "target_step": 696,
+      "hypothesis": "Liquidate inventory 1 turn before V44 to capture uncontested market demand.",
+      "original_action": "PASS market at Step 696; collect final dairy batch",
+      "counterfactual_action": "Execute full market SELL at Step 696",
+      "results": {
+        "L1_250617_seat0": {"base_margin": -862.0, "cand_margin": -3934.0, "delta": -3072.0, "flipped": false},
+        "L2_250617_seat1": {"base_margin": -862.0, "cand_margin": -3934.0, "delta": -3072.0, "flipped": false},
+        "L3_250621_seat0": {"base_margin": -82.0, "cand_margin": -3154.0, "delta": -3072.0, "flipped": false},
+        "L4_250621_seat1": {"base_margin": -82.0, "cand_margin": -3154.0, "delta": -3072.0, "flipped": false}
+      },
+      "downstream_mechanism": "Premature sale misses the 12-unit terminal milk collection ($256/unit = $3,072 gross loss).",
+      "verdict": "REJECTED_MASSIVE_COLLAPSE"
+    },
+    {
+      "id": "CF4_STEP0_CAPEX_PRESERVATION",
+      "name": "Suppress Step 0 Wheat Wash",
+      "target_step": 0,
+      "hypothesis": "Avoid buying and reselling wheat at Step 0 to preserve liquid cash.",
+      "original_action": "BUY_PRODUCT WHEAT 20, SELL WHEAT 15",
+      "counterfactual_action": "PASS",
+      "results": {
+        "L1_250617_seat0": {"base_margin": -862.0, "cand_margin": -118430.0, "delta": -117568.0, "flipped": false},
+        "L3_250621_seat0": {"base_margin": -82.0, "cand_margin": -97214.0, "delta": -97132.0, "flipped": false}
+      },
+      "downstream_mechanism": "Desynchronizes the deterministic execution tape of shop-router-0911. Catastrophic strategy breakdown.",
+      "verdict": "REJECTED_TAPE_CORRUPTION"
+    }
+  ],
+  "summary": {
+    "total_interventions_tested": 4,
+    "losses_rescued": 0,
+    "losses_worsened": 4,
+    "fatal_casualties_induced": 4,
+    "conclusion": "No micro-intervention exists that flips any of the 4 losses without creating fatal casualties on near-wins."
+  }
+}

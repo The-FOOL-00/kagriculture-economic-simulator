@@ -1,0 +1,180 @@
+{
+  "total_legs": 576,
+  "wins": 572,
+  "losses": 4,
+  "ties": 0,
+  "loss_legs": [
+    {
+      "seed": 250617,
+      "seat": 0,
+      "opp": "V44",
+      "cash_v49": 115527.0,
+      "cash_opp": 116389.0,
+      "margin": -862.0,
+      "win": false,
+      "loss": true,
+      "tie": false
+    },
+    {
+      "seed": 250617,
+      "seat": 1,
+      "opp": "V44",
+      "cash_v49": 115527.0,
+      "cash_opp": 116389.0,
+      "margin": -862.0,
+      "win": false,
+      "loss": true,
+      "tie": false
+    },
+    {
+      "seed": 250621,
+      "seat": 0,
+      "opp": "V44",
+      "cash_v49": 116047.0,
+      "cash_opp": 116129.0,
+      "margin": -82.0,
+      "win": false,
+      "loss": true,
+      "tie": false
+    },
+    {
+      "seed": 250621,
+      "seat": 1,
+      "opp": "V44",
+      "cash_v49": 116047.0,
+      "cash_opp": 116129.0,
+      "margin": -82.0,
+      "win": false,
+      "loss": true,
+      "tie": false
+    }
+  ],
+  "near_win_buckets": {
+    "0_to_25": 0,
+    "25_to_50": 0,
+    "50_to_100": 0,
+    "100_to_250": 0,
+    "250_to_500": 4,
+    "500_to_1000": 2
+  },
+  "near_tie_buckets": {
+    "abs_le_100": 2,
+    "abs_le_250": 2,
+    "abs_le_500": 6,
+    "abs_le_1000": 10
+  },
+  "detailed_near_ties": [
+    {
+      "seed": 250616,
+      "seat": 0,
+      "opp": "V44",
+      "cash_v49": 89733.0,
+      "cash_opp": 89349.0,
+      "margin": 384.0,
+      "win": true,
+      "loss": false,
+      "tie": false
+    },
+    {
+      "seed": 250616,
+      "seat": 1,
+      "opp": "V44",
+      "cash_v49": 89733.0,
+      "cash_opp": 89349.0,
+      "margin": 384.0,
+      "win": true,
+      "loss": false,
+      "tie": false
+    },
+    {
+      "seed": 250621,
+      "seat": 0,
+      "opp": "V44",
+      "cash_v49": 116047.0,
+      "cash_opp": 116129.0,
+      "margin": -82.0,
+      "win": false,
+      "loss": true,
+      "tie": false
+    },
+    {
+      "seed": 250621,
+      "seat": 1,
+      "opp": "V44",
+      "cash_v49": 116047.0,
+      "cash_opp": 116129.0,
+      "margin": -82.0,
+      "win": false,
+      "loss": true,
+      "tie": false
+    },
+    {
+      "seed": 250631,
+      "seat": 0,
+      "opp": "V44",
+      "cash_v49": 100398.0,
+      "cash_opp": 100093.0,
+      "margin": 305.0,
+      "win": true,
+      "loss": false,
+      "tie": false
+    },
+    {
+      "seed": 250631,
+      "seat": 1,
+      "opp": "V44",
+      "cash_v49": 100398.0,
+      "cash_opp": 100093.0,
+      "margin": 305.0,
+      "win": true,
+      "loss": false,
+      "tie": false
+    }
+  ],
+  "detailed_near_wins_under_500": [
+    {
+      "seed": 250616,
+      "seat": 0,
+      "opp": "V44",
+      "cash_v49": 89733.0,
+      "cash_opp": 89349.0,
+      "margin": 384.0,
+      "win": true,
+      "loss": false,
+      "tie": false
+    },
+    {
+      "seed": 250616,
+      "seat": 1,
+      "opp": "V44",
+      "cash_v49": 89733.0,
+      "cash_opp": 89349.0,
+      "margin": 384.0,
+      "win": true,
+      "loss": false,
+      "tie": false
+    },
+    {
+      "seed": 250631,
+      "seat": 0,
+      "opp": "V44",
+      "cash_v49": 100398.0,
+      "cash_opp": 100093.0,
+      "margin": 305.0,
+      "win": true,
+      "loss": false,
+      "tie": false
+    },
+    {
+      "seed": 250631,
+      "seat": 1,
+      "opp": "V44",
+      "cash_v49": 100398.0,
+      "cash_opp": 100093.0,
+      "margin": 305.0,
+      "win": true,
+      "loss": false,
+      "tie": false
+    }
+  ]
+}

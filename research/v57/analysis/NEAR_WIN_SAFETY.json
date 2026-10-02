@@ -1,0 +1,1666 @@
+{
+  "Q6_step697_wool_first": {
+    "description": "Step 697: reorder sells to prioritize wool_first",
+    "rescues": 0,
+    "casualties": 0,
+    "mean_near_win_delta": -325.25,
+    "legs": {
+      "seed_250617_seat_0": {
+        "seed": 250617,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -964.0,
+        "delta": -102.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250617_seat_1": {
+        "seed": 250617,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -964.0,
+        "delta": -102.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_0": {
+        "seed": 250621,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -193.0,
+        "delta": -111.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_1": {
+        "seed": 250621,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -193.0,
+        "delta": -111.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250631_seat_0": {
+        "seed": 250631,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 221.0,
+        "delta": -84.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250631_seat_1": {
+        "seed": 250631,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 221.0,
+        "delta": -84.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_0": {
+        "seed": 250616,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 294.0,
+        "delta": -90.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_1": {
+        "seed": 250616,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 294.0,
+        "delta": -90.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_0": {
+        "seed": 250604,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 8840.0,
+        "delta": -409.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_1": {
+        "seed": 250604,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 8840.0,
+        "delta": -409.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_0": {
+        "seed": 250627,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 6914.0,
+        "delta": -718.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_1": {
+        "seed": 250627,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 6914.0,
+        "delta": -718.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_0": {
+        "seed": 250618,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2758.0,
+        "delta": -30.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_1": {
+        "seed": 250618,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2758.0,
+        "delta": -30.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_0": {
+        "seed": 250620,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5092.0,
+        "delta": -434.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_1": {
+        "seed": 250620,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5092.0,
+        "delta": -434.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_0": {
+        "seed": 250622,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11234.0,
+        "delta": -177.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_1": {
+        "seed": 250622,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11234.0,
+        "delta": -177.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_0": {
+        "seed": 250600,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6873.0,
+        "delta": -88.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_1": {
+        "seed": 250600,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6873.0,
+        "delta": -88.0,
+        "baseline_win": true,
+        "candidate_win": true
+      }
+    }
+  },
+  "Q6_step697_carrot_wool_egg_milk": {
+    "description": "Step 697: reorder sells to prioritize carrot_wool_egg_milk",
+    "rescues": 0,
+    "casualties": 0,
+    "mean_near_win_delta": -2.25,
+    "legs": {
+      "seed_250617_seat_0": {
+        "seed": 250617,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -865.0,
+        "delta": -3.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250617_seat_1": {
+        "seed": 250617,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -865.0,
+        "delta": -3.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_0": {
+        "seed": 250621,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -96.0,
+        "delta": -14.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_1": {
+        "seed": 250621,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -96.0,
+        "delta": -14.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250631_seat_0": {
+        "seed": 250631,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 303.0,
+        "delta": -2.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250631_seat_1": {
+        "seed": 250631,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 303.0,
+        "delta": -2.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_0": {
+        "seed": 250616,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 382.0,
+        "delta": -2.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_1": {
+        "seed": 250616,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 382.0,
+        "delta": -2.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_0": {
+        "seed": 250604,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9246.0,
+        "delta": -3.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_1": {
+        "seed": 250604,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9246.0,
+        "delta": -3.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_0": {
+        "seed": 250627,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7630.0,
+        "delta": -2.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_1": {
+        "seed": 250627,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7630.0,
+        "delta": -2.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_0": {
+        "seed": 250618,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2788.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_1": {
+        "seed": 250618,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2788.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_0": {
+        "seed": 250620,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_1": {
+        "seed": 250620,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_0": {
+        "seed": 250622,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11411.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_1": {
+        "seed": 250622,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11411.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_0": {
+        "seed": 250600,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6957.0,
+        "delta": -4.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_1": {
+        "seed": 250600,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6957.0,
+        "delta": -4.0,
+        "baseline_win": true,
+        "candidate_win": true
+      }
+    }
+  },
+  "Q1_step697_lead_pad1": {
+    "description": "Step 697: Prepend [] if len < 10",
+    "rescues": 0,
+    "casualties": 0,
+    "mean_near_win_delta": -201.75,
+    "legs": {
+      "seed_250617_seat_0": {
+        "seed": 250617,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -964.0,
+        "delta": -102.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250617_seat_1": {
+        "seed": 250617,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -964.0,
+        "delta": -102.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_0": {
+        "seed": 250621,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -82.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_1": {
+        "seed": 250621,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -82.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250631_seat_0": {
+        "seed": 250631,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 216.0,
+        "delta": -89.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250631_seat_1": {
+        "seed": 250631,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 216.0,
+        "delta": -89.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_0": {
+        "seed": 250616,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 384.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_1": {
+        "seed": 250616,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 384.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_0": {
+        "seed": 250604,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9249.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_1": {
+        "seed": 250604,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9249.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_0": {
+        "seed": 250627,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 6914.0,
+        "delta": -718.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_1": {
+        "seed": 250627,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 6914.0,
+        "delta": -718.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_0": {
+        "seed": 250618,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2706.0,
+        "delta": -82.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_1": {
+        "seed": 250618,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2706.0,
+        "delta": -82.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_0": {
+        "seed": 250620,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_1": {
+        "seed": 250620,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_0": {
+        "seed": 250622,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11234.0,
+        "delta": -177.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_1": {
+        "seed": 250622,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11234.0,
+        "delta": -177.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_0": {
+        "seed": 250600,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6879.0,
+        "delta": -82.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_1": {
+        "seed": 250600,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6879.0,
+        "delta": -82.0,
+        "baseline_win": true,
+        "candidate_win": true
+      }
+    }
+  },
+  "Q4_step697_split_carrot": {
+    "description": "Step 697: Split CARROT sell into two halves if fits",
+    "rescues": 0,
+    "casualties": 0,
+    "mean_near_win_delta": -51.75,
+    "legs": {
+      "seed_250617_seat_0": {
+        "seed": 250617,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -887.0,
+        "delta": -25.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250617_seat_1": {
+        "seed": 250617,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -887.0,
+        "delta": -25.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_0": {
+        "seed": 250621,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -82.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_1": {
+        "seed": 250621,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -82.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250631_seat_0": {
+        "seed": 250631,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 276.0,
+        "delta": -29.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250631_seat_1": {
+        "seed": 250631,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 276.0,
+        "delta": -29.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_0": {
+        "seed": 250616,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 384.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_1": {
+        "seed": 250616,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 384.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_0": {
+        "seed": 250604,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9249.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_1": {
+        "seed": 250604,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9249.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_0": {
+        "seed": 250627,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7454.0,
+        "delta": -178.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_1": {
+        "seed": 250627,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7454.0,
+        "delta": -178.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_0": {
+        "seed": 250618,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2767.0,
+        "delta": -21.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_1": {
+        "seed": 250618,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2767.0,
+        "delta": -21.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_0": {
+        "seed": 250620,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_1": {
+        "seed": 250620,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_0": {
+        "seed": 250622,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11383.0,
+        "delta": -28.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_1": {
+        "seed": 250622,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11383.0,
+        "delta": -28.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_0": {
+        "seed": 250600,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6942.0,
+        "delta": -19.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_1": {
+        "seed": 250600,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6942.0,
+        "delta": -19.0,
+        "baseline_win": true,
+        "candidate_win": true
+      }
+    }
+  },
+  "Q6_step693_egg_milk_first": {
+    "description": "Step 693: reorder sells egg_milk_first",
+    "rescues": 0,
+    "casualties": 0,
+    "mean_near_win_delta": 0.0,
+    "legs": {
+      "seed_250617_seat_0": {
+        "seed": 250617,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -862.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250617_seat_1": {
+        "seed": 250617,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -862.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_0": {
+        "seed": 250621,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -79.0,
+        "delta": 3.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_1": {
+        "seed": 250621,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -79.0,
+        "delta": 3.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250631_seat_0": {
+        "seed": 250631,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 305.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250631_seat_1": {
+        "seed": 250631,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 305.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_0": {
+        "seed": 250616,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 384.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_1": {
+        "seed": 250616,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 384.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_0": {
+        "seed": 250604,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9249.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_1": {
+        "seed": 250604,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9249.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_0": {
+        "seed": 250627,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7632.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_1": {
+        "seed": 250627,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7632.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_0": {
+        "seed": 250618,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2788.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_1": {
+        "seed": 250618,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2788.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_0": {
+        "seed": 250620,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_1": {
+        "seed": 250620,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_0": {
+        "seed": 250622,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11411.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_1": {
+        "seed": 250622,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11411.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_0": {
+        "seed": 250600,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6961.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_1": {
+        "seed": 250600,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6961.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      }
+    }
+  },
+  "Q6_step694_wool_first": {
+    "description": "Step 694: reorder sells to prioritize wool_first",
+    "rescues": 0,
+    "casualties": 2,
+    "mean_near_win_delta": -312.75,
+    "legs": {
+      "seed_250617_seat_0": {
+        "seed": 250617,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -862.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250617_seat_1": {
+        "seed": 250617,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -862.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_0": {
+        "seed": 250621,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -388.0,
+        "delta": -306.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_1": {
+        "seed": 250621,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -388.0,
+        "delta": -306.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250631_seat_0": {
+        "seed": 250631,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 305.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250631_seat_1": {
+        "seed": 250631,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 305.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_0": {
+        "seed": 250616,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": -176.0,
+        "delta": -560.0,
+        "baseline_win": true,
+        "candidate_win": false
+      },
+      "seed_250616_seat_1": {
+        "seed": 250616,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": -176.0,
+        "delta": -560.0,
+        "baseline_win": true,
+        "candidate_win": false
+      },
+      "seed_250604_seat_0": {
+        "seed": 250604,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 8558.0,
+        "delta": -691.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_1": {
+        "seed": 250604,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 8558.0,
+        "delta": -691.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_0": {
+        "seed": 250627,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7632.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_1": {
+        "seed": 250627,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7632.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_0": {
+        "seed": 250618,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2787.0,
+        "delta": -1.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_1": {
+        "seed": 250618,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2787.0,
+        "delta": -1.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_0": {
+        "seed": 250620,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_1": {
+        "seed": 250620,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5526.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_0": {
+        "seed": 250622,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11411.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_1": {
+        "seed": 250622,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11411.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_0": {
+        "seed": 250600,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6961.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_1": {
+        "seed": 250600,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6961.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      }
+    }
+  },
+  "Q1_step694_lead_pad1": {
+    "description": "Step 694: Prepend 1 []",
+    "rescues": 0,
+    "casualties": 2,
+    "mean_near_win_delta": -318.25,
+    "legs": {
+      "seed_250617_seat_0": {
+        "seed": 250617,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -862.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250617_seat_1": {
+        "seed": 250617,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -862.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_0": {
+        "seed": 250621,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -388.0,
+        "delta": -306.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_1": {
+        "seed": 250621,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -388.0,
+        "delta": -306.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250631_seat_0": {
+        "seed": 250631,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 305.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250631_seat_1": {
+        "seed": 250631,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 305.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_0": {
+        "seed": 250616,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": -196.0,
+        "delta": -580.0,
+        "baseline_win": true,
+        "candidate_win": false
+      },
+      "seed_250616_seat_1": {
+        "seed": 250616,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": -196.0,
+        "delta": -580.0,
+        "baseline_win": true,
+        "candidate_win": false
+      },
+      "seed_250604_seat_0": {
+        "seed": 250604,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 8558.0,
+        "delta": -691.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_1": {
+        "seed": 250604,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 8558.0,
+        "delta": -691.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_0": {
+        "seed": 250627,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7630.0,
+        "delta": -2.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_1": {
+        "seed": 250627,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7630.0,
+        "delta": -2.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_0": {
+        "seed": 250618,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2787.0,
+        "delta": -1.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_1": {
+        "seed": 250618,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2787.0,
+        "delta": -1.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_0": {
+        "seed": 250620,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5091.0,
+        "delta": -435.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_1": {
+        "seed": 250620,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5091.0,
+        "delta": -435.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_0": {
+        "seed": 250622,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11039.0,
+        "delta": -372.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_1": {
+        "seed": 250622,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11039.0,
+        "delta": -372.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_0": {
+        "seed": 250600,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6961.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_1": {
+        "seed": 250600,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6961.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      }
+    }
+  },
+  "Q6_step718_wool_egg_wheat": {
+    "description": "Step 718: reorder terminal sells wool_egg_wheat",
+    "rescues": 0,
+    "casualties": 0,
+    "mean_near_win_delta": -2.75,
+    "legs": {
+      "seed_250617_seat_0": {
+        "seed": 250617,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -862.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250617_seat_1": {
+        "seed": 250617,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -862.0,
+        "candidate_margin": -862.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_0": {
+        "seed": 250621,
+        "seat": 0,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -82.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250621_seat_1": {
+        "seed": 250621,
+        "seat": 1,
+        "seed_type": "LOSS",
+        "baseline_margin": -82.0,
+        "candidate_margin": -82.0,
+        "delta": 0.0,
+        "baseline_win": false,
+        "candidate_win": false
+      },
+      "seed_250631_seat_0": {
+        "seed": 250631,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 302.0,
+        "delta": -3.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250631_seat_1": {
+        "seed": 250631,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 305.0,
+        "candidate_margin": 302.0,
+        "delta": -3.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_0": {
+        "seed": 250616,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 383.0,
+        "delta": -1.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250616_seat_1": {
+        "seed": 250616,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 384.0,
+        "candidate_margin": 383.0,
+        "delta": -1.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_0": {
+        "seed": 250604,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9248.0,
+        "delta": -1.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250604_seat_1": {
+        "seed": 250604,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 9249.0,
+        "candidate_margin": 9248.0,
+        "delta": -1.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_0": {
+        "seed": 250627,
+        "seat": 0,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7626.0,
+        "delta": -6.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250627_seat_1": {
+        "seed": 250627,
+        "seat": 1,
+        "seed_type": "NEAR_WIN",
+        "baseline_margin": 7632.0,
+        "candidate_margin": 7626.0,
+        "delta": -6.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_0": {
+        "seed": 250618,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2788.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250618_seat_1": {
+        "seed": 250618,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 2788.0,
+        "candidate_margin": 2788.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_0": {
+        "seed": 250620,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5523.0,
+        "delta": -3.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250620_seat_1": {
+        "seed": 250620,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 5526.0,
+        "candidate_margin": 5523.0,
+        "delta": -3.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_0": {
+        "seed": 250622,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11411.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250622_seat_1": {
+        "seed": 250622,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 11411.0,
+        "candidate_margin": 11411.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_0": {
+        "seed": 250600,
+        "seat": 0,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6961.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      },
+      "seed_250600_seat_1": {
+        "seed": 250600,
+        "seat": 1,
+        "seed_type": "COMFORTABLE_WIN",
+        "baseline_margin": 6961.0,
+        "candidate_margin": 6961.0,
+        "delta": 0.0,
+        "baseline_win": true,
+        "candidate_win": true
+      }
+    }
+  }
+}

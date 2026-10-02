@@ -1,0 +1,382 @@
+{
+  "V44": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 4,
+      "cand_wins": 4,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 4,
+      "cand_wins": 4,
+      "mean_delta": -97.75
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 4,
+      "cand_wins": 4,
+      "mean_delta": -5.75
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 4,
+      "cand_wins": 4,
+      "mean_delta": -46.0
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 4,
+      "cand_wins": 2,
+      "mean_delta": -216.5
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 4,
+      "cand_wins": 4,
+      "mean_delta": 0.75
+    }
+  },
+  "V48": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 2,
+      "cand_wins": 2,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 2,
+      "cand_wins": 2,
+      "mean_delta": -93.25
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 2,
+      "cand_wins": 2,
+      "mean_delta": -4.25
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 2,
+      "cand_wins": 2,
+      "mean_delta": -45.5
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 2,
+      "cand_wins": 2,
+      "mean_delta": -397.25
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 2,
+      "cand_wins": 2,
+      "mean_delta": -107.75
+    }
+  },
+  "V49_self": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 0,
+      "cand_wins": 0,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 0,
+      "cand_wins": 0,
+      "mean_delta": -93.25
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 0,
+      "cand_wins": 0,
+      "mean_delta": -4.25
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 0,
+      "cand_wins": 0,
+      "mean_delta": -45.5
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 0,
+      "cand_wins": 0,
+      "mean_delta": -397.25
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 0,
+      "cand_wins": 0,
+      "mean_delta": -107.75
+    }
+  },
+  "dmitrii_lb2800": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -86.0
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -2.0
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -44.0
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    }
+  },
+  "tetsutani_pasture": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -10.5
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -2.0
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -6.0
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    }
+  },
+  "kaitofukami_v48_3009": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -4.0
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -4.0
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -4.0
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -1.5
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    }
+  },
+  "indarkarhana_top10": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -6.0
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -6.0
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -6.0
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    }
+  },
+  "saiteja_mega_3000": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -12.25
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": -12.25
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    }
+  },
+  "DAIRY_FLOOD": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    }
+  },
+  "WOOL_FLOOD": {
+    "Q0_baseline": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step697_carrot_wool_egg_milk": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q1_step697_lead_pad1": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step694_wool_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    },
+    "Q6_step693_egg_milk_first": {
+      "matches": 8,
+      "base_wins": 8,
+      "cand_wins": 8,
+      "mean_delta": 0.0
+    }
+  }
+}

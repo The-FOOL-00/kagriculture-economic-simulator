@@ -1,0 +1,866 @@
+{
+  "Q0_baseline": {
+    "description": "Exact V49 market action list",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": 0.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step697_wool_first": {
+    "description": "Step 697: reorder sells to prioritize wool_first",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -106.5,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115991.0,
+        "v44_cash": 116184.0,
+        "margin": -193.0,
+        "delta_vs_baseline": -111.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115991.0,
+        "v44_cash": 116184.0,
+        "margin": -193.0,
+        "delta_vs_baseline": -111.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115474.0,
+        "v44_cash": 116438.0,
+        "margin": -964.0,
+        "delta_vs_baseline": -102.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115474.0,
+        "v44_cash": 116438.0,
+        "margin": -964.0,
+        "delta_vs_baseline": -102.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step697_wool_egg_milk_carrot": {
+    "description": "Step 697: reorder sells to prioritize wool_egg_milk_carrot",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -98.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115997.0,
+        "v44_cash": 116176.0,
+        "margin": -179.0,
+        "delta_vs_baseline": -97.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115997.0,
+        "v44_cash": 116176.0,
+        "margin": -179.0,
+        "delta_vs_baseline": -97.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115476.0,
+        "v44_cash": 116437.0,
+        "margin": -961.0,
+        "delta_vs_baseline": -99.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115476.0,
+        "v44_cash": 116437.0,
+        "margin": -961.0,
+        "delta_vs_baseline": -99.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step697_milk_wool_egg_carrot": {
+    "description": "Step 697: reorder sells to prioritize milk_wool_egg_carrot",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -106.5,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115991.0,
+        "v44_cash": 116184.0,
+        "margin": -193.0,
+        "delta_vs_baseline": -111.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115991.0,
+        "v44_cash": 116184.0,
+        "margin": -193.0,
+        "delta_vs_baseline": -111.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115474.0,
+        "v44_cash": 116438.0,
+        "margin": -964.0,
+        "delta_vs_baseline": -102.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115474.0,
+        "v44_cash": 116438.0,
+        "margin": -964.0,
+        "delta_vs_baseline": -102.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step697_carrot_wool_egg_milk": {
+    "description": "Step 697: reorder sells to prioritize carrot_wool_egg_milk",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -8.5,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116041.0,
+        "v44_cash": 116137.0,
+        "margin": -96.0,
+        "delta_vs_baseline": -14.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116041.0,
+        "v44_cash": 116137.0,
+        "margin": -96.0,
+        "delta_vs_baseline": -14.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115525.0,
+        "v44_cash": 116390.0,
+        "margin": -865.0,
+        "delta_vs_baseline": -3.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115525.0,
+        "v44_cash": 116390.0,
+        "margin": -865.0,
+        "delta_vs_baseline": -3.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step697_egg_wool_carrot_milk": {
+    "description": "Step 697: reorder sells to prioritize egg_wool_carrot_milk",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -96.5,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115997.0,
+        "v44_cash": 116176.0,
+        "margin": -179.0,
+        "delta_vs_baseline": -97.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115997.0,
+        "v44_cash": 116176.0,
+        "margin": -179.0,
+        "delta_vs_baseline": -97.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115477.0,
+        "v44_cash": 116435.0,
+        "margin": -958.0,
+        "delta_vs_baseline": -96.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115477.0,
+        "v44_cash": 116435.0,
+        "margin": -958.0,
+        "delta_vs_baseline": -96.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q1_step697_lead_pad1": {
+    "description": "Step 697: Prepend [] if len < 10",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -51.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115474.0,
+        "v44_cash": 116438.0,
+        "margin": -964.0,
+        "delta_vs_baseline": -102.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115474.0,
+        "v44_cash": 116438.0,
+        "margin": -964.0,
+        "delta_vs_baseline": -102.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q2_step697_pad_before_wool": {
+    "description": "Step 697: Insert [] immediately before WOOL sell",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": 0.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q3_step697_trailing_pad": {
+    "description": "Step 697: Append [] if len < 10",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": 0.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q4_step697_split_carrot": {
+    "description": "Step 697: Split CARROT sell into two halves if fits",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -12.5,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115513.0,
+        "v44_cash": 116400.0,
+        "margin": -887.0,
+        "delta_vs_baseline": -25.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115513.0,
+        "v44_cash": 116400.0,
+        "margin": -887.0,
+        "delta_vs_baseline": -25.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step694_wool_first": {
+    "description": "Step 694: reorder sells to prioritize wool_first",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -153.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115886.0,
+        "v44_cash": 116274.0,
+        "margin": -388.0,
+        "delta_vs_baseline": -306.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115886.0,
+        "v44_cash": 116274.0,
+        "margin": -388.0,
+        "delta_vs_baseline": -306.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step694_wool_egg_first": {
+    "description": "Step 694: reorder sells to prioritize wool_egg_first",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -153.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115886.0,
+        "v44_cash": 116274.0,
+        "margin": -388.0,
+        "delta_vs_baseline": -306.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115886.0,
+        "v44_cash": 116274.0,
+        "margin": -388.0,
+        "delta_vs_baseline": -306.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step694_egg_wool_first": {
+    "description": "Step 694: reorder sells to prioritize egg_wool_first",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -153.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115886.0,
+        "v44_cash": 116274.0,
+        "margin": -388.0,
+        "delta_vs_baseline": -306.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115886.0,
+        "v44_cash": 116274.0,
+        "margin": -388.0,
+        "delta_vs_baseline": -306.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q1_step694_lead_pad1": {
+    "description": "Step 694: Prepend 1 []",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -153.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115886.0,
+        "v44_cash": 116274.0,
+        "margin": -388.0,
+        "delta_vs_baseline": -306.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115886.0,
+        "v44_cash": 116274.0,
+        "margin": -388.0,
+        "delta_vs_baseline": -306.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q1_step694_lead_pad2": {
+    "description": "Step 694: Prepend 2 []",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -163.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115878.0,
+        "v44_cash": 116286.0,
+        "margin": -408.0,
+        "delta_vs_baseline": -326.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115878.0,
+        "v44_cash": 116286.0,
+        "margin": -408.0,
+        "delta_vs_baseline": -326.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q2_step694_pad_before_wool": {
+    "description": "Step 694: Insert [] before WOOL",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": 0.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step693_milk_strawberry_first": {
+    "description": "Step 693: reorder sells milk_strawberry_first",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": 0.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step693_egg_milk_first": {
+    "description": "Step 693: reorder sells egg_milk_first",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": 1.5,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116049.0,
+        "v44_cash": 116128.0,
+        "margin": -79.0,
+        "delta_vs_baseline": 3.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116049.0,
+        "v44_cash": 116128.0,
+        "margin": -79.0,
+        "delta_vs_baseline": 3.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q1_step693_lead_pad1": {
+    "description": "Step 693: Prepend 1 []",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -1.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115526.0,
+        "v44_cash": 116390.0,
+        "margin": -864.0,
+        "delta_vs_baseline": -2.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115526.0,
+        "v44_cash": 116390.0,
+        "margin": -864.0,
+        "delta_vs_baseline": -2.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step718_wool_egg_wheat": {
+    "description": "Step 718: reorder terminal sells wool_egg_wheat",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": 0.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116047.0,
+        "v44_cash": 116129.0,
+        "margin": -82.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step718_wool_carrot_wheat": {
+    "description": "Step 718: reorder terminal sells wool_carrot_wheat",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -2.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116046.0,
+        "v44_cash": 116130.0,
+        "margin": -84.0,
+        "delta_vs_baseline": -2.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116046.0,
+        "v44_cash": 116130.0,
+        "margin": -84.0,
+        "delta_vs_baseline": -2.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115526.0,
+        "v44_cash": 116390.0,
+        "margin": -864.0,
+        "delta_vs_baseline": -2.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115526.0,
+        "v44_cash": 116390.0,
+        "margin": -864.0,
+        "delta_vs_baseline": -2.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_step718_egg_wool_carrot": {
+    "description": "Step 718: reorder terminal sells egg_wool_carrot",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -1.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116046.0,
+        "v44_cash": 116130.0,
+        "margin": -84.0,
+        "delta_vs_baseline": -2.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116046.0,
+        "v44_cash": 116130.0,
+        "margin": -84.0,
+        "delta_vs_baseline": -2.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q1_step718_lead_pad1": {
+    "description": "Step 718: Prepend 1 []",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -35.0,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 116003.0,
+        "v44_cash": 116155.0,
+        "margin": -152.0,
+        "delta_vs_baseline": -70.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 116003.0,
+        "v44_cash": 116155.0,
+        "margin": -152.0,
+        "delta_vs_baseline": -70.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115527.0,
+        "v44_cash": 116389.0,
+        "margin": -862.0,
+        "delta_vs_baseline": 0.0,
+        "outcome": "LOSS"
+      }
+    }
+  },
+  "Q6_combo_694_697_wool_first": {
+    "description": "Steps 694 & 697: Prioritize WOOL in both steps",
+    "rescues": 0,
+    "regressions": 0,
+    "mean_delta": -259.5,
+    "legs": {
+      "seed_250621_seat_0": {
+        "v49_cash": 115830.0,
+        "v44_cash": 116329.0,
+        "margin": -499.0,
+        "delta_vs_baseline": -417.0,
+        "outcome": "LOSS"
+      },
+      "seed_250621_seat_1": {
+        "v49_cash": 115830.0,
+        "v44_cash": 116329.0,
+        "margin": -499.0,
+        "delta_vs_baseline": -417.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_0": {
+        "v49_cash": 115474.0,
+        "v44_cash": 116438.0,
+        "margin": -964.0,
+        "delta_vs_baseline": -102.0,
+        "outcome": "LOSS"
+      },
+      "seed_250617_seat_1": {
+        "v49_cash": 115474.0,
+        "v44_cash": 116438.0,
+        "margin": -964.0,
+        "delta_vs_baseline": -102.0,
+        "outcome": "LOSS"
+      }
+    }
+  }
+}

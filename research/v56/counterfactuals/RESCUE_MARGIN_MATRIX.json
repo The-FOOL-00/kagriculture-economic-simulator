@@ -1,0 +1,75 @@
+{
+  "benchmark": "v55_fresh_ladder_576_legs",
+  "incumbent": "V49_Meta_Fusion",
+  "engine": "kaggle-environments 1.32.7",
+  "losses": [
+    {
+      "loss_id": "L1",
+      "seed": 250617,
+      "seat": 0,
+      "opponent": "v44_economic_portfolio",
+      "opp_seat": 1,
+      "v49_terminal_cash": 115527.0,
+      "opp_terminal_cash": 116389.0,
+      "margin": -862.0,
+      "rescue_margin_cash": 863.0,
+      "rescue_physical_equivalent": "3.61 units of terminal Wool ($239/unit) or ~31% of capex differential ($2,748)",
+      "decisive_step": 697,
+      "feasibility": "High nominal closeness ($862 / $115,527 = 0.74%), but intervention induces market price decay and shed congestion casualties"
+    },
+    {
+      "loss_id": "L2",
+      "seed": 250617,
+      "seat": 1,
+      "opponent": "v44_economic_portfolio",
+      "opp_seat": 0,
+      "v49_terminal_cash": 115527.0,
+      "opp_terminal_cash": 116389.0,
+      "margin": -862.0,
+      "rescue_margin_cash": 863.0,
+      "rescue_physical_equivalent": "3.61 units of terminal Wool ($239/unit) or ~31% of capex differential ($2,748)",
+      "decisive_step": 697,
+      "feasibility": "High nominal closeness ($862 / $115,527 = 0.74%), but intervention induces market price decay and shed congestion casualties"
+    },
+    {
+      "loss_id": "L3",
+      "seed": 250621,
+      "seat": 0,
+      "opponent": "v44_economic_portfolio",
+      "opp_seat": 1,
+      "v49_terminal_cash": 116047.0,
+      "opp_terminal_cash": 116129.0,
+      "margin": -82.0,
+      "rescue_margin_cash": 83.0,
+      "rescue_physical_equivalent": "1 unit of Milk ($256/unit) or 1 unit of Wool ($133/unit) or 1 queue position shift at Step 697 ($144 value)",
+      "decisive_step": 697,
+      "feasibility": "Extremely micro rescue ($82 / $116,047 = 0.07%), but micro-sorting sell orders causes shed overflow casualties on near-wins"
+    },
+    {
+      "loss_id": "L4",
+      "seed": 250621,
+      "seat": 1,
+      "opponent": "v44_economic_portfolio",
+      "opp_seat": 0,
+      "v49_terminal_cash": 116047.0,
+      "opp_terminal_cash": 116129.0,
+      "margin": -82.0,
+      "rescue_margin_cash": 83.0,
+      "rescue_physical_equivalent": "1 unit of Milk ($256/unit) or 1 unit of Wool ($133/unit) or 1 queue position shift at Step 697 ($144 value)",
+      "decisive_step": 697,
+      "feasibility": "Extremely micro rescue ($82 / $116,047 = 0.07%), but micro-sorting sell orders causes shed overflow casualties on near-wins"
+    }
+  ],
+  "common_mechanism_matrix": {
+    "liquidity_timing": {"L1": false, "L2": false, "L3": false, "L4": false, "near_tie_support": 0},
+    "sale_ordering": {"L1": true, "L2": true, "L3": true, "L4": true, "near_tie_support": 2},
+    "final_liquidation": {"L1": true, "L2": true, "L3": true, "L4": true, "near_tie_support": 2},
+    "labor_timing": {"L1": false, "L2": false, "L3": false, "L4": false, "near_tie_support": 0},
+    "production_timing": {"L1": false, "L2": false, "L3": false, "L4": false, "near_tie_support": 0},
+    "opponent_pressure": {"L1": true, "L2": true, "L3": true, "L4": true, "near_tie_support": 2},
+    "animal_lifecycle": {"L1": false, "L2": false, "L3": false, "L4": false, "near_tie_support": 0},
+    "execution_divergence": {"L1": false, "L2": false, "L3": false, "L4": false, "near_tie_support": 0},
+    "market_price": {"L1": true, "L2": true, "L3": true, "L4": true, "near_tie_support": 2},
+    "terminal_runway": {"L1": true, "L2": true, "L3": true, "L4": true, "near_tie_support": 2}
+  }
+}

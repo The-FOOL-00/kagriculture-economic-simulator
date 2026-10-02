@@ -1,0 +1,137 @@
+{
+  "V49_Meta_Fusion": {
+    "candidate": "V49_Meta_Fusion",
+    "status": "INCUMBENT_FROZEN",
+    "sha256": "8CAFF63068BF68A34A9141D48F771D9007AFC0DFA792179A737ECCE919FBBD11",
+    "engine": "kaggle-environments 1.32.7",
+    "overall": {
+      "legs": 576,
+      "wins": 572,
+      "losses": 4,
+      "draws": 0,
+      "win_rate": 0.9930555555555556,
+      "mean_delta_vs_v49": 0.0,
+      "median_delta": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "elite_suite": {
+      "legs": 384,
+      "wins": 380,
+      "losses": 4,
+      "win_rate": 0.9895833333333334,
+      "mean_delta_vs_v49": 0.0,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "adversarial_suite": {
+      "legs": 192,
+      "wins": 192,
+      "losses": 0,
+      "win_rate": 1.0,
+      "mean_delta_vs_v49": 0.0,
+      "rescues": 0,
+      "casualties": 0
+    },
+    "per_opponent": {
+      "v44_economic_portfolio": {
+        "legs": 64,
+        "wins": 60,
+        "losses": 4,
+        "win_rate": 0.9375,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      },
+      "dmitrii_lb2800": {
+        "legs": 64,
+        "wins": 64,
+        "losses": 0,
+        "win_rate": 1.0,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      },
+      "tetsutani_pasture": {
+        "legs": 64,
+        "wins": 64,
+        "losses": 0,
+        "win_rate": 1.0,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      },
+      "kaitofukami_v48_3009": {
+        "legs": 64,
+        "wins": 64,
+        "losses": 0,
+        "win_rate": 1.0,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      },
+      "indarkarhana_top10": {
+        "legs": 64,
+        "wins": 64,
+        "losses": 0,
+        "win_rate": 1.0,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      },
+      "saiteja_mega_3000": {
+        "legs": 64,
+        "wins": 64,
+        "losses": 0,
+        "win_rate": 1.0,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      },
+      "DAIRY_FLOOD": {
+        "legs": 64,
+        "wins": 64,
+        "losses": 0,
+        "win_rate": 1.0,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      },
+      "WOOL_FLOOD": {
+        "legs": 64,
+        "wins": 64,
+        "losses": 0,
+        "win_rate": 1.0,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      },
+      "TERMINAL_DUMPER": {
+        "legs": 64,
+        "wins": 64,
+        "losses": 0,
+        "win_rate": 1.0,
+        "mean_delta_vs_v49": 0.0,
+        "rescues": 0,
+        "casualties": 0
+      }
+    }
+  },
+  "V56_Micro_Intervention_Audit": {
+    "tested_interventions": [
+      "Descending Price Market Sort from Step 696",
+      "Descending Price Market Sort from Step 600",
+      "Pre-Emptive Full Liquidation at Step 696",
+      "Step 0 Wheat Wash Suppression"
+    ],
+    "historical_losses_rescued": 0,
+    "historical_losses_worsened": 4,
+    "fresh_rescues": 0,
+    "fresh_casualties": 4,
+    "mean_delta_on_losses": -202.5,
+    "gate_a_zero_casualties_pass": false,
+    "promotion_eligibility": "INELIGIBLE_FAILED_GATE_A"
+  }
+}

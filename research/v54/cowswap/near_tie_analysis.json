@@ -1,0 +1,5126 @@
+{
+  "total_matches": 384,
+  "near_ties_count": 256,
+  "near_ties": [
+    {
+      "seed": 250700,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 77115.0,
+      "opp_cash": 76955.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250700,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 77115.0,
+      "opp_cash": 76955.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250701,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 90797.0,
+      "opp_cash": 90797.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250701,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 90797.0,
+      "opp_cash": 90797.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250702,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 110648.0,
+      "opp_cash": 110521.0,
+      "margin": 127.0,
+      "abs_margin": 127.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250702,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 110521.0,
+      "opp_cash": 110648.0,
+      "margin": -127.0,
+      "abs_margin": 127.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250703,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 80025.0,
+      "opp_cash": 80025.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250703,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 80025.0,
+      "opp_cash": 80025.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250704,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 78371.0,
+      "opp_cash": 78195.0,
+      "margin": 176.0,
+      "abs_margin": 176.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250704,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 78371.0,
+      "opp_cash": 78195.0,
+      "margin": 176.0,
+      "abs_margin": 176.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250705,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 78096.0,
+      "opp_cash": 78096.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250705,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 78096.0,
+      "opp_cash": 78096.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250706,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 81250.0,
+      "opp_cash": 81090.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250706,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 81250.0,
+      "opp_cash": 81090.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250707,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 116665.0,
+      "opp_cash": 116665.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250707,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 116665.0,
+      "opp_cash": 116665.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250708,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 122288.0,
+      "opp_cash": 122128.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250708,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 122288.0,
+      "opp_cash": 122128.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250709,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 87026.0,
+      "opp_cash": 87026.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250709,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 87026.0,
+      "opp_cash": 87026.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250710,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 117028.0,
+      "opp_cash": 116868.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250710,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 117028.0,
+      "opp_cash": 116868.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250711,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 73697.0,
+      "opp_cash": 73697.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250711,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 73697.0,
+      "opp_cash": 73697.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250712,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 73550.0,
+      "opp_cash": 73390.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250712,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 73550.0,
+      "opp_cash": 73390.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250713,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 94012.0,
+      "opp_cash": 93734.0,
+      "margin": 278.0,
+      "abs_margin": 278.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250713,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 93942.0,
+      "opp_cash": 93804.0,
+      "margin": 138.0,
+      "abs_margin": 138.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250714,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 83329.0,
+      "opp_cash": 83329.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250714,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 83329.0,
+      "opp_cash": 83329.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250715,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 118628.0,
+      "opp_cash": 118456.0,
+      "margin": 172.0,
+      "abs_margin": 172.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250715,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 118628.0,
+      "opp_cash": 118456.0,
+      "margin": 172.0,
+      "abs_margin": 172.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250716,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 145262.0,
+      "opp_cash": 145262.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250716,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 145262.0,
+      "opp_cash": 145262.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250717,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 72028.0,
+      "opp_cash": 72028.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250717,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 72028.0,
+      "opp_cash": 72028.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250718,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 111507.0,
+      "opp_cash": 111345.0,
+      "margin": 162.0,
+      "abs_margin": 162.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250718,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 111507.0,
+      "opp_cash": 111345.0,
+      "margin": 162.0,
+      "abs_margin": 162.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250719,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 95093.0,
+      "opp_cash": 95093.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250719,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 95093.0,
+      "opp_cash": 95093.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250720,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 88293.0,
+      "opp_cash": 88293.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250720,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 88293.0,
+      "opp_cash": 88293.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250721,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 70849.0,
+      "opp_cash": 70665.0,
+      "margin": 184.0,
+      "abs_margin": 184.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250721,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 70849.0,
+      "opp_cash": 70665.0,
+      "margin": 184.0,
+      "abs_margin": 184.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250722,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 141118.0,
+      "opp_cash": 141118.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250722,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 141118.0,
+      "opp_cash": 141118.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250723,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 145183.0,
+      "opp_cash": 145183.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250723,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 145183.0,
+      "opp_cash": 145183.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250724,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 96552.0,
+      "opp_cash": 96432.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250724,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 96552.0,
+      "opp_cash": 96432.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250725,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 146372.0,
+      "opp_cash": 146372.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250725,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 146372.0,
+      "opp_cash": 146372.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250726,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 110818.0,
+      "opp_cash": 110658.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250726,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 110818.0,
+      "opp_cash": 110658.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250727,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 90308.0,
+      "opp_cash": 90148.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250727,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 90308.0,
+      "opp_cash": 90148.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250728,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 74026.0,
+      "opp_cash": 73866.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250728,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 74026.0,
+      "opp_cash": 73866.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250729,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 113749.0,
+      "opp_cash": 113589.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250729,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 113749.0,
+      "opp_cash": 113589.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250730,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 144971.0,
+      "opp_cash": 144971.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250730,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 144971.0,
+      "opp_cash": 144971.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250731,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 85814.0,
+      "opp_cash": 85814.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250731,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 85814.0,
+      "opp_cash": 85814.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250732,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 120812.0,
+      "opp_cash": 120692.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250732,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 120812.0,
+      "opp_cash": 120692.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250733,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 91209.0,
+      "opp_cash": 91049.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250733,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 91209.0,
+      "opp_cash": 91049.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250734,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 99755.0,
+      "opp_cash": 99755.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250734,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 99755.0,
+      "opp_cash": 99755.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250735,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 118440.0,
+      "opp_cash": 118280.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250735,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 118440.0,
+      "opp_cash": 118280.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250736,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 73923.0,
+      "opp_cash": 73923.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250736,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 73923.0,
+      "opp_cash": 73923.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250737,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 110197.0,
+      "opp_cash": 110197.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250737,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 110197.0,
+      "opp_cash": 110197.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250738,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 91650.0,
+      "opp_cash": 91472.0,
+      "margin": 178.0,
+      "abs_margin": 178.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250738,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 91650.0,
+      "opp_cash": 91472.0,
+      "margin": 178.0,
+      "abs_margin": 178.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250739,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 72075.0,
+      "opp_cash": 71859.0,
+      "margin": 216.0,
+      "abs_margin": 216.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250739,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 72075.0,
+      "opp_cash": 71859.0,
+      "margin": 216.0,
+      "abs_margin": 216.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250740,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 91842.0,
+      "opp_cash": 91842.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250740,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 91842.0,
+      "opp_cash": 91842.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250741,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 141298.0,
+      "opp_cash": 141298.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250741,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 141298.0,
+      "opp_cash": 141298.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250742,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 107400.0,
+      "opp_cash": 107226.0,
+      "margin": 174.0,
+      "abs_margin": 174.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250742,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 107400.0,
+      "opp_cash": 107226.0,
+      "margin": 174.0,
+      "abs_margin": 174.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250743,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 108137.0,
+      "opp_cash": 107977.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250743,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 108137.0,
+      "opp_cash": 107977.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250744,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 83840.0,
+      "opp_cash": 83588.0,
+      "margin": 252.0,
+      "abs_margin": 252.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250744,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 83760.0,
+      "opp_cash": 83668.0,
+      "margin": 92.0,
+      "abs_margin": 92.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250745,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 96878.0,
+      "opp_cash": 96878.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250745,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 96878.0,
+      "opp_cash": 96878.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250746,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 133642.0,
+      "opp_cash": 133642.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250746,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 133642.0,
+      "opp_cash": 133642.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250747,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 105691.0,
+      "opp_cash": 105531.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250747,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 105691.0,
+      "opp_cash": 105531.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250749,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 103989.0,
+      "opp_cash": 103989.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250749,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 103989.0,
+      "opp_cash": 103989.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250750,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 75488.0,
+      "opp_cash": 75278.0,
+      "margin": 210.0,
+      "abs_margin": 210.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250750,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 75488.0,
+      "opp_cash": 75278.0,
+      "margin": 210.0,
+      "abs_margin": 210.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250751,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 88929.0,
+      "opp_cash": 88929.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250751,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 88929.0,
+      "opp_cash": 88929.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250752,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 71309.0,
+      "opp_cash": 71145.0,
+      "margin": 164.0,
+      "abs_margin": 164.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250752,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 71309.0,
+      "opp_cash": 71145.0,
+      "margin": 164.0,
+      "abs_margin": 164.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250753,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 105532.0,
+      "opp_cash": 105544.0,
+      "margin": -12.0,
+      "abs_margin": 12.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250753,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 105664.0,
+      "opp_cash": 105412.0,
+      "margin": 252.0,
+      "abs_margin": 252.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250754,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 67176.0,
+      "opp_cash": 67056.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250754,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 67176.0,
+      "opp_cash": 67056.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250755,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 100891.0,
+      "opp_cash": 100665.0,
+      "margin": 226.0,
+      "abs_margin": 226.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250755,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 100891.0,
+      "opp_cash": 100665.0,
+      "margin": 226.0,
+      "abs_margin": 226.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250756,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 125529.0,
+      "opp_cash": 125529.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250756,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 125529.0,
+      "opp_cash": 125529.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250757,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 148055.0,
+      "opp_cash": 148055.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250757,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 148055.0,
+      "opp_cash": 148055.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250758,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 101934.0,
+      "opp_cash": 101934.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250758,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 101934.0,
+      "opp_cash": 101934.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250759,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 95464.0,
+      "opp_cash": 95464.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250759,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 95464.0,
+      "opp_cash": 95464.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250760,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 103060.0,
+      "opp_cash": 102890.0,
+      "margin": 170.0,
+      "abs_margin": 170.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250760,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 103060.0,
+      "opp_cash": 102890.0,
+      "margin": 170.0,
+      "abs_margin": 170.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250761,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 88678.0,
+      "opp_cash": 88558.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250761,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 88678.0,
+      "opp_cash": 88558.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250762,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 73630.0,
+      "opp_cash": 73470.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250762,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 73630.0,
+      "opp_cash": 73470.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250763,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 101334.0,
+      "opp_cash": 101334.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250763,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 101334.0,
+      "opp_cash": 101334.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250764,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 116325.0,
+      "opp_cash": 116155.0,
+      "margin": 170.0,
+      "abs_margin": 170.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250764,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 116325.0,
+      "opp_cash": 116155.0,
+      "margin": 170.0,
+      "abs_margin": 170.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250765,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 94127.0,
+      "opp_cash": 93967.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250765,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 94127.0,
+      "opp_cash": 93967.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250766,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 106758.0,
+      "opp_cash": 106758.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250766,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 106758.0,
+      "opp_cash": 106758.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250767,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 101362.0,
+      "opp_cash": 101140.0,
+      "margin": 222.0,
+      "abs_margin": 222.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250767,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 101362.0,
+      "opp_cash": 101140.0,
+      "margin": 222.0,
+      "abs_margin": 222.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250768,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 114262.0,
+      "opp_cash": 114262.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250768,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 114262.0,
+      "opp_cash": 114262.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250769,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 120004.0,
+      "opp_cash": 119844.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250769,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 120004.0,
+      "opp_cash": 119844.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250770,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 108828.0,
+      "opp_cash": 108668.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250770,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 108828.0,
+      "opp_cash": 108668.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250771,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 80580.0,
+      "opp_cash": 80420.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250771,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 80580.0,
+      "opp_cash": 80420.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250772,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 74647.0,
+      "opp_cash": 74487.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250772,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 74647.0,
+      "opp_cash": 74487.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250773,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 121571.0,
+      "opp_cash": 121571.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250773,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 121571.0,
+      "opp_cash": 121571.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250774,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 93129.0,
+      "opp_cash": 93129.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250774,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 93129.0,
+      "opp_cash": 93129.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250775,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 123904.0,
+      "opp_cash": 124029.0,
+      "margin": -125.0,
+      "abs_margin": 125.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250775,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 124029.0,
+      "opp_cash": 123904.0,
+      "margin": 125.0,
+      "abs_margin": 125.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250776,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 60697.0,
+      "opp_cash": 60697.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250776,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 60697.0,
+      "opp_cash": 60697.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250777,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 95392.0,
+      "opp_cash": 95272.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250777,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 95392.0,
+      "opp_cash": 95272.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250778,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 104942.0,
+      "opp_cash": 104942.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250778,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 104942.0,
+      "opp_cash": 104942.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250780,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 72414.0,
+      "opp_cash": 72216.0,
+      "margin": 198.0,
+      "abs_margin": 198.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250780,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 72414.0,
+      "opp_cash": 72216.0,
+      "margin": 198.0,
+      "abs_margin": 198.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250781,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 63925.0,
+      "opp_cash": 63765.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250781,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 63925.0,
+      "opp_cash": 63765.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250782,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 107732.0,
+      "opp_cash": 107732.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250782,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 107732.0,
+      "opp_cash": 107732.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250783,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 98329.0,
+      "opp_cash": 98169.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250783,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 98329.0,
+      "opp_cash": 98169.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250784,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 77150.0,
+      "opp_cash": 76990.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250784,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 77150.0,
+      "opp_cash": 76990.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250785,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 69723.0,
+      "opp_cash": 69562.0,
+      "margin": 161.0,
+      "abs_margin": 161.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250785,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 69723.0,
+      "opp_cash": 69562.0,
+      "margin": 161.0,
+      "abs_margin": 161.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250786,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 82888.0,
+      "opp_cash": 83257.0,
+      "margin": -369.0,
+      "abs_margin": 369.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250787,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 73888.0,
+      "opp_cash": 73888.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250787,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 73888.0,
+      "opp_cash": 73888.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.32
+      }
+    },
+    {
+      "seed": 250788,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 116152.0,
+      "opp_cash": 116032.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250788,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 116152.0,
+      "opp_cash": 116032.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250790,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 90462.0,
+      "opp_cash": 90462.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250790,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 90462.0,
+      "opp_cash": 90462.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250791,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 97867.0,
+      "opp_cash": 97707.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250791,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 97867.0,
+      "opp_cash": 97707.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250793,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 109791.0,
+      "opp_cash": 109871.0,
+      "margin": -80.0,
+      "abs_margin": 80.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250793,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 109871.0,
+      "opp_cash": 109791.0,
+      "margin": 80.0,
+      "abs_margin": 80.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250794,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 84513.0,
+      "opp_cash": 84312.0,
+      "margin": 201.0,
+      "abs_margin": 201.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250794,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 84513.0,
+      "opp_cash": 84312.0,
+      "margin": 201.0,
+      "abs_margin": 201.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250795,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 113544.0,
+      "opp_cash": 113370.0,
+      "margin": 174.0,
+      "abs_margin": 174.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250795,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 113544.0,
+      "opp_cash": 113370.0,
+      "margin": 174.0,
+      "abs_margin": 174.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250796,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 83456.0,
+      "opp_cash": 83456.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250796,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 83456.0,
+      "opp_cash": 83456.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250797,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 97355.0,
+      "opp_cash": 97195.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250797,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 97355.0,
+      "opp_cash": 97195.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250798,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 103597.0,
+      "opp_cash": 103597.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250798,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 103597.0,
+      "opp_cash": 103597.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250799,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 92633.0,
+      "opp_cash": 92473.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250799,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 92633.0,
+      "opp_cash": 92473.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250800,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 86893.0,
+      "opp_cash": 86733.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250800,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 86893.0,
+      "opp_cash": 86733.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250801,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 93478.0,
+      "opp_cash": 93318.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250801,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 93478.0,
+      "opp_cash": 93318.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250802,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 123539.0,
+      "opp_cash": 123539.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250802,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 123539.0,
+      "opp_cash": 123539.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250803,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 136140.0,
+      "opp_cash": 136140.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250803,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 136140.0,
+      "opp_cash": 136140.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250804,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 99219.0,
+      "opp_cash": 99059.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250804,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 99219.0,
+      "opp_cash": 99059.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250805,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 103221.0,
+      "opp_cash": 103061.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250805,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 103221.0,
+      "opp_cash": 103061.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 52,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250806,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 83536.0,
+      "opp_cash": 83536.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250806,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 83536.0,
+      "opp_cash": 83536.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250807,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 63478.0,
+      "opp_cash": 63478.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250807,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 63478.0,
+      "opp_cash": 63478.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250808,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 99097.0,
+      "opp_cash": 99097.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250808,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 99097.0,
+      "opp_cash": 99097.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250809,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 88710.0,
+      "opp_cash": 88550.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250809,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 88710.0,
+      "opp_cash": 88550.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250810,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 99742.0,
+      "opp_cash": 99582.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250810,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 99742.0,
+      "opp_cash": 99582.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250811,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 93655.0,
+      "opp_cash": 93495.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250811,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 93655.0,
+      "opp_cash": 93495.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250812,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 112529.0,
+      "opp_cash": 112529.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250812,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 112529.0,
+      "opp_cash": 112529.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250813,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 117400.0,
+      "opp_cash": 117176.0,
+      "margin": 224.0,
+      "abs_margin": 224.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250813,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 117400.0,
+      "opp_cash": 117176.0,
+      "margin": 224.0,
+      "abs_margin": 224.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250814,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 66461.0,
+      "opp_cash": 66239.0,
+      "margin": 222.0,
+      "abs_margin": 222.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250814,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 66461.0,
+      "opp_cash": 66239.0,
+      "margin": 222.0,
+      "abs_margin": 222.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.26
+      }
+    },
+    {
+      "seed": 250815,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 74333.0,
+      "opp_cash": 74053.0,
+      "margin": 280.0,
+      "abs_margin": 280.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250815,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 74213.0,
+      "opp_cash": 74173.0,
+      "margin": 40.0,
+      "abs_margin": 40.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250816,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 82944.0,
+      "opp_cash": 82784.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250816,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 82944.0,
+      "opp_cash": 82784.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250817,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 102860.0,
+      "opp_cash": 102860.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250817,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 102860.0,
+      "opp_cash": 102860.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250818,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 92011.0,
+      "opp_cash": 91845.0,
+      "margin": 166.0,
+      "abs_margin": 166.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250818,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 92011.0,
+      "opp_cash": 91845.0,
+      "margin": 166.0,
+      "abs_margin": 166.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 51,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250819,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 106864.0,
+      "opp_cash": 106864.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250819,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 106864.0,
+      "opp_cash": 106864.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250820,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 113194.0,
+      "opp_cash": 113074.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250820,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 113194.0,
+      "opp_cash": 113074.0,
+      "margin": 120.0,
+      "abs_margin": 120.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 186,
+        "egg_price": 50,
+        "dairy_score": 14.120000000000001
+      }
+    },
+    {
+      "seed": 250821,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 128669.0,
+      "opp_cash": 128509.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250821,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 128669.0,
+      "opp_cash": 128509.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250822,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 78215.0,
+      "opp_cash": 78055.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250822,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 78215.0,
+      "opp_cash": 78055.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250823,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 115815.0,
+      "opp_cash": 115655.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250823,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 115815.0,
+      "opp_cash": 115655.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250824,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 109201.0,
+      "opp_cash": 109041.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250824,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 109201.0,
+      "opp_cash": 109041.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 8,
+        "milk_price": 205,
+        "egg_price": 50,
+        "dairy_score": 14.7
+      }
+    },
+    {
+      "seed": 250825,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 86044.0,
+      "opp_cash": 85884.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250825,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 86044.0,
+      "opp_cash": 85884.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "GOOSE@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 50,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250826,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 92669.0,
+      "opp_cash": 92509.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250826,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 92669.0,
+      "opp_cash": 92509.0,
+      "margin": 160.0,
+      "abs_margin": 160.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 183,
+        "egg_price": 52,
+        "dairy_score": 14.06
+      }
+    },
+    {
+      "seed": 250827,
+      "seat": 0,
+      "opponent": "V48",
+      "v49_cash": 126269.0,
+      "opp_cash": 126269.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250827,
+      "seat": 1,
+      "opponent": "V48",
+      "v49_cash": 126269.0,
+      "opp_cash": 126269.0,
+      "margin": 0.0,
+      "abs_margin": 0.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250722,
+      "seat": 0,
+      "opponent": "V44",
+      "v49_cash": 141034.0,
+      "opp_cash": 141053.0,
+      "margin": -19.0,
+      "abs_margin": 19.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250722,
+      "seat": 1,
+      "opponent": "V44",
+      "v49_cash": 141034.0,
+      "opp_cash": 141053.0,
+      "margin": -19.0,
+      "abs_margin": 19.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250729,
+      "seat": 0,
+      "opponent": "V44",
+      "v49_cash": 113824.0,
+      "opp_cash": 113776.0,
+      "margin": 48.0,
+      "abs_margin": 48.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250729,
+      "seat": 1,
+      "opponent": "V44",
+      "v49_cash": 113824.0,
+      "opp_cash": 113776.0,
+      "margin": 48.0,
+      "abs_margin": 48.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250730,
+      "seat": 0,
+      "opponent": "V44",
+      "v49_cash": 144126.0,
+      "opp_cash": 143835.0,
+      "margin": 291.0,
+      "abs_margin": 291.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250730,
+      "seat": 1,
+      "opponent": "V44",
+      "v49_cash": 144126.0,
+      "opp_cash": 143835.0,
+      "margin": 291.0,
+      "abs_margin": 291.0,
+      "won": true,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    },
+    {
+      "seed": 250735,
+      "seat": 0,
+      "opponent": "V44",
+      "v49_cash": 118227.0,
+      "opp_cash": 118304.0,
+      "margin": -77.0,
+      "abs_margin": 77.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250735,
+      "seat": 1,
+      "opponent": "V44",
+      "v49_cash": 118227.0,
+      "opp_cash": 118304.0,
+      "margin": -77.0,
+      "abs_margin": 77.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 205,
+        "egg_price": 51,
+        "dairy_score": 14.5
+      }
+    },
+    {
+      "seed": 250748,
+      "seat": 1,
+      "opponent": "V44",
+      "v49_cash": 128652.0,
+      "opp_cash": 128660.0,
+      "margin": -8.0,
+      "abs_margin": 8.0,
+      "won": false,
+      "is_near_tie": true,
+      "v49_cs_decision": "shoprule@150",
+      "opp_step150": {
+        "cows": 4,
+        "pastures": 6,
+        "hands": 7,
+        "milk_price": 207,
+        "egg_price": 50,
+        "dairy_score": 14.54
+      }
+    }
+  ]
+}

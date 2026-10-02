@@ -1,0 +1,1676 @@
+{
+  "250416": [
+    {
+      "step": 72,
+      "day": 3,
+      "hour": 0,
+      "new_shop": "BRUNCH_SPOT",
+      "all_shops": [
+        "BRUNCH_SPOT"
+      ],
+      "demand_commodities": [
+        "EGG",
+        "WHEAT",
+        "STRAWBERRY"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 647,
+      "remaining_ticks": 161,
+      "total_demand_per_commodity": 161,
+      "market_prices": {
+        "EGG": 50,
+        "WHEAT": 30,
+        "STRAWBERRY": 135
+      },
+      "market_inventory": {
+        "EGG": 9997,
+        "WHEAT": 9976,
+        "STRAWBERRY": 9997
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          3
+        ],
+        "hands": [],
+        "market": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 144,
+      "day": 6,
+      "hour": 0,
+      "new_shop": "FARMERS_MARKET",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "demand_commodities": [
+        "WHEAT",
+        "CARROT",
+        "TOMATO",
+        "STRAWBERRY"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 575,
+      "remaining_ticks": 143,
+      "total_demand_per_commodity": 143,
+      "market_prices": {
+        "WHEAT": 31,
+        "CARROT": 35,
+        "TOMATO": 61,
+        "STRAWBERRY": 161
+      },
+      "market_inventory": {
+        "WHEAT": 9960,
+        "CARROT": 9994,
+        "TOMATO": 9994,
+        "STRAWBERRY": 9976
+      },
+      "v49_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 216,
+      "day": 9,
+      "hour": 0,
+      "new_shop": "PET_CAFE",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE"
+      ],
+      "demand_commodities": [
+        "CARROT"
+      ],
+      "multiplier": 2,
+      "consumption_interval": 4,
+      "remaining_steps": 503,
+      "remaining_ticks": 125,
+      "total_demand_per_commodity": 250,
+      "market_prices": {
+        "CARROT": 37
+      },
+      "market_inventory": {
+        "CARROT": 9973
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 288,
+      "day": 12,
+      "hour": 0,
+      "new_shop": "ICE_CREAM_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 431,
+      "remaining_ticks": 107,
+      "total_demand_per_commodity": 107,
+      "market_prices": {
+        "STRAWBERRY": 205,
+        "MILK": 59,
+        "WHEAT": 41
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9898,
+        "MILK": 10048,
+        "WHEAT": 9751
+      },
+      "v49_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 360,
+      "day": 15,
+      "hour": 0,
+      "new_shop": "BAKERY",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "BAKERY"
+      ],
+      "demand_commodities": [
+        "EGG",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 359,
+      "remaining_ticks": 89,
+      "total_demand_per_commodity": 89,
+      "market_prices": {
+        "EGG": 54,
+        "WHEAT": 41
+      },
+      "market_inventory": {
+        "EGG": 9928,
+        "WHEAT": 9736
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          4
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 432,
+      "day": 18,
+      "hour": 0,
+      "new_shop": "FARMERS_MARKET",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET"
+      ],
+      "demand_commodities": [
+        "WHEAT",
+        "CARROT",
+        "TOMATO",
+        "STRAWBERRY"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 287,
+      "remaining_ticks": 71,
+      "total_demand_per_commodity": 71,
+      "market_prices": {
+        "WHEAT": 42,
+        "CARROT": 50,
+        "TOMATO": 71,
+        "STRAWBERRY": 218
+      },
+      "market_inventory": {
+        "WHEAT": 9699,
+        "CARROT": 9802,
+        "TOMATO": 9910,
+        "STRAWBERRY": 9864
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 504,
+      "day": 21,
+      "hour": 0,
+      "new_shop": "PIZZA_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "demand_commodities": [
+        "MILK",
+        "TOMATO",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 215,
+      "remaining_ticks": 53,
+      "total_demand_per_commodity": 53,
+      "market_prices": {
+        "MILK": 5,
+        "TOMATO": 75,
+        "WHEAT": 43
+      },
+      "market_inventory": {
+        "MILK": 10074,
+        "TOMATO": 9871,
+        "WHEAT": 9680
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 576,
+      "day": 24,
+      "hour": 0,
+      "new_shop": "ICE_CREAM_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PET_CAFE",
+        "ICE_CREAM_SHOP",
+        "BAKERY",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 143,
+      "remaining_ticks": 35,
+      "total_demand_per_commodity": 35,
+      "market_prices": {
+        "STRAWBERRY": 164,
+        "MILK": 28,
+        "WHEAT": 42
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9972,
+        "MILK": 10063,
+        "WHEAT": 9721
+      },
+      "v49_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            10
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    }
+  ],
+  "250436": [
+    {
+      "step": 72,
+      "day": 3,
+      "hour": 0,
+      "new_shop": "BRUNCH_SPOT",
+      "all_shops": [
+        "BRUNCH_SPOT"
+      ],
+      "demand_commodities": [
+        "EGG",
+        "WHEAT",
+        "STRAWBERRY"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 647,
+      "remaining_ticks": 161,
+      "total_demand_per_commodity": 161,
+      "market_prices": {
+        "EGG": 50,
+        "WHEAT": 30,
+        "STRAWBERRY": 135
+      },
+      "market_inventory": {
+        "EGG": 9997,
+        "WHEAT": 9976,
+        "STRAWBERRY": 9997
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          3
+        ],
+        "hands": [],
+        "market": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 144,
+      "day": 6,
+      "hour": 0,
+      "new_shop": "FARMERS_MARKET",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET"
+      ],
+      "demand_commodities": [
+        "WHEAT",
+        "CARROT",
+        "TOMATO",
+        "STRAWBERRY"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 575,
+      "remaining_ticks": 143,
+      "total_demand_per_commodity": 143,
+      "market_prices": {
+        "WHEAT": 31,
+        "CARROT": 35,
+        "TOMATO": 61,
+        "STRAWBERRY": 161
+      },
+      "market_inventory": {
+        "WHEAT": 9960,
+        "CARROT": 9994,
+        "TOMATO": 9994,
+        "STRAWBERRY": 9976
+      },
+      "v49_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 216,
+      "day": 9,
+      "hour": 0,
+      "new_shop": "PIZZA_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP"
+      ],
+      "demand_commodities": [
+        "MILK",
+        "TOMATO",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 503,
+      "remaining_ticks": 125,
+      "total_demand_per_commodity": 125,
+      "market_prices": {
+        "MILK": 129,
+        "TOMATO": 63,
+        "WHEAT": 36
+      },
+      "market_inventory": {
+        "MILK": 10015,
+        "TOMATO": 9973,
+        "WHEAT": 9883
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 288,
+      "day": 12,
+      "hour": 0,
+      "new_shop": "PIZZA_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "demand_commodities": [
+        "MILK",
+        "TOMATO",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 431,
+      "remaining_ticks": 107,
+      "total_demand_per_commodity": 107,
+      "market_prices": {
+        "MILK": 97,
+        "TOMATO": 68,
+        "WHEAT": 41
+      },
+      "market_inventory": {
+        "MILK": 10030,
+        "TOMATO": 9934,
+        "WHEAT": 9733
+      },
+      "v49_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 360,
+      "day": 15,
+      "hour": 0,
+      "new_shop": "SMOOTHIE_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 359,
+      "remaining_ticks": 89,
+      "total_demand_per_commodity": 89,
+      "market_prices": {
+        "STRAWBERRY": 220,
+        "MILK": 91
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9859,
+        "MILK": 10033
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          4
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 432,
+      "day": 18,
+      "hour": 0,
+      "new_shop": "ICE_CREAM_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 287,
+      "remaining_ticks": 71,
+      "total_demand_per_commodity": 71,
+      "market_prices": {
+        "STRAWBERRY": 211,
+        "MILK": 72,
+        "WHEAT": 43
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9882,
+        "MILK": 10042,
+        "WHEAT": 9661
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 504,
+      "day": 21,
+      "hour": 0,
+      "new_shop": "YARN_STORE",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE"
+      ],
+      "demand_commodities": [
+        "WOOL"
+      ],
+      "multiplier": 2,
+      "consumption_interval": 4,
+      "remaining_steps": 215,
+      "remaining_ticks": 53,
+      "total_demand_per_commodity": 106,
+      "market_prices": {
+        "WOOL": 1
+      },
+      "market_inventory": {
+        "WOOL": 10059
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 576,
+      "day": 24,
+      "hour": 0,
+      "new_shop": "SMOOTHIE_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "FARMERS_MARKET",
+        "PIZZA_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "ICE_CREAM_SHOP",
+        "YARN_STORE",
+        "SMOOTHIE_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 143,
+      "remaining_ticks": 35,
+      "total_demand_per_commodity": 35,
+      "market_prices": {
+        "STRAWBERRY": 147,
+        "MILK": 137
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9990,
+        "MILK": 10011
+      },
+      "v49_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            10
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    }
+  ],
+  "250439": [
+    {
+      "step": 72,
+      "day": 3,
+      "hour": 0,
+      "new_shop": "BRUNCH_SPOT",
+      "all_shops": [
+        "BRUNCH_SPOT"
+      ],
+      "demand_commodities": [
+        "EGG",
+        "WHEAT",
+        "STRAWBERRY"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 647,
+      "remaining_ticks": 161,
+      "total_demand_per_commodity": 161,
+      "market_prices": {
+        "EGG": 50,
+        "WHEAT": 30,
+        "STRAWBERRY": 135
+      },
+      "market_inventory": {
+        "EGG": 9997,
+        "WHEAT": 9976,
+        "STRAWBERRY": 9997
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          3
+        ],
+        "hands": [],
+        "market": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 144,
+      "day": 6,
+      "hour": 0,
+      "new_shop": "BAKERY",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY"
+      ],
+      "demand_commodities": [
+        "EGG",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 575,
+      "remaining_ticks": 143,
+      "total_demand_per_commodity": 143,
+      "market_prices": {
+        "EGG": 51,
+        "WHEAT": 31
+      },
+      "market_inventory": {
+        "EGG": 9976,
+        "WHEAT": 9960
+      },
+      "v49_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 216,
+      "day": 9,
+      "hour": 0,
+      "new_shop": "ICE_CREAM_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "ICE_CREAM_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 503,
+      "remaining_ticks": 125,
+      "total_demand_per_commodity": 125,
+      "market_prices": {
+        "STRAWBERRY": 176,
+        "MILK": 129,
+        "WHEAT": 36
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9955,
+        "MILK": 10015,
+        "WHEAT": 9883
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 288,
+      "day": 12,
+      "hour": 0,
+      "new_shop": "ICE_CREAM_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 431,
+      "remaining_ticks": 107,
+      "total_demand_per_commodity": 107,
+      "market_prices": {
+        "STRAWBERRY": 197,
+        "MILK": 97,
+        "WHEAT": 41
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9916,
+        "MILK": 10030,
+        "WHEAT": 9732
+      },
+      "v49_action": {
+        "farmer": [
+          "NORTH"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "FERTILIZER",
+            17
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 360,
+      "day": 15,
+      "hour": 0,
+      "new_shop": "PIZZA_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "demand_commodities": [
+        "MILK",
+        "TOMATO",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 359,
+      "remaining_ticks": 89,
+      "total_demand_per_commodity": 89,
+      "market_prices": {
+        "MILK": 91,
+        "TOMATO": 62,
+        "WHEAT": 42
+      },
+      "market_inventory": {
+        "MILK": 10033,
+        "TOMATO": 9985,
+        "WHEAT": 9699
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          4
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 432,
+      "day": 18,
+      "hour": 0,
+      "new_shop": "SMOOTHIE_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 287,
+      "remaining_ticks": 71,
+      "total_demand_per_commodity": 71,
+      "market_prices": {
+        "STRAWBERRY": 211,
+        "MILK": 72
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9882,
+        "MILK": 10042
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          2
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 504,
+      "day": 21,
+      "hour": 0,
+      "new_shop": "SMOOTHIE_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP"
+      ],
+      "demand_commodities": [
+        "STRAWBERRY",
+        "MILK"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 215,
+      "remaining_ticks": 53,
+      "total_demand_per_commodity": 53,
+      "market_prices": {
+        "STRAWBERRY": 193,
+        "MILK": 84
+      },
+      "market_inventory": {
+        "STRAWBERRY": 9925,
+        "MILK": 10036
+      },
+      "v49_action": {
+        "farmer": [
+          "PICKUP",
+          "WHEAT",
+          5
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "MILK",
+            2
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    },
+    {
+      "step": 576,
+      "day": 24,
+      "hour": 0,
+      "new_shop": "PIZZA_SHOP",
+      "all_shops": [
+        "BRUNCH_SPOT",
+        "BAKERY",
+        "ICE_CREAM_SHOP",
+        "ICE_CREAM_SHOP",
+        "PIZZA_SHOP",
+        "SMOOTHIE_SHOP",
+        "SMOOTHIE_SHOP",
+        "PIZZA_SHOP"
+      ],
+      "demand_commodities": [
+        "MILK",
+        "TOMATO",
+        "WHEAT"
+      ],
+      "multiplier": 1,
+      "consumption_interval": 4,
+      "remaining_steps": 143,
+      "remaining_ticks": 35,
+      "total_demand_per_commodity": 35,
+      "market_prices": {
+        "MILK": 175,
+        "TOMATO": 69,
+        "WHEAT": 44
+      },
+      "market_inventory": {
+        "MILK": 9997,
+        "TOMATO": 9922,
+        "WHEAT": 9621
+      },
+      "v49_action": {
+        "farmer": [
+          "WEST"
+        ],
+        "hands": [],
+        "market": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            10
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      }
+    }
+  ]
+}
