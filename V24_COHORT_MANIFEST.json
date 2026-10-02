@@ -1,0 +1,42 @@
+{
+  "phase": "V24",
+  "title": "Live Ladder Meta X-Ray & Competitive Backbone Challenger",
+  "createdAtUTC": "2026-09-21T05:45:00Z",
+  "engineVersion": "1.32.7",
+  "cohorts": {
+    "v24_pilot_cohort": {
+      "seed_start": 249400,
+      "seed_end": 249409,
+      "num_seeds": 10,
+      "seats_per_seed": 2,
+      "total_matches": 20,
+      "status": "RESERVED_FRESH"
+    },
+    "v24_development_cohort": {
+      "seed_start": 249410,
+      "seed_end": 249429,
+      "num_seeds": 20,
+      "seats_per_seed": 2,
+      "total_matches": 40,
+      "status": "RESERVED_FRESH"
+    },
+    "v24_reserve_untouched_from": 249430
+  },
+  "protected_historical_cohorts": {
+    "phase017_consumed": [249286, 249295],
+    "phase018_consumed": [249296, 249335],
+    "phase019_consumed": [249336, 249355],
+    "phase020_consumed": [249356, 249375],
+    "phase021_consumed": [249376, 249376],
+    "phase022_consumed": [249376, 249395]
+  },
+  "protected_virgin_holdouts": {
+    "holdout_340xxx": [340050, 340199],
+    "holdout_214xxx": [214200, 214249]
+  },
+  "retired_contaminated_cohorts": {
+    "exp_aec_004_retired": [340300, 340349],
+    "audit_2_audited_benchmark": [50100, 50149],
+    "phase3_census_contaminated": [50150, 50199]
+  }
+}
