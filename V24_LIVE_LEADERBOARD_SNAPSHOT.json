@@ -1,0 +1,5117 @@
+{
+  "competition": "kaggriculture",
+  "competitionId": 147734,
+  "utcTimestamp": "2026-09-21T05:35:19.811441+00:00",
+  "engineVersion": "1.32.7",
+  "v22r1Submission": {
+    "submissionId": 56401915,
+    "teamName": "Eldritch",
+    "teamId": 16657198,
+    "currentScore": 1988.2,
+    "totalEpisodes": 125,
+    "episodes": [
+      {
+        "id": 111500566,
+        "createTime": "2026-09-21T05:17:50.8600371Z",
+        "endTime": "2026-09-21T05:23:21.4111824Z",
+        "state": "completed",
+        "rewards": [
+          90395.0,
+          90158.0
+        ],
+        "teams": [
+          "Takuto Inoue",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56406820,
+          56401915
+        ]
+      },
+      {
+        "id": 111494822,
+        "createTime": "2026-09-21T04:57:51.1680326Z",
+        "endTime": "2026-09-21T05:02:10.8016838Z",
+        "state": "completed",
+        "rewards": [
+          141771.0,
+          141650.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Tavuk Master"
+        ],
+        "submissionIds": [
+          56401915,
+          56279440
+        ]
+      },
+      {
+        "id": 111489007,
+        "createTime": "2026-09-21T04:37:57.9164949Z",
+        "endTime": "2026-09-21T04:43:09.366937Z",
+        "state": "completed",
+        "rewards": [
+          103027.0,
+          103314.0
+        ],
+        "teams": [
+          "Eldritch",
+          "kglctf"
+        ],
+        "submissionIds": [
+          56401915,
+          56408898
+        ]
+      },
+      {
+        "id": 111488047,
+        "createTime": "2026-09-21T04:33:52.2633065Z",
+        "endTime": "2026-09-21T04:40:11.0557991Z",
+        "state": "completed",
+        "rewards": [
+          120459.0,
+          120039.0
+        ],
+        "teams": [
+          "TY0912",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56304129,
+          56401915
+        ]
+      },
+      {
+        "id": 111483987,
+        "createTime": "2026-09-21T04:17:51.6646973Z",
+        "endTime": "2026-09-21T04:23:55.9565725Z",
+        "state": "completed",
+        "rewards": [
+          84385.0,
+          84646.0
+        ],
+        "teams": [
+          "Harshith Kumar",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56283537,
+          56401915
+        ]
+      },
+      {
+        "id": 111483813,
+        "createTime": "2026-09-21T04:17:51.362503Z",
+        "endTime": "2026-09-21T04:21:46.6438055Z",
+        "state": "completed",
+        "rewards": [
+          113292.0,
+          110876.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Legend Brothers"
+        ],
+        "submissionIds": [
+          56401915,
+          56329428
+        ]
+      },
+      {
+        "id": 111478205,
+        "createTime": "2026-09-21T03:57:51.0343744Z",
+        "endTime": "2026-09-21T04:05:44.2947457Z",
+        "state": "completed",
+        "rewards": [
+          119407.0,
+          115906.0
+        ],
+        "teams": [
+          "Eldritch",
+          "minghao mei"
+        ],
+        "submissionIds": [
+          56401915,
+          56270060
+        ]
+      },
+      {
+        "id": 111476273,
+        "createTime": "2026-09-21T03:53:49.6938533Z",
+        "endTime": "2026-09-21T03:59:36.4960862Z",
+        "state": "completed",
+        "rewards": [
+          86584.0,
+          85324.0
+        ],
+        "teams": [
+          "linhaiy",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56413310,
+          56401915
+        ]
+      },
+      {
+        "id": 111476145,
+        "createTime": "2026-09-21T03:49:51.7156922Z",
+        "endTime": "2026-09-21T03:58:06.1679173Z",
+        "state": "completed",
+        "rewards": [
+          77453.0,
+          76085.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Setu Chokshi"
+        ],
+        "submissionIds": [
+          56401915,
+          56265722
+        ]
+      },
+      {
+        "id": 111472754,
+        "createTime": "2026-09-21T03:37:50.9064194Z",
+        "endTime": "2026-09-21T03:41:45.0867915Z",
+        "state": "completed",
+        "rewards": [
+          86820.0,
+          85952.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Taimo"
+        ],
+        "submissionIds": [
+          56401915,
+          56281529
+        ]
+      },
+      {
+        "id": 111470041,
+        "createTime": "2026-09-21T03:29:51.5284073Z",
+        "endTime": "2026-09-21T03:35:52.7387916Z",
+        "state": "completed",
+        "rewards": [
+          99726.0,
+          101704.0
+        ],
+        "teams": [
+          "Eldritch",
+          "BobtheBot369"
+        ],
+        "submissionIds": [
+          56401915,
+          56411079
+        ]
+      },
+      {
+        "id": 111470162,
+        "createTime": "2026-09-21T03:29:51.7353213Z",
+        "endTime": "2026-09-21T03:33:33.5611882Z",
+        "state": "completed",
+        "rewards": [
+          92414.0,
+          93017.0
+        ],
+        "teams": [
+          "gachichan",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56289088,
+          56401915
+        ]
+      },
+      {
+        "id": 111468450,
+        "createTime": "2026-09-21T03:21:52.1108228Z",
+        "endTime": "2026-09-21T03:26:48.5482675Z",
+        "state": "completed",
+        "rewards": [
+          103127.0,
+          103223.0
+        ],
+        "teams": [
+          "Eldritch",
+          "lllleeeo"
+        ],
+        "submissionIds": [
+          56401915,
+          56284477
+        ]
+      },
+      {
+        "id": 111463651,
+        "createTime": "2026-09-21T03:06:00.8016719Z",
+        "endTime": "2026-09-21T03:12:16.9753156Z",
+        "state": "completed",
+        "rewards": [
+          130673.0,
+          129618.0
+        ],
+        "teams": [
+          "Izzoudine Mohamed KANTA",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56404120,
+          56401915
+        ]
+      },
+      {
+        "id": 111457265,
+        "createTime": "2026-09-21T02:41:52.0032926Z",
+        "endTime": "2026-09-21T02:45:47.1318509Z",
+        "state": "completed",
+        "rewards": [
+          65514.0,
+          64181.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Alapati Ramakrishna"
+        ],
+        "submissionIds": [
+          56401915,
+          56389468
+        ]
+      },
+      {
+        "id": 111451668,
+        "createTime": "2026-09-21T02:21:51.6171039Z",
+        "endTime": "2026-09-21T02:27:41.0376685Z",
+        "state": "completed",
+        "rewards": [
+          90608.0,
+          89996.0
+        ],
+        "teams": [
+          "Eldritch",
+          "BEIKE YAN"
+        ],
+        "submissionIds": [
+          56401915,
+          56272352
+        ]
+      },
+      {
+        "id": 111446099,
+        "createTime": "2026-09-21T02:01:51.5062391Z",
+        "endTime": "2026-09-21T02:05:18.8644321Z",
+        "state": "completed",
+        "rewards": [
+          73799.0,
+          72960.0
+        ],
+        "teams": [
+          "FlameZywoo",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56324207,
+          56401915
+        ]
+      },
+      {
+        "id": 111443783,
+        "createTime": "2026-09-21T01:53:51.0085257Z",
+        "endTime": "2026-09-21T01:59:40.5215325Z",
+        "state": "completed",
+        "rewards": [
+          74295.0,
+          75004.0
+        ],
+        "teams": [
+          "zeel vavliya",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56378471,
+          56401915
+        ]
+      },
+      {
+        "id": 111438274,
+        "createTime": "2026-09-21T01:33:50.796337Z",
+        "endTime": "2026-09-21T01:41:27.4529454Z",
+        "state": "completed",
+        "rewards": [
+          86123.0,
+          86149.0
+        ],
+        "teams": [
+          "Eldritch",
+          "dpquoc"
+        ],
+        "submissionIds": [
+          56401915,
+          56299992
+        ]
+      },
+      {
+        "id": 111432891,
+        "createTime": "2026-09-21T01:13:51.3550038Z",
+        "endTime": "2026-09-21T01:20:49.4584261Z",
+        "state": "completed",
+        "rewards": [
+          135379.0,
+          134078.0
+        ],
+        "teams": [
+          "Setu Chokshi",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56266954,
+          56401915
+        ]
+      },
+      {
+        "id": 111432728,
+        "createTime": "2026-09-21T01:13:51.0083114Z",
+        "endTime": "2026-09-21T01:18:35.8042546Z",
+        "state": "completed",
+        "rewards": [
+          127948.0,
+          127641.0
+        ],
+        "teams": [
+          "MilkaDVP",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56309878,
+          56401915
+        ]
+      },
+      {
+        "id": 111429400,
+        "createTime": "2026-09-21T01:01:55.9396144Z",
+        "endTime": "2026-09-21T01:08:16.1776761Z",
+        "state": "completed",
+        "rewards": [
+          103724.0,
+          101733.0
+        ],
+        "teams": [
+          "satokato",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56342792,
+          56401915
+        ]
+      },
+      {
+        "id": 111427130,
+        "createTime": "2026-09-21T00:53:50.8699911Z",
+        "endTime": "2026-09-21T00:58:53.7502585Z",
+        "state": "completed",
+        "rewards": [
+          111149.0,
+          111942.0
+        ],
+        "teams": [
+          "WBF_USA_NYC",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56239079,
+          56401915
+        ]
+      },
+      {
+        "id": 111424827,
+        "createTime": "2026-09-21T00:45:52.352734Z",
+        "endTime": "2026-09-21T00:48:59.4734041Z",
+        "state": "completed",
+        "rewards": [
+          94995.0,
+          96960.0
+        ],
+        "teams": [
+          "JinchengZhang1",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56273121,
+          56401915
+        ]
+      },
+      {
+        "id": 111422865,
+        "createTime": "2026-09-21T00:37:51.4216912Z",
+        "endTime": "2026-09-21T00:43:53.8936935Z",
+        "state": "completed",
+        "rewards": [
+          110590.0,
+          108967.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Tomohiro Nagai"
+        ],
+        "submissionIds": [
+          56401915,
+          56280958
+        ]
+      },
+      {
+        "id": 111422786,
+        "createTime": "2026-09-21T00:37:51.315727Z",
+        "endTime": "2026-09-21T00:43:30.9410278Z",
+        "state": "completed",
+        "rewards": [
+          121590.0,
+          121795.0
+        ],
+        "teams": [
+          "llllllc666",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56381896,
+          56401915
+        ]
+      },
+      {
+        "id": 111418055,
+        "createTime": "2026-09-21T00:21:50.4294925Z",
+        "endTime": "2026-09-21T00:25:26.3935327Z",
+        "state": "completed",
+        "rewards": [
+          78515.0,
+          74861.0
+        ],
+        "teams": [
+          "Gobi Elangovan",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56391022,
+          56401915
+        ]
+      },
+      {
+        "id": 111415320,
+        "createTime": "2026-09-21T00:13:49.7799559Z",
+        "endTime": "2026-09-21T00:18:45.6893746Z",
+        "state": "completed",
+        "rewards": [
+          79145.0,
+          79163.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Alperen Söylen"
+        ],
+        "submissionIds": [
+          56401915,
+          56407561
+        ]
+      },
+      {
+        "id": 111416029,
+        "createTime": "2026-09-21T00:13:51.0153977Z",
+        "endTime": "2026-09-21T00:17:50.3088373Z",
+        "state": "completed",
+        "rewards": [
+          78142.0,
+          81213.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Zhou Hengyu"
+        ],
+        "submissionIds": [
+          56401915,
+          56389758
+        ]
+      },
+      {
+        "id": 111411282,
+        "createTime": "2026-09-20T23:57:50.709478Z",
+        "endTime": "2026-09-21T00:05:07.1144797Z",
+        "state": "completed",
+        "rewards": [
+          100180.0,
+          100484.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Arnav Goel"
+        ],
+        "submissionIds": [
+          56401915,
+          56306179
+        ]
+      },
+      {
+        "id": 111407751,
+        "createTime": "2026-09-20T23:45:50.8165016Z",
+        "endTime": "2026-09-20T23:50:33.9115768Z",
+        "state": "completed",
+        "rewards": [
+          122037.0,
+          122839.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Seho.Connect"
+        ],
+        "submissionIds": [
+          56401915,
+          56405245
+        ]
+      },
+      {
+        "id": 111405995,
+        "createTime": "2026-09-20T23:37:50.241556Z",
+        "endTime": "2026-09-20T23:42:13.0076521Z",
+        "state": "completed",
+        "rewards": [
+          109397.0,
+          109488.0
+        ],
+        "teams": [
+          "king huang",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56310098,
+          56401915
+        ]
+      },
+      {
+        "id": 111404927,
+        "createTime": "2026-09-20T23:33:50.9028589Z",
+        "endTime": "2026-09-20T23:38:42.2758459Z",
+        "state": "completed",
+        "rewards": [
+          86357.0,
+          87146.0
+        ],
+        "teams": [
+          "Eldritch",
+          "feles99"
+        ],
+        "submissionIds": [
+          56401915,
+          56307853
+        ]
+      },
+      {
+        "id": 111400403,
+        "createTime": "2026-09-20T23:17:50.5585974Z",
+        "endTime": "2026-09-20T23:21:27.468156Z",
+        "state": "completed",
+        "rewards": [
+          87268.0,
+          86255.0
+        ],
+        "teams": [
+          "YBEJlKA",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56307550,
+          56401915
+        ]
+      },
+      {
+        "id": 111397659,
+        "createTime": "2026-09-20T23:09:50.3171959Z",
+        "endTime": "2026-09-20T23:15:56.9268455Z",
+        "state": "completed",
+        "rewards": [
+          115100.0,
+          117126.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Duck Typing"
+        ],
+        "submissionIds": [
+          56401915,
+          56406081
+        ]
+      },
+      {
+        "id": 111395966,
+        "createTime": "2026-09-20T23:01:53.3647159Z",
+        "endTime": "2026-09-20T23:04:47.1947215Z",
+        "state": "completed",
+        "rewards": [
+          152256.0,
+          150678.0
+        ],
+        "teams": [
+          "Eldritch",
+          "yy"
+        ],
+        "submissionIds": [
+          56401915,
+          56274025
+        ]
+      },
+      {
+        "id": 111391137,
+        "createTime": "2026-09-20T22:45:50.7520283Z",
+        "endTime": "2026-09-20T22:49:31.0707692Z",
+        "state": "completed",
+        "rewards": [
+          91635.0,
+          94457.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Guilherme Volpe"
+        ],
+        "submissionIds": [
+          56401915,
+          56404684
+        ]
+      },
+      {
+        "id": 111388117,
+        "createTime": "2026-09-20T22:33:51.1141364Z",
+        "endTime": "2026-09-20T22:38:55.5859571Z",
+        "state": "completed",
+        "rewards": [
+          85547.0,
+          87060.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Hubillionaire"
+        ],
+        "submissionIds": [
+          56401915,
+          56296744
+        ]
+      },
+      {
+        "id": 111382834,
+        "createTime": "2026-09-20T22:13:50.6773402Z",
+        "endTime": "2026-09-20T22:21:40.8858285Z",
+        "state": "completed",
+        "rewards": [
+          117304.0,
+          117288.0
+        ],
+        "teams": [
+          "Anay Garodia",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56397549,
+          56401915
+        ]
+      },
+      {
+        "id": 111382764,
+        "createTime": "2026-09-20T22:13:50.5627911Z",
+        "endTime": "2026-09-20T22:17:38.7278246Z",
+        "state": "completed",
+        "rewards": [
+          124932.0,
+          124978.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Hubillionaire"
+        ],
+        "submissionIds": [
+          56401915,
+          56296744
+        ]
+      },
+      {
+        "id": 111383075,
+        "createTime": "2026-09-20T22:13:51.0055664Z",
+        "endTime": "2026-09-20T22:16:55.608828Z",
+        "state": "completed",
+        "rewards": [
+          119207.0,
+          117396.0
+        ],
+        "teams": [
+          "孤寡少年",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56400979,
+          56401915
+        ]
+      },
+      {
+        "id": 111381475,
+        "createTime": "2026-09-20T22:09:50.9548841Z",
+        "endTime": "2026-09-20T22:16:14.2530923Z",
+        "state": "completed",
+        "rewards": [
+          102412.0,
+          100216.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Ci Zhu"
+        ],
+        "submissionIds": [
+          56401915,
+          56373762
+        ]
+      },
+      {
+        "id": 111380288,
+        "createTime": "2026-09-20T22:05:50.7119558Z",
+        "endTime": "2026-09-20T22:11:22.8522997Z",
+        "state": "completed",
+        "rewards": [
+          121150.0,
+          120475.0
+        ],
+        "teams": [
+          "Ali Alghaithi",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56286136,
+          56401915
+        ]
+      },
+      {
+        "id": 111379187,
+        "createTime": "2026-09-20T22:01:52.6049001Z",
+        "endTime": "2026-09-20T22:07:57.2474585Z",
+        "state": "completed",
+        "rewards": [
+          57903.0,
+          57693.0
+        ],
+        "teams": [
+          "Zhongkai Shangguan",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56373478,
+          56401915
+        ]
+      },
+      {
+        "id": 111378084,
+        "createTime": "2026-09-20T21:57:50.1430964Z",
+        "endTime": "2026-09-20T22:01:50.0714227Z",
+        "state": "completed",
+        "rewards": [
+          91141.0,
+          90875.0
+        ],
+        "teams": [
+          "Zhongkai Shangguan",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56373478,
+          56401915
+        ]
+      },
+      {
+        "id": 111376981,
+        "createTime": "2026-09-20T21:53:50.3472793Z",
+        "endTime": "2026-09-20T22:00:58.8368102Z",
+        "state": "completed",
+        "rewards": [
+          87514.0,
+          89147.0
+        ],
+        "teams": [
+          "kamranahmmed",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56295690,
+          56401915
+        ]
+      },
+      {
+        "id": 111375868,
+        "createTime": "2026-09-20T21:49:50.5328735Z",
+        "endTime": "2026-09-20T21:56:11.2306316Z",
+        "state": "completed",
+        "rewards": [
+          85600.0,
+          84766.0
+        ],
+        "teams": [
+          "Kundan Bhaskar",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56313885,
+          56401915
+        ]
+      },
+      {
+        "id": 111374752,
+        "createTime": "2026-09-20T21:45:50.6249323Z",
+        "endTime": "2026-09-20T21:51:22.2980863Z",
+        "state": "completed",
+        "rewards": [
+          121383.0,
+          121635.0
+        ],
+        "teams": [
+          "East Kowloon",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56306663,
+          56401915
+        ]
+      },
+      {
+        "id": 111373636,
+        "createTime": "2026-09-20T21:41:51.010914Z",
+        "endTime": "2026-09-20T21:48:41.2983654Z",
+        "state": "completed",
+        "rewards": [
+          63291.0,
+          63952.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Amyel21"
+        ],
+        "submissionIds": [
+          56401915,
+          56311461
+        ]
+      },
+      {
+        "id": 111372546,
+        "createTime": "2026-09-20T21:37:50.805062Z",
+        "endTime": "2026-09-20T21:45:44.4507194Z",
+        "state": "completed",
+        "rewards": [
+          91300.0,
+          91002.0
+        ],
+        "teams": [
+          "9Hash",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56295007,
+          56401915
+        ]
+      },
+      {
+        "id": 111371442,
+        "createTime": "2026-09-20T21:33:50.7480712Z",
+        "endTime": "2026-09-20T21:41:54.8564053Z",
+        "state": "completed",
+        "rewards": [
+          109279.0,
+          108197.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Leroll"
+        ],
+        "submissionIds": [
+          56401915,
+          56400424
+        ]
+      },
+      {
+        "id": 111370186,
+        "createTime": "2026-09-20T21:29:50.261996Z",
+        "endTime": "2026-09-20T21:35:17.3385076Z",
+        "state": "completed",
+        "rewards": [
+          70196.0,
+          70487.0
+        ],
+        "teams": [
+          "Eldritch",
+          "mraz1006"
+        ],
+        "submissionIds": [
+          56401915,
+          56309608
+        ]
+      },
+      {
+        "id": 111369217,
+        "createTime": "2026-09-20T21:25:51.2399188Z",
+        "endTime": "2026-09-20T21:33:25.9485646Z",
+        "state": "completed",
+        "rewards": [
+          70223.0,
+          71227.0
+        ],
+        "teams": [
+          "Eldritch",
+          "shoryakumar mishra"
+        ],
+        "submissionIds": [
+          56401915,
+          56400006
+        ]
+      },
+      {
+        "id": 111368104,
+        "createTime": "2026-09-20T21:21:50.8359015Z",
+        "endTime": "2026-09-20T21:26:55.7619959Z",
+        "state": "completed",
+        "rewards": [
+          73863.0,
+          74002.0
+        ],
+        "teams": [
+          "zhyphirus",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56268121,
+          56401915
+        ]
+      },
+      {
+        "id": 111367000,
+        "createTime": "2026-09-20T21:17:50.9068613Z",
+        "endTime": "2026-09-20T21:21:53.171349Z",
+        "state": "completed",
+        "rewards": [
+          92031.0,
+          92727.0
+        ],
+        "teams": [
+          "TY0912",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56304129,
+          56401915
+        ]
+      },
+      {
+        "id": 111365894,
+        "createTime": "2026-09-20T21:13:50.6320253Z",
+        "endTime": "2026-09-20T21:20:05.3158719Z",
+        "state": "completed",
+        "rewards": [
+          119686.0,
+          119404.0
+        ],
+        "teams": [
+          "alessandrozonta",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56303477,
+          56401915
+        ]
+      },
+      {
+        "id": 111364793,
+        "createTime": "2026-09-20T21:09:50.8141133Z",
+        "endTime": "2026-09-20T21:15:07.8195187Z",
+        "state": "completed",
+        "rewards": [
+          139929.0,
+          140217.0
+        ],
+        "teams": [
+          "Eldritch",
+          "alessandrozonta"
+        ],
+        "submissionIds": [
+          56401915,
+          56325386
+        ]
+      },
+      {
+        "id": 111363685,
+        "createTime": "2026-09-20T21:05:51.8255223Z",
+        "endTime": "2026-09-20T21:12:07.2010067Z",
+        "state": "completed",
+        "rewards": [
+          69349.0,
+          65408.0
+        ],
+        "teams": [
+          "Eldritch",
+          "MAOSEN "
+        ],
+        "submissionIds": [
+          56401915,
+          56290166
+        ]
+      },
+      {
+        "id": 111362568,
+        "createTime": "2026-09-20T21:01:50.6262504Z",
+        "endTime": "2026-09-20T21:07:52.9335934Z",
+        "state": "completed",
+        "rewards": [
+          62621.0,
+          66349.0
+        ],
+        "teams": [
+          "Eldritch",
+          "infamemconculcemus"
+        ],
+        "submissionIds": [
+          56401915,
+          56394807
+        ]
+      },
+      {
+        "id": 111361463,
+        "createTime": "2026-09-20T20:57:51.0244413Z",
+        "endTime": "2026-09-20T21:02:07.5301805Z",
+        "state": "completed",
+        "rewards": [
+          109347.0,
+          109514.0
+        ],
+        "teams": [
+          "Hubillionaire",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56297833,
+          56401915
+        ]
+      },
+      {
+        "id": 111360350,
+        "createTime": "2026-09-20T20:53:52.0187356Z",
+        "endTime": "2026-09-20T20:59:24.6832441Z",
+        "state": "completed",
+        "rewards": [
+          133369.0,
+          133903.0
+        ],
+        "teams": [
+          "Muhammad Aashir Irshad",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56314155,
+          56401915
+        ]
+      },
+      {
+        "id": 111359940,
+        "createTime": "2026-09-20T20:49:53.846695Z",
+        "endTime": "2026-09-20T20:54:22.8389809Z",
+        "state": "completed",
+        "rewards": [
+          96489.0,
+          95421.0
+        ],
+        "teams": [
+          "Ayush Gupta #2",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56295730,
+          56401915
+        ]
+      },
+      {
+        "id": 111359232,
+        "createTime": "2026-09-20T20:49:52.4156715Z",
+        "endTime": "2026-09-20T20:53:14.8851931Z",
+        "state": "completed",
+        "rewards": [
+          76244.0,
+          77843.0
+        ],
+        "teams": [
+          "Tomas Escobar Rivera",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56266509,
+          56401915
+        ]
+      },
+      {
+        "id": 111357026,
+        "createTime": "2026-09-20T20:41:51.1249981Z",
+        "endTime": "2026-09-20T20:51:12.6851544Z",
+        "state": "completed",
+        "rewards": [
+          79618.0,
+          73636.0
+        ],
+        "teams": [
+          "Fedor",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56347543,
+          56401915
+        ]
+      },
+      {
+        "id": 111358135,
+        "createTime": "2026-09-20T20:45:53.5288638Z",
+        "endTime": "2026-09-20T20:49:57.90508Z",
+        "state": "completed",
+        "rewards": [
+          75508.0,
+          73794.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Mathieu W"
+        ],
+        "submissionIds": [
+          56401915,
+          56277135
+        ]
+      },
+      {
+        "id": 111355923,
+        "createTime": "2026-09-20T20:37:50.3599648Z",
+        "endTime": "2026-09-20T20:44:26.1022264Z",
+        "state": "completed",
+        "rewards": [
+          107041.0,
+          105155.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Gabriel"
+        ],
+        "submissionIds": [
+          56401915,
+          56316725
+        ]
+      },
+      {
+        "id": 111354808,
+        "createTime": "2026-09-20T20:33:50.6487789Z",
+        "endTime": "2026-09-20T20:38:54.6657929Z",
+        "state": "completed",
+        "rewards": [
+          81539.0,
+          81208.0
+        ],
+        "teams": [
+          "Eldritch",
+          "ArnabKarmakar"
+        ],
+        "submissionIds": [
+          56401915,
+          56381173
+        ]
+      },
+      {
+        "id": 111353612,
+        "createTime": "2026-09-20T20:29:49.3748401Z",
+        "endTime": "2026-09-20T20:36:30.3282231Z",
+        "state": "completed",
+        "rewards": [
+          71510.0,
+          73662.0
+        ],
+        "teams": [
+          "Mathieu W",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56277135,
+          56401915
+        ]
+      },
+      {
+        "id": 111352603,
+        "createTime": "2026-09-20T20:25:51.7185087Z",
+        "endTime": "2026-09-20T20:30:22.0318104Z",
+        "state": "completed",
+        "rewards": [
+          82928.0,
+          84044.0
+        ],
+        "teams": [
+          "honjousetuna",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56354365,
+          56401915
+        ]
+      },
+      {
+        "id": 111351489,
+        "createTime": "2026-09-20T20:21:54.6497098Z",
+        "endTime": "2026-09-20T20:25:24.1072641Z",
+        "state": "completed",
+        "rewards": [
+          75336.0,
+          74415.0
+        ],
+        "teams": [
+          "islet",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56318653,
+          56401915
+        ]
+      },
+      {
+        "id": 111350370,
+        "createTime": "2026-09-20T20:17:50.0148244Z",
+        "endTime": "2026-09-20T20:23:14.6079915Z",
+        "state": "completed",
+        "rewards": [
+          147746.0,
+          148177.0
+        ],
+        "teams": [
+          "Anand Kumar 369o",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56282036,
+          56401915
+        ]
+      },
+      {
+        "id": 111349262,
+        "createTime": "2026-09-20T20:13:52.1627392Z",
+        "endTime": "2026-09-20T20:20:48.6391949Z",
+        "state": "completed",
+        "rewards": [
+          102342.0,
+          99598.0
+        ],
+        "teams": [
+          "Eldritch",
+          "JinchengZhang1"
+        ],
+        "submissionIds": [
+          56401915,
+          56273143
+        ]
+      },
+      {
+        "id": 111348151,
+        "createTime": "2026-09-20T20:09:52.3510105Z",
+        "endTime": "2026-09-20T20:16:13.8350691Z",
+        "state": "completed",
+        "rewards": [
+          77944.0,
+          72944.0
+        ],
+        "teams": [
+          "giraffeneck",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56402446,
+          56401915
+        ]
+      },
+      {
+        "id": 111347065,
+        "createTime": "2026-09-20T20:05:51.5280632Z",
+        "endTime": "2026-09-20T20:11:04.7100034Z",
+        "state": "completed",
+        "rewards": [
+          105149.0,
+          107377.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Smackaveli"
+        ],
+        "submissionIds": [
+          56401915,
+          56394737
+        ]
+      },
+      {
+        "id": 111345950,
+        "createTime": "2026-09-20T20:01:50.0080006Z",
+        "endTime": "2026-09-20T20:08:13.3635147Z",
+        "state": "completed",
+        "rewards": [
+          115716.0,
+          115162.0
+        ],
+        "teams": [
+          "Eldritch",
+          "ranya marwan"
+        ],
+        "submissionIds": [
+          56401915,
+          56340866
+        ]
+      },
+      {
+        "id": 111344837,
+        "createTime": "2026-09-20T19:57:49.6091874Z",
+        "endTime": "2026-09-20T20:04:05.5305656Z",
+        "state": "completed",
+        "rewards": [
+          70964.0,
+          70964.0
+        ],
+        "teams": [
+          "qi yun",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56327319,
+          56401915
+        ]
+      },
+      {
+        "id": 111344475,
+        "createTime": "2026-09-20T19:53:51.1350377Z",
+        "endTime": "2026-09-20T20:01:29.0338731Z",
+        "state": "completed",
+        "rewards": [
+          97523.0,
+          95677.0
+        ],
+        "teams": [
+          "Eldritch",
+          "shenjj02"
+        ],
+        "submissionIds": [
+          56401915,
+          56278880
+        ]
+      },
+      {
+        "id": 111343731,
+        "createTime": "2026-09-20T19:53:49.6015112Z",
+        "endTime": "2026-09-20T19:57:51.9925352Z",
+        "state": "completed",
+        "rewards": [
+          72788.0,
+          70348.0
+        ],
+        "teams": [
+          "montplusa",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56290451,
+          56401915
+        ]
+      },
+      {
+        "id": 111342636,
+        "createTime": "2026-09-20T19:49:49.8519157Z",
+        "endTime": "2026-09-20T19:55:16.2661878Z",
+        "state": "completed",
+        "rewards": [
+          105790.0,
+          106078.0
+        ],
+        "teams": [
+          "Eldritch",
+          "SShota-box"
+        ],
+        "submissionIds": [
+          56401915,
+          56296532
+        ]
+      },
+      {
+        "id": 111341524,
+        "createTime": "2026-09-20T19:45:50.71175Z",
+        "endTime": "2026-09-20T19:48:47.2585658Z",
+        "state": "completed",
+        "rewards": [
+          74008.0,
+          76332.0
+        ],
+        "teams": [
+          "shivam kanojia",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56221876,
+          56401915
+        ]
+      },
+      {
+        "id": 111340424,
+        "createTime": "2026-09-20T19:41:49.5164431Z",
+        "endTime": "2026-09-20T19:48:20.1826206Z",
+        "state": "completed",
+        "rewards": [
+          78183.0,
+          78181.0
+        ],
+        "teams": [
+          "moonzfxs",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56281831,
+          56401915
+        ]
+      },
+      {
+        "id": 111339325,
+        "createTime": "2026-09-20T19:37:49.6398877Z",
+        "endTime": "2026-09-20T19:42:37.7879048Z",
+        "state": "completed",
+        "rewards": [
+          71751.0,
+          71462.0
+        ],
+        "teams": [
+          "ShuHaya",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56288761,
+          56401915
+        ]
+      },
+      {
+        "id": 111338211,
+        "createTime": "2026-09-20T19:33:50.1616826Z",
+        "endTime": "2026-09-20T19:36:37.2912296Z",
+        "state": "completed",
+        "rewards": [
+          151038.0,
+          151392.0
+        ],
+        "teams": [
+          "S.Aoki",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56279032,
+          56401915
+        ]
+      },
+      {
+        "id": 111337013,
+        "createTime": "2026-09-20T19:29:49.7531352Z",
+        "endTime": "2026-09-20T19:36:10.7731669Z",
+        "state": "completed",
+        "rewards": [
+          125979.0,
+          126296.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Chiranjith"
+        ],
+        "submissionIds": [
+          56401915,
+          56303461
+        ]
+      },
+      {
+        "id": 111335978,
+        "createTime": "2026-09-20T19:25:50.9225074Z",
+        "endTime": "2026-09-20T19:29:20.7101256Z",
+        "state": "completed",
+        "rewards": [
+          88692.0,
+          89688.0
+        ],
+        "teams": [
+          "sukirman",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56250577,
+          56401915
+        ]
+      },
+      {
+        "id": 111334880,
+        "createTime": "2026-09-20T19:21:51.3130363Z",
+        "endTime": "2026-09-20T19:26:13.6671472Z",
+        "state": "completed",
+        "rewards": [
+          125078.0,
+          122852.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Hanaro"
+        ],
+        "submissionIds": [
+          56401915,
+          56393479
+        ]
+      },
+      {
+        "id": 111333762,
+        "createTime": "2026-09-20T19:17:49.8508921Z",
+        "endTime": "2026-09-20T19:21:44.9002753Z",
+        "state": "completed",
+        "rewards": [
+          127502.0,
+          127592.0
+        ],
+        "teams": [
+          "Eldritch",
+          "RicardoLópez"
+        ],
+        "submissionIds": [
+          56401915,
+          56313732
+        ]
+      },
+      {
+        "id": 111332651,
+        "createTime": "2026-09-20T19:13:50.2160178Z",
+        "endTime": "2026-09-20T19:19:23.4560927Z",
+        "state": "completed",
+        "rewards": [
+          98535.0,
+          107673.0
+        ],
+        "teams": [
+          "Gekkotron",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56279732,
+          56401915
+        ]
+      },
+      {
+        "id": 111331537,
+        "createTime": "2026-09-20T19:09:50.1441461Z",
+        "endTime": "2026-09-20T19:16:48.2288565Z",
+        "state": "completed",
+        "rewards": [
+          115009.0,
+          117143.0
+        ],
+        "teams": [
+          "Winter01",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56378800,
+          56401915
+        ]
+      },
+      {
+        "id": 111331177,
+        "createTime": "2026-09-20T19:05:53.6481806Z",
+        "endTime": "2026-09-20T19:12:15.4750116Z",
+        "state": "completed",
+        "rewards": [
+          110543.0,
+          110629.0
+        ],
+        "teams": [
+          "Eldritch",
+          "SamarthRawat18"
+        ],
+        "submissionIds": [
+          56401915,
+          56332474
+        ]
+      },
+      {
+        "id": 111330432,
+        "createTime": "2026-09-20T19:05:51.7159514Z",
+        "endTime": "2026-09-20T19:10:56.7370864Z",
+        "state": "completed",
+        "rewards": [
+          123083.0,
+          122803.0
+        ],
+        "teams": [
+          "Eldritch",
+          "SamarthRawat18"
+        ],
+        "submissionIds": [
+          56401915,
+          56332474
+        ]
+      },
+      {
+        "id": 111329331,
+        "createTime": "2026-09-20T19:01:50.5341338Z",
+        "endTime": "2026-09-20T19:05:45.0255983Z",
+        "state": "completed",
+        "rewards": [
+          75019.0,
+          75553.0
+        ],
+        "teams": [
+          "Eldritch",
+          "cooked"
+        ],
+        "submissionIds": [
+          56401915,
+          56380743
+        ]
+      },
+      {
+        "id": 111328197,
+        "createTime": "2026-09-20T18:57:49.9218503Z",
+        "endTime": "2026-09-20T19:01:38.473842Z",
+        "state": "completed",
+        "rewards": [
+          104238.0,
+          106758.0
+        ],
+        "teams": [
+          "Bình Trần Thanh",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56268629,
+          56401915
+        ]
+      },
+      {
+        "id": 111327075,
+        "createTime": "2026-09-20T18:53:49.8057297Z",
+        "endTime": "2026-09-20T19:00:12.0032587Z",
+        "state": "completed",
+        "rewards": [
+          126378.0,
+          124590.0
+        ],
+        "teams": [
+          "Eldritch",
+          "kowalskii"
+        ],
+        "submissionIds": [
+          56401915,
+          56300309
+        ]
+      },
+      {
+        "id": 111327426,
+        "createTime": "2026-09-20T18:53:50.6336839Z",
+        "endTime": "2026-09-20T18:58:15.612797Z",
+        "state": "completed",
+        "rewards": [
+          121681.0,
+          110192.0
+        ],
+        "teams": [
+          "kk.sky.9k",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56399861,
+          56401915
+        ]
+      },
+      {
+        "id": 111325969,
+        "createTime": "2026-09-20T18:49:49.6390343Z",
+        "endTime": "2026-09-20T18:54:23.2660259Z",
+        "state": "completed",
+        "rewards": [
+          85512.0,
+          81345.0
+        ],
+        "teams": [
+          "hongzhouzhou",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56226784,
+          56401915
+        ]
+      },
+      {
+        "id": 111324856,
+        "createTime": "2026-09-20T18:45:51.3383775Z",
+        "endTime": "2026-09-20T18:52:06.8267742Z",
+        "state": "completed",
+        "rewards": [
+          101308.0,
+          101749.0
+        ],
+        "teams": [
+          "Unicorns",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56237417,
+          56401915
+        ]
+      },
+      {
+        "id": 111323736,
+        "createTime": "2026-09-20T18:41:50.7440344Z",
+        "endTime": "2026-09-20T18:47:11.1275623Z",
+        "state": "completed",
+        "rewards": [
+          75488.0,
+          72429.0
+        ],
+        "teams": [
+          "momohuhu_kkkkkarrot",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56391420,
+          56401915
+        ]
+      },
+      {
+        "id": 111322600,
+        "createTime": "2026-09-20T18:37:49.714776Z",
+        "endTime": "2026-09-20T18:44:14.0583267Z",
+        "state": "completed",
+        "rewards": [
+          106423.0,
+          104866.0
+        ],
+        "teams": [
+          "Hongxin Su",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56382050,
+          56401915
+        ]
+      },
+      {
+        "id": 111321476,
+        "createTime": "2026-09-20T18:33:49.7036826Z",
+        "endTime": "2026-09-20T18:40:43.9275611Z",
+        "state": "completed",
+        "rewards": [
+          141052.0,
+          141021.0
+        ],
+        "teams": [
+          "qi yun",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56327319,
+          56401915
+        ]
+      },
+      {
+        "id": 111322014,
+        "createTime": "2026-09-20T18:33:51.0660801Z",
+        "endTime": "2026-09-20T18:39:09.8044574Z",
+        "state": "completed",
+        "rewards": [
+          126147.0,
+          128868.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Mike Mordetsky"
+        ],
+        "submissionIds": [
+          56401915,
+          56397053
+        ]
+      },
+      {
+        "id": 111320350,
+        "createTime": "2026-09-20T18:29:49.8808835Z",
+        "endTime": "2026-09-20T18:35:56.2882749Z",
+        "state": "completed",
+        "rewards": [
+          86125.0,
+          88409.0
+        ],
+        "teams": [
+          "MD. Nazmus Sakib Anik",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56277647,
+          56401915
+        ]
+      },
+      {
+        "id": 111319210,
+        "createTime": "2026-09-20T18:25:51.1401572Z",
+        "endTime": "2026-09-20T18:32:04.4585612Z",
+        "state": "completed",
+        "rewards": [
+          106359.0,
+          105019.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Bohdan Boklah"
+        ],
+        "submissionIds": [
+          56401915,
+          56261570
+        ]
+      },
+      {
+        "id": 111318073,
+        "createTime": "2026-09-20T18:21:50.0125974Z",
+        "endTime": "2026-09-20T18:28:42.7654258Z",
+        "state": "completed",
+        "rewards": [
+          93529.0,
+          89790.0
+        ],
+        "teams": [
+          "Владислав Ковкін",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56396849,
+          56401915
+        ]
+      },
+      {
+        "id": 111319015,
+        "createTime": "2026-09-20T18:21:51.9559699Z",
+        "endTime": "2026-09-20T18:28:13.8757559Z",
+        "state": "completed",
+        "rewards": [
+          69390.0,
+          70432.0
+        ],
+        "teams": [
+          "SUBHASH B",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56282569,
+          56401915
+        ]
+      },
+      {
+        "id": 111316936,
+        "createTime": "2026-09-20T18:17:49.2800115Z",
+        "endTime": "2026-09-20T18:25:08.4544635Z",
+        "state": "completed",
+        "rewards": [
+          106591.0,
+          96251.0
+        ],
+        "teams": [
+          "coolin666",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56401679,
+          56401915
+        ]
+      },
+      {
+        "id": 111315826,
+        "createTime": "2026-09-20T18:13:49.8843894Z",
+        "endTime": "2026-09-20T18:20:32.0595534Z",
+        "state": "completed",
+        "rewards": [
+          77898.0,
+          73233.0
+        ],
+        "teams": [
+          "Eldritch",
+          "yy"
+        ],
+        "submissionIds": [
+          56401915,
+          56225205
+        ]
+      },
+      {
+        "id": 111314718,
+        "createTime": "2026-09-20T18:09:49.3878691Z",
+        "endTime": "2026-09-20T18:14:01.9261013Z",
+        "state": "completed",
+        "rewards": [
+          109869.0,
+          109787.0
+        ],
+        "teams": [
+          "Eldritch",
+          "zhtmgxr"
+        ],
+        "submissionIds": [
+          56401915,
+          56294155
+        ]
+      },
+      {
+        "id": 111313627,
+        "createTime": "2026-09-20T18:05:51.4350571Z",
+        "endTime": "2026-09-20T18:08:53.5335606Z",
+        "state": "completed",
+        "rewards": [
+          90548.0,
+          89250.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Juank Suarez"
+        ],
+        "submissionIds": [
+          56401915,
+          56316198
+        ]
+      },
+      {
+        "id": 111312534,
+        "createTime": "2026-09-20T18:01:50.3164403Z",
+        "endTime": "2026-09-20T18:07:13.3968667Z",
+        "state": "completed",
+        "rewards": [
+          109135.0,
+          105756.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Wills Cui"
+        ],
+        "submissionIds": [
+          56401915,
+          56348103
+        ]
+      },
+      {
+        "id": 111311436,
+        "createTime": "2026-09-20T17:57:49.1907355Z",
+        "endTime": "2026-09-20T18:01:58.96713Z",
+        "state": "completed",
+        "rewards": [
+          67215.0,
+          74710.0
+        ],
+        "teams": [
+          "Alexey Kuznetsov",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56348975,
+          56401915
+        ]
+      },
+      {
+        "id": 111310522,
+        "createTime": "2026-09-20T17:53:50.7051014Z",
+        "endTime": "2026-09-20T18:00:07.328521Z",
+        "state": "completed",
+        "rewards": [
+          132964.0,
+          141078.0
+        ],
+        "teams": [
+          "zongze Yan",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56229524,
+          56401915
+        ]
+      },
+      {
+        "id": 111309252,
+        "createTime": "2026-09-20T17:49:49.7772957Z",
+        "endTime": "2026-09-20T17:55:35.3002305Z",
+        "state": "completed",
+        "rewards": [
+          85015.0,
+          60400.0
+        ],
+        "teams": [
+          "Eldritch",
+          "MinerUNLEASHED"
+        ],
+        "submissionIds": [
+          56401915,
+          55725522
+        ]
+      },
+      {
+        "id": 111308147,
+        "createTime": "2026-09-20T17:45:51.0305026Z",
+        "endTime": "2026-09-20T17:53:08.2259192Z",
+        "state": "completed",
+        "rewards": [
+          97413.0,
+          85963.0
+        ],
+        "teams": [
+          "Eldritch",
+          "refine123"
+        ],
+        "submissionIds": [
+          56401915,
+          56094084
+        ]
+      },
+      {
+        "id": 111307054,
+        "createTime": "2026-09-20T17:41:49.6535145Z",
+        "endTime": "2026-09-20T17:46:56.1053574Z",
+        "state": "completed",
+        "rewards": [
+          92791.0,
+          131362.0
+        ],
+        "teams": [
+          "xinwang",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56051146,
+          56401915
+        ]
+      },
+      {
+        "id": 111305956,
+        "createTime": "2026-09-20T17:37:49.3676107Z",
+        "endTime": "2026-09-20T17:43:31.5985966Z",
+        "state": "completed",
+        "rewards": [
+          113720.0,
+          83069.0
+        ],
+        "teams": [
+          "Eldritch",
+          "ChrisLeiteScha"
+        ],
+        "submissionIds": [
+          56401915,
+          55723177
+        ]
+      },
+      {
+        "id": 111304847,
+        "createTime": "2026-09-20T17:33:50.1456815Z",
+        "endTime": "2026-09-20T17:40:19.7204572Z",
+        "state": "completed",
+        "rewards": [
+          150439.0,
+          141323.0
+        ],
+        "teams": [
+          "Eldritch",
+          "MECHINE"
+        ],
+        "submissionIds": [
+          56401915,
+          55909934
+        ]
+      },
+      {
+        "id": 111303760,
+        "createTime": "2026-09-20T17:29:46.3485399Z",
+        "endTime": "2026-09-20T17:37:07.9234402Z",
+        "state": "completed",
+        "rewards": [
+          115300.0,
+          74461.0
+        ],
+        "teams": [
+          "Eldritch",
+          "yansf677"
+        ],
+        "submissionIds": [
+          56401915,
+          55939909
+        ]
+      },
+      {
+        "id": 111302662,
+        "createTime": "2026-09-20T17:25:46.1384543Z",
+        "endTime": "2026-09-20T17:32:14.3121612Z",
+        "state": "completed",
+        "rewards": [
+          67842.0,
+          36722.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Emre Bayram"
+        ],
+        "submissionIds": [
+          56401915,
+          55459413
+        ]
+      },
+      {
+        "id": 111301575,
+        "createTime": "2026-09-20T17:21:46.0374687Z",
+        "endTime": "2026-09-20T17:27:24.7044214Z",
+        "state": "completed",
+        "rewards": [
+          98407.0,
+          15403.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Parakh Sharma"
+        ],
+        "submissionIds": [
+          56401915,
+          55296580
+        ]
+      },
+      {
+        "id": 111300471,
+        "createTime": "2026-09-20T17:17:45.3694895Z",
+        "endTime": "2026-09-20T17:21:43.141473Z",
+        "state": "completed",
+        "rewards": [
+          84374.0,
+          38503.0
+        ],
+        "teams": [
+          "Eldritch",
+          "miaoqing long"
+        ],
+        "submissionIds": [
+          56401915,
+          55287157
+        ]
+      },
+      {
+        "id": 111299380,
+        "createTime": "2026-09-20T17:13:45.7386048Z",
+        "endTime": "2026-09-20T17:17:49.4548575Z",
+        "state": "completed",
+        "rewards": [
+          109978.0,
+          57404.0
+        ],
+        "teams": [
+          "Eldritch",
+          "bruhbruh"
+        ],
+        "submissionIds": [
+          56401915,
+          55839874
+        ]
+      },
+      {
+        "id": 111298299,
+        "createTime": "2026-09-20T17:09:45.8309968Z",
+        "endTime": "2026-09-20T17:14:59.9906141Z",
+        "state": "completed",
+        "rewards": [
+          49478.0,
+          172179.0
+        ],
+        "teams": [
+          "prabalsingh_23",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          55783577,
+          56401915
+        ]
+      },
+      {
+        "id": 111297183,
+        "createTime": "2026-09-20T17:05:46.6275633Z",
+        "endTime": "2026-09-20T17:13:12.1037686Z",
+        "state": "completed",
+        "rewards": [
+          64918.0,
+          167855.0
+        ],
+        "teams": [
+          "knadithyavr",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          55483018,
+          56401915
+        ]
+      },
+      {
+        "id": 111295878,
+        "createTime": "2026-09-20T17:00:06.7123345Z",
+        "endTime": "2026-09-20T17:05:18.7883687Z",
+        "state": "completed",
+        "rewards": [
+          67695.0,
+          68335.0
+        ],
+        "teams": [
+          "Eldritch",
+          "Eldritch"
+        ],
+        "submissionIds": [
+          56401915,
+          56401915
+        ]
+      }
+    ]
+  },
+  "topTeams": [
+    {
+      "rank": 1,
+      "teamId": 16732748,
+      "teamName": "DSM",
+      "currentRating": 3141.4,
+      "submissionDate": "2026-09-21T00:49:05.9733333Z",
+      "activeSubmissionId": 56401245,
+      "publicSubmissions": [
+        {
+          "id": 56409623,
+          "dateSubmitted": "2026-09-21T00:49:05.973Z",
+          "publicScore": "2979.9"
+        },
+        {
+          "id": 56401245,
+          "dateSubmitted": "2026-09-20T16:32:16.373Z",
+          "publicScore": "3141.4"
+        }
+      ],
+      "totalPublicEpisodes": 120,
+      "sampleEpisodes": [
+        {
+          "id": 111499460,
+          "createTime": "2026-09-21T05:13:50.9506646Z",
+          "endTime": "2026-09-21T05:21:21.9494826Z",
+          "state": "completed",
+          "rewards": [
+            110945.0,
+            117239.0
+          ],
+          "teams": [
+            "Majkel1337",
+            "DSM"
+          ],
+          "submissionIds": [
+            56407295,
+            56401245
+          ]
+        },
+        {
+          "id": 111493754,
+          "createTime": "2026-09-21T04:53:51.1724808Z",
+          "endTime": "2026-09-21T05:01:17.129106Z",
+          "state": "completed",
+          "rewards": [
+            140509.0,
+            152527.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "DSM"
+          ],
+          "submissionIds": [
+            56395336,
+            56401245
+          ]
+        },
+        {
+          "id": 111488017,
+          "createTime": "2026-09-21T04:33:52.2196426Z",
+          "endTime": "2026-09-21T04:38:18.247831Z",
+          "state": "completed",
+          "rewards": [
+            105764.0,
+            102306.0
+          ],
+          "teams": [
+            "DSM",
+            "Majkel1337"
+          ],
+          "submissionIds": [
+            56401245,
+            56407295
+          ]
+        },
+        {
+          "id": 111481549,
+          "createTime": "2026-09-21T04:09:51.0575401Z",
+          "endTime": "2026-09-21T04:13:24.2421615Z",
+          "state": "completed",
+          "rewards": [
+            100692.0,
+            87742.0
+          ],
+          "teams": [
+            "DSM",
+            "Vadim Vasilenko"
+          ],
+          "submissionIds": [
+            56401245,
+            56396983
+          ]
+        },
+        {
+          "id": 111476076,
+          "createTime": "2026-09-21T03:49:51.5078386Z",
+          "endTime": "2026-09-21T03:55:57.6418575Z",
+          "state": "completed",
+          "rewards": [
+            132641.0,
+            150643.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "DSM"
+          ],
+          "submissionIds": [
+            56372014,
+            56401245
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 2,
+      "teamId": 16730524,
+      "teamName": "THIRD FARM CLUB",
+      "currentRating": 3069.0,
+      "submissionDate": "2026-09-20T13:18:09.63Z",
+      "activeSubmissionId": 56395336,
+      "publicSubmissions": [
+        {
+          "id": 56395336,
+          "dateSubmitted": "2026-09-20T13:18:09.63Z",
+          "publicScore": "3069.0"
+        },
+        {
+          "id": 56372014,
+          "dateSubmitted": "2026-09-19T21:43:43.1Z",
+          "publicScore": "3053.1"
+        }
+      ],
+      "totalPublicEpisodes": 133,
+      "sampleEpisodes": [
+        {
+          "id": 111500322,
+          "createTime": "2026-09-21T05:17:50.5131312Z",
+          "endTime": "2026-09-21T05:26:52.148606Z",
+          "state": "completed",
+          "rewards": [
+            105374.0,
+            102101.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "Unknown Mother-Goose"
+          ],
+          "submissionIds": [
+            56395336,
+            56390472
+          ]
+        },
+        {
+          "id": 111499461,
+          "createTime": "2026-09-21T05:13:50.9509097Z",
+          "endTime": "2026-09-21T05:17:09.9666619Z",
+          "state": "completed",
+          "rewards": [
+            113870.0,
+            106566.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "Otter Vibe"
+          ],
+          "submissionIds": [
+            56395336,
+            56353982
+          ]
+        },
+        {
+          "id": 111493754,
+          "createTime": "2026-09-21T04:53:51.1724808Z",
+          "endTime": "2026-09-21T05:01:17.129106Z",
+          "state": "completed",
+          "rewards": [
+            140509.0,
+            152527.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "DSM"
+          ],
+          "submissionIds": [
+            56395336,
+            56401245
+          ]
+        },
+        {
+          "id": 111490412,
+          "createTime": "2026-09-21T04:41:51.833445Z",
+          "endTime": "2026-09-21T04:53:17.1838138Z",
+          "state": "completed",
+          "rewards": [
+            159475.0,
+            149908.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "SpaTaro"
+          ],
+          "submissionIds": [
+            56395336,
+            56352346
+          ]
+        },
+        {
+          "id": 111487069,
+          "createTime": "2026-09-21T04:29:50.9564479Z",
+          "endTime": "2026-09-21T04:34:00.22842Z",
+          "state": "completed",
+          "rewards": [
+            102019.0,
+            107035.0
+          ],
+          "teams": [
+            "ymg_aq",
+            "THIRD FARM CLUB"
+          ],
+          "submissionIds": [
+            56393698,
+            56395336
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 3,
+      "teamId": 16718819,
+      "teamName": "Majkel1337",
+      "currentRating": 3067.9,
+      "submissionDate": "2026-09-20T22:41:24.17Z",
+      "activeSubmissionId": 56407295,
+      "publicSubmissions": [
+        {
+          "id": 56407295,
+          "dateSubmitted": "2026-09-20T22:41:24.17Z",
+          "publicScore": "3067.9"
+        },
+        {
+          "id": 56332038,
+          "dateSubmitted": "2026-09-18T14:06:33.633Z",
+          "publicScore": "3027.3"
+        }
+      ],
+      "totalPublicEpisodes": 87,
+      "sampleEpisodes": [
+        {
+          "id": 111499460,
+          "createTime": "2026-09-21T05:13:50.9506646Z",
+          "endTime": "2026-09-21T05:21:21.9494826Z",
+          "state": "completed",
+          "rewards": [
+            110945.0,
+            117239.0
+          ],
+          "teams": [
+            "Majkel1337",
+            "DSM"
+          ],
+          "submissionIds": [
+            56407295,
+            56401245
+          ]
+        },
+        {
+          "id": 111494668,
+          "createTime": "2026-09-21T04:57:50.902453Z",
+          "endTime": "2026-09-21T05:03:45.8204495Z",
+          "state": "completed",
+          "rewards": [
+            161533.0,
+            166082.0
+          ],
+          "teams": [
+            "Kaggledew Valley 🏆",
+            "Majkel1337"
+          ],
+          "submissionIds": [
+            56403652,
+            56407295
+          ]
+        },
+        {
+          "id": 111488017,
+          "createTime": "2026-09-21T04:33:52.2196426Z",
+          "endTime": "2026-09-21T04:38:18.247831Z",
+          "state": "completed",
+          "rewards": [
+            105764.0,
+            102306.0
+          ],
+          "teams": [
+            "DSM",
+            "Majkel1337"
+          ],
+          "submissionIds": [
+            56401245,
+            56407295
+          ]
+        },
+        {
+          "id": 111488379,
+          "createTime": "2026-09-21T04:33:52.9402118Z",
+          "endTime": "2026-09-21T04:37:12.1534819Z",
+          "state": "completed",
+          "rewards": [
+            83037.0,
+            90401.0
+          ],
+          "teams": [
+            "Artem The Farmer 🍅",
+            "Majkel1337"
+          ],
+          "submissionIds": [
+            56329409,
+            56407295
+          ]
+        },
+        {
+          "id": 111482577,
+          "createTime": "2026-09-21T04:13:51.1075108Z",
+          "endTime": "2026-09-21T04:19:15.5809186Z",
+          "state": "completed",
+          "rewards": [
+            98162.0,
+            98136.0
+          ],
+          "teams": [
+            "Majkel1337",
+            "Vadim Vasilenko"
+          ],
+          "submissionIds": [
+            56407295,
+            56396983
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 4,
+      "teamId": 16770421,
+      "teamName": "Vadim Vasilenko",
+      "currentRating": 3067.7,
+      "submissionDate": "2026-09-20T14:10:00.5566667Z",
+      "activeSubmissionId": 56396983,
+      "publicSubmissions": [
+        {
+          "id": 56396983,
+          "dateSubmitted": "2026-09-20T14:10:00.557Z",
+          "publicScore": "3067.7"
+        },
+        {
+          "id": 56389384,
+          "dateSubmitted": "2026-09-20T09:32:17.157Z",
+          "publicScore": "3046.4"
+        }
+      ],
+      "totalPublicEpisodes": 129,
+      "sampleEpisodes": [
+        {
+          "id": 111502447,
+          "createTime": "2026-09-21T05:25:54.210757Z",
+          "endTime": "2026-09-21T05:34:37.3626642Z",
+          "state": "completed",
+          "rewards": [
+            42259.0,
+            116936.0
+          ],
+          "teams": [
+            "SpaTaro",
+            "Vadim Vasilenko"
+          ],
+          "submissionIds": [
+            56352346,
+            56396983
+          ]
+        },
+        {
+          "id": 111501679,
+          "createTime": "2026-09-21T05:21:51.1528403Z",
+          "endTime": "2026-09-21T05:29:26.1122826Z",
+          "state": "completed",
+          "rewards": [
+            114380.0,
+            111607.0
+          ],
+          "teams": [
+            "Vadim Vasilenko",
+            "mtmr_s1"
+          ],
+          "submissionIds": [
+            56396983,
+            56390690
+          ]
+        },
+        {
+          "id": 111500477,
+          "createTime": "2026-09-21T05:17:50.7327311Z",
+          "endTime": "2026-09-21T05:24:38.4955729Z",
+          "state": "completed",
+          "rewards": [
+            120411.0,
+            122223.0
+          ],
+          "teams": [
+            "Vadim Vasilenko",
+            "Unknown Mother-Goose"
+          ],
+          "submissionIds": [
+            56396983,
+            56401905
+          ]
+        },
+        {
+          "id": 111494669,
+          "createTime": "2026-09-21T04:57:50.9060233Z",
+          "endTime": "2026-09-21T05:01:27.0828602Z",
+          "state": "completed",
+          "rewards": [
+            73799.0,
+            72924.0
+          ],
+          "teams": [
+            "Vadim Vasilenko",
+            "DeeperNet"
+          ],
+          "submissionIds": [
+            56396983,
+            56348854
+          ]
+        },
+        {
+          "id": 111488380,
+          "createTime": "2026-09-21T04:33:52.9481999Z",
+          "endTime": "2026-09-21T04:39:49.9913673Z",
+          "state": "completed",
+          "rewards": [
+            130297.0,
+            141125.0
+          ],
+          "teams": [
+            "Otter Vibe",
+            "Vadim Vasilenko"
+          ],
+          "submissionIds": [
+            56328447,
+            56396983
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 5,
+      "teamId": 16640510,
+      "teamName": "SpaTaro",
+      "currentRating": 3047.1,
+      "submissionDate": "2026-09-20T07:04:02.16Z",
+      "activeSubmissionId": 56352346,
+      "publicSubmissions": [
+        {
+          "id": 56384319,
+          "dateSubmitted": "2026-09-20T07:04:02.16Z",
+          "publicScore": "3036.4"
+        },
+        {
+          "id": 56352346,
+          "dateSubmitted": "2026-09-19T07:33:49.75Z",
+          "publicScore": "3047.1"
+        }
+      ],
+      "totalPublicEpisodes": 270,
+      "sampleEpisodes": [
+        {
+          "id": 111502447,
+          "createTime": "2026-09-21T05:25:54.210757Z",
+          "endTime": "2026-09-21T05:34:37.3626642Z",
+          "state": "completed",
+          "rewards": [
+            42259.0,
+            116936.0
+          ],
+          "teams": [
+            "SpaTaro",
+            "Vadim Vasilenko"
+          ],
+          "submissionIds": [
+            56352346,
+            56396983
+          ]
+        },
+        {
+          "id": 111496081,
+          "createTime": "2026-09-21T05:01:51.333931Z",
+          "endTime": "2026-09-21T05:14:19.9845807Z",
+          "state": "completed",
+          "rewards": [
+            84344.0,
+            83507.0
+          ],
+          "teams": [
+            "Planned Economy",
+            "SpaTaro"
+          ],
+          "submissionIds": [
+            56287777,
+            56352346
+          ]
+        },
+        {
+          "id": 111490412,
+          "createTime": "2026-09-21T04:41:51.833445Z",
+          "endTime": "2026-09-21T04:53:17.1838138Z",
+          "state": "completed",
+          "rewards": [
+            159475.0,
+            149908.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "SpaTaro"
+          ],
+          "submissionIds": [
+            56395336,
+            56352346
+          ]
+        },
+        {
+          "id": 111483882,
+          "createTime": "2026-09-21T04:17:51.4706465Z",
+          "endTime": "2026-09-21T04:26:36.6343111Z",
+          "state": "completed",
+          "rewards": [
+            95175.0,
+            92442.0
+          ],
+          "teams": [
+            "SpaTaro",
+            "Unknown Mother-Goose"
+          ],
+          "submissionIds": [
+            56352346,
+            56390472
+          ]
+        },
+        {
+          "id": 111481552,
+          "createTime": "2026-09-21T04:09:51.0614443Z",
+          "endTime": "2026-09-21T04:22:50.3638629Z",
+          "state": "completed",
+          "rewards": [
+            96454.0,
+            98529.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "SpaTaro"
+          ],
+          "submissionIds": [
+            56372014,
+            56352346
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 6,
+      "teamId": 16730612,
+      "teamName": "Unknown Mother-Goose",
+      "currentRating": 3041.1,
+      "submissionDate": "2026-09-20T16:59:34.75Z",
+      "activeSubmissionId": 56390472,
+      "publicSubmissions": [
+        {
+          "id": 56401905,
+          "dateSubmitted": "2026-09-20T16:59:34.75Z",
+          "publicScore": "3018.0"
+        },
+        {
+          "id": 56390472,
+          "dateSubmitted": "2026-09-20T10:16:14.583Z",
+          "publicScore": "3041.1"
+        }
+      ],
+      "totalPublicEpisodes": 142,
+      "sampleEpisodes": [
+        {
+          "id": 111500322,
+          "createTime": "2026-09-21T05:17:50.5131312Z",
+          "endTime": "2026-09-21T05:26:52.148606Z",
+          "state": "completed",
+          "rewards": [
+            105374.0,
+            102101.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "Unknown Mother-Goose"
+          ],
+          "submissionIds": [
+            56395336,
+            56390472
+          ]
+        },
+        {
+          "id": 111493972,
+          "createTime": "2026-09-21T04:53:51.5782139Z",
+          "endTime": "2026-09-21T05:03:59.5221533Z",
+          "state": "completed",
+          "rewards": [
+            129108.0,
+            126861.0
+          ],
+          "teams": [
+            "Unknown Mother-Goose",
+            "Kaggledew Valley 🏆"
+          ],
+          "submissionIds": [
+            56390472,
+            56403652
+          ]
+        },
+        {
+          "id": 111493961,
+          "createTime": "2026-09-21T04:53:51.5616066Z",
+          "endTime": "2026-09-21T05:02:56.0091293Z",
+          "state": "completed",
+          "rewards": [
+            99131.0,
+            99123.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "Unknown Mother-Goose"
+          ],
+          "submissionIds": [
+            56372014,
+            56390472
+          ]
+        },
+        {
+          "id": 111488356,
+          "createTime": "2026-09-21T04:33:52.9113788Z",
+          "endTime": "2026-09-21T04:39:34.1719914Z",
+          "state": "completed",
+          "rewards": [
+            98321.0,
+            100462.0
+          ],
+          "teams": [
+            "Majkel1337",
+            "Unknown Mother-Goose"
+          ],
+          "submissionIds": [
+            56332038,
+            56390472
+          ]
+        },
+        {
+          "id": 111488361,
+          "createTime": "2026-09-21T04:33:52.917477Z",
+          "endTime": "2026-09-21T04:39:16.7384043Z",
+          "state": "completed",
+          "rewards": [
+            99092.0,
+            92997.0
+          ],
+          "teams": [
+            "Unknown Mother-Goose",
+            "DeeperNet"
+          ],
+          "submissionIds": [
+            56390472,
+            56348854
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 7,
+      "teamId": 16817528,
+      "teamName": "QQ",
+      "currentRating": 3016.3,
+      "submissionDate": "2026-09-18T10:36:37.9766667Z",
+      "activeSubmissionId": 56327925,
+      "publicSubmissions": [
+        {
+          "id": 56327925,
+          "dateSubmitted": "2026-09-18T10:36:37.977Z",
+          "publicScore": "3016.3"
+        },
+        {
+          "id": 56302467,
+          "dateSubmitted": "2026-09-17T10:40:56.773Z",
+          "publicScore": "2956.0"
+        }
+      ],
+      "totalPublicEpisodes": 348,
+      "sampleEpisodes": [
+        {
+          "id": 111500305,
+          "createTime": "2026-09-21T05:17:50.4713784Z",
+          "endTime": "2026-09-21T05:20:37.2336705Z",
+          "state": "completed",
+          "rewards": [
+            102504.0,
+            107665.0
+          ],
+          "teams": [
+            "QQ",
+            "Majkel1337"
+          ],
+          "submissionIds": [
+            56327925,
+            56332038
+          ]
+        },
+        {
+          "id": 111493958,
+          "createTime": "2026-09-21T04:53:51.5568406Z",
+          "endTime": "2026-09-21T04:56:45.4874113Z",
+          "state": "completed",
+          "rewards": [
+            88233.0,
+            101210.0
+          ],
+          "teams": [
+            "THUNDER THUNDER",
+            "QQ"
+          ],
+          "submissionIds": [
+            56333136,
+            56327925
+          ]
+        },
+        {
+          "id": 111488346,
+          "createTime": "2026-09-21T04:33:52.8780583Z",
+          "endTime": "2026-09-21T04:37:12.4557874Z",
+          "state": "completed",
+          "rewards": [
+            111050.0,
+            119670.0
+          ],
+          "teams": [
+            "DeeperNet",
+            "QQ"
+          ],
+          "submissionIds": [
+            56278955,
+            56327925
+          ]
+        },
+        {
+          "id": 111482545,
+          "createTime": "2026-09-21T04:13:51.0534945Z",
+          "endTime": "2026-09-21T04:19:47.102283Z",
+          "state": "completed",
+          "rewards": [
+            82822.0,
+            85901.0
+          ],
+          "teams": [
+            "Planned Economy",
+            "QQ"
+          ],
+          "submissionIds": [
+            56287777,
+            56327925
+          ]
+        },
+        {
+          "id": 111476057,
+          "createTime": "2026-09-21T03:49:51.4681568Z",
+          "endTime": "2026-09-21T03:55:44.1429965Z",
+          "state": "completed",
+          "rewards": [
+            94212.0,
+            101802.0
+          ],
+          "teams": [
+            "QQ",
+            "mtmr_s1"
+          ],
+          "submissionIds": [
+            56327925,
+            56380335
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 8,
+      "teamId": 16633132,
+      "teamName": "Kaggledew Valley 🏆",
+      "currentRating": 3002.1,
+      "submissionDate": "2026-09-20T18:54:33.5933333Z",
+      "activeSubmissionId": 56403652,
+      "publicSubmissions": [
+        {
+          "id": 56404080,
+          "dateSubmitted": "2026-09-20T18:54:33.593Z",
+          "publicScore": "2986.2"
+        },
+        {
+          "id": 56403652,
+          "dateSubmitted": "2026-09-20T18:28:14.867Z",
+          "publicScore": "3002.1"
+        }
+      ],
+      "totalPublicEpisodes": 115,
+      "sampleEpisodes": [
+        {
+          "id": 111503878,
+          "createTime": "2026-09-21T05:29:55.3406198Z",
+          "endTime": "2026-09-21T05:34:39.6600351Z",
+          "state": "completed",
+          "rewards": [
+            105541.0,
+            111848.0
+          ],
+          "teams": [
+            "Sida Zuo",
+            "Kaggledew Valley 🏆"
+          ],
+          "submissionIds": [
+            56257389,
+            56403652
+          ]
+        },
+        {
+          "id": 111500476,
+          "createTime": "2026-09-21T05:17:50.7316296Z",
+          "endTime": "2026-09-21T05:21:59.7370977Z",
+          "state": "completed",
+          "rewards": [
+            130327.0,
+            119935.0
+          ],
+          "teams": [
+            "Kaggledew Valley 🏆",
+            "Sida Zuo"
+          ],
+          "submissionIds": [
+            56403652,
+            56263637
+          ]
+        },
+        {
+          "id": 111493972,
+          "createTime": "2026-09-21T04:53:51.5782139Z",
+          "endTime": "2026-09-21T05:03:59.5221533Z",
+          "state": "completed",
+          "rewards": [
+            129108.0,
+            126861.0
+          ],
+          "teams": [
+            "Unknown Mother-Goose",
+            "Kaggledew Valley 🏆"
+          ],
+          "submissionIds": [
+            56390472,
+            56403652
+          ]
+        },
+        {
+          "id": 111494668,
+          "createTime": "2026-09-21T04:57:50.902453Z",
+          "endTime": "2026-09-21T05:03:45.8204495Z",
+          "state": "completed",
+          "rewards": [
+            161533.0,
+            166082.0
+          ],
+          "teams": [
+            "Kaggledew Valley 🏆",
+            "Majkel1337"
+          ],
+          "submissionIds": [
+            56403652,
+            56407295
+          ]
+        },
+        {
+          "id": 111493971,
+          "createTime": "2026-09-21T04:53:51.5751309Z",
+          "endTime": "2026-09-21T04:58:06.838677Z",
+          "state": "completed",
+          "rewards": [
+            145939.0,
+            144534.0
+          ],
+          "teams": [
+            "DeeperNet",
+            "Kaggledew Valley 🏆"
+          ],
+          "submissionIds": [
+            56278955,
+            56403652
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 9,
+      "teamId": 16760569,
+      "teamName": "Otter Vibe",
+      "currentRating": 3000.7,
+      "submissionDate": "2026-09-19T08:48:39.5966667Z",
+      "activeSubmissionId": 56353982,
+      "publicSubmissions": [
+        {
+          "id": 56353982,
+          "dateSubmitted": "2026-09-19T08:48:39.597Z",
+          "publicScore": "3000.7"
+        },
+        {
+          "id": 56328447,
+          "dateSubmitted": "2026-09-18T11:02:38.84Z",
+          "publicScore": "2993.2"
+        }
+      ],
+      "totalPublicEpisodes": 246,
+      "sampleEpisodes": [
+        {
+          "id": 111499461,
+          "createTime": "2026-09-21T05:13:50.9509097Z",
+          "endTime": "2026-09-21T05:17:09.9666619Z",
+          "state": "completed",
+          "rewards": [
+            113870.0,
+            106566.0
+          ],
+          "teams": [
+            "THIRD FARM CLUB",
+            "Otter Vibe"
+          ],
+          "submissionIds": [
+            56395336,
+            56353982
+          ]
+        },
+        {
+          "id": 111498393,
+          "createTime": "2026-09-21T05:09:50.9367478Z",
+          "endTime": "2026-09-21T05:14:59.1721801Z",
+          "state": "completed",
+          "rewards": [
+            84712.0,
+            81987.0
+          ],
+          "teams": [
+            "Otter Vibe",
+            "Yannik Schiffner"
+          ],
+          "submissionIds": [
+            56353982,
+            56392345
+          ]
+        },
+        {
+          "id": 111492761,
+          "createTime": "2026-09-21T04:49:51.6180293Z",
+          "endTime": "2026-09-21T04:56:14.1931565Z",
+          "state": "completed",
+          "rewards": [
+            117200.0,
+            122191.0
+          ],
+          "teams": [
+            "Majkel1337",
+            "Otter Vibe"
+          ],
+          "submissionIds": [
+            56332038,
+            56353982
+          ]
+        },
+        {
+          "id": 111487012,
+          "createTime": "2026-09-21T04:29:50.9340419Z",
+          "endTime": "2026-09-21T04:33:33.5218524Z",
+          "state": "completed",
+          "rewards": [
+            64243.0,
+            72209.0
+          ],
+          "teams": [
+            "Yannik Schiffner",
+            "Otter Vibe"
+          ],
+          "submissionIds": [
+            56402567,
+            56353982
+          ]
+        },
+        {
+          "id": 111480433,
+          "createTime": "2026-09-21T04:05:51.2775917Z",
+          "endTime": "2026-09-21T04:11:39.26914Z",
+          "state": "completed",
+          "rewards": [
+            111022.0,
+            114901.0
+          ],
+          "teams": [
+            "mtmr_s1",
+            "Otter Vibe"
+          ],
+          "submissionIds": [
+            56380335,
+            56353982
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 10,
+      "teamId": 16675778,
+      "teamName": "Orbital Terraformer",
+      "currentRating": 3000.1,
+      "submissionDate": "2026-09-15T22:56:40.6766667Z",
+      "activeSubmissionId": 56263779,
+      "publicSubmissions": [
+        {
+          "id": 56263779,
+          "dateSubmitted": "2026-09-15T22:56:40.677Z",
+          "publicScore": "3000.1"
+        },
+        {
+          "id": 56212726,
+          "dateSubmitted": "2026-09-13T18:05:36.753Z",
+          "publicScore": "2920.0"
+        }
+      ],
+      "totalPublicEpisodes": 610,
+      "sampleEpisodes": [
+        {
+          "id": 111498396,
+          "createTime": "2026-09-21T05:09:50.9382106Z",
+          "endTime": "2026-09-21T05:15:35.4293894Z",
+          "state": "completed",
+          "rewards": [
+            98019.0,
+            100925.0
+          ],
+          "teams": [
+            "Orbital Terraformer",
+            "Yannik Schiffner"
+          ],
+          "submissionIds": [
+            56263779,
+            56402567
+          ]
+        },
+        {
+          "id": 111494800,
+          "createTime": "2026-09-21T04:57:51.1364523Z",
+          "endTime": "2026-09-21T05:06:37.3379913Z",
+          "state": "completed",
+          "rewards": [
+            88320.0,
+            86597.0
+          ],
+          "teams": [
+            "Orbital Terraformer",
+            "QQ"
+          ],
+          "submissionIds": [
+            56263779,
+            56302467
+          ]
+        },
+        {
+          "id": 111491653,
+          "createTime": "2026-09-21T04:45:53.4027841Z",
+          "endTime": "2026-09-21T04:55:09.8092866Z",
+          "state": "completed",
+          "rewards": [
+            110537.0,
+            110510.0
+          ],
+          "teams": [
+            "Orbital Terraformer",
+            "mtmr_s1"
+          ],
+          "submissionIds": [
+            56263779,
+            56390690
+          ]
+        },
+        {
+          "id": 111485935,
+          "createTime": "2026-09-21T04:25:51.2654044Z",
+          "endTime": "2026-09-21T04:33:55.6529916Z",
+          "state": "completed",
+          "rewards": [
+            82451.0,
+            95480.0
+          ],
+          "teams": [
+            "Orbital Terraformer",
+            "Kaggledew Valley 🏆"
+          ],
+          "submissionIds": [
+            56263779,
+            56404080
+          ]
+        },
+        {
+          "id": 111484565,
+          "createTime": "2026-09-21T04:21:50.5280051Z",
+          "endTime": "2026-09-21T04:30:12.899036Z",
+          "state": "completed",
+          "rewards": [
+            79355.0,
+            90653.0
+          ],
+          "teams": [
+            "Orbital Terraformer",
+            "🐚seek inspiration🐚"
+          ],
+          "submissionIds": [
+            56263779,
+            56407833
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 11,
+      "teamId": 16758882,
+      "teamName": "mtmr_s1",
+      "currentRating": 2998.8,
+      "submissionDate": "2026-09-20T10:24:56.2233333Z",
+      "activeSubmissionId": 56390690,
+      "publicSubmissions": [
+        {
+          "id": 56390690,
+          "dateSubmitted": "2026-09-20T10:24:56.223Z",
+          "publicScore": "2998.8"
+        },
+        {
+          "id": 56380335,
+          "dateSubmitted": "2026-09-20T04:27:23.237Z",
+          "publicScore": "2957.0"
+        }
+      ],
+      "totalPublicEpisodes": 150,
+      "sampleEpisodes": [
+        {
+          "id": 111503879,
+          "createTime": "2026-09-21T05:29:55.3411527Z",
+          "endTime": "2026-09-21T05:35:19.6815443Z",
+          "state": "completed",
+          "rewards": [
+            117792.0,
+            112157.0
+          ],
+          "teams": [
+            "mtmr_s1",
+            "THUNDER THUNDER"
+          ],
+          "submissionIds": [
+            56390690,
+            56392823
+          ]
+        },
+        {
+          "id": 111501679,
+          "createTime": "2026-09-21T05:21:51.1528403Z",
+          "endTime": "2026-09-21T05:29:26.1122826Z",
+          "state": "completed",
+          "rewards": [
+            114380.0,
+            111607.0
+          ],
+          "teams": [
+            "Vadim Vasilenko",
+            "mtmr_s1"
+          ],
+          "submissionIds": [
+            56396983,
+            56390690
+          ]
+        },
+        {
+          "id": 111495992,
+          "createTime": "2026-09-21T05:01:51.2091154Z",
+          "endTime": "2026-09-21T05:06:02.130549Z",
+          "state": "completed",
+          "rewards": [
+            124760.0,
+            128785.0
+          ],
+          "teams": [
+            "Sida Zuo",
+            "mtmr_s1"
+          ],
+          "submissionIds": [
+            56257389,
+            56390690
+          ]
+        },
+        {
+          "id": 111491653,
+          "createTime": "2026-09-21T04:45:53.4027841Z",
+          "endTime": "2026-09-21T04:55:09.8092866Z",
+          "state": "completed",
+          "rewards": [
+            110537.0,
+            110510.0
+          ],
+          "teams": [
+            "Orbital Terraformer",
+            "mtmr_s1"
+          ],
+          "submissionIds": [
+            56263779,
+            56390690
+          ]
+        },
+        {
+          "id": 111490429,
+          "createTime": "2026-09-21T04:41:51.8500341Z",
+          "endTime": "2026-09-21T04:52:45.6068836Z",
+          "state": "completed",
+          "rewards": [
+            132254.0,
+            130421.0
+          ],
+          "teams": [
+            "mtmr_s1",
+            "SpaTaro"
+          ],
+          "submissionIds": [
+            56390690,
+            56384319
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 12,
+      "teamId": 16760701,
+      "teamName": "Yannik Schiffner",
+      "currentRating": 2989.7,
+      "submissionDate": "2026-09-20T17:34:52.1Z",
+      "activeSubmissionId": 56402567,
+      "publicSubmissions": [
+        {
+          "id": 56402567,
+          "dateSubmitted": "2026-09-20T17:34:52.1Z",
+          "publicScore": "2989.7"
+        },
+        {
+          "id": 56392345,
+          "dateSubmitted": "2026-09-20T11:29:22.367Z",
+          "publicScore": "2983.6"
+        }
+      ],
+      "totalPublicEpisodes": 115,
+      "sampleEpisodes": [
+        {
+          "id": 111498396,
+          "createTime": "2026-09-21T05:09:50.9382106Z",
+          "endTime": "2026-09-21T05:15:35.4293894Z",
+          "state": "completed",
+          "rewards": [
+            98019.0,
+            100925.0
+          ],
+          "teams": [
+            "Orbital Terraformer",
+            "Yannik Schiffner"
+          ],
+          "submissionIds": [
+            56263779,
+            56402567
+          ]
+        },
+        {
+          "id": 111492762,
+          "createTime": "2026-09-21T04:49:51.619509Z",
+          "endTime": "2026-09-21T04:53:24.9854032Z",
+          "state": "completed",
+          "rewards": [
+            84648.0,
+            92544.0
+          ],
+          "teams": [
+            "Driz Lo",
+            "Yannik Schiffner"
+          ],
+          "submissionIds": [
+            56403602,
+            56402567
+          ]
+        },
+        {
+          "id": 111487012,
+          "createTime": "2026-09-21T04:29:50.9340419Z",
+          "endTime": "2026-09-21T04:33:33.5218524Z",
+          "state": "completed",
+          "rewards": [
+            64243.0,
+            72209.0
+          ],
+          "teams": [
+            "Yannik Schiffner",
+            "Otter Vibe"
+          ],
+          "submissionIds": [
+            56402567,
+            56353982
+          ]
+        },
+        {
+          "id": 111482557,
+          "createTime": "2026-09-21T04:13:51.0640768Z",
+          "endTime": "2026-09-21T04:16:39.5971664Z",
+          "state": "completed",
+          "rewards": [
+            113234.0,
+            129716.0
+          ],
+          "teams": [
+            "mtmr_s1",
+            "Yannik Schiffner"
+          ],
+          "submissionIds": [
+            56390690,
+            56402567
+          ]
+        },
+        {
+          "id": 111478252,
+          "createTime": "2026-09-21T03:57:51.116483Z",
+          "endTime": "2026-09-21T04:05:07.3467619Z",
+          "state": "completed",
+          "rewards": [
+            82347.0,
+            84002.0
+          ],
+          "teams": [
+            "Yannik Schiffner",
+            "Excluding"
+          ],
+          "submissionIds": [
+            56402567,
+            56407797
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 13,
+      "teamId": 16854176,
+      "teamName": "吃白饭的大肥鱼",
+      "currentRating": 2968.0,
+      "submissionDate": "2026-09-19T16:24:38.3033333Z",
+      "activeSubmissionId": 56365258,
+      "publicSubmissions": [
+        {
+          "id": 56365258,
+          "dateSubmitted": "2026-09-19T16:24:38.303Z",
+          "publicScore": "2968.0"
+        },
+        {
+          "id": 56334567,
+          "dateSubmitted": "2026-09-18T16:05:13.967Z",
+          "publicScore": "2189.3"
+        }
+      ],
+      "totalPublicEpisodes": 216,
+      "sampleEpisodes": [
+        {
+          "id": 111501386,
+          "createTime": "2026-09-21T05:21:50.7361647Z",
+          "endTime": "2026-09-21T05:28:59.7959519Z",
+          "state": "completed",
+          "rewards": [
+            61832.0,
+            67453.0
+          ],
+          "teams": [
+            "吃白饭的大肥鱼",
+            "🐚seek inspiration🐚"
+          ],
+          "submissionIds": [
+            56365258,
+            56407833
+          ]
+        },
+        {
+          "id": 111495031,
+          "createTime": "2026-09-21T04:57:51.5306687Z",
+          "endTime": "2026-09-21T05:03:13.0833316Z",
+          "state": "completed",
+          "rewards": [
+            122803.0,
+            129504.0
+          ],
+          "teams": [
+            "Dieter",
+            "吃白饭的大肥鱼"
+          ],
+          "submissionIds": [
+            56370873,
+            56365258
+          ]
+        },
+        {
+          "id": 111489391,
+          "createTime": "2026-09-21T04:37:58.5563519Z",
+          "endTime": "2026-09-21T04:41:43.7921374Z",
+          "state": "completed",
+          "rewards": [
+            99731.0,
+            104663.0
+          ],
+          "teams": [
+            "goodpjw2008",
+            "吃白饭的大肥鱼"
+          ],
+          "submissionIds": [
+            56363651,
+            56365258
+          ]
+        },
+        {
+          "id": 111483612,
+          "createTime": "2026-09-21T04:17:51.0713736Z",
+          "endTime": "2026-09-21T04:22:15.0431481Z",
+          "state": "completed",
+          "rewards": [
+            103846.0,
+            99078.0
+          ],
+          "teams": [
+            "吃白饭的大肥鱼",
+            "RangerSnow"
+          ],
+          "submissionIds": [
+            56365258,
+            56400834
+          ]
+        },
+        {
+          "id": 111477141,
+          "createTime": "2026-09-21T03:53:50.9633628Z",
+          "endTime": "2026-09-21T03:58:04.9359008Z",
+          "state": "completed",
+          "rewards": [
+            117267.0,
+            122552.0
+          ],
+          "teams": [
+            "Artem The Farmer 🍅",
+            "吃白饭的大肥鱼"
+          ],
+          "submissionIds": [
+            56341959,
+            56365258
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 14,
+      "teamId": 16685950,
+      "teamName": "Planned Economy",
+      "currentRating": 2964.3,
+      "submissionDate": "2026-09-17T00:10:44.4866667Z",
+      "activeSubmissionId": 56287777,
+      "publicSubmissions": [
+        {
+          "id": 56289593,
+          "dateSubmitted": "2026-09-17T00:10:44.487Z",
+          "publicScore": "2940.9"
+        },
+        {
+          "id": 56287777,
+          "dateSubmitted": "2026-09-16T21:45:01.6Z",
+          "publicScore": "2964.3"
+        }
+      ],
+      "totalPublicEpisodes": 507,
+      "sampleEpisodes": [
+        {
+          "id": 111502445,
+          "createTime": "2026-09-21T05:25:54.2093685Z",
+          "endTime": "2026-09-21T05:31:00.5792294Z",
+          "state": "completed",
+          "rewards": [
+            116419.0,
+            119616.0
+          ],
+          "teams": [
+            "AI是我的豆包",
+            "Planned Economy"
+          ],
+          "submissionIds": [
+            56403163,
+            56287777
+          ]
+        },
+        {
+          "id": 111496081,
+          "createTime": "2026-09-21T05:01:51.333931Z",
+          "endTime": "2026-09-21T05:14:19.9845807Z",
+          "state": "completed",
+          "rewards": [
+            84344.0,
+            83507.0
+          ],
+          "teams": [
+            "Planned Economy",
+            "SpaTaro"
+          ],
+          "submissionIds": [
+            56287777,
+            56352346
+          ]
+        },
+        {
+          "id": 111493461,
+          "createTime": "2026-09-21T04:53:50.7090085Z",
+          "endTime": "2026-09-21T04:59:12.966452Z",
+          "state": "completed",
+          "rewards": [
+            75203.0,
+            87471.0
+          ],
+          "teams": [
+            "ShunkiKyoya",
+            "Planned Economy"
+          ],
+          "submissionIds": [
+            56408992,
+            56287777
+          ]
+        },
+        {
+          "id": 111489170,
+          "createTime": "2026-09-21T04:37:58.2155223Z",
+          "endTime": "2026-09-21T04:43:24.5690868Z",
+          "state": "completed",
+          "rewards": [
+            92283.0,
+            95621.0
+          ],
+          "teams": [
+            "Planned Economy",
+            "Kaggriculture Agent"
+          ],
+          "submissionIds": [
+            56287777,
+            56393891
+          ]
+        },
+        {
+          "id": 111482545,
+          "createTime": "2026-09-21T04:13:51.0534945Z",
+          "endTime": "2026-09-21T04:19:47.102283Z",
+          "state": "completed",
+          "rewards": [
+            82822.0,
+            85901.0
+          ],
+          "teams": [
+            "Planned Economy",
+            "QQ"
+          ],
+          "submissionIds": [
+            56287777,
+            56327925
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 15,
+      "teamId": 16664246,
+      "teamName": "Sida Zuo",
+      "currentRating": 2960.4,
+      "submissionDate": "2026-09-15T22:42:16.9433333Z",
+      "activeSubmissionId": 56263637,
+      "publicSubmissions": [
+        {
+          "id": 56263637,
+          "dateSubmitted": "2026-09-15T22:42:16.943Z",
+          "publicScore": "2960.4"
+        },
+        {
+          "id": 56257389,
+          "dateSubmitted": "2026-09-15T15:07:26.583Z",
+          "publicScore": "2959.1"
+        }
+      ],
+      "totalPublicEpisodes": 619,
+      "sampleEpisodes": [
+        {
+          "id": 111500476,
+          "createTime": "2026-09-21T05:17:50.7316296Z",
+          "endTime": "2026-09-21T05:21:59.7370977Z",
+          "state": "completed",
+          "rewards": [
+            130327.0,
+            119935.0
+          ],
+          "teams": [
+            "Kaggledew Valley 🏆",
+            "Sida Zuo"
+          ],
+          "submissionIds": [
+            56403652,
+            56263637
+          ]
+        },
+        {
+          "id": 111499294,
+          "createTime": "2026-09-21T05:13:50.7222923Z",
+          "endTime": "2026-09-21T05:21:18.9096533Z",
+          "state": "completed",
+          "rewards": [
+            77283.0,
+            80426.0
+          ],
+          "teams": [
+            "Sida Zuo",
+            "🐚seek inspiration🐚"
+          ],
+          "submissionIds": [
+            56263637,
+            56407833
+          ]
+        },
+        {
+          "id": 111493341,
+          "createTime": "2026-09-21T04:53:50.4613991Z",
+          "endTime": "2026-09-21T05:00:51.8814908Z",
+          "state": "completed",
+          "rewards": [
+            103672.0,
+            93544.0
+          ],
+          "teams": [
+            "DSM",
+            "Sida Zuo"
+          ],
+          "submissionIds": [
+            56409623,
+            56263637
+          ]
+        },
+        {
+          "id": 111492645,
+          "createTime": "2026-09-21T04:49:51.4071586Z",
+          "endTime": "2026-09-21T04:55:42.87328Z",
+          "state": "completed",
+          "rewards": [
+            131899.0,
+            125145.0
+          ],
+          "teams": [
+            "Planned Economy",
+            "Sida Zuo"
+          ],
+          "submissionIds": [
+            56289593,
+            56263637
+          ]
+        },
+        {
+          "id": 111486681,
+          "createTime": "2026-09-21T04:29:50.1651114Z",
+          "endTime": "2026-09-21T04:34:58.7315275Z",
+          "state": "completed",
+          "rewards": [
+            117022.0,
+            115101.0
+          ],
+          "teams": [
+            "Sida Zuo",
+            "QQ"
+          ],
+          "submissionIds": [
+            56263637,
+            56302467
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 16,
+      "teamId": 16621799,
+      "teamName": "Artem The Farmer 🍅",
+      "currentRating": 2954.4,
+      "submissionDate": "2026-09-18T22:18:55.7033333Z",
+      "activeSubmissionId": 56329409,
+      "publicSubmissions": [
+        {
+          "id": 56341959,
+          "dateSubmitted": "2026-09-18T22:18:55.703Z",
+          "publicScore": "2950.1"
+        },
+        {
+          "id": 56329409,
+          "dateSubmitted": "2026-09-18T11:51:11.853Z",
+          "publicScore": "2954.4"
+        }
+      ],
+      "totalPublicEpisodes": 357,
+      "sampleEpisodes": [
+        {
+          "id": 111501551,
+          "createTime": "2026-09-21T05:21:50.9680916Z",
+          "endTime": "2026-09-21T05:29:53.3404834Z",
+          "state": "completed",
+          "rewards": [
+            84927.0,
+            80023.0
+          ],
+          "teams": [
+            "Artem The Farmer 🍅",
+            "Arda Ceylan"
+          ],
+          "submissionIds": [
+            56329409,
+            56364644
+          ]
+        },
+        {
+          "id": 111495661,
+          "createTime": "2026-09-21T05:01:50.7045159Z",
+          "endTime": "2026-09-21T05:08:12.383283Z",
+          "state": "completed",
+          "rewards": [
+            85627.0,
+            75136.0
+          ],
+          "teams": [
+            "Artem The Farmer 🍅",
+            "chungkuangwen"
+          ],
+          "submissionIds": [
+            56329409,
+            56409675
+          ]
+        },
+        {
+          "id": 111494462,
+          "createTime": "2026-09-21T04:57:50.5023619Z",
+          "endTime": "2026-09-21T05:03:26.4401523Z",
+          "state": "completed",
+          "rewards": [
+            111962.0,
+            88381.0
+          ],
+          "teams": [
+            "DSM",
+            "Artem The Farmer 🍅"
+          ],
+          "submissionIds": [
+            56409623,
+            56329409
+          ]
+        },
+        {
+          "id": 111494671,
+          "createTime": "2026-09-21T04:57:50.9072409Z",
+          "endTime": "2026-09-21T05:02:43.1809295Z",
+          "state": "completed",
+          "rewards": [
+            126316.0,
+            103502.0
+          ],
+          "teams": [
+            "Artem The Farmer 🍅",
+            "Dieter"
+          ],
+          "submissionIds": [
+            56329409,
+            56370871
+          ]
+        },
+        {
+          "id": 111488379,
+          "createTime": "2026-09-21T04:33:52.9402118Z",
+          "endTime": "2026-09-21T04:37:12.1534819Z",
+          "state": "completed",
+          "rewards": [
+            83037.0,
+            90401.0
+          ],
+          "teams": [
+            "Artem The Farmer 🍅",
+            "Majkel1337"
+          ],
+          "submissionIds": [
+            56329409,
+            56407295
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 17,
+      "teamId": 16673205,
+      "teamName": "Arda Ceylan",
+      "currentRating": 2953.7,
+      "submissionDate": "2026-09-20T14:52:05.9333333Z",
+      "activeSubmissionId": 56364644,
+      "publicSubmissions": [
+        {
+          "id": 56398329,
+          "dateSubmitted": "2026-09-20T14:52:05.933Z",
+          "publicScore": "2952.1"
+        },
+        {
+          "id": 56364644,
+          "dateSubmitted": "2026-09-19T16:05:35.76Z",
+          "publicScore": "2953.7"
+        }
+      ],
+      "totalPublicEpisodes": 237,
+      "sampleEpisodes": [
+        {
+          "id": 111501531,
+          "createTime": "2026-09-21T05:21:50.9483411Z",
+          "endTime": "2026-09-21T05:30:08.5210758Z",
+          "state": "completed",
+          "rewards": [
+            127840.0,
+            118994.0
+          ],
+          "teams": [
+            "Arda Ceylan",
+            "ShunkiKyoya"
+          ],
+          "submissionIds": [
+            56364644,
+            56408992
+          ]
+        },
+        {
+          "id": 111501551,
+          "createTime": "2026-09-21T05:21:50.9680916Z",
+          "endTime": "2026-09-21T05:29:53.3404834Z",
+          "state": "completed",
+          "rewards": [
+            84927.0,
+            80023.0
+          ],
+          "teams": [
+            "Artem The Farmer 🍅",
+            "Arda Ceylan"
+          ],
+          "submissionIds": [
+            56329409,
+            56364644
+          ]
+        },
+        {
+          "id": 111500467,
+          "createTime": "2026-09-21T05:17:50.724182Z",
+          "endTime": "2026-09-21T05:25:40.4426724Z",
+          "state": "completed",
+          "rewards": [
+            101745.0,
+            92591.0
+          ],
+          "teams": [
+            "Arda Ceylan",
+            "RangerSnow"
+          ],
+          "submissionIds": [
+            56364644,
+            56400834
+          ]
+        },
+        {
+          "id": 111494657,
+          "createTime": "2026-09-21T04:57:50.8589819Z",
+          "endTime": "2026-09-21T05:07:36.1353947Z",
+          "state": "completed",
+          "rewards": [
+            124887.0,
+            122849.0
+          ],
+          "teams": [
+            "Arda Ceylan",
+            "Excluding"
+          ],
+          "submissionIds": [
+            56364644,
+            56407797
+          ]
+        },
+        {
+          "id": 111488363,
+          "createTime": "2026-09-21T04:33:52.919662Z",
+          "endTime": "2026-09-21T04:43:38.2730924Z",
+          "state": "completed",
+          "rewards": [
+            114043.0,
+            106216.0
+          ],
+          "teams": [
+            "QQ",
+            "Arda Ceylan"
+          ],
+          "submissionIds": [
+            56302467,
+            56364644
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 18,
+      "teamId": 16685556,
+      "teamName": "binghua",
+      "currentRating": 2952.6,
+      "submissionDate": "2026-09-17T15:39:53.3966667Z",
+      "activeSubmissionId": 56308479,
+      "publicSubmissions": [
+        {
+          "id": 56308479,
+          "dateSubmitted": "2026-09-17T15:39:53.397Z",
+          "publicScore": "2952.6"
+        },
+        {
+          "id": 56298074,
+          "dateSubmitted": "2026-09-17T07:06:56.06Z",
+          "publicScore": "2905.8"
+        }
+      ],
+      "totalPublicEpisodes": 417,
+      "sampleEpisodes": [
+        {
+          "id": 111500316,
+          "createTime": "2026-09-21T05:17:50.5090489Z",
+          "endTime": "2026-09-21T05:22:52.8507179Z",
+          "state": "completed",
+          "rewards": [
+            119079.0,
+            116398.0
+          ],
+          "teams": [
+            "binghua",
+            "Kaggriculture Agent"
+          ],
+          "submissionIds": [
+            56308479,
+            56407826
+          ]
+        },
+        {
+          "id": 111493963,
+          "createTime": "2026-09-21T04:53:51.5640147Z",
+          "endTime": "2026-09-21T04:58:12.1215767Z",
+          "state": "completed",
+          "rewards": [
+            80758.0,
+            80432.0
+          ],
+          "teams": [
+            "binghua",
+            "forever young"
+          ],
+          "submissionIds": [
+            56308479,
+            56393046
+          ]
+        },
+        {
+          "id": 111488350,
+          "createTime": "2026-09-21T04:33:52.9009902Z",
+          "endTime": "2026-09-21T04:39:51.657253Z",
+          "state": "completed",
+          "rewards": [
+            63392.0,
+            79404.0
+          ],
+          "teams": [
+            "Agricola",
+            "binghua"
+          ],
+          "submissionIds": [
+            56395508,
+            56308479
+          ]
+        },
+        {
+          "id": 111482547,
+          "createTime": "2026-09-21T04:13:51.0558394Z",
+          "endTime": "2026-09-21T04:17:51.7084326Z",
+          "state": "completed",
+          "rewards": [
+            76034.0,
+            74566.0
+          ],
+          "teams": [
+            "mtmr_s1",
+            "binghua"
+          ],
+          "submissionIds": [
+            56390690,
+            56308479
+          ]
+        },
+        {
+          "id": 111476059,
+          "createTime": "2026-09-21T03:49:51.4704623Z",
+          "endTime": "2026-09-21T03:53:10.9760391Z",
+          "state": "completed",
+          "rewards": [
+            95033.0,
+            95494.0
+          ],
+          "teams": [
+            "THUNDER THUNDER",
+            "binghua"
+          ],
+          "submissionIds": [
+            56392823,
+            56308479
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 19,
+      "teamId": 16622198,
+      "teamName": "THUNDER THUNDER",
+      "currentRating": 2950.2,
+      "submissionDate": "2026-09-20T11:49:48.0766667Z",
+      "activeSubmissionId": 56392823,
+      "publicSubmissions": [
+        {
+          "id": 56392823,
+          "dateSubmitted": "2026-09-20T11:49:48.077Z",
+          "publicScore": "2950.2"
+        },
+        {
+          "id": 56333136,
+          "dateSubmitted": "2026-09-18T14:58:42.837Z",
+          "publicScore": "2936.3"
+        }
+      ],
+      "totalPublicEpisodes": 141,
+      "sampleEpisodes": [
+        {
+          "id": 111503879,
+          "createTime": "2026-09-21T05:29:55.3411527Z",
+          "endTime": "2026-09-21T05:35:19.6815443Z",
+          "state": "completed",
+          "rewards": [
+            117792.0,
+            112157.0
+          ],
+          "teams": [
+            "mtmr_s1",
+            "THUNDER THUNDER"
+          ],
+          "submissionIds": [
+            56390690,
+            56392823
+          ]
+        },
+        {
+          "id": 111498157,
+          "createTime": "2026-09-21T05:09:50.6139298Z",
+          "endTime": "2026-09-21T05:15:21.3822436Z",
+          "state": "completed",
+          "rewards": [
+            125069.0,
+            126239.0
+          ],
+          "teams": [
+            "THUNDER THUNDER",
+            "Sida Zuo"
+          ],
+          "submissionIds": [
+            56392823,
+            56257389
+          ]
+        },
+        {
+          "id": 111492235,
+          "createTime": "2026-09-21T04:49:50.6567802Z",
+          "endTime": "2026-09-21T04:54:49.0721152Z",
+          "state": "completed",
+          "rewards": [
+            93430.0,
+            116140.0
+          ],
+          "teams": [
+            "THUNDER THUNDER",
+            "DSM"
+          ],
+          "submissionIds": [
+            56392823,
+            56409623
+          ]
+        },
+        {
+          "id": 111488352,
+          "createTime": "2026-09-21T04:33:52.9037287Z",
+          "endTime": "2026-09-21T04:36:51.7640098Z",
+          "state": "completed",
+          "rewards": [
+            105733.0,
+            115817.0
+          ],
+          "teams": [
+            "Ad Space Available",
+            "THUNDER THUNDER"
+          ],
+          "submissionIds": [
+            56297284,
+            56392823
+          ]
+        },
+        {
+          "id": 111482548,
+          "createTime": "2026-09-21T04:13:51.0555296Z",
+          "endTime": "2026-09-21T04:19:54.1701434Z",
+          "state": "completed",
+          "rewards": [
+            89499.0,
+            86652.0
+          ],
+          "teams": [
+            "THUNDER THUNDER",
+            "Excluding"
+          ],
+          "submissionIds": [
+            56392823,
+            56407797
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 20,
+      "teamId": 16793083,
+      "teamName": "🐚seek inspiration🐚",
+      "currentRating": 2946.5,
+      "submissionDate": "2026-09-20T23:30:55.8666667Z",
+      "activeSubmissionId": 56407833,
+      "publicSubmissions": [
+        {
+          "id": 56407833,
+          "dateSubmitted": "2026-09-20T23:30:55.867Z",
+          "publicScore": "2946.5"
+        },
+        {
+          "id": 56390738,
+          "dateSubmitted": "2026-09-20T10:27:08.457Z",
+          "publicScore": "661.1"
+        }
+      ],
+      "totalPublicEpisodes": 91,
+      "sampleEpisodes": [
+        {
+          "id": 111501386,
+          "createTime": "2026-09-21T05:21:50.7361647Z",
+          "endTime": "2026-09-21T05:28:59.7959519Z",
+          "state": "completed",
+          "rewards": [
+            61832.0,
+            67453.0
+          ],
+          "teams": [
+            "吃白饭的大肥鱼",
+            "🐚seek inspiration🐚"
+          ],
+          "submissionIds": [
+            56365258,
+            56407833
+          ]
+        },
+        {
+          "id": 111500468,
+          "createTime": "2026-09-21T05:17:50.7250562Z",
+          "endTime": "2026-09-21T05:23:19.4451426Z",
+          "state": "completed",
+          "rewards": [
+            149706.0,
+            145158.0
+          ],
+          "teams": [
+            "🐚seek inspiration🐚",
+            "Majkel1337"
+          ],
+          "submissionIds": [
+            56407833,
+            56332038
+          ]
+        },
+        {
+          "id": 111499294,
+          "createTime": "2026-09-21T05:13:50.7222923Z",
+          "endTime": "2026-09-21T05:21:18.9096533Z",
+          "state": "completed",
+          "rewards": [
+            77283.0,
+            80426.0
+          ],
+          "teams": [
+            "Sida Zuo",
+            "🐚seek inspiration🐚"
+          ],
+          "submissionIds": [
+            56263637,
+            56407833
+          ]
+        },
+        {
+          "id": 111497252,
+          "createTime": "2026-09-21T05:05:52.2623779Z",
+          "endTime": "2026-09-21T05:15:39.6246279Z",
+          "state": "completed",
+          "rewards": [
+            100099.0,
+            100331.0
+          ],
+          "teams": [
+            "🐚seek inspiration🐚",
+            "midnq"
+          ],
+          "submissionIds": [
+            56407833,
+            56402453
+          ]
+        },
+        {
+          "id": 111494831,
+          "createTime": "2026-09-21T04:57:51.2052147Z",
+          "endTime": "2026-09-21T05:04:45.5427499Z",
+          "state": "completed",
+          "rewards": [
+            109468.0,
+            111066.0
+          ],
+          "teams": [
+            "🐚seek inspiration🐚",
+            "Roxy"
+          ],
+          "submissionIds": [
+            56407833,
+            56355607
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 21,
+      "teamId": 16739633,
+      "teamName": "kwa",
+      "currentRating": 2928.7,
+      "submissionDate": "2026-09-20T11:20:21.3833333Z",
+      "activeSubmissionId": 56392126,
+      "publicSubmissions": [
+        {
+          "id": 56392126,
+          "dateSubmitted": "2026-09-20T11:20:21.383Z",
+          "publicScore": "2928.7"
+        },
+        {
+          "id": 56392117,
+          "dateSubmitted": "2026-09-20T11:20:10.863Z",
+          "publicScore": "2909.7"
+        }
+      ],
+      "totalPublicEpisodes": 144,
+      "sampleEpisodes": [
+        {
+          "id": 111501680,
+          "createTime": "2026-09-21T05:21:51.1547199Z",
+          "endTime": "2026-09-21T05:24:38.8742472Z",
+          "state": "completed",
+          "rewards": [
+            126458.0,
+            112055.0
+          ],
+          "teams": [
+            "kwa",
+            "mtmr_s1"
+          ],
+          "submissionIds": [
+            56392126,
+            56380335
+          ]
+        },
+        {
+          "id": 111499502,
+          "createTime": "2026-09-21T05:13:51.0258249Z",
+          "endTime": "2026-09-21T05:16:35.1153593Z",
+          "state": "completed",
+          "rewards": [
+            117424.0,
+            118834.0
+          ],
+          "teams": [
+            "kwa",
+            "QQ"
+          ],
+          "submissionIds": [
+            56392126,
+            56302467
+          ]
+        },
+        {
+          "id": 111493811,
+          "createTime": "2026-09-21T04:53:51.2561088Z",
+          "endTime": "2026-09-21T04:56:35.4884756Z",
+          "state": "completed",
+          "rewards": [
+            102319.0,
+            101710.0
+          ],
+          "teams": [
+            "kwa",
+            "feel the agi"
+          ],
+          "submissionIds": [
+            56392126,
+            56208558
+          ]
+        },
+        {
+          "id": 111490016,
+          "createTime": "2026-09-21T04:41:51.1103116Z",
+          "endTime": "2026-09-21T04:46:28.3934321Z",
+          "state": "completed",
+          "rewards": [
+            149312.0,
+            144319.0
+          ],
+          "teams": [
+            "kwa",
+            "kuro0315"
+          ],
+          "submissionIds": [
+            56392126,
+            56409832
+          ]
+        },
+        {
+          "id": 111489370,
+          "createTime": "2026-09-21T04:37:58.5311878Z",
+          "endTime": "2026-09-21T04:41:50.1834184Z",
+          "state": "completed",
+          "rewards": [
+            90223.0,
+            91327.0
+          ],
+          "teams": [
+            "ToastUz",
+            "kwa"
+          ],
+          "submissionIds": [
+            56399751,
+            56392126
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 22,
+      "teamId": 16632327,
+      "teamName": "midnq",
+      "currentRating": 2926.4,
+      "submissionDate": "2026-09-20T20:41:53.7833333Z",
+      "activeSubmissionId": 56405756,
+      "publicSubmissions": [
+        {
+          "id": 56405756,
+          "dateSubmitted": "2026-09-20T20:41:53.783Z",
+          "publicScore": "2359.8"
+        },
+        {
+          "id": 56402453,
+          "dateSubmitted": "2026-09-20T17:29:07.737Z",
+          "publicScore": "2921.8"
+        }
+      ],
+      "totalPublicEpisodes": 101,
+      "sampleEpisodes": [
+        {
+          "id": 111500763,
+          "createTime": "2026-09-21T05:21:49.8118047Z",
+          "endTime": "2026-09-21T05:28:21.8246905Z",
+          "state": "completed",
+          "rewards": [
+            89371.0,
+            98147.0
+          ],
+          "teams": [
+            "cy zhang",
+            "midnq"
+          ],
+          "submissionIds": [
+            56415665,
+            56405756
+          ]
+        },
+        {
+          "id": 111501085,
+          "createTime": "2026-09-21T05:21:50.2583366Z",
+          "endTime": "2026-09-21T05:27:46.8917707Z",
+          "state": "completed",
+          "rewards": [
+            108865.0,
+            98922.0
+          ],
+          "teams": [
+            "midnq",
+            "Khalid"
+          ],
+          "submissionIds": [
+            56405756,
+            56410736
+          ]
+        },
+        {
+          "id": 111498614,
+          "createTime": "2026-09-21T05:13:49.6639034Z",
+          "endTime": "2026-09-21T05:18:39.8003574Z",
+          "state": "completed",
+          "rewards": [
+            78468.0,
+            92806.0
+          ],
+          "teams": [
+            "NonCaffeine",
+            "midnq"
+          ],
+          "submissionIds": [
+            56415425,
+            56405756
+          ]
+        },
+        {
+          "id": 111495315,
+          "createTime": "2026-09-21T05:01:50.1075614Z",
+          "endTime": "2026-09-21T05:05:22.3567571Z",
+          "state": "completed",
+          "rewards": [
+            87920.0,
+            78326.0
+          ],
+          "teams": [
+            "midnq",
+            "lizs"
+          ],
+          "submissionIds": [
+            56405756,
+            56414233
+          ]
+        },
+        {
+          "id": 111492757,
+          "createTime": "2026-09-21T04:49:51.6117284Z",
+          "endTime": "2026-09-21T04:54:51.775113Z",
+          "state": "completed",
+          "rewards": [
+            103546.0,
+            104491.0
+          ],
+          "teams": [
+            "midnq",
+            "animal crossing"
+          ],
+          "submissionIds": [
+            56405756,
+            56377238
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 23,
+      "teamId": 16887437,
+      "teamName": "TheEggman",
+      "currentRating": 2922.0,
+      "submissionDate": "2026-09-21T02:45:06.44Z",
+      "activeSubmissionId": 56371083,
+      "publicSubmissions": [
+        {
+          "id": 56413245,
+          "dateSubmitted": "2026-09-21T02:45:06.44Z",
+          "publicScore": "2230.6"
+        },
+        {
+          "id": 56371083,
+          "dateSubmitted": "2026-09-19T20:36:52.493Z",
+          "publicScore": "2922.0"
+        }
+      ],
+      "totalPublicEpisodes": 205,
+      "sampleEpisodes": [
+        {
+          "id": 111498975,
+          "createTime": "2026-09-21T05:13:50.2131103Z",
+          "endTime": "2026-09-21T05:24:47.4151326Z",
+          "state": "completed",
+          "rewards": [
+            85407.0,
+            74596.0
+          ],
+          "teams": [
+            "TheEggman",
+            "shyjin"
+          ],
+          "submissionIds": [
+            56371083,
+            56409546
+          ]
+        },
+        {
+          "id": 111494547,
+          "createTime": "2026-09-21T04:57:50.6367815Z",
+          "endTime": "2026-09-21T05:07:09.2125573Z",
+          "state": "completed",
+          "rewards": [
+            84337.0,
+            75244.0
+          ],
+          "teams": [
+            "TheEggman",
+            "chungkuangwen"
+          ],
+          "submissionIds": [
+            56371083,
+            56409675
+          ]
+        },
+        {
+          "id": 111493973,
+          "createTime": "2026-09-21T04:53:51.5765565Z",
+          "endTime": "2026-09-21T05:03:29.6127925Z",
+          "state": "completed",
+          "rewards": [
+            121556.0,
+            122535.0
+          ],
+          "teams": [
+            "TheEggman",
+            "Roman Katasonov"
+          ],
+          "submissionIds": [
+            56371083,
+            56371603
+          ]
+        },
+        {
+          "id": 111488360,
+          "createTime": "2026-09-21T04:33:52.916086Z",
+          "endTime": "2026-09-21T04:44:20.3301429Z",
+          "state": "completed",
+          "rewards": [
+            154409.0,
+            150557.0
+          ],
+          "teams": [
+            "ymg_aq",
+            "TheEggman"
+          ],
+          "submissionIds": [
+            56393666,
+            56371083
+          ]
+        },
+        {
+          "id": 111486918,
+          "createTime": "2026-09-21T04:29:50.7247608Z",
+          "endTime": "2026-09-21T04:41:18.5049317Z",
+          "state": "completed",
+          "rewards": [
+            95954.0,
+            98292.0
+          ],
+          "teams": [
+            "TheEggman",
+            "🐚seek inspiration🐚"
+          ],
+          "submissionIds": [
+            56371083,
+            56407833
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 24,
+      "teamId": 16665237,
+      "teamName": "Ad Space Available",
+      "currentRating": 2921.8,
+      "submissionDate": "2026-09-17T06:33:47.7433333Z",
+      "activeSubmissionId": 56297284,
+      "publicSubmissions": [
+        {
+          "id": 56297284,
+          "dateSubmitted": "2026-09-17T06:33:47.743Z",
+          "publicScore": "2921.8"
+        },
+        {
+          "id": 56270065,
+          "dateSubmitted": "2026-09-16T05:05:46.107Z",
+          "publicScore": "2018.7"
+        }
+      ],
+      "totalPublicEpisodes": 498,
+      "sampleEpisodes": [
+        {
+          "id": 111502646,
+          "createTime": "2026-09-21T05:25:54.4701207Z",
+          "endTime": "2026-09-21T05:34:22.321915Z",
+          "state": "completed",
+          "rewards": [
+            104286.0,
+            117751.0
+          ],
+          "teams": [
+            "Ad Space Available",
+            "Orbital Terraformer"
+          ],
+          "submissionIds": [
+            56297284,
+            56212726
+          ]
+        },
+        {
+          "id": 111496769,
+          "createTime": "2026-09-21T05:05:51.4470077Z",
+          "endTime": "2026-09-21T05:10:42.4672602Z",
+          "state": "completed",
+          "rewards": [
+            95402.0,
+            104373.0
+          ],
+          "teams": [
+            "chungkuangwen",
+            "Ad Space Available"
+          ],
+          "submissionIds": [
+            56409675,
+            56297284
+          ]
+        },
+        {
+          "id": 111493967,
+          "createTime": "2026-09-21T04:53:51.5701925Z",
+          "endTime": "2026-09-21T04:56:42.962633Z",
+          "state": "completed",
+          "rewards": [
+            130573.0,
+            132492.0
+          ],
+          "teams": [
+            "Ad Space Available",
+            "automatylicza"
+          ],
+          "submissionIds": [
+            56297284,
+            56398874
+          ]
+        },
+        {
+          "id": 111488352,
+          "createTime": "2026-09-21T04:33:52.9037287Z",
+          "endTime": "2026-09-21T04:36:51.7640098Z",
+          "state": "completed",
+          "rewards": [
+            105733.0,
+            115817.0
+          ],
+          "teams": [
+            "Ad Space Available",
+            "THUNDER THUNDER"
+          ],
+          "submissionIds": [
+            56297284,
+            56392823
+          ]
+        },
+        {
+          "id": 111488339,
+          "createTime": "2026-09-21T04:33:52.8664489Z",
+          "endTime": "2026-09-21T04:36:42.1731549Z",
+          "state": "completed",
+          "rewards": [
+            92707.0,
+            98664.0
+          ],
+          "teams": [
+            "Xiangyu Liu",
+            "Ad Space Available"
+          ],
+          "submissionIds": [
+            56251106,
+            56297284
+          ]
+        }
+      ],
+      "status": "active"
+    },
+    {
+      "rank": 25,
+      "teamId": 16693904,
+      "teamName": "DeeperNet",
+      "currentRating": 2918.3,
+      "submissionDate": "2026-09-19T05:04:02.9666667Z",
+      "activeSubmissionId": 56348854,
+      "publicSubmissions": [
+        {
+          "id": 56348854,
+          "dateSubmitted": "2026-09-19T05:04:02.967Z",
+          "publicScore": "2916.4"
+        },
+        {
+          "id": 56278955,
+          "dateSubmitted": "2026-09-16T12:52:21.84Z",
+          "publicScore": "2922.9"
+        }
+      ],
+      "totalPublicEpisodes": 263,
+      "sampleEpisodes": [
+        {
+          "id": 111500478,
+          "createTime": "2026-09-21T05:17:50.7346176Z",
+          "endTime": "2026-09-21T05:23:55.4554837Z",
+          "state": "completed",
+          "rewards": [
+            101504.0,
+            95074.0
+          ],
+          "teams": [
+            "ShunkiKyoya",
+            "DeeperNet"
+          ],
+          "submissionIds": [
+            56395504,
+            56348854
+          ]
+        },
+        {
+          "id": 111494669,
+          "createTime": "2026-09-21T04:57:50.9060233Z",
+          "endTime": "2026-09-21T05:01:27.0828602Z",
+          "state": "completed",
+          "rewards": [
+            73799.0,
+            72924.0
+          ],
+          "teams": [
+            "Vadim Vasilenko",
+            "DeeperNet"
+          ],
+          "submissionIds": [
+            56396983,
+            56348854
+          ]
+        },
+        {
+          "id": 111493975,
+          "createTime": "2026-09-21T04:53:51.5826091Z",
+          "endTime": "2026-09-21T05:00:25.301366Z",
+          "state": "completed",
+          "rewards": [
+            97864.0,
+            99799.0
+          ],
+          "teams": [
+            "Snorlax",
+            "DeeperNet"
+          ],
+          "submissionIds": [
+            56376247,
+            56348854
+          ]
+        },
+        {
+          "id": 111488361,
+          "createTime": "2026-09-21T04:33:52.917477Z",
+          "endTime": "2026-09-21T04:39:16.7384043Z",
+          "state": "completed",
+          "rewards": [
+            99092.0,
+            92997.0
+          ],
+          "teams": [
+            "Unknown Mother-Goose",
+            "DeeperNet"
+          ],
+          "submissionIds": [
+            56390472,
+            56348854
+          ]
+        },
+        {
+          "id": 111482561,
+          "createTime": "2026-09-21T04:13:51.0689179Z",
+          "endTime": "2026-09-21T04:17:00.7552923Z",
+          "state": "completed",
+          "rewards": [
+            104081.0,
+            104634.0
+          ],
+          "teams": [
+            "ymg_aq",
+            "DeeperNet"
+          ],
+          "submissionIds": [
+            56393666,
+            56348854
+          ]
+        }
+      ],
+      "status": "active"
+    }
+  ]
+}

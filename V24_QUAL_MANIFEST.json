@@ -1,0 +1,45 @@
+{
+  "phase": "V24",
+  "pilot_cohort": [
+    249400,
+    249409
+  ],
+  "candidates": {
+    "C1_IDLE_ZEROING": {
+      "mean_paired_delta": -45282.0,
+      "ci_95": [
+        -58000.5238092648,
+        -32563.4761907352
+      ],
+      "wins": 0,
+      "losses": 10,
+      "ties": 0,
+      "win_rate_pct": 0.0,
+      "status": "FALSIFIED"
+    },
+    "C2_LIVESTOCK_SCALE": {
+      "mean_paired_delta": -146760.45,
+      "ci_95": [
+        -165854.59115315828,
+        -127666.30884684173
+      ],
+      "wins": 0,
+      "losses": 10,
+      "ties": 0,
+      "win_rate_pct": 0.0,
+      "status": "FALSIFIED"
+    },
+    "C3_CARROT_COMPOUND": {
+      "mean_paired_delta": -45330.95,
+      "ci_95": [
+        -50524.67358426117,
+        -40137.22641573883
+      ],
+      "wins": 0,
+      "losses": 10,
+      "ties": 0,
+      "win_rate_pct": 0.0,
+      "status": "FALSIFIED"
+    }
+  }
+}
