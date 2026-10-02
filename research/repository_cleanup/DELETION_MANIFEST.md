@@ -32,3 +32,16 @@ Every item listed here has been audited and classified according to `FILE_CLASSI
 - **Total Storage to Reclaim**: ~18,109.68 MB (~18.08 GB)
 - **Zero Loss of Source Code**: All candidate agents, core engine code, tests, configs, benchmark harnesses, and scientific postmortems remain 100% intact.
 - **Pre-requisite Signoff**: Archival branches `culture/v24` and `culture/v25` must be fully committed and verified prior to physical worktree removal.
+
+---
+
+## 2. Final Presentation Pass Deletions (October 2, 2026)
+
+| Target Path | Size | Classification | Reason for Deletion | Replacement / Preservation Status | Unique Content Lost? |
+| :--- | :---: | :---: | :--- | :--- | :---: |
+| `V34_CASUAL_FORENSICS.md` | 3.48 KB | `DUPLICATE` | Typographical duplicate created during V34 exploration | Identical file preserved as `research/v34/V34_CAUSAL_FORENSICS.md` (SHA256: `1fcbcbe...`) | **No (0% loss)** |
+| Root untracked raw replays (`episode-104820229-replay.json`, `elo3000_test_replay.json`, `sample_replay.json`, `master_*.json`, `titan_*.json`) | 107.12 MB | `DISPOSABLE` | Untracked raw match replays ignored by `.gitignore` | Documented in `docs/DATASETS.md` and re-acquirable via Kaggle API | **No (External data)** |
+| `submission.tar.gz` | 6.24 KB | `DISPOSABLE` | Temporary local packaging archive ignored by `.gitignore` | Production bundle preserved in `submissions/` | **No** |
+| Root untracked benchmark JSON logs (40 files) | 0.98 MB | `DISPOSABLE` | Intermediate evaluation test dumps ignored by `.gitignore` | Structured benchmarks preserved in `results/` and `research/` | **No** |
+| `scratch/kaggriculture.zip`, `scratch/lb/` | 0.32 MB | `DISPOSABLE` | Temporary leaderboard zip archive downloaded during verification | Official standing recorded in `docs/COMPETITION.md` and `README.md` | **No** |
+
