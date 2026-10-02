@@ -1,0 +1,11 @@
+ablation,mean_cash,win_rate_vs_v27,win_rate_vs_v49,win_rate_vs_panel,casualty_count,status
+V49_Incumbent_Control,83562.5,N/A,50.00%,92.19%,0,PROTECTED_CONTROL
+V24_Base_Teammate,82466.6,87.50%,100.00% (8/8 dev),48.91% (640-leg),0,EVALUATED
+V27_Base_Teammate,82476.9,12.50%,100.00% (8/8 dev),46.88%,0,EVALUATED
+V24_no_PET_CAFE_tilt,82440.9,62.50%,N/A,N/A,0,HARMFUL_ABLATION
+V24_no_room_guard_dead_stock,82411.4,87.50%,N/A,N/A,0,HARMFUL_ABLATION
+V27_with_PET_CAFE_tilt,82398.6,62.50%,N/A,N/A,0,PARTIAL_RECOVERY
+V24_plus_V49_E402_seed_cap,82953.9,87.50%,100.00% (8/8 dev),N/A,0,REDUNDANT_NO_OP
+V24_plus_V44_CapEx_cutoff_520,82953.9,87.50%,100.00% (8/8 dev),N/A,0,REDUNDANT_NO_OP
+V24_plus_V48_shop_overrides,85890.0,N/A,N/A,N/A,0,REDUNDANT_NO_OP
+Final_Synthesized_Candidate,80311.5,60.94% (vs v24/v27),54.69% (64 legs),48.91% (640 legs),0,REJECTED_FOR_PRODUCTION

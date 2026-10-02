@@ -1,0 +1,15 @@
+mechanism,first_turn,mechanical_effect,economic_effect,observed_win_delta,sample_size,casualties,generalization,confidence,candidate_status
+HybridOpening_wheat,0,Idle hands 0/1/2 plant/water/harvest temporary crop,Extra 10 wheat harvested (+3 delivered after feed),+2226 cash vs V49 (100% WR),8 legs,0,All seeds,High,KEEP
+Wheat_maturation_day_extra,52,Delays temporary harvest from day 2 to day 3,Increases harvest yield from 5 to 10 units,+120 cash vs unextended opening,8 legs,0,All seeds,High,KEEP
+Stranded_wheat_pickup_fix,200,Detects zero-quantity pickup and triggers rescue,Prevents infinite loop & sheep starvation,+1500 cash in starved seeds,8 legs,0,Conditional on low wheat,High,KEEP
+Room_guard_hour23,23,Sells surplus items before hour 23 dump,Prevents shed overflow inventory deletion,+55.2 mean cash,8 legs,0,High-production seeds,High,KEEP
+Dead_stock_monetization,24,Sells items route will never need,Monetizes idle shed inventory,+32.0 mean cash,8 legs,0,Late-game states,High,KEEP
+PET_CAFE_margin_tilt,240,Sets _CA_MARGIN=-30 when PET_CAFE unlocked,Tilts planting to CARROT at premium prices,+26.0 mean cash / +25% WR vs v27,8 legs,0,PET_CAFE worlds,High,KEEP
+Mirror_lookahead_7,738,Extends lookahead to 7 on mirror shape,Preempts exact mirror sales,+40 cash in mirror match,8 legs,0,Mirror opponents,Medium,KEEP
+Seed_float_trim_step731,648,Trims BUY_SEED to exact remaining needs,Prevents stranded seed capital,+180 cash endgame,8 legs,0,All seeds,High,KEEP
+Multi_pass_fixedsell_closure,720,Reorders contiguous SELL blocks,Maximizes realized price before spend turns,+8632 cash across 719 steps,8 legs,0,All seeds,High,KEEP
+E402_seed_cap_overlay,624,Outer wrapper capping seed buys,Redundant with step731 trim,0.0 cash delta on v24,8 legs,0,Redundant,High,ABSTAIN
+V44_capex_cutoff_overlay,520,Outer wrapper blocking BUY_ANIMAL/LAND,Redundant (v24 naturally stops capex <520),0.0 cash delta on v24,8 legs,0,Redundant,High,ABSTAIN
+V48_shop_route_overrides,144,Route 105 for 3 shop pairs,Redundant (v24 shop router maps to 105),0.0 cash delta on v24,12 legs,0,Redundant,High,ABSTAIN
+Weed_repair_replay_buffer,0,Replays blocked action after DIG,Inert on 2945 (no weed blocks),0.0 cash delta (0 firings),92032 turns,0,Inert,High,ABSTAIN
+Research_debug_stdout_hook,718,Prints HP_TELEMETRY string,Negative (violates submission rules),N/A,N/A,N/A,Prohibited,High,REJECT

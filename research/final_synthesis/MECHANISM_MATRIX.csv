@@ -1,0 +1,20 @@
+mechanism,V24,V27,V49,historical_source,empirical_support,known_failure,interaction_risk,candidate_value
+HybridOpening_temporary_wheat,Active,Active,Absent,Dmitrii Gluzdov / Pipe-16,High (+2226 cash diff compound),Pasture delayed if schedule misaligned,Low (isolated to turns 0-91),KEEP
+Wheat_maturation_day_extra,Active,Active,Absent,Dmitrii Gluzdov,High (+3 extra wheat at turn 91),Hand 0 must be free at turn 84,Low,KEEP
+Stranded_wheat_pickup_fix,Active,Absent,Absent,Vj_kc_v24,High (prevents 0-wheat pickup infinite loop),v27 hangs feeding sheep if shed wheat=0,Low,KEEP
+Room_guard_hour23,Active,Absent,Absent,tetsutani,High (+55 cash / prevents shed overflow destruction),None in standard play,Low,KEEP
+Dead_stock_monetization,Active,Absent,Absent,tetsutani,High (clears unneeded stock),Sells stock that might be needed if route deviates,Low,KEEP
+PET_CAFE_margin_tilt,Active,Absent,Absent,Vj_kc_v24,High (+26 cash / +25% WR vs v27 on PET_CAFE seeds),None observed,Low,KEEP
+Mirror_shape_lookahead_7,Active,Absent,Absent,Vj_kc_v24,Medium (preempts exact mirror sales),Only triggers on symmetric self-play,Very Low,KEEP
+Seed_float_trim_step731,Active,Active,Absent,yhay81 / Ozer,High (subsumes and outperforms E402),None observed,Low,KEEP
+E402_late_seed_cap_overlay,Redundant,Redundant,Active,V49 Meta Fusion,High on V49; Redundant on V24 (0 firings),None,Low,REDUNDANT
+V44_capex_cutoff_step520,Redundant,Redundant,Active,V44 / V47,High on V44; Redundant on V24 (0 buys >=520),None,Low,REDUNDANT
+V48_shop_route_overrides,Redundant,Redundant,Active,V48 Challenger,Neutral (+0.0 diff on V24; already in R108),None,Low,REDUNDANT
+Multi_pass_fixedsell_closure,Active,Active,Absent,Vj_kc iterations 30-42,High (+8632 gain in S793 optimizer),None (<0.05ms runtime overhead),Low,KEEP
+Market_lead_sell_modelpx,Active,Active,Absent,Vj_kc / Ozer,High (fires 40 times / 164 units),Slight queue change,Low,KEEP
+Dayhigh_sales_before_spend,Active,Active,Absent,Vj_kc / Ozer,High (moves animal/crop sales before spends),None,Low,KEEP
+Fixed_anchor_orbit_agents,Active,Active,Absent,Vj_kc / Ozer,Medium (salvages fertilizer & harvests on turn 717),None,Low,KEEP
+Weed_repair_layer,Active,Active,Active,Kaito Fukami / 2945,None (0 firings across 92000 turns in V51),None (inert),None,NEUTRAL_INERT
+Terminal_liquidation_step718,Active,Active,Active,V42 / V43,High (liquidates shed on final turn),Must not fire before step 718,Low,KEEP
+Production_safety_wrapper,Active,Active,Absent,Vj_kc_v24 / v27,High (prevents disqualification / caps market:10),None,Low,KEEP
+Debug_stdout_hook_HP_TELEMETRY,Active,Active,Absent,Teammate build script,Negative (prohibited research print),Violates submission rules,High,REJECT_REMOVE
